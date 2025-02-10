@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://getnatalia.com
+
+# Sitemaps
+Sitemap: https://getnatalia.com/sitemap.xml
