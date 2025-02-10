@@ -136,6 +136,7 @@
   height: auto;
   max-width: 100%;
   position: relative;
+  color: var(--token-Ul9vuJeMYcWv);
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {

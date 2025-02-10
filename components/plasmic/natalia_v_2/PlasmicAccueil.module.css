@@ -132,7 +132,7 @@
   width: 100%;
   height: auto;
   justify-self: flex-start;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   font-size: var(--token-UiYSU5SKARrZ);
   max-width: 40vw;
   user-select: none;
@@ -531,7 +531,7 @@
   width: 100%;
   height: auto;
   justify-self: flex-start;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   font-size: var(--token-lCn1ExrWgPG1);
   text-align: center;
   grid-column-start: 1 !important;
@@ -909,7 +909,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   text-align: left;
   font-size: var(--token-lCn1ExrWgPG1);
   min-width: 0;
@@ -1326,7 +1326,7 @@
 .text__elkmD {
   width: 100%;
   height: auto;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   text-align: left;
   font-size: var(--token-lCn1ExrWgPG1);
   position: relative;
@@ -1768,7 +1768,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   text-align: center;
   font-size: var(--token-UiYSU5SKARrZ);
   min-width: 0;
@@ -2595,7 +2595,7 @@
   width: 100%;
   height: auto;
   justify-self: flex-start;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   text-align: center;
   font-size: var(--token-UiYSU5SKARrZ);
   grid-column-start: 1 !important;
@@ -2668,10 +2668,6 @@
     #ffffff 14%,
     var(--token-enT25OLZl2uL) 100%
   );
-  outline-color: var(--token-_YlvzaAWV7H7);
-  outline-style: solid;
-  outline-offset: -10px;
-  outline-width: thin;
   justify-self: flex-start;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -2682,10 +2678,9 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-  border-radius: 40px;
+  border-radius: 0px;
   padding: 120px 0px 20px;
   margin: 0px;
-  border: 10px solid #ffffff;
 }
 .footer > * {
   grid-column: 4;
@@ -2705,8 +2700,8 @@
   position: relative;
   width: 100%;
   height: auto;
-  justify-self: flex-start;
-  color: var(--token-q-c-dJ_9jSVB);
+  justify-self: center;
+  color: var(--token-Ul9vuJeMYcWv);
   font-size: 20px;
   text-align: center;
   font-weight: 600;
@@ -2758,7 +2753,7 @@
   width: 100%;
   height: auto;
   justify-self: flex-start;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   font-size: var(--token-UiYSU5SKARrZ);
   text-align: center;
   grid-column-start: 3 !important;

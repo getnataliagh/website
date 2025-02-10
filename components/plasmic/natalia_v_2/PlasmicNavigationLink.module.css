@@ -20,11 +20,12 @@
   }
 }
 .root:hover {
-  background: #0000001a;
+  background: none;
   mix-blend-mode: multiply;
   height: 100%;
   width: auto;
   justify-self: flex-start;
+  color: var(--token-Ul9vuJeMYcWv);
   display: inline-flex;
   min-height: 0;
 }
@@ -43,8 +44,11 @@
   width: 100%;
   height: auto;
   text-align: center;
-  color: var(--token-q-c-dJ_9jSVB);
+  color: var(--token-Ul9vuJeMYcWv);
   flex-grow: 0;
   flex-shrink: 1;
   min-width: 0;
+}
+.root:hover .text {
+  text-decoration-line: underline;
 }

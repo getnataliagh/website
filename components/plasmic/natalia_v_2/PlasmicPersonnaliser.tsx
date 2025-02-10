@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useScreenVariants as useScreenVariantsjC0Cb1S4E1Yt } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jC0CB1S4E1YT/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -148,6 +150,10 @@ function PlasmicPersonnaliser__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsjC0Cb1S4E1Yt()
+  });
 
   return (
     <Stack__

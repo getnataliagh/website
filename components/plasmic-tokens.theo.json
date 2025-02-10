@@ -1613,7 +1613,7 @@
     {
       "name": "background",
       "type": "color",
-      "value": "#1CBB83",
+      "value": "#A2DDC1",
       "category": "color",
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1643,7 +1643,7 @@
     {
       "name": "background3",
       "type": "color",
-      "value": "#BAE0C8",
+      "value": "#A2DDC1",
       "category": "color",
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1673,7 +1673,7 @@
     {
       "name": "color/police",
       "type": "color",
-      "value": "#111827",
+      "value": "#252729",
       "category": "color",
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1693,7 +1693,7 @@
     {
       "name": "color/police-titre",
       "type": "color",
-      "value": "#030712",
+      "value": "#252729",
       "category": "color",
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
