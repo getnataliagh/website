@@ -138,7 +138,11 @@ function PlasmicLegal__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+
+        <link rel="canonical" href={PlasmicLegal.pageMetadata.canonical} />
+      </Head>
 
       <style>{`
         body {
@@ -377,7 +381,7 @@ export const PlasmicLegal = Object.assign(
       title: "",
       description: "",
       ogImageSrc: "",
-      canonical: ""
+      canonical: "https://getnatalia.com/legal"
     }
   }
 );

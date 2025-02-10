@@ -193,6 +193,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
           name="twitter:image"
           content={PlasmicDemanderUneDemo.pageMetadata.ogImageSrc}
         />
+        <link
+          rel="canonical"
+          href={PlasmicDemanderUneDemo.pageMetadata.canonical}
+        />
       </Head>
 
       <style>{`
@@ -753,7 +757,7 @@ export const PlasmicDemanderUneDemo = Object.assign(
         "Découvrez comment Natalia peut optimiser votre relation client avec des réponses instantanées et personnalisées. Testez-la gratuitement dès maintenant !",
       ogImageSrc:
         "https://site-assets.plasmic.app/e76b5350c396e7c182f2a69b9728c752.png",
-      canonical: ""
+      canonical: "https://getnatalia.com/contact"
     }
   }
 );

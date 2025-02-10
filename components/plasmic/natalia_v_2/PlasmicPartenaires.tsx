@@ -770,7 +770,7 @@ export const PlasmicPartenaires = Object.assign(
       description:
         "Découvrez nos partenaires, CCI Vendée et French Tech, qui soutiennent Natalia dans l’accompagnement des entreprises vers des solutions numériques adaptées.",
       ogImageSrc: "",
-      canonical: "https://getnatalia.com/partenaires-natalia-soutien-numerique"
+      canonical: "https://getnatalia.com/partenaires"
     }
   }
 );

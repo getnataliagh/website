@@ -834,7 +834,7 @@ export const PlasmicMailsAutomatique = Object.assign(
         "Gagnez 80% de temps sur vos mails avec Natalia : génération de brouillons automatiques et dispatch intelligent pour une gestion simplifiée. ",
       ogImageSrc:
         "https://site-assets.plasmic.app/e76b5350c396e7c182f2a69b9728c752.png",
-      canonical: "https://getnatalia.com/assistant-mail-automatisation"
+      canonical: "https://getnatalia.com/assistant-mail-automatisation-ia"
     }
   }
 );
