@@ -243,7 +243,7 @@ function PlasmicFooter__RenderFunc(props: {
                 component={Link}
                 href={`/presse`}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Presse"}
               </PlasmicLink__>
@@ -257,7 +257,7 @@ function PlasmicFooter__RenderFunc(props: {
                 component={Link}
                 href={`/partenaires`}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Partenaires"}
               </PlasmicLink__>
@@ -271,7 +271,7 @@ function PlasmicFooter__RenderFunc(props: {
                 component={Link}
                 href={`/contact`}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Nous contacter"}
               </PlasmicLink__>
@@ -328,7 +328,7 @@ function PlasmicFooter__RenderFunc(props: {
                 component={Link}
                 href={`/conditions-generales-utilisation`}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Conditions G\u00e9n\u00e9rale d'Utilisation"}
               </PlasmicLink__>
@@ -342,7 +342,7 @@ function PlasmicFooter__RenderFunc(props: {
                 component={Link}
                 href={`/politique-confidentialite`}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Politique de confidentialit\u00e9"}
               </PlasmicLink__>
