@@ -190,7 +190,8 @@
   --mixin-IMIe1APYTCwm_letter-spacing: -0.5px;
   --mixin-IMIe1APYTCwm_line-height: 1.1;
   --mixin-IMIe1APYTCwm_white-space: pre-wrap;
-  --mixin-SjiHz5gz-_n9_color: #0070f3;
+  --mixin-SjiHz5gz-_n9_color: #030712;
+  --mixin-SjiHz5gz-_n9_text-decoration-line: underline;
   --mixin-SjiHz5gz-_n9_white-space: pre-wrap;
   --mixin-BE4qCI3FZhr0_color: #000000;
   --mixin-BE4qCI3FZhr0_font-size: 35px;
@@ -638,6 +639,7 @@ a:where(.root_reset.a),
 :where(.root_reset_tags) a,
 a:where(.root_reset_tags) {
   color: var(--mixin-SjiHz5gz-_n9_color);
+  text-decoration-line: var(--mixin-SjiHz5gz-_n9_text-decoration-line);
 }
 
 :where(.root_reset) h3:where(.h3),
