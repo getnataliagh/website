@@ -333,7 +333,7 @@ function PlasmicAccueil__RenderFunc(props: {
                     </div>
                   }
                   linkTo={`/contact`}
-                  openLinkInNewTab={true}
+                  openLinkInNewTab={false}
                 />
               </div>
             </section>
@@ -785,7 +785,7 @@ function PlasmicAccueil__RenderFunc(props: {
                     </div>
                   }
                   linkTo={`/assistante-vocale-ia`}
-                  openLinkInNewTab={true}
+                  openLinkInNewTab={false}
                 />
               </Stack__>
               <Stack__
@@ -1576,7 +1576,7 @@ function PlasmicAccueil__RenderFunc(props: {
                 linkTo={
                   "mailto:getnatalia@getnatalia.com?subject=Demande%20d'acc\u00e8s%20\u00e0%20Natalia&body=Bonjour%20%2C%0A%0AJe%20souhaite%20obtenir%20un%20acc\u00e8s%20\u00e0%20votre%20solution%20Natalia.%20Voici%20mes%20informations%20:%0A%0ANom%20:%20%0AEntreprise%20:%20%0AEmail%20:%20%0A%0AMerci%20de%20me%20revenir%20rapidement.%0A%0ACordialement,%0A[Votre%20Nom]"
                 }
-                openLinkInNewTab={true}
+                openLinkInNewTab={false}
               />
 
               <Footer
