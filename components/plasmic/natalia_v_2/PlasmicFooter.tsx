@@ -323,28 +323,14 @@ function PlasmicFooter__RenderFunc(props: {
                   projectcss.all,
                   projectcss.a,
                   projectcss.__wab_text,
-                  sty.link__cyXt7
-                )}
-                component={Link}
-                href={"thttps://www.getnatalia.com/terms.pdf"}
-                platform={"nextjs"}
-                target={"_blank"}
-              >
-                {"CGU"}
-              </PlasmicLink__>
-              <PlasmicLink__
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
                   sty.link__eVlTo
                 )}
                 component={Link}
-                href={`/legal`}
+                href={`/conditions-generales-utilisation`}
                 platform={"nextjs"}
                 target={"_blank"}
               >
-                {"L\u00e9gal"}
+                {"Conditions G\u00e9n\u00e9rale d'Utilisation"}
               </PlasmicLink__>
               <PlasmicLink__
                 className={classNames(

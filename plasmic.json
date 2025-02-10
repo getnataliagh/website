@@ -820,20 +820,6 @@
           "componentType": "component"
         },
         {
-          "id": "WcQ1QKDywmux",
-          "name": "Legal",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicLegal.tsx",
-          "importSpec": {
-            "modulePath": "../pages/legal.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicLegal.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/legal"
-        },
-        {
           "id": "WRD9j93d1vlf",
           "name": "Navbar",
           "type": "managed",
@@ -1155,6 +1141,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/chatbot"
+        },
+        {
+          "id": "WcQ1QKDywmux",
+          "name": "ConditionsGeneraleDutilisation",
+          "type": "managed",
+          "projectId": "mwhScQxahW1in9QQ9WEhLw",
+          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicConditionsGeneraleDutilisation.tsx",
+          "importSpec": {
+            "modulePath": "../pages/conditions-generales-utilisation.tsx"
+          },
+          "cssFilePath": "plasmic/natalia_v_2/PlasmicConditionsGeneraleDutilisation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/conditions-generales-utilisation"
         }
       ],
       "icons": [
