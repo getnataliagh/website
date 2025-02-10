@@ -283,10 +283,16 @@
   --mixin-obJHfqpK8uPk_font-weight: 600;
   --mixin-obJHfqpK8uPk_line-height: 1.5;
   --mixin-obJHfqpK8uPk_white-space: pre-wrap;
-  --mixin-YIOacD4X3eMq_color: #3291ff;
+  --mixin-YIOacD4X3eMq_color: #545b5f;
+  --mixin-YIOacD4X3eMq_text-decoration-line: underline;
   --mixin-YIOacD4X3eMq_white-space: pre-wrap;
   --mixin-uifmAymZwhF3_white-space: pre-wrap;
   --mixin-p8TY6oN7g6GP_white-space: pre-wrap;
+  --mixin-lhlTFd7pifkW_white-space: pre-wrap;
+  --mixin-bZboAKHVxBgJ_white-space: pre-wrap;
+  --mixin-EtCE1MlWu5kH_white-space: pre-wrap;
+  --mixin-aDSc8NkjmTBi_white-space: pre-wrap;
+  --mixin-tdsrJyO0xAdD_white-space: pre-wrap;
 }
 
 :where(.all) {
@@ -794,6 +800,7 @@ a:where(.root_reset.a):hover,
 :where(.root_reset_tags) a:hover,
 a:where(.root_reset_tags):hover {
   color: var(--mixin-YIOacD4X3eMq_color);
+  text-decoration-line: var(--mixin-YIOacD4X3eMq_text-decoration-line);
 }
 
 :where(.root_reset) li:where(.li),
@@ -808,4 +815,39 @@ p:where(.root_reset.p),
 :where(.root_reset .__wab_expr_html_text) p,
 :where(.root_reset_tags) p,
 p:where(.root_reset_tags) {
+}
+
+:where(.root_reset) a:where(.a):not(:hover),
+a:where(.root_reset.a):not(:hover),
+:where(.root_reset .__wab_expr_html_text) a:not(:hover),
+:where(.root_reset_tags) a:not(:hover),
+a:where(.root_reset_tags):not(:hover) {
+}
+
+:where(.root_reset) a:where(.a):active,
+a:where(.root_reset.a):active,
+:where(.root_reset .__wab_expr_html_text) a:active,
+:where(.root_reset_tags) a:active,
+a:where(.root_reset_tags):active {
+}
+
+:where(.root_reset) a:where(.a):focus,
+a:where(.root_reset.a):focus,
+:where(.root_reset .__wab_expr_html_text) a:focus,
+:where(.root_reset_tags) a:focus,
+a:where(.root_reset_tags):focus {
+}
+
+:where(.root_reset) a:where(.a):focus-visible,
+a:where(.root_reset.a):focus-visible,
+:where(.root_reset .__wab_expr_html_text) a:focus-visible,
+:where(.root_reset_tags) a:focus-visible,
+a:where(.root_reset_tags):focus-visible {
+}
+
+:where(.root_reset) a:where(.a):link,
+a:where(.root_reset.a):link,
+:where(.root_reset .__wab_expr_html_text) a:link,
+:where(.root_reset_tags) a:link,
+a:where(.root_reset_tags):link {
 }
