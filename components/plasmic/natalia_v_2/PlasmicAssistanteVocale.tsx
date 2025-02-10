@@ -1007,7 +1007,7 @@ export const PlasmicAssistanteVocale = Object.assign(
       description:
         "Gagnez en réactivité avec Natalia, l’assistante vocale IA qui répond 24/7, préqualifie vos leads et désengorge vos centres d’appels.",
       ogImageSrc:
-        "https://site-assets.plasmic.app/2c64147f6b26d85033032c08922d6a27.png",
+        "https://site-assets.plasmic.app/e76b5350c396e7c182f2a69b9728c752.png",
       canonical: "https://getnatalia.com/assistance-vocale"
     }
   }

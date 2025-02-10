@@ -232,6 +232,7 @@ function PlasmicAccueil__RenderFunc(props: {
           name="twitter:image"
           content={PlasmicAccueil.pageMetadata.ogImageSrc}
         />
+        <link rel="canonical" href={PlasmicAccueil.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -1798,8 +1799,8 @@ export const PlasmicAccueil = Object.assign(
       description:
         "Disponibilité 24/7, réponses instantanées et homogènes. Ne laissez plus aucun client sans réponse !",
       ogImageSrc:
-        "https://site-assets.plasmic.app/2c64147f6b26d85033032c08922d6a27.png",
-      canonical: ""
+        "https://site-assets.plasmic.app/e76b5350c396e7c182f2a69b9728c752.png",
+      canonical: "https//getnatalia.com/"
     }
   }
 );

@@ -1719,6 +1719,11 @@
           "id": "AacvaE-eUEO7",
           "name": "Home full.png",
           "filePath": "../public/plasmic/natalia_v_2/images/homeFullPng.png"
+        },
+        {
+          "id": "i1CX2zL668zF",
+          "name": "Desktop-dark.png",
+          "filePath": "../public/plasmic/natalia_v_2/images/desktopDarkPng.png"
         }
       ],
       "indirect": false,
