@@ -1,0 +1,44 @@
+// @ts-nocheck
+/* eslint-disable */
+/* tslint:disable */
+/* prettier-ignore-start */
+import React from "react";
+import { classNames } from "@plasmicapp/react-web";
+
+export type _9023576NumberCircleTwoFillIconSvgIconProps =
+  React.ComponentProps<"svg"> & {
+    title?: string;
+  };
+
+export function _9023576NumberCircleTwoFillIconSvgIcon(
+  props: _9023576NumberCircleTwoFillIconSvgIconProps
+) {
+  const { className, style, title, ...restProps } = props;
+  return (
+    <svg
+      xmlns={"http://www.w3.org/2000/svg"}
+      viewBox={"0 0 256 256"}
+      height={"1em"}
+      style={{
+        fill: "currentcolor",
+
+        ...(style || {}),
+      }}
+      className={classNames("plasmic-default__svg", className)}
+      {...restProps}
+    >
+      {title && <title>{title}</title>}
+
+      <path fill={"none"} d={"M0 0h256v256H0z"}></path>
+
+      <path
+        d={
+          "M128 24a104 104 0 10104 104A104.2 104.2 0 00128 24zm24 144a8 8 0 010 16h-48a7.3 7.3 0 01-2.5-.4A8 8 0 0196 176a7.5 7.5 0 011.7-4.9l43.7-58.3A16 16 0 00128 88a15.9 15.9 0 00-14.7 9.8 8 8 0 01-14.8-6.3 32 32 0 1156 30.4l-.2.3L120 168z"
+        }
+      ></path>
+    </svg>
+  );
+}
+
+export default _9023576NumberCircleTwoFillIconSvgIcon;
+/* prettier-ignore-end */

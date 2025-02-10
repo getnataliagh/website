@@ -1,0 +1,178 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  min-height: 0;
+  padding: 8px;
+}
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-content: flex-start;
+  justify-items: center;
+  max-width: 2048px;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: 0px;
+  margin: 0px auto;
+}
+.wrapper > * {
+  grid-column: 4;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .wrapper > * {
+    grid-column: 4;
+  }
+}
+.navbar:global(.__wab_instance) {
+  position: relative;
+}
+.freeBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-self: flex-start;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  padding: 50px 0px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: calc(0px - 50px);
+  height: calc(100% + 50px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 50px;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-top: calc(0px + 50px) !important;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 0;
+  padding: 0px;
+}
+.intro > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-top: calc(0px - 50px);
+  height: calc(100% + 50px);
+}
+.intro > :global(.__wab_flex-container) > *,
+.intro > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.intro > :global(.__wab_flex-container) > picture > img,
+.intro > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 50px;
+}
+.h1 {
+  width: 100%;
+  height: auto;
+  font-size: 50px;
+  text-align: center;
+  color: var(--token-LlB3dvOZfuAV);
+  font-weight: 700;
+  user-select: none;
+  min-width: 0;
+  padding: 0px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h1 {
+    width: auto;
+    max-width: 100%;
+    font-size: 35px;
+  }
+}
+.text___92KjV {
+  position: relative;
+  width: auto;
+  height: auto;
+  color: #030712cc;
+  text-align: left;
+  font-size: 20px;
+  padding: 0px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text___92KjV {
+    font-size: 14px;
+    padding: 0px;
+  }
+}
+.policy {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-row-gap: 50px;
+  align-content: center;
+  justify-items: center;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  border-radius: 0px;
+  padding: 0px;
+  border: 0px solid #ffffff;
+}
+.policy > * {
+  grid-column: 4;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .policy {
+    padding: 50px 20px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .policy > * {
+    grid-column: 4;
+  }
+}
+.text__jT5U4 {
+  width: 100%;
+  justify-self: flex-start;
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+}
+.bigFooter:global(.__wab_instance) {
+  max-width: 100%;
+}
