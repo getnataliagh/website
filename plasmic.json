@@ -853,7 +853,7 @@
           "projectId": "mwhScQxahW1in9QQ9WEhLw",
           "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipCentralisation.tsx",
           "importSpec": {
-            "modulePath": "../pages/centralisation.tsx"
+            "modulePath": "../pages/wip-centralisation.tsx"
           },
           "cssFilePath": "plasmic/natalia_v_2/PlasmicWipCentralisation.module.css",
           "scheme": "blackbox",
@@ -907,7 +907,7 @@
           "projectId": "mwhScQxahW1in9QQ9WEhLw",
           "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipOffres.tsx",
           "importSpec": {
-            "modulePath": "../pages/offers.tsx"
+            "modulePath": "../pages/wip-offers.tsx"
           },
           "cssFilePath": "plasmic/natalia_v_2/PlasmicWipOffres.module.css",
           "scheme": "blackbox",
@@ -1107,7 +1107,7 @@
           "projectId": "mwhScQxahW1in9QQ9WEhLw",
           "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipTraitement.tsx",
           "importSpec": {
-            "modulePath": "../pages/traitement.tsx"
+            "modulePath": "../pages/wip-traitement.tsx"
           },
           "cssFilePath": "plasmic/natalia_v_2/PlasmicWipTraitement.module.css",
           "scheme": "blackbox",
@@ -1149,7 +1149,7 @@
           "projectId": "mwhScQxahW1in9QQ9WEhLw",
           "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipChatbot.tsx",
           "importSpec": {
-            "modulePath": "../pages/chatbot.tsx"
+            "modulePath": "../pages/wip-chatbot.tsx"
           },
           "cssFilePath": "plasmic/natalia_v_2/PlasmicWipChatbot.module.css",
           "scheme": "blackbox",

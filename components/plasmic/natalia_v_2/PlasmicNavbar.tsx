@@ -233,7 +233,7 @@ function PlasmicNavbar__RenderFunc(props: {
           <NavigationLink
             className={classNames("__wab_instance", sty.navigationLink__exOiF)}
             label={"Chatbot int\u00e9gr\u00e9"}
-            target={`/chatbot`}
+            target={`/wip-chatbot`}
           />
 
           <NavigationLink
@@ -387,7 +387,7 @@ function PlasmicNavbar__RenderFunc(props: {
               )
             })}
             label={"Chatbot int\u00e9gr\u00e9"}
-            target={`/chatbot`}
+            target={`/wip-chatbot`}
           />
 
           <NavigationLink
