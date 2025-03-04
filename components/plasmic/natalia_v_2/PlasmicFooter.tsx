@@ -183,10 +183,10 @@ function PlasmicFooter__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/natalia_v_2/images/logoSvg3.svg",
-                  fullWidth: 184,
-                  fullHeight: 60,
-                  aspectRatio: 3.066667
+                  src: "/plasmic/natalia_v_2/images/logoFullVersionFoncePng.png",
+                  fullWidth: 734,
+                  fullHeight: 252,
+                  aspectRatio: undefined
                 }}
               />
             </Stack__>

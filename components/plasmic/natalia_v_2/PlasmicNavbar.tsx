@@ -195,7 +195,13 @@ function PlasmicNavbar__RenderFunc(props: {
             data-plasmic-name={"nataliaLogo"}
             data-plasmic-override={overrides.nataliaLogo}
             alt={"/"}
-            className={classNames(sty.nataliaLogo)}
+            className={classNames(sty.nataliaLogo, {
+              [sty.nataliaLogoexpanded]: hasVariant(
+                $state,
+                "expanded",
+                "expanded"
+              )
+            })}
             displayHeight={"80px"}
             displayMaxHeight={"none"}
             displayMaxWidth={"none"}
@@ -203,10 +209,10 @@ function PlasmicNavbar__RenderFunc(props: {
             displayMinWidth={"0"}
             displayWidth={"auto"}
             src={{
-              src: "/plasmic/natalia_v_2/images/logoSvg2.svg",
-              fullWidth: 184,
-              fullHeight: 60,
-              aspectRatio: 3.066667
+              src: "/plasmic/natalia_v_2/images/logoFullVersionFoncePng.png",
+              fullWidth: 734,
+              fullHeight: 252,
+              aspectRatio: undefined
             }}
             title={``}
           />

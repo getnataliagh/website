@@ -678,8 +678,7 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1724,6 +1723,11 @@
           "id": "i1CX2zL668zF",
           "name": "Desktop-dark.png",
           "filePath": "../public/plasmic/natalia_v_2/images/desktopDarkPng.png"
+        },
+        {
+          "id": "8cUSw5dKBNQB",
+          "name": "logo full version foncé.png",
+          "filePath": "../public/plasmic/natalia_v_2/images/logoFullVersionFoncePng.png"
         }
       ],
       "indirect": false,
