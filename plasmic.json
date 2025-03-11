@@ -678,7 +678,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1728,6 +1729,31 @@
           "id": "8cUSw5dKBNQB",
           "name": "logo full version foncé.png",
           "filePath": "../public/plasmic/natalia_v_2/images/logoFullVersionFoncePng.png"
+        },
+        {
+          "id": "D_cR5GuAtBGV",
+          "name": "Ajouter un titre (1).png",
+          "filePath": "../public/plasmic/natalia_v_2/images/ajouterUnTitre1Png.png"
+        },
+        {
+          "id": "RRBa2F4l3ZMZ",
+          "name": "Ajouter un titre (2).png",
+          "filePath": "../public/plasmic/natalia_v_2/images/ajouterUnTitre2Png.png"
+        },
+        {
+          "id": "dncyzFWAg3TW",
+          "name": "Ajouter un titre (3) (1).png",
+          "filePath": "../public/plasmic/natalia_v_2/images/ajouterUnTitre31Png.png"
+        },
+        {
+          "id": "CjL_3pxOltFl",
+          "name": "Ajouter un titre (5) (1).png",
+          "filePath": "../public/plasmic/natalia_v_2/images/ajouterUnTitre51Png.png"
+        },
+        {
+          "id": "ebGAWLsmk_Zj",
+          "name": "Copie de White Minimalist Profile LinkedIn Banner (3) (1).png",
+          "filePath": "../public/plasmic/natalia_v_2/images/copieDeWhiteMinimalistProfileLinkedInBanner31Png.png"
         }
       ],
       "indirect": false,

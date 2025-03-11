@@ -183,9 +183,9 @@ function PlasmicFooter__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/natalia_v_2/images/logoFullVersionFoncePng.png",
-                  fullWidth: 734,
-                  fullHeight: 252,
+                  src: "/plasmic/natalia_v_2/images/copieDeWhiteMinimalistProfileLinkedInBanner31Png.png",
+                  fullWidth: 1600,
+                  fullHeight: 480,
                   aspectRatio: undefined
                 }}
               />
