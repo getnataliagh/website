@@ -437,7 +437,11 @@ function PlasmicAccueil__RenderFunc(props: {
                       fullHeight: 360,
                       aspectRatio: undefined
                     }}
-                    titre={"Suivi de la performance"}
+                    titre={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ``
+                        : "Suivi de la performance"
+                    }
                   />
                 </Stack__>
               </Stack__>
@@ -459,6 +463,17 @@ function PlasmicAccueil__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.titre2)}
                 >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__yKbBj
+                    )}
+                  >
+                    {
+                      "Des \u00e9tudes montrent que la gestion optimis\u00e9e des appels peut transformer votre gestion client"
+                    }
+                  </div>
                   <h2
                     className={classNames(
                       projectcss.all,
@@ -471,17 +486,6 @@ function PlasmicAccueil__RenderFunc(props: {
                       ? "Les chiffres \nparlent pour \nNatalia"
                       : "Les chiffres parlent pour Natalia"}
                   </h2>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__yKbBj
-                    )}
-                  >
-                    {
-                      "Des \u00e9tudes montrent que la gestion optimis\u00e9e des appels peut transformer votre gestion client"
-                    }
-                  </div>
                 </Stack__>
                 <Stack__
                   as={"div"}

@@ -126,6 +126,8 @@
     justify-self: flex-start;
     max-width: 100%;
     font-size: 35px;
+    margin-top: 31px;
+    margin-bottom: 48px;
   }
 }
 .text__t3Dp {
@@ -190,6 +192,7 @@
     width: 100%;
     height: var(--token-1sUcKXpzJnx7);
     min-width: 0;
+    display: none;
   }
 }
 .svg__z7Bap {
@@ -334,6 +337,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .h2__htB5C {
     font-size: 30px;
+    display: none;
   }
 }
 .why {
@@ -510,23 +514,6 @@
   > img {
   margin-top: 10px;
 }
-.h2___5XNw {
-  width: 100%;
-  height: auto;
-  max-width: auto;
-  font-size: var(--token-R7Hu22R7l13m);
-  text-align: center;
-  color: var(--token-LlB3dvOZfuAV);
-  font-weight: 500;
-  min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .h2___5XNw {
-    font-size: 30px;
-    padding-left: 13px;
-    text-align: left;
-  }
-}
 .text__yKbBj {
   position: relative;
   width: 100%;
@@ -545,6 +532,28 @@
     padding-left: 11px;
     padding-right: 10px;
     text-align: left;
+    display: none;
+  }
+}
+.h2___5XNw {
+  width: 100%;
+  height: auto;
+  max-width: auto;
+  font-size: var(--token-R7Hu22R7l13m);
+  text-align: center;
+  color: var(--token-LlB3dvOZfuAV);
+  font-weight: 500;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___5XNw {
+    font-size: 30px;
+    padding-left: 13px;
+    text-align: left;
+    max-width: 26px;
+    width: 100%;
+    margin-right: 184px;
+    min-width: 0;
   }
 }
 .chiffres2 {
@@ -731,6 +740,12 @@
 }
 .solutions > * {
   grid-column: 4;
+}
+@media (max-width: 1200px) {
+  .solutions {
+    padding-bottom: 36px;
+    padding-top: 49px;
+  }
 }
 @media (max-width: 1200px) {
   .solutions > * {
@@ -2538,6 +2553,16 @@
 .faq > * {
   grid-column: 4;
 }
+@media (max-width: 1200px) {
+  .faq {
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .faq > * {
+    grid-column: 4;
+  }
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .faq {
     padding: 50px var(--token-tzQq8kvkeGcP);
@@ -2685,6 +2710,16 @@
 }
 .footer > * {
   grid-column: 4;
+}
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .footer > * {
+    grid-column: 4;
+  }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .footer {
