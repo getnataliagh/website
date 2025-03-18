@@ -450,207 +450,210 @@ function PlasmicAccueil__RenderFunc(props: {
               data-plasmic-name={"chiffres"}
               data-plasmic-override={overrides.chiffres}
               className={classNames(projectcss.all, sty.chiffres)}
+            />
+
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__aphDh)}
             >
               <Stack__
                 as={"div"}
+                data-plasmic-name={"titre2"}
+                data-plasmic-override={overrides.titre2}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__aphDh)}
+                className={classNames(projectcss.all, sty.titre2)}
               >
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"titre2"}
-                  data-plasmic-override={overrides.titre2}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.titre2)}
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2___5XNw
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__yKbBj
-                    )}
-                  >
-                    {
-                      "Des \u00e9tudes montrent que la gestion optimis\u00e9e des appels peut transformer votre gestion client"
-                    }
-                  </div>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2___5XNw
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? "Les chiffres \nparlent pour \nNatalia"
-                      : "Les chiffres parlent pour Natalia"}
-                  </h2>
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"chiffres2"}
-                  data-plasmic-override={overrides.chiffres2}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.chiffres2)}
-                >
-                  <Number
-                    className={classNames("__wab_instance", sty.number__wRvYh)}
-                  />
-
-                  <Number
-                    className={classNames("__wab_instance", sty.number__pmSpk)}
-                    description={
-                      "des clients satisfaits sont plus enclins \u00e0 racheter dans la m\u00eame entreprise."
-                    }
-                    nb={"86%"}
-                  />
-
-                  <Number
-                    className={classNames("__wab_instance", sty.number__d0Ntq)}
-                    description={
-                      "de la charge de travail peut-\u00eatre r\u00e9duite gr\u00e2ce \u00e0 l\u2019automatisation."
-                    }
-                    nb={"30%"}
-                  />
-
-                  {(() => {
-                    const child$Props = {
-                      beforeChange: async (...eventArgs: any) => {
-                        generateStateOnChangePropForCodeComponents(
-                          $state,
-                          "currentSlide",
-                          ["sliderCarousel", "currentSlide"],
-                          SliderWrapper_Helpers
-                        ).apply(null, eventArgs);
-                      },
-                      className: classNames(
-                        "__wab_instance",
-                        sty.sliderCarousel
-                      ),
-                      initialSlide: generateStateValueProp($state, [
-                        "sliderCarousel",
-                        "currentSlide"
-                      ]),
-                      ref: ref => {
-                        $refs["sliderCarousel"] = ref;
-                      },
-                      sliderScopeClassName: sty["sliderCarousel__slider"]
-                    };
-                    initializeCodeComponentStates(
-                      $state,
-                      [
-                        {
-                          name: "currentSlide",
-                          plasmicStateName: "sliderCarousel.currentSlide"
-                        }
-                      ],
-                      [],
-                      SliderWrapper_Helpers ?? {},
-                      child$Props
-                    );
-
-                    return (
-                      <SliderWrapper
-                        data-plasmic-name={"sliderCarousel"}
-                        data-plasmic-override={overrides.sliderCarousel}
-                        {...child$Props}
+                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
                       >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___6TLiv
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___3FzOo)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            src={
-                              "https://static1.plasmic.app/components/react-slick/slide1.png"
-                            }
-                          />
-
-                          <Number
-                            className={classNames(
-                              "__wab_instance",
-                              sty.number__dq5M
-                            )}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__amdlW
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__dzDbE)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            src={
-                              "https://static1.plasmic.app/components/react-slick/slide2.png"
-                            }
-                          />
-
-                          <Number
-                            className={classNames(
-                              "__wab_instance",
-                              sty.number__vFjUm
-                            )}
-                            description={
-                              "des clients satisfaits sont plus enclins \u00e0 racheter dans la m\u00eame entreprise."
-                            }
-                            nb={"86%"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__cbAzH
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__kKm1A)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            src={
-                              "https://static1.plasmic.app/components/react-slick/slide3.png"
-                            }
-                          />
-
-                          <Number
-                            className={classNames(
-                              "__wab_instance",
-                              sty.number__iPja3
-                            )}
-                            description={
-                              "de la charge de travail peut-\u00eatre r\u00e9duite gr\u00e2ce \u00e0 l\u2019automatisation."
-                            }
-                            nb={"30%"}
-                          />
-                        </div>
-                      </SliderWrapper>
-                    );
-                  })()}
-                </Stack__>
+                        {"40%"}
+                      </span>
+                      <React.Fragment>{" des appels "}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"perdus"}
+                      </span>
+                      <React.Fragment>{" par semaine"}</React.Fragment>
+                    </React.Fragment>
+                  ) : (
+                    "Les chiffres parlent"
+                  )}
+                </h2>
               </Stack__>
-            </section>
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"chiffres2"}
+                data-plasmic-override={overrides.chiffres2}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.chiffres2)}
+              >
+                <Number
+                  className={classNames("__wab_instance", sty.number__wRvYh)}
+                />
+
+                <Number
+                  className={classNames("__wab_instance", sty.number__pmSpk)}
+                  description={
+                    "des clients satisfaits sont plus enclins \u00e0 racheter dans la m\u00eame entreprise."
+                  }
+                  nb={"86%"}
+                />
+
+                <Number
+                  className={classNames("__wab_instance", sty.number__d0Ntq)}
+                  description={
+                    "de la charge de travail peut-\u00eatre r\u00e9duite gr\u00e2ce \u00e0 l\u2019automatisation."
+                  }
+                  nb={"30%"}
+                />
+
+                {(() => {
+                  const child$Props = {
+                    beforeChange: async (...eventArgs: any) => {
+                      generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "currentSlide",
+                        ["sliderCarousel", "currentSlide"],
+                        SliderWrapper_Helpers
+                      ).apply(null, eventArgs);
+                    },
+                    className: classNames("__wab_instance", sty.sliderCarousel),
+                    initialSlide: generateStateValueProp($state, [
+                      "sliderCarousel",
+                      "currentSlide"
+                    ]),
+                    ref: ref => {
+                      $refs["sliderCarousel"] = ref;
+                    },
+                    sliderScopeClassName: sty["sliderCarousel__slider"]
+                  };
+                  initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "currentSlide",
+                        plasmicStateName: "sliderCarousel.currentSlide"
+                      }
+                    ],
+                    [],
+                    SliderWrapper_Helpers ?? {},
+                    child$Props
+                  );
+
+                  return (
+                    <SliderWrapper
+                      data-plasmic-name={"sliderCarousel"}
+                      data-plasmic-override={overrides.sliderCarousel}
+                      {...child$Props}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___6TLiv
+                        )}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___3FzOo)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          src={
+                            "https://static1.plasmic.app/components/react-slick/slide1.png"
+                          }
+                        />
+
+                        <Number
+                          className={classNames(
+                            "__wab_instance",
+                            sty.number__dq5M
+                          )}
+                        />
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__amdlW
+                        )}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__dzDbE)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          src={
+                            "https://static1.plasmic.app/components/react-slick/slide2.png"
+                          }
+                        />
+
+                        <Number
+                          className={classNames(
+                            "__wab_instance",
+                            sty.number__vFjUm
+                          )}
+                          description={
+                            "des clients satisfaits sont plus enclins \u00e0 racheter dans la m\u00eame entreprise."
+                          }
+                          nb={"86%"}
+                        />
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__cbAzH
+                        )}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__kKm1A)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          src={
+                            "https://static1.plasmic.app/components/react-slick/slide3.png"
+                          }
+                        />
+
+                        <Number
+                          className={classNames(
+                            "__wab_instance",
+                            sty.number__iPja3
+                          )}
+                          description={
+                            "de la charge de travail peut-\u00eatre r\u00e9duite gr\u00e2ce \u00e0 l\u2019automatisation."
+                          }
+                          nb={"30%"}
+                        />
+                      </div>
+                    </SliderWrapper>
+                  );
+                })()}
+              </Stack__>
+            </Stack__>
             <section
               data-plasmic-name={"solutions"}
               data-plasmic-override={overrides.solutions}
@@ -682,7 +685,20 @@ function PlasmicAccueil__RenderFunc(props: {
                         sty.h2__lheNv
                       )}
                     >
-                      {"Assistance Vocale"}
+                      {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700 }}
+                          >
+                            {"Assistance Vocale 24h/24"}
+                          </span>
+                        </React.Fragment>
+                      ) : (
+                        "Assistance Vocale 24h/24"
+                      )}
                     </h2>
                     <div
                       className={classNames(
@@ -1656,7 +1672,7 @@ const PlasmicDescendants = {
   pourquoi: ["pourquoi", "titre", "why"],
   titre: ["titre"],
   why: ["why"],
-  chiffres: ["chiffres", "titre2", "chiffres2", "sliderCarousel"],
+  chiffres: ["chiffres"],
   titre2: ["titre2"],
   chiffres2: ["chiffres2", "sliderCarousel"],
   sliderCarousel: ["sliderCarousel"],

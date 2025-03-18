@@ -89,3 +89,8 @@
   color: var(--token-Ul9vuJeMYcWv);
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__w8BTs {
+    padding-left: 0px;
+  }
+}
