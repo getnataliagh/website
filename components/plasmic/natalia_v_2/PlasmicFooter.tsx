@@ -178,10 +178,10 @@ function PlasmicFooter__RenderFunc(props: {
                 className={classNames(sty.img__eQ9Rp)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
+                displayMaxWidth={"362px"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"auto"}
+                displayWidth={"100%"}
                 src={{
                   src: "/plasmic/natalia_v_2/images/copieDeWhiteMinimalistProfileLinkedInBanner4RemovebgPreviewPng.png",
                   fullWidth: 912,
