@@ -122,10 +122,12 @@
   position: relative;
   width: auto;
   height: auto;
+  padding-left: 0px;
   color: #030712cc;
   text-align: left;
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-size: 20px;
-  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text___92KjV {

@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -85,10 +85,7 @@ export const PlasmicEtape__VariantProps = new Array<VariantPropType>(
   "_3"
 );
 
-export type PlasmicEtape__ArgsType = {
-  titre?: string;
-  description?: string;
-};
+export type PlasmicEtape__ArgsType = { titre?: string; description?: string };
 type ArgPropType = keyof PlasmicEtape__ArgsType;
 export const PlasmicEtape__ArgProps = new Array<ArgPropType>(
   "titre",
@@ -298,15 +295,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicEtape__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicEtape__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicEtape__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicEtape__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;

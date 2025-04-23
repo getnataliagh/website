@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -72,9 +72,7 @@ export type PlasmicCard__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCard__VariantsArgs;
 export const PlasmicCard__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCard__ArgsType = {
-  children?: React.ReactNode;
-};
+export type PlasmicCard__ArgsType = { children?: React.ReactNode };
 type ArgPropType = keyof PlasmicCard__ArgsType;
 export const PlasmicCard__ArgProps = new Array<ArgPropType>("children");
 
@@ -172,15 +170,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicCard__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicCard__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicCard__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicCard__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;

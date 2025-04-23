@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -72,10 +72,7 @@ export type PlasmicNumber__VariantsArgs = {};
 type VariantPropType = keyof PlasmicNumber__VariantsArgs;
 export const PlasmicNumber__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicNumber__ArgsType = {
-  nb?: string;
-  description?: string;
-};
+export type PlasmicNumber__ArgsType = { nb?: string; description?: string };
 type ArgPropType = keyof PlasmicNumber__ArgsType;
 export const PlasmicNumber__ArgProps = new Array<ArgPropType>(
   "nb",
@@ -231,15 +228,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicNumber__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicNumber__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicNumber__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicNumber__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;

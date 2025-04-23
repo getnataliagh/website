@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -77,9 +77,7 @@ export type PlasmicInputText__VariantsArgs = {};
 type VariantPropType = keyof PlasmicInputText__VariantsArgs;
 export const PlasmicInputText__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicInputText__ArgsType = {
-  placeholder?: string;
-};
+export type PlasmicInputText__ArgsType = { placeholder?: string };
 type ArgPropType = keyof PlasmicInputText__ArgsType;
 export const PlasmicInputText__ArgProps = new Array<ArgPropType>("placeholder");
 
@@ -238,15 +236,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicInputText__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicInputText__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicInputText__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicInputText__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;
