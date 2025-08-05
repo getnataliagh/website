@@ -149,6 +149,7 @@ function PlasmicAPropos__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -250,11 +251,7 @@ function PlasmicAPropos__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.navbar)}
               />
 
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__j4WxD)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__j4WxD)}>
                 <h1
                   className={classNames(
                     projectcss.all,
@@ -321,7 +318,7 @@ function PlasmicAPropos__RenderFunc(props: {
                     </React.Fragment>
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
               <div
                 data-plasmic-name={"cta"}
                 data-plasmic-override={overrides.cta}
@@ -350,16 +347,8 @@ function PlasmicAPropos__RenderFunc(props: {
               data-plasmic-override={overrides.photos}
               className={classNames(projectcss.all, sty.photos)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___3CBh9)}
-              >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__oEIw9)}
-                >
+              <div className={classNames(projectcss.all, sty.freeBox___3CBh9)}>
+                <div className={classNames(projectcss.all, sty.freeBox__oEIw9)}>
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__jFqs9)}
@@ -411,12 +400,8 @@ function PlasmicAPropos__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__oiR2K)}
-                >
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__oiR2K)}>
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__obDdX)}
@@ -468,19 +453,15 @@ function PlasmicAPropos__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"chiffres"}
               data-plasmic-override={overrides.chiffres}
               className={classNames(projectcss.all, sty.chiffres)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__d7Sw)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__d7Sw)}>
                 <h2
                   data-plasmic-name={"commentaireAudrey"}
                   data-plasmic-override={overrides.commentaireAudrey}
@@ -493,14 +474,10 @@ function PlasmicAPropos__RenderFunc(props: {
                 >
                   {"peut-\u00eatre mettre les objectifs pour 2025 ?"}
                 </h2>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
+                <div
                   className={classNames(projectcss.all, sty.freeBox___9AtI4)}
                 >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__vdD9H)}
                   >
                     <Chiffres
@@ -537,8 +514,8 @@ function PlasmicAPropos__RenderFunc(props: {
                       nb={"6"}
                       sousTitre={"collaborateurs"}
                     />
-                  </Stack__>
-                </Stack__>
+                  </div>
+                </div>
                 {(() => {
                   const child$Props = {
                     arrows: false,
@@ -658,25 +635,19 @@ function PlasmicAPropos__RenderFunc(props: {
                     </SliderWrapper>
                   );
                 })()}
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"beggining"}
               data-plasmic-override={overrides.beggining}
               className={classNames(projectcss.all, sty.beggining)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"ceQueFaitNatalia"}
                 data-plasmic-override={overrides.ceQueFaitNatalia}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.ceQueFaitNatalia)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__vK8Nm)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__vK8Nm)}>
                   <h2
                     className={classNames(
                       projectcss.all,
@@ -761,7 +732,7 @@ function PlasmicAPropos__RenderFunc(props: {
                       </React.Fragment>
                     </React.Fragment>
                   </div>
-                </Stack__>
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__n3Vm)}>
                   <PlasmicImg__
                     alt={""}
@@ -781,7 +752,7 @@ function PlasmicAPropos__RenderFunc(props: {
                     }}
                   />
                 </div>
-              </Stack__>
+              </div>
               <_9042754LongArrowLeftUpIconSvgIcon
                 data-plasmic-name={"svg"}
                 data-plasmic-override={overrides.svg}
@@ -807,16 +778,8 @@ function PlasmicAPropos__RenderFunc(props: {
               data-plasmic-override={overrides.fondateurs}
               className={classNames(projectcss.all, sty.fondateurs)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__x78SF)}
-              >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__qt0FP)}
-                >
+              <div className={classNames(projectcss.all, sty.freeBox__x78SF)}>
+                <div className={classNames(projectcss.all, sty.freeBox__qt0FP)}>
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__ieQxe)}
@@ -846,15 +809,9 @@ function PlasmicAPropos__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__mBzsH)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__mBzsH)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__c5Aw)}
                   >
                     <h2
@@ -976,20 +933,16 @@ function PlasmicAPropos__RenderFunc(props: {
                         </React.Fragment>
                       </React.Fragment>
                     </div>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                  </div>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"chronologie"}
               data-plasmic-override={overrides.chronologie}
               className={classNames(projectcss.all, sty.chronologie)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tCfOz)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__tCfOz)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -1000,11 +953,7 @@ function PlasmicAPropos__RenderFunc(props: {
                 >
                   {"Chronologie"}
                 </h2>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__wch2M)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__wch2M)}>
                   <Chronologie
                     className={classNames(
                       "__wab_instance",
@@ -1039,27 +988,17 @@ function PlasmicAPropos__RenderFunc(props: {
                     }
                     descriptionGauche={``}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"valeurs"}
               data-plasmic-override={overrides.valeurs}
               className={classNames(projectcss.all, sty.valeurs)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__neX7Z)}
-              >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__vYdY8)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+              <div className={classNames(projectcss.all, sty.freeBox__neX7Z)}>
+                <div className={classNames(projectcss.all, sty.freeBox__vYdY8)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__apYhb)}
                   >
                     <h2
@@ -1081,16 +1020,10 @@ function PlasmicAPropos__RenderFunc(props: {
                     >
                       {"Ce qui fait Natalia..."}
                     </div>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__bigKa)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__bigKa)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox___600TD)}
                   >
                     <Valeur
@@ -1111,10 +1044,8 @@ function PlasmicAPropos__RenderFunc(props: {
                       emoji={"\ud83d\udd04"}
                       titre={"Flexibilit\u00e9"}
                     />
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  </div>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox___6Zyjn)}
                   >
                     <Valeur
@@ -1140,20 +1071,16 @@ function PlasmicAPropos__RenderFunc(props: {
                       emoji={"\ud83d\ude80"}
                       titre={"Efficacit\u00e9"}
                     />
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                  </div>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"rencontre"}
               data-plasmic-override={overrides.rencontre}
               className={classNames(projectcss.all, sty.rencontre)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__snjb)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__snjb)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -1197,7 +1124,7 @@ function PlasmicAPropos__RenderFunc(props: {
                     "M\u00eame pas besoin de vous d\u00e9placer, nous venons \u00e0 votre rencontre !"
                   }
                 </div>
-              </Stack__>
+              </div>
               <Button
                 className={classNames("__wab_instance", sty.button__i2M5B)}
                 label={

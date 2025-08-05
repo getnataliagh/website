@@ -96,6 +96,7 @@ export type PlasmicEtape__OverridesType = {
   root?: Flex__<"div">;
   svg?: Flex__<"svg">;
   freeBox?: Flex__<"div">;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultEtapeProps {
@@ -144,6 +145,7 @@ function PlasmicEtape__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -173,13 +175,11 @@ function PlasmicEtape__RenderFunc(props: {
   });
 
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -211,18 +211,18 @@ function PlasmicEtape__RenderFunc(props: {
         role={"img"}
       />
 
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        hasGap={true}
         className={classNames(projectcss.all, sty.freeBox)}
       >
         <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text__tYCp
+            sty.text
           )}
         >
           <React.Fragment>
@@ -234,45 +234,23 @@ function PlasmicEtape__RenderFunc(props: {
                   e instanceof TypeError ||
                   e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
-                  return "Configurez en quelques clics";
+                  return "Cr\u00e9ation du compte et param\\u00e9trages";
                 }
                 throw e;
               }
             })()}
           </React.Fragment>
         </div>
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__w8BTs
-          )}
-        >
-          <React.Fragment>
-            {(() => {
-              try {
-                return $props.description;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return "Depuis votre dashboard, connectez facilement vos outils (Odoo, Google Sheet, etc.) et configurez les sc\u00e9narios de Natalia selon vos besoins.";
-                }
-                throw e;
-              }
-            })()}
-          </React.Fragment>
-        </div>
-      </Stack__>
-    </Stack__>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "svg", "freeBox"],
+  root: ["root", "svg", "freeBox", "text"],
   svg: ["svg"],
-  freeBox: ["freeBox"]
+  freeBox: ["freeBox", "text"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -281,6 +259,7 @@ type NodeDefaultElementType = {
   root: "div";
   svg: "svg";
   freeBox: "div";
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -345,6 +324,7 @@ export const PlasmicEtape = Object.assign(
     // Helper components rendering sub-elements
     svg: makeNodeComponent("svg"),
     freeBox: makeNodeComponent("freeBox"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicEtape
     internalVariantProps: PlasmicEtape__VariantProps,

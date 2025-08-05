@@ -137,6 +137,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -254,11 +255,9 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                   "Automatisez vos processus et lib\u00e9rez vos ADV des t\u00e2ches r\u00e9p\u00e9titives pour se concentrer sur l'essentiel."
                 }
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"cta"}
                 data-plasmic-override={overrides.cta}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.cta)}
               >
                 <Button
@@ -295,7 +294,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                   linkTo={"#dispatch"}
                   openLinkInNewTab={false}
                 />
-              </Stack__>
+              </div>
             </section>
             <PlasmicLink__
               data-plasmic-name={"personnaliser"}
@@ -333,11 +332,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                     }}
                   />
                 </div>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__sBuyf)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__sBuyf)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -407,19 +402,13 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__aaEl7)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__ysBdA)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox___6ZOLv
@@ -443,10 +432,8 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                         >
                           {"80% de temps \u00e9conomis\u00e9"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox___3ONB
@@ -472,10 +459,10 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                             "Focus sur les t\u00e2ches \u00e0 valeur ajout\u00e9e"
                           }
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </PlasmicLink__>
             <section
@@ -483,11 +470,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
               data-plasmic-override={overrides.apercu}
               className={classNames(projectcss.all, sty.apercu)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___4M6Zs)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___4M6Zs)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -504,7 +487,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.youTube)}
                   videoId={"R6MeLqRQzYw"}
                 />
-              </Stack__>
+              </div>
             </section>
             <PlasmicLink__
               data-plasmic-name={"automatisation"}
@@ -542,11 +525,7 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                     }}
                   />
                 </div>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__zIPf)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__zIPf)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -608,19 +587,13 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                       </React.Fragment>
                     </React.Fragment>
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__xuo5E)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__aagct)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__oS626
@@ -644,10 +617,8 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                         >
                           {"Dispatch aux bons interlocuteurs"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__o9Gw3
@@ -680,10 +651,10 @@ function PlasmicMailsAutomatique__RenderFunc(props: {
                         >
                           {""}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </PlasmicLink__>
             <BigFooter

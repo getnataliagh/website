@@ -127,6 +127,7 @@ function PlasmicFooter__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -156,11 +157,9 @@ function PlasmicFooter__RenderFunc(props: {
         data-plasmic-override={overrides.footer12}
         className={classNames(projectcss.all, sty.footer12)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
-          hasGap={true}
           className={classNames(projectcss.all, sty.columns)}
         >
           <div
@@ -168,11 +167,7 @@ function PlasmicFooter__RenderFunc(props: {
             data-plasmic-override={overrides.logo}
             className={classNames(projectcss.all, sty.logo)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__rgvih)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__rgvih)}>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__eQ9Rp)}
@@ -189,7 +184,7 @@ function PlasmicFooter__RenderFunc(props: {
                   aspectRatio: undefined
                 }}
               />
-            </Stack__>
+            </div>
           </div>
           <div
             data-plasmic-name={"column"}
@@ -219,11 +214,7 @@ function PlasmicFooter__RenderFunc(props: {
             data-plasmic-override={overrides.aPropos}
             className={classNames(projectcss.all, sty.aPropos)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__cuBdT)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__cuBdT)}>
               <div
                 className={classNames(
                   projectcss.all,
@@ -297,18 +288,14 @@ function PlasmicFooter__RenderFunc(props: {
               >
                 {"Statut des syst\u00e8mes"}
               </PlasmicLink__>
-            </Stack__>
+            </div>
           </div>
           <div
             data-plasmic-name={"company"}
             data-plasmic-override={overrides.company}
             className={classNames(projectcss.all, sty.company)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__hm63B)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__hm63B)}>
               <div
                 className={classNames(
                   projectcss.all,
@@ -346,15 +333,13 @@ function PlasmicFooter__RenderFunc(props: {
               >
                 {"Politique de confidentialit\u00e9"}
               </PlasmicLink__>
-            </Stack__>
+            </div>
           </div>
-        </Stack__>
+        </div>
       </div>
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"footer22"}
         data-plasmic-override={overrides.footer22}
-        hasGap={true}
         className={classNames(projectcss.all, sty.footer22)}
       >
         <PlasmicLink__
@@ -370,7 +355,7 @@ function PlasmicFooter__RenderFunc(props: {
         >
           {"\u00a9 Natalia."}
         </PlasmicLink__>
-      </Stack__>
+      </div>
     </div>
   ) as React.ReactElement | null;
 }

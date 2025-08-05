@@ -139,6 +139,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -214,11 +215,9 @@ function PlasmicWipTraitement__RenderFunc(props: {
                   "Automatisez vos processus et lib\u00e9rez vos ADV des t\u00e2ches r\u00e9p\u00e9titives pour qu'ils se concentrent sur la vente."
                 }
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"cta"}
                 data-plasmic-override={overrides.cta}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.cta)}
               >
                 <Button
@@ -255,7 +254,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                   linkTo={"#optimiser"}
                   openLinkInNewTab={false}
                 />
-              </Stack__>
+              </div>
               <div
                 data-plasmic-name={"cta2"}
                 data-plasmic-override={overrides.cta2}
@@ -285,11 +284,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
               data-plasmic-override={overrides.apercu}
               className={classNames(projectcss.all, sty.apercu)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___59N3)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___59N3)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -306,7 +301,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.youTube)}
                   videoId={"R6MeLqRQzYw"}
                 />
-              </Stack__>
+              </div>
             </section>
             <PlasmicLink__
               data-plasmic-name={"personnaliser"}
@@ -346,11 +341,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                     }}
                   />
                 </div>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__fWaot)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__fWaot)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -381,22 +372,16 @@ function PlasmicWipTraitement__RenderFunc(props: {
                       "Natalia vous permet de g\u00e9rer efficacement vos commandes, qu'elles proviennent de votre site e-commerce, de marketplaces ou de ventes directes, le tout sur une interface simple et intuitive."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__tYrGy)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(
                         projectcss.all,
                         sty.freeBox___0K1Fu
                       )}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__kTb7V
@@ -420,10 +405,8 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Aussi simple qu'une bo\u00eete mail"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__eT57H
@@ -447,16 +430,12 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Branchez vos sites et vos outils"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                      </div>
+                    </div>
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__gLdhT)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__hkV9E
@@ -480,10 +459,8 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Op\u00e9rationnel en 20min"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__zNes5
@@ -507,10 +484,10 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Priv\u00e9 et s\u00e9curis\u00e9"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </PlasmicLink__>
             <PlasmicLink__
@@ -526,9 +503,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
               platform={"nextjs"}
             >
               <div className={classNames(projectcss.all, sty.freeBox___8Zslm)}>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
+                <div
                   className={classNames(projectcss.all, sty.freeBox___0NFrG)}
                 >
                   <div
@@ -561,7 +536,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                       "Gr\u00e2ce \u00e0 son module d'IA, Natalia extrait et int\u00e8gre automatiquement toute commande re\u00e7ue par email, en analysant le contenu du message ou des pi\u00e8ces jointes."
                     }
                   </div>
-                </Stack__>
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox___0X1E)}>
                   <PlasmicImg__
                     alt={""}
@@ -623,11 +598,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                     }}
                   />
                 </div>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__z0PIy)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__z0PIy)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -658,19 +629,13 @@ function PlasmicWipTraitement__RenderFunc(props: {
                       "Natalia est une interface sp\u00e9cialement con\u00e7ue pour s'int\u00e9grer \u00e0 votre ERP, permettant de synchroniser et de transf\u00e9rer toutes vos donn\u00e9es de mani\u00e8re fluide."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__dPRk)}
                   >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__pXiXk)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__evf0S
@@ -694,10 +659,8 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Bons de commandes"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__kqwsi
@@ -721,16 +684,12 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Suivi des stocks"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                      </div>
+                    </div>
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__iaQab)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__wuZfC
@@ -754,10 +713,8 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Tra\u00e7abilit\u00e9 des produits"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__u95J1
@@ -781,10 +738,10 @@ function PlasmicWipTraitement__RenderFunc(props: {
                         >
                           {"Fiches clients"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </PlasmicLink__>
             <section
@@ -792,11 +749,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
               data-plasmic-override={overrides.testez}
               className={classNames(projectcss.all, sty.testez)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__fG6Xw)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__fG6Xw)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -807,7 +760,7 @@ function PlasmicWipTraitement__RenderFunc(props: {
                 >
                   {"Nous sommes l\u00e0 pour vous aider \ud83d\udc4d"}
                 </h2>
-              </Stack__>
+              </div>
               <Button
                 className={classNames("__wab_instance", sty.button__mnC)}
                 label={

@@ -149,6 +149,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -222,11 +223,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                   "D\u00e9veloppez vos ventes directes en facilitant l'acc\u00e8s \u00e0 votre offre"
                 }
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"cta"}
                 data-plasmic-override={overrides.cta}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.cta)}
               >
                 <Button
@@ -263,7 +262,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                   linkTo={"#accessibilite"}
                   openLinkInNewTab={false}
                 />
-              </Stack__>
+              </div>
               <div
                 data-plasmic-name={"cta2"}
                 data-plasmic-override={overrides.cta2}
@@ -300,11 +299,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
               id={"personnalisation"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__xRaFc)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__xRaFc)}>
                 <div
                   className={classNames(projectcss.all, sty.freeBox___94CwH)}
                 >
@@ -329,9 +324,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                       }}
                     />
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__brHc7)}
                   >
                     <div
@@ -364,7 +357,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                         "Pour maximiser vos ventes, il est essentiel de structurer vos propositions : chaque client est unique et cela doit \u00eatre per\u00e7u \u00e0 travers vos services. \n\nGr\u00e2ce \u00e0 Natalia, la gestion et la mise \u00e0 jour de ces offres sp\u00e9cifiques devient un jeu d\u2019enfant."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                 </div>
                 <section
                   data-plasmic-name={"conditionsPersonnalisation"}
@@ -374,11 +367,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                     sty.conditionsPersonnalisation
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers"}
                     data-plasmic-override={overrides.numbers}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers)}
                   >
                     <Personnaliser
@@ -421,9 +412,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                       }}
                       titre={"Conditions de vente"}
                     />
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"accessibilite"}
@@ -437,15 +428,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
               id={"accessibilite"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__rgMhY)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__rgMhY)}>
                 <div className={classNames(projectcss.all, sty.freeBox__rSxW)}>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__y3Z8T)}
                   >
                     <div
@@ -478,14 +463,10 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                         "Vous souhaitez booster vos ventes ? \n\nOffrez \u00e0 vos clients un moyen simple, s\u00e9curis\u00e9 et efficace pour passer leurs commandes, tout en renfor\u00e7ant leur fid\u00e9lit\u00e9."
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__qEkL)}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__mtOLp
@@ -518,10 +499,8 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                         >
                           {"100% direct \n0 commission"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox___2KdWt
@@ -554,9 +533,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                         >
                           {"Chat int\u00e9gr\u00e9"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ewwoA)}
                   >
@@ -587,11 +566,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                     sty.conditionsAccessibilite
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers2"}
                     data-plasmic-override={overrides.numbers2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers2)}
                   >
                     <Personnaliser
@@ -644,9 +621,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                       }}
                       titre={"Historique et docs"}
                     />
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"automatisation"}
@@ -660,11 +637,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
               id={"automatisation"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__hkvbr)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__hkvbr)}>
                 <div className={classNames(projectcss.all, sty.freeBox___4PGd)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__i5HkQ)}
@@ -687,9 +660,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                       }}
                     />
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__lgmwe)}
                   >
                     <div
@@ -724,7 +695,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                         "Ne perdez plus de temps avec la gestion manuelle des appels et emails. \n\nGr\u00e2ce \u00e0 Natalia, l'automatisation de ces t\u00e2ches r\u00e9duit de 30 % votre charge administrative et am\u00e9liore votre r\u00e9activit\u00e9."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                 </div>
                 <section
                   data-plasmic-name={"conditionsAccessibilite2"}
@@ -734,11 +705,9 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                     sty.conditionsAccessibilite2
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers3"}
                     data-plasmic-override={overrides.numbers3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers3)}
                   >
                     <Personnaliser
@@ -793,20 +762,16 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                       }}
                       titre={"G\u00e9n\u00e9ration auto des factures"}
                     />
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
             </PlasmicLink__>
             <section
               data-plasmic-name={"apercu"}
               data-plasmic-override={overrides.apercu}
               className={classNames(projectcss.all, sty.apercu)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___2Mht)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___2Mht)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -823,18 +788,14 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.youTube)}
                   videoId={"R6MeLqRQzYw"}
                 />
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"testez"}
               data-plasmic-override={overrides.testez}
               className={classNames(projectcss.all, sty.testez)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___25Coq)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___25Coq)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -877,7 +838,7 @@ function PlasmicWipCentralisation__RenderFunc(props: {
                     titre={"3. Traitez vos commandes"}
                   />
                 </div>
-              </Stack__>
+              </div>
             </section>
             <BigFooter
               data-plasmic-name={"bigFooter"}

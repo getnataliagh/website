@@ -115,7 +115,7 @@ function PlasmicNavigationLink__RenderFunc(props: {
       Object.assign(
         {
           label: "Some text",
-          target: `/`
+          target: `/fonctionnalites`
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -130,6 +130,7 @@ function PlasmicNavigationLink__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;

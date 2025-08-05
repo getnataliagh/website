@@ -157,6 +157,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -272,11 +273,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                   "D\u00e9veloppez vos ventes directes en facilitant l'acc\u00e8s \u00e0 votre offre"
                 }
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"cta"}
                 data-plasmic-override={overrides.cta}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.cta)}
               >
                 <Button
@@ -314,7 +313,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                   linkTo={"#automatisation"}
                   openLinkInNewTab={false}
                 />
-              </Stack__>
+              </div>
               <div
                 data-plasmic-name={"cta2"}
                 data-plasmic-override={overrides.cta2}
@@ -352,15 +351,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
               id={"accessibilite"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__sWqG6)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__sWqG6)}>
                 <div className={classNames(projectcss.all, sty.freeBox__o8YHu)}>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__nTz6B)}
                   >
                     <div
@@ -393,7 +386,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         "Ne passez plus \u00e0 c\u00f4t\u00e9 des opportunit\u00e9s, soyez disponibles 24/7 pour vos clients et prospects. \n\nLa r\u00e9activit\u00e9 est cl\u00e9 pour offrir une exp\u00e9rience optimale \u00e0 vos clients.\n\nNatalia saura g\u00e9rer vos pics d'appels en r\u00e9pondant simultan\u00e9ment aux clients, vos clients n'attendront plus 5 minutes au bout du fil."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox___5EFg)}
                   >
@@ -424,11 +417,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                     sty.conditionsAccessibilite
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers2"}
                     data-plasmic-override={overrides.numbers2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers2)}
                   >
                     <Personnaliser
@@ -473,20 +464,16 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         role={"img"}
                       />
                     </Personnaliser>
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
             </PlasmicLink__>
             <section
               data-plasmic-name={"apercu"}
               data-plasmic-override={overrides.apercu}
               className={classNames(projectcss.all, sty.apercu)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__d42Lo)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__d42Lo)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -503,7 +490,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.youTube)}
                   videoId={"R6MeLqRQzYw"}
                 />
-              </Stack__>
+              </div>
             </section>
             <Tester
               data-plasmic-name={"tester"}
@@ -533,11 +520,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
               id={"automatisation"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___0BJpZ)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___0BJpZ)}>
                 <div className={classNames(projectcss.all, sty.freeBox__tvhc0)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ryMz0)}
@@ -560,9 +543,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                       }}
                     />
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__k8BC1)}
                   >
                     <div
@@ -597,7 +578,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         "La satisfaction client c'est aussi avoir le bon interlocuteur qui connait ses produits, qui est exp\u00e9riment\u00e9, patient et toujours agr\u00e9able au t\u00e9l\u00e9phone.\n\nDifficile de v\u00e9hiculer le discours commercial et les valeurs de l'entreprises et \u00eatre certain de l'ex\u00e9cution, avec Natalia c'est d\u00e9sormais possible."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                 </div>
                 <section
                   data-plasmic-name={"conditionsAccessibilite2"}
@@ -607,11 +588,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                     sty.conditionsAccessibilite2
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers3"}
                     data-plasmic-override={overrides.numbers3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers3)}
                   >
                     <Personnaliser
@@ -656,9 +635,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         role={"img"}
                       />
                     </Personnaliser>
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
             </PlasmicLink__>
             <PlasmicLink__
               data-plasmic-name={"personnalisation"}
@@ -672,11 +651,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
               id={"personnalisation"}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__nw3AQ)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__nw3AQ)}>
                 <div className={classNames(projectcss.all, sty.freeBox__k7WQm)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ppEPz)}
@@ -699,9 +674,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                       }}
                     />
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox___4DGys)}
                   >
                     <div
@@ -734,7 +707,7 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         "Natalia r\u00e9pond \u00e0 un large \u00e9ventail de questions et elle apprend en permanence pour am\u00e9liorer l'exp\u00e9rience pour vos clients. Chaque Natalia est unique pour chaque entreprise."
                       }
                     </div>
-                  </Stack__>
+                  </div>
                 </div>
                 <section
                   data-plasmic-name={"conditionsPersonnalisation"}
@@ -744,11 +717,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                     sty.conditionsPersonnalisation
                   )}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"numbers"}
                     data-plasmic-override={overrides.numbers}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.numbers)}
                   >
                     <Personnaliser
@@ -787,9 +758,9 @@ function PlasmicAssistanteVocale__RenderFunc(props: {
                         role={"img"}
                       />
                     </Personnaliser>
-                  </Stack__>
+                  </div>
                 </section>
-              </Stack__>
+              </div>
               <Partenaire
                 data-plasmic-name={"partenaire"}
                 data-plasmic-override={overrides.partenaire}

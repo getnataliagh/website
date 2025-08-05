@@ -4,23 +4,13 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  position: relative;
-  justify-self: flex-start;
-  padding: 10px;
-}
-.root > :global(.__wab_flex-container) {
-  flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  position: relative;
+  justify-self: flex-start;
   flex-wrap: wrap;
-  margin-top: calc(0px - 20px);
-  height: calc(100% + 20px);
-}
-.root > :global(.__wab_flex-container) > *,
-.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.root > :global(.__wab_flex-container) > picture > img,
-.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-top: 20px;
+  row-gap: 20px;
+  padding: 10px;
 }
 .h1 {
   width: 100%;

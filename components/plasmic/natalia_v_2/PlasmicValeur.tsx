@@ -59,8 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { useScreenVariants as useScreenVariantsjC0Cb1S4E1Yt } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jC0CB1S4E1YT/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -138,22 +136,17 @@ function PlasmicValeur__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsjC0Cb1S4E1Yt()
-  });
-
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -164,11 +157,7 @@ function PlasmicValeur__RenderFunc(props: {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__eWuby)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__eWuby)}>
         <h1
           data-plasmic-name={"h1"}
           data-plasmic-override={overrides.h1}
@@ -210,12 +199,8 @@ function PlasmicValeur__RenderFunc(props: {
             <React.Fragment>{""}</React.Fragment>
           </React.Fragment>
         </h1>
-      </Stack__>
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__pnCwL)}
-      >
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox__pnCwL)}>
         <h2
           className={classNames(
             projectcss.all,
@@ -265,8 +250,8 @@ function PlasmicValeur__RenderFunc(props: {
             })()}
           </React.Fragment>
         </div>
-      </Stack__>
-    </Stack__>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 

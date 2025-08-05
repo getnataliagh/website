@@ -166,6 +166,7 @@ function PlasmicOffre__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -189,13 +190,11 @@ function PlasmicOffre__RenderFunc(props: {
   });
 
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -206,11 +205,7 @@ function PlasmicOffre__RenderFunc(props: {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__k5Fy2)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__k5Fy2)}>
         <PlasmicIcon__
           PlasmicIconType={
             hasVariant($state, "offre2", "unnamedVariant")
@@ -250,17 +245,9 @@ function PlasmicOffre__RenderFunc(props: {
             })()}
           </React.Fragment>
         </div>
-      </Stack__>
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox___6Uhv)}
-      >
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox___4EHsU)}
-        >
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox___6Uhv)}>
+        <div className={classNames(projectcss.all, sty.freeBox___4EHsU)}>
           <div className={classNames(projectcss.all, sty.freeBox__bDGvq)}>
             <h2
               className={classNames(
@@ -334,7 +321,7 @@ function PlasmicOffre__RenderFunc(props: {
               })()}
             </React.Fragment>
           </div>
-        </Stack__>
+        </div>
         <div
           className={classNames(
             projectcss.all,
@@ -358,16 +345,8 @@ function PlasmicOffre__RenderFunc(props: {
             })()}
           </React.Fragment>
         </div>
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__njzUi)}
-        >
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__mH0Ka)}
-          >
+        <div className={classNames(projectcss.all, sty.freeBox__njzUi)}>
+          <div className={classNames(projectcss.all, sty.freeBox__mH0Ka)}>
             <CheckCircleSvgrepoComSvgIcon
               className={classNames(projectcss.all, sty.svg__cPfw4, {
                 [sty.svgoffre2_unnamedVariant__cPfw4M1Ni2]: hasVariant(
@@ -402,12 +381,8 @@ function PlasmicOffre__RenderFunc(props: {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__na1Ik)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__na1Ik)}>
             <CheckCircleSvgrepoComSvgIcon
               className={classNames(projectcss.all, sty.svg__kARg)}
               role={"img"}
@@ -436,12 +411,8 @@ function PlasmicOffre__RenderFunc(props: {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__sFiey)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__sFiey)}>
             <CheckCircleSvgrepoComSvgIcon
               className={classNames(projectcss.all, sty.svg__wrZwY)}
               role={"img"}
@@ -470,12 +441,8 @@ function PlasmicOffre__RenderFunc(props: {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___3OUp3)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___3OUp3)}>
             <CheckCircleSvgrepoComSvgIcon
               className={classNames(projectcss.all, sty.svg__e2AX4)}
               role={"img"}
@@ -504,10 +471,10 @@ function PlasmicOffre__RenderFunc(props: {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-        </Stack__>
-      </Stack__>
-    </Stack__>
+          </div>
+        </div>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 

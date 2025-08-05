@@ -153,18 +153,17 @@ function PlasmicArticle__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -175,11 +174,7 @@ function PlasmicArticle__RenderFunc(props: {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__ry9JS)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__ry9JS)}>
         <PlasmicImg__
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
@@ -194,22 +189,10 @@ function PlasmicArticle__RenderFunc(props: {
           loading={"lazy"}
           src={args.img}
         />
-      </Stack__>
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__lcU9V)}
-      >
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__zvgU9)}
-        >
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__gBg6D)}
-          >
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox__lcU9V)}>
+        <div className={classNames(projectcss.all, sty.freeBox__zvgU9)}>
+          <div className={classNames(projectcss.all, sty.freeBox__gBg6D)}>
             <h1
               data-plasmic-name={"h1"}
               data-plasmic-override={overrides.h1}
@@ -265,7 +248,7 @@ function PlasmicArticle__RenderFunc(props: {
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
-          </Stack__>
+          </div>
           <div
             className={classNames(
               projectcss.all,
@@ -277,7 +260,7 @@ function PlasmicArticle__RenderFunc(props: {
               "Cr\u00e9\u00e9e lors d\u2019un SaaS Camp organis\u00e9 par Fran\u00e7ois-Guillaume Ribreau, fondateur du collectif NoBullshit Tech Engineers, Natalia est une solution d\u2019intelligence artificielle qui..."
             }
           </div>
-        </Stack__>
+        </div>
         <Button
           data-plasmic-name={"button"}
           data-plasmic-override={overrides.button}
@@ -297,8 +280,8 @@ function PlasmicArticle__RenderFunc(props: {
             "https://www.informateurjudiciaire.fr/actualites/natalia-lia-transforme-la-gestion-administrative/"
           }
         />
-      </Stack__>
-    </Stack__>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 

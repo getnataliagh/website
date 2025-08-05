@@ -128,6 +128,7 @@ function PlasmicPresse__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -242,11 +243,9 @@ function PlasmicPresse__RenderFunc(props: {
               data-plasmic-override={overrides.articles}
               className={classNames(projectcss.all, sty.articles)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"freeBox"}
                 data-plasmic-override={overrides.freeBox}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox)}
               >
                 <Article
@@ -254,7 +253,7 @@ function PlasmicPresse__RenderFunc(props: {
                   data-plasmic-override={overrides.article}
                   className={classNames("__wab_instance", sty.article)}
                 />
-              </Stack__>
+              </div>
             </section>
             <BigFooter
               data-plasmic-name={"bigFooter"}

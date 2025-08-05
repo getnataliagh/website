@@ -64,8 +64,6 @@ import Offre from "../../Offre"; // plasmic-import: iz3ZpCfz4HHL/component
 import Button from "../../Button"; // plasmic-import: zBHMtY0Q_-9b/component
 import BigFooter from "../../BigFooter"; // plasmic-import: fcdOVpZOWlXS/component
 
-import { useScreenVariants as useScreenVariantsjC0Cb1S4E1Yt } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jC0CB1S4E1YT/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -156,13 +154,10 @@ function PlasmicWipOffres__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsjC0Cb1S4E1Yt()
-  });
 
   return (
     <React.Fragment>
@@ -263,11 +258,7 @@ function PlasmicWipOffres__RenderFunc(props: {
               data-plasmic-override={overrides.personnalisation}
               className={classNames(projectcss.all, sty.personnalisation)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__hq1Et)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__hq1Et)}>
                 <Offre
                   className={classNames("__wab_instance", sty.offre__t8OSj)}
                   offre={"Phone"}
@@ -284,12 +275,8 @@ function PlasmicWipOffres__RenderFunc(props: {
                   offre2={["unnamedVariant"]}
                   tarif={"150\u20ac HT"}
                 />
-              </Stack__>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tl2Ov)}
-              >
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__tl2Ov)}>
                 <Button
                   className={classNames("__wab_instance", sty.button__rlQsh)}
                   label={
@@ -314,7 +301,7 @@ function PlasmicWipOffres__RenderFunc(props: {
                 >
                   {"Pas besoin de CB, sans engagement"}
                 </div>
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"detailOffres"}
@@ -322,11 +309,7 @@ function PlasmicWipOffres__RenderFunc(props: {
               className={classNames(projectcss.all, sty.detailOffres)}
             >
               <div className={classNames(projectcss.all, sty.freeBox__lq9O1)}>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__juzx9)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__juzx9)}>
                   <h2
                     className={classNames(
                       projectcss.all,
@@ -346,7 +329,7 @@ function PlasmicWipOffres__RenderFunc(props: {
                   >
                     {"Une formule adapt\u00e9e \u00e0 chaque besoin"}
                   </div>
-                </Stack__>
+                </div>
               </div>
               <div
                 data-plasmic-name={"tableau"}
@@ -807,11 +790,7 @@ function PlasmicWipOffres__RenderFunc(props: {
                   />
                 </div>
               </div>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___5Nrzg)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox___5Nrzg)}>
                 <Button
                   className={classNames("__wab_instance", sty.button__rkYfi)}
                   label={
@@ -836,18 +815,14 @@ function PlasmicWipOffres__RenderFunc(props: {
                 >
                   {"Natalia peut s'adapter \u00e0 vos besoins, parlons-en !"}
                 </div>
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"casSpecifiques"}
               data-plasmic-override={overrides.casSpecifiques}
               className={classNames(projectcss.all, sty.casSpecifiques)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__asrdz)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__asrdz)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -858,11 +833,7 @@ function PlasmicWipOffres__RenderFunc(props: {
                 >
                   {"Le cas sp\u00e9cifique des circuits courts"}
                 </h2>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__xG9An)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__xG9An)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -888,8 +859,8 @@ function PlasmicWipOffres__RenderFunc(props: {
                       </div>
                     }
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <BigFooter
               data-plasmic-name={"bigFooter"}

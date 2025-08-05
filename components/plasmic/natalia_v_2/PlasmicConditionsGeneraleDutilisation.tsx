@@ -131,6 +131,7 @@ function PlasmicConditionsGeneraleDutilisation__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -249,11 +250,9 @@ function PlasmicConditionsGeneraleDutilisation__RenderFunc(props: {
                     "Le fait de cr\u00e9er un compte / souscrire \u00e0 un abonnement sur Natalia entraine votre acceptation des conditions g\u00e9n\u00e9rales d'utilisation / de vente ci dessous."
                   }
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"presentationGenerale"}
                   data-plasmic-override={overrides.presentationGenerale}
-                  hasGap={true}
                   className={classNames(
                     projectcss.all,
                     sty.presentationGenerale
@@ -293,7 +292,7 @@ function PlasmicConditionsGeneraleDutilisation__RenderFunc(props: {
                       <React.Fragment>{".\n"}</React.Fragment>
                     </React.Fragment>
                   </div>
-                </Stack__>
+                </div>
               </div>
               <BigFooter
                 data-plasmic-name={"bigFooter"}

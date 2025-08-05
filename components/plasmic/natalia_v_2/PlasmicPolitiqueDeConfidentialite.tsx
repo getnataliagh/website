@@ -131,6 +131,7 @@ function PlasmicPolitiqueDeConfidentialite__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -218,18 +219,14 @@ function PlasmicPolitiqueDeConfidentialite__RenderFunc(props: {
               }
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"freeBox"}
               data-plasmic-override={overrides.freeBox}
-              hasGap={true}
               className={classNames(projectcss.all, sty.freeBox)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"intro"}
                 data-plasmic-override={overrides.intro}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.intro)}
               >
                 <h1
@@ -260,7 +257,7 @@ function PlasmicPolitiqueDeConfidentialite__RenderFunc(props: {
                     </span>
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
               <section
                 data-plasmic-name={"policy"}
                 data-plasmic-override={overrides.policy}
@@ -278,7 +275,7 @@ function PlasmicPolitiqueDeConfidentialite__RenderFunc(props: {
                   }
                 </div>
               </section>
-            </Stack__>
+            </div>
             <BigFooter
               data-plasmic-name={"bigFooter"}
               data-plasmic-override={overrides.bigFooter}

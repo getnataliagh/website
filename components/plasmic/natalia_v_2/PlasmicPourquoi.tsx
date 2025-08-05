@@ -59,8 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { useScreenVariants as useScreenVariantsjC0Cb1S4E1Yt } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jC0CB1S4E1YT/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -145,22 +143,17 @@ function PlasmicPourquoi__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsjC0Cb1S4E1Yt()
-  });
-
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -171,11 +164,9 @@ function PlasmicPourquoi__RenderFunc(props: {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        hasGap={true}
         className={classNames(projectcss.all, sty.freeBox)}
       >
         <PlasmicImg__
@@ -192,7 +183,7 @@ function PlasmicPourquoi__RenderFunc(props: {
           loading={"lazy"}
           src={args.img}
         />
-      </Stack__>
+      </div>
       <h4
         data-plasmic-name={"h4"}
         data-plasmic-override={overrides.h4}
@@ -240,7 +231,7 @@ function PlasmicPourquoi__RenderFunc(props: {
           })()}
         </React.Fragment>
       </div>
-    </Stack__>
+    </div>
   ) as React.ReactElement | null;
 }
 

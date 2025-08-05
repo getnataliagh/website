@@ -64,8 +64,6 @@ import InputText from "../../InputText"; // plasmic-import: jZNfJESa7bty/compone
 import Button from "../../Button"; // plasmic-import: zBHMtY0Q_-9b/component
 import BigFooter from "../../BigFooter"; // plasmic-import: fcdOVpZOWlXS/component
 
-import { useScreenVariants as useScreenVariantsjC0Cb1S4E1Yt } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jC0CB1S4E1YT/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -145,13 +143,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsjC0Cb1S4E1Yt()
-  });
 
   return (
     <React.Fragment>
@@ -242,16 +237,8 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
               data-plasmic-override={overrides.contact}
               className={classNames(projectcss.all, sty.contact)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__n86Zs)}
-              >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__xCRma)}
-                >
+              <div className={classNames(projectcss.all, sty.freeBox__n86Zs)}>
+                <div className={classNames(projectcss.all, sty.freeBox__xCRma)}>
                   <h1
                     data-plasmic-name={"h1"}
                     data-plasmic-override={overrides.h1}
@@ -275,11 +262,9 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                       "Tous nos clients sont uniques et nous nous effor\u00e7ons de satisfaire chacun de leurs besoins. Alors n'h\u00e9sitez pas \u00e0 nous laisser vos coordonn\u00e9es et nous reviendrons vers vous tr\u00e8s vite !"
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"mail"}
                     data-plasmic-override={overrides.mail}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.mail)}
                   >
                     <_11121300FiRrCircleEnvelopeIconSvgIcon
@@ -296,12 +281,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                     >
                       {"getnatalia@getnatalia.com"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"tel"}
                     data-plasmic-override={overrides.tel}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.tel)}
                   >
                     <_11121327FiRrCirclePhoneIconSvgIcon
@@ -318,32 +301,24 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                     >
                       {"01 23 45 67 89"}
                     </div>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"formulaire"}
                   data-plasmic-override={overrides.formulaire}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.formulaire)}
                 >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__k0HfF)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"nomPrenom"}
                       data-plasmic-override={overrides.nomPrenom}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.nomPrenom)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"prenom"}
                         data-plasmic-override={overrides.prenom}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.prenom)}
                       >
                         <div
@@ -377,12 +352,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                           )}
                           placeholder={``}
                         />
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"nom"}
                         data-plasmic-override={overrides.nom}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.nom)}
                       >
                         <div
@@ -416,14 +389,12 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                           )}
                           placeholder={``}
                         />
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                      </div>
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"email"}
                     data-plasmic-override={overrides.email}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.email)}
                   >
                     <div
@@ -457,12 +428,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                       )}
                       placeholder={``}
                     />
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"entreprise"}
                     data-plasmic-override={overrides.entreprise}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.entreprise)}
                   >
                     <div
@@ -496,12 +465,10 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                       )}
                       placeholder={``}
                     />
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"message"}
                     data-plasmic-override={overrides.message}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.message)}
                   >
                     <div
@@ -537,7 +504,7 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                       )}
                       placeholder={"Dites nous tout..."}
                     />
-                  </Stack__>
+                  </div>
                   <Button
                     data-plasmic-name={"button"}
                     data-plasmic-override={overrides.button}
@@ -554,8 +521,8 @@ function PlasmicDemanderUneDemo__RenderFunc(props: {
                       </div>
                     }
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <BigFooter
               data-plasmic-name={"bigFooter"}

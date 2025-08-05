@@ -141,6 +141,7 @@ function PlasmicPartenaires__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -272,21 +273,13 @@ function PlasmicPartenaires__RenderFunc(props: {
               data-plasmic-override={overrides.chiffres}
               className={classNames(projectcss.all, sty.chiffres)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"chiffres2"}
                 data-plasmic-override={overrides.chiffres2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.chiffres2)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__p62EG)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                <div className={classNames(projectcss.all, sty.freeBox__p62EG)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__q2NlJ)}
                   >
                     <Chiffres
@@ -328,7 +321,7 @@ function PlasmicPartenaires__RenderFunc(props: {
                       nb={"x"}
                       sousTitre={"projets d\u00e9ploy\u00e9s"}
                     />
-                  </Stack__>
+                  </div>
                   {(() => {
                     const child$Props = {
                       autoplay: true,
@@ -439,29 +432,21 @@ function PlasmicPartenaires__RenderFunc(props: {
                       </SliderWrapper>
                     );
                   })()}
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"partenaires"}
               data-plasmic-override={overrides.partenaires}
               className={classNames(projectcss.all, sty.partenaires)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___6PxWo)}
-              >
-                <Stack__
-                  as={"div"}
+              <div className={classNames(projectcss.all, sty.freeBox___6PxWo)}>
+                <div
                   data-plasmic-name={"titre"}
                   data-plasmic-override={overrides.titre}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.titre)}
                 >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__mY6Xb)}
                   >
                     <h2
@@ -485,13 +470,9 @@ function PlasmicPartenaires__RenderFunc(props: {
                         "Sans eux, Natalia ne serait pas l\u00e0 aujourd\u2019hui. Un grand merci \u00e0 nos partenaires pour leur soutien pr\u00e9cieux ! "
                       }
                     </div>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__y2NRt)}
-                >
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__y2NRt)}>
                   <Partenaire
                     className={classNames(
                       "__wab_instance",
@@ -518,8 +499,8 @@ function PlasmicPartenaires__RenderFunc(props: {
                     }}
                     nom={"La French Tech"}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"retour"}
@@ -541,7 +522,7 @@ function PlasmicPartenaires__RenderFunc(props: {
                     {"Retour \u00e0 l'accueil"}
                   </div>
                 }
-                linkTo={`/`}
+                linkTo={`/fonctionnalites`}
               />
             </section>
             <section

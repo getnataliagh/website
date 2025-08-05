@@ -171,7 +171,13 @@
   );
 }
 
-.plasmic_default_styles {
+.plasmic_default_styles,
+.plasmic_default_styles:where(
+    .global_unnamedGlobalGroupOfVariants_unnamedVariant
+  ),
+.plasmic_default_styles:where(
+    .global_unnamedGlobalGroupOfVariants2_unnamedVariant
+  ) {
   --mixin-rfa2EcODadE-_font-family: "Inter", sans-serif;
   --mixin-rfa2EcODadE-_font-size: 16px;
   --mixin-rfa2EcODadE-_font-weight: 400;
@@ -331,6 +337,8 @@
   background: none;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  row-gap: 0px;
+  column-gap: 0px;
   box-shadow: none;
   box-sizing: border-box;
   text-decoration-line: none;
@@ -344,6 +352,8 @@
   background: none;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  row-gap: 0px;
+  column-gap: 0px;
   box-shadow: none;
   box-sizing: border-box;
   margin: 0;
@@ -786,7 +796,7 @@ ul:where(.root_reset_tags) {
   padding-left: var(--mixin-ah5RmjKDUo0x_padding-left);
   position: var(--mixin-ah5RmjKDUo0x_position);
   list-style-type: var(--mixin-ah5RmjKDUo0x_list-style-type);
-  flex-column-gap: var(--mixin-ah5RmjKDUo0x_flex-column-gap);
+  column-gap: var(--mixin-ah5RmjKDUo0x_column-gap);
 }
 
 :where(.root_reset) ol:where(.ol),
@@ -802,7 +812,7 @@ ol:where(.root_reset_tags) {
   padding-left: var(--mixin-ORlyi-8Lfu7D_padding-left);
   position: var(--mixin-ORlyi-8Lfu7D_position);
   list-style-type: var(--mixin-ORlyi-8Lfu7D_list-style-type);
-  flex-column-gap: var(--mixin-ORlyi-8Lfu7D_flex-column-gap);
+  column-gap: var(--mixin-ORlyi-8Lfu7D_column-gap);
 }
 
 :where(.root_reset) h5:where(.h5),

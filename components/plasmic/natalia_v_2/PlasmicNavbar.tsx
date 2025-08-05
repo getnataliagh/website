@@ -135,6 +135,7 @@ function PlasmicNavbar__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -162,13 +163,11 @@ function PlasmicNavbar__RenderFunc(props: {
   });
 
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"navBar"}
       data-plasmic-override={overrides.navBar}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -180,15 +179,11 @@ function PlasmicNavbar__RenderFunc(props: {
         { [sty.navBarexpanded]: hasVariant($state, "expanded", "expanded") }
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__iiH83)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__iiH83)}>
         <PlasmicLink__
           className={classNames(projectcss.all, projectcss.a, sty.link__n5Go)}
           component={Link}
-          href={`/`}
+          href={`/fonctionnalites`}
           platform={"nextjs"}
         >
           <PlasmicImg__
@@ -217,23 +212,15 @@ function PlasmicNavbar__RenderFunc(props: {
             title={``}
           />
         </PlasmicLink__>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"navigationDesktop"}
           data-plasmic-override={overrides.navigationDesktop}
-          hasGap={true}
           className={classNames(projectcss.all, sty.navigationDesktop)}
         >
           <NavigationLink
             className={classNames("__wab_instance", sty.navigationLink__txoez)}
-            label={"Assistance vocale"}
-            target={`/assistante-vocale-ia`}
-          />
-
-          <NavigationLink
-            className={classNames("__wab_instance", sty.navigationLink__nOxL)}
-            label={"Mails automatiques"}
-            target={`/assistant-mail-automatisation-ia`}
+            label={"Fonctionnalit\u00e9s"}
+            target={`/fonctionnalites#${``}`}
           />
 
           <NavigationLink
@@ -259,7 +246,7 @@ function PlasmicNavbar__RenderFunc(props: {
             label={"Se connecter \u279e"}
             target={"https://app.getnatalia.com/"}
           />
-        </Stack__>
+        </div>
         <PlasmicLink__
           className={classNames(projectcss.all, projectcss.a, sty.link__cg5Lw)}
           component={Link}
@@ -323,10 +310,8 @@ function PlasmicNavbar__RenderFunc(props: {
             role={"img"}
           />
         </PlasmicLink__>
-      </Stack__>
-      <Stack__
-        as={"div"}
-        hasGap={true}
+      </div>
+      <div
         className={classNames(projectcss.all, sty.freeBox__dnmxV, {
           [sty.freeBoxexpanded__dnmxVsCjkv]: hasVariant(
             $state,
@@ -335,11 +320,9 @@ function PlasmicNavbar__RenderFunc(props: {
           )
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"navigationMobile"}
           data-plasmic-override={overrides.navigationMobile}
-          hasGap={true}
           className={classNames(projectcss.all, sty.navigationMobile, {
             [sty.navigationMobileexpanded]: hasVariant(
               $state,
@@ -413,9 +396,9 @@ function PlasmicNavbar__RenderFunc(props: {
             label={"Se connecter \u279e"}
             target={"https://app.getnatalia.com/"}
           />
-        </Stack__>
-      </Stack__>
-    </Stack__>
+        </div>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 

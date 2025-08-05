@@ -144,6 +144,7 @@ function PlasmicPartenaire__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -153,13 +154,11 @@ function PlasmicPartenaire__RenderFunc(props: {
   });
 
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"partenaire"}
       data-plasmic-override={overrides.partenaire}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -170,11 +169,7 @@ function PlasmicPartenaire__RenderFunc(props: {
         sty.partenaire
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__qpz8H)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__qpz8H)}>
         <PlasmicImg__
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
@@ -189,17 +184,9 @@ function PlasmicPartenaire__RenderFunc(props: {
           loading={"lazy"}
           src={args.img}
         />
-      </Stack__>
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__isAiE)}
-      >
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__diRvn)}
-        >
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox__isAiE)}>
+        <div className={classNames(projectcss.all, sty.freeBox__diRvn)}>
           <h2
             data-plasmic-name={"h2"}
             data-plasmic-override={overrides.h2}
@@ -251,9 +238,9 @@ function PlasmicPartenaire__RenderFunc(props: {
               })()}
             </React.Fragment>
           </div>
-        </Stack__>
-      </Stack__>
-    </Stack__>
+        </div>
+      </div>
+    </div>
   ) as React.ReactElement | null;
 }
 

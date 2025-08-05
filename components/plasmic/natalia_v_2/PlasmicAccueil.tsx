@@ -80,12 +80,10 @@ import sty from "./PlasmicAccueil.module.css"; // plasmic-import: OEUd5Lq-jk14/c
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: IC7ycYphHpjw/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: 7sgNTXN-bhFB/icon
-import _9025852PhoneCallIconSvgIcon from "./icons/PlasmicIcon___9025852PhoneCallIconSvg"; // plasmic-import: Yrry_94-feiz/icon
-import _9026058TicketIconSvgIcon from "./icons/PlasmicIcon___9026058TicketIconSvg"; // plasmic-import: VhpnAEjy1T-P/icon
 import _9025948PhoneOutgoingIconSvgIcon from "./icons/PlasmicIcon___9025948PhoneOutgoingIconSvg"; // plasmic-import: q6AZOQ6zTDhM/icon
-import _8666723MailIconSvgIcon from "./icons/PlasmicIcon___8666723MailIconSvg"; // plasmic-import: Vv7muEH4Fv3K/icon
-import _2849824StoreShoppingMarketBuyShopIconSvgIcon from "./icons/PlasmicIcon___2849824StoreShoppingMarketBuyShopIconSvg"; // plasmic-import: ifUEmdI1Jbp1/icon
-import _9024102BrainLightIconSvgIcon from "./icons/PlasmicIcon___9024102BrainLightIconSvg"; // plasmic-import: XwJ09v1wpGZM/icon
+import _9042371ChatBubbleCheck1MessageIconSvgIcon from "./icons/PlasmicIcon___9042371ChatBubbleCheck1MessageIconSvg"; // plasmic-import: HreH8oqEjGWZ/icon
+import _7548789UserInterfacePersonAvatarCustomerIconSvgIcon from "./icons/PlasmicIcon___7548789UserInterfacePersonAvatarCustomerIconSvg"; // plasmic-import: gblZIDUnvzOa/icon
+import _9025852PhoneCallIconSvgIcon from "./icons/PlasmicIcon___9025852PhoneCallIconSvg"; // plasmic-import: Yrry_94-feiz/icon
 
 createPlasmicElementProxy;
 
@@ -113,7 +111,6 @@ export type PlasmicAccueil__OverridesType = {
   sliderCarousel?: Flex__<typeof SliderWrapper>;
   solutions?: Flex__<"section">;
   assistanceVocale?: Flex__<"div">;
-  mailsAutomatique?: Flex__<"div">;
   chatbot?: Flex__<"div">;
   steps?: Flex__<"section">;
   titre3?: Flex__<"div">;
@@ -163,6 +160,7 @@ function PlasmicAccueil__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -288,9 +286,7 @@ function PlasmicAccueil__RenderFunc(props: {
                   sty.h1__kmWt
                 )}
               >
-                {
-                  "Natalia, l\u2019assistante vocale et email qui simplifie la relation client"
-                }
+                {"G\u00e9rez vos appels en concession avec l'IA"}
               </h1>
               <div
                 className={classNames(
@@ -299,20 +295,9 @@ function PlasmicAccueil__RenderFunc(props: {
                   sty.text__t3Dp
                 )}
               >
-                <React.Fragment>
-                  <React.Fragment>
-                    {
-                      "R\u00e9pondez aux demandes, traitez les commandes multi-canaux, et int\u00e9grez vos outils m\u00e9tier "
-                    }
-                  </React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ fontWeight: 700 }}
-                  >
-                    {"sans effort"}
-                  </span>
-                  <React.Fragment>{"."}</React.Fragment>
-                </React.Fragment>
+                {
+                  "Gagnez du temps, augmentez la satisfaction client et saisissez toutes les opportunit\u00e9s"
+                }
               </div>
               <div
                 data-plasmic-name={"cta"}
@@ -329,7 +314,7 @@ function PlasmicAccueil__RenderFunc(props: {
                         sty.text__fQo2T
                       )}
                     >
-                      {"Demander une d\u00e9mo"}
+                      {"R\u00e9server une d\u00e9mo"}
                     </div>
                   }
                   linkTo={`/contact`}
@@ -342,16 +327,10 @@ function PlasmicAccueil__RenderFunc(props: {
               data-plasmic-override={overrides.pourquoi}
               className={classNames(projectcss.all, sty.pourquoi)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tMtEs)}
-              >
-                <Stack__
-                  as={"div"}
+              <div className={classNames(projectcss.all, sty.freeBox__tMtEs)}>
+                <div
                   data-plasmic-name={"titre"}
                   data-plasmic-override={overrides.titre}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.titre)}
                 >
                   <h2
@@ -364,12 +343,10 @@ function PlasmicAccueil__RenderFunc(props: {
                   >
                     {"Pourquoi choisir Natalia ?"}
                   </h2>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"why"}
                   data-plasmic-override={overrides.why}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.why)}
                 >
                   <Pourquoi
@@ -378,15 +355,15 @@ function PlasmicAccueil__RenderFunc(props: {
                       sty.pourquoi__sbbc1
                     )}
                     description={
-                      "Termin\u00e9 les surcharges d'appels et les heures d'attente. Natalia r\u00e9pond en parall\u00e8le \u00e0 tous les appels, instantan\u00e9ment."
+                      "Int\u00e9gration rapide et fluide avec vos outils m\u00e9tiers sur le march\u00e9 de l'automobile : DMS, CRM, ERP"
                     }
                     img={{
-                      src: "/plasmic/natalia_v_2/images/_3507759EmptyHourglassIconotekaTimeTimerIconSvg.svg",
-                      fullWidth: 24,
-                      fullHeight: 24,
-                      aspectRatio: 1
+                      src: "/plasmic/natalia_v_2/images/chatGptImage5Aout2025103836Png.png",
+                      fullWidth: 1024,
+                      fullHeight: 1024,
+                      aspectRatio: undefined
                     }}
-                    titre={"0 minute d'attente"}
+                    titre={"Interconnect\u00e9e"}
                   />
 
                   <Pourquoi
@@ -398,12 +375,12 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Ne manquez plus d'opportunit\u00e9s. Natalia r\u00e9pond \u00e0 vos clients 24/7 et permet de pr\u00e9-qualifier les appels."
                     }
                     img={{
-                      src: "/plasmic/natalia_v_2/images/_9112587ConciergeBellSolidIconSvg.svg",
-                      fullWidth: 32,
-                      fullHeight: 32,
-                      aspectRatio: 1
+                      src: "/plasmic/natalia_v_2/images/chatGptImage5Aout2025104159Png.png",
+                      fullWidth: 1024,
+                      fullHeight: 1024,
+                      aspectRatio: undefined
                     }}
-                    titre={"Disponibilit\u00e9 24/7"}
+                    titre={"Disponible 24h/24, 7j/7"}
                   />
 
                   <Pourquoi
@@ -412,7 +389,7 @@ function PlasmicAccueil__RenderFunc(props: {
                       sty.pourquoi__rAuea
                     )}
                     description={
-                      "Natalia, c'est l'assurance d'avoir une qualit\u00e9 de r\u00e9ponses homog\u00e8nes bas\u00e9e sur vos historiques de conversations. "
+                      "Natalia, c'est l'assurance d'avoir une qualit\u00e9 de voix et de r\u00e9ponses homog\u00e8nes bas\u00e9e sur vos historiques de conversations. "
                     }
                     img={{
                       src: "/plasmic/natalia_v_2/images/voixPng.png",
@@ -420,31 +397,10 @@ function PlasmicAccueil__RenderFunc(props: {
                       fullHeight: 512,
                       aspectRatio: undefined
                     }}
-                    titre={"R\u00e9ponses homog\u00e8nes"}
+                    titre={"Qualit\u00e9 de la voix"}
                   />
-
-                  <Pourquoi
-                    className={classNames(
-                      "__wab_instance",
-                      sty.pourquoi___09Tfp
-                    )}
-                    description={
-                      "Cr\u00e9ez votre dashboard personnalis\u00e9 pour suivre votre performance commerciale dans le temps."
-                    }
-                    img={{
-                      src: "/plasmic/natalia_v_2/images/dashboardPng.png",
-                      fullWidth: 360,
-                      fullHeight: 360,
-                      aspectRatio: undefined
-                    }}
-                    titre={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? ``
-                        : "Suivi de la performance"
-                    }
-                  />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"chiffres"}
@@ -452,16 +408,10 @@ function PlasmicAccueil__RenderFunc(props: {
               className={classNames(projectcss.all, sty.chiffres)}
             />
 
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__aphDh)}
-            >
-              <Stack__
-                as={"div"}
+            <div className={classNames(projectcss.all, sty.freeBox__aphDh)}>
+              <div
                 data-plasmic-name={"titre2"}
                 data-plasmic-override={overrides.titre2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.titre2)}
               >
                 <h2
@@ -493,12 +443,10 @@ function PlasmicAccueil__RenderFunc(props: {
                     "Les chiffres parlent"
                   )}
                 </h2>
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"chiffres2"}
                 data-plasmic-override={overrides.chiffres2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.chiffres2)}
               >
                 <Number
@@ -518,7 +466,7 @@ function PlasmicAccueil__RenderFunc(props: {
                   description={
                     "de la charge de travail peut-\u00eatre r\u00e9duite gr\u00e2ce \u00e0 l\u2019automatisation."
                   }
-                  nb={"30%"}
+                  nb={"33%"}
                 />
 
                 {(() => {
@@ -652,29 +600,21 @@ function PlasmicAccueil__RenderFunc(props: {
                     </SliderWrapper>
                   );
                 })()}
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
             <section
               data-plasmic-name={"solutions"}
               data-plasmic-override={overrides.solutions}
               className={classNames(projectcss.all, sty.solutions)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"assistanceVocale"}
                 data-plasmic-override={overrides.assistanceVocale}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.assistanceVocale)}
                 id={"assistancevocale"}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__hh718)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                <div className={classNames(projectcss.all, sty.freeBox__hh718)}>
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__oyIwI)}
                   >
                     <h2
@@ -697,7 +637,7 @@ function PlasmicAccueil__RenderFunc(props: {
                           </span>
                         </React.Fragment>
                       ) : (
-                        "Assistance Vocale 24h/24"
+                        "L\u2019agent vocal qui g\u00e8re vos appels clients"
                       )}
                     </h2>
                     <div
@@ -708,12 +648,10 @@ function PlasmicAccueil__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Elle intervient directement pour g\u00e9rer les appels et all\u00e9ger les t\u00e2ches r\u00e9p\u00e9titives de vos \u00e9quipes. Gr\u00e2ce \u00e0 son connecteur et ses sc\u00e9narios personnalis\u00e9s, elle s'adapte parfaitement \u00e0 votre entreprise."
+                        "Natalia prend en charge les appels entrants, relance les devis, planifie les rendez-vous atelier, et lib\u00e8re du temps \u00e0 votre \u00e9quipe. Connect\u00e9e \u00e0 vos outils m\u00e9tiers, elle s\u2019int\u00e8gre parfaitement \u00e0 votre concession."
                       }
                     </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__giiiT)}
                     >
                       <Tache
@@ -721,11 +659,19 @@ function PlasmicAccueil__RenderFunc(props: {
                           "__wab_instance",
                           sty.tache__fvouX
                         )}
-                        titre={
-                          "Gestion des appels et questions r\u00e9currentes"
+                        description={
+                          "Natalia propose des cr\u00e9neaux, confirme les disponibilit\u00e9s et envoie des rappels automatiques \u00e0 vos clients, 24h/24.               \u2192 Moins de RDV manqu\u00e9s, plus de productivit\u00e9."
                         }
-                      />
-
+                        titre={"Prise de RDV atelier et essais v\u00e9hicules"}
+                      >
+                        <_9025948PhoneOutgoingIconSvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___9YVTw
+                          )}
+                          role={"img"}
+                        />
+                      </Tache>
                       <Tache
                         _2={["unnamedVariant"]}
                         className={classNames(
@@ -733,11 +679,13 @@ function PlasmicAccueil__RenderFunc(props: {
                           sty.tache__gJbGs
                         )}
                         description={
-                          "Natalia est connect\u00e9e \u00e0 vos outils pour prendre les commandes et le rediriger au bon endroit, aux bonnes personnes."
+                          "Suivi de commande, disponibilit\u00e9 d\u2019un v\u00e9hicule, horaires d\u2019ouverture ou d\u00e9lai de livraison : Natalia g\u00e8re les appels r\u00e9p\u00e9titifs et informe vos clients en temps r\u00e9el.                              \u2192 Votre standard ne d\u00e9borde plus."
                         }
-                        titre={"Prise de commande autonome"}
+                        titre={
+                          "R\u00e9ception des appels entrants et questions fr\u00e9quentes"
+                        }
                       >
-                        <_9026058TicketIconSvgIcon
+                        <_9042371ChatBubbleCheck1MessageIconSvgIcon
                           className={classNames(projectcss.all, sty.svg__chpDm)}
                           role={"img"}
                         />
@@ -746,20 +694,20 @@ function PlasmicAccueil__RenderFunc(props: {
                         _3={["unnamedVariant"]}
                         className={classNames(
                           "__wab_instance",
-                          sty.tache__y3Wbr
+                          sty.tache__ftwKu
                         )}
                         description={
-                          "Si une demande devient complexe, Natalia sait quand passer la main \u00e0 un collaborateur, en transf\u00e9rant toutes les informations n\u00e9cessaires pour une prise en charge rapide."
+                          "Quand un appel n\u00e9cessite un suivi humain, Natalia transf\u00e8re le client avec toutes les infos utiles : num\u00e9ro de dossier, historique, objet de la demande.\u2192 Vos \u00e9quipes gagnent un temps pr\u00e9cieux."
                         }
-                        titre={"Redirection intelligente des appels"}
+                        titre={"Transfert intelligent vers la bonne personne"}
                       >
-                        <_9025948PhoneOutgoingIconSvgIcon
-                          className={classNames(projectcss.all, sty.svg__i20I7)}
+                        <_7548789UserInterfacePersonAvatarCustomerIconSvgIcon
+                          className={classNames(projectcss.all, sty.svg__dfc48)}
                           role={"img"}
                         />
                       </Tache>
-                    </Stack__>
-                  </Stack__>
+                    </div>
+                  </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox___7Fh2R)}
                   >
@@ -782,14 +730,14 @@ function PlasmicAccueil__RenderFunc(props: {
                       }
                       loading={"lazy"}
                       src={{
-                        src: "/plasmic/natalia_v_2/images/aModernCleanIllustrationShowingAnIntelligen1Png.png",
-                        fullWidth: 5460,
-                        fullHeight: 4096,
+                        src: "/plasmic/natalia_v_2/images/captureDecran20250805A111619Png.png",
+                        fullWidth: 1020,
+                        fullHeight: 1166,
                         aspectRatio: undefined
                       }}
                     />
                   </div>
-                </Stack__>
+                </div>
                 <Button
                   className={classNames("__wab_instance", sty.button__z34G9)}
                   disabled={false}
@@ -801,162 +749,19 @@ function PlasmicAccueil__RenderFunc(props: {
                         sty.text__ofP60
                       )}
                     >
-                      {"En savoir plus"}
+                      {"R\u00e9server une d\u00e9mo"}
                     </div>
                   }
                   linkTo={`/assistante-vocale-ia`}
                   openLinkInNewTab={false}
                 />
-              </Stack__>
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"mailsAutomatique"}
-                data-plasmic-override={overrides.mailsAutomatique}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.mailsAutomatique)}
-                id={"mailsautomatiques"}
-              >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___3E2Yw)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__icoKv)}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__k6AAh)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? "100%"
-                          : "auto"
-                      }
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/natalia_v_2/images/anIsometricIllustrationInAMinimalisticStyle1Png.png",
-                        fullWidth: 5460,
-                        fullHeight: 4096,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__djdYp)}
-                  >
-                    <h2
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h2,
-                        projectcss.__wab_text,
-                        sty.h2__mommT
-                      )}
-                    >
-                      {"Mails Automatiques"}
-                    </h2>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__elkmD
-                      )}
-                    >
-                      {
-                        "Natalia vient se connecter \u00e0 votre bo\u00eete mail pour apprendre de vos conversations et g\u00e9n\u00e9rer vos brouillons de mails."
-                      }
-                    </div>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__g99G)}
-                    >
-                      <Tache
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tache___0ZgZf
-                        )}
-                        description={
-                          "Imaginez une bo\u00eete mail avec les r\u00e9ponses d\u00e9j\u00e0 \u00e9crites. Il ne vous reste plus qu'\u00e0 v\u00e9rifier puis envoyer !"
-                        }
-                        titre={"G\u00e9n\u00e9rer des brouillons automatiques"}
-                      >
-                        <_8666723MailIconSvgIcon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___1O95X
-                          )}
-                          role={"img"}
-                        />
-                      </Tache>
-                    </Stack__>
-                    <Tache
-                      _2={["unnamedVariant"]}
-                      className={classNames("__wab_instance", sty.tache__ySHqY)}
-                      description={
-                        "Natalia analyse la r\u00e9ception de vos commandes et l'envoi directement dans votre ERP."
-                      }
-                      titre={"Automatisez les commandes"}
-                    >
-                      <_2849824StoreShoppingMarketBuyShopIconSvgIcon
-                        className={classNames(projectcss.all, sty.svg__m4Ywa)}
-                        role={"img"}
-                      />
-                    </Tache>
-                    <Tache
-                      _3={["unnamedVariant"]}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tache___0GZrI
-                      )}
-                      description={
-                        "Natalia devient de plus en plus pertinente jour apr\u00e8s jour, elle apprend de vos r\u00e9ponses et vos retours pour s'am\u00e9liorer."
-                      }
-                      titre={"Auto-apprentissage"}
-                    >
-                      <_9024102BrainLightIconSvgIcon
-                        className={classNames(projectcss.all, sty.svg__reWzZ)}
-                        role={"img"}
-                      />
-                    </Tache>
-                  </Stack__>
-                </Stack__>
-                <Button
-                  className={classNames("__wab_instance", sty.button__pab1J)}
-                  label={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rSPjr
-                      )}
-                    >
-                      {"En savoir plus"}
-                    </div>
-                  }
-                  linkTo={`/assistant-mail-automatisation-ia`}
-                />
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"chatbot"}
                 data-plasmic-override={overrides.chatbot}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.chatbot)}
               >
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__c1IaN)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__c1IaN)}>
                   <h2
                     className={classNames(
                       projectcss.all,
@@ -978,9 +783,7 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Natalia peut aussi \u00eatre int\u00e9gr\u00e9 sur votre site web sous forme de Chat Bot. Il sera fonctionnel et autonome en 2 jours seulement. Le Chatbot se nourrit du contenu sur votre site et des fichiers mis \u00e0 disposition pour r\u00e9pondre au mieux aux internautes."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
+                  <div
                     className={classNames(projectcss.all, sty.freeBox__jxWwQ)}
                   >
                     <Tache
@@ -1011,8 +814,8 @@ function PlasmicAccueil__RenderFunc(props: {
                       }
                       titre={"Meilleur suivi"}
                     />
-                  </Stack__>
-                </Stack__>
+                  </div>
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__m9Spl)}>
                   <PlasmicImg__
                     alt={""}
@@ -1032,23 +835,17 @@ function PlasmicAccueil__RenderFunc(props: {
                     }}
                   />
                 </div>
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"steps"}
               data-plasmic-override={overrides.steps}
               className={classNames(projectcss.all, sty.steps)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__t4XAw)}
-              >
-                <Stack__
-                  as={"div"}
+              <div className={classNames(projectcss.all, sty.freeBox__t4XAw)}>
+                <div
                   data-plasmic-name={"titre3"}
                   data-plasmic-override={overrides.titre3}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.titre3)}
                 >
                   <h2
@@ -1069,22 +866,19 @@ function PlasmicAccueil__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Une mise en service en 3 \u00e9tapes, sans expertise technique requise."
+                      "Une mise en service en 3 \u00e9tapes, comptez 2 semaines pour \u00eatre op\u00e9rationnels."
                     }
                   </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"etapes"}
                   data-plasmic-override={overrides.etapes}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.etapes)}
                 >
                   <Etape
                     className={classNames("__wab_instance", sty.etape__yzRaS)}
-                    description={
-                      "Depuis votre dashboard, connectez facilement vos outils (CRM, ERP, Google Sheet, etc.) et configurez les sc\u00e9narios de Natalia selon vos besoins."
-                    }
+                    description={``}
+                    titre={"Cr\u00e9ation du compte et param\u00e9trages"}
                   />
 
                   <Etape
@@ -1093,7 +887,7 @@ function PlasmicAccueil__RenderFunc(props: {
                     description={
                       "Choisissez o\u00f9 et quand Natalia intervient : pour accueillir, soutenir vos \u00e9quipes lors des p\u00e9riodes charg\u00e9es, ou assurer une continuit\u00e9 hors horaires d\u2019ouverture."
                     }
-                    titre={"D\u00e9ployez Natalia"}
+                    titre={"Connexion aux outils m\u00e9tiers"}
                   />
 
                   <Etape
@@ -1102,21 +896,17 @@ function PlasmicAccueil__RenderFunc(props: {
                     description={
                       "Obtenez des donn\u00e9es claires sur l\u2019impact de Natalia : appels pris en charge, cl\u00f4ture de tickets... Analysez ses r\u00e9sultats pour affiner ses sc\u00e9narios."
                     }
-                    titre={"Suivez ses performances"}
+                    titre={"Mise en production"}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </section>
             <section
               data-plasmic-name={"tarifUnique"}
               data-plasmic-override={overrides.tarifUnique}
               className={classNames(projectcss.all, sty.tarifUnique)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__kmNab)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__kmNab)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -1127,11 +917,7 @@ function PlasmicAccueil__RenderFunc(props: {
                 >
                   {"Un tarif unique et transparent"}
                 </h2>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__g6LKq)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__g6LKq)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -1154,19 +940,15 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Avec un seul tarif, b\u00e9n\u00e9ficiez de l\u2019ensemble des fonctionnalit\u00e9s pour transformer votre gestion client."
                     }
                   </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"tarif"}
                   data-plasmic-override={overrides.tarif}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.tarif)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"inclus"}
                     data-plasmic-override={overrides.inclus}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.inclus)}
                   >
                     <h1
@@ -1194,17 +976,13 @@ function PlasmicAccueil__RenderFunc(props: {
                         <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     </h1>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
+                    <div
                       className={classNames(
                         projectcss.all,
                         sty.freeBox___8YLls
                       )}
                     >
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__rBb07
@@ -1237,10 +1015,8 @@ function PlasmicAccueil__RenderFunc(props: {
                         >
                           {"\u2705  Support technique"}
                         </div>
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.freeBox__oJaGf
@@ -1282,14 +1058,12 @@ function PlasmicAccueil__RenderFunc(props: {
                         >
                           {"\u23f3  (Bient\u00f4t) R\u00e9ponses aux sms"}
                         </div>
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                      </div>
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"prix"}
                     data-plasmic-override={overrides.prix}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.prix)}
                   >
                     <h1
@@ -1368,8 +1142,8 @@ function PlasmicAccueil__RenderFunc(props: {
                       }
                       linkTo={"https://buy.stripe.com/eVa4hQ4Eke3a6mA147"}
                     />
-                  </Stack__>
-                </Stack__>
+                  </div>
+                </div>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -1402,18 +1176,14 @@ function PlasmicAccueil__RenderFunc(props: {
                     <React.Fragment>{""}</React.Fragment>
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"faq"}
               data-plasmic-override={overrides.faq}
               className={classNames(projectcss.all, sty.faq)}
             >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__dqZ9)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__dqZ9)}>
                 <h2
                   className={classNames(
                     projectcss.all,
@@ -1477,7 +1247,7 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Que fait-elle en cas de questions tr\u00e8s sp\u00e9cifiques ou inhabituelles ?"
                     }
                     reponse={
-                      "Natalia sait reconna\u00eetre ses limites. Lorsqu\u2019une demande sort de son champ de comp\u00e9tences, elle transf\u00e8re la conversation \u00e0 un collaborateur humain, garantissant ainsi une prise en charge optimale pour votre client."
+                      "Natalia sait reconna\u00eetre ses limites. Lorsqu\u2019une demande sort de son champ de comp\u00e9tences, elle transf\u00e8re la conversation \u00e0 un collaborateur humain, garantissant ainsi une prise en charge optimale pour votre client. Elle sait apprendre de ses erreurs pour y r\u00e9pondre les prochaines fois."
                     }
                   />
 
@@ -1501,7 +1271,7 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Avec quel outils puis-je int\u00e9grer Natalia ?"
                     }
                     reponse={
-                      "Natalia s'int\u00e8gre parfaitement avec vos outils existants comme votre ERP (Odoo, Dolibarr, ...), vos CRMs (Salesforce, HubSpot, Outlook), vos plannings (Outlook, Google Cal, Calendly), etc. Nous garantissons une compatibilit\u00e9 totale avec vos processus de vente et de support client, vous permettant de vous concentrer sur ce qui compte vraiment : conclure des ventes."
+                      "Natalia s'int\u00e8gre parfaitement avec vos outils existants comme votre ERP, vos CRMs, vos plannings, bo\u00eetes mails, etc... Nous garantissons une compatibilit\u00e9 totale avec vos processus de vente et de support client, vous permettant de vous concentrer sur ce qui compte vraiment : conclure des ventes."
                     }
                   />
 
@@ -1522,11 +1292,11 @@ function PlasmicAccueil__RenderFunc(props: {
                       "Peut-on personnaliser la voix et le ton de Natalia ?"
                     }
                     reponse={
-                      "Pas encore, mais nous y travaillons car notre objectif est de permettre \u00e0 Natalia de refl\u00e9ter parfaitement l\u2019identit\u00e9 de votre entreprise, avec une voix et un ton adapt\u00e9s \u00e0 votre image."
+                      "Nous avons en effet plusieurs voix en catalogue. L'objectif est de permettre \u00e0 Natalia de refl\u00e9ter parfaitement l\u2019identit\u00e9 de votre entreprise, avec une voix et un ton adapt\u00e9s \u00e0 votre image."
                     }
                   />
                 </div>
-              </Stack__>
+              </div>
             </section>
             <section
               data-plasmic-name={"footer"}
@@ -1590,7 +1360,7 @@ function PlasmicAccueil__RenderFunc(props: {
                       sty.text__oPTi6
                     )}
                   >
-                    {"Prendre rendez-vous"}
+                    {"R\u00e9server une d\u00e9mo"}
                   </div>
                 }
                 linkTo={
@@ -1626,7 +1396,6 @@ const PlasmicDescendants = {
     "sliderCarousel",
     "solutions",
     "assistanceVocale",
-    "mailsAutomatique",
     "chatbot",
     "steps",
     "titre3",
@@ -1653,7 +1422,6 @@ const PlasmicDescendants = {
     "sliderCarousel",
     "solutions",
     "assistanceVocale",
-    "mailsAutomatique",
     "chatbot",
     "steps",
     "titre3",
@@ -1676,9 +1444,8 @@ const PlasmicDescendants = {
   titre2: ["titre2"],
   chiffres2: ["chiffres2", "sliderCarousel"],
   sliderCarousel: ["sliderCarousel"],
-  solutions: ["solutions", "assistanceVocale", "mailsAutomatique", "chatbot"],
+  solutions: ["solutions", "assistanceVocale", "chatbot"],
   assistanceVocale: ["assistanceVocale"],
-  mailsAutomatique: ["mailsAutomatique"],
   chatbot: ["chatbot"],
   steps: ["steps", "titre3", "etapes"],
   titre3: ["titre3"],
@@ -1709,7 +1476,6 @@ type NodeDefaultElementType = {
   sliderCarousel: typeof SliderWrapper;
   solutions: "section";
   assistanceVocale: "div";
-  mailsAutomatique: "div";
   chatbot: "div";
   steps: "section";
   titre3: "div";
@@ -1796,7 +1562,6 @@ export const PlasmicAccueil = Object.assign(
     sliderCarousel: makeNodeComponent("sliderCarousel"),
     solutions: makeNodeComponent("solutions"),
     assistanceVocale: makeNodeComponent("assistanceVocale"),
-    mailsAutomatique: makeNodeComponent("mailsAutomatique"),
     chatbot: makeNodeComponent("chatbot"),
     steps: makeNodeComponent("steps"),
     titre3: makeNodeComponent("titre3"),
