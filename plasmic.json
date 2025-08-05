@@ -45,7 +45,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -445,7 +446,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -467,7 +469,8 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -675,7 +678,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -691,7 +695,7 @@
           "projectId": "mwhScQxahW1in9QQ9WEhLw",
           "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicAccueil.tsx",
           "importSpec": {
-            "modulePath": "../pages/fonctionnalites.tsx"
+            "modulePath": "../pages/index.tsx"
           },
           "cssFilePath": "plasmic/natalia_v_2/PlasmicAccueil.module.css",
           "scheme": "blackbox",

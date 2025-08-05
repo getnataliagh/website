@@ -115,7 +115,7 @@ function PlasmicNavigationLink__RenderFunc(props: {
       Object.assign(
         {
           label: "Some text",
-          target: `/fonctionnalites`
+          target: `/`
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)

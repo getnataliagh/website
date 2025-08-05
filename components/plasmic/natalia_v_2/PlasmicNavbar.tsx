@@ -183,7 +183,7 @@ function PlasmicNavbar__RenderFunc(props: {
         <PlasmicLink__
           className={classNames(projectcss.all, projectcss.a, sty.link__n5Go)}
           component={Link}
-          href={`/fonctionnalites`}
+          href={`/`}
           platform={"nextjs"}
         >
           <PlasmicImg__
@@ -220,7 +220,7 @@ function PlasmicNavbar__RenderFunc(props: {
           <NavigationLink
             className={classNames("__wab_instance", sty.navigationLink__txoez)}
             label={"Fonctionnalit\u00e9s"}
-            target={`/fonctionnalites#${``}`}
+            target={`/#${``}`}
           />
 
           <NavigationLink

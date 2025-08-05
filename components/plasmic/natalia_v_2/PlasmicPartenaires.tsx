@@ -522,7 +522,7 @@ function PlasmicPartenaires__RenderFunc(props: {
                     {"Retour \u00e0 l'accueil"}
                   </div>
                 }
-                linkTo={`/fonctionnalites`}
+                linkTo={`/`}
               />
             </section>
             <section
