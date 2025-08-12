@@ -45,11 +45,7 @@
   height: auto;
   align-content: center;
   justify-items: flex-start;
-  background: linear-gradient(
-    359deg,
-    #ffffff 2%,
-    var(--token-TLY39z0Nh8Ih) 100%
-  );
+  background: var(--token-P6hRRloIUAK0);
   grid-row-gap: 20px;
   justify-self: flex-start;
   grid-column-start: 1 !important;
@@ -64,7 +60,8 @@
   border-radius: 40px;
   padding: 80px 0px 0px;
   margin: 0px;
-  border: 10px solid #ffffff;
+  border-style: solid;
+  border-color: #ffffff;
 }
 .presentation > * {
   grid-column: 4;
@@ -96,7 +93,13 @@
 .navbar:global(.__wab_instance) {
   position: relative;
   width: 100%;
+  left: auto;
+  top: auto;
+  transition-property: all;
+  transition-duration: 1s;
   min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar:global(.__wab_instance) {
@@ -137,6 +140,7 @@
     font-size: 35px;
     margin-top: 31px;
     margin-bottom: 37px;
+    padding-bottom: 10px;
   }
 }
 .text__t3Dp {
@@ -237,7 +241,7 @@
   align-content: center;
   justify-items: center;
   justify-self: flex-start;
-  background: none;
+  background: var(--token-P6hRRloIUAK0);
   margin-bottom: 0px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -424,9 +428,7 @@
   max-width: auto;
   justify-content: center;
   align-items: center;
-  background: var(--token-TLY39z0Nh8Ih);
-  border-top-right-radius: var(--token-ebjHh15HwWpQ);
-  border-bottom-right-radius: var(--token-ebjHh15HwWpQ);
+  background: var(--token-P6hRRloIUAK0);
   row-gap: 20px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -1111,7 +1113,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background: var(--token-TLY39z0Nh8Ih);
+  background: var(--token-P6hRRloIUAK0);
   row-gap: 20px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -1830,11 +1832,7 @@
   grid-row-gap: 16px;
   align-content: center;
   justify-items: center;
-  background: linear-gradient(
-    180deg,
-    var(--token-TLY39z0Nh8Ih) 14%,
-    var(--token-enT25OLZl2uL) 100%
-  );
+  background: var(--token-P6hRRloIUAK0);
   justify-self: flex-start;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;

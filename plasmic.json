@@ -45,8 +45,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -446,8 +445,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -469,8 +467,7 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -678,8 +675,7 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1832,6 +1828,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.340",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.340/dist/plasmic.schema.json"
+  "cliVersion": "0.1.341",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.341/dist/plasmic.schema.json"
 }
