@@ -45,11 +45,7 @@
   height: auto;
   align-content: center;
   justify-items: center;
-  background: linear-gradient(
-    359deg,
-    #ffffff 2%,
-    var(--token-enT25OLZl2uL) 100%
-  );
+  background: var(--token-P6hRRloIUAK0);
   grid-row-gap: 20px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -798,7 +794,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background: var(--token-ii9HamUlZktr);
+  background: var(--token-P6hRRloIUAK0);
   column-gap: 20px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -1075,7 +1071,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background: var(--token-ii9HamUlZktr);
+  background: var(--token-P6hRRloIUAK0);
   row-gap: 40px;
   grid-column-start: 3 !important;
   grid-column-end: -3 !important;
@@ -1347,11 +1343,7 @@
   align-content: center;
   justify-items: center;
   justify-self: flex-start;
-  background: linear-gradient(
-    180deg,
-    #ffffff 14%,
-    var(--token-enT25OLZl2uL) 100%
-  );
+  background: var(--token-P6hRRloIUAK0);
   outline-color: var(--token-_YlvzaAWV7H7);
   outline-style: solid;
   outline-offset: -10px;
