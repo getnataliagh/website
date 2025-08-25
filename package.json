@@ -10,10 +10,13 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "@ant-design/pro-components": "^2.6.4",
     "@plasmicapp/cli": "^0.1.342",
     "@plasmicapp/react-web": "^0.2.399",
     "@plasmicpkgs/antd5": "^0.0.267",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.251",
+    "@plasmicpkgs/plasmic-rich-components": "^1.0.220",
     "@plasmicpkgs/react-aria": "^0.0.108",
     "@plasmicpkgs/react-slick": "^0.0.231",
     "@plasmicpkgs/react-youtube": "^7.13.228",

@@ -59,6 +59,13 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
+import {
+  executePlasmicDataOp,
+  usePlasmicDataOp,
+  usePlasmicInvalidate
+} from "@plasmicapp/react-web/lib/data-sources";
+
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
 import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
@@ -74,6 +81,7 @@ import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -179,11 +187,15 @@ function PlasmicContact__RenderFunc(props: {
     $queries: {},
     $refs
   });
+  const dataSourcesCtx = usePlasmicDataSourceContext();
+  const plasmicInvalidate = usePlasmicInvalidate();
 
   const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
+  const styleTokensClassNames_plasmic_rich_components =
+    useStyleTokens_plasmic_rich_components();
 
   return (
     <React.Fragment>
@@ -238,6 +250,7 @@ function PlasmicContact__RenderFunc(props: {
             projectcss.plasmic_mixins,
             styleTokensClassNames,
             styleTokensClassNames_antd_5_hostless,
+            styleTokensClassNames_plasmic_rich_components,
             sty.root
           )}
         >
@@ -267,6 +280,30 @@ function PlasmicContact__RenderFunc(props: {
                 labelCol: { span: 8, horizontalOnly: true },
                 layout: "vertical",
                 mode: undefined,
+                onFinish: async values => {
+                  const $steps = {};
+
+                  $steps["refreshData"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          queryInvalidation: ["plasmic_refresh_all"]
+                        };
+                        return (async ({ queryInvalidation }) => {
+                          if (!queryInvalidation) {
+                            return;
+                          }
+                          await plasmicInvalidate(queryInvalidation);
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["refreshData"] != null &&
+                    typeof $steps["refreshData"] === "object" &&
+                    typeof $steps["refreshData"].then === "function"
+                  ) {
+                    $steps["refreshData"] = await $steps["refreshData"];
+                  }
+                },
                 onIsSubmittingChange: async (...eventArgs: any) => {
                   generateStateOnChangePropForCodeComponents(
                     $state,
@@ -306,7 +343,7 @@ function PlasmicContact__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__myxq9
+                      sty.formField___16RL
                     )}
                     hidden={false}
                     label={"Nom"}
@@ -314,39 +351,45 @@ function PlasmicContact__RenderFunc(props: {
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__bWa)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.input___8PfEz
+                      )}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__avT0L
+                      sty.formField__zOqEe
                     )}
                     label={"Email"}
                     name={"email"}
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__gxpp)}
+                      className={classNames("__wab_instance", sty.input__p8D9S)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__pnvdJ
+                      sty.formField__sASy
                     )}
                     label={"T\u00e9l\u00e9phone"}
                     name={"entreprise"}
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input___3Bk4)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.input___86KTv
+                      )}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__pPrGp
+                      sty.formField__la9OJ
                     )}
                     label={"Message"}
                     name={"message"}
@@ -365,7 +408,7 @@ function PlasmicContact__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__nnBob
+                        sty.text__kmzBs
                       )}
                     >
                       <React.Fragment>
