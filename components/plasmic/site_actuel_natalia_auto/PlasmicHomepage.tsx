@@ -2230,7 +2230,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                             >
                               {
-                                "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vos et vos processus."
+                                "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
                               }
                             </span>
                           </React.Fragment>

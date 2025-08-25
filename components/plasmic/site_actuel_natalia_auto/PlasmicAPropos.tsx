@@ -326,118 +326,6 @@ function PlasmicAPropos__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__vxhcm
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__azo9S
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__sLvSc)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151554Png.png",
-                              fullWidth: 256,
-                              fullHeight: 256,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__giHpD
-                          )}
-                        >
-                          {false ? (
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__hj0QH
-                              )}
-                            >
-                              <Icon8Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__y4EMd
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                          ) : null}
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__nQzbO
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__yRDyr
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
-                                {
-                                  <PlasmicLink__
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.a,
-                                      projectcss.__wab_text,
-                                      projectcss.plasmic_default__inline,
-                                      sty.link__zMlxV
-                                    )}
-                                    component={Link}
-                                    href={
-                                      "https://www.linkedin.com/in/francoisguillaumeribreau/"
-                                    }
-                                    platform={"nextjs"}
-                                  >
-                                    {"Fran\u00e7ois-Guillaume Ribreau"}
-                                  </PlasmicLink__>
-                                }
-                                <React.Fragment>{""}</React.Fragment>
-                              </React.Fragment>
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__tBqxp
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700 }}
-                                >
-                                  {"Co-founder & Expert IA"}
-                                </span>
-                                <React.Fragment>
-                                  {"\nSerial entrepreneur"}
-                                </React.Fragment>
-                              </React.Fragment>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
                           sty.freeBox___9WxD
                         )}
                       >
@@ -531,7 +419,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                 }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"Co-founder & CEO"}
+                                {"CEO, co-fondateur"}
                               </span>
                               <React.Fragment>
                                 {"\nD\u00e9veloppement commercial"}
@@ -636,7 +524,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                 }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"Co-founder & COO"}
+                                {"COO, co-fondateur"}
                               </span>
                               <React.Fragment>
                                 {"\nExpert lean & process"}
@@ -645,10 +533,6 @@ function PlasmicAPropos__RenderFunc(props: {
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__n1Rsc)}
-                    >
                       <div
                         className={classNames(
                           projectcss.all,
@@ -745,12 +629,128 @@ function PlasmicAPropos__RenderFunc(props: {
                                 }
                                 style={{ fontWeight: 700 }}
                               >
-                                {"Co-founder & CTO"}
+                                {"CTO, co-fondateur"}
                               </span>
                               <React.Fragment>
-                                {"\nProduct Owner & PM"}
+                                {"\nProduit & Tech"}
                               </React.Fragment>
                             </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__n1Rsc)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__vxhcm
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__azo9S
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__sLvSc)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151554Png.png",
+                              fullWidth: 256,
+                              fullHeight: 256,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__giHpD
+                          )}
+                        >
+                          {false ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__hj0QH
+                              )}
+                            >
+                              <Icon8Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__y4EMd
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                          ) : null}
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__nQzbO
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__yRDyr
+                              )}
+                            >
+                              <React.Fragment>
+                                <React.Fragment>{""}</React.Fragment>
+                                {
+                                  <PlasmicLink__
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.a,
+                                      projectcss.__wab_text,
+                                      projectcss.plasmic_default__inline,
+                                      sty.link__zMlxV
+                                    )}
+                                    component={Link}
+                                    href={
+                                      "https://www.linkedin.com/in/francoisguillaumeribreau/"
+                                    }
+                                    platform={"nextjs"}
+                                  >
+                                    {"Fran\u00e7ois-Guillaume Ribreau"}
+                                  </PlasmicLink__>
+                                }
+                                <React.Fragment>{""}</React.Fragment>
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__tBqxp
+                              )}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ fontWeight: 700 }}
+                                >
+                                  {"Expert IA, co-fondateur"}
+                                </span>
+                                <React.Fragment>
+                                  {"\nSerial entrepreneur"}
+                                </React.Fragment>
+                              </React.Fragment>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1572,7 +1572,7 @@ function PlasmicAPropos__RenderFunc(props: {
                         style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                       >
                         {
-                          " : c'est l\u2019essor fulgurant des intelligences artificielles g\u00e9n\u00e9ratives en France et dans le monde. Cela fait bient\u00f4t 2 ans que ChatGPT 3.5 est sorti, ce n'est plus une mode mais une transformation qui est entrain d'op\u00e9rer dans le monde entier. Fran\u00e7ois-Guillaume expert dans le domaine, est alors propuls\u00e9 sur le devant de la sc\u00e8ne. Sollicit\u00e9 de toutes parts, il encha\u00eene les conf\u00e9rences et formations sur l\u2019IA, un sujet qui le passionne depuis son master au Griffith College en Irlande, o\u00f9 il avait appliqu\u00e9 son apprentissage du traitement automatique du langage (TAL) \u00e0 l'analyse temps-r\u00e9el des sentiments des messages sociaux dans sa premi\u00e8re startup Bringr."
+                          " : c'est l\u2019essor fulgurant des intelligences artificielles g\u00e9n\u00e9ratives en France et dans le monde. Cela fait bient\u00f4t 2 ans que ChatGPT 3.5 est sorti, ce n'est plus une mode mais une transformation qui est entrain d'op\u00e9rer dans le monde entier. Fran\u00e7ois-Guillaume expert dans le domaine, est alors propuls\u00e9 sur le devant de la sc\u00e8ne. Sollicit\u00e9 de toutes parts, il encha\u00eene les conf\u00e9rences et formations sur l\u2019IA, un sujet qui le passionne depuis son master au Griffith College en Irlande, o\u00f9 il avait appliqu\u00e9 son apprentissage du traitement automatique du langage (TAL) \u00e0 l'analyse temps-r\u00e9el des sentiments des messages sociaux gr\u00e2ce \u00e0 du Machine Learning (ML) dans sa premi\u00e8re startup Bringr."
                         }
                       </span>
                       <React.Fragment>{"\n"}</React.Fragment>

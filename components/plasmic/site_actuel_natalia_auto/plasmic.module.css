@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Roboto%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C700&display=swap");
 
 .plasmic_tokens {
   --token-g2ytubvyEq5L: 1140px;
@@ -389,6 +389,8 @@
   --plasmic-mixin-content-max_white-space: var(
     --mixin-4kF8oIY5mnvd_white-space
   );
+  --mixin-CEc6_5n5pnO7_white-space: pre-wrap;
+  --plasmic-mixin-label_white-space: var(--mixin-CEc6_5n5pnO7_white-space);
 }
 
 :where(.all) {
