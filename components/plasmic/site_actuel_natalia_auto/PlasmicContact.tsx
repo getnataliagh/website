@@ -59,22 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
-import {
-  executePlasmicDataOp,
-  usePlasmicDataOp,
-  usePlasmicInvalidate
-} from "@plasmicapp/react-web/lib/data-sources";
-
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
-import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
-import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
+import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -103,11 +89,10 @@ export type PlasmicContact__OverridesType = {
   root?: Flex__<"div">;
   headerHeroSection?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
-  form?: Flex__<typeof FormWrapper>;
-  textArea?: Flex__<typeof AntdTextArea>;
-  button?: Flex__<typeof AntdButton>;
+  iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
+  text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -159,24 +144,6 @@ function PlasmicContact__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
-      },
-      {
-        path: "form.value",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        refName: "form",
-        onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
-      },
-      {
-        path: "form.isSubmitting",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
-
-        refName: "form",
-        onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
       }
     ],
     [$props, $ctx, $refs]
@@ -187,8 +154,6 @@ function PlasmicContact__RenderFunc(props: {
     $queries: {},
     $refs
   });
-  const dataSourcesCtx = usePlasmicDataSourceContext();
-  const plasmicInvalidate = usePlasmicInvalidate();
 
   const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
@@ -265,176 +230,17 @@ function PlasmicContact__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            {(() => {
-              const child$Props = {
-                className: classNames("__wab_instance", sty.form),
-                extendedOnValuesChange: async (...eventArgs: any) => {
-                  generateStateOnChangePropForCodeComponents(
-                    $state,
-                    "value",
-                    ["form", "value"],
-                    FormWrapper_Helpers
-                  ).apply(null, eventArgs);
-                },
-                formItems: undefined,
-                labelCol: { span: 8, horizontalOnly: true },
-                layout: "vertical",
-                mode: undefined,
-                onFinish: async values => {
-                  const $steps = {};
-
-                  $steps["refreshData"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          queryInvalidation: ["plasmic_refresh_all"]
-                        };
-                        return (async ({ queryInvalidation }) => {
-                          if (!queryInvalidation) {
-                            return;
-                          }
-                          await plasmicInvalidate(queryInvalidation);
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["refreshData"] != null &&
-                    typeof $steps["refreshData"] === "object" &&
-                    typeof $steps["refreshData"].then === "function"
-                  ) {
-                    $steps["refreshData"] = await $steps["refreshData"];
-                  }
-                },
-                onIsSubmittingChange: async (...eventArgs: any) => {
-                  generateStateOnChangePropForCodeComponents(
-                    $state,
-                    "isSubmitting",
-                    ["form", "isSubmitting"],
-                    FormWrapper_Helpers
-                  ).apply(null, eventArgs);
-                },
-                ref: ref => {
-                  $refs["form"] = ref;
-                },
-                wrapperCol: { span: 16, horizontalOnly: true }
-              };
-              initializeCodeComponentStates(
-                $state,
-                [
-                  {
-                    name: "value",
-                    plasmicStateName: "form.value"
-                  },
-                  {
-                    name: "isSubmitting",
-                    plasmicStateName: "form.isSubmitting"
-                  }
-                ],
-                [],
-                FormWrapper_Helpers ?? {},
-                child$Props
-              );
-
-              return (
-                <FormWrapper
-                  data-plasmic-name={"form"}
-                  data-plasmic-override={overrides.form}
-                  {...child$Props}
-                >
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField___026Gh
-                    )}
-                    hidden={false}
-                    label={"Nom"}
-                    name={"name"}
-                    rules={[{ ruleType: "required" }]}
-                  >
-                    <AntdInput
-                      className={classNames(
-                        "__wab_instance",
-                        sty.input___9DyY5
-                      )}
-                    />
-                  </FormItemWrapper>
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__jbE3
-                    )}
-                    label={"Email"}
-                    name={"email"}
-                    rules={[{ ruleType: "required" }]}
-                  >
-                    <AntdInput
-                      className={classNames("__wab_instance", sty.input__rggFo)}
-                    />
-                  </FormItemWrapper>
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__dLfj0
-                    )}
-                    label={"T\u00e9l\u00e9phone"}
-                    name={"entreprise"}
-                    rules={[{ ruleType: "required" }]}
-                  >
-                    <AntdInput
-                      className={classNames("__wab_instance", sty.input__gzwOm)}
-                    />
-                  </FormItemWrapper>
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__hQTv7
-                    )}
-                    label={"Entreprise"}
-                    rules={[{ ruleType: "required" }]}
-                  >
-                    <AntdInput
-                      className={classNames("__wab_instance", sty.input__jJTft)}
-                    />
-                  </FormItemWrapper>
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__xsLzi
-                    )}
-                    label={"Message"}
-                    name={"message"}
-                    rules={[{ ruleType: "required" }]}
-                  >
-                    <AntdTextArea
-                      className={classNames("__wab_instance", sty.textArea)}
-                    />
-                  </FormItemWrapper>
-                  <AntdButton
-                    className={classNames("__wab_instance", sty.button)}
-                    submitsForm={true}
-                    type={"primary"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mN8Qp
-                      )}
-                    >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-jgohepLVeKvh)" }}
-                        >
-                          {"Envoyer"}
-                        </span>
-                      </React.Fragment>
-                    </div>
-                  </AntdButton>
-                </FormWrapper>
-              );
-            })()}
+            <Iframe
+              data-plasmic-name={"iframe"}
+              data-plasmic-override={overrides.iframe}
+              className={classNames("__wab_instance", sty.iframe)}
+              preview={true}
+              src={
+                "https://n8n.getnatalia.com/form/ceb27c8d-b649-4a99-a344-ccb0d0ae6b7d"
+              }
+              srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
+              useHtml={false}
+            />
           </div>
           <Section
             data-plasmic-name={"pricingSection"}
@@ -469,10 +275,12 @@ function PlasmicContact__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__kqOj)}
                   >
                     <div
+                      data-plasmic-name={"text"}
+                      data-plasmic-override={overrides.text}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___2DoNh
+                        sty.text
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
@@ -509,26 +317,18 @@ const PlasmicDescendants = {
     "root",
     "headerHeroSection",
     "navbar",
-    "form",
-    "textArea",
-    "button",
+    "iframe",
     "pricingSection",
     "columns",
+    "text",
     "footerSection"
   ],
-  headerHeroSection: [
-    "headerHeroSection",
-    "navbar",
-    "form",
-    "textArea",
-    "button"
-  ],
+  headerHeroSection: ["headerHeroSection", "navbar", "iframe"],
   navbar: ["navbar"],
-  form: ["form", "textArea", "button"],
-  textArea: ["textArea"],
-  button: ["button"],
-  pricingSection: ["pricingSection", "columns"],
-  columns: ["columns"],
+  iframe: ["iframe"],
+  pricingSection: ["pricingSection", "columns", "text"],
+  columns: ["columns", "text"],
+  text: ["text"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -538,11 +338,10 @@ type NodeDefaultElementType = {
   root: "div";
   headerHeroSection: "div";
   navbar: typeof Navbar;
-  form: typeof FormWrapper;
-  textArea: typeof AntdTextArea;
-  button: typeof AntdButton;
+  iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
+  text: "div";
   footerSection: typeof FooterSection;
 };
 
@@ -608,11 +407,10 @@ export const PlasmicContact = Object.assign(
     // Helper components rendering sub-elements
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     navbar: makeNodeComponent("navbar"),
-    form: makeNodeComponent("form"),
-    textArea: makeNodeComponent("textArea"),
-    button: makeNodeComponent("button"),
+    iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
+    text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicContact
