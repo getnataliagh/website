@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicButton,
   DefaultButtonProps
-} from "./plasmic/natalia_v_2/PlasmicButton";
+} from "./plasmic/site_actuel_natalia_auto/PlasmicButton";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can

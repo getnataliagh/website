@@ -10,9 +10,10 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@plasmicapp/cli": "^0.1.341",
-    "@plasmicapp/react-web": "^0.2.366",
+    "@plasmicapp/cli": "^0.1.342",
+    "@plasmicapp/react-web": "^0.2.399",
     "@plasmicpkgs/antd5": "^0.0.267",
+    "@plasmicpkgs/plasmic-basic-components": "^0.0.251",
     "@plasmicpkgs/react-aria": "^0.0.104",
     "@plasmicpkgs/react-slick": "^0.0.231",
     "@plasmicpkgs/react-youtube": "^7.13.228",

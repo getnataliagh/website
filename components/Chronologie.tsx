@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicChronologie,
   DefaultChronologieProps
-} from "./plasmic/natalia_v_2/PlasmicChronologie";
+} from "./plasmic/site_actuel_natalia_auto/PlasmicChronologie";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined

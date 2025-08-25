@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
-import GlobalContextsProvider from "../components/plasmic/natalia_v_2/PlasmicGlobalContextsProvider";
+import GlobalContextsProvider from "../components/plasmic/site_actuel_natalia_auto/PlasmicGlobalContextsProvider";
 
-import { PlasmicAPropos } from "../components/plasmic/natalia_v_2/PlasmicAPropos";
+import { PlasmicAPropos } from "../components/plasmic/site_actuel_natalia_auto/PlasmicAPropos";
 import { useRouter } from "next/router";
 
 function APropos() {

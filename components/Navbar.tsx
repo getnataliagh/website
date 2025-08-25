@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicNavbar,
   DefaultNavbarProps
-} from "./plasmic/natalia_v_2/PlasmicNavbar";
+} from "./plasmic/site_actuel_natalia_auto/PlasmicNavbar";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -38,7 +38,7 @@ function Navbar_(props: NavbarProps, ref: HTMLElementRefOf<"div">) {
   // By default, we are just piping all NavbarProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicNavbar navBar={{ ref }} {...props} />;
+  return <PlasmicNavbar root={{ ref }} {...props} />;
 }
 
 const Navbar = React.forwardRef(Navbar_);

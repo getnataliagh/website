@@ -1,0 +1,121 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  justify-self: flex-start;
+  min-width: 0;
+}
+.freeBox__nzDp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.text__w3ONj {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 2rem;
+  color: var(--token-D5datrW5yy5e);
+  text-align: right;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .text__w3ONj {
+    font-size: var(--token-wkzkOeC3ZWSV);
+  }
+}
+.text__uQwYx {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: var(--token-wkzkOeC3ZWSV);
+  color: var(--token-O5FVPUzEQMyt);
+  text-align: right;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .text__uQwYx {
+    font-size: var(--token-YRLpiKJWMvDT);
+  }
+}
+.freeBox__pt9Js {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 5px;
+}
+.svg__mbNgy {
+  object-fit: cover;
+  max-width: 120%;
+  color: var(--token-k7H7DCWvDgvK);
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.svg__aMiIq {
+  object-fit: cover;
+  color: var(--token-NbExc-UM8dh_);
+  height: 134px;
+  width: 20px;
+  flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .svg__aMiIq {
+    height: 180px;
+    flex-shrink: 0;
+  }
+}
+.freeBox__t9DO5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.text__jxXyH {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-D5datrW5yy5e);
+  font-size: 2rem;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .text__jxXyH {
+    font-size: var(--token-wkzkOeC3ZWSV);
+  }
+}
+.text__y9RjD {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-O5FVPUzEQMyt);
+  font-size: var(--token-wkzkOeC3ZWSV);
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .text__y9RjD {
+    font-size: var(--token-YRLpiKJWMvDT);
+  }
+}

@@ -45,7 +45,9 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "plasmic/react_slick/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_slick/plasmic.tsx"
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -445,7 +447,9 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "plasmic/antd_5_hostless/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/antd_5_hostless/plasmic.tsx"
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -467,7 +471,9 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "plasmic/react_youtube/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_youtube/plasmic.tsx"
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -675,7 +681,9 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "plasmic/react_aria/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_aria/plasmic.tsx"
     },
     {
       "projectId": "mwhScQxahW1in9QQ9WEhLw",
@@ -1799,6 +1807,1102 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ],
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
+    },
+    {
+      "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
+      "projectApiToken": "vXGGQpdi9fhcncabBdg8DcMRUbkz0iRW6HS1jzQufQR6QH0MasPwr9SX7ap4SsK3xXwwXmzZtglWGe0Rm2nw",
+      "projectName": "plasmic-basic-components",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_basic_components/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_basic_components/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/plasmic_basic_components/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "CMDBvOhaI4s",
+          "name": "Iframe",
+          "displayName": "hostless-iframe",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "RhitNJW5Zu-",
+          "name": "Video",
+          "displayName": "hostless-html-video",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "PKldDYkH42",
+          "name": "Embed",
+          "displayName": "hostless-embed",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "D4RbnlpRXg3",
+          "name": "DataProvider",
+          "displayName": "hostless-data-provider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "zlBHsvkFlN",
+          "name": "ConditionGuard",
+          "displayName": "hostless-condition-guard",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "K-mWGqrHefEp",
+          "name": "SideEffect",
+          "displayName": "hostless-side-effect",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "SpkzmXJqg27p",
+          "name": "Timer",
+          "displayName": "hostless-timer",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "2utUyfwAdNYhisb36rBizH",
+      "projectApiToken": "BJ6sI90bSQDt7nMMJChI6iZ09wTTtpBY9xF8VAkOrn8SYXR4SjNElsxNRZcm1OJFgYItsxDO1v1qD7rBjg",
+      "projectName": "SITE ACTUEL - Natalia Auto",
+      "version": "latest",
+      "cssFilePath": "plasmic/site_actuel_natalia_auto/plasmic.module.css",
+      "components": [
+        {
+          "id": "e97xu5LlVB1k",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        },
+        {
+          "id": "F0Go0DR6--TF",
+          "name": "Navbar",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicNavbar.tsx",
+          "importSpec": {
+            "modulePath": "Navbar.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicNavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Oz4K6O9ubKeI",
+          "name": "Logo",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLogo.tsx",
+          "importSpec": {
+            "modulePath": "Logo.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLogo.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Mvxx80XtzO5S",
+          "name": "FooterSection",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicFooterSection.tsx",
+          "importSpec": {
+            "modulePath": "FooterSection.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicFooterSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "VgtGYFzvbs7V",
+          "name": "PriceCard",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPriceCard.tsx",
+          "importSpec": {
+            "modulePath": "PriceCard.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPriceCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "7WxeGP9tABGT",
+          "name": "Section",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSection.tsx",
+          "importSpec": {
+            "modulePath": "Section.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "vaNixDrrufKr",
+          "name": "DiagramCard",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDiagramCard.tsx",
+          "importSpec": {
+            "modulePath": "DiagramCard.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDiagramCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "qYKaCYa7Bb51",
+          "name": "ProductCard",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicProductCard.tsx",
+          "importSpec": {
+            "modulePath": "ProductCard.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicProductCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "g1wngd-Tig8P",
+          "name": "DetailAbout",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDetailAbout.tsx",
+          "importSpec": {
+            "modulePath": "DetailAbout.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDetailAbout.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lI42RdYzTBYP",
+          "name": "PriceSection",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPriceSection.tsx",
+          "importSpec": {
+            "modulePath": "PriceSection.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPriceSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "TU5A2-p6WFJJ",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fxexeTMPbrbn",
+          "name": "Contact",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicContact.tsx",
+          "importSpec": {
+            "modulePath": "../pages/contact.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicContact.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/contact"
+        },
+        {
+          "id": "mXtFCzej9cLY",
+          "name": "Cgu",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCgu.tsx",
+          "importSpec": {
+            "modulePath": "../pages/conditions-generales-utilisation.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCgu.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/conditions-generales-utilisation"
+        },
+        {
+          "id": "ie-zZxwOCHjO",
+          "name": "Confidentialite",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicConfidentialite.tsx",
+          "importSpec": {
+            "modulePath": "../pages/politique-confidentialite.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicConfidentialite.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/politique-confidentialite"
+        },
+        {
+          "id": "zivB9AwcttVS",
+          "name": "APropos",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAPropos.tsx",
+          "importSpec": {
+            "modulePath": "../pages/a-propos.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAPropos.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/a-propos"
+        },
+        {
+          "id": "Ukaduq380HQq",
+          "name": "Chronologie",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicChronologie.tsx",
+          "importSpec": {
+            "modulePath": "Chronologie.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicChronologie.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "wyMpZ4DJrWTn",
+          "name": "Valeur",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicValeur.tsx",
+          "importSpec": {
+            "modulePath": "Valeur.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicValeur.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "J00YQw9COqtK",
+          "name": "CloudIamNavigationLinkViewMore",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCloudIamNavigationLinkViewMore.tsx",
+          "importSpec": {
+            "modulePath": "CloudIamNavigationLinkViewMore.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCloudIamNavigationLinkViewMore.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "HiVfgKFJx8Th",
+          "name": "CloudIamNavigationLinkPrimaryCta",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCloudIamNavigationLinkPrimaryCta.tsx",
+          "importSpec": {
+            "modulePath": "CloudIamNavigationLinkPrimaryCta.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCloudIamNavigationLinkPrimaryCta.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "oy9UxF4SrCBy",
+          "name": "Calculateur",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCalculateur.tsx",
+          "importSpec": {
+            "modulePath": "../pages/calculateur.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCalculateur.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/calculateur"
+        }
+      ],
+      "icons": [
+        {
+          "id": "V0GQaCGM9ljf",
+          "name": "HamburgerIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Hamburger.tsx"
+        },
+        {
+          "id": "G3e6GV5FsR6_",
+          "name": "CheckIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Check.tsx"
+        },
+        {
+          "id": "dihYipps9m_d",
+          "name": "ChevronRightIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ChevronRight.tsx"
+        },
+        {
+          "id": "EIxi87kX4-FI",
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CheckSvg.tsx"
+        },
+        {
+          "id": "XByubJdkVkNp",
+          "name": "FacebookSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__FacebookSvg.tsx"
+        },
+        {
+          "id": "Dujc91SrsQ7x",
+          "name": "TwitterSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TwitterSvg.tsx"
+        },
+        {
+          "id": "FjCUDIsLGLqk",
+          "name": "InstagramSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__InstagramSvg.tsx"
+        },
+        {
+          "id": "blADAZDx3P1y",
+          "name": "LinkedinSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__LinkedinSvg.tsx"
+        },
+        {
+          "id": "Jc063XtHnLNY",
+          "name": "IconArrowRightSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__IconArrowRightSvg.tsx"
+        },
+        {
+          "id": "ViTHihoGnbR-",
+          "name": "CircleIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Circle.tsx"
+        },
+        {
+          "id": "BAVaBjl9jJEK",
+          "name": "ChevronDownIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ChevronDown.tsx"
+        },
+        {
+          "id": "O4W-2UqGZ8Hj",
+          "name": "DelaySvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__DelaySvgrepoComSvg.tsx"
+        },
+        {
+          "id": "MqGXQVDYbZi_",
+          "name": "Icon8Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon8.tsx"
+        },
+        {
+          "id": "kk0Om7mvi7pg",
+          "name": "Icon13Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon13.tsx"
+        },
+        {
+          "id": "2Xaj6978lnhC",
+          "name": "Icon10Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon10.tsx"
+        },
+        {
+          "id": "uJO-DE32SArw",
+          "name": "Icon11Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon11.tsx"
+        },
+        {
+          "id": "kNemrl--N6SP",
+          "name": "CalendarLinesPenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CalendarLinesPenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "SJKU4Ll6kih5",
+          "name": "MoneyCheckDollarPenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__MoneyCheckDollarPenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "RLgPvLZ6-bKW",
+          "name": "CrossMarkSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CrossMarkSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "afHH174oeGWf",
+          "name": "SadDizzySvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__SadDizzySvgrepoComSvg.tsx"
+        },
+        {
+          "id": "4QiWhEfOh9hS",
+          "name": "SadSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__SadSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "FwCtz-0B0DqR",
+          "name": "EmojiSmileSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__EmojiSmileSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "SW5NBfiF7SQW",
+          "name": "EmojiMouthOpenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__EmojiMouthOpenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "JDZQyhzVJ-ah",
+          "name": "EmojiNeutralSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__EmojiNeutralSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "PF8y2jFMuaqR",
+          "name": "Icon21Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon21.tsx"
+        },
+        {
+          "id": "EM09k3C8nJ6k",
+          "name": "Icon18Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon18.tsx"
+        },
+        {
+          "id": "D9W9g-7Rabs4",
+          "name": "Icon22Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon22.tsx"
+        },
+        {
+          "id": "64TG0ypCKgjt",
+          "name": "Icon23Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon23.tsx"
+        },
+        {
+          "id": "bvtyxBHeKgBl",
+          "name": "ConnectionSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ConnectionSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "da6DxxxLSw4r",
+          "name": "CallDroppedSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallDroppedSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "EKevrTCSJWyN",
+          "name": "PersonSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__PersonSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "n4zI4S3uDt_m",
+          "name": "CallMedicineRoundedSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallMedicineRoundedSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "Dvj0tYUrDo5T",
+          "name": "Ellipse142Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Ellipse142.tsx"
+        },
+        {
+          "id": "7wBI3N0UWWbI",
+          "name": "Icon9Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Icon9.tsx"
+        },
+        {
+          "id": "zKsSExY-USuh",
+          "name": "IcnArrowLinkIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__IcnArrowLink.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "oC9re-udmNlu",
+          "name": "logo.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoPng.png"
+        },
+        {
+          "id": "ajMNXASAnNOF",
+          "name": "diagram.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/diagramSvg.svg"
+        },
+        {
+          "id": "3h1f0sFSywLy",
+          "name": "logo-hero1.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoHero1Png.png"
+        },
+        {
+          "id": "JHQoLMJKroMn",
+          "name": "logo-hero2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoHero2Png.png"
+        },
+        {
+          "id": "jgmgOmKgTD8u",
+          "name": "logo-hero3.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoHero3Png.png"
+        },
+        {
+          "id": "lsBcsHKhSmVt",
+          "name": "logo-hero4.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoHero4Png.png"
+        },
+        {
+          "id": "qtkfzY-cXe9v",
+          "name": "terminal.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/terminalPng.png"
+        },
+        {
+          "id": "et0ygxwJlkJn",
+          "name": "line1.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/line1Png.png"
+        },
+        {
+          "id": "QoZw_Lz6VjvK",
+          "name": "line-branch.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/lineBranchPng.png"
+        },
+        {
+          "id": "ikqMzvEISdC3",
+          "name": "line2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/line2Png.png"
+        },
+        {
+          "id": "Wr5D_LIg2w8Z",
+          "name": "dollar.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/dollarPng.png"
+        },
+        {
+          "id": "XMoPUuNQ0iM8",
+          "name": "message.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/messagePng.png"
+        },
+        {
+          "id": "cGV52g3-1pBv",
+          "name": "import.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/importPng.png"
+        },
+        {
+          "id": "7WtHAA2sdy4s",
+          "name": "export.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/exportPng.png"
+        },
+        {
+          "id": "3HW640QSeWWI",
+          "name": "message2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/message2Png.png"
+        },
+        {
+          "id": "7L7V8M3HPlUq",
+          "name": "message3.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/message3Png.png"
+        },
+        {
+          "id": "RgpnE1n5eCqx",
+          "name": "macbook.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/macbookPng.png"
+        },
+        {
+          "id": "3RLH88tzUayi",
+          "name": "galleri1-2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri12Png.png"
+        },
+        {
+          "id": "AxmCj2FJl0V-",
+          "name": "galleri2-2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri22Png.png"
+        },
+        {
+          "id": "achCgtJL-3wW",
+          "name": "product-img.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/productImgPng.png"
+        },
+        {
+          "id": "J604sp-VvE_L",
+          "name": "backtip.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/backtipPng.png"
+        },
+        {
+          "id": "EP_o7f-0y-AH",
+          "name": "about-ipsum.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/aboutIpsumPng.png"
+        },
+        {
+          "id": "wQyfNTB5azoc",
+          "name": "about-img.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/aboutImgPng.png"
+        },
+        {
+          "id": "0CHO3tqgBIEb",
+          "name": "arrow-right.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/arrowRightPng.png"
+        },
+        {
+          "id": "OBPNrVrXMc-f",
+          "name": "checklist.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/checklistPng.png"
+        },
+        {
+          "id": "N1sPYpNpX-e-",
+          "name": "line-pricing.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/linePricingPng.png"
+        },
+        {
+          "id": "ZU3EDSz4fkoX",
+          "name": "checklist-pricing-white.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/checklistPricingWhitePng.png"
+        },
+        {
+          "id": "WOshllrhfS1i",
+          "name": "pricing-img.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/pricingImgSvg.svg"
+        },
+        {
+          "id": "B8iPriAFlBua",
+          "name": "diagram-img.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/diagramImgSvg.svg"
+        },
+        {
+          "id": "fQeTTGpzn5da",
+          "name": "ellipse-left.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ellipseLeftPng.png"
+        },
+        {
+          "id": "pJokLhTs9B8K",
+          "name": "ellipse-right.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ellipseRightPng.png"
+        },
+        {
+          "id": "1ZM7Y48Q4wcF",
+          "name": "arrow-left.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/arrowLeftPng.png"
+        },
+        {
+          "id": "GRIV0X-AtWgo",
+          "name": "arrow-right.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/arrowRightPng2.png"
+        },
+        {
+          "id": "79pvFpQ6L1cg",
+          "name": "galleri1-1.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri11Png.png"
+        },
+        {
+          "id": "lqdc0rd88WZH",
+          "name": "galleri2-3.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri23Png.png"
+        },
+        {
+          "id": "OW0Oc03HbxYG",
+          "name": "galleri1-3.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri13Png.png"
+        },
+        {
+          "id": "UcuhpvP7lK7x",
+          "name": "galleri2-1.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/galleri21Png.png"
+        },
+        {
+          "id": "YJ0B4oC-OF7Y",
+          "name": "ChatGPT Image 18 août 2025, 14_39_22.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage18Aout2025143922Png.png"
+        },
+        {
+          "id": "45taSGJ2o-la",
+          "name": "ChatGPT Image 18 août 2025, 14_43_02.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage18Aout2025144302Png.png"
+        },
+        {
+          "id": "g-aWVm5h42WM",
+          "name": "ChatGPT Image 18 août 2025, 14_58_14.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage18Aout2025145814Png.png"
+        },
+        {
+          "id": "shs3Wc9tRvsK",
+          "name": "ChatGPT Image 18 août 2025, 15_01_00.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage18Aout2025150100Png.png"
+        },
+        {
+          "id": "EsK3dsvVOmkz",
+          "name": "Ajouter un titre.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ajouterUnTitrePng.png"
+        },
+        {
+          "id": "bdoRiqETMBzQ",
+          "name": "ondes-audio.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ondesAudioPng.png"
+        },
+        {
+          "id": "qyi92jP9sBg3",
+          "name": "Ajouter un titre (2).png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ajouterUnTitre2Png.png"
+        },
+        {
+          "id": "hL3FJPneDM1e",
+          "name": "Capture d’écran 2025-08-18 à 15.30.53.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A153053Png.png"
+        },
+        {
+          "id": "O_jCTlRN-ZpS",
+          "name": "Capture d’écran 2025-08-18 à 15.31.59.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A153159Png.png"
+        },
+        {
+          "id": "CoZswUy47iyC",
+          "name": "Capture d’écran 2025-08-18 à 15.32.57.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A153257Png.png"
+        },
+        {
+          "id": "MUaUMCiEg-w8",
+          "name": "Capture d’écran 2025-08-18 à 15.33.55.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A153355Png.png"
+        },
+        {
+          "id": "lwdR0kQR6h69",
+          "name": "Capture d’écran 2025-08-18 à 15.41.40.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A154140Png.png"
+        },
+        {
+          "id": "IUEUiYdMM40d",
+          "name": "Capture d’écran 2025-08-18 à 15.44.35.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A154435Png.png"
+        },
+        {
+          "id": "uPKFAW11yyqA",
+          "name": "Capture d’écran 2025-08-18 à 16.56.22.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A165622Png.png"
+        },
+        {
+          "id": "RU3O-z2T_A9N",
+          "name": "Capture d’écran 2025-08-18 à 18.08.08.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A180808Png.png"
+        },
+        {
+          "id": "k0v4RzXyenVJ",
+          "name": "Capture d’écran 2025-08-19 à 09.02.12.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A090212Png.png"
+        },
+        {
+          "id": "JSUyt9bYrMs5",
+          "name": "Capture d’écran 2025-08-19 à 09.39.02.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A093902Png.png"
+        },
+        {
+          "id": "TSbS3LCACy1r",
+          "name": "Capture d’écran 2025-08-19 à 14.19.33.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A141933Png.png"
+        },
+        {
+          "id": "lseYumjTIL-4",
+          "name": "person-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/personSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "uChjizNdpP4j",
+          "name": "call-medicine-rounded-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/callMedicineRoundedSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "RLdQhZlmZx3Q",
+          "name": "call-dropped-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/callDroppedSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "VNq2tDkDm6Lu",
+          "name": "emoji-smile-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/emojiSmileSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "aX-MeedqBzt0",
+          "name": "green-circle-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/greenCircleSvgrepoComSvg.svg"
+        },
+        {
+          "id": "WoyiyvVgZNkL",
+          "name": "blue-circle-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/blueCircleSvgrepoComSvg.svg"
+        },
+        {
+          "id": "qerrkmQlEZTG",
+          "name": "yellow-circle-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/yellowCircleSvgrepoComSvg.svg"
+        },
+        {
+          "id": "ZkHl7m6G884Z",
+          "name": "orange-circle-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/orangeCircleSvgrepoComSvg.svg"
+        },
+        {
+          "id": "KORvCSYEVc6-",
+          "name": "red-circle-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/redCircleSvgrepoComSvg.svg"
+        },
+        {
+          "id": "4qvedHUTk9HZ",
+          "name": "ChatGPT Image 19 août 2025, 14_39_56.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage19Aout2025143956Png.png"
+        },
+        {
+          "id": "kgifh7ob6VUN",
+          "name": "analyse-et-reporting.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/analyseEtReportingPng.png"
+        },
+        {
+          "id": "C49e0yg_9GZN",
+          "name": "customer-review.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/customerReviewPng.png"
+        },
+        {
+          "id": "jqa6Mx9p-Jr7",
+          "name": "la-technologie.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/laTechnologiePng.png"
+        },
+        {
+          "id": "2mXkisP5XVFS",
+          "name": "service-client.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/serviceClientPng.png"
+        },
+        {
+          "id": "KBQBSweloaFB",
+          "name": "24-7.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_247Png.png"
+        },
+        {
+          "id": "pumSwkHcoxMm",
+          "name": "logo_nextlane-purple.jpg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoNextlanePurpleJpg.jpg"
+        },
+        {
+          "id": "7IUx2KRRTrpI",
+          "name": "5-Acquisition-de-CDK-Global-par-Brookfield-1200.jpg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_5AcquisitionDeCdkGlobalParBrookfield1200Jpg.jpg"
+        },
+        {
+          "id": "EXg1vJ8pC3LV",
+          "name": "Capture d’écran 2025-08-19 à 15.25.19.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A152519Png.png"
+        },
+        {
+          "id": "Z5EjObZrllRg",
+          "name": "Capture d’écran 2025-08-19 à 15.24.55.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A152455Png.png"
+        },
+        {
+          "id": "Vrl-E8EiuqZ6",
+          "name": "Logo_MPA.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoMpaPng.png"
+        },
+        {
+          "id": "ykOLhFQX-0vO",
+          "name": "Capture d’écran 2025-08-19 à 15.27.17.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A152717Png.png"
+        },
+        {
+          "id": "7Yz1pxK5Czvu",
+          "name": "Capture d’écran 2025-08-19 à 15.28.32.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250819A152832Png.png"
+        },
+        {
+          "id": "xVCZvOQ6AZwn",
+          "name": "sac-dargent.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/sacDargentPng.png"
+        },
+        {
+          "id": "PfBxeX1dpAmd",
+          "name": "ChatGPT Image 19 août 2025, 15_43_02.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage19Aout2025154302Png.png"
+        },
+        {
+          "id": "Wr4VvrlPDCi7",
+          "name": "calendar-lines-pen-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/calendarLinesPenSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "Pj3iQga3wKGS",
+          "name": "Capture d’écran 2025-08-20 à 08.57.00.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A085700Png.png"
+        },
+        {
+          "id": "_yYe4Vgb3cdx",
+          "name": "ChatGPT Image 20 août 2025, 09_15_56.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage20Aout2025091556Png.png"
+        },
+        {
+          "id": "rV6bu2ZQRwHp",
+          "name": "ChatGPT Image 20 août 2025, 09_05_09.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage20Aout2025090509Png.png"
+        },
+        {
+          "id": "D1PK-BE2YOQY",
+          "name": "nextlane.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nextlanePng.png"
+        },
+        {
+          "id": "LaNIFWmMivYT",
+          "name": "eyJidWNrZXQiOiJwYXJ0bmVycGFnZS5wcm9kIiwia2V5IjoibWVkaWEvY29udGFjdF9pbWFnZXMvZmU1NzBiNWEtYjQxZC00NDQ0LTkyZTMtNWMyNDFiYWQwMWYxLzYwYzI5ZDg5LTRlMTgtNDVjMS05MDczLWU3ZmVlZDgwZWIyZC5wbmciLCJlZGl0cyI6eyJ0b0Zv.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/eyJidWNrZxQiOiJwYxj0BmVycGFnZs5Wcm9KIiwia2V5IjoibWVkaWEvY29UdGFjdF9PbWFnZxMvZmU1NzBiNwEtYjQxZc00Ndq0LTkyZtMtNwMyNdFiYwQwMwYxLzYwYzI5ZDg5LtRlMTgtNdVjMs05MDczLwu3ZmVlZDgwZwIyZc5WbmciLcJlZGl0CyI6EyJ0B0ZvPng.png"
+        },
+        {
+          "id": "EvFKx0QCAHj4",
+          "name": "c86b7a32543e257d801cc3065aeb414f7d35ee1d.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/c86B7A32543E257D801Cc3065Aeb414F7D35Ee1DPng.png"
+        },
+        {
+          "id": "5ijJe2Mo3xb4",
+          "name": "SrOxz79ChH8BQwNlReXbzi3JDqIO5myEGbZE300S-big_thumbnail-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/srOxz79ChH8BQwNlReXbzi3JDqIo5MyEGbZe300SBigThumbnailRemovebgPreviewPng.png"
+        },
+        {
+          "id": "0vyK-OE3EkSd",
+          "name": "Capture_d_écran_2025-08-20_à_09.32.26-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093226RemovebgPreviewPng.png"
+        },
+        {
+          "id": "qxPTqnIze96l",
+          "name": "Capture_d_écran_2025-08-20_à_09.33.12-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093312RemovebgPreviewPng.png"
+        },
+        {
+          "id": "MOFFrUcfxj3U",
+          "name": "Capture_d_écran_2025-08-20_à_09.34.31-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093431RemovebgPreviewPng.png"
+        },
+        {
+          "id": "703FPkKU5XpK",
+          "name": "550d31af968d0_St-DoulBMW03-2.jpg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_550D31Af968D0StDoulBmw032Jpg.jpg"
+        },
+        {
+          "id": "qS_cY2VCvaqc",
+          "name": "Capture d’écran 2025-08-20 à 09.55.48.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A095548Png.png"
+        },
+        {
+          "id": "84gbYkgsJ1x4",
+          "name": "ChatGPT Image 20 août 2025, 10_36_15.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage20Aout2025103615Png.png"
+        },
+        {
+          "id": "X9XtF83W-fXm",
+          "name": "Capture d’écran 2025-08-20 à 11.01.05.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A110105Png.png"
+        },
+        {
+          "id": "Gp4htsoc-7cQ",
+          "name": "Capture_d_écran_2025-08-20_à_09.55.48-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A095548RemovebgPreviewPng.png"
+        },
+        {
+          "id": "XmHPkVObAR0v",
+          "name": "Capture_d_écran_2025-08-20_à_11.12.02-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A111202RemovebgPreviewPng.png"
+        },
+        {
+          "id": "aK5uCsM1arGw",
+          "name": "DSC_0067.JPG",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/dsc0067Jpg.jpg"
+        },
+        {
+          "id": "hS-Qvf8RKnxz",
+          "name": "DSC_0056.JPG",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/dsc0056Jpg.jpg"
+        },
+        {
+          "id": "BducHTEYoVIz",
+          "name": "DSC_0325.JPG",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/dsc0325Jpg.jpg"
+        },
+        {
+          "id": "Vx-P9_9PMCOT",
+          "name": "PIC_0009.JPG",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/pic0009Jpg.jpg"
+        },
+        {
+          "id": "4MazPc4taWgU",
+          "name": "1666692045380.jpeg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_1666692045380Jpeg.jpg"
+        },
+        {
+          "id": "bnFa11dJhcCx",
+          "name": "1708697751508.jpeg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_1708697751508Jpeg.jpg"
+        },
+        {
+          "id": "kR_FhU8zAiyc",
+          "name": "Louis.avif",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/louisAvif.avif"
+        },
+        {
+          "id": "dVBGwYU2HItU",
+          "name": "Capture d’écran 2025-08-20 à 15.12.52.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151252Png.png"
+        },
+        {
+          "id": "foGk_iUO1Cd-",
+          "name": "Capture d’écran 2025-08-20 à 15.15.54.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151554Png.png"
+        },
+        {
+          "id": "EiLLLFaByZPh",
+          "name": "Capture d’écran 2025-08-20 à 15.29.24.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A152924Png.png"
+        },
+        {
+          "id": "z0AtrAHTvU2t",
+          "name": "Capture d’écran 2025-08-20 à 15.30.59.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A153059Png.png"
+        },
+        {
+          "id": "RflEDoqVNXcV",
+          "name": "Capture d’écran 2025-08-20 à 15.33.30.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A153330Png.png"
+        },
+        {
+          "id": "PMDDpQvWjmDJ",
+          "name": "Capture_d_écran_2025-08-20_à_16.05.57-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A160557RemovebgPreviewPng.png"
+        },
+        {
+          "id": "S2LmNlRuL6C9",
+          "name": "Capture_d_écran_2025-08-20_à_16.15.06-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161506RemovebgPreviewPng.png"
+        },
+        {
+          "id": "9SK49UvcMH6P",
+          "name": "Capture_d_écran_2025-08-20_à_16.16.10-removebg-preview.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png"
+        },
+        {
+          "id": "H6NbNV784AYP",
+          "name": "icon-colored-cloudiam",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/iconColoredCloudiam.svg"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "plasmic/site_actuel_natalia_auto/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/site_actuel_natalia_auto/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/site_actuel_natalia_auto/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "w-y0iuua11Or",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "3pPYpI7JxzyW",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
       "customFunctions": []
     }
   ],
@@ -1821,6 +2925,12 @@
         "name": "UnnamedGlobalGroupOfVariants2",
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
         "contextFilePath": "plasmic/natalia_v_2/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2.tsx"
+      },
+      {
+        "id": "2f-QDcOsH-WZ",
+        "name": "Screen",
+        "projectId": "2utUyfwAdNYhisb36rBizH",
+        "contextFilePath": "plasmic/site_actuel_natalia_auto/PlasmicGlobalVariant__Screen.tsx"
       }
     ]
   },
@@ -1828,6 +2938,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.341",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.341/dist/plasmic.schema.json"
+  "cliVersion": "0.1.342",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.342/dist/plasmic.schema.json"
 }
