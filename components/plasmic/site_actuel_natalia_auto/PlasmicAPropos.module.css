@@ -24,7 +24,6 @@
   z-index: auto;
   background: var(--token-jgohepLVeKvh);
   overflow: hidden;
-  row-gap: 64px;
   margin-bottom: 0px;
   width: auto;
   height: auto;
@@ -67,8 +66,6 @@
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
   background: #ffffff;
   min-width: 0;
   grid-template-columns:
@@ -78,6 +75,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: var(--token-5beiCiv05PJs) 0;
 }
 .section > * {
   grid-column: 4;
@@ -746,7 +744,7 @@
   color: var(--token-O5FVPUzEQMyt);
   text-align: left;
   padding-right: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 24px;
   font-size: var(--token-YRLpiKJWMvDT);
   font-family: "Inter", sans-serif;
   font-weight: 400;

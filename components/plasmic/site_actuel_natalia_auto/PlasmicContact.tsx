@@ -306,7 +306,7 @@ function PlasmicContact__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___9KCrO
+                      sty.formField__myxq9
                     )}
                     hidden={false}
                     label={"Nom"}
@@ -314,39 +314,39 @@ function PlasmicContact__RenderFunc(props: {
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__znYjX)}
+                      className={classNames("__wab_instance", sty.input__bWa)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__yon8E
+                      sty.formField__avT0L
                     )}
                     label={"Email"}
                     name={"email"}
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__sSbRc)}
+                      className={classNames("__wab_instance", sty.input__gxpp)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__zm4Vy
+                      sty.formField__pnvdJ
                     )}
                     label={"T\u00e9l\u00e9phone"}
                     name={"entreprise"}
                     rules={[{ ruleType: "required" }]}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__bx2Ex)}
+                      className={classNames("__wab_instance", sty.input___3Bk4)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__sjsRp
+                      sty.formField__pPrGp
                     )}
                     label={"Message"}
                     name={"message"}
@@ -365,7 +365,7 @@ function PlasmicContact__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___4Qqsc
+                        sty.text__nnBob
                       )}
                     >
                       <React.Fragment>

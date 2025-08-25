@@ -2241,6 +2241,16 @@
       }
     },
     {
+      "name": "Vertical Spacing",
+      "type": "spacing",
+      "value": "2em",
+      "category": "spacing",
+      "meta": {
+        "projectId": "2utUyfwAdNYhisb36rBizH",
+        "id": "5beiCiv05PJs"
+      }
+    },
+    {
       "name": "Warning/Warning",
       "type": "color",
       "value": "#FACC15",

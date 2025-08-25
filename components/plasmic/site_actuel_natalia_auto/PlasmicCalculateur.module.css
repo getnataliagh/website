@@ -90,8 +90,7 @@
   margin: 0 auto;
 }
 .h1 {
-  font-family: "-apple-system,BlinkMacSystemFont," Segoe UI ",Roboto," Helvetica
-    Neue ",Arial,sans-serif";
+  font-family: "Roboto", sans-serif;
   color: white;
   line-height: 1.6;
   font-size: 28px;
@@ -237,8 +236,7 @@
   margin: 0 0 8px;
 }
 .span__eevw7 {
-  font-family: "-apple-system,BlinkMacSystemFont," Segoe UI ",Roboto," Helvetica
-    Neue ",Arial,sans-serif";
+  font-family: "Roboto", sans-serif;
   color: #4a5568;
   line-height: 1.6;
   font-weight: 500;
@@ -330,8 +328,7 @@
   margin: 0 0 8px;
 }
 .span__lnfoB {
-  font-family: "-apple-system,BlinkMacSystemFont," Segoe UI ",Roboto," Helvetica
-    Neue ",Arial,sans-serif";
+  font-family: "Roboto", sans-serif;
   color: #4a5568;
   line-height: 1.6;
   font-weight: 500;

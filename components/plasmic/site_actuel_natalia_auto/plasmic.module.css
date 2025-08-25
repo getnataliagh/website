@@ -205,6 +205,8 @@
   --plasmic-token-opacity-primary-blue-32: var(--token-rTwz0bcyHXGo);
   --token-1a0OgxLOCugW: #6edeff;
   --plasmic-token-primitive-secondary-secondary-600: var(--token-1a0OgxLOCugW);
+  --token-5beiCiv05PJs: 2em;
+  --plasmic-token-vertical-spacing: var(--token-5beiCiv05PJs);
 }
 
 @media (min-width: 0px) and (max-width: 930px) {
