@@ -448,7 +448,6 @@
   padding: 26px 8px 8px;
 }
 .freeBox__dRQhU {
-  display: flex;
   width: 1140px;
   height: auto;
   max-width: 100%;
@@ -457,15 +456,16 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 35px;
+  display: none;
   padding: 12px 8px 29px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .freeBox__dRQhU {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     column-gap: 0px;
+    display: none;
   }
 }
 .freeBox__gjyUh {

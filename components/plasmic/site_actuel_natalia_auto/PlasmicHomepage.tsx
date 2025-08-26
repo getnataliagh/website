@@ -264,54 +264,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {"Ne "}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
                           style={{ color: "#1E3A8A" }}
                         >
-                          {"perdez"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {" plus un se"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"u"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {"l "}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#FFB000" }}
-                        >
-                          {"lead en concessions"}
+                          {"Ne perdez plus un seul lead en concessions"}
                         </span>
                       </React.Fragment>
                     )}
@@ -1437,7 +1392,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__jfZd
                     )}
                   >
-                    {"12 000\u20ac"}
+                    {"8 000\u20ac"}
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__sMzdk)}>

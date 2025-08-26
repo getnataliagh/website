@@ -105,6 +105,12 @@
   padding: 20px;
   margin: 0 auto;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__sMkZh {
+    width: auto;
+    max-width: none;
+  }
+}
 .nePasToucher {
   display: grid;
   flex-direction: column;
