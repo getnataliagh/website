@@ -107,8 +107,15 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .freeBox__sMkZh {
-    width: auto;
-    max-width: none;
+    width: 100%;
+    max-width: 367px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    min-width: 0;
+    padding: 0px;
   }
 }
 .nePasToucher {
@@ -119,6 +126,27 @@
   padding: 0;
   margin: 0 0 40px;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .nePasToucher {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    flex-shrink: 1;
+    max-width: 352px;
+    width: 100%;
+    grid-row-gap: 20px;
+    grid-column-gap: 0px;
+    transform: none;
+    flex-grow: 0;
+    position: relative;
+    left: auto;
+    top: auto;
+    z-index: 1;
+    align-self: auto;
+    opacity: 1;
+    order: 0;
+    min-width: 0;
+    margin: 0px;
+  }
+}
 .freeBox__g2Qz5 {
   display: flex;
   flex-direction: column;
@@ -127,6 +155,12 @@
   border-radius: 16px;
   padding: 40px;
   margin: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__g2Qz5 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
 }
 .h2___8Ekwy {
   font-family: "Roboto", sans-serif;
@@ -375,6 +409,12 @@
   padding: 0;
   margin: 0;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__irVw {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-right: 0px;
+  }
+}
 .freeBox__e0Yfg {
   display: flex;
   flex-direction: column;
@@ -614,6 +654,7 @@
 .codeCalculateur:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  display: block;
 }
 .freeBox__vfaAh {
   display: flex;
@@ -623,6 +664,13 @@
   border-radius: 16px;
   padding: 60px;
   margin: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__vfaAh {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
 }
 .h2__fob2G {
   font-family: "Roboto", sans-serif;

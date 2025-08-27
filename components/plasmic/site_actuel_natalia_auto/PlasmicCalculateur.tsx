@@ -307,7 +307,11 @@ function PlasmicCalculateur__RenderFunc(props: {
                   data-plasmic-name={"nePasToucher"}
                   data-plasmic-override={overrides.nePasToucher}
                   className={classNames(projectcss.all, sty.nePasToucher)}
-                  style={{ gridTemplateColumns: "1fr 1fr" }}
+                  style={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? {}
+                      : { gridTemplateColumns: "1fr 1fr" }
+                  }
                 >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__g2Qz5)}
@@ -703,7 +707,11 @@ function PlasmicCalculateur__RenderFunc(props: {
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__irVw)}
-                    style={{ gridTemplateColumns: "1fr 1fr" }}
+                    style={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? {}
+                        : { gridTemplateColumns: "1fr 1fr" }
+                    }
                   >
                     <div
                       className={classNames(projectcss.all, sty.freeBox__e0Yfg)}
