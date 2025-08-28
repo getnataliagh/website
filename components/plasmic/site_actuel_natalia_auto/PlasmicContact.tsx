@@ -92,7 +92,6 @@ export type PlasmicContact__OverridesType = {
   iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
-  text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -241,6 +240,23 @@ function PlasmicContact__RenderFunc(props: {
               srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
               useHtml={false}
             />
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__iMgll
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#1E3A8A", fontWeight: 700 }}
+                >
+                  {"contact@getnatalia.fr"}
+                </span>
+              </React.Fragment>
+            </div>
           </div>
           <Section
             data-plasmic-name={"pricingSection"}
@@ -275,12 +291,10 @@ function PlasmicContact__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.freeBox__kqOj)}
                   >
                     <div
-                      data-plasmic-name={"text"}
-                      data-plasmic-override={overrides.text}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text
+                        sty.text___2DoNh
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
@@ -320,15 +334,13 @@ const PlasmicDescendants = {
     "iframe",
     "pricingSection",
     "columns",
-    "text",
     "footerSection"
   ],
   headerHeroSection: ["headerHeroSection", "navbar", "iframe"],
   navbar: ["navbar"],
   iframe: ["iframe"],
-  pricingSection: ["pricingSection", "columns", "text"],
-  columns: ["columns", "text"],
-  text: ["text"],
+  pricingSection: ["pricingSection", "columns"],
+  columns: ["columns"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -341,7 +353,6 @@ type NodeDefaultElementType = {
   iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
-  text: "div";
   footerSection: typeof FooterSection;
 };
 
@@ -410,7 +421,6 @@ export const PlasmicContact = Object.assign(
     iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
-    text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicContact

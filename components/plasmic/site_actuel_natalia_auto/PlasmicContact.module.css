@@ -70,6 +70,15 @@
   flex-shrink: 0;
   border-width: 0px;
 }
+.text__iMgll {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 43px;
+  text-align: center;
+  min-width: 0;
+}
 .pricingSection:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
@@ -178,7 +187,7 @@
   min-width: 0;
   padding: 8px;
 }
-.text {
+.text___2DoNh {
   position: absolute;
   width: auto;
   height: auto;
@@ -196,7 +205,7 @@
   padding: 8px 20px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .text {
+  .text___2DoNh {
     top: 85px;
     font-size: 14px;
   }
