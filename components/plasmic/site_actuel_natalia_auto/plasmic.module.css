@@ -207,12 +207,6 @@
   --plasmic-token-primitive-secondary-secondary-600: var(--token-1a0OgxLOCugW);
   --token-5beiCiv05PJs: 2em;
   --plasmic-token-vertical-spacing: var(--token-5beiCiv05PJs);
-  --token-RCHtrvCh7WuO: #04080f;
-  --plasmic-token-button-primary: var(--token-RCHtrvCh7WuO);
-  --token-ndMaUJfK9i9j: 900px;
-  --plasmic-token-size-xxxxxl: var(--token-ndMaUJfK9i9j);
-  --token-j7iMrRiBda-A: 1.5rem;
-  --plasmic-token-size-24: var(--token-j7iMrRiBda-A);
 }
 
 @media (min-width: 0px) and (max-width: 930px) {

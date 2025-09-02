@@ -60,8 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
-import InputText from "../../InputText"; // plasmic-import: HPmFnpi2a6Mt/component
-import Button2 from "../../Button2"; // plasmic-import: R8agKdqaib_0/component
+import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -74,11 +73,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicContact.module.css"; // plasmic-import: fxexeTMPbrbn/css
-
-import _11121300FiRrCircleEnvelopeIconSvgIcon from "./icons/PlasmicIcon___11121300FiRrCircleEnvelopeIconSvg"; // plasmic-import: vHjalmupXU9g/icon
-import _11121327FiRrCirclePhoneIconSvgIcon from "./icons/PlasmicIcon___11121327FiRrCirclePhoneIconSvg"; // plasmic-import: dQzgba_WTHHz/icon
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
 
 createPlasmicElementProxy;
 
@@ -95,18 +89,7 @@ export type PlasmicContact__OverridesType = {
   root?: Flex__<"div">;
   headerHeroSection?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
-  contact?: Flex__<"section">;
-  h1?: Flex__<"h1">;
-  mail?: Flex__<"div">;
-  tel?: Flex__<"div">;
-  formulaire?: Flex__<"div">;
-  nomPrenom?: Flex__<"div">;
-  prenom?: Flex__<"div">;
-  nom?: Flex__<"div">;
-  email?: Flex__<"div">;
-  entreprise?: Flex__<"div">;
-  message?: Flex__<"div">;
-  button2?: Flex__<typeof Button2>;
+  iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
@@ -246,304 +229,34 @@ function PlasmicContact__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            <section
-              data-plasmic-name={"contact"}
-              data-plasmic-override={overrides.contact}
-              className={classNames(projectcss.all, sty.contact)}
+            <Iframe
+              data-plasmic-name={"iframe"}
+              data-plasmic-override={overrides.iframe}
+              className={classNames("__wab_instance", sty.iframe)}
+              preview={true}
+              src={
+                "https://n8n.getnatalia.com/form/ceb27c8d-b649-4a99-a344-ccb0d0ae6b7d"
+              }
+              srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
+              useHtml={false}
+            />
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__iMgll
+              )}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__hpadh)}>
-                <div className={classNames(projectcss.all, sty.freeBox__uDHkh)}>
-                  <h1
-                    data-plasmic-name={"h1"}
-                    data-plasmic-override={overrides.h1}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1
-                    )}
-                  >
-                    {"Contact "}
-                  </h1>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__nOqb0
-                    )}
-                  >
-                    {
-                      "Tous nos clients sont uniques et nous nous effor\u00e7ons de satisfaire chacun de leurs besoins. Alors n'h\u00e9sitez pas \u00e0 nous laisser vos coordonn\u00e9es et nous reviendrons vers vous tr\u00e8s vite !"
-                    }
-                  </div>
-                  <div
-                    data-plasmic-name={"mail"}
-                    data-plasmic-override={overrides.mail}
-                    className={classNames(projectcss.all, sty.mail)}
-                  >
-                    <_11121300FiRrCircleEnvelopeIconSvgIcon
-                      className={classNames(projectcss.all, sty.svg__fyjlN)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__gnLqc
-                      )}
-                    >
-                      {"contact@getnatalia.com"}
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"tel"}
-                    data-plasmic-override={overrides.tel}
-                    className={classNames(projectcss.all, sty.tel)}
-                  >
-                    <_11121327FiRrCirclePhoneIconSvgIcon
-                      className={classNames(projectcss.all, sty.svg__wOGzw)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__lqI31
-                      )}
-                    >
-                      {"06 89 15 62 17"}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"formulaire"}
-                  data-plasmic-override={overrides.formulaire}
-                  className={classNames(projectcss.all, sty.formulaire)}
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#1E3A8A", fontWeight: 700 }}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__o6Lhc)}
-                  >
-                    <div
-                      data-plasmic-name={"nomPrenom"}
-                      data-plasmic-override={overrides.nomPrenom}
-                      className={classNames(projectcss.all, sty.nomPrenom)}
-                    >
-                      <div
-                        data-plasmic-name={"prenom"}
-                        data-plasmic-override={overrides.prenom}
-                        className={classNames(projectcss.all, sty.prenom)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__gJOcE
-                          )}
-                        >
-                          <React.Fragment>
-                            <React.Fragment>{""}</React.Fragment>
-                            {
-                              <h3
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.h3,
-                                  projectcss.__wab_text,
-                                  sty.h3__p6ISy
-                                )}
-                              >
-                                {"Pr\u00e9nom"}
-                              </h3>
-                            }
-                            <React.Fragment>{""}</React.Fragment>
-                          </React.Fragment>
-                        </div>
-                        <InputText
-                          className={classNames(
-                            "__wab_instance",
-                            sty.inputText__oirJ
-                          )}
-                          placeholder={``}
-                        />
-                      </div>
-                      <div
-                        data-plasmic-name={"nom"}
-                        data-plasmic-override={overrides.nom}
-                        className={classNames(projectcss.all, sty.nom)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__m41Ho
-                          )}
-                        >
-                          <React.Fragment>
-                            <React.Fragment>{""}</React.Fragment>
-                            {
-                              <h3
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.h3,
-                                  projectcss.__wab_text,
-                                  sty.h3__sEsN
-                                )}
-                              >
-                                {"Nom"}
-                              </h3>
-                            }
-                            <React.Fragment>{""}</React.Fragment>
-                          </React.Fragment>
-                        </div>
-                        <InputText
-                          className={classNames(
-                            "__wab_instance",
-                            sty.inputText__dfovj
-                          )}
-                          placeholder={``}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"email"}
-                    data-plasmic-override={overrides.email}
-                    className={classNames(projectcss.all, sty.email)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5Iiw2
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__l8E9
-                            )}
-                          >
-                            {"Email"}
-                          </h3>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                    <InputText
-                      className={classNames(
-                        "__wab_instance",
-                        sty.inputText___9ZueJ
-                      )}
-                      placeholder={``}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"entreprise"}
-                    data-plasmic-override={overrides.entreprise}
-                    className={classNames(projectcss.all, sty.entreprise)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kfUet
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3___82Dda
-                            )}
-                          >
-                            {"Entreprise"}
-                          </h3>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                    <InputText
-                      className={classNames(
-                        "__wab_instance",
-                        sty.inputText__lqngr
-                      )}
-                      placeholder={``}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"message"}
-                    data-plasmic-override={overrides.message}
-                    className={classNames(projectcss.all, sty.message)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dmuCq
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3___19Vys
-                            )}
-                          >
-                            {"Message"}
-                          </h3>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                    <InputText
-                      className={classNames(
-                        "__wab_instance",
-                        sty.inputText___29JQw
-                      )}
-                    />
-                  </div>
-                  <Button2
-                    data-plasmic-name={"button2"}
-                    data-plasmic-override={overrides.button2}
-                    className={classNames("__wab_instance", sty.button2)}
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__pgVm0
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                          >
-                            {"Envoyer message"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    }
-                  />
-                </div>
-              </div>
-            </section>
+                  {"contact@getnatalia.fr"}
+                </span>
+              </React.Fragment>
+            </div>
           </div>
           <Section
             data-plasmic-name={"pricingSection"}
@@ -618,73 +331,14 @@ const PlasmicDescendants = {
     "root",
     "headerHeroSection",
     "navbar",
-    "contact",
-    "h1",
-    "mail",
-    "tel",
-    "formulaire",
-    "nomPrenom",
-    "prenom",
-    "nom",
-    "email",
-    "entreprise",
-    "message",
-    "button2",
+    "iframe",
     "pricingSection",
     "columns",
     "footerSection"
   ],
-  headerHeroSection: [
-    "headerHeroSection",
-    "navbar",
-    "contact",
-    "h1",
-    "mail",
-    "tel",
-    "formulaire",
-    "nomPrenom",
-    "prenom",
-    "nom",
-    "email",
-    "entreprise",
-    "message",
-    "button2"
-  ],
+  headerHeroSection: ["headerHeroSection", "navbar", "iframe"],
   navbar: ["navbar"],
-  contact: [
-    "contact",
-    "h1",
-    "mail",
-    "tel",
-    "formulaire",
-    "nomPrenom",
-    "prenom",
-    "nom",
-    "email",
-    "entreprise",
-    "message",
-    "button2"
-  ],
-  h1: ["h1"],
-  mail: ["mail"],
-  tel: ["tel"],
-  formulaire: [
-    "formulaire",
-    "nomPrenom",
-    "prenom",
-    "nom",
-    "email",
-    "entreprise",
-    "message",
-    "button2"
-  ],
-  nomPrenom: ["nomPrenom", "prenom", "nom"],
-  prenom: ["prenom"],
-  nom: ["nom"],
-  email: ["email"],
-  entreprise: ["entreprise"],
-  message: ["message"],
-  button2: ["button2"],
+  iframe: ["iframe"],
   pricingSection: ["pricingSection", "columns"],
   columns: ["columns"],
   footerSection: ["footerSection"]
@@ -696,18 +350,7 @@ type NodeDefaultElementType = {
   root: "div";
   headerHeroSection: "div";
   navbar: typeof Navbar;
-  contact: "section";
-  h1: "h1";
-  mail: "div";
-  tel: "div";
-  formulaire: "div";
-  nomPrenom: "div";
-  prenom: "div";
-  nom: "div";
-  email: "div";
-  entreprise: "div";
-  message: "div";
-  button2: typeof Button2;
+  iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
   footerSection: typeof FooterSection;
@@ -775,18 +418,7 @@ export const PlasmicContact = Object.assign(
     // Helper components rendering sub-elements
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     navbar: makeNodeComponent("navbar"),
-    contact: makeNodeComponent("contact"),
-    h1: makeNodeComponent("h1"),
-    mail: makeNodeComponent("mail"),
-    tel: makeNodeComponent("tel"),
-    formulaire: makeNodeComponent("formulaire"),
-    nomPrenom: makeNodeComponent("nomPrenom"),
-    prenom: makeNodeComponent("prenom"),
-    nom: makeNodeComponent("nom"),
-    email: makeNodeComponent("email"),
-    entreprise: makeNodeComponent("entreprise"),
-    message: makeNodeComponent("message"),
-    button2: makeNodeComponent("button2"),
+    iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
     footerSection: makeNodeComponent("footerSection"),

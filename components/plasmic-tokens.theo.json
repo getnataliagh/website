@@ -951,16 +951,6 @@
       }
     },
     {
-      "name": "Size-24",
-      "type": "spacing",
-      "value": "1.5rem",
-      "category": "spacing",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "j7iMrRiBda-A"
-      }
-    },
-    {
       "name": "Size-28",
       "type": "spacing",
       "value": "1px",
@@ -1058,16 +1048,6 @@
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
         "id": "ebjHh15HwWpQ"
-      }
-    },
-    {
-      "name": "Size-xxxxxl",
-      "type": "spacing",
-      "value": "900px",
-      "category": "spacing",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "ndMaUJfK9i9j"
       }
     },
     {
@@ -3458,16 +3438,6 @@
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
         "id": "rBBopEGtF4-U"
-      }
-    },
-    {
-      "name": "button/primary",
-      "type": "color",
-      "value": "#04080F",
-      "category": "color",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "RCHtrvCh7WuO"
       }
     },
     {

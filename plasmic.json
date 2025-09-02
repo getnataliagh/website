@@ -2143,32 +2143,6 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/calculateur"
-        },
-        {
-          "id": "HPmFnpi2a6Mt",
-          "name": "InputText",
-          "type": "managed",
-          "projectId": "2utUyfwAdNYhisb36rBizH",
-          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicInputText.tsx",
-          "importSpec": {
-            "modulePath": "InputText.tsx"
-          },
-          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicInputText.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "R8agKdqaib_0",
-          "name": "Button2",
-          "type": "managed",
-          "projectId": "2utUyfwAdNYhisb36rBizH",
-          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton2.tsx",
-          "importSpec": {
-            "modulePath": "Button2.tsx"
-          },
-          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         }
       ],
       "icons": [
@@ -2346,16 +2320,6 @@
           "id": "zKsSExY-USuh",
           "name": "IcnArrowLinkIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__IcnArrowLink.tsx"
-        },
-        {
-          "id": "vHjalmupXU9g",
-          "name": "_11121300FiRrCircleEnvelopeIconSvgIcon",
-          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon___11121300FiRrCircleEnvelopeIconSvg.tsx"
-        },
-        {
-          "id": "dQzgba_WTHHz",
-          "name": "_11121327FiRrCirclePhoneIconSvgIcon",
-          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon___11121327FiRrCirclePhoneIconSvg.tsx"
         }
       ],
       "images": [
