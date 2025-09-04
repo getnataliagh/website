@@ -229,38 +229,6 @@ function PlasmicContact__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__iMgll
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#1E3A8A", fontWeight: 700 }}
-                >
-                  {
-                    "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
-                  }
-                </span>
-                <React.Fragment>{"\n"}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#1E3A8A" }}
-                >
-                  {"Sinon appelez-nous au 06 89 15 62 17"}
-                </span>
-                <React.Fragment>{"\n"}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#1E3A8A" }}
-                >
-                  {"Vous tomberez sur un membre de l'\u00e9quipe ou Natalia"}
-                </span>
-              </React.Fragment>
-            </div>
             <Iframe
               data-plasmic-name={"iframe"}
               data-plasmic-override={overrides.iframe}
@@ -272,6 +240,38 @@ function PlasmicContact__RenderFunc(props: {
               srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
               useHtml={false}
             />
+          </div>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__iMgll
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#1E3A8A", fontWeight: 700 }}
+              >
+                {
+                  "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
+                }
+              </span>
+              <React.Fragment>{"\n"}</React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#1E3A8A" }}
+              >
+                {"Sinon appelez-nous au 06 89 15 62 17"}
+              </span>
+              <React.Fragment>{"\n"}</React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#1E3A8A" }}
+              >
+                {"Vous tomberez sur un membre de l'\u00e9quipe ou Natalia"}
+              </span>
+            </React.Fragment>
           </div>
           <Section
             data-plasmic-name={"pricingSection"}
