@@ -998,19 +998,6 @@
           "path": "/contact"
         },
         {
-          "id": "jZNfJESa7bty",
-          "name": "InputText",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicInputText.tsx",
-          "importSpec": {
-            "modulePath": "InputText.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicInputText.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "C8f9tLyTGaUR",
           "name": "APropos",
           "type": "managed",
