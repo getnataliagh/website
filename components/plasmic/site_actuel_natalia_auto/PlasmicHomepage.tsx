@@ -80,9 +80,9 @@ import CustomCodingSvgrepoComSvgIcon from "./icons/PlasmicIcon__CustomCodingSvgr
 import DataIntegrationHubSvgrepoComSvgIcon from "./icons/PlasmicIcon__DataIntegrationHubSvgrepoComSvg"; // plasmic-import: I1aJqjgaIdMH/icon
 import SecureSvgrepoComSvgIcon from "./icons/PlasmicIcon__SecureSvgrepoComSvg"; // plasmic-import: zmpxtwo18XQt/icon
 import AutomobileSvgrepoComSvgIcon from "./icons/PlasmicIcon__AutomobileSvgrepoComSvg"; // plasmic-import: s5qX1M9YJlnw/icon
-import CallChatSvgrepoComSvgIcon from "./icons/PlasmicIcon__CallChatSvgrepoComSvg"; // plasmic-import: iamRmUfX0m0O/icon
-import ComputerSvgrepoComSvgIcon from "./icons/PlasmicIcon__ComputerSvgrepoComSvg"; // plasmic-import: 51leaLOggJFC/icon
 import IndustryWindowsSvgrepoComSvgIcon from "./icons/PlasmicIcon__IndustryWindowsSvgrepoComSvg"; // plasmic-import: RGOeKEfdDTy6/icon
+import ComputerSvgrepoComSvgIcon from "./icons/PlasmicIcon__ComputerSvgrepoComSvg"; // plasmic-import: 51leaLOggJFC/icon
+import CallDroppedSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__CallDroppedSvgrepoCom1Svg"; // plasmic-import: MhCEtEAwrizJ/icon
 
 createPlasmicElementProxy;
 
@@ -1284,7 +1284,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                     >
                       {
-                        "Notre technologie est pens\u00e9e pour s'adapter sans cesse aux meilleurs LLM et donc tr\u00e8s agile dans la dur\u00e9e"
+                        "Notre technologie est con\u00e7ue pour s'adapter sans cesse aux meilleurs LLM"
                       }
                     </span>
                   </React.Fragment>
@@ -1474,11 +1474,54 @@ function PlasmicHomepage__RenderFunc(props: {
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
                             {
-                              "Prise de RDV atelier, renseignements v\u00e9hicules, suivi SAV, qualification de leads, transfert d'appel"
+                              "Prise de RDV atelier, renseignements v\u00e9hicules, suivi SAV, "
                             }
+                          </span>
+                          <React.Fragment>{""}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700
+                            }}
+                          >
+                            {"qualification de leads"}
+                          </span>
+                          <React.Fragment>{""}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          >
+                            {", transfert d'appel"}
                           </span>
                         </React.Fragment>
                       </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__u3BXy
+                        )}
+                        component={Link}
+                        href={`/automobile`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
                     </div>
                   </div>
                   <div
@@ -1487,7 +1530,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__vNut)}
                     >
-                      <CallChatSvgrepoComSvgIcon
+                      <IndustryWindowsSvgrepoComSvgIcon
                         className={classNames(projectcss.all, sty.svg__oToT0)}
                         role={"img"}
                       />
@@ -1529,7 +1572,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               textDecorationLine: "underline"
                             }}
                           >
-                            {"Call-center"}
+                            {"Industrie/PME"}
                           </span>
                         </React.Fragment>
                       </div>
@@ -1548,11 +1591,33 @@ function PlasmicHomepage__RenderFunc(props: {
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
                             {
-                              "Assure 100% de prise en charge des appels gr\u00e2ce \u00e0 une disponibilit\u00e9 24h/24 et la parall\u00e8lisation des appels"
+                              "Commandes, devis, suivi livraisons, relation client B2B, etc."
                             }
                           </span>
                         </React.Fragment>
                       </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__ce35D
+                        )}
+                        component={Link}
+                        href={`/`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
                     </div>
                   </div>
                 </div>
@@ -1643,10 +1708,32 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
-                            {" sur les outils m\u00e9tiers\n\n"}
+                            {" sur les outils m\u00e9tiers"}
                           </span>
                         </React.Fragment>
                       </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__gnykQ
+                        )}
+                        component={Link}
+                        href={`/`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
                     </div>
                   </div>
                   <div
@@ -1655,7 +1742,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__oq8Wa)}
                     >
-                      <IndustryWindowsSvgrepoComSvgIcon
+                      <CallDroppedSvgrepoCom1SvgIcon
                         className={classNames(projectcss.all, sty.svg___1Rf4D)}
                         role={"img"}
                       />
@@ -1694,7 +1781,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               textDecorationLine: "underline"
                             }}
                           >
-                            {"Industrie / PME"}
+                            {"Call-center"}
                           </span>
                         </React.Fragment>
                       </div>
@@ -1713,11 +1800,33 @@ function PlasmicHomepage__RenderFunc(props: {
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
                             {
-                              "Commandes, devis, suivi livraisons, relation client B2B, etc."
+                              "Assure 100% de prise en charge des appels sous 15 secondes gr\u00e2ce \u00e0 une disponibilit\u00e9 24h/24 et la parall\u00e8lisation des appels"
                             }
                           </span>
                         </React.Fragment>
                       </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__dyKna
+                        )}
+                        component={Link}
+                        href={`/`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
                     </div>
                   </div>
                 </div>

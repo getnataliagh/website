@@ -2423,6 +2423,11 @@
           "id": "zmpxtwo18XQt",
           "name": "SecureSvgrepoComSvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__SecureSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "MhCEtEAwrizJ",
+          "name": "CallDroppedSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallDroppedSvgrepoCom1Svg.tsx"
         }
       ],
       "images": [
