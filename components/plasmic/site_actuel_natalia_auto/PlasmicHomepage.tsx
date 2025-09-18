@@ -76,8 +76,8 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhis
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: e97xu5LlVB1k/css
 
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
-import CustomCodingSvgrepoComSvgIcon from "./icons/PlasmicIcon__CustomCodingSvgrepoComSvg"; // plasmic-import: 1E61VmC_aLGw/icon
 import DataIntegrationHubSvgrepoComSvgIcon from "./icons/PlasmicIcon__DataIntegrationHubSvgrepoComSvg"; // plasmic-import: I1aJqjgaIdMH/icon
+import GrowthSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__GrowthSvgrepoCom1Svg"; // plasmic-import: xuDy4N5Mbgmo/icon
 import SecureSvgrepoComSvgIcon from "./icons/PlasmicIcon__SecureSvgrepoComSvg"; // plasmic-import: zmpxtwo18XQt/icon
 import AutomobileSvgrepoComSvgIcon from "./icons/PlasmicIcon__AutomobileSvgrepoComSvg"; // plasmic-import: s5qX1M9YJlnw/icon
 import IndustryWindowsSvgrepoComSvgIcon from "./icons/PlasmicIcon__IndustryWindowsSvgrepoComSvg"; // plasmic-import: RGOeKEfdDTy6/icon
@@ -1216,7 +1216,7 @@ function PlasmicHomepage__RenderFunc(props: {
             </div>
             <div className={classNames(projectcss.all, sty.columns___9B4X6)}>
               <div className={classNames(projectcss.all, sty.column__h3MHd)}>
-                <CustomCodingSvgrepoComSvgIcon
+                <DataIntegrationHubSvgrepoComSvgIcon
                   className={classNames(projectcss.all, sty.svg__gejlI)}
                   role={"img"}
                 />
@@ -1233,7 +1233,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ fontWeight: 700 }}
                     >
-                      {"Personnalis\u00e9e"}
+                      {"Connect\u00e9e"}
                     </span>
                   </React.Fragment>
                 </div>
@@ -1245,12 +1245,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Chaque client est unique, nous adaptons l'IA \u00e0 vos besoins et vos outils m\u00e9tiers"
+                    "Natalia se connecte a plus de 500 applications et outils m\u00e9tiers"
                   }
                 </div>
               </div>
               <div className={classNames(projectcss.all, sty.column__wGFpM)}>
-                <DataIntegrationHubSvgrepoComSvgIcon
+                <GrowthSvgrepoCom1SvgIcon
                   className={classNames(projectcss.all, sty.svg__yzcWc)}
                   role={"img"}
                 />

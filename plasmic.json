@@ -2428,6 +2428,21 @@
           "id": "MhCEtEAwrizJ",
           "name": "CallDroppedSvgrepoCom1SvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallDroppedSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "-D_9M0s1XmBO",
+          "name": "GrowthSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__GrowthSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "Rv4Tb1QJWYBm",
+          "name": "GrowthGraphIncreaseSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__GrowthGraphIncreaseSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "xuDy4N5Mbgmo",
+          "name": "GrowthSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__GrowthSvgrepoCom1Svg.tsx"
         }
       ],
       "images": [
