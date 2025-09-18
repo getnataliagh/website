@@ -2933,6 +2933,16 @@
           "id": "H6NbNV784AYP",
           "name": "icon-colored-cloudiam",
           "filePath": "../public/plasmic/site_actuel_natalia_auto/images/iconColoredCloudiam.svg"
+        },
+        {
+          "id": "XXY-QGA7NwOk",
+          "name": "Logo_FT_Vendée_Couleur.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoFtVendeeCouleurPng.png"
+        },
+        {
+          "id": "ZwtUA0tGsKus",
+          "name": "ChatGPT Image 18 sept. 2025, 14_02_25.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025140225Png.png"
         }
       ],
       "indirect": false,

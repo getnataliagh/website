@@ -297,7 +297,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           style={{ color: "#1E3A8A" }}
                         >
-                          {"vos appels \u00e0 l'IA "}
+                          {"vos appels entrants \u00e0 l'"}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                         <span
@@ -306,7 +306,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           style={{ color: "var(--token-k7H7DCWvDgvK)" }}
                         >
-                          {"Gagnez"}
+                          {"IA"}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                         <span
@@ -315,7 +315,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           style={{ color: "#1E3A8A" }}
                         >
-                          {" en efficacit\u00e9"}
+                          {" "}
                         </span>
                       </React.Fragment>
                     )}
@@ -711,37 +711,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         </React.Fragment>
                       </div>
                     </CloudIamNavigationLinkPrimaryCta>
-                    <CloudIamNavigationLinkPrimaryCta
-                      className={classNames(
-                        "__wab_instance",
-                        sty.cloudIamNavigationLinkPrimaryCta__cpzr
-                      )}
-                      colorMode={"dark"}
-                      dataTrkciamAction={``}
-                      dataTrkciamCategory={``}
-                      dataTrkciamName={``}
-                      destination={`/a-propos`}
-                      openInNewTab={undefined}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___4HKhn
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                          >
-                            {"En savoir plus"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </CloudIamNavigationLinkPrimaryCta>
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__nnnY4)}>
@@ -750,7 +719,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(sty.img___6PV4S)}
                     displayHeight={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "310px"
+                        ? "303px"
                         : "600px"
                     }
                     displayMaxHeight={"none"}
@@ -768,8 +737,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage19Aout2025154302Png.png",
-                      fullWidth: 1024,
+                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025140225Png.png",
+                      fullWidth: 1536,
                       fullHeight: 1024,
                       aspectRatio: undefined
                     }}

@@ -85,6 +85,7 @@ export type PlasmicFooterSection__OverridesType = {
   root?: Flex__<"div">;
   columns?: Flex__<"div">;
   logo?: Flex__<typeof Logo>;
+  img?: Flex__<typeof PlasmicImg__>;
 };
 
 export interface DefaultFooterSectionProps {
@@ -171,7 +172,7 @@ function PlasmicFooterSection__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__ctFPu
+                  sty.text__qfTeP
                 )}
               >
                 <React.Fragment>
@@ -179,17 +180,29 @@ function PlasmicFooterSection__RenderFunc(props: {
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                   >
-                    {"L'assistante vocale IA des concessions automobiles"}
-                  </span>
-                  <React.Fragment>{"\n"}</React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                  >
-                    {"qui veulent gagner du temps et de l'argent"}
+                    {"Membre de la French Tech Vend\u00e9e"}
                   </span>
                 </React.Fragment>
               </div>
+              <PlasmicImg__
+                data-plasmic-name={"img"}
+                data-plasmic-override={overrides.img}
+                alt={""}
+                className={classNames(sty.img)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/site_actuel_natalia_auto/images/logoFtVendeeCouleurPng.png",
+                  fullWidth: 884,
+                  fullHeight: 1093,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__xhZty)}>
@@ -337,9 +350,10 @@ function PlasmicFooterSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "columns", "logo"],
-  columns: ["columns", "logo"],
-  logo: ["logo"]
+  root: ["root", "columns", "logo", "img"],
+  columns: ["columns", "logo", "img"],
+  logo: ["logo"],
+  img: ["img"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -348,6 +362,7 @@ type NodeDefaultElementType = {
   root: "div";
   columns: "div";
   logo: typeof Logo;
+  img: typeof PlasmicImg__;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -412,6 +427,7 @@ export const PlasmicFooterSection = Object.assign(
     // Helper components rendering sub-elements
     columns: makeNodeComponent("columns"),
     logo: makeNodeComponent("logo"),
+    img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicFooterSection
     internalVariantProps: PlasmicFooterSection__VariantProps,
