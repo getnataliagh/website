@@ -837,20 +837,6 @@
           "componentType": "component"
         },
         {
-          "id": "3UoNTlE6DfwL",
-          "name": "WipCentralisation",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipCentralisation.tsx",
-          "importSpec": {
-            "modulePath": "../pages/wip-centralisation.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicWipCentralisation.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/centralisation"
-        },
-        {
           "id": "L4A9oBw_uWEu",
           "name": "PolitiqueDeConfidentialite",
           "type": "managed",
@@ -889,20 +875,6 @@
           "cssFilePath": "plasmic/natalia_v_2/PlasmicTester.module.css",
           "scheme": "blackbox",
           "componentType": "component"
-        },
-        {
-          "id": "_VV1p5aEKrOy",
-          "name": "WipOffres",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipOffres.tsx",
-          "importSpec": {
-            "modulePath": "../pages/wip-offers.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicWipOffres.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/offers"
         },
         {
           "id": "iz3ZpCfz4HHL",
@@ -1078,20 +1050,6 @@
           "componentType": "component"
         },
         {
-          "id": "Svhekvnr8s8r",
-          "name": "WipTraitement",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipTraitement.tsx",
-          "importSpec": {
-            "modulePath": "../pages/wip-traitement.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicWipTraitement.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/traitement"
-        },
-        {
           "id": "RRkfys9gsrtt",
           "name": "AssistanteVocale",
           "type": "managed",
@@ -1118,20 +1076,6 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/assistant-mail-automatisation-ia"
-        },
-        {
-          "id": "q4iUs71Ve8ZA",
-          "name": "WipChatbot",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicWipChatbot.tsx",
-          "importSpec": {
-            "modulePath": "../pages/wip-chatbot.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicWipChatbot.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/chatbot"
         },
         {
           "id": "WcQ1QKDywmux",
@@ -2130,6 +2074,34 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/calculateur"
+        },
+        {
+          "id": "3SaqGLR5zIc2",
+          "name": "Automobile",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAutomobile.tsx",
+          "importSpec": {
+            "modulePath": "../pages/automobile.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAutomobile.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/automobile"
+        },
+        {
+          "id": "Glg8ZSm17wNi",
+          "name": "HotlineInformatique",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotlineInformatique.tsx",
+          "importSpec": {
+            "modulePath": "../pages/hotline-informatique.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotlineInformatique.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/hotline-informatique"
         }
       ],
       "icons": [
@@ -2307,6 +2279,46 @@
           "id": "zKsSExY-USuh",
           "name": "IcnArrowLinkIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__IcnArrowLink.tsx"
+        },
+        {
+          "id": "s5qX1M9YJlnw",
+          "name": "AutomobileSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__AutomobileSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "iamRmUfX0m0O",
+          "name": "CallChatSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallChatSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "51leaLOggJFC",
+          "name": "ComputerSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ComputerSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "RGOeKEfdDTy6",
+          "name": "IndustryWindowsSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__IndustryWindowsSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "I1aJqjgaIdMH",
+          "name": "DataIntegrationHubSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__DataIntegrationHubSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "1E61VmC_aLGw",
+          "name": "CustomCodingSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CustomCodingSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "NCkDTaaAkHMz",
+          "name": "SecureSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__SecureSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "zmpxtwo18XQt",
+          "name": "SecureSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__SecureSvgrepoComSvg.tsx"
         }
       ],
       "images": [

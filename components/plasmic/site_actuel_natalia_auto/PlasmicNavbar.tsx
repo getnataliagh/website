@@ -133,6 +133,8 @@ function PlasmicNavbar__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -151,7 +153,6 @@ function PlasmicNavbar__RenderFunc(props: {
     $refs
   });
 
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -211,7 +212,7 @@ function PlasmicNavbar__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                 >
-                  {"Avantages"}
+                  {"Produit"}
                 </span>
               </React.Fragment>
             </div>
@@ -238,7 +239,7 @@ function PlasmicNavbar__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                 >
-                  {"Cas d'usage"}
+                  {"Solutions"}
                 </span>
               </React.Fragment>
             </div>
@@ -250,7 +251,7 @@ function PlasmicNavbar__RenderFunc(props: {
               sty.link__mByEv
             )}
             component={Link}
-            href={`/calculateur`}
+            href={`/contact`}
             platform={"nextjs"}
           >
             <div
@@ -265,7 +266,7 @@ function PlasmicNavbar__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                 >
-                  {"Calculateur"}
+                  {"Comment \u00e7a marche ?"}
                 </span>
               </React.Fragment>
             </div>

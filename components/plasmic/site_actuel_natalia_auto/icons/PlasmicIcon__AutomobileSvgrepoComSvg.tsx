@@ -1,0 +1,40 @@
+/* eslint-disable */
+/* tslint:disable */
+// @ts-nocheck
+/* prettier-ignore-start */
+import React from "react";
+import { classNames } from "@plasmicapp/react-web";
+
+export type AutomobileSvgrepoComSvgIconProps = React.ComponentProps<"svg"> & {
+  title?: string;
+};
+
+export function AutomobileSvgrepoComSvgIcon(
+  props: AutomobileSvgrepoComSvgIconProps
+) {
+  const { className, style, title, ...restProps } = props;
+  return (
+    <svg
+      xmlns={"http://www.w3.org/2000/svg"}
+      xmlSpace={"preserve"}
+      fill={"currentColor"}
+      version={"1.1"}
+      viewBox={"924 796 200 200"}
+      height={"1em"}
+      className={classNames("plasmic-default__svg", className)}
+      style={style}
+      {...restProps}
+    >
+      {title && <title>{title}</title>}
+
+      <path
+        d={
+          "m1101.414 873.977-9.372-40.909-.064-.253c-4.326-15.694-14.527-23.323-31.188-23.323h-73.578c-16.66 0-26.861 7.629-31.189 23.323l-9.433 41.162c-13.941 4.836-21.634 16.388-21.634 28.319v33.34c0 6.106 4.126 11.074 10.607 11.074v27.101a8.7 8.7 0 0 0 8.7 8.698h19.935a8.7 8.7 0 0 0 8.699-8.698V946.71h102.208v27.101a8.7 8.7 0 0 0 8.698 8.698h19.935a8.7 8.7 0 0 0 8.698-8.698V946.71h.002c6.48 0 10.606-4.968 10.606-11.074v-33.34c.001-11.932-7.692-23.482-21.63-28.319M963.21 920.686h-17.963c-5.347 0-9.685-4.335-9.685-9.684s4.338-9.686 9.685-9.686h17.963c5.349 0 9.685 4.337 9.685 9.686s-4.336 9.684-9.685 9.684m-1.727-49.088a1.72 1.72 0 0 1-1.678-2.105l7.707-33.641c2.941-10.551 8.292-14.477 19.699-14.477h73.578c11.407 0 16.759 3.926 19.7 14.477l7.705 33.64a1.723 1.723 0 0 1-1.677 2.106zm141.27 49.088h-17.964c-5.347 0-9.684-4.335-9.684-9.684s4.337-9.686 9.684-9.686h17.964c5.348 0 9.684 4.337 9.684 9.686s-4.336 9.684-9.684 9.684"
+        }
+      ></path>
+    </svg>
+  );
+}
+
+export default AutomobileSvgrepoComSvgIcon;
+/* prettier-ignore-end */

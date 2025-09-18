@@ -139,6 +139,8 @@ function PlasmicAPropos__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -157,7 +159,6 @@ function PlasmicAPropos__RenderFunc(props: {
     $refs
   });
 
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -1240,7 +1241,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. Nous essuyons quelques revers, le produit n'est pas suffisamment au point et nous nous rendons compte de la complexit\u00e9 de mise en place chez des clients tr\u00e8s, trop diff\u00e9rents."
+                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. "
                                   }
                                 </span>
                               </React.Fragment>
@@ -1360,7 +1361,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                     fontWeight: 700
                                   }}
                                 >
-                                  {"Mai 2025"}
+                                  {"Juin 2025"}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                                 <span
@@ -1370,32 +1371,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Nous avons du revoir notre copie c\u00f4t\u00e9 technique et surtout se concentrer sur un march\u00e9 sp\u00e9cifique pour d\u00e9ployer plus rapidement ensuite. Apr\u00e8s \u00e9changes avec partenaires et associ\u00e9s, nous avons d\u00e9cid\u00e9 de "
-                                  }
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{
-                                    color: "var(--token-okZqvxZ_nx_g)",
-                                    fontWeight: 700
-                                  }}
-                                >
-                                  {
-                                    "concentrer nos efforts sur le march\u00e9 automobile"
-                                  }
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                                >
-                                  {
-                                    " ! C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiets projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -1502,7 +1478,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                     fontWeight: 700
                                   }}
                                 >
-                                  {"Juin 2025"}
+                                  {"Septembre 2025"}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                                 <span
@@ -1524,7 +1500,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Mise en place de pilote en conditions r\u00e9elles en concessions sur les d\u00e9bords d'appels. Arriv\u00e9e de Baptiste pour renforcer l'\u00e9quipe \ud83d\udcaa"
+                                    ": Nouveau march\u00e9, les hotline informatiques. Nous aidons les services informatiques \u00e0 gagner en efficacit\u00e9 sur la gestion des tickets internes de niveau 0 et 1. Arriv\u00e9e de Baptiste pour renforcer l'\u00e9quipe technique \ud83d\udcaa"
                                   }
                                 </span>
                               </React.Fragment>
@@ -1592,7 +1568,7 @@ function PlasmicAPropos__RenderFunc(props: {
                         style={{ color: "#FFB000", fontWeight: 700 }}
                       >
                         {
-                          "Nous sentons l'effervescence du march\u00e9, nous voulons en faire parti, nous n'avons pas v\u00e9cu l'arriv\u00e9e d'internet et nous ne voulons pas vivre avec des regrets, il \u00e9tait de temps de lancer un projet !"
+                          "Nous sentons l'effervescence du march\u00e9, nous voulons en faire parti, nous n'avons pas v\u00e9cu l'arriv\u00e9e d'internet et nous ne voulons pas vivre avec des regrets, il \u00e9tait de temps de lancer le projet !"
                         }
                       </span>
                       <React.Fragment>{""}</React.Fragment>
@@ -1868,7 +1844,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. Nous essuyons quelques revers, le produit n'est pas suffisamment au point et nous nous rendons compte de la complexit\u00e9 de mise en place chez des clients tr\u00e8s, trop diff\u00e9rents."
+                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. "
                                   }
                                 </span>
                               </React.Fragment>
@@ -1877,13 +1853,6 @@ function PlasmicAPropos__RenderFunc(props: {
                         </ul>
                       }
                       <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
                       {
                         <ul
                           className={classNames(
@@ -1988,7 +1957,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                     fontWeight: 700
                                   }}
                                 >
-                                  {"Mai 2025"}
+                                  {"Juin 2025"}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                                 <span
@@ -1998,32 +1967,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Nous avons du revoir notre copie c\u00f4t\u00e9 technique et surtout se concentrer sur un march\u00e9 sp\u00e9cifique pour d\u00e9ployer plus rapidement ensuite. Apr\u00e8s \u00e9changes avec partenaires et associ\u00e9s, nous avons d\u00e9cid\u00e9 de "
-                                  }
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{
-                                    color: "var(--token-okZqvxZ_nx_g)",
-                                    fontWeight: 700
-                                  }}
-                                >
-                                  {
-                                    "concentrer nos efforts sur le march\u00e9 automobile"
-                                  }
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                                >
-                                  {
-                                    " ! C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiets projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -2055,13 +1999,6 @@ function PlasmicAPropos__RenderFunc(props: {
                         </ul>
                       }
                       <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
                       {
                         <ul
                           className={classNames(
@@ -2130,7 +2067,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                     fontWeight: 700
                                   }}
                                 >
-                                  {"Juin 2025"}
+                                  {"Septembre 2025"}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                                 <span
@@ -2152,7 +2089,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Mise en place de pilote en conditions r\u00e9elles en concessions sur les d\u00e9bords d'appels. Arriv\u00e9e de Baptiste pour renforcer l'\u00e9quipe \ud83d\udcaa"
+                                    ": Nouveau march\u00e9, les hotline informatiques. Nous aidons les services informatiques \u00e0 gagner en efficacit\u00e9 sur la gestion des tickets internes de niveau 0 et 1. Arriv\u00e9e de Baptiste pour renforcer l'\u00e9quipe technique \ud83d\udcaa"
                                   }
                                 </span>
                               </React.Fragment>
@@ -2161,31 +2098,6 @@ function PlasmicAPropos__RenderFunc(props: {
                         </ul>
                       }
                       <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          color: "var(--token-okZqvxZ_nx_g)",
-                          fontWeight: 700
-                        }}
-                      >
-                        {
-                          "Apr\u00e8s avoir valid\u00e9 ces pilotes, place au d\u00e9ploiement partout en France pour r\u00e9volutionner la gestion des appels entrants en concession et aider les distributeurs \u00e0 performer et transformer leur centre de co\u00fbts qu'est le standard t\u00e9l\u00e9phonique, en centre de profits et d'opportunit\u00e9s ! \ud83d\ude80\ud83d\ude80"
-                        }
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
-                      </span>
                     </React.Fragment>
                   )}
                 </div>
