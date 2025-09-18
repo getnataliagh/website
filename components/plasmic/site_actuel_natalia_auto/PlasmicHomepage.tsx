@@ -259,25 +259,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                         >
-                          {" \u00a0\u00a0vos appels \u00e0 l'IA "}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-k7H7DCWvDgvK)" }}
-                        >
-                          {"Gagnez"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {"\u00a0en efficacit\u00e9"}
+                          {" \u00a0\u00a0vos appels \u00e0 l'IA"}
                         </span>
                       </React.Fragment>
                     ) : (
@@ -288,7 +270,25 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           style={{ color: "var(--token-k7H7DCWvDgvK)" }}
                         >
-                          {"D\u00e9l\u00e9guez "}
+                          {"D\u00e9l"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#FFB000" }}
+                        >
+                          {"\u00e9guez"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-k7H7DCWvDgvK)" }}
+                        >
+                          {" "}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                         <span
@@ -719,11 +719,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(sty.img___6PV4S)}
                     displayHeight={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "303px"
-                        : "600px"
+                        ? "193px"
+                        : "429px"
                     }
                     displayMaxHeight={"none"}
-                    displayMaxWidth={"none"}
+                    displayMaxWidth={"692px"}
                     displayMinHeight={"0"}
                     displayMinWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
@@ -737,8 +737,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage19Aout2025154302Png.png",
-                      fullWidth: 1024,
+                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025144952Png.png",
+                      fullWidth: 1536,
                       fullHeight: 1024,
                       aspectRatio: undefined
                     }}
@@ -788,11 +788,56 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                   >
-                    {"Pourquoi choisir Natalia ?"}
+                    {"Pourquoi "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#1E3A8A" }}
+                  >
+                    {"choisir"}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                  >
+                    {" Natalia ?"}
                   </span>
                 </React.Fragment>
               )}
             </h2>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__fnN4I
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__jAYlD
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"Pourquoi choisir Natalia ?"}
+                      </span>
+                    </React.Fragment>
+                  </h2>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
             <div className={classNames(projectcss.all, sty.columns___9B4X6)}>
               <div className={classNames(projectcss.all, sty.column__h3MHd)}>
                 <CustomCodingSvgrepoComSvgIcon
@@ -916,7 +961,10 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.freeBox__dgeng)}
             id={"casdusage"}
           >
-            <div className={classNames(projectcss.all, sty.freeBox___6Mbwr)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox___6Mbwr)}
+              id={"secteurs"}
+            >
               <div
                 data-plasmic-name={"foreground"}
                 data-plasmic-override={overrides.foreground}
@@ -1025,7 +1073,11 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
                           >
                             {"Automobile"}
                           </span>
@@ -1095,7 +1147,11 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
                           >
                             {"Call-center"}
                           </span>
@@ -1164,7 +1220,11 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
                           >
                             {"Hotline informatique"}
                           </span>
@@ -1252,7 +1312,11 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
                           >
                             {"Industrie / PME"}
                           </span>
@@ -1289,7 +1353,10 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.avantages}
             className={classNames(projectcss.all, sty.avantages)}
           >
-            <section className={classNames(projectcss.all, sty.section__g7Dr)}>
+            <section
+              className={classNames(projectcss.all, sty.section__g7Dr)}
+              id={"comment"}
+            >
               <div
                 data-plasmic-name={"foreground3"}
                 data-plasmic-override={overrides.foreground3}
@@ -1308,8 +1375,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "Comment \u00e7a marche ?"
-                        : "Comment \u00e7a marche ?"}
+                        ? "Comment se passe la mise en place ?"
+                        : "Comment se passe la mise en place ?"}
                     </h2>
                   </div>
                 </div>

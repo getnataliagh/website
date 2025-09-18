@@ -85,6 +85,7 @@ export const PlasmicNavbar__ArgProps = new Array<ArgPropType>();
 export type PlasmicNavbar__OverridesType = {
   root?: Flex__<"div">;
   logo?: Flex__<typeof Logo>;
+  solutions3?: Flex__<"div">;
   cloudIamNavigationLinkPrimaryCta?: Flex__<
     typeof CloudIamNavigationLinkPrimaryCta
   >;
@@ -221,17 +222,20 @@ function PlasmicNavbar__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
-              sty.link__r3BUr
+              sty.link__hcoir
             )}
             component={Link}
-            href={"/#casdusage"}
+            href={"/#secteurs"}
             platform={"nextjs"}
+            target={undefined}
           >
             <div
+              data-plasmic-name={"solutions3"}
+              data-plasmic-override={overrides.solutions3}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__ltatw
+                sty.solutions3
               )}
             >
               <React.Fragment>
@@ -251,7 +255,7 @@ function PlasmicNavbar__RenderFunc(props: {
               sty.link__mByEv
             )}
             component={Link}
-            href={`/contact`}
+            href={"#comment"}
             platform={"nextjs"}
           >
             <div
@@ -338,8 +342,9 @@ function PlasmicNavbar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "cloudIamNavigationLinkPrimaryCta"],
+  root: ["root", "logo", "solutions3", "cloudIamNavigationLinkPrimaryCta"],
   logo: ["logo"],
+  solutions3: ["solutions3"],
   cloudIamNavigationLinkPrimaryCta: ["cloudIamNavigationLinkPrimaryCta"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -348,6 +353,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   logo: typeof Logo;
+  solutions3: "div";
   cloudIamNavigationLinkPrimaryCta: typeof CloudIamNavigationLinkPrimaryCta;
 };
 
@@ -412,6 +418,7 @@ export const PlasmicNavbar = Object.assign(
   {
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
+    solutions3: makeNodeComponent("solutions3"),
     cloudIamNavigationLinkPrimaryCta: makeNodeComponent(
       "cloudIamNavigationLinkPrimaryCta"
     ),

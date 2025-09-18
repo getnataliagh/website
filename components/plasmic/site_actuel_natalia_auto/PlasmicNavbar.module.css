@@ -49,6 +49,8 @@
 }
 .logo:global(.__wab_instance) {
   width: 230px;
+  height: 32px;
+  align-self: center;
   flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
@@ -80,17 +82,16 @@
 }
 .text__nUjR5 {
   white-space: pre;
-  color: #eeeeee;
+  color: var(--token-okZqvxZ_nx_g);
   font-size: 20px;
 }
-.link__r3BUr {
+.link__hcoir {
   display: flex;
   font-size: 1rem;
 }
-.text__ltatw {
+.solutions3 {
   white-space: pre;
-  color: #eeeeee;
-  height: auto;
+  color: var(--token-okZqvxZ_nx_g);
   font-size: 20px;
 }
 .link__mByEv {
