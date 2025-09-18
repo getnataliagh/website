@@ -2102,6 +2102,58 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/hotline-informatique"
+        },
+        {
+          "id": "5E18q3sUtJqU",
+          "name": "Label",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLabel.tsx",
+          "importSpec": {
+            "modulePath": "Label.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLabel.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "eOzTfaTKCJhK",
+          "name": "SliderThumb",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSliderThumb.tsx",
+          "importSpec": {
+            "modulePath": "SliderThumb.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSliderThumb.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "QgqFqFWX7VNc",
+          "name": "Description",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDescription.tsx",
+          "importSpec": {
+            "modulePath": "Description.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDescription.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "bEfeBjuT20IG",
+          "name": "Slider",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSlider.tsx",
+          "importSpec": {
+            "modulePath": "Slider.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSlider.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -100,12 +100,13 @@ export type PlasmicHomepage__OverridesType = {
   headerHeroSection?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
   h1?: Flex__<"h1">;
-  section?: Flex__<"section">;
   foreground?: Flex__<"div">;
   foreground2?: Flex__<"div">;
   avantages?: Flex__<"section">;
-  foreground4?: Flex__<"div">;
-  foreground5?: Flex__<"div">;
+  foreground3?: Flex__<"div">;
+  avantages2?: Flex__<"section">;
+  foreground6?: Flex__<"div">;
+  foreground7?: Flex__<"div">;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
@@ -749,7 +750,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(sty.img___6PV4S)}
                     displayHeight={
                       hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "300px"
+                        ? "310px"
                         : "600px"
                     }
                     displayMaxHeight={"none"}
@@ -777,11 +778,7 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </div>
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          >
+          <section className={classNames(projectcss.all, sty.section__eiqI)}>
             <h2
               className={classNames(
                 projectcss.all,
@@ -1323,20 +1320,263 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.avantages}
             className={classNames(projectcss.all, sty.avantages)}
           >
+            <section className={classNames(projectcss.all, sty.section__g7Dr)}>
+              <div
+                data-plasmic-name={"foreground3"}
+                data-plasmic-override={overrides.foreground3}
+                className={classNames(projectcss.all, sty.foreground3)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__kq0SE)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oqTKs)}
+                  >
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__gdoBz
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "Comment \u00e7a marche ?"
+                        : "Comment \u00e7a marche ?"}
+                    </h2>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__aj8U8)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gEq0L)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xuegi)}
+                    >
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1KgyH
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__k63OG
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__dqVbU
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__bMmO
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ fontWeight: 700 }}
+                            >
+                              {"1- Premier RDV"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___5U1Ik
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                            >
+                              {
+                                "D\u00e9finition du besoin et du ROI attendu du projet "
+                              }
+                            </span>
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___9Iwtf
+                      )}
+                    >
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__yC
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__g1VFk
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1ZdOd
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__dUe3Q
+                          )}
+                        >
+                          {"2- Param\u00e9trage "}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__bBkit
+                          )}
+                        >
+                          {"Cr\u00e9ation des prompts et connexion aux outils"}
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__hyeil)}
+                    >
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__mzLYj
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__mCjhh
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__dT0Z
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__io0Y8
+                          )}
+                        >
+                          {"3- Testing "}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__bowOh
+                          )}
+                        >
+                          {
+                            "Phase de tests avec b\u00eatas utilisateurs/clients"
+                          }
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__bLMbN)}
+                    >
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___8AOp1
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg___5DH2D
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___0Dhn
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__w19Gn
+                          )}
+                        >
+                          {"4- Go Live"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__vg4WK
+                          )}
+                        >
+                          {"Mise en production effective de Natalia"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section
+            data-plasmic-name={"avantages2"}
+            data-plasmic-override={overrides.avantages2}
+            className={classNames(projectcss.all, sty.avantages2)}
+          >
             <div
-              className={classNames(projectcss.all, sty.freeBox___4FkzA)}
+              className={classNames(projectcss.all, sty.freeBox__befud)}
               id={"avantages"}
             >
               <div
-                data-plasmic-name={"foreground4"}
-                data-plasmic-override={overrides.foreground4}
-                className={classNames(projectcss.all, sty.foreground4)}
+                data-plasmic-name={"foreground6"}
+                data-plasmic-override={overrides.foreground6}
+                className={classNames(projectcss.all, sty.foreground6)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__yy1An
+                    sty.text__pdJM
                   )}
                 >
                   {hasVariant(globalVariants, "screen", "mobileOnly") ? (
@@ -1361,26 +1601,26 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <div
-                data-plasmic-name={"foreground5"}
-                data-plasmic-override={overrides.foreground5}
-                className={classNames(projectcss.all, sty.foreground5)}
+                data-plasmic-name={"foreground7"}
+                data-plasmic-override={overrides.foreground7}
+                className={classNames(projectcss.all, sty.foreground7)}
               >
-                <div className={classNames(projectcss.all, sty.columns__pvViq)}>
+                <div className={classNames(projectcss.all, sty.columns__hkf6H)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__quVu4)}
+                    className={classNames(projectcss.all, sty.column__nibvL)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__gLceX)}
+                      className={classNames(projectcss.all, sty.freeBox__pYMiY)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__xhsFe
+                          sty.freeBox__dbrSf
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__vYpJp)}
+                          className={classNames(sty.img___3OiXf)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1400,13 +1640,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__mAd3
+                            sty.freeBox___5RQIc
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__l0Gbh
+                              sty.svg__c62RG
                             )}
                             role={"img"}
                           />
@@ -1415,14 +1655,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__tfG0
+                          sty.freeBox__xzMds
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__r0W1
+                            sty.text__ml4Nx
                           )}
                         >
                           {hasVariant(
@@ -1460,7 +1700,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__iIayN
+                            sty.text__rJsPy
                           )}
                         >
                           <React.Fragment>
@@ -1480,20 +1720,23 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__lmHPz)}
+                    className={classNames(projectcss.all, sty.column__ooLgn)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__nOdHs)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___8L8Ej
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__cxs5X
+                          sty.freeBox__mtY37
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__kMuT)}
+                          className={classNames(sty.img__h9Ch)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1513,13 +1756,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__hZu18
+                            sty.freeBox__cmeIe
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg___3XCs6
+                              sty.svg__qkVzi
                             )}
                             role={"img"}
                           />
@@ -1528,14 +1771,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__x0KZh
+                          sty.freeBox__nQgbv
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__faiNc
+                            sty.text__qW3O
                           )}
                         >
                           <React.Fragment>
@@ -1553,7 +1796,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__cYam
+                            sty.text__qukh
                           )}
                         >
                           {hasVariant(
@@ -1592,20 +1835,20 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__ggMl4)}
+                    className={classNames(projectcss.all, sty.column__a3BlP)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__gGQq7)}
+                      className={classNames(projectcss.all, sty.freeBox__bry69)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___6WYFi
+                          sty.freeBox___8IUw
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__kByzw)}
+                          className={classNames(sty.img__u4SLt)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={
@@ -1629,13 +1872,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__utov1
+                            sty.freeBox__l0E2K
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__tOsR
+                              sty.svg___8NQAw
                             )}
                             role={"img"}
                           />
@@ -1644,14 +1887,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__tpx7V
+                          sty.freeBox__lfYkz
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__sdGpF
+                            sty.text___0Oyzu
                           )}
                         >
                           <React.Fragment>
@@ -1672,7 +1915,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__sbsjx
+                            sty.text__ycoh
                           )}
                         >
                           {hasVariant(
@@ -1711,20 +1954,20 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__cRXrK)}
+                    className={classNames(projectcss.all, sty.column__tEJjq)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ew9Fd)}
+                      className={classNames(projectcss.all, sty.freeBox__uEyYk)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__tsv2A
+                          sty.freeBox__ySbdt
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__fzZd7)}
+                          className={classNames(sty.img___3KFym)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={
@@ -1748,13 +1991,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__ejYri
+                            sty.freeBox__i1HKp
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__rBjUd
+                              sty.svg__xlyPb
                             )}
                             role={"img"}
                           />
@@ -1763,14 +2006,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__oIdm
+                          sty.freeBox__n1Ft
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__dYc7J
+                            sty.text__rh0J4
                           )}
                         >
                           {hasVariant(
@@ -1805,7 +2048,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__v7Tz1
+                            sty.text__t2Txs
                           )}
                         >
                           {hasVariant(
@@ -1844,20 +2087,20 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__k5QaY)}
+                    className={classNames(projectcss.all, sty.column__u0Wtu)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__l7H6S)}
+                      className={classNames(projectcss.all, sty.freeBox__kb9J0)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___2I45G
+                          sty.freeBox__uBqCp
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__dgiv3)}
+                          className={classNames(sty.img__nWOp)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1877,13 +2120,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__saZzu
+                            sty.freeBox___0A3M
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__sTrXb
+                              sty.svg__l0CQf
                             )}
                             role={"img"}
                           />
@@ -1892,14 +2135,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__zdKib
+                          sty.freeBox__wTyQg
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__fHaR
+                            sty.text___6Huwm
                           )}
                         >
                           {hasVariant(
@@ -1934,7 +2177,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__it2Fb
+                            sty.text__qffR5
                           )}
                         >
                           <React.Fragment>
@@ -1954,20 +2197,23 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__pu1PB)}
+                    className={classNames(projectcss.all, sty.column__ou50M)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__xjVyd)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___9JJb3
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___7Grll
+                          sty.freeBox__arhEy
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__jIcZf)}
+                          className={classNames(sty.img__i4QD)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1987,13 +2233,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox___62ZA1
+                            sty.freeBox__qc3P
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__kIlVc
+                              sty.svg__c97Xk
                             )}
                             role={"img"}
                           />
@@ -2002,14 +2248,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__otAin
+                          sty.freeBox__wvRQl
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__m1Aep
+                            sty.text__j9Keg
                           )}
                         >
                           {hasVariant(
@@ -2044,7 +2290,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__v1Spc
+                            sty.text___9LyXc
                           )}
                         >
                           <React.Fragment>
@@ -2214,12 +2460,13 @@ const PlasmicDescendants = {
     "headerHeroSection",
     "navbar",
     "h1",
-    "section",
     "foreground",
     "foreground2",
     "avantages",
-    "foreground4",
-    "foreground5",
+    "foreground3",
+    "avantages2",
+    "foreground6",
+    "foreground7",
     "youTube",
     "pricingSection",
     "footerSection"
@@ -2227,12 +2474,13 @@ const PlasmicDescendants = {
   headerHeroSection: ["headerHeroSection", "navbar", "h1"],
   navbar: ["navbar"],
   h1: ["h1"],
-  section: ["section"],
   foreground: ["foreground"],
   foreground2: ["foreground2"],
-  avantages: ["avantages", "foreground4", "foreground5"],
-  foreground4: ["foreground4"],
-  foreground5: ["foreground5"],
+  avantages: ["avantages", "foreground3"],
+  foreground3: ["foreground3"],
+  avantages2: ["avantages2", "foreground6", "foreground7"],
+  foreground6: ["foreground6"],
+  foreground7: ["foreground7"],
   youTube: ["youTube"],
   pricingSection: ["pricingSection"],
   footerSection: ["footerSection"]
@@ -2245,12 +2493,13 @@ type NodeDefaultElementType = {
   headerHeroSection: "div";
   navbar: typeof Navbar;
   h1: "h1";
-  section: "section";
   foreground: "div";
   foreground2: "div";
   avantages: "section";
-  foreground4: "div";
-  foreground5: "div";
+  foreground3: "div";
+  avantages2: "section";
+  foreground6: "div";
+  foreground7: "div";
   youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
@@ -2319,12 +2568,13 @@ export const PlasmicHomepage = Object.assign(
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     navbar: makeNodeComponent("navbar"),
     h1: makeNodeComponent("h1"),
-    section: makeNodeComponent("section"),
     foreground: makeNodeComponent("foreground"),
     foreground2: makeNodeComponent("foreground2"),
     avantages: makeNodeComponent("avantages"),
-    foreground4: makeNodeComponent("foreground4"),
-    foreground5: makeNodeComponent("foreground5"),
+    foreground3: makeNodeComponent("foreground3"),
+    avantages2: makeNodeComponent("avantages2"),
+    foreground6: makeNodeComponent("foreground6"),
+    foreground7: makeNodeComponent("foreground7"),
     youTube: makeNodeComponent("youTube"),
     pricingSection: makeNodeComponent("pricingSection"),
     footerSection: makeNodeComponent("footerSection"),
