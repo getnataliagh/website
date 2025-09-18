@@ -304,7 +304,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "var(--token-k7H7DCWvDgvK)" }}
+                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                         >
                           {"IA"}
                         </span>
@@ -737,8 +737,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025140225Png.png",
-                      fullWidth: 1536,
+                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage19Aout2025154302Png.png",
+                      fullWidth: 1024,
                       fullHeight: 1024,
                       aspectRatio: undefined
                     }}
