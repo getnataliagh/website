@@ -737,7 +737,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025144952Png.png",
+                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage18Sept2025165515Png.png",
                       fullWidth: 1536,
                       fullHeight: 1024,
                       aspectRatio: undefined
