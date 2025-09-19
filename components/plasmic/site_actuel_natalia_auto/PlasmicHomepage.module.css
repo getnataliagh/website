@@ -1736,8 +1736,7 @@
   justify-content: flex-start;
   align-items: center;
   align-content: unset;
-  background: linear-gradient(0deg, #00000080 0%, transparent 100%),
-    var(--token-okZqvxZ_nx_g);
+  background: #f2f2f7;
   width: 100%;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -1777,7 +1776,7 @@
 }
 .h2__gdoBz {
   height: auto;
-  color: #ffffff;
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-size: 48px;
   font-weight: 800;
@@ -1860,7 +1859,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-style: normal;
   text-align: left;
@@ -1874,7 +1873,7 @@
   margin: 5px;
 }
 .text___5U1Ik {
-  color: #ffffff80;
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1927,7 +1926,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-style: normal;
   text-align: left;
@@ -1941,7 +1940,7 @@
   margin: 5px;
 }
 .text__bBkit {
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1993,7 +1992,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-style: normal;
   text-align: left;
@@ -2007,7 +2006,7 @@
   margin: 5px;
 }
 .text__bowOh {
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -2059,7 +2058,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-style: normal;
   text-align: left;
@@ -2073,7 +2072,7 @@
   margin: 5px;
 }
 .text__vg4WK {
-  color: var(--token-iATmNBw1ODRP);
+  color: var(--token-okZqvxZ_nx_g);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
