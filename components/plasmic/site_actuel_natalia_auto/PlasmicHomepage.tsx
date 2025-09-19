@@ -1596,7 +1596,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.link__ce35D
                         )}
                         component={Link}
-                        href={`/`}
+                        href={`/contact`}
                         platform={"nextjs"}
                       >
                         <React.Fragment>
@@ -1712,7 +1712,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.link__gnykQ
                         )}
                         component={Link}
-                        href={`/`}
+                        href={`/contact`}
                         platform={"nextjs"}
                       >
                         <React.Fragment>
@@ -1805,7 +1805,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.link__dyKna
                         )}
                         component={Link}
-                        href={`/`}
+                        href={`/contact`}
                         platform={"nextjs"}
                       >
                         <React.Fragment>
