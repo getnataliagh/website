@@ -607,7 +607,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                   }
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
-                                  {"Param\u00e9trage "}
+                                  {"Connect\u00e9e \u00e0 "}
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
                                 <span
@@ -619,7 +619,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                     fontWeight: 700
                                   }}
                                 >
-                                  {"sur-mesure"}
+                                  {"+500 applications"}
                                 </span>
                               </React.Fragment>
                             </li>
