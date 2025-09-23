@@ -1136,6 +1136,33 @@
   text-align: center;
   min-width: 0;
 }
+.section__pRdb {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+}
+.section__pRdb > * {
+  grid-column: 4;
+}
+.youTube___8RkYn:global(.__wab_instance) {
+  width: 640px;
+  height: 390px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
 .freeBox__dgeng {
   display: flex;
   flex-direction: column;
@@ -2892,7 +2919,7 @@
   text-decoration-line: none;
   text-overflow: clip;
 }
-.youTube:global(.__wab_instance) {
+.youTube__cZnk1:global(.__wab_instance) {
   width: 640px;
   height: 372px;
   max-height: 100%;

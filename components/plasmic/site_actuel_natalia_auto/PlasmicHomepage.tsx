@@ -107,7 +107,6 @@ export type PlasmicHomepage__OverridesType = {
   avantages2?: Flex__<"section">;
   foreground6?: Flex__<"div">;
   foreground7?: Flex__<"div">;
-  youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
 };
@@ -1325,6 +1324,12 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
+          <section className={classNames(projectcss.all, sty.section__pRdb)}>
+            <YouTube
+              className={classNames("__wab_instance", sty.youTube___8RkYn)}
+              videoId={"edXaLUXHnLk"}
+            />
+          </section>
           <div
             className={classNames(projectcss.all, sty.freeBox__dgeng)}
             id={"casdusage"}
@@ -1659,7 +1664,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               textDecorationLine: "underline"
                             }}
                           >
-                            {"Hotline informatique"}
+                            {"Helpdesk"}
                           </span>
                         </React.Fragment>
                       </div>
@@ -2827,9 +2832,7 @@ function PlasmicHomepage__RenderFunc(props: {
             </div>
           </section>
           <YouTube
-            data-plasmic-name={"youTube"}
-            data-plasmic-override={overrides.youTube}
-            className={classNames("__wab_instance", sty.youTube)}
+            className={classNames("__wab_instance", sty.youTube__cZnk1)}
             videoId={"R6MeLqRQzYw"}
           />
 
@@ -2982,7 +2985,6 @@ const PlasmicDescendants = {
     "avantages2",
     "foreground6",
     "foreground7",
-    "youTube",
     "pricingSection",
     "footerSection"
   ],
@@ -2998,7 +3000,6 @@ const PlasmicDescendants = {
   avantages2: ["avantages2", "foreground6", "foreground7"],
   foreground6: ["foreground6"],
   foreground7: ["foreground7"],
-  youTube: ["youTube"],
   pricingSection: ["pricingSection"],
   footerSection: ["footerSection"]
 } as const;
@@ -3019,7 +3020,6 @@ type NodeDefaultElementType = {
   avantages2: "section";
   foreground6: "div";
   foreground7: "div";
-  youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
 };
@@ -3096,7 +3096,6 @@ export const PlasmicHomepage = Object.assign(
     avantages2: makeNodeComponent("avantages2"),
     foreground6: makeNodeComponent("foreground6"),
     foreground7: makeNodeComponent("foreground7"),
-    youTube: makeNodeComponent("youTube"),
     pricingSection: makeNodeComponent("pricingSection"),
     footerSection: makeNodeComponent("footerSection"),
 
