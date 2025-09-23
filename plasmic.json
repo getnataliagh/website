@@ -2443,6 +2443,16 @@
           "id": "xuDy4N5Mbgmo",
           "name": "GrowthSvgrepoCom1SvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__GrowthSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "5FLURuOvTspK",
+          "name": "GovernmentBuildingSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__GovernmentBuildingSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "6wx9Tfh7vhZB",
+          "name": "BankSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BankSvgrepoComSvg.tsx"
         }
       ],
       "images": [

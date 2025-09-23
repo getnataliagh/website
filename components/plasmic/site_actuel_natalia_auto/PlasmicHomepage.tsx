@@ -81,6 +81,8 @@ import AutomobileSvgrepoComSvgIcon from "./icons/PlasmicIcon__AutomobileSvgrepoC
 import IndustryWindowsSvgrepoComSvgIcon from "./icons/PlasmicIcon__IndustryWindowsSvgrepoComSvg"; // plasmic-import: RGOeKEfdDTy6/icon
 import ComputerSvgrepoComSvgIcon from "./icons/PlasmicIcon__ComputerSvgrepoComSvg"; // plasmic-import: 51leaLOggJFC/icon
 import CallDroppedSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__CallDroppedSvgrepoCom1Svg"; // plasmic-import: MhCEtEAwrizJ/icon
+import BankSvgrepoComSvgIcon from "./icons/PlasmicIcon__BankSvgrepoComSvg"; // plasmic-import: 6wx9Tfh7vhZB/icon
+import GovernmentBuildingSvgrepoComSvgIcon from "./icons/PlasmicIcon__GovernmentBuildingSvgrepoComSvg"; // plasmic-import: 5FLURuOvTspK/icon
 
 createPlasmicElementProxy;
 
@@ -1808,6 +1810,197 @@ function PlasmicHomepage__RenderFunc(props: {
                           projectcss.a,
                           projectcss.__wab_text,
                           sty.link__dyKna
+                        )}
+                        component={Link}
+                        href={`/contact`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__lhry2)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__kVvs6)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___6MYv3
+                      )}
+                    >
+                      <BankSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__cytrI)}
+                        role={"img"}
+                      />
+                    </div>
+                    {false ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__p8KO3
+                        )}
+                      >
+                        <Icon8Icon
+                          className={classNames(projectcss.all, sty.svg__yQfR)}
+                          role={"img"}
+                        />
+                      </div>
+                    ) : null}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__bmrWe)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xcUgl
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
+                          >
+                            {"Banques & assurances"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__pm67I
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          >
+                            {
+                              "gestion des demandes clients, suivi de dossiers, assistance en continu, d\u00e9claration de sinistres, suivi de contrats, assistance en cas d\u2019urgence."
+                            }
+                          </span>
+                        </React.Fragment>
+                      </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__hb0Fb
+                        )}
+                        component={Link}
+                        href={`/contact`}
+                        platform={"nextjs"}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFB000", fontWeight: 700 }}
+                          >
+                            {"En savoir plus"}
+                          </span>
+                        </React.Fragment>
+                      </PlasmicLink__>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qqa5T)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__dwHcm)}
+                    >
+                      <GovernmentBuildingSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg___2QEmg)}
+                        role={"img"}
+                      />
+                    </div>
+                    {false ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__x7Of
+                        )}
+                      >
+                        <Icon8Icon
+                          className={classNames(projectcss.all, sty.svg__pSzf9)}
+                          role={"img"}
+                        />
+                      </div>
+                    ) : null}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__jpV1J)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ksWeh
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              color: "var(--token-okZqvxZ_nx_g)",
+                              fontWeight: 700,
+                              textDecorationLine: "underline"
+                            }}
+                          >
+                            {"Services Publics"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__df2HX
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          >
+                            {
+                              "Accueil et orientation des usagers vers le bon service. Gestion des demandes administratives (rendez-vous, informations, suivi de dossiers)."
+                            }
+                          </span>
+                        </React.Fragment>
+                      </div>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          sty.link__prW0O
                         )}
                         component={Link}
                         href={`/contact`}
