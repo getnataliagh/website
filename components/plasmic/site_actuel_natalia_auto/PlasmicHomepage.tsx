@@ -1666,7 +1666,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               textDecorationLine: "underline"
                             }}
                           >
-                            {"Helpdesk"}
+                            {"Hotline IT / Helpdesk"}
                           </span>
                         </React.Fragment>
                       </div>
