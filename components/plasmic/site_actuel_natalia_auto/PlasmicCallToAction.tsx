@@ -59,7 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import CloudIamNavigationLinkPrimaryCta from "../../CloudIamNavigationLinkPrimaryCta"; // plasmic-import: HiVfgKFJx8Th/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -67,6 +67,9 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicCallToAction.module.css"; // plasmic-import: 1u9NEqdr08SU/css
+
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
 
 createPlasmicElementProxy;
 
@@ -82,9 +85,9 @@ export const PlasmicCallToAction__ArgProps = new Array<ArgPropType>();
 export type PlasmicCallToAction__OverridesType = {
   callToAction?: Flex__<"section">;
   freeBox?: Flex__<"div">;
-  cloudIamNavigationLinkPrimaryCta?: Flex__<
-    typeof CloudIamNavigationLinkPrimaryCta
-  >;
+  h3?: Flex__<"h3">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  buttonPrimary?: Flex__<typeof ButtonPrimary>;
   text?: Flex__<"div">;
 };
 
@@ -156,11 +159,13 @@ function PlasmicCallToAction__RenderFunc(props: {
         className={classNames(projectcss.all, sty.freeBox)}
       >
         <h3
+          data-plasmic-name={"h3"}
+          data-plasmic-override={overrides.h3}
           className={classNames(
             projectcss.all,
             projectcss.h3,
             projectcss.__wab_text,
-            sty.h3__dd3Ko
+            sty.h3
           )}
         >
           {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -187,53 +192,40 @@ function PlasmicCallToAction__RenderFunc(props: {
             </React.Fragment>
           )}
         </h3>
-        <CloudIamNavigationLinkPrimaryCta
-          data-plasmic-name={"cloudIamNavigationLinkPrimaryCta"}
-          data-plasmic-override={overrides.cloudIamNavigationLinkPrimaryCta}
-          className={classNames(
-            "__wab_instance",
-            sty.cloudIamNavigationLinkPrimaryCta
-          )}
-          dataTrkciamAction={``}
-          dataTrkciamCategory={``}
-          dataTrkciamName={``}
-          destination={`/contact`}
-          openInNewTab={undefined}
+        <PlasmicLink__
+          data-plasmic-name={"link"}
+          data-plasmic-override={overrides.link}
+          className={classNames(projectcss.all, projectcss.a, sty.link)}
+          component={Link}
+          href={`/contact`}
+          platform={"nextjs"}
         >
-          <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text
-            )}
-          >
-            <React.Fragment>
-              <React.Fragment>{""}</React.Fragment>
-              {
-                <h3
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3__lplAb
-                  )}
-                >
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                    >
-                      {"R\u00e9server une d\u00e9mo"}
-                    </span>
-                  </React.Fragment>
-                </h3>
-              }
-              <React.Fragment>{""}</React.Fragment>
-            </React.Fragment>
-          </div>
-        </CloudIamNavigationLinkPrimaryCta>
+          <ButtonPrimary
+            data-plasmic-name={"buttonPrimary"}
+            data-plasmic-override={overrides.buttonPrimary}
+            className={classNames("__wab_instance", sty.buttonPrimary)}
+            label={
+              <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    {"R\u00e9server une d\u00e9mo"}
+                  </span>
+                </React.Fragment>
+              </div>
+            }
+          />
+        </PlasmicLink__>
       </div>
     </section>
   ) as React.ReactElement | null;
@@ -243,14 +235,15 @@ const PlasmicDescendants = {
   callToAction: [
     "callToAction",
     "freeBox",
-    "cloudIamNavigationLinkPrimaryCta",
+    "h3",
+    "link",
+    "buttonPrimary",
     "text"
   ],
-  freeBox: ["freeBox", "cloudIamNavigationLinkPrimaryCta", "text"],
-  cloudIamNavigationLinkPrimaryCta: [
-    "cloudIamNavigationLinkPrimaryCta",
-    "text"
-  ],
+  freeBox: ["freeBox", "h3", "link", "buttonPrimary", "text"],
+  h3: ["h3"],
+  link: ["link", "buttonPrimary", "text"],
+  buttonPrimary: ["buttonPrimary", "text"],
   text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -259,7 +252,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   callToAction: "section";
   freeBox: "div";
-  cloudIamNavigationLinkPrimaryCta: typeof CloudIamNavigationLinkPrimaryCta;
+  h3: "h3";
+  link: "a";
+  buttonPrimary: typeof ButtonPrimary;
   text: "div";
 };
 
@@ -326,9 +321,9 @@ export const PlasmicCallToAction = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    cloudIamNavigationLinkPrimaryCta: makeNodeComponent(
-      "cloudIamNavigationLinkPrimaryCta"
-    ),
+    h3: makeNodeComponent("h3"),
+    link: makeNodeComponent("link"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicCallToAction

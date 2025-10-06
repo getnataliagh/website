@@ -44,26 +44,21 @@
     font-size: var(--token-zGJggj0WBmcV);
   }
 }
-.cloudIamNavigationLinkPrimaryCta:global(.__wab_instance) {
-  margin: 0px;
+.link {
+  display: flex;
 }
-@media (min-width: 0px) and (max-width: 930px) {
-  .cloudIamNavigationLinkPrimaryCta:global(.__wab_instance) {
-    width: 310px;
-  }
+.buttonPrimary:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__fvKcm {
+  position: relative;
+  height: 1em;
 }
 .text {
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--token-wkzkOeC3ZWSV);
-  font-weight: 700;
-  font-style: normal;
-  color: #1e3a8a;
-  text-align: left;
-  text-transform: none;
-  line-height: var(--token-hk3LAvZuPnRb);
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
+  white-space: pre;
+  color: #eeeeee;
+}
+.svg__w2TCw {
+  position: relative;
+  height: 1em;
 }

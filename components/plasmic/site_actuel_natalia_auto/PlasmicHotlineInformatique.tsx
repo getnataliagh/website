@@ -66,7 +66,7 @@ import CetaitAvant from "../../CetaitAvant"; // plasmic-import: fEr4e8g2uhL6/com
 import ReponseInstantanee from "../../ReponseInstantanee"; // plasmic-import: D59wyvXukSBr/component
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import Compatibilite from "../../Compatibilite"; // plasmic-import: VS65WCIbfT4k/component
-import CasDusage from "../../CasDusage"; // plasmic-import: DEERfIH_GZWU/component
+import Cas from "../../Cas"; // plasmic-import: x2T3E4Kio9_Z/component
 import CallToAction from "../../CallToAction"; // plasmic-import: 1u9NEqdr08SU/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
@@ -114,9 +114,11 @@ export type PlasmicHotlineInformatique__OverridesType = {
   foreground4?: Flex__<"div">;
   foreground5?: Flex__<"div">;
   compatibilite?: Flex__<typeof Compatibilite>;
-  casDusage?: Flex__<typeof CasDusage>;
   foreground?: Flex__<"div">;
   foreground2?: Flex__<"div">;
+  casUsage?: Flex__<"section">;
+  titre?: Flex__<"div">;
+  cas?: Flex__<"div">;
   callToAction?: Flex__<typeof CallToAction>;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
@@ -753,7 +755,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                 displayHeight={
                   hasVariant(globalVariants, "mobile", "mobileOnly")
                     ? "145px"
-                    : "284px"
+                    : "350px"
                 }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
@@ -2599,12 +2601,6 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <CasDusage
-              data-plasmic-name={"casDusage"}
-              data-plasmic-override={overrides.casDusage}
-              className={classNames("__wab_instance", sty.casDusage)}
-            />
-
             <div
               className={classNames(projectcss.all, sty.freeBox__rZeu1)}
               id={"casdusage"}
@@ -3025,6 +3021,135 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                 </div>
               </div>
             </div>
+            <section
+              data-plasmic-name={"casUsage"}
+              data-plasmic-override={overrides.casUsage}
+              className={classNames(projectcss.all, sty.casUsage)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__gsn5W)}>
+                <div
+                  data-plasmic-name={"titre"}
+                  data-plasmic-override={overrides.titre}
+                  className={classNames(projectcss.all, sty.titre)}
+                >
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__sBwKz
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {"Cas d'usage en concession"}
+                      </span>
+                    </React.Fragment>
+                  </h2>
+                  <h4
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h4,
+                      projectcss.__wab_text,
+                      sty.h4___8M2Z
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "L'objectif n'est pas de remplacer l'humain en concession mais de l'"
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {
+                          "assister pour qu'il se concentre sur les missions \u00e0 forte valeur ajout\u00e9e"
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          ". Ici avec ces 4 cas d'usage, nous r\u00e9pondons \u00e0 "
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {"80% des besoins en appels entrants en concessions."}
+                      </span>
+                    </React.Fragment>
+                  </h4>
+                </div>
+                <div
+                  data-plasmic-name={"cas"}
+                  data-plasmic-override={overrides.cas}
+                  className={classNames(projectcss.all, sty.cas)}
+                >
+                  <Cas
+                    className={classNames("__wab_instance", sty.cas__ySrX)}
+                  />
+
+                  <Cas
+                    className={classNames("__wab_instance", sty.cas__k66Qu)}
+                    description={
+                      "Natalia est disponible 24h/24, 7j/7, elle prend donc en charge 100% des demandes entrants y compris les leads. Durant l'\u00e9change, elle qualifie le besoin et renvoie les informations au service concern\u00e9."
+                    }
+                    jaune={true}
+                    titre={"Qualifier les leads entrants"}
+                  >
+                    <MoneyCheckDollarPenSvgrepoComSvgIcon
+                      className={classNames(projectcss.all, sty.svg__p5B46)}
+                      role={"img"}
+                    />
+                  </Cas>
+                  <Cas
+                    className={classNames("__wab_instance", sty.cas___102Ao)}
+                    description={
+                      "20% des appels en concession sont des appels \u00e0 transf\u00e9rer, cela prend du temps, casse la productivit\u00e9 de vos \u00e9quipes et n'apporte pas de r\u00e9elle valeur ajout\u00e9e."
+                    }
+                    titre={"Transfert d'appels"}
+                  >
+                    <Icon10Icon
+                      className={classNames(projectcss.all, sty.svg__cJp3E)}
+                      role={"img"}
+                    />
+                  </Cas>
+                  <Cas
+                    className={classNames("__wab_instance", sty.cas__vnCbT)}
+                    description={
+                      "R\u00e9ponse aux demandes r\u00e9currentes \u00e0 partir de votre base de connaissance. Natalia s'enrichit des \u00e9changes dans le temps pour \u00eatre de plus en plus pertinente."
+                    }
+                    jaune={true}
+                    titre={"Demandes g\u00e9n\u00e9rales"}
+                  >
+                    <Icon11Icon
+                      className={classNames(projectcss.all, sty.svg___5BgF4)}
+                      role={"img"}
+                    />
+                  </Cas>
+                </div>
+              </div>
+            </section>
             <CallToAction
               data-plasmic-name={"callToAction"}
               data-plasmic-override={overrides.callToAction}
@@ -3203,9 +3328,11 @@ const PlasmicDescendants = {
     "foreground4",
     "foreground5",
     "compatibilite",
-    "casDusage",
     "foreground",
     "foreground2",
+    "casUsage",
+    "titre",
+    "cas",
     "callToAction",
     "youTube",
     "pricingSection",
@@ -3227,9 +3354,11 @@ const PlasmicDescendants = {
     "foreground4",
     "foreground5",
     "compatibilite",
-    "casDusage",
     "foreground",
     "foreground2",
+    "casUsage",
+    "titre",
+    "cas",
     "callToAction",
     "youTube",
     "pricingSection",
@@ -3249,9 +3378,11 @@ const PlasmicDescendants = {
   foreground4: ["foreground4"],
   foreground5: ["foreground5"],
   compatibilite: ["compatibilite"],
-  casDusage: ["casDusage"],
   foreground: ["foreground"],
   foreground2: ["foreground2"],
+  casUsage: ["casUsage", "titre", "cas"],
+  titre: ["titre"],
+  cas: ["cas"],
   callToAction: ["callToAction"],
   youTube: ["youTube"],
   pricingSection: ["pricingSection"],
@@ -3277,9 +3408,11 @@ type NodeDefaultElementType = {
   foreground4: "div";
   foreground5: "div";
   compatibilite: typeof Compatibilite;
-  casDusage: typeof CasDusage;
   foreground: "div";
   foreground2: "div";
+  casUsage: "section";
+  titre: "div";
+  cas: "div";
   callToAction: typeof CallToAction;
   youTube: typeof YouTube;
   pricingSection: typeof Section;
@@ -3363,9 +3496,11 @@ export const PlasmicHotlineInformatique = Object.assign(
     foreground4: makeNodeComponent("foreground4"),
     foreground5: makeNodeComponent("foreground5"),
     compatibilite: makeNodeComponent("compatibilite"),
-    casDusage: makeNodeComponent("casDusage"),
     foreground: makeNodeComponent("foreground"),
     foreground2: makeNodeComponent("foreground2"),
+    casUsage: makeNodeComponent("casUsage"),
+    titre: makeNodeComponent("titre"),
+    cas: makeNodeComponent("cas"),
     callToAction: makeNodeComponent("callToAction"),
     youTube: makeNodeComponent("youTube"),
     pricingSection: makeNodeComponent("pricingSection"),

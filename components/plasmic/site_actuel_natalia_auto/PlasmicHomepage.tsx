@@ -1121,7 +1121,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? `/hotline-informatique`
-                          : `/hotline-informatique`
+                          : `/contact`
                       }
                       platform={"nextjs"}
                     >
