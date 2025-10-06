@@ -61,7 +61,13 @@ import {
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import CloudIamNavigationLinkPrimaryCta from "../../CloudIamNavigationLinkPrimaryCta"; // plasmic-import: HiVfgKFJx8Th/component
+import Douleur from "../../Douleur"; // plasmic-import: zA_FXdXmlcww/component
+import CetaitAvant from "../../CetaitAvant"; // plasmic-import: fEr4e8g2uhL6/component
+import ReponseInstantanee from "../../ReponseInstantanee"; // plasmic-import: D59wyvXukSBr/component
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
+import Compatibilite from "../../Compatibilite"; // plasmic-import: VS65WCIbfT4k/component
+import CasDusage from "../../CasDusage"; // plasmic-import: DEERfIH_GZWU/component
+import CallToAction from "../../CallToAction"; // plasmic-import: 1u9NEqdr08SU/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -92,17 +98,26 @@ type ArgPropType = keyof PlasmicHotlineInformatique__ArgsType;
 export const PlasmicHotlineInformatique__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHotlineInformatique__OverridesType = {
-  root?: Flex__<"div">;
-  headerHeroSection?: Flex__<"div">;
+  body?: Flex__<"div">;
+  wrapper?: Flex__<"section">;
   navbar?: Flex__<typeof Navbar>;
+  accueil?: Flex__<"section">;
+  headerHeroSection?: Flex__<"div">;
   h1?: Flex__<"h1">;
+  image?: Flex__<"section">;
+  douleur?: Flex__<typeof Douleur>;
+  cetaitAvant?: Flex__<typeof CetaitAvant>;
   caCetaitAvant?: Flex__<"div">;
+  reponseInstantanee?: Flex__<typeof ReponseInstantanee>;
   avantages?: Flex__<"section">;
   productSection?: Flex__<typeof Section>;
   foreground4?: Flex__<"div">;
   foreground5?: Flex__<"div">;
+  compatibilite?: Flex__<typeof Compatibilite>;
+  casDusage?: Flex__<typeof CasDusage>;
   foreground?: Flex__<"div">;
   foreground2?: Flex__<"div">;
+  callToAction?: Flex__<typeof CallToAction>;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
@@ -200,8 +215,8 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"body"}
+          data-plasmic-override={overrides.body}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -210,13 +225,13 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            sty.root
+            sty.body
           )}
         >
-          <div
-            data-plasmic-name={"headerHeroSection"}
-            data-plasmic-override={overrides.headerHeroSection}
-            className={classNames(projectcss.all, sty.headerHeroSection)}
+          <section
+            data-plasmic-name={"wrapper"}
+            data-plasmic-override={overrides.wrapper}
+            className={classNames(projectcss.all, sty.wrapper)}
           >
             <Navbar
               data-plasmic-name={"navbar"}
@@ -224,8 +239,16 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__wU5Oo)}>
-              <div className={classNames(projectcss.all, sty.freeBox__lzGt)}>
+            <section
+              data-plasmic-name={"accueil"}
+              data-plasmic-override={overrides.accueil}
+              className={classNames(projectcss.all, sty.accueil)}
+            >
+              <div
+                data-plasmic-name={"headerHeroSection"}
+                data-plasmic-override={overrides.headerHeroSection}
+                className={classNames(projectcss.all, sty.headerHeroSection)}
+              >
                 <div
                   className={classNames(projectcss.all, sty.freeBox___1XBvT)}
                 >
@@ -239,7 +262,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       sty.h1
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
                       <React.Fragment>
                         <span
                           className={
@@ -279,7 +302,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       sty.text__m2Aqw
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
                       <React.Fragment>
                         <span
                           className={
@@ -334,7 +357,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             >
                               {hasVariant(
                                 globalVariants,
-                                "screen",
+                                "mobile",
                                 "mobileOnly"
                               ) ? (
                                 <React.Fragment>
@@ -387,7 +410,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             >
                               {hasVariant(
                                 globalVariants,
-                                "screen",
+                                "mobile",
                                 "mobileOnly"
                               ) ? (
                                 <React.Fragment>
@@ -440,7 +463,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             >
                               {hasVariant(
                                 globalVariants,
-                                "screen",
+                                "mobile",
                                 "mobileOnly"
                               ) ? (
                                 <React.Fragment>
@@ -655,61 +678,56 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       </React.Fragment>
                     )}
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__wxeRo)}
+                  <CloudIamNavigationLinkPrimaryCta
+                    className={classNames(
+                      "__wab_instance",
+                      sty.cloudIamNavigationLinkPrimaryCta__zaaRl
+                    )}
+                    dataTrkciamAction={``}
+                    dataTrkciamCategory={``}
+                    dataTrkciamName={``}
+                    destination={`/contact`}
+                    openInNewTab={undefined}
                   >
-                    <CloudIamNavigationLinkPrimaryCta
+                    <div
                       className={classNames(
-                        "__wab_instance",
-                        sty.cloudIamNavigationLinkPrimaryCta__zaaRl
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__f7YW
                       )}
-                      colorMode={"dark"}
-                      dataTrkciamAction={``}
-                      dataTrkciamCategory={``}
-                      dataTrkciamName={``}
-                      destination={`/contact`}
-                      openInNewTab={undefined}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__f7YW
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                          >
-                            {"R\u00e9server une d\u00e9mo"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </CloudIamNavigationLinkPrimaryCta>
-                  </div>
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                        >
+                          {"R\u00e9server une d\u00e9mo"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </CloudIamNavigationLinkPrimaryCta>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__w7Qbq)}>
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__wjsyR)}
                     displayHeight={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "300px"
-                        : "600px"
+                        : "auto"
                     }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"none"}
                     displayMinHeight={"0"}
                     displayMinWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "0px"
-                        : "661px"
+                        : "0"
                     }
                     displayWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "100%"
                         : "100%"
                     }
@@ -723,866 +741,138 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-          <section className={classNames(projectcss.all, sty.section___8VZyR)}>
-            <PlasmicImg__
-              alt={""}
-              className={classNames(sty.img__g1TpE)}
-              displayHeight={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "145px"
-                  : "284px"
-              }
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage20Aout2025103615Png.png",
-                fullWidth: 1536,
-                fullHeight: 1024,
-                aspectRatio: undefined
-              }}
-            />
-          </section>
-          <section className={classNames(projectcss.all, sty.section__z8CXc)}>
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2__wMeFu
-              )}
+            </section>
+            <section
+              data-plasmic-name={"image"}
+              data-plasmic-override={overrides.image}
+              className={classNames(projectcss.all, sty.image)}
             >
-              {hasVariant(globalVariants, "screen", "mobileOnly") ? (
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "#FF9900" }}
-                  >
-                    {"30%"}
-                  </span>
-                  <React.Fragment>{""}</React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                  >
-                    {" des appels ne sont "}
-                  </span>
-                  <React.Fragment>{""}</React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{
-                      color: "var(--token-okZqvxZ_nx_g)",
-                      textDecorationLine: "underline"
-                    }}
-                  >
-                    {"pas pris en charge"}
-                  </span>
-                </React.Fragment>
-              ) : (
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "#FFB000" }}
-                  >
-                    {"30%"}
-                  </span>
-                  <React.Fragment>{""}</React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                  >
-                    {" des appels ne sont "}
-                  </span>
-                  <React.Fragment>{""}</React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{
-                      color: "var(--token-okZqvxZ_nx_g)",
-                      textDecorationLine: "underline"
-                    }}
-                  >
-                    {"pas pris en charge"}
-                  </span>
-                </React.Fragment>
-              )}
-            </h2>
-            <div className={classNames(projectcss.all, sty.freeBox__r4Hjx)}>
-              <div
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__g1TpE)}
+                displayHeight={
+                  hasVariant(globalVariants, "mobile", "mobileOnly")
+                    ? "145px"
+                    : "284px"
+                }
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage20Aout2025103615Png.png",
+                  fullWidth: 1536,
+                  fullHeight: 1024,
+                  aspectRatio: undefined
+                }}
+              />
+            </section>
+            <Douleur
+              data-plasmic-name={"douleur"}
+              data-plasmic-override={overrides.douleur}
+              className={classNames("__wab_instance", sty.douleur)}
+            />
+
+            <CetaitAvant
+              data-plasmic-name={"cetaitAvant"}
+              data-plasmic-override={overrides.cetaitAvant}
+              className={classNames("__wab_instance", sty.cetaitAvant)}
+            />
+
+            <section className={classNames(projectcss.all, sty.section__z8CXc)}>
+              <h2
                 className={classNames(
                   projectcss.all,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.text__nuSdm
+                  sty.h2__wMeFu
                 )}
               >
-                {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{
-                        fontWeight: 700,
-                        color: "var(--token-okZqvxZ_nx_g)"
-                      }}
+                      style={{ color: "#FF9900" }}
                     >
-                      {
-                        "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. \u00a0"
-                      }
+                      {"30%"}
                     </span>
-                    <React.Fragment>{"\n"}</React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                     >
-                      {
-                        "\u00a0\u00a0Chaque appel manqu\u00e9 = une vente potentielle perdue et une image d\u00e9grad\u00e9e"
-                      }
+                      {" des appels ne sont "}
+                    </span>
+                    <React.Fragment>{""}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{
+                        color: "var(--token-okZqvxZ_nx_g)",
+                        textDecorationLine: "underline"
+                      }}
+                    >
+                      {"pas pris en charge"}
                     </span>
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#FFB000" }}
+                    >
+                      {"30%"}
+                    </span>
+                    <React.Fragment>{""}</React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                     >
-                      {
-                        "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. "
-                      }
+                      {" des appels ne sont "}
                     </span>
-                    <React.Fragment>{"\n"}</React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{
-                        fontWeight: 700,
-                        color: "var(--token-okZqvxZ_nx_g)"
+                        color: "var(--token-okZqvxZ_nx_g)",
+                        textDecorationLine: "underline"
                       }}
                     >
-                      {
-                        "Chaque appel manqu\u00e9 = une vente potentielle perdue et une image d\u00e9grad\u00e9e"
-                      }
+                      {"pas pris en charge"}
                     </span>
                   </React.Fragment>
                 )}
-              </div>
-            </div>
-          </section>
-          <div className={classNames(projectcss.all, sty.freeBox__s86E7)}>
-            <div className={classNames(projectcss.all, sty.freeBox__iu5NU)}>
-              <div className={classNames(projectcss.all, sty.freeBox__kXvKu)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__ozGl3)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"45%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/site_actuel_natalia_auto/images/callDroppedSvgrepoComSvg2.svg",
-                    fullWidth: 800,
-                    fullHeight: 800,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div className={classNames(projectcss.all, sty.freeBox__tUy7I)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___8ZVrs
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h4
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h4,
-                            projectcss.__wab_text,
-                            sty.h4__ovWfe
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#FFB000" }}
-                            >
-                              {"1 min"}
-                            </span>
-                          </React.Fragment>
-                        </h4>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__rvTpZ)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bpL9M
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"le temps moyen avant de raccrocher"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__wprlc)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___3UwDh)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"50%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/site_actuel_natalia_auto/images/personSvgrepoComSvg2.svg",
-                    fullWidth: 800,
-                    fullHeight: 800,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div className={classNames(projectcss.all, sty.freeBox__q8Bd3)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___7TxFa
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h4
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h4,
-                            projectcss.__wab_text,
-                            sty.h4__xUwhe
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#FFB000" }}
-                            >
-                              {"-21 leads"}
-                            </span>
-                          </React.Fragment>
-                        </h4>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__c084Y)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__yyCiz
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"perdus en moyenne / concession / mois"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__jqdyv)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__vciqE)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"50%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/site_actuel_natalia_auto/images/callMedicineRoundedSvgrepoComSvg2.svg",
-                    fullWidth: 800,
-                    fullHeight: 800,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div className={classNames(projectcss.all, sty.freeBox__owERd)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__hHfy7
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h4
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h4,
-                            projectcss.__wab_text,
-                            sty.h4__iJ4Qr
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#FFB000" }}
-                            >
-                              {"-30%"}
-                            </span>
-                          </React.Fragment>
-                        </h4>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___44AZd)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__sl2Bu
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"appels manqu\u00e9s sur les heures ferm\u00e9es"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__sdfAx)}>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1ODfd
-                )}
-              >
-                <React.Fragment>
-                  <React.Fragment>{""}</React.Fragment>
-                  {
-                    <h4
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h4,
-                        projectcss.__wab_text,
-                        sty.h4__aCl1T
-                      )}
-                    >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {"Une perte de business directe"}
-                        </span>
-                      </React.Fragment>
-                    </h4>
-                  }
-                  <React.Fragment>{""}</React.Fragment>
-                </React.Fragment>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__mKrZ5)}>
-                <div className={classNames(projectcss.all, sty.freeBox__jPy3P)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__alAw)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"25%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/greenCircleSvgrepoComSvg.svg",
-                      fullWidth: 800,
-                      fullHeight: 800,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__hvn2C)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bqJnp
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#1E3A8A" }}
-                      >
-                        {"1 000 appels"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__zCmQd)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___842Ha
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"re\u00e7us / pdv / mois"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__p3Od)}>
-                <div className={classNames(projectcss.all, sty.freeBox__v8Md3)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__hwuPn)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"25%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/blueCircleSvgrepoComSvg.svg",
-                      fullWidth: 800,
-                      fullHeight: 800,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__bTiE)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__uFrfn
-                    )}
-                  >
-                    {"300 appels"}
-                  </div>
-                </div>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___24XuP)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__n51ZU
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"non trait\u00e9s"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__d66Y)}>
-                <div className={classNames(projectcss.all, sty.freeBox__d1O5Q)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__teFfp)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"25%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/yellowCircleSvgrepoComSvg.svg",
-                      fullWidth: 800,
-                      fullHeight: 800,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__tjWl)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___4RrzH
-                    )}
-                  >
-                    {"21 leads"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__cQeg1)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___4TZuz
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"abandonn\u00e9s  (7%)"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__qjcUt)}>
-                <div className={classNames(projectcss.all, sty.freeBox__cH281)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__luMx)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"25%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/orangeCircleSvgrepoComSvg.svg",
-                      fullWidth: 800,
-                      fullHeight: 800,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__ovgCc)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__g76Rs
-                    )}
-                  >
-                    {"4 ventes"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__nsfPy)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___7KhH
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          fontWeight: 700,
-                          color: "var(--token-okZqvxZ_nx_g)"
-                        }}
-                      >
-                        {"perdus (19%)"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__f2YhY)}>
-                <div className={classNames(projectcss.all, sty.freeBox__oP6P)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img___9GL14)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"25%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/redCircleSvgrepoComSvg.svg",
-                      fullWidth: 800,
-                      fullHeight: 800,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__yitzq)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__nQrSu
-                    )}
-                  >
-                    {"8 000\u20ac"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__tqYm5)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bfYIc
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"nets perdus / mois"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <section className={classNames(projectcss.all, sty.section__ibLnR)}>
-              <div
-                data-plasmic-name={"caCetaitAvant"}
-                data-plasmic-override={overrides.caCetaitAvant}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.caCetaitAvant
-                )}
-              >
-                <React.Fragment>
-                  <React.Fragment>{""}</React.Fragment>
-                  {
-                    <h3
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h3,
-                        projectcss.__wab_text,
-                        sty.h3__pbta1
-                      )}
-                    >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {"Mais \u00e7a c'\u00e9tait avant Natalia..."}
-                        </span>
-                      </React.Fragment>
-                    </h3>
-                  }
-                  <React.Fragment>{""}</React.Fragment>
-                </React.Fragment>
-              </div>
-              <CloudIamNavigationLinkPrimaryCta
-                className={classNames(
-                  "__wab_instance",
-                  sty.cloudIamNavigationLinkPrimaryCta__oKmaO
-                )}
-                colorMode={"dark"}
-                dataTrkciamAction={``}
-                dataTrkciamCategory={``}
-                dataTrkciamName={``}
-                destination={`/calculateur`}
-                openInNewTab={undefined}
-              >
+              </h2>
+              <div className={classNames(projectcss.all, sty.freeBox__r4Hjx)}>
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___32VnA
+                    sty.text__nuSdm
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                  {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
                     <React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
                       >
-                        {"Calculateur ROI"}
+                        {
+                          "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. \u00a0"
+                        }
                       </span>
-                    </React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                      >
-                        {"Calculateur ROI"}
-                      </span>
-                    </React.Fragment>
-                  )}
-                </div>
-              </CloudIamNavigationLinkPrimaryCta>
-            </section>
-          </div>
-          <section
-            data-plasmic-name={"avantages"}
-            data-plasmic-override={overrides.avantages}
-            className={classNames(projectcss.all, sty.avantages)}
-          >
-            <Section
-              data-plasmic-name={"productSection"}
-              data-plasmic-override={overrides.productSection}
-              className={classNames("__wab_instance", sty.productSection)}
-              size={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "mobile"
-                  : undefined
-              }
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__mrryn)}>
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__pz11
-                  )}
-                >
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                    >
-                      {"R\u00e9ponse "}
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#FFB000" }}
-                    >
-                      {"Instantan\u00e9e"}
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                    >
-                      {" Qualification "}
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#FFB000" }}
-                    >
-                      {"Intelligente"}
-                    </span>
-                  </React.Fragment>
-                </h2>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__p200N
-                  )}
-                >
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                    >
-                      {
-                        "Natalia prend vos appels, qualifie les demandes et vos leads pendant que vos \u00e9quipes se concentrent sur l'essentiel."
-                      }
-                    </span>
-                  </React.Fragment>
-                </div>
-              </div>
-            </Section>
-            <div
-              className={classNames(projectcss.all, sty.freeBox__rmFrl)}
-              id={"avantages"}
-            >
-              <div
-                data-plasmic-name={"foreground4"}
-                data-plasmic-override={overrides.foreground4}
-                className={classNames(projectcss.all, sty.foreground4)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__xLySc
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
-                    <React.Fragment>
+                      <React.Fragment>{"\n"}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                       >
-                        {"Avantages"}
+                        {
+                          "\u00a0\u00a0Chaque appel manqu\u00e9 = une vente potentielle perdue et une image d\u00e9grad\u00e9e"
+                        }
                       </span>
                     </React.Fragment>
                   ) : (
@@ -1591,82 +881,945 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                       >
-                        {"Avantages"}
+                        {
+                          "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. "
+                        }
+                      </span>
+                      <React.Fragment>{"\n"}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {
+                          "Chaque appel manqu\u00e9 = une vente potentielle perdue et une image d\u00e9grad\u00e9e"
+                        }
                       </span>
                     </React.Fragment>
                   )}
                 </div>
               </div>
-              <div
-                data-plasmic-name={"foreground5"}
-                data-plasmic-override={overrides.foreground5}
-                className={classNames(projectcss.all, sty.foreground5)}
-              >
-                <div className={classNames(projectcss.all, sty.columns__cmlo)}>
+              <div className={classNames(projectcss.all, sty.freeBox__sdfAx)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___1ODfd
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4__aCl1T
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          >
+                            {"Une perte de business directe"}
+                          </span>
+                        </React.Fragment>
+                      </h4>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__mKrZ5)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__xhJx9)}
+                    className={classNames(projectcss.all, sty.freeBox__jPy3P)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__alAw)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"25%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/greenCircleSvgrepoComSvg.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hvn2C)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__iSk3X)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bqJnp
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#1E3A8A" }}
+                        >
+                          {"1 000 appels"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__zCmQd)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___842Ha
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{
+                            fontWeight: 700,
+                            color: "var(--token-okZqvxZ_nx_g)"
+                          }}
+                        >
+                          {"re\u00e7us / pdv / mois"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__p3Od)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__v8Md3)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__hwuPn)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"25%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/blueCircleSvgrepoComSvg.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__bTiE)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__uFrfn
+                      )}
+                    >
+                      {"300 appels"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___24XuP)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__n51ZU
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{
+                            fontWeight: 700,
+                            color: "var(--token-okZqvxZ_nx_g)"
+                          }}
+                        >
+                          {"non trait\u00e9s"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__d66Y)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__d1O5Q)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__teFfp)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"25%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/yellowCircleSvgrepoComSvg.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__tjWl)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4RrzH
+                      )}
+                    >
+                      {"21 leads"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__cQeg1)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4TZuz
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{
+                            fontWeight: 700,
+                            color: "var(--token-okZqvxZ_nx_g)"
+                          }}
+                        >
+                          {"abandonn\u00e9s  (7%)"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__qjcUt)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__cH281)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__luMx)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"25%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/orangeCircleSvgrepoComSvg.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ovgCc)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__g76Rs
+                      )}
+                    >
+                      {"4 ventes"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nsfPy)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7KhH
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{
+                            fontWeight: 700,
+                            color: "var(--token-okZqvxZ_nx_g)"
+                          }}
+                        >
+                          {"perdus (19%)"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__f2YhY)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oP6P)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img___9GL14)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"25%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/redCircleSvgrepoComSvg.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yitzq)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__nQrSu
+                      )}
+                    >
+                      {"8 000\u20ac"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__tqYm5)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bfYIc
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"nets perdus / mois"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className={classNames(projectcss.all, sty.section__gUlI)}>
+              <div className={classNames(projectcss.all, sty.freeBox__s86E7)}>
+                <div className={classNames(projectcss.all, sty.freeBox__iu5NU)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__kXvKu)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__ozGl3)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"45%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/callDroppedSvgrepoComSvg2.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__tUy7I)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__jpHQ
+                          projectcss.__wab_text,
+                          sty.text___8ZVrs
                         )}
                       >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__zBdS)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/_247Png.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h4
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h4,
+                                projectcss.__wab_text,
+                                sty.h4__ovWfe
+                              )}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#FFB000" }}
+                                >
+                                  {"1 min"}
+                                </span>
+                              </React.Fragment>
+                            </h4>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
                       </div>
-                      {false ? (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__vlBah
-                          )}
-                        >
-                          <Icon8Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___9Ci7W
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                      ) : null}
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__rvTpZ)}
+                    >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__wkjO5
+                          projectcss.__wab_text,
+                          sty.text__bpL9M
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              fontWeight: 700,
+                              color: "var(--token-okZqvxZ_nx_g)"
+                            }}
+                          >
+                            {"le temps moyen avant de raccrocher"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__wprlc)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img___3UwDh)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"50%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/personSvgrepoComSvg2.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__q8Bd3)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7TxFa
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h4
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h4,
+                                projectcss.__wab_text,
+                                sty.h4__xUwhe
+                              )}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#FFB000" }}
+                                >
+                                  {"-21 leads"}
+                                </span>
+                              </React.Fragment>
+                            </h4>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__c084Y)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yyCiz
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              fontWeight: 700,
+                              color: "var(--token-okZqvxZ_nx_g)"
+                            }}
+                          >
+                            {"perdus en moyenne / concession / mois"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jqdyv)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__vciqE)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"50%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/site_actuel_natalia_auto/images/callMedicineRoundedSvgrepoComSvg2.svg",
+                        fullWidth: 800,
+                        fullHeight: 800,
+                        aspectRatio: undefined
+                      }}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__owERd)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__hHfy7
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h4
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h4,
+                                projectcss.__wab_text,
+                                sty.h4__iJ4Qr
+                              )}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#FFB000" }}
+                                >
+                                  {"-30%"}
+                                </span>
+                              </React.Fragment>
+                            </h4>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___44AZd
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__sl2Bu
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{
+                              fontWeight: 700,
+                              color: "var(--token-okZqvxZ_nx_g)"
+                            }}
+                          >
+                            {"appels manqu\u00e9s sur les heures ferm\u00e9es"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section
+                  className={classNames(projectcss.all, sty.section__ibLnR)}
+                >
+                  <div
+                    data-plasmic-name={"caCetaitAvant"}
+                    data-plasmic-override={overrides.caCetaitAvant}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.caCetaitAvant
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__pbta1
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Mais \u00e7a c'\u00e9tait avant Natalia..."}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <CloudIamNavigationLinkPrimaryCta
+                    className={classNames(
+                      "__wab_instance",
+                      sty.cloudIamNavigationLinkPrimaryCta__oKmaO
+                    )}
+                    dataTrkciamAction={``}
+                    dataTrkciamCategory={``}
+                    dataTrkciamName={``}
+                    destination={`/calculateur`}
+                    openInNewTab={undefined}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___32VnA
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                          >
+                            {"Calculateur ROI"}
+                          </span>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                          >
+                            {"Calculateur ROI"}
+                          </span>
+                        </React.Fragment>
+                      )}
+                    </div>
+                  </CloudIamNavigationLinkPrimaryCta>
+                </section>
+              </div>
+            </section>
+            <ReponseInstantanee
+              data-plasmic-name={"reponseInstantanee"}
+              data-plasmic-override={overrides.reponseInstantanee}
+              className={classNames("__wab_instance", sty.reponseInstantanee)}
+            />
+
+            <section
+              data-plasmic-name={"avantages"}
+              data-plasmic-override={overrides.avantages}
+              className={classNames(projectcss.all, sty.avantages)}
+            >
+              <Section
+                data-plasmic-name={"productSection"}
+                data-plasmic-override={overrides.productSection}
+                className={classNames("__wab_instance", sty.productSection)}
+                size={
+                  hasVariant(globalVariants, "mobile", "mobileOnly")
+                    ? "mobile"
+                    : undefined
+                }
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__mrryn)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__pz11
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {"R\u00e9ponse "}
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#FFB000" }}
+                      >
+                        {"Instantan\u00e9e"}
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {" Qualification "}
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#FFB000" }}
+                      >
+                        {"Intelligente"}
+                      </span>
+                    </React.Fragment>
+                  </h2>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__p200N
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "Natalia prend vos appels, qualifie les demandes et vos leads pendant que vos \u00e9quipes se concentrent sur l'essentiel."
+                        }
+                      </span>
+                    </React.Fragment>
+                  </div>
+                </div>
+              </Section>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__rmFrl)}
+                id={"avantages"}
+              >
+                <div
+                  data-plasmic-name={"foreground4"}
+                  data-plasmic-override={overrides.foreground4}
+                  className={classNames(projectcss.all, sty.foreground4)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__xLySc
+                    )}
+                  >
+                    {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                        >
+                          {"Avantages"}
+                        </span>
+                      </React.Fragment>
+                    ) : (
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                        >
+                          {"Avantages"}
+                        </span>
+                      </React.Fragment>
+                    )}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"foreground5"}
+                  data-plasmic-override={overrides.foreground5}
+                  className={classNames(projectcss.all, sty.foreground5)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.columns__cmlo)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.column__xhJx9)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__iSk3X
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__whZwD
+                            sty.freeBox__jpHQ
                           )}
                         >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__zBdS)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/_247Png.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__vlBah
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg___9Ci7W
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__wkjO5
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__whZwD
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {"Disponible 24h/24"}
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{
+                                    fontWeight: 700,
+                                    color: "var(--token-okZqvxZ_nx_g)"
+                                  }}
+                                >
+                                  {"Disponibilit\u00e9 24h/24"}
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__l4KPq
+                            )}
+                          >
                             <React.Fragment>
                               <span
                                 className={
@@ -1674,10 +1827,196 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                                 }
                                 style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                               >
-                                {"Disponible 24h/24"}
+                                {
+                                  "Nos serveurs bas\u00e9s en France tournent en continu pour r\u00e9pondre une dispo 100%"
+                                }
                               </span>
                             </React.Fragment>
-                          ) : (
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__lyArw)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__rkHz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___2EVkg
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__xcx1H)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/sacDargentPng.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__gmpB
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg___45Wr0
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pMy2Z
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___2CSKd
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#1E3A8A", fontWeight: 700 }}
+                              >
+                                {"Rentabilit\u00e9"}
+                              </span>
+                            </React.Fragment>
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___1RDy
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Le co\u00fbt moyen par lead est de seulement 12\u20ac. De plus, c'est un co\u00fbt variable et non fixe."
+                                  }
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Le co\u00fbt moyen par lead est inf\u00e9rieur \u00e0 20\u20ac. De plus, c'est un co\u00fbt variable et non fixe."
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column___24Muc)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__tzgJc
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__nVXoG
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img___4Wd7S)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={
+                              hasVariant(globalVariants, "mobile", "mobileOnly")
+                                ? "120%"
+                                : "100%"
+                            }
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/analyseEtReportingPng.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__tqYz1
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg___6FxDd
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vsqDp
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__m9GvY
+                            )}
+                          >
                             <React.Fragment>
                               <span
                                 className={
@@ -1688,439 +2027,714 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                                   color: "var(--token-okZqvxZ_nx_g)"
                                 }}
                               >
-                                {"Disponibilit\u00e9 24h/24"}
+                                {"Tableau de bord"}
                               </span>
                             </React.Fragment>
-                          )}
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__l4KPq
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                            >
-                              {
-                                "Nos serveurs bas\u00e9s en France tournent en continu pour r\u00e9pondre une dispo 100%"
-                              }
-                            </span>
-                          </React.Fragment>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__lyArw)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__rkHz)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___2EVkg
-                        )}
-                      >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__xcx1H)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/sacDargentPng.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                      {false ? (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__gmpB
-                          )}
-                        >
-                          <Icon8Icon
+                          </div>
+                          <div
                             className={classNames(
                               projectcss.all,
-                              sty.svg___45Wr0
+                              projectcss.__wab_text,
+                              sty.text__zlApo
                             )}
-                            role={"img"}
-                          />
-                        </div>
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__pMy2Z
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___2CSKd
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#1E3A8A", fontWeight: 700 }}
-                            >
-                              {"Rentabilit\u00e9"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___1RDy
-                          )}
-                        >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Le co\u00fbt moyen par lead est de seulement 12\u20ac. De plus, c'est un co\u00fbt variable et non fixe."
-                                }
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Le co\u00fbt moyen par lead est inf\u00e9rieur \u00e0 20\u20ac. De plus, c'est un co\u00fbt variable et non fixe."
-                                }
-                              </span>
-                            </React.Fragment>
-                          )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Suivez les KPIS importants pour vous, nb d'appels, leads, etc.."
+                                  }
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column___24Muc)}
-                  >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__tzgJc)}
+                      className={classNames(projectcss.all, sty.column___0XZtU)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__nVXoG
+                          sty.freeBox__zgzRi
                         )}
                       >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img___4Wd7S)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={
-                            hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? "120%"
-                              : "100%"
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___8GQy
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__aAaBk)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={
+                              hasVariant(globalVariants, "mobile", "mobileOnly")
+                                ? "120%"
+                                : "100%"
+                            }
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/customerReviewPng.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__zNVpf
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__zk0Kj
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__evz1G
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__oFylS
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {"Sur-mesure"}
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#1E3A8A", fontWeight: 700 }}
+                                >
+                                  {"Personnalisation"}
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__iUhec
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Nous adaptons Natalia selon vos besoins et usages. "
+                                  }
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {
+                                    "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__d7Xx5)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__hY7FN
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___3EiPi
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__a5LDq)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/laTechnologiePng.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__fxFvC
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__ry0Vw
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__i80Rp
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__mOmoa
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {"Connect\u00e9e"}
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#1E3A8A", fontWeight: 700 }}
+                                >
+                                  {"Int\u00e9grations"}
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__m0Qu
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                              >
+                                {
+                                  "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
+                                }
+                              </span>
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__assfD)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__g1EDa
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7NotX
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img___1HNb)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/site_actuel_natalia_auto/images/serviceClientPng.png",
+                              fullWidth: 512,
+                              fullHeight: 512,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
+                        {false ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__o6VxN
+                            )}
+                          >
+                            <Icon8Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__g9Cb
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+                        ) : null}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__i2Y1
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__x3EaO
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "mobile",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                                >
+                                  {"Support 24h/7j"}
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#1E3A8A", fontWeight: 700 }}
+                                >
+                                  {"Support client 24h/7j"}
+                                </span>
+                              </React.Fragment>
+                            )}
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__rdfCv
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                              >
+                                {
+                                  "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
+                                }
+                              </span>
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <Compatibilite
+              data-plasmic-name={"compatibilite"}
+              data-plasmic-override={overrides.compatibilite}
+              className={classNames("__wab_instance", sty.compatibilite)}
+            />
+
+            <section className={classNames(projectcss.all, sty.section__qhtrV)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__r1POr
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__c5OBb
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
                           }
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/analyseEtReportingPng.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
-                            aspectRatio: undefined
+                          style={{
+                            color: "var(--token-okZqvxZ_nx_g)",
+                            fontWeight: 700
                           }}
-                        />
-                      </div>
-                      {false ? (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__tqYz1
-                          )}
                         >
-                          <Icon8Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___6FxDd
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__vsqDp
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__m9GvY
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{
-                                fontWeight: 700,
-                                color: "var(--token-okZqvxZ_nx_g)"
-                              }}
-                            >
-                              {"Tableau de bord"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__zlApo
-                          )}
-                        >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Suivez les KPIS importants pour vous, nb d'appels, leads, etc.."
-                                }
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
-                                }
-                              </span>
-                            </React.Fragment>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column___0XZtU)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__zgzRi)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___8GQy
-                        )}
-                      >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__aAaBk)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={
-                            hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? "120%"
-                              : "100%"
+                          {
+                            "Natalia est compatible avec tous vos outils m\u00e9tiers"
                           }
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/customerReviewPng.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
+                        </span>
+                      </React.Fragment>
+                    </h3>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+              <div className={classNames(projectcss.all, sty.columns__cqWUj)}>
+                <div className={classNames(projectcss.all, sty.column__ogGcz)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__mGsI)}
+                    displayHeight={"70%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093226RemovebgPreviewPng.png",
+                      fullWidth: 700,
+                      fullHeight: 202,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__hYq0F)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__eRmR)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/site_actuel_natalia_auto/images/eyJidWNrZxQiOiJwYxj0BmVycGFnZs5Wcm9KIiwia2V5IjoibWVkaWEvY29UdGFjdF9PbWFnZxMvZmU1NzBiNwEtYjQxZc00Ndq0LTkyZtMtNwMyNdFiYwQwMwYxLzYwYzI5ZDg5LtRlMTgtNdVjMs05MDczLwu3ZmVlZDgwZwIyZc5WbmciLcJlZGl0CyI6EyJ0B0ZvPng.png",
+                      fullWidth: 974,
+                      fullHeight: 256,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__fRvYh)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__bFo3E)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/site_actuel_natalia_auto/images/logoMpaPng.png",
+                      fullWidth: 282,
+                      fullHeight: 100,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__iQrt)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__zEcQ4)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "40%"
+                        : "50%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? {
+                            src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093431RemovebgPreviewPng.png",
+                            fullWidth: 452,
+                            fullHeight: 418,
                             aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                      {false ? (
-                        <div
+                          }
+                        : {
+                            src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093431RemovebgPreviewPng.png",
+                            fullWidth: 452,
+                            fullHeight: 418,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__ziEsc)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__upBTt)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "90%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093312RemovebgPreviewPng.png",
+                      fullWidth: 672,
+                      fullHeight: 220,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
+            </section>
+            <CasDusage
+              data-plasmic-name={"casDusage"}
+              data-plasmic-override={overrides.casDusage}
+              className={classNames("__wab_instance", sty.casDusage)}
+            />
+
+            <div
+              className={classNames(projectcss.all, sty.freeBox__rZeu1)}
+              id={"casdusage"}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__zXfx)}>
+                <div
+                  data-plasmic-name={"foreground"}
+                  data-plasmic-override={overrides.foreground}
+                  className={classNames(projectcss.all, sty.foreground)}
+                >
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__zVh3X
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__zNVpf
-                          )}
-                        >
-                          <Icon8Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__zk0Kj
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__evz1G
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
+                            projectcss.h3,
                             projectcss.__wab_text,
-                            sty.text__oFylS
+                            sty.h3__xaTEv
                           )}
                         >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {"Sur-mesure"}
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#1E3A8A", fontWeight: 700 }}
-                              >
-                                {"Personnalisation"}
-                              </span>
-                            </React.Fragment>
-                          )}
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__iUhec
-                          )}
-                        >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Nous adaptons Natalia selon vos besoins et usages. "
-                                }
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {
-                                  "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
-                                }
-                              </span>
-                            </React.Fragment>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Cas d'usage en concession"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </h2>
                   <div
-                    className={classNames(projectcss.all, sty.column__d7Xx5)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__lkVsv
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "L'objectif n'est pas de remplacer l'humain en concession mais de l'"
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {
+                          "assister pour qu'il se concentre sur les missions \u00e0 forte valeur ajout\u00e9e"
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          ". Ici avec ces 4 cas d'usage, nous r\u00e9pondons \u00e0 "
+                        }
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {"80% des besoins en appels entrants en concessions."}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"foreground2"}
+                  data-plasmic-override={overrides.foreground2}
+                  className={classNames(projectcss.all, sty.foreground2)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___1FYmP)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__hY7FN)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___0S56H
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___3EiPi
+                          sty.freeBox__xRwJs
                         )}
                       >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__a5LDq)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/laTechnologiePng.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
-                            aspectRatio: undefined
-                          }}
+                        <CalendarLinesPenSvgrepoComSvgIcon
+                          className={classNames(projectcss.all, sty.svg__izHwd)}
+                          role={"img"}
                         />
                       </div>
                       {false ? (
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__fxFvC
+                            sty.freeBox___2AGf
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__ry0Vw
+                              sty.svg__rmkzx
                             )}
                             role={"img"}
                           />
@@ -2129,49 +2743,32 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__i80Rp
+                          sty.freeBox__y5NEj
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__mOmoa
+                            sty.text__uP8HY
                           )}
                         >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {"Connect\u00e9e"}
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#1E3A8A", fontWeight: 700 }}
-                              >
-                                {"Int\u00e9grations"}
-                              </span>
-                            </React.Fragment>
-                          )}
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Prise de rendez-vous atelier"}
+                            </span>
+                          </React.Fragment>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__m0Qu
+                            sty.text__n0PoO
                           )}
                         >
                           <React.Fragment>
@@ -2182,7 +2779,86 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                               style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                             >
                               {
-                                "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
+                                "Connect\u00e9e \u00e0 votre calendrier m\u00e9tier, type Service Box ou MecaPlanning, Natalia propose des cr\u00e9neaux, valide avec le client et renseigne les informations directement sur le logiciel."
+                              }
+                            </span>
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__eLr2U)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__sTVq
+                        )}
+                      >
+                        <MoneyCheckDollarPenSvgrepoComSvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___3Uphe
+                          )}
+                          role={"img"}
+                        />
+                      </div>
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__w6Qtt
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__vRzfV
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__hJ8Ow
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ejJOg
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Qualifier les leads entrants"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___7JmRq
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {
+                                "Natalia est disponible 24h/24, 7j/7, elle prend donc en charge 100% des demandes entrants y compris les leads. Durant l'\u00e9change, elle qualifie le besoin et renvoie les informations au service concern\u00e9."
                               }
                             </span>
                           </React.Fragment>
@@ -2191,46 +2867,33 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__assfD)}
+                    className={classNames(projectcss.all, sty.freeBox__ifefC)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__g1EDa)}
+                      className={classNames(projectcss.all, sty.freeBox__n5Uns)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___7NotX
+                          sty.freeBox___9XTq
                         )}
                       >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img___1HNb)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/site_actuel_natalia_auto/images/serviceClientPng.png",
-                            fullWidth: 512,
-                            fullHeight: 512,
-                            aspectRatio: undefined
-                          }}
+                        <Icon10Icon
+                          className={classNames(projectcss.all, sty.svg__a5Xl6)}
+                          role={"img"}
                         />
                       </div>
                       {false ? (
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__o6VxN
+                            sty.freeBox__ni4W6
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__g9Cb
+                              sty.svg__agw3K
                             )}
                             role={"img"}
                           />
@@ -2239,49 +2902,32 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__i2Y1
+                          sty.freeBox__pISa
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__x3EaO
+                            sty.text__whgb7
                           )}
                         >
-                          {hasVariant(
-                            globalVariants,
-                            "screen",
-                            "mobileOnly"
-                          ) ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                              >
-                                {"Support 24h/7j"}
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#1E3A8A", fontWeight: 700 }}
-                              >
-                                {"Support client 24h/7j"}
-                              </span>
-                            </React.Fragment>
-                          )}
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Transfert d'appels"}
+                            </span>
+                          </React.Fragment>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__rdfCv
+                            sty.text__eGsCe
                           )}
                         >
                           <React.Fragment>
@@ -2292,7 +2938,83 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                               style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                             >
                               {
-                                "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
+                                "20% des appels en concession sont des appels \u00e0 transf\u00e9rer, cela prend du temps, casse la productivit\u00e9 de vos \u00e9quipes et n'apporte pas de r\u00e9elle valeur ajout\u00e9e."
+                              }
+                            </span>
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__y6XF7)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___7AeMb
+                        )}
+                      >
+                        <Icon11Icon
+                          className={classNames(projectcss.all, sty.svg__nKfOf)}
+                          role={"img"}
+                        />
+                      </div>
+                      {false ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___1ABrt
+                          )}
+                        >
+                          <Icon8Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__jWhe
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__o38Jz
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___3KVOb
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {"Demandes g\u00e9n\u00e9rales"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ycFuE
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            >
+                              {
+                                "R\u00e9ponse aux demandes r\u00e9currentes \u00e0 partir de votre base de connaissance. Natalia s'enrichit des \u00e9changes dans le temps pour \u00eatre de plus en plus pertinente."
                               }
                             </span>
                           </React.Fragment>
@@ -2303,173 +3025,60 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                 </div>
               </div>
             </div>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__r1POr
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{""}</React.Fragment>
-                {
-                  <h3
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h3,
-                      projectcss.__wab_text,
-                      sty.h3__c5OBb
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          color: "var(--token-okZqvxZ_nx_g)",
-                          fontWeight: 700
-                        }}
-                      >
-                        {
-                          "Natalia est compatible avec tous vos outils m\u00e9tiers"
-                        }
-                      </span>
-                    </React.Fragment>
-                  </h3>
-                }
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
-            </div>
-          </section>
-          <div className={classNames(projectcss.all, sty.columns__cqWUj)}>
-            <div className={classNames(projectcss.all, sty.column__ogGcz)}>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__mGsI)}
-                displayHeight={"70%"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093226RemovebgPreviewPng.png",
-                  fullWidth: 700,
-                  fullHeight: 202,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__hYq0F)}>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__eRmR)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/site_actuel_natalia_auto/images/eyJidWNrZxQiOiJwYxj0BmVycGFnZs5Wcm9KIiwia2V5IjoibWVkaWEvY29UdGFjdF9PbWFnZxMvZmU1NzBiNwEtYjQxZc00Ndq0LTkyZtMtNwMyNdFiYwQwMwYxLzYwYzI5ZDg5LtRlMTgtNdVjMs05MDczLwu3ZmVlZDgwZwIyZc5WbmciLcJlZGl0CyI6EyJ0B0ZvPng.png",
-                  fullWidth: 974,
-                  fullHeight: 256,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__fRvYh)}>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__bFo3E)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/site_actuel_natalia_auto/images/logoMpaPng.png",
-                  fullWidth: 282,
-                  fullHeight: 100,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__iQrt)}>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__zEcQ4)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "40%"
-                    : "50%"
-                }
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? {
-                        src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093431RemovebgPreviewPng.png",
-                        fullWidth: 452,
-                        fullHeight: 418,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093431RemovebgPreviewPng.png",
-                        fullWidth: 452,
-                        fullHeight: 418,
-                        aspectRatio: undefined
-                      }
-                }
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__ziEsc)}>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__upBTt)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "90%"
-                    : "100%"
-                }
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A093312RemovebgPreviewPng.png",
-                  fullWidth: 672,
-                  fullHeight: 220,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__rZeu1)}
-            id={"casdusage"}
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__zXfx)}>
+            <CallToAction
+              data-plasmic-name={"callToAction"}
+              data-plasmic-override={overrides.callToAction}
+              className={classNames("__wab_instance", sty.callToAction)}
+            />
+
+            <section className={classNames(projectcss.all, sty.section__cpaRy)}>
               <div
-                data-plasmic-name={"foreground"}
-                data-plasmic-override={overrides.foreground}
-                className={classNames(projectcss.all, sty.foreground)}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__lSt9F
+                )}
               >
-                <h2
+                {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#1E3A8A", fontWeight: 700 }}
+                    >
+                      {
+                        "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants"
+                      }
+                    </span>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#1E3A8A", fontWeight: 700 }}
+                    >
+                      {
+                        "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants."
+                      }
+                    </span>
+                  </React.Fragment>
+                )}
+              </div>
+              <CloudIamNavigationLinkPrimaryCta
+                className={classNames(
+                  "__wab_instance",
+                  sty.cloudIamNavigationLinkPrimaryCta__gy98U
+                )}
+                dataTrkciamAction={``}
+                dataTrkciamCategory={``}
+                dataTrkciamName={``}
+                destination={`/contact`}
+                openInNewTab={undefined}
+              >
+                <div
                   className={classNames(
                     projectcss.all,
-                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.h2__zVh3X
+                    sty.text___6W0KJ
                   )}
                 >
                   <React.Fragment>
@@ -2480,7 +3089,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                           projectcss.all,
                           projectcss.h3,
                           projectcss.__wab_text,
-                          sty.h3__xaTEv
+                          sty.h3___9Ee8W
                         )}
                       >
                         <React.Fragment>
@@ -2488,491 +3097,88 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
                           >
-                            {"Cas d'usage en concession"}
+                            {"R\u00e9server une d\u00e9mo"}
                           </span>
                         </React.Fragment>
                       </h3>
                     }
                     <React.Fragment>{""}</React.Fragment>
                   </React.Fragment>
-                </h2>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__lkVsv
-                  )}
-                >
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                    >
-                      {
-                        "L'objectif n'est pas de remplacer l'humain en concession mais de l'"
-                      }
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{
-                        fontWeight: 700,
-                        color: "var(--token-okZqvxZ_nx_g)"
-                      }}
-                    >
-                      {
-                        "assister pour qu'il se concentre sur les missions \u00e0 forte valeur ajout\u00e9e"
-                      }
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                    >
-                      {
-                        ". Ici avec ces 4 cas d'usage, nous r\u00e9pondons \u00e0 "
-                      }
-                    </span>
-                    <React.Fragment>{""}</React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{
-                        fontWeight: 700,
-                        color: "var(--token-okZqvxZ_nx_g)"
-                      }}
-                    >
-                      {"80% des besoins en appels entrants en concessions."}
-                    </span>
-                  </React.Fragment>
                 </div>
-              </div>
-              <div
-                data-plasmic-name={"foreground2"}
-                data-plasmic-override={overrides.foreground2}
-                className={classNames(projectcss.all, sty.foreground2)}
-              >
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___1FYmP)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___0S56H)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__xRwJs)}
-                    >
-                      <CalendarLinesPenSvgrepoComSvgIcon
-                        className={classNames(projectcss.all, sty.svg__izHwd)}
-                        role={"img"}
-                      />
-                    </div>
-                    {false ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___2AGf
-                        )}
-                      >
-                        <Icon8Icon
-                          className={classNames(projectcss.all, sty.svg__rmkzx)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__y5NEj)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__uP8HY
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {"Prise de rendez-vous atelier"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__n0PoO
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "Connect\u00e9e \u00e0 votre calendrier m\u00e9tier, type Service Box ou MecaPlanning, Natalia propose des cr\u00e9neaux, valide avec le client et renseigne les informations directement sur le logiciel."
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__eLr2U)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__sTVq)}
-                    >
-                      <MoneyCheckDollarPenSvgrepoComSvgIcon
-                        className={classNames(projectcss.all, sty.svg___3Uphe)}
-                        role={"img"}
-                      />
-                    </div>
-                    {false ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__w6Qtt
-                        )}
-                      >
-                        <Icon8Icon
-                          className={classNames(projectcss.all, sty.svg__vRzfV)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__hJ8Ow)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ejJOg
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {"Qualifier les leads entrants"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___7JmRq
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "Natalia est disponible 24h/24, 7j/7, elle prend donc en charge 100% des demandes entrants y compris les leads. Durant l'\u00e9change, elle qualifie le besoin et renvoie les informations au service concern\u00e9."
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__ifefC)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__n5Uns)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___9XTq)}
-                    >
-                      <Icon10Icon
-                        className={classNames(projectcss.all, sty.svg__a5Xl6)}
-                        role={"img"}
-                      />
-                    </div>
-                    {false ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__ni4W6
-                        )}
-                      >
-                        <Icon8Icon
-                          className={classNames(projectcss.all, sty.svg__agw3K)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__pISa)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__whgb7
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {"Transfert d'appels"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__eGsCe
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "20% des appels en concession sont des appels \u00e0 transf\u00e9rer, cela prend du temps, casse la productivit\u00e9 de vos \u00e9quipes et n'apporte pas de r\u00e9elle valeur ajout\u00e9e."
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__y6XF7)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___7AeMb
-                      )}
-                    >
-                      <Icon11Icon
-                        className={classNames(projectcss.all, sty.svg__nKfOf)}
-                        role={"img"}
-                      />
-                    </div>
-                    {false ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___1ABrt
-                        )}
-                      >
-                        <Icon8Icon
-                          className={classNames(projectcss.all, sty.svg__jWhe)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__o38Jz)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___3KVOb
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {"Demandes g\u00e9n\u00e9rales"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ycFuE
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "R\u00e9ponse aux demandes r\u00e9currentes \u00e0 partir de votre base de connaissance. Natalia s'enrichit des \u00e9changes dans le temps pour \u00eatre de plus en plus pertinente."
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <YouTube
-            data-plasmic-name={"youTube"}
-            data-plasmic-override={overrides.youTube}
-            className={classNames("__wab_instance", sty.youTube)}
-            videoId={"R6MeLqRQzYw"}
-          />
+              </CloudIamNavigationLinkPrimaryCta>
+            </section>
+            <YouTube
+              data-plasmic-name={"youTube"}
+              data-plasmic-override={overrides.youTube}
+              className={classNames("__wab_instance", sty.youTube)}
+              videoId={"R6MeLqRQzYw"}
+            />
 
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__lSt9F
-            )}
-          >
-            {hasVariant(globalVariants, "screen", "mobileOnly") ? (
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#1E3A8A", fontWeight: 700 }}
-                >
-                  {
-                    "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants"
-                  }
-                </span>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#1E3A8A", fontWeight: 700 }}
-                >
-                  {
-                    "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants."
-                  }
-                </span>
-              </React.Fragment>
-            )}
-          </div>
-          <CloudIamNavigationLinkPrimaryCta
-            className={classNames(
-              "__wab_instance",
-              sty.cloudIamNavigationLinkPrimaryCta__gy98U
-            )}
-            colorMode={"dark"}
-            dataTrkciamAction={``}
-            dataTrkciamCategory={``}
-            dataTrkciamName={``}
-            destination={`/contact`}
-            openInNewTab={undefined}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___6W0KJ
-              )}
+            <Section
+              data-plasmic-name={"pricingSection"}
+              data-plasmic-override={overrides.pricingSection}
+              className={classNames("__wab_instance", sty.pricingSection)}
             >
-              <React.Fragment>
-                <React.Fragment>{""}</React.Fragment>
-                {
-                  <h3
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h3,
-                      projectcss.__wab_text,
-                      sty.h3___9Ee8W
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                      >
-                        {"R\u00e9server une d\u00e9mo"}
-                      </span>
-                    </React.Fragment>
-                  </h3>
-                }
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
-            </div>
-          </CloudIamNavigationLinkPrimaryCta>
-          <Section
-            data-plasmic-name={"pricingSection"}
-            data-plasmic-override={overrides.pricingSection}
-            className={classNames("__wab_instance", sty.pricingSection)}
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__no84)}>
-              <div className={classNames(projectcss.all, sty.columns__zUgni)}>
-                <div className={classNames(projectcss.all, sty.column__yqiXy)}>
-                  <PriceCard
-                    borders={["flatLeft"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__w06S3
-                    )}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__sduHp)}>
-                  <PriceCard
-                    borders={["flatCenter"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__kfbQv
-                    )}
-                  />
-
+              <div className={classNames(projectcss.all, sty.freeBox__no84)}>
+                <div className={classNames(projectcss.all, sty.columns__zUgni)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__pxUGx)}
+                    className={classNames(projectcss.all, sty.column__yqiXy)}
                   >
-                    <div
+                    <PriceCard
+                      borders={["flatLeft"]}
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__j3Se
+                        "__wab_instance",
+                        sty.priceCard__w06S3
                       )}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__sduHp)}
+                  >
+                    <PriceCard
+                      borders={["flatCenter"]}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__kfbQv
+                      )}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__pxUGx)}
                     >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "We Recommended"
-                        : "We Recommended"}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__j3Se
+                        )}
+                      >
+                        {hasVariant(globalVariants, "mobile", "mobileOnly")
+                          ? "We Recommended"
+                          : "We Recommended"}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.column__kAdK)}>
-                  <PriceCard
-                    borders={["flatRight"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__lLgJg
-                    )}
-                  />
+                  <div className={classNames(projectcss.all, sty.column__kAdK)}>
+                    <PriceCard
+                      borders={["flatRight"]}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__lLgJg
+                      )}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </Section>
-          <FooterSection
-            data-plasmic-name={"footerSection"}
-            data-plasmic-override={overrides.footerSection}
-            className={classNames("__wab_instance", sty.footerSection)}
-          />
+            </Section>
+            <FooterSection
+              data-plasmic-name={"footerSection"}
+              data-plasmic-override={overrides.footerSection}
+              className={classNames("__wab_instance", sty.footerSection)}
+            />
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -2980,32 +3186,73 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "headerHeroSection",
+  body: [
+    "body",
+    "wrapper",
     "navbar",
+    "accueil",
+    "headerHeroSection",
     "h1",
+    "image",
+    "douleur",
+    "cetaitAvant",
     "caCetaitAvant",
+    "reponseInstantanee",
     "avantages",
     "productSection",
     "foreground4",
     "foreground5",
+    "compatibilite",
+    "casDusage",
     "foreground",
     "foreground2",
+    "callToAction",
     "youTube",
     "pricingSection",
     "footerSection"
   ],
-  headerHeroSection: ["headerHeroSection", "navbar", "h1"],
+  wrapper: [
+    "wrapper",
+    "navbar",
+    "accueil",
+    "headerHeroSection",
+    "h1",
+    "image",
+    "douleur",
+    "cetaitAvant",
+    "caCetaitAvant",
+    "reponseInstantanee",
+    "avantages",
+    "productSection",
+    "foreground4",
+    "foreground5",
+    "compatibilite",
+    "casDusage",
+    "foreground",
+    "foreground2",
+    "callToAction",
+    "youTube",
+    "pricingSection",
+    "footerSection"
+  ],
   navbar: ["navbar"],
+  accueil: ["accueil", "headerHeroSection", "h1"],
+  headerHeroSection: ["headerHeroSection", "h1"],
   h1: ["h1"],
+  image: ["image"],
+  douleur: ["douleur"],
+  cetaitAvant: ["cetaitAvant"],
   caCetaitAvant: ["caCetaitAvant"],
+  reponseInstantanee: ["reponseInstantanee"],
   avantages: ["avantages", "productSection", "foreground4", "foreground5"],
   productSection: ["productSection"],
   foreground4: ["foreground4"],
   foreground5: ["foreground5"],
+  compatibilite: ["compatibilite"],
+  casDusage: ["casDusage"],
   foreground: ["foreground"],
   foreground2: ["foreground2"],
+  callToAction: ["callToAction"],
   youTube: ["youTube"],
   pricingSection: ["pricingSection"],
   footerSection: ["footerSection"]
@@ -3014,17 +3261,26 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
-  headerHeroSection: "div";
+  body: "div";
+  wrapper: "section";
   navbar: typeof Navbar;
+  accueil: "section";
+  headerHeroSection: "div";
   h1: "h1";
+  image: "section";
+  douleur: typeof Douleur;
+  cetaitAvant: typeof CetaitAvant;
   caCetaitAvant: "div";
+  reponseInstantanee: typeof ReponseInstantanee;
   avantages: "section";
   productSection: typeof Section;
   foreground4: "div";
   foreground5: "div";
+  compatibilite: typeof Compatibilite;
+  casDusage: typeof CasDusage;
   foreground: "div";
   foreground2: "div";
+  callToAction: typeof CallToAction;
   youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
@@ -3041,7 +3297,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicHotlineInformatique__VariantsArgs;
     args?: PlasmicHotlineInformatique__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicHotlineInformatique__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicHotlineInformatique__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicHotlineInformatique__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -3077,7 +3335,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "body") {
     func.displayName = "PlasmicHotlineInformatique";
   } else {
     func.displayName = `PlasmicHotlineInformatique.${nodeName}`;
@@ -3087,19 +3345,28 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicHotlineInformatique = Object.assign(
   // Top-level PlasmicHotlineInformatique renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("body"),
   {
     // Helper components rendering sub-elements
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
+    wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
+    accueil: makeNodeComponent("accueil"),
+    headerHeroSection: makeNodeComponent("headerHeroSection"),
     h1: makeNodeComponent("h1"),
+    image: makeNodeComponent("image"),
+    douleur: makeNodeComponent("douleur"),
+    cetaitAvant: makeNodeComponent("cetaitAvant"),
     caCetaitAvant: makeNodeComponent("caCetaitAvant"),
+    reponseInstantanee: makeNodeComponent("reponseInstantanee"),
     avantages: makeNodeComponent("avantages"),
     productSection: makeNodeComponent("productSection"),
     foreground4: makeNodeComponent("foreground4"),
     foreground5: makeNodeComponent("foreground5"),
+    compatibilite: makeNodeComponent("compatibilite"),
+    casDusage: makeNodeComponent("casDusage"),
     foreground: makeNodeComponent("foreground"),
     foreground2: makeNodeComponent("foreground2"),
+    callToAction: makeNodeComponent("callToAction"),
     youTube: makeNodeComponent("youTube"),
     pricingSection: makeNodeComponent("pricingSection"),
     footerSection: makeNodeComponent("footerSection"),

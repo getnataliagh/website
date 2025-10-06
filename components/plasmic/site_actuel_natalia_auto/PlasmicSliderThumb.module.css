@@ -1,13 +1,13 @@
 .root:global(.__wab_instance) {
   position: relative;
-  background: var(--token-k7H7DCWvDgvK);
+  background: #ffb000;
   cursor: pointer;
   box-sizing: border-box;
   display: flex;
   height: var(--token-9MRTySzI7xYw);
   width: var(--token-9MRTySzI7xYw);
   border-radius: 99px;
-  border: 1px solid var(--token-tNBc0_-IU8Ga);
+  border: 1px solid #2563eb;
 }
 .root[data-hovered]:global(.__wab_instance) {
   border-width: 2px;
@@ -15,6 +15,6 @@
 .root[data-focus-visible]:global(.__wab_instance) {
   outline-width: 2px;
   outline-style: solid;
-  outline-color: var(--token-tNBc0_-IU8Ga);
+  outline-color: #2563eb;
   outline-offset: 1px;
 }

@@ -161,7 +161,7 @@ function PlasmicProductCard__RenderFunc(props: {
           displayHeight={"auto"}
           displayMaxHeight={"none"}
           displayMaxWidth={
-            hasVariant(globalVariants, "screen", "mobileOnly") ? "50px" : "100%"
+            hasVariant(globalVariants, "mobile", "mobileOnly") ? "50px" : "100%"
           }
           displayMinHeight={"0"}
           displayMinWidth={"0"}
@@ -185,7 +185,7 @@ function PlasmicProductCard__RenderFunc(props: {
             sty.h3
           )}
         >
-          {hasVariant(globalVariants, "screen", "mobileOnly")
+          {hasVariant(globalVariants, "mobile", "mobileOnly")
             ? "Lorem ipsum dolor sit amet"
             : "Prise de rdv APV"}
         </h3>
@@ -198,7 +198,7 @@ function PlasmicProductCard__RenderFunc(props: {
             sty.text
           )}
         >
-          {hasVariant(globalVariants, "screen", "mobileOnly")
+          {hasVariant(globalVariants, "mobile", "mobileOnly")
             ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
         </div>
@@ -236,7 +236,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicProductCard__VariantsArgs;
     args?: PlasmicProductCard__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicProductCard__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicProductCard__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicProductCard__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

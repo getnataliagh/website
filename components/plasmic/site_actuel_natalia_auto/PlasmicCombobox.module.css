@@ -19,7 +19,7 @@
   justify-content: flex-start;
 }
 .ariaInput:global(.__wab_instance) {
-  box-shadow: inset 0px 0px 0px 1px var(--token-YZexZag-OArY);
+  box-shadow: inset 0px 0px 0px 1px #d1d5db;
   width: 100%;
   font-size: var(--token-YRLpiKJWMvDT);
   line-height: var(--token-aFhewT50aNqv);

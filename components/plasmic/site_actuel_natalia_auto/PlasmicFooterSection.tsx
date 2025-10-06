@@ -81,9 +81,11 @@ export const PlasmicFooterSection__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicFooterSection__OverridesType = {
   root?: Flex__<"div">;
-  columns?: Flex__<"div">;
-  logo?: Flex__<typeof Logo>;
+  logo?: Flex__<"div">;
+  h6?: Flex__<"h6">;
   img?: Flex__<typeof PlasmicImg__>;
+  menu?: Flex__<"div">;
+  entreprise?: Flex__<"div">;
 };
 
 export interface DefaultFooterSectionProps {
@@ -148,193 +150,195 @@ function PlasmicFooterSection__RenderFunc(props: {
     >
       <div className={classNames(projectcss.all, sty.freeBox__zx4Xy)}>
         <div
-          data-plasmic-name={"columns"}
-          data-plasmic-override={overrides.columns}
-          className={classNames(projectcss.all, sty.columns)}
+          data-plasmic-name={"logo"}
+          data-plasmic-override={overrides.logo}
+          className={classNames(projectcss.all, sty.logo)}
         >
-          <div className={classNames(projectcss.all, sty.column__r8Ejx)}>
-            <div className={classNames(projectcss.all, sty.freeBox__ovC1A)}>
-              <Logo
-                data-plasmic-name={"logo"}
-                data-plasmic-override={overrides.logo}
-                className={classNames("__wab_instance", sty.logo)}
-              />
+          <Logo className={classNames("__wab_instance", sty.logo__tbr6A)} />
 
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__qfTeP
-                )}
+          <h6
+            data-plasmic-name={"h6"}
+            data-plasmic-override={overrides.h6}
+            className={classNames(
+              projectcss.all,
+              projectcss.h6,
+              projectcss.__wab_text,
+              sty.h6
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
               >
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                  >
-                    {"Membre de la French Tech Vend\u00e9e"}
-                  </span>
-                </React.Fragment>
-              </div>
-              <PlasmicImg__
-                data-plasmic-name={"img"}
-                data-plasmic-override={overrides.img}
-                alt={""}
-                className={classNames(sty.img)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"100px"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/site_actuel_natalia_auto/images/logoFtVendeeCouleurPng.png",
-                  fullWidth: 884,
-                  fullHeight: 1093,
-                  aspectRatio: undefined
-                }}
-              />
+                {"Membre de la French Tech Vend\u00e9e"}
+              </span>
+            </React.Fragment>
+          </h6>
+          <PlasmicImg__
+            data-plasmic-name={"img"}
+            data-plasmic-override={overrides.img}
+            alt={""}
+            className={classNames(sty.img)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"100px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/site_actuel_natalia_auto/images/logoFtVendeeCouleurPng.png",
+              fullWidth: 884,
+              fullHeight: 1093,
+              aspectRatio: undefined
+            }}
+          />
+        </div>
+        <div
+          data-plasmic-name={"menu"}
+          data-plasmic-override={overrides.menu}
+          className={classNames(projectcss.all, sty.menu)}
+        >
+          <h4
+            className={classNames(
+              projectcss.all,
+              projectcss.h4,
+              projectcss.__wab_text,
+              sty.h4__f0Bzy
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#FFB000" }}
+              >
+                {"Menu"}
+              </span>
+            </React.Fragment>
+          </h4>
+          <PlasmicLink__
+            className={classNames(projectcss.all, projectcss.a, sty.link__tGqw)}
+            component={Link}
+            href={"/#avantages"}
+            platform={"nextjs"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___4Uvn4
+              )}
+            >
+              {"Avantages"}
             </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.column__xhZty)}>
-            <h4
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(projectcss.all, projectcss.a, sty.link__kMnH)}
+            component={Link}
+            href={`/`}
+            platform={"nextjs"}
+          >
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.h4,
                 projectcss.__wab_text,
-                sty.h4__f0Bzy
+                sty.text__bQcoL
               )}
             >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#FFB000" }}
-                >
-                  {"Menu"}
-                </span>
-              </React.Fragment>
-            </h4>
-            <PlasmicLink__
+              {"Comment \u00e7a marche ?"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__j9EzO
+            )}
+            component={Link}
+            href={`/contact`}
+            platform={"nextjs"}
+          >
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.a,
-                sty.link__tGqw
-              )}
-              component={Link}
-              href={"/#avantages"}
-              platform={"nextjs"}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___4Uvn4
-                )}
-              >
-                {"Avantages"}
-              </div>
-            </PlasmicLink__>
-            <PlasmicLink__
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.link__kMnH
-              )}
-              component={Link}
-              href={`/`}
-              platform={"nextjs"}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__bQcoL
-                )}
-              >
-                {"Comment \u00e7a marche ?"}
-              </div>
-            </PlasmicLink__>
-            <PlasmicLink__
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.link__j9EzO
-              )}
-              component={Link}
-              href={`/contact`}
-              platform={"nextjs"}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__sFjyl
-                )}
-              >
-                {"Nous contacter"}
-              </div>
-            </PlasmicLink__>
-          </div>
-          <div className={classNames(projectcss.all, sty.column___18EiR)}>
-            <h4
-              className={classNames(
-                projectcss.all,
-                projectcss.h4,
                 projectcss.__wab_text,
-                sty.h4__ddLmx
+                sty.text__sFjyl
               )}
             >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "#FFB000" }}
-                >
-                  {"Entreprise"}
-                </span>
-              </React.Fragment>
-            </h4>
-            <PlasmicLink__
+              {"Nous contacter"}
+            </div>
+          </PlasmicLink__>
+        </div>
+        <div
+          data-plasmic-name={"entreprise"}
+          data-plasmic-override={overrides.entreprise}
+          className={classNames(projectcss.all, sty.entreprise)}
+        >
+          <h4
+            className={classNames(
+              projectcss.all,
+              projectcss.h4,
+              projectcss.__wab_text,
+              sty.h4__ddLmx
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#FFB000" }}
+              >
+                {"Entreprise"}
+              </span>
+            </React.Fragment>
+          </h4>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__j2VOg
+            )}
+            component={Link}
+            href={`/conditions-generales-utilisation`}
+            platform={"nextjs"}
+          >
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.a,
-                sty.link__j2VOg
+                projectcss.__wab_text,
+                sty.text__ubTab
               )}
-              component={Link}
-              href={`/conditions-generales-utilisation`}
-              platform={"nextjs"}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ubTab
-                )}
-              >
-                {"Conditions g\u00e9n\u00e9rales d'utilisation"}
-              </div>
-            </PlasmicLink__>
-            <PlasmicLink__
+              {"Conditions g\u00e9n\u00e9rales d'utilisation"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(projectcss.all, projectcss.a, sty.link__lAci)}
+            component={Link}
+            href={`/politique-confidentialite`}
+            platform={"nextjs"}
+          >
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.a,
-                sty.link__lAci
+                projectcss.__wab_text,
+                sty.text__tjzjS
               )}
-              component={Link}
-              href={`/politique-confidentialite`}
-              platform={"nextjs"}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__tjzjS
-                )}
-              >
-                {"Politique de confidentialit\u00e9"}
-              </div>
-            </PlasmicLink__>
-          </div>
+              {"Politique de confidentialit\u00e9"}
+            </div>
+          </PlasmicLink__>
+        </div>
+      </div>
+      <div className={classNames(projectcss.all, sty.freeBox__ygOnJ)}>
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__dNsi0
+          )}
+        >
+          {"\u00a9 2025 Natalia. Tous droits r\u00e9serv\u00e9s."}
         </div>
       </div>
     </div>
@@ -342,19 +346,23 @@ function PlasmicFooterSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "columns", "logo", "img"],
-  columns: ["columns", "logo", "img"],
-  logo: ["logo"],
-  img: ["img"]
+  root: ["root", "logo", "h6", "img", "menu", "entreprise"],
+  logo: ["logo", "h6", "img"],
+  h6: ["h6"],
+  img: ["img"],
+  menu: ["menu"],
+  entreprise: ["entreprise"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  columns: "div";
-  logo: typeof Logo;
+  logo: "div";
+  h6: "h6";
   img: typeof PlasmicImg__;
+  menu: "div";
+  entreprise: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -368,7 +376,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicFooterSection__VariantsArgs;
     args?: PlasmicFooterSection__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicFooterSection__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicFooterSection__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicFooterSection__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -417,9 +427,11 @@ export const PlasmicFooterSection = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    columns: makeNodeComponent("columns"),
     logo: makeNodeComponent("logo"),
+    h6: makeNodeComponent("h6"),
     img: makeNodeComponent("img"),
+    menu: makeNodeComponent("menu"),
+    entreprise: makeNodeComponent("entreprise"),
 
     // Metadata about props expected for PlasmicFooterSection
     internalVariantProps: PlasmicFooterSection__VariantProps,

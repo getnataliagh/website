@@ -4,7 +4,7 @@
   min-width: 200px;
   display: flex;
   flex-direction: column;
-  color: var(--token-7B9gaZ4CGX2B);
+  color: #030712;
   font-family: var(--token-iEpbA7s1dE2F);
   font-size: var(--token-YRLpiKJWMvDT);
   line-height: var(--token-aFhewT50aNqv);
@@ -37,7 +37,7 @@
 }
 .background {
   display: flex;
-  background: var(--token-lLEwaspG6H7s);
+  background: #e5e7eb;
   height: var(--token-86D2BTODo9Hi);
   width: 100%;
   min-width: 0;
@@ -61,7 +61,7 @@
 }
 .foreground {
   display: block;
-  background: var(--token-tNBc0_-IU8Ga);
+  background: #2563eb;
   height: var(--token-86D2BTODo9Hi);
   border-radius: 99px 0rem 0rem 99px;
 }

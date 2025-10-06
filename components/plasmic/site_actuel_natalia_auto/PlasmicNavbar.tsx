@@ -60,7 +60,8 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Logo from "../../Logo"; // plasmic-import: Oz4K6O9ubKeI/component
-import CloudIamNavigationLinkPrimaryCta from "../../CloudIamNavigationLinkPrimaryCta"; // plasmic-import: HiVfgKFJx8Th/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
+import MenuBurger from "../../MenuBurger"; // plasmic-import: 0xX5T15PyzuS/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -68,6 +69,10 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: F0Go0DR6--TF/css
+
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
+import HamburgerIcon from "./icons/PlasmicIcon__Hamburger"; // plasmic-import: V0GQaCGM9ljf/icon
 
 createPlasmicElementProxy;
 
@@ -81,12 +86,17 @@ type ArgPropType = keyof PlasmicNavbar__ArgsType;
 export const PlasmicNavbar__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNavbar__OverridesType = {
-  root?: Flex__<"div">;
+  navBar?: Flex__<"div">;
+  logoContainer?: Flex__<"div">;
   logo?: Flex__<typeof Logo>;
+  linksContainer?: Flex__<"div">;
+  freeBox?: Flex__<"div">;
   solutions3?: Flex__<"div">;
-  cloudIamNavigationLinkPrimaryCta?: Flex__<
-    typeof CloudIamNavigationLinkPrimaryCta
-  >;
+  actionContainer?: Flex__<"div">;
+  buttonPrimary?: Flex__<typeof ButtonPrimary>;
+  menuBurger?: Flex__<typeof MenuBurger>;
+  actionBurger?: Flex__<"div">;
+  svg?: Flex__<"svg">;
 };
 
 export interface DefaultNavbarProps {
@@ -137,10 +147,10 @@ function PlasmicNavbar__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "variable",
+        path: "isOpen",
         type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -156,8 +166,8 @@ function PlasmicNavbar__RenderFunc(props: {
 
   return (
     <div
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"navBar"}
+      data-plasmic-override={overrides.navBar}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -166,22 +176,42 @@ function PlasmicNavbar__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        sty.root
+        sty.navBar
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__en1El)}>
-        <Logo
-          data-plasmic-name={"logo"}
-          data-plasmic-override={overrides.logo}
-          className={classNames("__wab_instance", sty.logo)}
-          smallLogo={
-            hasVariant(globalVariants, "screen", "mobileOnly")
-              ? undefined
-              : undefined
-          }
-        />
-
-        <div className={classNames(projectcss.all, sty.freeBox__d2AI8)}>
+      <div
+        data-plasmic-name={"logoContainer"}
+        data-plasmic-override={overrides.logoContainer}
+        className={classNames(projectcss.all, sty.logoContainer)}
+      >
+        <PlasmicLink__
+          className={classNames(projectcss.all, projectcss.a, sty.link___2HQh4)}
+          component={Link}
+          href={`/`}
+          platform={"nextjs"}
+        >
+          <Logo
+            data-plasmic-name={"logo"}
+            data-plasmic-override={overrides.logo}
+            className={classNames("__wab_instance", sty.logo)}
+            smallLogo={
+              hasVariant(globalVariants, "mobile", "mobileOnly")
+                ? undefined
+                : undefined
+            }
+          />
+        </PlasmicLink__>
+      </div>
+      <div
+        data-plasmic-name={"linksContainer"}
+        data-plasmic-override={overrides.linksContainer}
+        className={classNames(projectcss.all, sty.linksContainer)}
+      >
+        <div
+          data-plasmic-name={"freeBox"}
+          data-plasmic-override={overrides.freeBox}
+          className={classNames(projectcss.all, sty.freeBox)}
+        >
           <PlasmicLink__
             className={classNames(
               projectcss.all,
@@ -189,7 +219,7 @@ function PlasmicNavbar__RenderFunc(props: {
               sty.link__s3UmX
             )}
             component={Link}
-            href={"/#avantages"}
+            href={"#produit"}
             platform={"nextjs"}
             target={undefined}
           >
@@ -217,7 +247,7 @@ function PlasmicNavbar__RenderFunc(props: {
               sty.link__hcoir
             )}
             component={Link}
-            href={"/#secteurs"}
+            href={"#solution"}
             platform={"nextjs"}
             target={undefined}
           >
@@ -247,7 +277,7 @@ function PlasmicNavbar__RenderFunc(props: {
               sty.link__mByEv
             )}
             component={Link}
-            href={"#comment"}
+            href={"/#miseenplace"}
             platform={"nextjs"}
           >
             <div
@@ -295,58 +325,173 @@ function PlasmicNavbar__RenderFunc(props: {
             </div>
           </PlasmicLink__>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___5LSqc)}>
-          <CloudIamNavigationLinkPrimaryCta
-            data-plasmic-name={"cloudIamNavigationLinkPrimaryCta"}
-            data-plasmic-override={overrides.cloudIamNavigationLinkPrimaryCta}
-            className={classNames(
-              "__wab_instance",
-              sty.cloudIamNavigationLinkPrimaryCta
-            )}
-            colorMode={"dark"}
-            dataTrkciamAction={``}
-            dataTrkciamCategory={``}
-            dataTrkciamName={``}
-            destination={"https://app.getnatalia.com/"}
-            openInNewTab={"_blank"}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__guiS
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                >
-                  {"Se connecter"}
-                </span>
-              </React.Fragment>
-            </div>
-          </CloudIamNavigationLinkPrimaryCta>
-        </div>
       </div>
+      <div
+        data-plasmic-name={"actionContainer"}
+        data-plasmic-override={overrides.actionContainer}
+        className={classNames(projectcss.all, sty.actionContainer)}
+      >
+        <PlasmicLink__
+          className={classNames(projectcss.all, projectcss.a, sty.link__jKymZ)}
+          component={Link}
+          href={"https://app.getnatalia.com/"}
+          platform={"nextjs"}
+        >
+          <ButtonPrimary
+            data-plasmic-name={"buttonPrimary"}
+            data-plasmic-override={overrides.buttonPrimary}
+            className={classNames("__wab_instance", sty.buttonPrimary)}
+            label={
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___2XPg
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#FFFFFF" }}
+                  >
+                    {"Se connecter"}
+                  </span>
+                </React.Fragment>
+              </div>
+            }
+          />
+        </PlasmicLink__>
+      </div>
+      {(
+        hasVariant(globalVariants, "mobile", "mobileOnly")
+          ? (() => {
+              try {
+                return $state.isOpen;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()
+          : true
+      ) ? (
+        <MenuBurger
+          data-plasmic-name={"menuBurger"}
+          data-plasmic-override={overrides.menuBurger}
+          className={classNames("__wab_instance", sty.menuBurger)}
+          isOpen={$state.isOpen}
+        />
+      ) : null}
+      {(
+        hasVariant(globalVariants, "mobile", "mobileOnly")
+          ? (() => {
+              try {
+                return !$state.isOpen;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()
+          : true
+      ) ? (
+        <div
+          data-plasmic-name={"actionBurger"}
+          data-plasmic-override={overrides.actionBurger}
+          className={classNames(projectcss.all, sty.actionBurger)}
+        >
+          <HamburgerIcon
+            data-plasmic-name={"svg"}
+            data-plasmic-override={overrides.svg}
+            className={classNames(projectcss.all, sty.svg)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["updateIsOpen"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["isOpen"]
+                      },
+                      operation: 4
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      const oldValue = $stateGet(objRoot, variablePath);
+                      $stateSet(objRoot, variablePath, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateIsOpen"] != null &&
+                typeof $steps["updateIsOpen"] === "object" &&
+                typeof $steps["updateIsOpen"].then === "function"
+              ) {
+                $steps["updateIsOpen"] = await $steps["updateIsOpen"];
+              }
+            }}
+            role={"img"}
+          />
+        </div>
+      ) : null}
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "solutions3", "cloudIamNavigationLinkPrimaryCta"],
+  navBar: [
+    "navBar",
+    "logoContainer",
+    "logo",
+    "linksContainer",
+    "freeBox",
+    "solutions3",
+    "actionContainer",
+    "buttonPrimary",
+    "menuBurger",
+    "actionBurger",
+    "svg"
+  ],
+  logoContainer: ["logoContainer", "logo"],
   logo: ["logo"],
+  linksContainer: ["linksContainer", "freeBox", "solutions3"],
+  freeBox: ["freeBox", "solutions3"],
   solutions3: ["solutions3"],
-  cloudIamNavigationLinkPrimaryCta: ["cloudIamNavigationLinkPrimaryCta"]
+  actionContainer: ["actionContainer", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"],
+  menuBurger: ["menuBurger"],
+  actionBurger: ["actionBurger", "svg"],
+  svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  navBar: "div";
+  logoContainer: "div";
   logo: typeof Logo;
+  linksContainer: "div";
+  freeBox: "div";
   solutions3: "div";
-  cloudIamNavigationLinkPrimaryCta: typeof CloudIamNavigationLinkPrimaryCta;
+  actionContainer: "div";
+  buttonPrimary: typeof ButtonPrimary;
+  menuBurger: typeof MenuBurger;
+  actionBurger: "div";
+  svg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -360,7 +505,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicNavbar__VariantsArgs;
     args?: PlasmicNavbar__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicNavbar__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicNavbar__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicNavbar__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -396,7 +543,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "navBar") {
     func.displayName = "PlasmicNavbar";
   } else {
     func.displayName = `PlasmicNavbar.${nodeName}`;
@@ -406,14 +553,19 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicNavbar = Object.assign(
   // Top-level PlasmicNavbar renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("navBar"),
   {
     // Helper components rendering sub-elements
+    logoContainer: makeNodeComponent("logoContainer"),
     logo: makeNodeComponent("logo"),
+    linksContainer: makeNodeComponent("linksContainer"),
+    freeBox: makeNodeComponent("freeBox"),
     solutions3: makeNodeComponent("solutions3"),
-    cloudIamNavigationLinkPrimaryCta: makeNodeComponent(
-      "cloudIamNavigationLinkPrimaryCta"
-    ),
+    actionContainer: makeNodeComponent("actionContainer"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
+    menuBurger: makeNodeComponent("menuBurger"),
+    actionBurger: makeNodeComponent("actionBurger"),
+    svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,

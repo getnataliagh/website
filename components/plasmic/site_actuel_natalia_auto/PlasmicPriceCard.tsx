@@ -59,7 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import Button from "../../Button"; // plasmic-import: TU5A2-p6WFJJ/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -96,7 +96,7 @@ export type PlasmicPriceCard__OverridesType = {
   freeBox?: Flex__<"div">;
   h4?: Flex__<"h4">;
   link?: Flex__<"a"> & Partial<LinkProps>;
-  button?: Flex__<typeof Button>;
+  buttonPrimary?: Flex__<typeof ButtonPrimary>;
 };
 
 export interface DefaultPriceCardProps {
@@ -253,8 +253,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           {hasVariant($state, "borders", "flatRight")
             ? "Enterprise"
             : hasVariant($state, "borders", "flatLeft")
-            ? "Free"
-            : "Pro"}
+              ? "Free"
+              : "Pro"}
         </h4>
         <div
           className={classNames(
@@ -288,8 +288,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           {hasVariant($state, "borders", "flatRight")
             ? "Flexible power and security"
             : hasVariant($state, "borders", "flatLeft")
-            ? "A complete analytics platform."
-            : "A complete analytics platform."}
+              ? "A complete analytics platform."
+              : "A complete analytics platform."}
         </div>
         <PlasmicImg__
           alt={""}
@@ -388,8 +388,8 @@ function PlasmicPriceCard__RenderFunc(props: {
               {hasVariant($state, "borders", "flatRight")
                 ? "Everything in pro"
                 : hasVariant($state, "borders", "flatLeft")
-                ? "1 Product"
-                : "Up to 10 projects"}
+                  ? "1 Product"
+                  : "Up to 10 projects"}
             </div>
           </div>
         </div>
@@ -484,10 +484,10 @@ function PlasmicPriceCard__RenderFunc(props: {
               {hasVariant($state, "borders", "flatRight")
                 ? "Volume discount"
                 : hasVariant($state, "borders", "flatLeft")
-                ? "Analytics board"
-                : hasVariant($state, "primary", "primary")
-                ? "Analytics board"
-                : "Up to 10 projects"}
+                  ? "Analytics board"
+                  : hasVariant($state, "primary", "primary")
+                    ? "Analytics board"
+                    : "Up to 10 projects"}
             </div>
           </div>
         </div>
@@ -585,8 +585,8 @@ function PlasmicPriceCard__RenderFunc(props: {
               {hasVariant($state, "borders", "flatLeft")
                 ? "Insights panel"
                 : hasVariant($state, "primary", "primary")
-                ? "Analytics board"
-                : "Up to 10 projects"}
+                  ? "Analytics board"
+                  : "Up to 10 projects"}
             </div>
           </div>
           <div
@@ -613,12 +613,12 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "borders", "flatLeft")
-            ? true
-            : hasVariant($state, "primary", "primary")
-            ? true
-            : hasVariant(globalVariants, "screen", "mobileOnly")
-            ? true
-            : false
+              ? true
+              : hasVariant($state, "primary", "primary")
+                ? true
+                : hasVariant(globalVariants, "mobile", "mobileOnly")
+                  ? true
+                  : false
         ) ? (
           <div
             className={classNames(projectcss.all, sty.columns___3ZuNs, {
@@ -696,8 +696,8 @@ function PlasmicPriceCard__RenderFunc(props: {
                 {hasVariant($state, "borders", "flatLeft")
                   ? "CLI access"
                   : hasVariant($state, "primary", "primary")
-                  ? "Analytics board"
-                  : "Up to 10 projects"}
+                    ? "Analytics board"
+                    : "Up to 10 projects"}
               </div>
             </div>
           </div>
@@ -706,8 +706,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "primary", "primary")
-            ? true
-            : false
+              ? true
+              : false
         ) ? (
           <div
             className={classNames(projectcss.all, sty.columns__n4JrJ, {
@@ -771,8 +771,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "primary", "primary")
-            ? true
-            : false
+              ? true
+              : false
         ) ? (
           <div
             className={classNames(projectcss.all, sty.columns__z6RIb, {
@@ -798,7 +798,7 @@ function PlasmicPriceCard__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
+                  hasVariant(globalVariants, "mobile", "mobileOnly")
                     ? "16px"
                     : "24px"
                 }
@@ -835,8 +835,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "primary", "primary")
-            ? true
-            : false
+              ? true
+              : false
         ) ? (
           <div
             className={classNames(projectcss.all, sty.columns__muagi, {
@@ -895,8 +895,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "primary", "primary")
-            ? true
-            : false
+              ? true
+              : false
         ) ? (
           <div
             className={classNames(projectcss.all, sty.columns__fskc8, {
@@ -973,10 +973,10 @@ function PlasmicPriceCard__RenderFunc(props: {
           hasVariant($state, "borders", "flatCenter")
             ? true
             : hasVariant($state, "borders", "flatRight")
-            ? true
-            : hasVariant($state, "borders", "flatLeft")
-            ? true
-            : false
+              ? true
+              : hasVariant($state, "borders", "flatLeft")
+                ? true
+                : false
         ) ? (
           <div
             className={classNames(
@@ -1005,8 +1005,8 @@ function PlasmicPriceCard__RenderFunc(props: {
             {hasVariant($state, "borders", "flatCenter")
               ? "$ 50"
               : hasVariant($state, "borders", "flatRight")
-              ? "$ 800"
-              : "$ 0"}
+                ? "$ 800"
+                : "$ 0"}
           </div>
         ) : null}
         <div
@@ -1036,8 +1036,8 @@ function PlasmicPriceCard__RenderFunc(props: {
           {hasVariant($state, "borders", "flatRight")
             ? "Starting price, customizable"
             : hasVariant($state, "borders", "flatLeft")
-            ? "Free Forever"
-            : "per project/month"}
+              ? "Free Forever"
+              : "per project/month"}
         </div>
         <PlasmicLink__
           data-plasmic-name={"link"}
@@ -1047,21 +1047,25 @@ function PlasmicPriceCard__RenderFunc(props: {
           href={"#"}
           platform={"nextjs"}
         >
-          <Button
-            data-plasmic-name={"button"}
-            data-plasmic-override={overrides.button}
-            className={classNames("__wab_instance", sty.button, {
-              [sty.buttonborders_flatLeft]: hasVariant(
+          <ButtonPrimary
+            data-plasmic-name={"buttonPrimary"}
+            data-plasmic-override={overrides.buttonPrimary}
+            className={classNames("__wab_instance", sty.buttonPrimary, {
+              [sty.buttonPrimaryborders_flatLeft]: hasVariant(
                 $state,
                 "borders",
                 "flatLeft"
               ),
-              [sty.buttonborders_flatRight]: hasVariant(
+              [sty.buttonPrimaryborders_flatRight]: hasVariant(
                 $state,
                 "borders",
                 "flatRight"
               ),
-              [sty.buttonprimary]: hasVariant($state, "primary", "primary")
+              [sty.buttonPrimaryprimary]: hasVariant(
+                $state,
+                "primary",
+                "primary"
+              )
             })}
             label={
               <div
@@ -1086,13 +1090,9 @@ function PlasmicPriceCard__RenderFunc(props: {
                 {hasVariant($state, "borders", "flatRight")
                   ? "Everything is yours"
                   : hasVariant($state, "borders", "flatLeft")
-                  ? "Claim Free"
-                  : "Go Become pro"}
+                    ? "Claim Free"
+                    : "Go Become pro"}
               </div>
-            }
-            size={"extraLarge"}
-            type={
-              hasVariant($state, "borders", "flatLeft") ? "soft" : undefined
             }
           />
         </PlasmicLink__>
@@ -1102,11 +1102,11 @@ function PlasmicPriceCard__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "h4", "link", "button"],
-  freeBox: ["freeBox", "h4", "link", "button"],
+  root: ["root", "freeBox", "h4", "link", "buttonPrimary"],
+  freeBox: ["freeBox", "h4", "link", "buttonPrimary"],
   h4: ["h4"],
-  link: ["link", "button"],
-  button: ["button"]
+  link: ["link", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1116,7 +1116,7 @@ type NodeDefaultElementType = {
   freeBox: "div";
   h4: "h4";
   link: "a";
-  button: typeof Button;
+  buttonPrimary: typeof ButtonPrimary;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1130,7 +1130,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicPriceCard__VariantsArgs;
     args?: PlasmicPriceCard__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicPriceCard__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicPriceCard__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicPriceCard__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -1182,7 +1184,7 @@ export const PlasmicPriceCard = Object.assign(
     freeBox: makeNodeComponent("freeBox"),
     h4: makeNodeComponent("h4"),
     link: makeNodeComponent("link"),
-    button: makeNodeComponent("button"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
 
     // Metadata about props expected for PlasmicPriceCard
     internalVariantProps: PlasmicPriceCard__VariantProps,

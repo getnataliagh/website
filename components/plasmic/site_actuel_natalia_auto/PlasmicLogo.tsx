@@ -193,14 +193,18 @@ function PlasmicLogo__RenderFunc(props: {
           [sty.img_50Opaque]: hasVariant($state, "_50Opaque", "_50Opaque"),
           [sty.imgsmallLogo]: hasVariant($state, "smallLogo", "smallLogo")
         })}
-        displayHeight={"100%"}
+        displayHeight={
+          hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "100%"
+        }
         displayMaxHeight={"none"}
         displayMaxWidth={
           hasVariant($state, "smallLogo", "smallLogo") ? "50px" : "156px"
         }
         displayMinHeight={"0"}
         displayMinWidth={"0"}
-        displayWidth={"100%"}
+        displayWidth={
+          hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "100%"
+        }
         src={
           hasVariant($state, "smallLogo", "smallLogo")
             ? {
@@ -209,19 +213,19 @@ function PlasmicLogo__RenderFunc(props: {
                 fullHeight: 148,
                 aspectRatio: undefined
               }
-            : hasVariant(globalVariants, "screen", "mobileOnly")
-            ? {
-                src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
-                fullWidth: 532,
-                fullHeight: 108,
-                aspectRatio: undefined
-              }
-            : {
-                src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
-                fullWidth: 532,
-                fullHeight: 108,
-                aspectRatio: undefined
-              }
+            : hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? {
+                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
+                  fullWidth: 532,
+                  fullHeight: 108,
+                  aspectRatio: undefined
+                }
+              : {
+                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
+                  fullWidth: 532,
+                  fullHeight: 108,
+                  aspectRatio: undefined
+                }
         }
       />
     </PlasmicLink__>
@@ -251,7 +255,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicLogo__VariantsArgs;
     args?: PlasmicLogo__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicLogo__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicLogo__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicLogo__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

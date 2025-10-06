@@ -162,7 +162,7 @@ function PlasmicDiagramCard__RenderFunc(props: {
             sty.h5
           )}
         >
-          {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+          {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
             "Lorem Ipsum"
           ) : (
             <React.Fragment>
@@ -184,7 +184,7 @@ function PlasmicDiagramCard__RenderFunc(props: {
             sty.text
           )}
         >
-          {hasVariant(globalVariants, "screen", "mobileOnly")
+          {hasVariant(globalVariants, "mobile", "mobileOnly")
             ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed "
             : "le nombre de leads perdus par mois en moyenne"}
         </div>
@@ -220,7 +220,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicDiagramCard__VariantsArgs;
     args?: PlasmicDiagramCard__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicDiagramCard__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicDiagramCard__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicDiagramCard__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

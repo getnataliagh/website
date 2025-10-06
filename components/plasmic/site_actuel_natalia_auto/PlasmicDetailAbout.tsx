@@ -191,7 +191,7 @@ function PlasmicDetailAbout__RenderFunc(props: {
                 sty.h5
               )}
             >
-              {hasVariant(globalVariants, "screen", "mobileOnly")
+              {hasVariant(globalVariants, "mobile", "mobileOnly")
                 ? "Lorem ipsum sit amet"
                 : "Lorem ipsum sit amet"}
             </h5>
@@ -246,7 +246,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicDetailAbout__VariantsArgs;
     args?: PlasmicDetailAbout__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicDetailAbout__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicDetailAbout__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicDetailAbout__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

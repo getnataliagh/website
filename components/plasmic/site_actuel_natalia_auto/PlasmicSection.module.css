@@ -3,11 +3,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow-y: auto;
   column-gap: 0px;
   position: relative;
   width: auto;
   height: auto;
-  padding: 64px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .root {
@@ -16,10 +17,10 @@
   }
 }
 .rootbackground_dark {
-  background: var(--token-sAPe79HG-sw3);
+  background: #1c1c1e;
 }
 .rootbackground_gray {
-  background: var(--token-_thwxZxWvklS);
+  background: #f2f2f7;
 }
 .rootsize_fullContentWidth {
   padding-top: 0px;
@@ -32,17 +33,15 @@
   padding-right: 18px;
 }
 .freeBox {
-  max-width: var(--token-g2ytubvyEq5L);
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  width: auto;
   height: auto;
   background: none;
-  min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 .freeBoxsize_fullContentWidth {
   max-width: none;

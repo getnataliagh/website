@@ -99,25 +99,25 @@ export default function GlobalContextsProvider(
       themeStyles={
         antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
           ? antdConfigProviderProps.themeStyles!
-          : hasVariant(globalVariants, "screen", "mobileOnly")
-          ? {
-              fontFamily: "Montserrat",
-              fontSize: "16px",
-              fontWeight: "500",
-              lineHeight: "27px",
-              color: "#00000080",
-              letterSpacing: "normal"
-            }
-          : true
-          ? {
-              fontFamily: "Montserrat",
-              fontSize: "24px",
-              fontWeight: "500",
-              lineHeight: "1.5",
-              color: "#00000080",
-              letterSpacing: "normal"
-            }
-          : undefined
+          : hasVariant(globalVariants, "mobile", "mobileOnly")
+            ? {
+                fontFamily: "Inter",
+                fontSize: "16px",
+                fontWeight: "500",
+                lineHeight: "27px",
+                color: "#374161",
+                letterSpacing: "normal"
+              }
+            : true
+              ? {
+                  fontFamily: "Inter",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  lineHeight: "1.5",
+                  color: "#374161",
+                  letterSpacing: "normal"
+                }
+              : undefined
       }
       wireframe={
         antdConfigProviderProps && "wireframe" in antdConfigProviderProps

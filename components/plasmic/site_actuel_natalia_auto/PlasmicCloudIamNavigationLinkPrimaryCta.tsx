@@ -70,19 +70,15 @@ import sty from "./PlasmicCloudIamNavigationLinkPrimaryCta.module.css"; // plasm
 createPlasmicElementProxy;
 
 export type PlasmicCloudIamNavigationLinkPrimaryCta__VariantMembers = {
-  isSmall: "isSmall";
-  colorMode: "light" | "dark" | "blue" | "pricing";
   fullWidth: "fullWidth";
 };
 export type PlasmicCloudIamNavigationLinkPrimaryCta__VariantsArgs = {
-  isSmall?: SingleBooleanChoiceArg<"isSmall">;
-  colorMode?: SingleChoiceArg<"light" | "dark" | "blue" | "pricing">;
   fullWidth?: SingleBooleanChoiceArg<"fullWidth">;
 };
 type VariantPropType =
   keyof PlasmicCloudIamNavigationLinkPrimaryCta__VariantsArgs;
 export const PlasmicCloudIamNavigationLinkPrimaryCta__VariantProps =
-  new Array<VariantPropType>("isSmall", "colorMode", "fullWidth");
+  new Array<VariantPropType>("fullWidth");
 
 export type PlasmicCloudIamNavigationLinkPrimaryCta__ArgsType = {
   children?: React.ReactNode;
@@ -120,8 +116,6 @@ export interface DefaultCloudIamNavigationLinkPrimaryCtaProps {
   dataTrkciamCategory?: string;
   dataTrkciamName?: string;
   onClick?: () => void;
-  isSmall?: SingleBooleanChoiceArg<"isSmall">;
-  colorMode?: SingleChoiceArg<"light" | "dark" | "blue" | "pricing">;
   fullWidth?: SingleBooleanChoiceArg<"fullWidth">;
   className?: string;
 }
@@ -170,18 +164,6 @@ function PlasmicCloudIamNavigationLinkPrimaryCta__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "isSmall",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.isSmall
-      },
-      {
-        path: "colorMode",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.colorMode
-      },
-      {
         path: "fullWidth",
         type: "private",
         variableType: "variant",
@@ -219,18 +201,7 @@ function PlasmicCloudIamNavigationLinkPrimaryCta__RenderFunc(props: {
         projectcss.plasmic_mixins,
         styleTokensClassNames,
         sty.root,
-        {
-          [sty.rootcolorMode_blue]: hasVariant($state, "colorMode", "blue"),
-          [sty.rootcolorMode_dark]: hasVariant($state, "colorMode", "dark"),
-          [sty.rootcolorMode_light]: hasVariant($state, "colorMode", "light"),
-          [sty.rootcolorMode_pricing]: hasVariant(
-            $state,
-            "colorMode",
-            "pricing"
-          ),
-          [sty.rootfullWidth]: hasVariant($state, "fullWidth", "fullWidth"),
-          [sty.rootisSmall]: hasVariant($state, "isSmall", "isSmall")
-        }
+        { [sty.rootfullWidth]: hasVariant($state, "fullWidth", "fullWidth") }
       )}
       onClick={async event => {
         const $steps = {};
@@ -266,16 +237,7 @@ function PlasmicCloudIamNavigationLinkPrimaryCta__RenderFunc(props: {
         data-plasmic-name={"link"}
         data-plasmic-override={overrides.link}
         className={classNames(projectcss.all, projectcss.a, sty.link, {
-          [sty.linkcolorMode_blue]: hasVariant($state, "colorMode", "blue"),
-          [sty.linkcolorMode_dark]: hasVariant($state, "colorMode", "dark"),
-          [sty.linkcolorMode_light]: hasVariant($state, "colorMode", "light"),
-          [sty.linkcolorMode_pricing]: hasVariant(
-            $state,
-            "colorMode",
-            "pricing"
-          ),
-          [sty.linkfullWidth]: hasVariant($state, "fullWidth", "fullWidth"),
-          [sty.linkisSmall]: hasVariant($state, "isSmall", "isSmall")
+          [sty.linkfullWidth]: hasVariant($state, "fullWidth", "fullWidth")
         })}
         component={Link}
         data-trkciam-action={args.dataTrkciamAction}
@@ -288,28 +250,7 @@ function PlasmicCloudIamNavigationLinkPrimaryCta__RenderFunc(props: {
         <div
           data-plasmic-name={"freeBox"}
           data-plasmic-override={overrides.freeBox}
-          className={classNames(projectcss.all, sty.freeBox, {
-            [sty.freeBoxcolorMode_blue]: hasVariant(
-              $state,
-              "colorMode",
-              "blue"
-            ),
-            [sty.freeBoxcolorMode_dark]: hasVariant(
-              $state,
-              "colorMode",
-              "dark"
-            ),
-            [sty.freeBoxcolorMode_light]: hasVariant(
-              $state,
-              "colorMode",
-              "light"
-            ),
-            [sty.freeBoxcolorMode_pricing]: hasVariant(
-              $state,
-              "colorMode",
-              "pricing"
-            )
-          })}
+          className={classNames(projectcss.all, sty.freeBox)}
         />
 
         <span
@@ -322,33 +263,7 @@ function PlasmicCloudIamNavigationLinkPrimaryCta__RenderFunc(props: {
           {renderPlasmicSlot({
             defaultContents: "Button label",
             value: args.children,
-            className: classNames(sty.slotTargetChildren, {
-              [sty.slotTargetChildrencolorMode_blue]: hasVariant(
-                $state,
-                "colorMode",
-                "blue"
-              ),
-              [sty.slotTargetChildrencolorMode_dark]: hasVariant(
-                $state,
-                "colorMode",
-                "dark"
-              ),
-              [sty.slotTargetChildrencolorMode_light]: hasVariant(
-                $state,
-                "colorMode",
-                "light"
-              ),
-              [sty.slotTargetChildrencolorMode_pricing]: hasVariant(
-                $state,
-                "colorMode",
-                "pricing"
-              ),
-              [sty.slotTargetChildrenisSmall]: hasVariant(
-                $state,
-                "isSmall",
-                "isSmall"
-              )
-            })
+            className: classNames(sty.slotTargetChildren)
           })}
         </span>
       </PlasmicLink__>
@@ -383,10 +298,12 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicCloudIamNavigationLinkPrimaryCta__VariantsArgs;
     args?: PlasmicCloudIamNavigationLinkPrimaryCta__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit< // Specify variants directly as props
-    PlasmicCloudIamNavigationLinkPrimaryCta__VariantsArgs,
-    ReservedPropsType
-  > &
+  } &
+    // Specify variants directly as props
+    Omit<
+      PlasmicCloudIamNavigationLinkPrimaryCta__VariantsArgs,
+      ReservedPropsType
+    > &
     // Specify args directly as props
     Omit<PlasmicCloudIamNavigationLinkPrimaryCta__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

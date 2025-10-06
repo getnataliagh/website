@@ -175,7 +175,7 @@ function PlasmicPriceSection__RenderFunc(props: {
         <div className={classNames(projectcss.all, sty.freeBox__ys10)}>
           <PriceCard
             borders={
-              hasVariant(globalVariants, "screen", "mobileOnly")
+              hasVariant(globalVariants, "mobile", "mobileOnly")
                 ? ["flatRight"]
                 : ["flatRight"]
             }
@@ -210,7 +210,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicPriceSection__VariantsArgs;
     args?: PlasmicPriceSection__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicPriceSection__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicPriceSection__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicPriceSection__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

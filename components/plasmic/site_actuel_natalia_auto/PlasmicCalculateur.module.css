@@ -1,4 +1,4 @@
-.root {
+.body {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -13,7 +13,7 @@
   min-width: 0;
   min-height: 0;
 }
-.headerHeroSection {
+.wrapper {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -28,10 +28,11 @@
   margin-bottom: 0px;
   width: auto;
   height: auto;
+  max-width: 2048px;
   padding: 0px 32px 113px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .headerHeroSection {
+  .wrapper {
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -63,21 +64,44 @@
     margin: auto;
   }
 }
+.section {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: 50px 0;
+}
+.section > * {
+  grid-column: 4;
+}
 .freeBox__axbu {
   display: flex;
   flex-direction: column;
   background: none;
   width: 100%;
+  row-gap: 20px;
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
   padding: 0;
   margin: 0;
 }
 .header {
   display: flex;
   flex-direction: column;
-  background: #1e3a8a;
+  background: var(--token-_LX8zWYksvaJ);
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+  width: auto;
   padding: 30px 0;
-  margin: 0 0 40px;
+  margin: 0px;
 }
 .freeBox__nvmrh {
   display: flex;

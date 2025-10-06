@@ -334,10 +334,12 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicCloudIamNavigationLinkViewMore__VariantsArgs;
     args?: PlasmicCloudIamNavigationLinkViewMore__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit< // Specify variants directly as props
-    PlasmicCloudIamNavigationLinkViewMore__VariantsArgs,
-    ReservedPropsType
-  > &
+  } &
+    // Specify variants directly as props
+    Omit<
+      PlasmicCloudIamNavigationLinkViewMore__VariantsArgs,
+      ReservedPropsType
+    > &
     // Specify args directly as props
     Omit<PlasmicCloudIamNavigationLinkViewMore__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props

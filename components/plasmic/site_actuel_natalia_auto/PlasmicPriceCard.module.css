@@ -9,7 +9,7 @@
   border-radius: 16px;
 }
 .rootprimary {
-  border: 0px none var(--token-CmoQIerUO4z-);
+  border: 0px none #34c759;
 }
 .rootborders_flatLeft {
   border-radius: 20px;
@@ -901,11 +901,11 @@
   display: block;
 }
 .textborders_flatRight___8Ob5Ydod9 {
-  color: var(--token-sAPe79HG-sw3);
+  color: #1c1c1e;
   display: block;
 }
 .textborders_flatCenter___8Ob5YyCkZj {
-  color: var(--token-sAPe79HG-sw3);
+  color: #1c1c1e;
   display: block;
 }
 .text__bkdAm {
@@ -940,10 +940,10 @@
   align-items: center;
   min-width: 0;
 }
-.button:global(.__wab_instance):global(.__wab_instance) {
+.buttonPrimary:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
 }
-.svg__g7G2T {
+.svg__aMiqL {
   position: relative;
   height: 1em;
 }
@@ -954,7 +954,7 @@
 .textborders_flatLeft__tKMyT1J3X {
   color: #185adb;
 }
-.svg___2K7G5 {
+.svg__x7E54 {
   position: relative;
   height: 1em;
 }

@@ -84,12 +84,15 @@ type ArgPropType = keyof PlasmicContact__ArgsType;
 export const PlasmicContact__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicContact__OverridesType = {
-  root?: Flex__<"div">;
-  headerHeroSection?: Flex__<"div">;
+  body?: Flex__<"div">;
+  wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
+  section?: Flex__<"section">;
+  h2?: Flex__<"h2">;
   iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
+  text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -198,8 +201,8 @@ function PlasmicContact__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"body"}
+          data-plasmic-override={overrides.body}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -208,13 +211,13 @@ function PlasmicContact__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            sty.root
+            sty.body
           )}
         >
           <div
-            data-plasmic-name={"headerHeroSection"}
-            data-plasmic-override={overrides.headerHeroSection}
-            className={classNames(projectcss.all, sty.headerHeroSection)}
+            data-plasmic-name={"wrapper"}
+            data-plasmic-override={overrides.wrapper}
+            className={classNames(projectcss.all, sty.wrapper)}
           >
             <Navbar
               data-plasmic-name={"navbar"}
@@ -222,112 +225,149 @@ function PlasmicContact__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            <Iframe
-              data-plasmic-name={"iframe"}
-              data-plasmic-override={overrides.iframe}
-              className={classNames("__wab_instance", sty.iframe)}
-              preview={true}
-              src={
-                "https://n8n.getnatalia.com/form/ceb27c8d-b649-4a99-a344-ccb0d0ae6b7d"
-              }
-              srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
-              useHtml={false}
-            />
-          </div>
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__iMgll
-            )}
-          >
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#1E3A8A", fontWeight: 700 }}
-              >
-                {
-                  "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
-                }
-              </span>
-              <React.Fragment>{"\n"}</React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#1E3A8A" }}
-              >
-                {"Sinon appelez-nous au 06 89 15 62 17"}
-              </span>
-              <React.Fragment>{"\n"}</React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#1E3A8A" }}
-              >
-                {"Vous tomberez sur un membre de l'\u00e9quipe ou Natalia"}
-              </span>
-            </React.Fragment>
-          </div>
-          <Section
-            data-plasmic-name={"pricingSection"}
-            data-plasmic-override={overrides.pricingSection}
-            className={classNames("__wab_instance", sty.pricingSection)}
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__l9Mn8)}>
-              <div
-                data-plasmic-name={"columns"}
-                data-plasmic-override={overrides.columns}
-                className={classNames(projectcss.all, sty.columns)}
-              >
-                <div className={classNames(projectcss.all, sty.column___5IKwl)}>
-                  <PriceCard
-                    borders={["flatLeft"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__xqsg
-                    )}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__qOdB7)}>
-                  <PriceCard
-                    borders={["flatCenter"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard___75CuB
-                    )}
-                  />
-
+            <section
+              data-plasmic-name={"section"}
+              data-plasmic-override={overrides.section}
+              className={classNames(projectcss.all, sty.section)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__jbRtt)}>
+                <h2
+                  data-plasmic-name={"h2"}
+                  data-plasmic-override={overrides.h2}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2
+                  )}
+                >
+                  {
+                    "Vous avez des questions ? \nNous sommes \u00e0 votre disposition."
+                  }
+                </h2>
+                <div className={classNames(projectcss.all, sty.freeBox__yiAqC)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__kqOj)}
+                    className={classNames(projectcss.all, sty.freeBox__h9Pbd)}
                   >
-                    <div
+                    <h4
                       className={classNames(
                         projectcss.all,
+                        projectcss.h4,
                         projectcss.__wab_text,
-                        sty.text___2DoNh
+                        sty.h4__iMgll
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "We Recommended"
-                        : "We Recommended"}
-                    </div>
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#1E3A8A", fontWeight: 700 }}
+                        >
+                          {
+                            "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
+                          }
+                        </span>
+                      </React.Fragment>
+                    </h4>
+                    <h4
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h4,
+                        projectcss.__wab_text,
+                        sty.h4___4RCiG
+                      )}
+                    >
+                      {
+                        "Sinon appelez-nous au 06 89 15 62 17,\u00a0\n\u00a0Vous tomberez sur un membre de l'\u00e9quipe ou Natalia."
+                      }
+                    </h4>
                   </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.column___6Kfz8)}>
-                  <PriceCard
-                    borders={["flatRight"]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__eeMSb
-                    )}
+                  <Iframe
+                    data-plasmic-name={"iframe"}
+                    data-plasmic-override={overrides.iframe}
+                    className={classNames("__wab_instance", sty.iframe)}
+                    preview={true}
+                    src={
+                      "https://n8n.getnatalia.com/form/ceb27c8d-b649-4a99-a344-ccb0d0ae6b7d"
+                    }
+                    srcDoc={"<div><h3>Heading</h3><p>Example text...</p></div>"}
+                    useHtml={false}
                   />
                 </div>
               </div>
-            </div>
-          </Section>
-          <FooterSection
-            data-plasmic-name={"footerSection"}
-            data-plasmic-override={overrides.footerSection}
-            className={classNames("__wab_instance", sty.footerSection)}
-          />
+            </section>
+            <Section
+              data-plasmic-name={"pricingSection"}
+              data-plasmic-override={overrides.pricingSection}
+              className={classNames("__wab_instance", sty.pricingSection)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__l9Mn8)}>
+                <div
+                  data-plasmic-name={"columns"}
+                  data-plasmic-override={overrides.columns}
+                  className={classNames(projectcss.all, sty.columns)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.column___5IKwl)}
+                  >
+                    <PriceCard
+                      borders={["flatLeft"]}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__xqsg
+                      )}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__qOdB7)}
+                  >
+                    <PriceCard
+                      borders={["flatCenter"]}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard___75CuB
+                      )}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__kqOj)}
+                    >
+                      <div
+                        data-plasmic-name={"text"}
+                        data-plasmic-override={overrides.text}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text
+                        )}
+                      >
+                        {hasVariant(globalVariants, "mobile", "mobileOnly")
+                          ? "We Recommended"
+                          : "We Recommended"}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column___6Kfz8)}
+                  >
+                    <PriceCard
+                      borders={["flatRight"]}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.priceCard__eeMSb
+                      )}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Section>
+            <FooterSection
+              data-plasmic-name={"footerSection"}
+              data-plasmic-override={overrides.footerSection}
+              className={classNames("__wab_instance", sty.footerSection)}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -335,32 +375,51 @@ function PlasmicContact__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "headerHeroSection",
+  body: [
+    "body",
+    "wrapper",
     "navbar",
+    "section",
+    "h2",
     "iframe",
     "pricingSection",
     "columns",
+    "text",
     "footerSection"
   ],
-  headerHeroSection: ["headerHeroSection", "navbar", "iframe"],
+  wrapper: [
+    "wrapper",
+    "navbar",
+    "section",
+    "h2",
+    "iframe",
+    "pricingSection",
+    "columns",
+    "text",
+    "footerSection"
+  ],
   navbar: ["navbar"],
+  section: ["section", "h2", "iframe"],
+  h2: ["h2"],
   iframe: ["iframe"],
-  pricingSection: ["pricingSection", "columns"],
-  columns: ["columns"],
+  pricingSection: ["pricingSection", "columns", "text"],
+  columns: ["columns", "text"],
+  text: ["text"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
-  headerHeroSection: "div";
+  body: "div";
+  wrapper: "div";
   navbar: typeof Navbar;
+  section: "section";
+  h2: "h2";
   iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
+  text: "div";
   footerSection: typeof FooterSection;
 };
 
@@ -375,7 +434,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicContact__VariantsArgs;
     args?: PlasmicContact__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicContact__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicContact__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicContact__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -411,7 +472,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "body") {
     func.displayName = "PlasmicContact";
   } else {
     func.displayName = `PlasmicContact.${nodeName}`;
@@ -421,14 +482,17 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicContact = Object.assign(
   // Top-level PlasmicContact renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("body"),
   {
     // Helper components rendering sub-elements
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
+    wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
+    section: makeNodeComponent("section"),
+    h2: makeNodeComponent("h2"),
     iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
+    text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicContact

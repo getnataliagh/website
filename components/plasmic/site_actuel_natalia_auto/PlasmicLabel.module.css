@@ -1,6 +1,6 @@
 .root:global(.__wab_instance) {
   position: relative;
-  color: var(--token-7B9gaZ4CGX2B);
+  color: #030712;
   font-family: var(--token-iEpbA7s1dE2F);
   font-size: var(--token-YRLpiKJWMvDT);
   line-height: var(--token-aFhewT50aNqv);
@@ -24,10 +24,10 @@
   display: none;
 }
 .textrequirementIndicator_optional {
-  color: var(--token-b-KRIWFttcWG);
+  color: #6b7280;
   display: block;
 }
 .textrequirementIndicator_required {
-  color: var(--token-mU9jzS9MI7OC);
+  color: #dc2626;
   display: block;
 }

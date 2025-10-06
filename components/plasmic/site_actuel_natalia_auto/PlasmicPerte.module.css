@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  row-gap: 12px;
+  position: relative;
+  padding: 8px;
+}
+.freeBox___19IG {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.img {
+  object-fit: cover;
+  max-width: 25%;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.freeBox__ul2DX {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.text__wXRoC {
+  text-align: center;
+}
+.text__zPgLm {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}

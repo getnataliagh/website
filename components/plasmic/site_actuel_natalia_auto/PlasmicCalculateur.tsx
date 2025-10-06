@@ -83,9 +83,10 @@ type ArgPropType = keyof PlasmicCalculateur__ArgsType;
 export const PlasmicCalculateur__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicCalculateur__OverridesType = {
-  root?: Flex__<"div">;
-  headerHeroSection?: Flex__<"div">;
+  body?: Flex__<"div">;
+  wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
+  section?: Flex__<"section">;
   header?: Flex__<"header">;
   h1?: Flex__<"h1">;
   nePasToucher?: Flex__<"div">;
@@ -242,8 +243,8 @@ function PlasmicCalculateur__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"body"}
+          data-plasmic-override={overrides.body}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -252,13 +253,13 @@ function PlasmicCalculateur__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            sty.root
+            sty.body
           )}
         >
           <div
-            data-plasmic-name={"headerHeroSection"}
-            data-plasmic-override={overrides.headerHeroSection}
-            className={classNames(projectcss.all, sty.headerHeroSection)}
+            data-plasmic-name={"wrapper"}
+            data-plasmic-override={overrides.wrapper}
+            className={classNames(projectcss.all, sty.wrapper)}
           >
             <Navbar
               data-plasmic-name={"navbar"}
@@ -266,850 +267,896 @@ function PlasmicCalculateur__RenderFunc(props: {
               className={classNames("__wab_instance", sty.navbar)}
             />
 
-            <div
-              className={classNames(projectcss.all, sty.freeBox__axbu)}
-              style={{
-                fontFamily:
-                  '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
-                color: "#2d3748",
-                lineHeight: "1.6"
-              }}
+            <section
+              data-plasmic-name={"section"}
+              data-plasmic-override={overrides.section}
+              className={classNames(projectcss.all, sty.section)}
             >
-              <header
-                data-plasmic-name={"header"}
-                data-plasmic-override={overrides.header}
-                className={classNames(projectcss.all, sty.header)}
+              <div
+                className={classNames(projectcss.all, sty.freeBox__axbu)}
+                style={{
+                  fontFamily:
+                    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+                  color: "#2d3748",
+                  lineHeight: "1.6"
+                }}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__nvmrh)}>
-                  <h1
-                    data-plasmic-name={"h1"}
-                    data-plasmic-override={overrides.h1}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1
-                    )}
-                  >
-                    {"Calculateur de manque \u00e0 gagner"}
-                  </h1>
-                </div>
-              </header>
-              <div className={classNames(projectcss.all, sty.freeBox__sMkZh)}>
-                <div
-                  data-plasmic-name={"nePasToucher"}
-                  data-plasmic-override={overrides.nePasToucher}
-                  className={classNames(projectcss.all, sty.nePasToucher)}
-                  style={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? {}
-                      : { gridTemplateColumns: "1fr 1fr" }
-                  }
+                <header
+                  data-plasmic-name={"header"}
+                  data-plasmic-override={overrides.header}
+                  className={classNames(projectcss.all, sty.header)}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__g2Qz5)}
+                    className={classNames(projectcss.all, sty.freeBox__nvmrh)}
+                  >
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1
+                      )}
+                    >
+                      {"Calculateur de manque \u00e0 gagner"}
+                    </h1>
+                  </div>
+                </header>
+                <div className={classNames(projectcss.all, sty.freeBox__sMkZh)}>
+                  <div
+                    data-plasmic-name={"nePasToucher"}
+                    data-plasmic-override={overrides.nePasToucher}
+                    className={classNames(projectcss.all, sty.nePasToucher)}
+                    style={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? {}
+                        : { gridTemplateColumns: "1fr 1fr" }
+                    }
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__g2Qz5)}
+                    >
+                      <h2
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h2,
+                          projectcss.__wab_text,
+                          sty.h2___8Ekwy
+                        )}
+                      >
+                        {"Vos donn\u00e9es"}
+                      </h2>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__mbxvS
+                        )}
+                      >
+                        <label
+                          className={classNames(
+                            projectcss.all,
+                            sty.label___3Jhqo
+                          )}
+                          style={{
+                            fontWeight: "500",
+                            color: "#4a5568",
+                            fontSize: "14px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__fElJb
+                            )}
+                          >
+                            {"Nombre d'appels mensuels"}
+                          </span>
+                        </label>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__u06QG
+                          )}
+                        >
+                          <input
+                            data-plasmic-name={"textbox"}
+                            data-plasmic-override={overrides.textbox}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.input,
+                              sty.textbox
+                            )}
+                            id={"monthly-calls"}
+                            onChange={async (...eventArgs: any) => {
+                              (e => {
+                                generateStateOnChangeProp($state, [
+                                  "textbox",
+                                  "value"
+                                ])(e.target.value);
+                              }).apply(null, eventArgs);
+                            }}
+                            ref={ref => {
+                              $refs["textbox"] = ref;
+                            }}
+                            style={{
+                              border: "2px solid #e2e8f0",
+                              fontSize: "16px",
+                              appearance: "none",
+                              mozAppearance: "textfield"
+                            }}
+                            type={"text"}
+                            value={
+                              generateStateValueProp($state, [
+                                "textbox",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__kJ6Wk
+                            )}
+                          >
+                            {"appels/mois"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__sLzQ2
+                        )}
+                      >
+                        <label
+                          className={classNames(
+                            projectcss.all,
+                            sty.label__qr1Io
+                          )}
+                          style={{
+                            fontWeight: "500",
+                            color: "#4a5568",
+                            fontSize: "14px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__ppmi7
+                            )}
+                          >
+                            {"% d'appels manqu\u00e9s"}
+                          </span>
+                        </label>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___9XPzk
+                          )}
+                        >
+                          <input
+                            data-plasmic-name={"textbox2"}
+                            data-plasmic-override={overrides.textbox2}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.input,
+                              sty.textbox2
+                            )}
+                            id={"missed-calls-percent"}
+                            onChange={async (...eventArgs: any) => {
+                              (e => {
+                                generateStateOnChangeProp($state, [
+                                  "textbox2",
+                                  "value"
+                                ])(e.target.value);
+                              }).apply(null, eventArgs);
+                            }}
+                            ref={ref => {
+                              $refs["textbox2"] = ref;
+                            }}
+                            style={{
+                              border: "2px solid #e2e8f0",
+                              fontSize: "16px",
+                              appearance: "none",
+                              mozAppearance: "textfield"
+                            }}
+                            type={"number"}
+                            value={
+                              generateStateValueProp($state, [
+                                "textbox2",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__ljFwT
+                            )}
+                          >
+                            {"%"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ak6IU
+                        )}
+                      >
+                        <label
+                          className={classNames(
+                            projectcss.all,
+                            sty.label___9RwA
+                          )}
+                          style={{
+                            fontWeight: "500",
+                            color: "#4a5568",
+                            fontSize: "14px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__eevw7
+                            )}
+                          >
+                            {"% de leads parmi ces appels manqu\u00e9s"}
+                          </span>
+                        </label>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__oKcS
+                          )}
+                        >
+                          <input
+                            data-plasmic-name={"textbox3"}
+                            data-plasmic-override={overrides.textbox3}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.input,
+                              sty.textbox3
+                            )}
+                            id={"leads-percent"}
+                            onChange={async (...eventArgs: any) => {
+                              (e => {
+                                generateStateOnChangeProp($state, [
+                                  "textbox3",
+                                  "value"
+                                ])(e.target.value);
+                              }).apply(null, eventArgs);
+                            }}
+                            ref={ref => {
+                              $refs["textbox3"] = ref;
+                            }}
+                            style={{
+                              border: "2px solid #e2e8f0",
+                              fontSize: "16px",
+                              appearance: "none",
+                              mozAppearance: "textfield"
+                            }}
+                            type={"number"}
+                            value={
+                              generateStateValueProp($state, [
+                                "textbox3",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__dcS9Z
+                            )}
+                          >
+                            {"%"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__lQ9U
+                        )}
+                      >
+                        <label
+                          className={classNames(
+                            projectcss.all,
+                            sty.label__qsTw
+                          )}
+                          style={{
+                            fontWeight: "500",
+                            color: "#4a5568",
+                            fontSize: "14px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__ao4D3
+                            )}
+                          >
+                            {"% de conversion leads \u2192 clients"}
+                          </span>
+                        </label>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dbYRa
+                          )}
+                        >
+                          <input
+                            data-plasmic-name={"textbox4"}
+                            data-plasmic-override={overrides.textbox4}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.input,
+                              sty.textbox4
+                            )}
+                            id={"conversion-percent"}
+                            onChange={async (...eventArgs: any) => {
+                              (e => {
+                                generateStateOnChangeProp($state, [
+                                  "textbox4",
+                                  "value"
+                                ])(e.target.value);
+                              }).apply(null, eventArgs);
+                            }}
+                            ref={ref => {
+                              $refs["textbox4"] = ref;
+                            }}
+                            style={{
+                              border: "2px solid #e2e8f0",
+                              fontSize: "16px",
+                              appearance: "none",
+                              mozAppearance: "textfield"
+                            }}
+                            type={"number"}
+                            value={
+                              generateStateValueProp($state, [
+                                "textbox4",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__qav2A
+                            )}
+                          >
+                            {"%"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__zufmo
+                        )}
+                      >
+                        <label
+                          className={classNames(
+                            projectcss.all,
+                            sty.label__nwHn
+                          )}
+                          style={{
+                            fontWeight: "500",
+                            color: "#4a5568",
+                            fontSize: "14px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__lnfoB
+                            )}
+                          >
+                            {"Marge moyenne par client (\u20ac)"}
+                          </span>
+                        </label>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__a04Xf
+                          )}
+                        >
+                          <input
+                            data-plasmic-name={"textbox5"}
+                            data-plasmic-override={overrides.textbox5}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.input,
+                              sty.textbox5
+                            )}
+                            id={"average-margin"}
+                            onChange={async (...eventArgs: any) => {
+                              (e => {
+                                generateStateOnChangeProp($state, [
+                                  "textbox5",
+                                  "value"
+                                ])(e.target.value);
+                              }).apply(null, eventArgs);
+                            }}
+                            ref={ref => {
+                              $refs["textbox5"] = ref;
+                            }}
+                            style={{
+                              border: "2px solid #e2e8f0",
+                              fontSize: "16px",
+                              appearance: "none",
+                              mozAppearance: "textfield"
+                            }}
+                            type={"number"}
+                            value={
+                              generateStateValueProp($state, [
+                                "textbox5",
+                                "value"
+                              ]) ?? ""
+                            }
+                          />
+
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__q0CVh
+                            )}
+                          >
+                            {"\u20ac"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__irVw)}
+                      style={
+                        hasVariant(globalVariants, "mobile", "mobileOnly")
+                          ? {}
+                          : { gridTemplateColumns: "1fr 1fr" }
+                      }
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__e0Yfg
+                        )}
+                        style={{ textAlign: "center" }}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jp8Yy
+                          )}
+                          style={{ fontSize: "40px" }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span___6VmTz
+                            )}
+                          >
+                            {"\ud83d\udcde"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dvzSw
+                          )}
+                          style={{
+                            color: "#718096",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            letterSpacing: "0.5px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__qqTf4
+                            )}
+                          >
+                            {"Appels manqu\u00e9s"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pWLq5
+                          )}
+                          style={{
+                            fontSize: "32px",
+                            fontWeight: "700",
+                            color: "#2d3748"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__cRnU0
+                            )}
+                            id={"results-01"}
+                          >
+                            {"300"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__go6Sc
+                        )}
+                        style={{ textAlign: "center" }}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__x4Hb5
+                          )}
+                          style={{ fontSize: "40px" }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__kPluY
+                            )}
+                          >
+                            {"\ud83c\udfaf"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0EAu7
+                          )}
+                          style={{
+                            color: "#718096",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            letterSpacing: "0.5px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__aDwv
+                            )}
+                          >
+                            {"Leads perdus"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__ppkb
+                          )}
+                          style={{
+                            fontSize: "32px",
+                            fontWeight: "700",
+                            color: "#2d3748"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__og9Zv
+                            )}
+                            id={"results-02"}
+                          >
+                            {"21"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__hc2Nx
+                        )}
+                        style={{ textAlign: "center" }}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__kryZ
+                          )}
+                          style={{ fontSize: "40px" }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__iEaZm
+                            )}
+                          >
+                            {"\ud83d\udc65"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__pzVfv
+                          )}
+                          style={{
+                            color: "#718096",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            letterSpacing: "0.5px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__m4RQh
+                            )}
+                          >
+                            {"Clients perdus"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__yPhPo
+                          )}
+                          style={{
+                            fontSize: "32px",
+                            fontWeight: "700",
+                            color: "#2d3748"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__a6Ymq
+                            )}
+                            id={"results-03"}
+                          >
+                            {"4"}
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__q7Skk
+                        )}
+                        style={{
+                          textAlign: "center",
+                          gridColumn: "1/-1",
+                          color: "white"
+                        }}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__jrj2
+                          )}
+                          style={{ fontSize: "40px" }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__r2E7T
+                            )}
+                          >
+                            {"\ud83d\udcb8"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__nl8KP
+                          )}
+                          style={{
+                            color: "rgba(255,255,255,0.9)",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            letterSpacing: "0.5px"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__h83W0
+                            )}
+                          >
+                            {"Manque \u00e0 gagner total"}
+                          </span>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__z1YsB
+                          )}
+                          style={{
+                            fontSize: "48px",
+                            fontWeight: "700",
+                            color: "white"
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__ds65M
+                            )}
+                            id={"results-04"}
+                          >
+                            {"11\u202f970,00 \u20ac"}
+                          </span>
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__yEvan
+                            )}
+                            id={``}
+                          >
+                            {"\u20ac"}
+                          </span>
+                          <span
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.span,
+                              projectcss.__wab_text,
+                              sty.span__eua6A
+                            )}
+                          >
+                            {"Par mois"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <Embed
+                      data-plasmic-name={"codeCalculateur"}
+                      data-plasmic-override={overrides.codeCalculateur}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.codeCalculateur
+                      )}
+                      code={
+                        "<script defer>\n        // Fonction pour formater les nombres\n        function formatNumber(num, decimals = 0) {\n            return new Intl.NumberFormat('fr-FR', {\n                minimumFractionDigits: decimals,\n                maximumFractionDigits: decimals\n            }).format(num);\n        }\n\n        // Fonction pour calculer les r\u00e9sultats\n        function calculateResults() {\n            // R\u00e9cup\u00e9rer les valeurs\n            const monthlyCalls = parseFloat(document.getElementById('monthly-calls').value) || 0;\n            const missedCallsPercent = parseFloat(document.getElementById('missed-calls-percent').value) || 0;\n            const leadsPercent = parseFloat(document.getElementById('leads-percent').value) || 0;\n            const conversionPercent = parseFloat(document.getElementById('conversion-percent').value) || 0;\n            const averageMargin = parseFloat(document.getElementById('average-margin').value) || 0;\n\n            // Calculs\n            const missedCalls = monthlyCalls * (missedCallsPercent / 100);\n            const lostLeads = missedCalls * (leadsPercent / 100);\n            const lostCustomers = lostLeads * (conversionPercent / 100);\n            const totalLoss = lostCustomers * averageMargin;\n\n            // Afficher les r\u00e9sultats\n            const resultsContainer = document.getElementById('results');\n            \n            document.getElementById('results-01').innerText = formatNumber(missedCalls);\n            document.getElementById('results-02').innerText = formatNumber(lostLeads);\n            document.getElementById('results-03').innerText = formatNumber(lostCustomers);\n            document.getElementById('results-04').innerText = formatNumber(totalLoss, 0);\n        }\n\n        // Ajouter les \u00e9couteurs d'\u00e9v\u00e9nements\n        document.getElementById('monthly-calls').addEventListener('input', calculateResults);\n        document.getElementById('missed-calls-percent').addEventListener('input', calculateResults);\n        document.getElementById('leads-percent').addEventListener('input', calculateResults);\n        document.getElementById('conversion-percent').addEventListener('input', calculateResults);\n        document.getElementById('average-margin').addEventListener('input', calculateResults);\n\n        // Calculer les r\u00e9sultats initiaux\n        calculateResults();\n    </script>\n"
+                      }
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__vfaAh)}
+                    style={{ textAlign: "center" }}
                   >
                     <h2
                       className={classNames(
                         projectcss.all,
                         projectcss.h2,
                         projectcss.__wab_text,
-                        sty.h2___8Ekwy
+                        sty.h2__fob2G
                       )}
                     >
-                      {"Vos donn\u00e9es"}
+                      {"\u00c9vitez ces pertes avec Natalia"}
                     </h2>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__mbxvS)}
+                    <p
+                      data-plasmic-name={"p"}
+                      data-plasmic-override={overrides.p}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.p,
+                        projectcss.__wab_text,
+                        sty.p
+                      )}
                     >
-                      <label
-                        className={classNames(
-                          projectcss.all,
-                          sty.label___3Jhqo
-                        )}
-                        style={{
-                          fontWeight: "500",
-                          color: "#4a5568",
-                          fontSize: "14px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__fElJb
-                          )}
-                        >
-                          {"Nombre d'appels mensuels"}
-                        </span>
-                      </label>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__u06QG
-                        )}
-                      >
-                        <input
-                          data-plasmic-name={"textbox"}
-                          data-plasmic-override={overrides.textbox}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.input,
-                            sty.textbox
-                          )}
-                          id={"monthly-calls"}
-                          onChange={async (...eventArgs: any) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox"] = ref;
-                          }}
-                          style={{
-                            border: "2px solid #e2e8f0",
-                            fontSize: "16px",
-                            appearance: "none",
-                            mozAppearance: "textfield"
-                          }}
-                          type={"text"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__kJ6Wk
-                          )}
-                        >
-                          {"appels/mois"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__sLzQ2)}
-                    >
-                      <label
-                        className={classNames(projectcss.all, sty.label__qr1Io)}
-                        style={{
-                          fontWeight: "500",
-                          color: "#4a5568",
-                          fontSize: "14px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__ppmi7
-                          )}
-                        >
-                          {"% d'appels manqu\u00e9s"}
-                        </span>
-                      </label>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___9XPzk
-                        )}
-                      >
-                        <input
-                          data-plasmic-name={"textbox2"}
-                          data-plasmic-override={overrides.textbox2}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.input,
-                            sty.textbox2
-                          )}
-                          id={"missed-calls-percent"}
-                          onChange={async (...eventArgs: any) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox2",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox2"] = ref;
-                          }}
-                          style={{
-                            border: "2px solid #e2e8f0",
-                            fontSize: "16px",
-                            appearance: "none",
-                            mozAppearance: "textfield"
-                          }}
-                          type={"number"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox2",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__ljFwT
-                          )}
-                        >
-                          {"%"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ak6IU)}
-                    >
-                      <label
-                        className={classNames(projectcss.all, sty.label___9RwA)}
-                        style={{
-                          fontWeight: "500",
-                          color: "#4a5568",
-                          fontSize: "14px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__eevw7
-                          )}
-                        >
-                          {"% de leads parmi ces appels manqu\u00e9s"}
-                        </span>
-                      </label>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__oKcS
-                        )}
-                      >
-                        <input
-                          data-plasmic-name={"textbox3"}
-                          data-plasmic-override={overrides.textbox3}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.input,
-                            sty.textbox3
-                          )}
-                          id={"leads-percent"}
-                          onChange={async (...eventArgs: any) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox3",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox3"] = ref;
-                          }}
-                          style={{
-                            border: "2px solid #e2e8f0",
-                            fontSize: "16px",
-                            appearance: "none",
-                            mozAppearance: "textfield"
-                          }}
-                          type={"number"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox3",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__dcS9Z
-                          )}
-                        >
-                          {"%"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__lQ9U)}
-                    >
-                      <label
-                        className={classNames(projectcss.all, sty.label__qsTw)}
-                        style={{
-                          fontWeight: "500",
-                          color: "#4a5568",
-                          fontSize: "14px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__ao4D3
-                          )}
-                        >
-                          {"% de conversion leads \u2192 clients"}
-                        </span>
-                      </label>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__dbYRa
-                        )}
-                      >
-                        <input
-                          data-plasmic-name={"textbox4"}
-                          data-plasmic-override={overrides.textbox4}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.input,
-                            sty.textbox4
-                          )}
-                          id={"conversion-percent"}
-                          onChange={async (...eventArgs: any) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox4",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox4"] = ref;
-                          }}
-                          style={{
-                            border: "2px solid #e2e8f0",
-                            fontSize: "16px",
-                            appearance: "none",
-                            mozAppearance: "textfield"
-                          }}
-                          type={"number"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox4",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__qav2A
-                          )}
-                        >
-                          {"%"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__zufmo)}
-                    >
-                      <label
-                        className={classNames(projectcss.all, sty.label__nwHn)}
-                        style={{
-                          fontWeight: "500",
-                          color: "#4a5568",
-                          fontSize: "14px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__lnfoB
-                          )}
-                        >
-                          {"Marge moyenne par client (\u20ac)"}
-                        </span>
-                      </label>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__a04Xf
-                        )}
-                      >
-                        <input
-                          data-plasmic-name={"textbox5"}
-                          data-plasmic-override={overrides.textbox5}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.input,
-                            sty.textbox5
-                          )}
-                          id={"average-margin"}
-                          onChange={async (...eventArgs: any) => {
-                            (e => {
-                              generateStateOnChangeProp($state, [
-                                "textbox5",
-                                "value"
-                              ])(e.target.value);
-                            }).apply(null, eventArgs);
-                          }}
-                          ref={ref => {
-                            $refs["textbox5"] = ref;
-                          }}
-                          style={{
-                            border: "2px solid #e2e8f0",
-                            fontSize: "16px",
-                            appearance: "none",
-                            mozAppearance: "textfield"
-                          }}
-                          type={"number"}
-                          value={
-                            generateStateValueProp($state, [
-                              "textbox5",
-                              "value"
-                            ]) ?? ""
-                          }
-                        />
-
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__q0CVh
-                          )}
-                        >
-                          {"\u20ac"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__irVw)}
-                    style={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? {}
-                        : { gridTemplateColumns: "1fr 1fr" }
-                    }
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__e0Yfg)}
-                      style={{ textAlign: "center" }}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__jp8Yy
-                        )}
-                        style={{ fontSize: "40px" }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span___6VmTz
-                          )}
-                        >
-                          {"\ud83d\udcde"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__dvzSw
-                        )}
-                        style={{
-                          color: "#718096",
-                          fontSize: "14px",
-                          fontWeight: "500",
-                          letterSpacing: "0.5px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__qqTf4
-                          )}
-                        >
-                          {"Appels manqu\u00e9s"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__pWLq5
-                        )}
-                        style={{
-                          fontSize: "32px",
-                          fontWeight: "700",
-                          color: "#2d3748"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__cRnU0
-                          )}
-                          id={"results-01"}
-                        >
-                          {"300"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__go6Sc)}
-                      style={{ textAlign: "center" }}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__x4Hb5
-                        )}
-                        style={{ fontSize: "40px" }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__kPluY
-                          )}
-                        >
-                          {"\ud83c\udfaf"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___0EAu7
-                        )}
-                        style={{
-                          color: "#718096",
-                          fontSize: "14px",
-                          fontWeight: "500",
-                          letterSpacing: "0.5px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__aDwv
-                          )}
-                        >
-                          {"Leads perdus"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__ppkb
-                        )}
-                        style={{
-                          fontSize: "32px",
-                          fontWeight: "700",
-                          color: "#2d3748"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__og9Zv
-                          )}
-                          id={"results-02"}
-                        >
-                          {"21"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__hc2Nx)}
-                      style={{ textAlign: "center" }}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__kryZ
-                        )}
-                        style={{ fontSize: "40px" }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__iEaZm
-                          )}
-                        >
-                          {"\ud83d\udc65"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__pzVfv
-                        )}
-                        style={{
-                          color: "#718096",
-                          fontSize: "14px",
-                          fontWeight: "500",
-                          letterSpacing: "0.5px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__m4RQh
-                          )}
-                        >
-                          {"Clients perdus"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__yPhPo
-                        )}
-                        style={{
-                          fontSize: "32px",
-                          fontWeight: "700",
-                          color: "#2d3748"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__a6Ymq
-                          )}
-                          id={"results-03"}
-                        >
-                          {"4"}
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__q7Skk)}
+                      {
+                        "Ne laissez plus aucun appel sans r\u00e9ponse. Natalia r\u00e9pond instantan\u00e9ment 24/7 \u00e0 tous vos clients."
+                      }
+                    </p>
+                    <button
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.button,
+                        sty.button
+                      )}
                       style={{
-                        textAlign: "center",
-                        gridColumn: "1/-1",
-                        color: "white"
+                        color: "white",
+                        border: "none",
+                        fontSize: "18px",
+                        fontWeight: "600"
                       }}
                     >
-                      <div
+                      <CloudIamNavigationLinkPrimaryCta
+                        data-plasmic-name={"cloudIamNavigationLinkPrimaryCta"}
+                        data-plasmic-override={
+                          overrides.cloudIamNavigationLinkPrimaryCta
+                        }
                         className={classNames(
-                          projectcss.all,
-                          sty.freeBox__jrj2
+                          "__wab_instance",
+                          sty.cloudIamNavigationLinkPrimaryCta
                         )}
-                        style={{ fontSize: "40px" }}
+                        dataTrkciamAction={``}
+                        dataTrkciamCategory={``}
+                        dataTrkciamName={``}
+                        destination={`/contact`}
+                        openInNewTab={undefined}
                       >
-                        <span
+                        <div
+                          data-plasmic-name={"text"}
+                          data-plasmic-override={overrides.text}
                           className={classNames(
                             projectcss.all,
-                            projectcss.span,
                             projectcss.__wab_text,
-                            sty.span__r2E7T
+                            sty.text
                           )}
                         >
-                          {"\ud83d\udcb8"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__nl8KP
-                        )}
-                        style={{
-                          color: "rgba(255,255,255,0.9)",
-                          fontSize: "14px",
-                          fontWeight: "500",
-                          letterSpacing: "0.5px"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__h83W0
-                          )}
-                        >
-                          {"Manque \u00e0 gagner total"}
-                        </span>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__z1YsB
-                        )}
-                        style={{
-                          fontSize: "48px",
-                          fontWeight: "700",
-                          color: "white"
-                        }}
-                      >
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__ds65M
-                          )}
-                          id={"results-04"}
-                        >
-                          {"11\u202f970,00 \u20ac"}
-                        </span>
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__yEvan
-                          )}
-                          id={``}
-                        >
-                          {"\u20ac"}
-                        </span>
-                        <span
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.span,
-                            projectcss.__wab_text,
-                            sty.span__eua6A
-                          )}
-                        >
-                          {"Par mois"}
-                        </span>
-                      </div>
-                    </div>
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-iATmNBw1ODRP)" }}
+                            >
+                              {"R\u00e9server une d\u00e9mo"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                      </CloudIamNavigationLinkPrimaryCta>
+                    </button>
                   </div>
-                  <Embed
-                    data-plasmic-name={"codeCalculateur"}
-                    data-plasmic-override={overrides.codeCalculateur}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.codeCalculateur
-                    )}
-                    code={
-                      "<script defer>\n        // Fonction pour formater les nombres\n        function formatNumber(num, decimals = 0) {\n            return new Intl.NumberFormat('fr-FR', {\n                minimumFractionDigits: decimals,\n                maximumFractionDigits: decimals\n            }).format(num);\n        }\n\n        // Fonction pour calculer les r\u00e9sultats\n        function calculateResults() {\n            // R\u00e9cup\u00e9rer les valeurs\n            const monthlyCalls = parseFloat(document.getElementById('monthly-calls').value) || 0;\n            const missedCallsPercent = parseFloat(document.getElementById('missed-calls-percent').value) || 0;\n            const leadsPercent = parseFloat(document.getElementById('leads-percent').value) || 0;\n            const conversionPercent = parseFloat(document.getElementById('conversion-percent').value) || 0;\n            const averageMargin = parseFloat(document.getElementById('average-margin').value) || 0;\n\n            // Calculs\n            const missedCalls = monthlyCalls * (missedCallsPercent / 100);\n            const lostLeads = missedCalls * (leadsPercent / 100);\n            const lostCustomers = lostLeads * (conversionPercent / 100);\n            const totalLoss = lostCustomers * averageMargin;\n\n            // Afficher les r\u00e9sultats\n            const resultsContainer = document.getElementById('results');\n            \n            document.getElementById('results-01').innerText = formatNumber(missedCalls);\n            document.getElementById('results-02').innerText = formatNumber(lostLeads);\n            document.getElementById('results-03').innerText = formatNumber(lostCustomers);\n            document.getElementById('results-04').innerText = formatNumber(totalLoss, 0);\n        }\n\n        // Ajouter les \u00e9couteurs d'\u00e9v\u00e9nements\n        document.getElementById('monthly-calls').addEventListener('input', calculateResults);\n        document.getElementById('missed-calls-percent').addEventListener('input', calculateResults);\n        document.getElementById('leads-percent').addEventListener('input', calculateResults);\n        document.getElementById('conversion-percent').addEventListener('input', calculateResults);\n        document.getElementById('average-margin').addEventListener('input', calculateResults);\n\n        // Calculer les r\u00e9sultats initiaux\n        calculateResults();\n    </script>\n"
-                    }
-                  />
-                </div>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__vfaAh)}
-                  style={{ textAlign: "center" }}
-                >
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__fob2G
-                    )}
-                  >
-                    {"\u00c9vitez ces pertes avec Natalia"}
-                  </h2>
-                  <p
-                    data-plasmic-name={"p"}
-                    data-plasmic-override={overrides.p}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.p,
-                      projectcss.__wab_text,
-                      sty.p
-                    )}
-                  >
-                    {
-                      "Ne laissez plus aucun appel sans r\u00e9ponse. Natalia r\u00e9pond instantan\u00e9ment 24/7 \u00e0 tous vos clients."
-                    }
-                  </p>
-                  <button
-                    data-plasmic-name={"button"}
-                    data-plasmic-override={overrides.button}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.button,
-                      sty.button
-                    )}
-                    style={{
-                      color: "white",
-                      border: "none",
-                      fontSize: "18px",
-                      fontWeight: "600"
-                    }}
-                  >
-                    <CloudIamNavigationLinkPrimaryCta
-                      data-plasmic-name={"cloudIamNavigationLinkPrimaryCta"}
-                      data-plasmic-override={
-                        overrides.cloudIamNavigationLinkPrimaryCta
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.cloudIamNavigationLinkPrimaryCta
-                      )}
-                      colorMode={"dark"}
-                      dataTrkciamAction={``}
-                      dataTrkciamCategory={``}
-                      dataTrkciamName={``}
-                      destination={`/contact`}
-                      openInNewTab={undefined}
-                    >
-                      <div
-                        data-plasmic-name={"text"}
-                        data-plasmic-override={overrides.text}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                          >
-                            {"R\u00e9server une d\u00e9mo"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </CloudIamNavigationLinkPrimaryCta>
-                  </button>
                 </div>
               </div>
-            </div>
+            </section>
+            <FooterSection
+              data-plasmic-name={"footerSection"}
+              data-plasmic-override={overrides.footerSection}
+              className={classNames("__wab_instance", sty.footerSection)}
+            />
           </div>
-          <FooterSection
-            data-plasmic-name={"footerSection"}
-            data-plasmic-override={overrides.footerSection}
-            className={classNames("__wab_instance", sty.footerSection)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -1117,10 +1164,11 @@ function PlasmicCalculateur__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "headerHeroSection",
+  body: [
+    "body",
+    "wrapper",
     "navbar",
+    "section",
     "header",
     "h1",
     "nePasToucher",
@@ -1136,9 +1184,28 @@ const PlasmicDescendants = {
     "text",
     "footerSection"
   ],
-  headerHeroSection: [
-    "headerHeroSection",
+  wrapper: [
+    "wrapper",
     "navbar",
+    "section",
+    "header",
+    "h1",
+    "nePasToucher",
+    "textbox",
+    "textbox2",
+    "textbox3",
+    "textbox4",
+    "textbox5",
+    "codeCalculateur",
+    "p",
+    "button",
+    "cloudIamNavigationLinkPrimaryCta",
+    "text",
+    "footerSection"
+  ],
+  navbar: ["navbar"],
+  section: [
+    "section",
     "header",
     "h1",
     "nePasToucher",
@@ -1153,7 +1220,6 @@ const PlasmicDescendants = {
     "cloudIamNavigationLinkPrimaryCta",
     "text"
   ],
-  navbar: ["navbar"],
   header: ["header", "h1"],
   h1: ["h1"],
   nePasToucher: [
@@ -1184,9 +1250,10 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
-  headerHeroSection: "div";
+  body: "div";
+  wrapper: "div";
   navbar: typeof Navbar;
+  section: "section";
   header: "header";
   h1: "h1";
   nePasToucher: "div";
@@ -1214,7 +1281,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicCalculateur__VariantsArgs;
     args?: PlasmicCalculateur__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicCalculateur__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicCalculateur__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicCalculateur__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -1250,7 +1319,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "body") {
     func.displayName = "PlasmicCalculateur";
   } else {
     func.displayName = `PlasmicCalculateur.${nodeName}`;
@@ -1260,11 +1329,12 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicCalculateur = Object.assign(
   // Top-level PlasmicCalculateur renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("body"),
   {
     // Helper components rendering sub-elements
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
+    wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
+    section: makeNodeComponent("section"),
     header: makeNodeComponent("header"),
     h1: makeNodeComponent("h1"),
     nePasToucher: makeNodeComponent("nePasToucher"),

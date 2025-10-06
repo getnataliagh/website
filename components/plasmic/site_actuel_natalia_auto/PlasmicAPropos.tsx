@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
+import Equipe from "../../Equipe"; // plasmic-import: O7m8_939gpC-/component
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -70,8 +71,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicAPropos.module.css"; // plasmic-import: zivB9AwcttVS/css
-
-import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
 
 createPlasmicElementProxy;
 
@@ -85,12 +84,13 @@ type ArgPropType = keyof PlasmicAPropos__ArgsType;
 export const PlasmicAPropos__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicAPropos__OverridesType = {
-  root?: Flex__<"div">;
-  headerHeroSection?: Flex__<"div">;
+  body?: Flex__<"div">;
+  wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
-  section?: Flex__<"section">;
-  h1?: Flex__<"h1">;
-  foreground?: Flex__<"div">;
+  histoire?: Flex__<"section">;
+  equipe?: Flex__<"section">;
+  titre?: Flex__<"div">;
+  chronologie?: Flex__<"section">;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
@@ -201,8 +201,8 @@ function PlasmicAPropos__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"body"}
+          data-plasmic-override={overrides.body}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -211,13 +211,13 @@ function PlasmicAPropos__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             styleTokensClassNames,
-            sty.root
+            sty.body
           )}
         >
           <div
-            data-plasmic-name={"headerHeroSection"}
-            data-plasmic-override={overrides.headerHeroSection}
-            className={classNames(projectcss.all, sty.headerHeroSection)}
+            data-plasmic-name={"wrapper"}
+            data-plasmic-override={overrides.wrapper}
+            className={classNames(projectcss.all, sty.wrapper)}
           >
             <Navbar
               data-plasmic-name={"navbar"}
@@ -226,19 +226,17 @@ function PlasmicAPropos__RenderFunc(props: {
             />
 
             <section
-              data-plasmic-name={"section"}
-              data-plasmic-override={overrides.section}
-              className={classNames(projectcss.all, sty.section)}
+              data-plasmic-name={"histoire"}
+              data-plasmic-override={overrides.histoire}
+              className={classNames(projectcss.all, sty.histoire)}
             >
               <div className={classNames(projectcss.all, sty.freeBox__ia7Dz)}>
-                <h1
-                  data-plasmic-name={"h1"}
-                  data-plasmic-override={overrides.h1}
+                <h2
                   className={classNames(
                     projectcss.all,
-                    projectcss.h1,
+                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.h1
+                    sty.h2__hWlcM
                   )}
                 >
                   <React.Fragment>
@@ -249,12 +247,13 @@ function PlasmicAPropos__RenderFunc(props: {
                       {"Notre histoire"}
                     </span>
                   </React.Fragment>
-                </h1>
-                <div
+                </h2>
+                <h4
                   className={classNames(
                     projectcss.all,
+                    projectcss.h4,
                     projectcss.__wab_text,
-                    sty.text__zJ6DL
+                    sty.h4__zJ6DL
                   )}
                 >
                   <React.Fragment>
@@ -267,620 +266,297 @@ function PlasmicAPropos__RenderFunc(props: {
                       }
                     </span>
                   </React.Fragment>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__lvSlo)}>
+                </h4>
+              </div>
+            </section>
+            <section
+              data-plasmic-name={"equipe"}
+              data-plasmic-override={overrides.equipe}
+              className={classNames(projectcss.all, sty.equipe)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__dQmSy)}>
+                <div className={classNames(projectcss.all, sty.freeBox__g3Bsc)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__hh8U7)}
+                    data-plasmic-name={"titre"}
+                    data-plasmic-override={overrides.titre}
+                    className={classNames(projectcss.all, sty.titre)}
                   >
-                    <div
-                      data-plasmic-name={"foreground"}
-                      data-plasmic-override={overrides.foreground}
-                      className={classNames(projectcss.all, sty.foreground)}
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__hy9SA
+                      )}
                     >
-                      <h2
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h2,
-                          projectcss.__wab_text,
-                          sty.h2__mdbfz
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {"L'\u00e9quipe"}
-                          </span>
-                        </React.Fragment>
-                      </h2>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__l0Tox
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "Des profils tr\u00e8s compl\u00e9mentaires et des valeurs identiques pour servir au mieux nos clients."
-                            }
-                          </span>
-                        </React.Fragment>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__yrc3L)}
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                        >
+                          {"Rencontrez notre super \u00e9quipe"}
+                        </span>
+                      </React.Fragment>
+                    </h2>
+                    <h4
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h4,
+                        projectcss.__wab_text,
+                        sty.h4__hjF2L
+                      )}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___9WxD
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__dpDk
-                          )}
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                         >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__egfYp)}
-                            displayHeight={"100%"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"none"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151252Png.png",
-                              fullWidth: 258,
-                              fullHeight: 258,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__w1DoB
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___6OAfG
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ancIl
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__dyJik
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>{""}</React.Fragment>
-                              {
-                                <PlasmicLink__
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.a,
-                                    projectcss.__wab_text,
-                                    projectcss.plasmic_default__inline,
-                                    sty.link__vxSlO
-                                  )}
-                                  component={Link}
-                                  href={
-                                    "https://www.linkedin.com/in/nicolas-dubreuil-essca/"
-                                  }
-                                  platform={"nextjs"}
-                                >
-                                  {"Nicolas Dubreuil"}
-                                </PlasmicLink__>
-                              }
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__bxHnF
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"CEO, co-fondateur"}
-                              </span>
-                              <React.Fragment>
-                                {"\nD\u00e9veloppement commercial"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__u314
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__pbtFh
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___9Dqhk)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A152924Png.png",
-                              fullWidth: 256,
-                              fullHeight: 258,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__k3Qly
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___1J85X
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__uHLeX
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__vDDw
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>{""}</React.Fragment>
-                              {
-                                <PlasmicLink__
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.a,
-                                    projectcss.__wab_text,
-                                    projectcss.plasmic_default__inline,
-                                    sty.link__rp7I6
-                                  )}
-                                  component={Link}
-                                  href={
-                                    "https://www.linkedin.com/in/jeremy-david-279564157/"
-                                  }
-                                  platform={"nextjs"}
-                                >
-                                  {"J\u00e9r\u00e9my David"}
-                                </PlasmicLink__>
-                              }
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gEpZu
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"COO, co-fondateur"}
-                              </span>
-                              <React.Fragment>
-                                {"\nExpert lean & process"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__mEhYp
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__iAbzK
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__blhaR)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A153330Png.png",
-                              fullWidth: 250,
-                              fullHeight: 258,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__kVx4F
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__zzVna
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__nPbL
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xvsfi
-                            )}
-                          >
-                            <React.Fragment>
-                              <React.Fragment>{""}</React.Fragment>
-                              {
-                                <PlasmicLink__
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.a,
-                                    projectcss.__wab_text,
-                                    projectcss.plasmic_default__inline,
-                                    sty.link__tX2UF
-                                  )}
-                                  component={Link}
-                                  href={
-                                    "https://www.linkedin.com/in/louis-marsais/"
-                                  }
-                                  platform={"nextjs"}
-                                >
-                                  {"Louis Marsais"}
-                                </PlasmicLink__>
-                              }
-                              <React.Fragment>{""}</React.Fragment>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__dloYw
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"CTO, co-fondateur"}
-                              </span>
-                              <React.Fragment>
-                                {"\nProduit & Tech"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__n1Rsc)}
+                          {
+                            "Des profils tr\u00e8s compl\u00e9mentaires et des valeurs identiques pour servir au mieux nos clients."
+                          }
+                        </span>
+                      </React.Fragment>
+                    </h4>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___5FYf7)}
+                  >
+                    <Equipe
+                      className={classNames(
+                        "__wab_instance",
+                        sty.equipe___3IFcZ
+                      )}
                     >
-                      <div
+                      <PlasmicLink__
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__vxhcm
+                          projectcss.a,
+                          sty.link__gVGou
                         )}
+                        component={Link}
+                        href={
+                          "https://www.linkedin.com/in/nicolas-dubreuil-essca/"
+                        }
+                        platform={"nextjs"}
                       >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__azo9S
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__sLvSc)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A151554Png.png",
-                              fullWidth: 256,
-                              fullHeight: 256,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__giHpD
-                          )}
-                        >
-                          {false ? (
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__hj0QH
-                              )}
-                            >
-                              <Icon8Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__y4EMd
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                          ) : null}
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__nQzbO
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__yRDyr
-                              )}
-                            >
-                              <React.Fragment>
-                                <React.Fragment>{""}</React.Fragment>
-                                {
-                                  <PlasmicLink__
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.a,
-                                      projectcss.__wab_text,
-                                      projectcss.plasmic_default__inline,
-                                      sty.link__zMlxV
-                                    )}
-                                    component={Link}
-                                    href={
-                                      "https://www.linkedin.com/in/francoisguillaumeribreau/"
-                                    }
-                                    platform={"nextjs"}
-                                  >
-                                    {"Fran\u00e7ois-Guillaume Ribreau"}
-                                  </PlasmicLink__>
-                                }
-                                <React.Fragment>{""}</React.Fragment>
-                              </React.Fragment>
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__tBqxp
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ fontWeight: 700 }}
-                                >
-                                  {"Expert IA, co-fondateur"}
-                                </span>
-                                <React.Fragment>
-                                  {"\nSerial entrepreneur"}
-                                </React.Fragment>
-                              </React.Fragment>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__pTnFn)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/image.png",
+                            fullWidth: 200,
+                            fullHeight: 200,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
+                    <Equipe
+                      className={classNames(
+                        "__wab_instance",
+                        sty.equipe__n5Fz5
+                      )}
+                      expert={"Expert lean & process"}
+                      nom={"J\u00e9r\u00e9my David"}
+                      poste={"COO, co-fondateur"}
+                    >
+                      <PlasmicLink__
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__w3AWd
+                          projectcss.a,
+                          sty.link__ue7Ch
                         )}
+                        component={Link}
+                        href={
+                          "https://www.linkedin.com/in/jeremy-david-279564157/"
+                        }
+                        platform={"nextjs"}
                       >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___2Uagv
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__vuit2
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__grcBf
-                              )}
-                            >
-                              <PlasmicImg__
-                                alt={""}
-                                className={classNames(sty.img__dydsg)}
-                                displayHeight={"auto"}
-                                displayMaxHeight={"none"}
-                                displayMaxWidth={"100%"}
-                                displayMinHeight={"0"}
-                                displayMinWidth={"0"}
-                                displayWidth={"auto"}
-                                loading={"lazy"}
-                                src={{
-                                  src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250820A153059Png.png",
-                                  fullWidth: 250,
-                                  fullHeight: 250,
-                                  aspectRatio: undefined
-                                }}
-                              />
-                            </div>
-                            {false ? (
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__aKpU1
-                                )}
-                              >
-                                <Icon8Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg___4OvzH
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                            ) : null}
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox___5TgRw
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__llZiR
-                                )}
-                              >
-                                <React.Fragment>
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <PlasmicLink__
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.a,
-                                        projectcss.__wab_text,
-                                        projectcss.plasmic_default__inline,
-                                        sty.link__xU23R
-                                      )}
-                                      component={Link}
-                                      href={
-                                        "https://www.linkedin.com/in/baptiste-parmantier/"
-                                      }
-                                      platform={"nextjs"}
-                                    >
-                                      {"Baptiste Parmantier"}
-                                    </PlasmicLink__>
-                                  }
-                                  <React.Fragment>{""}</React.Fragment>
-                                </React.Fragment>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ltYz4
-                                )}
-                              >
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{ fontWeight: 700 }}
-                                  >
-                                    {"Lead Software Engineer"}
-                                  </span>
-                                  <React.Fragment>
-                                    {"\nAutodidacte passionn\u00e9"}
-                                  </React.Fragment>
-                                </React.Fragment>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__y4HJ)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/image2.png",
+                            fullWidth: 200,
+                            fullHeight: 200,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
+                    <Equipe
+                      className={classNames(
+                        "__wab_instance",
+                        sty.equipe___8EZra
+                      )}
+                      expert={"Produit & Tech"}
+                      nom={"Louis Marsais"}
+                      poste={"CTO, co-fondateur"}
+                    >
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__pcDp8
+                        )}
+                        component={Link}
+                        href={"https://www.linkedin.com/in/louis-marsais/"}
+                        platform={"nextjs"}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__ybDx)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/louisAvif.avif",
+                            fullWidth: 500,
+                            fullHeight: 500,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__y6O1T)}
+                  >
+                    <Equipe
+                      className={classNames(
+                        "__wab_instance",
+                        sty.equipe__psLfk
+                      )}
+                      expert={"Serial entrepreneur"}
+                      nom={"Fran\u00e7ois-Guillaume Ribreau"}
+                      poste={"Expert IA, co-fondateur"}
+                    >
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__nFt7A
+                        )}
+                        component={Link}
+                        href={
+                          "https://www.linkedin.com/in/francoisguillaumeribreau/"
+                        }
+                        platform={"nextjs"}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__u8Fau)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/image3.png",
+                            fullWidth: 200,
+                            fullHeight: 200,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
+                    <Equipe
+                      className={classNames("__wab_instance", sty.equipe__soEn)}
+                      expert={"Autodidacte passionn\u00e9"}
+                      nom={"Baptiste Parmantier"}
+                      poste={"Lead Software Engineer"}
+                    >
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link___1THwx
+                        )}
+                        component={Link}
+                        href={
+                          "https://www.linkedin.com/in/baptiste-parmantier/"
+                        }
+                        platform={"nextjs"}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___47KIz)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/image4.png",
+                            fullWidth: 200,
+                            fullHeight: 200,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
                   </div>
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__brwoY)}>
+            </section>
+            <section
+              data-plasmic-name={"chronologie"}
+              data-plasmic-override={overrides.chronologie}
+              className={classNames(projectcss.all, sty.chronologie)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox__zVsa9)}>
                 <h2
                   className={classNames(
                     projectcss.all,
                     projectcss.h2,
                     projectcss.__wab_text,
-                    sty.h2___5EVlL
+                    sty.h2___5GD4E
                   )}
                 >
                   <React.Fragment>
@@ -899,10 +575,10 @@ function PlasmicAPropos__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__qrEJp
+                    sty.text___0AhEa
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                  {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
                     <React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
@@ -933,37 +609,18 @@ function PlasmicAPropos__RenderFunc(props: {
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{
-                          color: "var(--token-k7H7DCWvDgvK)",
+                          color: "var(--token-ruEH_kPMz8sH)",
                           fontWeight: 700
                         }}
                       >
                         {
-                          "Nous sentons l'effervescence du march\u00e9, nous voulons en faire parti, nous n'avons pas "
+                          "Nous sentons l'effervescence du march\u00e9, nous voulons en faire parti, nous n'avons pas v\u00e9cu l'arriv\u00e9e d'internet et nous ne voulons pas vivre avec des regrets, il \u00e9tait de temps de lancer un projet !"
                         }
                       </span>
                       <React.Fragment>{""}</React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#FF9900", fontWeight: 700 }}
-                      >
-                        {"v\u00e9cu"}
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{
-                          color: "var(--token-k7H7DCWvDgvK)",
-                          fontWeight: 700
-                        }}
-                      >
-                        {
-                          " l'arriv\u00e9e d'internet et nous ne voulons pas vivre avec des regrets, il \u00e9tait de temps de lancer un projet !"
-                        }
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                        style={{ color: "var(--token-ruEH_kPMz8sH)" }}
                       >
                         {" "}
                       </span>
@@ -989,7 +646,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul___9WPhn
+                            sty.ul__ewo4N
                           )}
                         >
                           <li
@@ -997,12 +654,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li___2L780
+                              sty.li___6AAi
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1050,7 +707,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    "(assistants des ventes). Il fait face \u00e0 un turnover incessant, des process complexes \u00e0 assimiler, des scripts t\u00e9l\u00e9phoniques longs et fastidieux\u2026 "
+                                    "(assistants des ventes). Il fait face \u00e0 un turn-over incessant, des process complexes \u00e0 assimiler, des scripts t\u00e9l\u00e9phoniques longs et fastidieux\u2026 "
                                   }
                                 </span>
                               </React.Fragment>
@@ -1061,12 +718,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__q3BBq
+                              sty.li__eIznQ
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1148,7 +805,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul__lbMjo
+                            sty.ul__fif2B
                           )}
                         >
                           <li
@@ -1156,12 +813,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li___9EYj9
+                              sty.li__mCnT
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1254,7 +911,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul___40Wf5
+                            sty.ul__gKC
                           )}
                         >
                           <li
@@ -1262,12 +919,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__hUOzy
+                              sty.li__yFdNa
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1363,7 +1020,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Premiets projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -1407,7 +1064,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul__nsJo0
+                            sty.ul__rDbea
                           )}
                         >
                           <li
@@ -1415,12 +1072,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__eznpt
+                              sty.li__bdoE2
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1592,7 +1249,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul___9WPhn
+                            sty.ul__ewo4N
                           )}
                         >
                           <li
@@ -1600,12 +1257,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li___2L780
+                              sty.li___6AAi
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1653,7 +1310,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    "(assistants des ventes). Il fait face \u00e0 un turnover incessant, des process complexes \u00e0 assimiler, des scripts t\u00e9l\u00e9phoniques longs et fastidieux\u2026 "
+                                    "(assistants des ventes). Il fait face \u00e0 un turn-over incessant, des process complexes \u00e0 assimiler, des scripts t\u00e9l\u00e9phoniques longs et fastidieux\u2026 "
                                   }
                                 </span>
                               </React.Fragment>
@@ -1664,12 +1321,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__q3BBq
+                              sty.li__eIznQ
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1751,7 +1408,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul__lbMjo
+                            sty.ul__fif2B
                           )}
                         >
                           <li
@@ -1759,12 +1416,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li___9EYj9
+                              sty.li__mCnT
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1850,7 +1507,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul___40Wf5
+                            sty.ul__gKC
                           )}
                         >
                           <li
@@ -1858,12 +1515,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__hUOzy
+                              sty.li__yFdNa
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -1959,7 +1616,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Premiets projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -1996,7 +1653,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.ul,
-                            sty.ul__nsJo0
+                            sty.ul__rDbea
                           )}
                         >
                           <li
@@ -2004,12 +1661,12 @@ function PlasmicAPropos__RenderFunc(props: {
                               projectcss.all,
                               projectcss.li,
                               projectcss.__wab_text,
-                              sty.li__eznpt
+                              sty.li__bdoE2
                             )}
                           >
                             {hasVariant(
                               globalVariants,
-                              "screen",
+                              "mobile",
                               "mobileOnly"
                             ) ? (
                               <React.Fragment>
@@ -2135,7 +1792,7 @@ function PlasmicAPropos__RenderFunc(props: {
                         sty.text__kEfdL
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                      {hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "We Recommended"
                         : "We Recommended"}
                     </div>
@@ -2165,28 +1822,24 @@ function PlasmicAPropos__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "headerHeroSection",
+  body: [
+    "body",
+    "wrapper",
     "navbar",
-    "section",
-    "h1",
-    "foreground",
+    "histoire",
+    "equipe",
+    "titre",
+    "chronologie",
     "pricingSection",
     "columns",
     "footerSection"
   ],
-  headerHeroSection: [
-    "headerHeroSection",
-    "navbar",
-    "section",
-    "h1",
-    "foreground"
-  ],
+  wrapper: ["wrapper", "navbar", "histoire", "equipe", "titre", "chronologie"],
   navbar: ["navbar"],
-  section: ["section", "h1", "foreground"],
-  h1: ["h1"],
-  foreground: ["foreground"],
+  histoire: ["histoire"],
+  equipe: ["equipe", "titre"],
+  titre: ["titre"],
+  chronologie: ["chronologie"],
   pricingSection: ["pricingSection", "columns"],
   columns: ["columns"],
   footerSection: ["footerSection"]
@@ -2195,12 +1848,13 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
-  headerHeroSection: "div";
+  body: "div";
+  wrapper: "div";
   navbar: typeof Navbar;
-  section: "section";
-  h1: "h1";
-  foreground: "div";
+  histoire: "section";
+  equipe: "section";
+  titre: "div";
+  chronologie: "section";
   pricingSection: typeof Section;
   columns: "div";
   footerSection: typeof FooterSection;
@@ -2217,7 +1871,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicAPropos__VariantsArgs;
     args?: PlasmicAPropos__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicAPropos__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicAPropos__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicAPropos__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -2253,7 +1909,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "body") {
     func.displayName = "PlasmicAPropos";
   } else {
     func.displayName = `PlasmicAPropos.${nodeName}`;
@@ -2263,14 +1919,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicAPropos = Object.assign(
   // Top-level PlasmicAPropos renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("body"),
   {
     // Helper components rendering sub-elements
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
+    wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
-    section: makeNodeComponent("section"),
-    h1: makeNodeComponent("h1"),
-    foreground: makeNodeComponent("foreground"),
+    histoire: makeNodeComponent("histoire"),
+    equipe: makeNodeComponent("equipe"),
+    titre: makeNodeComponent("titre"),
+    chronologie: makeNodeComponent("chronologie"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
     footerSection: makeNodeComponent("footerSection"),

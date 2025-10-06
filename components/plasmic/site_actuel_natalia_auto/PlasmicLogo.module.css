@@ -5,6 +5,15 @@
   align-items: stretch;
   justify-content: flex-start;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .root {
+    width: auto;
+    justify-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+  }
+}
 .img {
   object-fit: cover;
   width: 100%;
@@ -24,6 +33,8 @@
     position: relative;
     left: auto;
     top: auto;
+    width: auto;
+    height: auto;
   }
 }
 .img_50Opaque {

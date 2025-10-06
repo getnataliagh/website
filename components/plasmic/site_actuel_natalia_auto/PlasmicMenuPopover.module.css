@@ -2,11 +2,12 @@
   width: 300px;
   box-sizing: border-box;
   object-fit: cover;
-  background: var(--token-k7H7DCWvDgvK);
+  background: #ffb000;
   position: relative;
   overflow: auto;
-  box-shadow: 0px 0px 12px 0px #00000040,
-    0px 0px 0px 0.5px var(--token-WQaE5jialOoW);
+  box-shadow:
+    0px 0px 12px 0px #00000040,
+    0px 0px 0px 0.5px #e5e7eb;
   border-radius: var(--token-WDJX9045qGJQ);
   padding: var(--token-B2yHbkVn4nSC);
 }

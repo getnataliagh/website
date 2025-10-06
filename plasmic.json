@@ -1941,19 +1941,6 @@
           "componentType": "component"
         },
         {
-          "id": "TU5A2-p6WFJJ",
-          "name": "Button",
-          "type": "managed",
-          "projectId": "2utUyfwAdNYhisb36rBizH",
-          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton.tsx",
-          "importSpec": {
-            "modulePath": "Button.tsx"
-          },
-          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButton.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "fxexeTMPbrbn",
           "name": "Contact",
           "type": "managed",
@@ -2206,6 +2193,318 @@
           "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCombobox.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "TU5A2-p6WFJJ",
+          "name": "ButtonPrimary",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButtonPrimary.tsx",
+          "importSpec": {
+            "modulePath": "ButtonPrimary.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButtonPrimary.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "vAcwOvnOFNI4",
+          "name": "Raison",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicRaison.tsx",
+          "importSpec": {
+            "modulePath": "Raison.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicRaison.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "OIlbmlb8nUUH",
+          "name": "Why",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicWhy.tsx",
+          "importSpec": {
+            "modulePath": "Why.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicWhy.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1aQNN9bDfTub",
+          "name": "SecteurOld",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSecteurOld.tsx",
+          "importSpec": {
+            "modulePath": "SecteurOld.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSecteurOld.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "981_nMwE_BCU",
+          "name": "Mep",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMep.tsx",
+          "importSpec": {
+            "modulePath": "Mep.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMep.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "JtOPDUnSJGAf",
+          "name": "Mep2",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMep2.tsx",
+          "importSpec": {
+            "modulePath": "Mep2.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMep2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "MXIUXB0YnmeL",
+          "name": "Avantage",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAvantage.tsx",
+          "importSpec": {
+            "modulePath": "Avantage.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAvantage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "eYvZTWRdqjAO",
+          "name": "ButtonSecondary",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButtonSecondary.tsx",
+          "importSpec": {
+            "modulePath": "ButtonSecondary.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicButtonSecondary.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "hfGg3cS8R_xL",
+          "name": "IconGift",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicIconGift.tsx",
+          "importSpec": {
+            "modulePath": "IconGift.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicIconGift.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "3rnQVisciRu1",
+          "name": "IconMenu",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicIconMenu.tsx",
+          "importSpec": {
+            "modulePath": "IconMenu.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicIconMenu.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "O7m8_939gpC-",
+          "name": "Equipe",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicEquipe.tsx",
+          "importSpec": {
+            "modulePath": "Equipe.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicEquipe.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "r2485FHivowD",
+          "name": "Perte",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPerte.tsx",
+          "importSpec": {
+            "modulePath": "Perte.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicPerte.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "x2T3E4Kio9_Z",
+          "name": "Cas",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCas.tsx",
+          "importSpec": {
+            "modulePath": "Cas.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCas.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "zA_FXdXmlcww",
+          "name": "Douleur",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDouleur.tsx",
+          "importSpec": {
+            "modulePath": "Douleur.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicDouleur.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fEr4e8g2uhL6",
+          "name": "CetaitAvant",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCetaitAvant.tsx",
+          "importSpec": {
+            "modulePath": "CetaitAvant.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCetaitAvant.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "D59wyvXukSBr",
+          "name": "ReponseInstantanee",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicReponseInstantanee.tsx",
+          "importSpec": {
+            "modulePath": "ReponseInstantanee.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicReponseInstantanee.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "VS65WCIbfT4k",
+          "name": "Compatibilite",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCompatibilite.tsx",
+          "importSpec": {
+            "modulePath": "Compatibilite.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCompatibilite.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1u9NEqdr08SU",
+          "name": "CallToAction",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCallToAction.tsx",
+          "importSpec": {
+            "modulePath": "CallToAction.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCallToAction.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "DEERfIH_GZWU",
+          "name": "CasDusage",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCasDusage.tsx",
+          "importSpec": {
+            "modulePath": "CasDusage.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCasDusage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kTw__3f9B1cS",
+          "name": "SecteurActif",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSecteurActif.tsx",
+          "importSpec": {
+            "modulePath": "SecteurActif.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSecteurActif.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "yR1fd8Hy_LSj",
+          "name": "CardWithBackground",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCardWithBackground.tsx",
+          "importSpec": {
+            "modulePath": "CardWithBackground.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCardWithBackground.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "EY8i6R8YUDfL",
+          "name": "CardWithBackground2",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCardWithBackground2.tsx",
+          "importSpec": {
+            "modulePath": "CardWithBackground2.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCardWithBackground2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "NCOSS590FLhe",
+          "name": "Message",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMessage.tsx",
+          "importSpec": {
+            "modulePath": "Message.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMessage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "0xX5T15PyzuS",
+          "name": "MenuBurger",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMenuBurger.tsx",
+          "importSpec": {
+            "modulePath": "MenuBurger.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMenuBurger.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2453,6 +2752,111 @@
           "id": "6wx9Tfh7vhZB",
           "name": "BankSvgrepoComSvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BankSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "uW5f7ra-sDma",
+          "name": "BankSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BankSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "0xZ7nxKvcQGv",
+          "name": "OneSquareFillSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__OneSquareFillSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "wHQJq_5v0WpS",
+          "name": "TwoSquareFillSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TwoSquareFillSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "FZCLUSkUG4UT",
+          "name": "ThreeSquareFillSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ThreeSquareFillSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "3FLaG0n_wmpi",
+          "name": "FourSquareFillSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__FourSquareFillSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "bD6jSxKCrfRM",
+          "name": "TwoOpenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TwoOpenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "aUauHlXqqRQj",
+          "name": "OneOpenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__OneOpenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "Vm-oD2T0l6Zr",
+          "name": "ThreeOpenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ThreeOpenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "0BWLsiO9TtGs",
+          "name": "FourOpenSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__FourOpenSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "aUt0Jdr5cHNl",
+          "name": "TwoSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TwoSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "QoxImbzDqG21",
+          "name": "OneSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__OneSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "JdeNxSuzl8l0",
+          "name": "ThreeSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ThreeSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "RjfwLxYBGJVA",
+          "name": "FourSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__FourSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "bZ_dNBdE3NvB",
+          "name": "ArrowNextRightIconSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ArrowNextRightIconSvg.tsx"
+        },
+        {
+          "id": "PgNScEcHy5SF",
+          "name": "ArrowDownLeftIconSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ArrowDownLeftIconSvg.tsx"
+        },
+        {
+          "id": "u_kZE3YApvMW",
+          "name": "_9111137GiftIconSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon___9111137GiftIconSvg2.tsx"
+        },
+        {
+          "id": "7OnuMtXbe4xV",
+          "name": "_5957012MenuIconSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon___5957012MenuIconSvg2.tsx"
+        },
+        {
+          "id": "Oi_ySitex5p5",
+          "name": "MissedCallSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__MissedCallSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "jgsmqnyutwm3",
+          "name": "BusinessCashManagementSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BusinessCashManagementSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "2GUMrOklntnw",
+          "name": "HourglassActiveSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__HourglassActiveSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "_Y7SJL0z_ZUq",
+          "name": "BusinessGrowthManagementSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BusinessGrowthManagementSvgrepoComSvg2.tsx"
         }
       ],
       "images": [
@@ -3080,6 +3484,211 @@
           "id": "ywKFo0RnWAM3",
           "name": "sablier.png",
           "filePath": "../public/plasmic/site_actuel_natalia_auto/images/sablierPng.png"
+        },
+        {
+          "id": "4vZ12B9s44zM",
+          "name": "data-integration-hub-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/dataIntegrationHubSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "M0o34fnSXp5T",
+          "name": "secure-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/secureSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "bT0QyfxgdKNj",
+          "name": "automobile-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/automobileSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "JVib_cn2HtHS",
+          "name": "computer-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/computerSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "lIPC2Lw7Z0Wc",
+          "name": "bank-svgrepo-com (1).svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/bankSvgrepoCom1Svg.svg"
+        },
+        {
+          "id": "MgXTa8JNIhm7",
+          "name": "one-square-fill-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/oneSquareFillSvgrepoComSvg2.svg"
+        },
+        {
+          "id": "37gj7-uB2KsH",
+          "name": "two-square-fill-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/twoSquareFillSvgrepoComSvg.svg"
+        },
+        {
+          "id": "85GIiudmQVZK",
+          "name": "one-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/oneSvgrepoComSvg.svg"
+        },
+        {
+          "id": "44cBK8IHQEmk",
+          "name": "missed-call-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/missedCallSvgrepoComSvg.svg"
+        },
+        {
+          "id": "0mNSYwYLCr40",
+          "name": "hourglass-active-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/hourglassActiveSvgrepoComSvg.svg"
+        },
+        {
+          "id": "4DXQyT-rT3TB",
+          "name": "business-growth-management-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessGrowthManagementSvgrepoComSvg.svg"
+        },
+        {
+          "id": "MRsrzWOtzLTs",
+          "name": "business-cash-management-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessCashManagementSvgrepoComSvg.svg"
+        },
+        {
+          "id": "Z6El59bpAW-e",
+          "name": "une-femme-dans-un-bureau-moderne-et-lumineux--ordi.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/uneFemmeDansUnBureauModerneEtLumineuxOrdiPng.png"
+        },
+        {
+          "id": "Ps4aeth8naDR",
+          "name": "image",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/image.png"
+        },
+        {
+          "id": "1A7-jVOZAAsJ",
+          "name": "image 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/image2.png"
+        },
+        {
+          "id": "55GT0fUMOBUi",
+          "name": "image 3",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/image3.png"
+        },
+        {
+          "id": "SFOQV5koTncq",
+          "name": "image 4",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/image4.png"
+        },
+        {
+          "id": "Xov6n8iJ9Nsc",
+          "name": "car-showroom.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/carShowroomPng.png"
+        },
+        {
+          "id": "aYj8kJE_RGcU",
+          "name": "industrial-factory-.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/industrialFactoryPng.png"
+        },
+        {
+          "id": "RT51FS7A2RKl",
+          "name": "support-hotline-office.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/supportHotlineOfficePng.png"
+        },
+        {
+          "id": "x9RxIGWl8Y6w",
+          "name": "busy-call-center.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/busyCallCenterPng.png"
+        },
+        {
+          "id": "kxbPlBqCgVEQ",
+          "name": "modern-bank-interior.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/modernBankInteriorPng.png"
+        },
+        {
+          "id": "6XtzjxXORUe0",
+          "name": "public-service-office.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/publicServiceOfficePng.png"
+        },
+        {
+          "id": "-nszTtHZgdGY",
+          "name": "24-7-customer-service-concept.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_247CustomerServiceConceptPng.png"
+        },
+        {
+          "id": "Jg5Y_CWTa6wJ",
+          "name": "24-7-customer-service-concept.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_247CustomerServiceConceptPng2.png"
+        },
+        {
+          "id": "eTnCioCnWsYA",
+          "name": "professional-customer-support-hotline-office.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/professionalCustomerSupportHotlineOfficePng.png"
+        },
+        {
+          "id": "-2tEUxsk0vdp",
+          "name": "business-profitability.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessProfitabilityPng.png"
+        },
+        {
+          "id": "mcddMQedrFCI",
+          "name": "business-dashboard.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessDashboardPng.png"
+        },
+        {
+          "id": "zmq56_o4q3pS",
+          "name": "personalized-ai-experience.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/personalizedAiExperiencePng.png"
+        },
+        {
+          "id": "eHduIrgBlyG5",
+          "name": "business-software-integration.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessSoftwareIntegrationPng.png"
+        },
+        {
+          "id": "WJBuul0e76nO",
+          "name": "business-profitability.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessProfitabilityPng2.png"
+        },
+        {
+          "id": "z2jgmePohhg4",
+          "name": "24-7-customer-service-concept.png 3",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_247CustomerServiceConceptPng3.png"
+        },
+        {
+          "id": "oWKUkug2XfRR",
+          "name": "professional-customer-support-hotline-office.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/professionalCustomerSupportHotlineOfficePng2.png"
+        },
+        {
+          "id": "JDi7c0zfBEwN",
+          "name": "business-profitability.png 3",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessProfitabilityPng3.png"
+        },
+        {
+          "id": "XGQheMObrkqP",
+          "name": "business-dashboard.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessDashboardPng2.png"
+        },
+        {
+          "id": "ep8nc4wLNlGL",
+          "name": "personalized-ai-experience.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/personalizedAiExperiencePng2.png"
+        },
+        {
+          "id": "6v5uI4Dt1IBL",
+          "name": "business-software-integration.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/businessSoftwareIntegrationPng2.png"
+        },
+        {
+          "id": "tbcjkcZG9ZDP",
+          "name": "Natalia msg1.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nataliaMsg1Png.png"
+        },
+        {
+          "id": "h_gXR8uyQyfn",
+          "name": "Natalia msg2 copie 2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nataliaMsg2Copie2Png.png"
+        },
+        {
+          "id": "KZARH42A4onG",
+          "name": "Natalia msg2 copie.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nataliaMsg2CopiePng.png"
+        },
+        {
+          "id": "8kr8oWgGaEfZ",
+          "name": "Natalia msg2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nataliaMsg2Png.png"
         }
       ],
       "indirect": false,
@@ -3158,6 +3767,128 @@
         }
       ],
       "customFunctions": []
+    },
+    {
+      "projectId": "5dGW8Awro3qq8Hh5MveXLP",
+      "projectApiToken": "wVHvHSTRyoO1MQddr5ypmW8AfwiMMy7h0Iaj4Q2YmYLLEo2A4L6pLn8Fydm8wQkTAJV9uAD5bJPo8bmGg",
+      "projectName": "lottie-react",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/lottie_react/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/lottie_react/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/lottie_react/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "BPNsJ2qis6",
+          "name": "LottieWrapper",
+          "displayName": "hostless-lottie-react",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        },
+        {
+          "id": "vbTFHH9P-cuM",
+          "name": "AsyncLottieWrapper",
+          "displayName": "hostless-lottie-async-react",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "gLnoj82AzKVVT7qXiqAbHD",
+      "projectApiToken": "30Q6Vm3wLmLUouXUphjiHN1eerUuQNmjcIHNiu6sFoeK8pIoi3LRDH2gMh9txlrZGCbOh9s0VaoZHqtvs3hQ",
+      "projectName": "plasmic-tabs",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_tabs/plasmic.module.css",
+      "components": [
+        {
+          "id": "lBHNzts6tFyj",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "gLnoj82AzKVVT7qXiqAbHD",
+          "renderModuleFilePath": "plasmic/plasmic_tabs/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/plasmic_tabs/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        }
+      ],
+      "icons": [
+        {
+          "id": "zq2s7N0xWucT",
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/plasmic_tabs/icons/PlasmicIcon__CheckSvg.tsx"
+        },
+        {
+          "id": "8K40faRNhuCj",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/plasmic_tabs/icons/PlasmicIcon__Icon.tsx"
+        }
+      ],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_tabs/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/plasmic_tabs/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "qT-BBamUwNg",
+          "name": "TabsContainer",
+          "displayName": "hostless-tabs-container",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "7uvxnLIBlo3",
+          "name": "TabUnderline",
+          "displayName": "hostless-tab-underline",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "5jaBI7A4_ak",
+          "name": "TabButton",
+          "displayName": "hostless-tab-button",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "KyRr6GQ_tPI",
+          "name": "TabContent",
+          "displayName": "hostless-tab-content",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
+      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectName": "react-awesome-reveal",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_awesome_reveal/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_awesome_reveal/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "R6s1FdhksG",
+          "name": "Reveal",
+          "displayName": "hostless-reveal",
+          "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
+        }
+      ],
+      "customFunctions": []
     }
   ],
   "globalVariants": {
@@ -3182,16 +3913,17 @@
       },
       {
         "id": "2f-QDcOsH-WZ",
-        "name": "Screen",
+        "name": "Mobile",
         "projectId": "2utUyfwAdNYhisb36rBizH",
-        "contextFilePath": "plasmic/site_actuel_natalia_auto/PlasmicGlobalVariant__Screen.tsx"
+        "contextFilePath": "plasmic/site_actuel_natalia_auto/PlasmicGlobalVariant__Mobile.tsx"
       }
     ]
   },
   "wrapPagesWithGlobalContexts": true,
+  "preserveJsImportExtensions": false,
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.343",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.343/dist/plasmic.schema.json"
+  "cliVersion": "0.1.347",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.347/dist/plasmic.schema.json"
 }
