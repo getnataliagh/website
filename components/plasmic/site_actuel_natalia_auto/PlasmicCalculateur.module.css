@@ -715,37 +715,33 @@
   padding: 0;
   margin: 0 0 20px;
 }
-.button {
+.link {
   display: flex;
   flex-direction: column;
   background: none;
   cursor: pointer;
-  width: 400px;
+  width: auto;
   align-self: center;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
   border-radius: 8px;
-  padding: 16px 48px;
-  margin: 20px 0px 0 0;
 }
-.cloudIamNavigationLinkPrimaryCta:global(.__wab_instance) {
+.buttonPrimary:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
-  width: 207px;
-  margin-right: 0px;
-  align-self: center;
+}
+.svg__zszyq {
+  position: relative;
+  height: 1em;
 }
 .text {
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--token-_mt46frnUBmE);
-  font-weight: 700;
-  font-style: normal;
-  color: #1e3a8a;
-  text-align: left;
-  text-transform: none;
-  line-height: var(--token-hk3LAvZuPnRb);
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
+  white-space: pre;
+  color: #eeeeee;
+}
+.svg__rkPpd {
+  position: relative;
+  height: 1em;
 }
 .footerSection:global(.__wab_instance) {
   position: relative;

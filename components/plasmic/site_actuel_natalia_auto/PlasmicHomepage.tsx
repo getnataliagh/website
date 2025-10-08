@@ -62,17 +62,18 @@ import {
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import Message from "../../Message"; // plasmic-import: NCOSS590FLhe/component
-import Why from "../../Why"; // plasmic-import: OIlbmlb8nUUH/component
+import Mission from "../../Mission"; // plasmic-import: OIlbmlb8nUUH/component
 import SecteurActif from "../../SecteurActif"; // plasmic-import: kTw__3f9B1cS/component
-import CardWithBackground from "../../CardWithBackground"; // plasmic-import: yR1fd8Hy_LSj/component
+import ButtonSecondary from "../../ButtonSecondary"; // plasmic-import: eYvZTWRdqjAO/component
+import CardWithBackground1 from "../../CardWithBackground1"; // plasmic-import: yR1fd8Hy_LSj/component
 import SecteurOld from "../../SecteurOld"; // plasmic-import: 1aQNN9bDfTub/component
 import Raison from "../../Raison"; // plasmic-import: vAcwOvnOFNI4/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import Avantage from "../../Avantage"; // plasmic-import: MXIUXB0YnmeL/component
 import CardWithBackground2 from "../../CardWithBackground2"; // plasmic-import: EY8i6R8YUDfL/component
-import Mep from "../../Mep"; // plasmic-import: 981_nMwE_BCU/component
-import Mep2 from "../../Mep2"; // plasmic-import: JtOPDUnSJGAf/component
+import MepOld from "../../MepOld"; // plasmic-import: 981_nMwE_BCU/component
+import MepNew from "../../MepNew"; // plasmic-import: JtOPDUnSJGAf/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
@@ -91,6 +92,7 @@ import DataIntegrationHubSvgrepoComSvgIcon from "./icons/PlasmicIcon__DataIntegr
 import GrowthSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__GrowthSvgrepoCom1Svg"; // plasmic-import: xuDy4N5Mbgmo/icon
 import SecureSvgrepoComSvgIcon from "./icons/PlasmicIcon__SecureSvgrepoComSvg"; // plasmic-import: zmpxtwo18XQt/icon
 import AutomobileSvgrepoComSvgIcon from "./icons/PlasmicIcon__AutomobileSvgrepoComSvg"; // plasmic-import: s5qX1M9YJlnw/icon
+import IcnArrowLinkIcon from "./icons/PlasmicIcon__IcnArrowLink"; // plasmic-import: zKsSExY-USuh/icon
 import IndustryWindowsSvgrepoComSvgIcon from "./icons/PlasmicIcon__IndustryWindowsSvgrepoComSvg"; // plasmic-import: RGOeKEfdDTy6/icon
 import ComputerSvgrepoComSvgIcon from "./icons/PlasmicIcon__ComputerSvgrepoComSvg"; // plasmic-import: 51leaLOggJFC/icon
 import CallDroppedSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__CallDroppedSvgrepoCom1Svg"; // plasmic-import: MhCEtEAwrizJ/icon
@@ -138,11 +140,11 @@ export type PlasmicHomepage__OverridesType = {
   secteurs?: Flex__<"div">;
   section?: Flex__<"section">;
   automobile?: Flex__<"a"> & Partial<LinkProps>;
-  industriePme?: Flex__<"div">;
+  industriePme?: Flex__<"a"> & Partial<LinkProps>;
   hotline?: Flex__<"a"> & Partial<LinkProps>;
-  callCenter?: Flex__<"div">;
-  banqueAssurance?: Flex__<"div">;
-  servicePublic?: Flex__<"div">;
+  callCenter?: Flex__<"a"> & Partial<LinkProps>;
+  banqueAssurance?: Flex__<"a"> & Partial<LinkProps>;
+  servicePublic?: Flex__<"a"> & Partial<LinkProps>;
   modernShine2?: Flex__<"div">;
   automobile3?: Flex__<"a"> & Partial<LinkProps>;
   industriel?: Flex__<"div">;
@@ -923,16 +925,22 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.detail}
                     className={classNames(projectcss.all, sty.detail)}
                   >
-                    <Why
-                      className={classNames("__wab_instance", sty.why__l1Tci)}
+                    <Mission
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mission__l1Tci
+                      )}
                     >
                       <DataIntegrationHubSvgrepoComSvgIcon
                         className={classNames(projectcss.all, sty.svg__iEiGg)}
                         role={"img"}
                       />
-                    </Why>
-                    <Why
-                      className={classNames("__wab_instance", sty.why__c6N9)}
+                    </Mission>
+                    <Mission
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mission__c6N9
+                      )}
                       descr={
                         "Notre technologie est con\u00e7ue pour s'adapter sans cesse aux meilleurs LLM"
                       }
@@ -942,9 +950,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__qPiUn)}
                         role={"img"}
                       />
-                    </Why>
-                    <Why
-                      className={classNames("__wab_instance", sty.why__iY6Eo)}
+                    </Mission>
+                    <Mission
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mission__iY6Eo
+                      )}
                       descr={
                         "Vos donn\u00e9es sont s\u00e9curis\u00e9es, confidentielles et conformes RGPD"
                       }
@@ -960,7 +971,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__sfdvD)}
                         role={"img"}
                       />
-                    </Why>
+                    </Mission>
                   </div>
                   <PlasmicLink__
                     className={classNames(
@@ -1088,10 +1099,17 @@ function PlasmicHomepage__RenderFunc(props: {
                         />
                       </SecteurActif>
                     </PlasmicLink__>
-                    <div
+                    <PlasmicLink__
                       data-plasmic-name={"industriePme"}
                       data-plasmic-override={overrides.industriePme}
-                      className={classNames(projectcss.all, sty.industriePme)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.industriePme
+                      )}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
                     >
                       <SecteurActif
                         className={classNames(
@@ -1108,7 +1126,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           role={"img"}
                         />
                       </SecteurActif>
-                    </div>
+                    </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"hotline"}
                       data-plasmic-override={overrides.hotline}
@@ -1141,10 +1159,17 @@ function PlasmicHomepage__RenderFunc(props: {
                         />
                       </SecteurActif>
                     </PlasmicLink__>
-                    <div
+                    <PlasmicLink__
                       data-plasmic-name={"callCenter"}
                       data-plasmic-override={overrides.callCenter}
-                      className={classNames(projectcss.all, sty.callCenter)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.callCenter
+                      )}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
                     >
                       <SecteurActif
                         className={classNames(
@@ -1161,14 +1186,18 @@ function PlasmicHomepage__RenderFunc(props: {
                           role={"img"}
                         />
                       </SecteurActif>
-                    </div>
-                    <div
+                    </PlasmicLink__>
+                    <PlasmicLink__
                       data-plasmic-name={"banqueAssurance"}
                       data-plasmic-override={overrides.banqueAssurance}
                       className={classNames(
                         projectcss.all,
+                        projectcss.a,
                         sty.banqueAssurance
                       )}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
                     >
                       <SecteurActif
                         className={classNames(
@@ -1185,11 +1214,18 @@ function PlasmicHomepage__RenderFunc(props: {
                           role={"img"}
                         />
                       </SecteurActif>
-                    </div>
-                    <div
+                    </PlasmicLink__>
+                    <PlasmicLink__
                       data-plasmic-name={"servicePublic"}
                       data-plasmic-override={overrides.servicePublic}
-                      className={classNames(projectcss.all, sty.servicePublic)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.servicePublic
+                      )}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
                     >
                       <SecteurActif
                         className={classNames(
@@ -1209,7 +1245,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           role={"img"}
                         />
                       </SecteurActif>
-                    </div>
+                    </PlasmicLink__>
                   </section>
                 </div>
                 <div
@@ -1229,7 +1265,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     href={`/automobile`}
                     platform={"nextjs"}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/carShowroomPng.png",
                         fullWidth: 1024,
@@ -1238,7 +1274,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground__jkKxt
+                        sty.cardWithBackground1__jkKxt
                       )}
                       description={
                         "Prise de RDV atelier, renseignements v\u00e9hicules, suivi SAV, qualification de leads, transfert d'appel..."
@@ -1250,7 +1286,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.industriel}
                     className={classNames(projectcss.all, sty.industriel)}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/industrialFactoryPng.png",
                         fullWidth: 1024,
@@ -1259,7 +1295,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground__xj5C9
+                        sty.cardWithBackground1__xj5C9
                       )}
                       description={
                         "Commandes, devis, suivi des livraisons, relation client B2B, gestion des factures et suivi des paiements.."
@@ -1279,7 +1315,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     href={`/hotline-informatique`}
                     platform={"nextjs"}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/supportHotlineOfficePng.png",
                         fullWidth: 1024,
@@ -1288,7 +1324,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground__tlunX
+                        sty.cardWithBackground1__tlunX
                       )}
                       description={
                         "Support technique L1, qualification incidents, planification interventions, gestion des tickets sur les outils m\u00e9tiers."
@@ -1301,7 +1337,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.callCenter2}
                     className={classNames(projectcss.all, sty.callCenter2)}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/busyCallCenterPng.png",
                         fullWidth: 1024,
@@ -1310,7 +1346,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground___9RZc2
+                        sty.cardWithBackground1___9RZc2
                       )}
                       description={
                         "Assure 100% de prise en charge des appels sous 15 secondes gr\u00e2ce \u00e0 une disponibilit\u00e9 24h/24 et la parall\u00e9lisation des appels."
@@ -1323,7 +1359,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.banqueAssurance2}
                     className={classNames(projectcss.all, sty.banqueAssurance2)}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/modernBankInteriorPng.png",
                         fullWidth: 1024,
@@ -1332,7 +1368,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground__fWvz
+                        sty.cardWithBackground1__fWvz
                       )}
                       description={
                         "Gestion des demandes clients, suivi de dossiers, assistance en continu, d\u00e9claration de sinistres, suivi de contrats, assistance en cas d\u2019urgence."
@@ -1345,7 +1381,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-override={overrides.servicePublic2}
                     className={classNames(projectcss.all, sty.servicePublic2)}
                   >
-                    <CardWithBackground
+                    <CardWithBackground1
                       backgroundimage={{
                         src: "/plasmic/site_actuel_natalia_auto/images/publicServiceOfficePng.png",
                         fullWidth: 1024,
@@ -1354,7 +1390,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       }}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWithBackground__jc6Q6
+                        sty.cardWithBackground1__jc6Q6
                       )}
                       description={
                         "Accueil et orientation des usagers vers le bon service. Gestion des demandes administratives (rendez-vous, informations, suivi de dossiers)."
@@ -2975,28 +3011,40 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__gEq0L)}
                   >
-                    <Mep
-                      className={classNames("__wab_instance", sty.mep__fopiv)}
+                    <MepOld
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepOld__fopiv
+                      )}
                     />
 
-                    <Mep
-                      className={classNames("__wab_instance", sty.mep__dquF1)}
+                    <MepOld
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepOld__dquF1
+                      )}
                       descr={
                         "Cr\u00e9ation des prompts et connexion aux outils"
                       }
                       nom={"2- Param\u00e9trage "}
                     />
 
-                    <Mep
-                      className={classNames("__wab_instance", sty.mep__imHeI)}
+                    <MepOld
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepOld__imHeI
+                      )}
                       descr={
                         "Phase de tests avec b\u00eatas utilisateurs/clients"
                       }
                       nom={"3- Testing "}
                     />
 
-                    <Mep
-                      className={classNames("__wab_instance", sty.mep__tfJ8H)}
+                    <MepOld
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepOld__tfJ8H
+                      )}
                       descr={"Mise en production effective de Natalia"}
                       nom={"4- Go Live"}
                     />
@@ -3004,8 +3052,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__afLfu)}
                   >
-                    <Mep2
-                      className={classNames("__wab_instance", sty.mep2__jrwpe)}
+                    <MepNew
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepNew__jrwpe
+                      )}
                       desc={
                         "D\u00e9finition du besoin et du ROI attendu du projet "
                       }
@@ -3021,9 +3072,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg___5BLPe)}
                         role={"img"}
                       />
-                    </Mep2>
-                    <Mep2
-                      className={classNames("__wab_instance", sty.mep2___6UIt4)}
+                    </MepNew>
+                    <MepNew
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepNew___6UIt4
+                      )}
                       desc={"Cr\u00e9ation des prompts et connexion aux outils"}
                       nom={"Param\u00e9trage"}
                     >
@@ -3031,9 +3085,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__mezby)}
                         role={"img"}
                       />
-                    </Mep2>
-                    <Mep2
-                      className={classNames("__wab_instance", sty.mep2__o8Du2)}
+                    </MepNew>
+                    <MepNew
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepNew__o8Du2
+                      )}
                       desc={
                         "Phase de test avec b\u00eatas utilisateurs/clients"
                       }
@@ -3043,9 +3100,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__sorJl)}
                         role={"img"}
                       />
-                    </Mep2>
-                    <Mep2
-                      className={classNames("__wab_instance", sty.mep2__bPmEr)}
+                    </MepNew>
+                    <MepNew
+                      className={classNames(
+                        "__wab_instance",
+                        sty.mepNew__bPmEr
+                      )}
                       desc={"Mise en production effective de Natalia"}
                       nom={"Go Live"}
                     >
@@ -3053,7 +3113,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__pa6Y6)}
                         role={"img"}
                       />
-                    </Mep2>
+                    </MepNew>
                   </div>
                 </div>
               </div>
@@ -3469,11 +3529,11 @@ type NodeDefaultElementType = {
   secteurs: "div";
   section: "section";
   automobile: "a";
-  industriePme: "div";
+  industriePme: "a";
   hotline: "a";
-  callCenter: "div";
-  banqueAssurance: "div";
-  servicePublic: "div";
+  callCenter: "a";
+  banqueAssurance: "a";
+  servicePublic: "a";
   modernShine2: "div";
   automobile3: "a";
   industriel: "div";

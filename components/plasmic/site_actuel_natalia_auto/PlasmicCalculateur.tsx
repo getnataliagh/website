@@ -61,7 +61,7 @@ import {
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import CloudIamNavigationLinkPrimaryCta from "../../CloudIamNavigationLinkPrimaryCta"; // plasmic-import: HiVfgKFJx8Th/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
@@ -70,6 +70,9 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicCalculateur.module.css"; // plasmic-import: oy9UxF4SrCBy/css
+
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
 
 createPlasmicElementProxy;
 
@@ -97,10 +100,8 @@ export type PlasmicCalculateur__OverridesType = {
   textbox5?: Flex__<"input">;
   codeCalculateur?: Flex__<typeof Embed>;
   p?: Flex__<"p">;
-  button?: Flex__<"button">;
-  cloudIamNavigationLinkPrimaryCta?: Flex__<
-    typeof CloudIamNavigationLinkPrimaryCta
-  >;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  buttonPrimary?: Flex__<typeof ButtonPrimary>;
   text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
@@ -1095,58 +1096,49 @@ function PlasmicCalculateur__RenderFunc(props: {
                         "Ne laissez plus aucun appel sans r\u00e9ponse. Natalia r\u00e9pond instantan\u00e9ment 24/7 \u00e0 tous vos clients."
                       }
                     </p>
-                    <button
-                      data-plasmic-name={"button"}
-                      data-plasmic-override={overrides.button}
+                    <PlasmicLink__
+                      data-plasmic-name={"link"}
+                      data-plasmic-override={overrides.link}
                       className={classNames(
                         projectcss.all,
-                        projectcss.button,
-                        sty.button
+                        projectcss.a,
+                        sty.link
                       )}
-                      style={{
-                        color: "white",
-                        border: "none",
-                        fontSize: "18px",
-                        fontWeight: "600"
-                      }}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
                     >
-                      <CloudIamNavigationLinkPrimaryCta
-                        data-plasmic-name={"cloudIamNavigationLinkPrimaryCta"}
-                        data-plasmic-override={
-                          overrides.cloudIamNavigationLinkPrimaryCta
-                        }
+                      <ButtonPrimary
+                        data-plasmic-name={"buttonPrimary"}
+                        data-plasmic-override={overrides.buttonPrimary}
                         className={classNames(
                           "__wab_instance",
-                          sty.cloudIamNavigationLinkPrimaryCta
+                          sty.buttonPrimary
                         )}
-                        dataTrkciamAction={``}
-                        dataTrkciamCategory={``}
-                        dataTrkciamName={``}
-                        destination={`/contact`}
-                        openInNewTab={undefined}
-                      >
-                        <div
-                          data-plasmic-name={"text"}
-                          data-plasmic-override={overrides.text}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "var(--token-iATmNBw1ODRP)" }}
-                            >
-                              {"R\u00e9server une d\u00e9mo"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                      </CloudIamNavigationLinkPrimaryCta>
-                    </button>
+                        label={
+                          <div
+                            data-plasmic-name={"text"}
+                            data-plasmic-override={overrides.text}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#FFFFFF" }}
+                              >
+                                {"R\u00e9server une d\u00e9mo"}
+                              </span>
+                            </React.Fragment>
+                          </div>
+                        }
+                      />
+                    </PlasmicLink__>
                   </div>
                 </div>
               </div>
@@ -1179,8 +1171,8 @@ const PlasmicDescendants = {
     "textbox5",
     "codeCalculateur",
     "p",
-    "button",
-    "cloudIamNavigationLinkPrimaryCta",
+    "link",
+    "buttonPrimary",
     "text",
     "footerSection"
   ],
@@ -1198,8 +1190,8 @@ const PlasmicDescendants = {
     "textbox5",
     "codeCalculateur",
     "p",
-    "button",
-    "cloudIamNavigationLinkPrimaryCta",
+    "link",
+    "buttonPrimary",
     "text",
     "footerSection"
   ],
@@ -1216,8 +1208,8 @@ const PlasmicDescendants = {
     "textbox5",
     "codeCalculateur",
     "p",
-    "button",
-    "cloudIamNavigationLinkPrimaryCta",
+    "link",
+    "buttonPrimary",
     "text"
   ],
   header: ["header", "h1"],
@@ -1238,11 +1230,8 @@ const PlasmicDescendants = {
   textbox5: ["textbox5"],
   codeCalculateur: ["codeCalculateur"],
   p: ["p"],
-  button: ["button", "cloudIamNavigationLinkPrimaryCta", "text"],
-  cloudIamNavigationLinkPrimaryCta: [
-    "cloudIamNavigationLinkPrimaryCta",
-    "text"
-  ],
+  link: ["link", "buttonPrimary", "text"],
+  buttonPrimary: ["buttonPrimary", "text"],
   text: ["text"],
   footerSection: ["footerSection"]
 } as const;
@@ -1264,8 +1253,8 @@ type NodeDefaultElementType = {
   textbox5: "input";
   codeCalculateur: typeof Embed;
   p: "p";
-  button: "button";
-  cloudIamNavigationLinkPrimaryCta: typeof CloudIamNavigationLinkPrimaryCta;
+  link: "a";
+  buttonPrimary: typeof ButtonPrimary;
   text: "div";
   footerSection: typeof FooterSection;
 };
@@ -1345,10 +1334,8 @@ export const PlasmicCalculateur = Object.assign(
     textbox5: makeNodeComponent("textbox5"),
     codeCalculateur: makeNodeComponent("codeCalculateur"),
     p: makeNodeComponent("p"),
-    button: makeNodeComponent("button"),
-    cloudIamNavigationLinkPrimaryCta: makeNodeComponent(
-      "cloudIamNavigationLinkPrimaryCta"
-    ),
+    link: makeNodeComponent("link"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 

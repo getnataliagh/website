@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicCloudIamNavigationLinkPrimaryCta,
-  DefaultCloudIamNavigationLinkPrimaryCtaProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicCloudIamNavigationLinkPrimaryCta";
+  PlasmicCardWithBackground1,
+  DefaultCardWithBackground1Props
+} from "./plasmic/site_actuel_natalia_auto/PlasmicCardWithBackground1";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,38 +14,36 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface CloudIamNavigationLinkPrimaryCtaProps extends Omit<DefaultCloudIamNavigationLinkPrimaryCtaProps, "hideProps1"|"hideProp2"> {
+// interface CardWithBackground1Props extends Omit<DefaultCardWithBackground1Props, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultCloudIamNavigationLinkPrimaryCtaProps altogether and have
+// You can also stop extending from DefaultCardWithBackground1Props altogether and have
 // total control over the props for your component.
-export interface CloudIamNavigationLinkPrimaryCtaProps
-  extends DefaultCloudIamNavigationLinkPrimaryCtaProps {}
+export interface CardWithBackground1Props
+  extends DefaultCardWithBackground1Props {}
 
-function CloudIamNavigationLinkPrimaryCta_(
-  props: CloudIamNavigationLinkPrimaryCtaProps,
+function CardWithBackground1_(
+  props: CardWithBackground1Props,
   ref: HTMLElementRefOf<"div">
 ) {
-  // Use PlasmicCloudIamNavigationLinkPrimaryCta to render this component as it was
+  // Use PlasmicCardWithBackground1 to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicCloudIamNavigationLinkPrimaryCta are:
+  // Props you can pass into PlasmicCardWithBackground1 are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all CloudIamNavigationLinkPrimaryCtaProps here, but feel free
+  // By default, we are just piping all CardWithBackground1Props here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicCloudIamNavigationLinkPrimaryCta root={{ ref }} {...props} />;
+  return <PlasmicCardWithBackground1 root={{ ref }} {...props} />;
 }
 
-const CloudIamNavigationLinkPrimaryCta = React.forwardRef(
-  CloudIamNavigationLinkPrimaryCta_
-);
-export default CloudIamNavigationLinkPrimaryCta;
+const CardWithBackground1 = React.forwardRef(CardWithBackground1_);
+export default CardWithBackground1;

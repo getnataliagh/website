@@ -4,6 +4,7 @@
   position: relative;
   width: auto;
   height: auto;
+  background: #ffffff;
 }
 .freeBox {
   display: flex;

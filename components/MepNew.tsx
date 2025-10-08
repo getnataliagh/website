@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicCasDusage,
-  DefaultCasDusageProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicCasDusage";
+  PlasmicMepNew,
+  DefaultMepNewProps
+} from "./plasmic/site_actuel_natalia_auto/PlasmicMepNew";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,32 +14,32 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface CasDusageProps extends Omit<DefaultCasDusageProps, "hideProps1"|"hideProp2"> {
+// interface MepNewProps extends Omit<DefaultMepNewProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultCasDusageProps altogether and have
+// You can also stop extending from DefaultMepNewProps altogether and have
 // total control over the props for your component.
-export interface CasDusageProps extends DefaultCasDusageProps {}
+export interface MepNewProps extends DefaultMepNewProps {}
 
-function CasDusage_(props: CasDusageProps, ref: HTMLElementRefOf<"section">) {
-  // Use PlasmicCasDusage to render this component as it was
+function MepNew_(props: MepNewProps, ref: HTMLElementRefOf<"div">) {
+  // Use PlasmicMepNew to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicCasDusage are:
+  // Props you can pass into PlasmicMepNew are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all CasDusageProps here, but feel free
+  // By default, we are just piping all MepNewProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicCasDusage casUsage={{ ref }} {...props} />;
+  return <PlasmicMepNew root={{ ref }} {...props} />;
 }
 
-const CasDusage = React.forwardRef(CasDusage_);
-export default CasDusage;
+const MepNew = React.forwardRef(MepNew_);
+export default MepNew;

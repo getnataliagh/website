@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicIconMenu,
-  DefaultIconMenuProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicIconMenu";
+  PlasmicMepOld,
+  DefaultMepOldProps
+} from "./plasmic/site_actuel_natalia_auto/PlasmicMepOld";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,32 +14,32 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface IconMenuProps extends Omit<DefaultIconMenuProps, "hideProps1"|"hideProp2"> {
+// interface MepOldProps extends Omit<DefaultMepOldProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultIconMenuProps altogether and have
+// You can also stop extending from DefaultMepOldProps altogether and have
 // total control over the props for your component.
-export interface IconMenuProps extends DefaultIconMenuProps {}
+export interface MepOldProps extends DefaultMepOldProps {}
 
-function IconMenu_(props: IconMenuProps, ref: HTMLElementRefOf<"div">) {
-  // Use PlasmicIconMenu to render this component as it was
+function MepOld_(props: MepOldProps, ref: HTMLElementRefOf<"div">) {
+  // Use PlasmicMepOld to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicIconMenu are:
+  // Props you can pass into PlasmicMepOld are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all IconMenuProps here, but feel free
+  // By default, we are just piping all MepOldProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicIconMenu root={{ ref }} {...props} />;
+  return <PlasmicMepOld root={{ ref }} {...props} />;
 }
 
-const IconMenu = React.forwardRef(IconMenu_);
-export default IconMenu;
+const MepOld = React.forwardRef(MepOld_);
+export default MepOld;

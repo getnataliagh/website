@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicChronologie,
-  DefaultChronologieProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicChronologie";
+  PlasmicCasDusageNew,
+  DefaultCasDusageNewProps
+} from "./plasmic/site_actuel_natalia_auto/PlasmicCasDusageNew";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,32 +14,32 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface ChronologieProps extends Omit<DefaultChronologieProps, "hideProps1"|"hideProp2"> {
+// interface CasDusageNewProps extends Omit<DefaultCasDusageNewProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultChronologieProps altogether and have
+// You can also stop extending from DefaultCasDusageNewProps altogether and have
 // total control over the props for your component.
-export interface ChronologieProps extends DefaultChronologieProps {}
+export interface CasDusageNewProps extends DefaultCasDusageNewProps {}
 
-function Chronologie_(props: ChronologieProps, ref: HTMLElementRefOf<"div">) {
-  // Use PlasmicChronologie to render this component as it was
+function CasDusageNew_(props: CasDusageNewProps, ref: HTMLElementRefOf<"div">) {
+  // Use PlasmicCasDusageNew to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicChronologie are:
+  // Props you can pass into PlasmicCasDusageNew are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all ChronologieProps here, but feel free
+  // By default, we are just piping all CasDusageNewProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicChronologie root={{ ref }} {...props} />;
+  return <PlasmicCasDusageNew root={{ ref }} {...props} />;
 }
 
-const Chronologie = React.forwardRef(Chronologie_);
-export default Chronologie;
+const CasDusageNew = React.forwardRef(CasDusageNew_);
+export default CasDusageNew;
