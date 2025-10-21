@@ -76,7 +76,7 @@
     padding-left: 0px;
   }
 }
-.h4__bDsYn {
+.text__bDsYn {
   position: relative;
   height: auto;
   text-align: center;
@@ -84,12 +84,12 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h4__bDsYn {
+  .text__bDsYn {
     padding-top: 0px;
     font-size: var(--token-h44X3KXzj2JM);
   }
 }
-.h4___1CpNt {
+.text___1CpNt {
   position: relative;
   height: auto;
   text-align: center;
@@ -97,7 +97,7 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h4___1CpNt {
+  .text___1CpNt {
     padding-top: 0px;
     font-size: var(--token-h44X3KXzj2JM);
   }

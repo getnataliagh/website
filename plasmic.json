@@ -997,19 +997,6 @@
           "componentType": "component"
         },
         {
-          "id": "yb6NoNktLEqW",
-          "name": "Chronologie",
-          "type": "managed",
-          "projectId": "mwhScQxahW1in9QQ9WEhLw",
-          "renderModuleFilePath": "plasmic/natalia_v_2/PlasmicChronologie.tsx",
-          "importSpec": {
-            "modulePath": "Chronologie.tsx"
-          },
-          "cssFilePath": "plasmic/natalia_v_2/PlasmicChronologie.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "9CjNEB42uJzj",
           "name": "Valeur",
           "type": "managed",
@@ -2440,6 +2427,60 @@
           "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCasDusageNew.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "ma5qxHUh6erM",
+          "name": "CentresDappel",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCentresDappel.tsx",
+          "importSpec": {
+            "modulePath": "../pages/centre-d-appel.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicCentresDappel.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/centre-d-appel"
+        },
+        {
+          "id": "eJ9zeqD04EDi",
+          "name": "Helpdesk",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHelpdesk.tsx",
+          "importSpec": {
+            "modulePath": "../pages/helpdesk.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHelpdesk.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/helpdesk"
+        },
+        {
+          "id": "BGruYdkhsXAs",
+          "name": "Solution",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSolution.tsx",
+          "importSpec": {
+            "modulePath": "Solution.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicSolution.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "WE9ZsjIciENK",
+          "name": "Linknavbar",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLinknavbar.tsx",
+          "importSpec": {
+            "modulePath": "Linknavbar.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLinknavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2822,6 +2863,11 @@
           "id": "3tAt5428l_Lv",
           "name": "Rocket02SvgrepoComSvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__Rocket02SvgrepoComSvg.tsx"
+        },
+        {
+          "id": "zsw096bbSK1c",
+          "name": "MessageSquareListSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__MessageSquareListSvgrepoComSvg.tsx"
         }
       ],
       "images": [
@@ -3654,6 +3700,111 @@
           "id": "8kr8oWgGaEfZ",
           "name": "Natalia msg2.png",
           "filePath": "../public/plasmic/site_actuel_natalia_auto/images/nataliaMsg2Png.png"
+        },
+        {
+          "id": "UzP0JOrz1VJz",
+          "name": "Zendesk-Logo.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/zendeskLogoPng.png"
+        },
+        {
+          "id": "hJVguRBKYNEq",
+          "name": "Jira_(software)-Logo.wine.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/jiraSoftwareLogoWinePng.png"
+        },
+        {
+          "id": "sZ_k1qPeoDMa",
+          "name": "iTop.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/iTopPng.png"
+        },
+        {
+          "id": "8nYVlC5v4ncV",
+          "name": "logo-glpi.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoGlpiPng.png"
+        },
+        {
+          "id": "GU1jpZFCyccD",
+          "name": "ChatGPT Image 13 oct. 2025, 09_49_33.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage13Oct2025094933Png.png"
+        },
+        {
+          "id": "smqp211Jqa4m",
+          "name": "Cisco_logo_blue_2016.svg.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/ciscoLogoBlue2016SvgPng.png"
+        },
+        {
+          "id": "-BtNk7aMT39g",
+          "name": "3CX-Logo.wine.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/_3CxLogoWinePng.png"
+        },
+        {
+          "id": "nNmnjz56-vD1",
+          "name": "manifone-logo-2.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/manifoneLogo2Png.png"
+        },
+        {
+          "id": "BHHM47yv8BpS",
+          "name": "vocalcom-partenaire-landing.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/vocalcomPartenaireLandingPng.png"
+        },
+        {
+          "id": "V3v5ixP2ysph",
+          "name": "exchange-personel-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/exchangePersonelSvgrepoComSvg.svg"
+        },
+        {
+          "id": "FEzCiDaUIjI_",
+          "name": "shapes-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/shapesSvgrepoComSvg.svg"
+        },
+        {
+          "id": "qlU1LBl2lj3N",
+          "name": "unavailable-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/unavailableSvgrepoComSvg.svg"
+        },
+        {
+          "id": "J5jWnvlIVTSv",
+          "name": "action-unavailable-symbolic-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/actionUnavailableSymbolicSvgrepoComSvg.svg"
+        },
+        {
+          "id": "6GnDewtzfN94",
+          "name": "turn-off-svgrepo-com.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/turnOffSvgrepoComSvg.svg"
+        },
+        {
+          "id": "zjM4Ynerr9S9",
+          "name": "Capture d’écran 2025-10-16 à 10.57.58.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20251016A105758Png.png"
+        },
+        {
+          "id": "bX-_jp1jc6wX",
+          "name": "Capture d’écran 2025-10-16 à 10.58.05.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20251016A105805Png.png"
+        },
+        {
+          "id": "IqXgkJI2JQWp",
+          "name": "ServiceNow-Logo.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/serviceNowLogoPng.png"
+        },
+        {
+          "id": "8AlbHelODf27",
+          "name": "ChatGPT Image 16 oct. 2025, 16_31_15.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/chatGptImage16Oct2025163115Png.png"
+        },
+        {
+          "id": "ACLpT9b9wAPR",
+          "name": "logoparade_halopsa.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoparadeHalopsaPng.png"
+        },
+        {
+          "id": "eeQQsNe3VMrJ",
+          "name": "f4f30f80-cd92-11e9-8301-1ad34bf00c41.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/f4F30F80Cd9211E983011Ad34Bf00C41Png.png"
+        },
+        {
+          "id": "S-dqcoECKxBP",
+          "name": "Capture d’écran 2025-10-21 à 16.18.43.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20251021A161843Png.png"
         }
       ],
       "indirect": false,
@@ -3889,6 +4040,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.347",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.347/dist/plasmic.schema.json"
+  "cliVersion": "0.1.348",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.348/dist/plasmic.schema.json"
 }

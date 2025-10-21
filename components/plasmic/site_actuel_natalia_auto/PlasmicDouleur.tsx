@@ -220,12 +220,11 @@ function PlasmicDouleur__RenderFunc(props: {
         data-plasmic-override={overrides.perte}
         className={classNames(projectcss.all, sty.perte)}
       >
-        <h4
+        <div
           className={classNames(
             projectcss.all,
-            projectcss.h4,
             projectcss.__wab_text,
-            sty.h4__bDsYn
+            sty.text__bDsYn
           )}
         >
           {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -251,13 +250,12 @@ function PlasmicDouleur__RenderFunc(props: {
               </span>
             </React.Fragment>
           )}
-        </h4>
-        <h4
+        </div>
+        <div
           className={classNames(
             projectcss.all,
-            projectcss.h4,
             projectcss.__wab_text,
-            sty.h4___1CpNt
+            sty.text___1CpNt
           )}
         >
           {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -283,7 +281,7 @@ function PlasmicDouleur__RenderFunc(props: {
               </span>
             </React.Fragment>
           )}
-        </h4>
+        </div>
       </div>
       <div
         data-plasmic-name={"chiffres"}

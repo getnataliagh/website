@@ -88,8 +88,7 @@ export const PlasmicValeur__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicValeur__OverridesType = {
   root?: Flex__<"div">;
-  h1?: Flex__<"h1">;
-  text?: Flex__<"div">;
+  h2?: Flex__<"h2">;
 };
 
 export interface DefaultValeurProps {
@@ -161,55 +160,25 @@ function PlasmicValeur__RenderFunc(props: {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox__aifMw)}>
-        <h1
-          data-plasmic-name={"h1"}
-          data-plasmic-override={overrides.h1}
+        <div
           className={classNames(
             projectcss.all,
-            projectcss.h1,
             projectcss.__wab_text,
-            sty.h1
+            sty.text__zxWor
           )}
         >
-          <React.Fragment>
-            <React.Fragment>{""}</React.Fragment>
-            {
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__lNjHn
-                )}
-              >
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $props.emoji;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "\ud83e\udd1d";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </h2>
-            }
-            <React.Fragment>{""}</React.Fragment>
-          </React.Fragment>
-        </h1>
+          {"\ud83e\udd1d"}
+        </div>
       </div>
       <div className={classNames(projectcss.all, sty.freeBox__zgHfo)}>
         <h2
+          data-plasmic-name={"h2"}
+          data-plasmic-override={overrides.h2}
           className={classNames(
             projectcss.all,
             projectcss.h2,
             projectcss.__wab_text,
-            sty.h2__bWion
+            sty.h2
           )}
         >
           <React.Fragment>
@@ -229,12 +198,10 @@ function PlasmicValeur__RenderFunc(props: {
           </React.Fragment>
         </h2>
         <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text
+            sty.text__pwLl
           )}
         >
           <React.Fragment>
@@ -259,17 +226,15 @@ function PlasmicValeur__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1", "text"],
-  h1: ["h1"],
-  text: ["text"]
+  root: ["root", "h2"],
+  h2: ["h2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h1: "h1";
-  text: "div";
+  h2: "h2";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -283,7 +248,9 @@ type NodeComponentProps<T extends NodeNameType> =
     variants?: PlasmicValeur__VariantsArgs;
     args?: PlasmicValeur__ArgsType;
     overrides?: NodeOverridesType<T>;
-  } & Omit<PlasmicValeur__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
+  } &
+    // Specify variants directly as props
+    Omit<PlasmicValeur__VariantsArgs, ReservedPropsType> &
     // Specify args directly as props
     Omit<PlasmicValeur__ArgsType, ReservedPropsType> &
     // Specify overrides for each element directly as props
@@ -332,8 +299,7 @@ export const PlasmicValeur = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h1: makeNodeComponent("h1"),
-    text: makeNodeComponent("text"),
+    h2: makeNodeComponent("h2"),
 
     // Metadata about props expected for PlasmicValeur
     internalVariantProps: PlasmicValeur__VariantProps,

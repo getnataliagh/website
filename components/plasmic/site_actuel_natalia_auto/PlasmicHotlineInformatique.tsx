@@ -106,13 +106,13 @@ export type PlasmicHotlineInformatique__OverridesType = {
   wrapper?: Flex__<"section">;
   navbar?: Flex__<typeof Navbar>;
   hero?: Flex__<"section">;
-  h1?: Flex__<"h1">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   buttonPrimary?: Flex__<typeof ButtonPrimary>;
   image?: Flex__<"section">;
   douleur?: Flex__<typeof Douleur>;
   cetaitAvant?: Flex__<typeof CetaitAvant>;
   reponseInstantanee?: Flex__<typeof ReponseInstantanee>;
+  h4?: Flex__<"h4">;
   avantages?: Flex__<"section">;
   productSection?: Flex__<typeof Section>;
   foreground4?: Flex__<"div">;
@@ -260,13 +260,11 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                   className={classNames(projectcss.all, sty.freeBox___1XBvT)}
                 >
                   <h1
-                    data-plasmic-name={"h1"}
-                    data-plasmic-override={overrides.h1}
                     className={classNames(
                       projectcss.all,
                       projectcss.h1,
                       projectcss.__wab_text,
-                      sty.h1
+                      sty.h1__zlzKe
                     )}
                   >
                     {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -524,7 +522,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             "plasmic_default__all plasmic_default__span"
                           }
                           style={{
-                            color: "var(--token-okZqvxZ_nx_g)",
+                            color: "var(--token-_LX8zWYksvaJ)",
                             fontWeight: 700
                           }}
                         >
@@ -535,7 +533,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          style={{ color: "var(--token-_LX8zWYksvaJ)" }}
                         >
                           {
                             " r\u00e9pond, qualifie et prend rendez-vous \u00e0 votre place "
@@ -547,7 +545,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                             "plasmic_default__all plasmic_default__span"
                           }
                           style={{
-                            color: "var(--token-okZqvxZ_nx_g)",
+                            color: "var(--token-_LX8zWYksvaJ)",
                             fontWeight: 700
                           }}
                         >
@@ -799,6 +797,12 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
               className={classNames("__wab_instance", sty.cetaitAvant)}
             />
 
+            <ReponseInstantanee
+              data-plasmic-name={"reponseInstantanee"}
+              data-plasmic-override={overrides.reponseInstantanee}
+              className={classNames("__wab_instance", sty.reponseInstantanee)}
+            />
+
             <section className={classNames(projectcss.all, sty.section__z8CXc)}>
               <h2
                 className={classNames(
@@ -931,11 +935,13 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                     <React.Fragment>{""}</React.Fragment>
                     {
                       <h4
+                        data-plasmic-name={"h4"}
+                        data-plasmic-override={overrides.h4}
                         className={classNames(
                           projectcss.all,
                           projectcss.h4,
                           projectcss.__wab_text,
-                          sty.h4__aCl1T
+                          sty.h4
                         )}
                       >
                         <React.Fragment>
@@ -1266,12 +1272,6 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <ReponseInstantanee
-              data-plasmic-name={"reponseInstantanee"}
-              data-plasmic-override={overrides.reponseInstantanee}
-              className={classNames("__wab_instance", sty.reponseInstantanee)}
-            />
-
             <section
               data-plasmic-name={"avantages"}
               data-plasmic-override={overrides.avantages}
@@ -2556,40 +2556,16 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                   data-plasmic-override={overrides.foreground}
                   className={classNames(projectcss.all, sty.foreground)}
                 >
-                  <h2
+                  <h1
                     className={classNames(
                       projectcss.all,
-                      projectcss.h2,
+                      projectcss.h1,
                       projectcss.__wab_text,
-                      sty.h2__zVh3X
+                      sty.h1__ctBUp
                     )}
                   >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__xaTEv
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                            >
-                              {"Cas d'usage en concession"}
-                            </span>
-                          </React.Fragment>
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </h2>
+                    {"Cas d'usage en concession"}
+                  </h1>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -2994,12 +2970,11 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                       </span>
                     </React.Fragment>
                   </h2>
-                  <h4
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.h4,
                       projectcss.__wab_text,
-                      sty.h4__weszW
+                      sty.text__weszW
                     )}
                   >
                     <React.Fragment>
@@ -3043,7 +3018,7 @@ function PlasmicHotlineInformatique__RenderFunc(props: {
                         {"80% des besoins en appels entrants en concessions."}
                       </span>
                     </React.Fragment>
-                  </h4>
+                  </div>
                 </div>
                 <div
                   className={classNames(projectcss.all, sty.freeBox___8AbE7)}
@@ -3259,13 +3234,13 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "hero",
-    "h1",
     "link",
     "buttonPrimary",
     "image",
     "douleur",
     "cetaitAvant",
     "reponseInstantanee",
+    "h4",
     "avantages",
     "productSection",
     "foreground4",
@@ -3290,13 +3265,13 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "hero",
-    "h1",
     "link",
     "buttonPrimary",
     "image",
     "douleur",
     "cetaitAvant",
     "reponseInstantanee",
+    "h4",
     "avantages",
     "productSection",
     "foreground4",
@@ -3318,14 +3293,14 @@ const PlasmicDescendants = {
     "footerSection"
   ],
   navbar: ["navbar"],
-  hero: ["hero", "h1", "link", "buttonPrimary"],
-  h1: ["h1"],
+  hero: ["hero", "link", "buttonPrimary"],
   link: ["link", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"],
   image: ["image"],
   douleur: ["douleur"],
   cetaitAvant: ["cetaitAvant"],
   reponseInstantanee: ["reponseInstantanee"],
+  h4: ["h4"],
   avantages: ["avantages", "productSection", "foreground4", "foreground5"],
   productSection: ["productSection"],
   foreground4: ["foreground4"],
@@ -3361,13 +3336,13 @@ type NodeDefaultElementType = {
   wrapper: "section";
   navbar: typeof Navbar;
   hero: "section";
-  h1: "h1";
   link: "a";
   buttonPrimary: typeof ButtonPrimary;
   image: "section";
   douleur: typeof Douleur;
   cetaitAvant: typeof CetaitAvant;
   reponseInstantanee: typeof ReponseInstantanee;
+  h4: "h4";
   avantages: "section";
   productSection: typeof Section;
   foreground4: "div";
@@ -3454,13 +3429,13 @@ export const PlasmicHotlineInformatique = Object.assign(
     wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
-    h1: makeNodeComponent("h1"),
     link: makeNodeComponent("link"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     image: makeNodeComponent("image"),
     douleur: makeNodeComponent("douleur"),
     cetaitAvant: makeNodeComponent("cetaitAvant"),
     reponseInstantanee: makeNodeComponent("reponseInstantanee"),
+    h4: makeNodeComponent("h4"),
     avantages: makeNodeComponent("avantages"),
     productSection: makeNodeComponent("productSection"),
     foreground4: makeNodeComponent("foreground4"),

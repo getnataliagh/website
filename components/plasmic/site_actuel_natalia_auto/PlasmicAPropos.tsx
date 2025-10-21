@@ -248,12 +248,11 @@ function PlasmicAPropos__RenderFunc(props: {
                     </span>
                   </React.Fragment>
                 </h2>
-                <h4
+                <div
                   className={classNames(
                     projectcss.all,
-                    projectcss.h4,
                     projectcss.__wab_text,
-                    sty.h4__zJ6DL
+                    sty.text__zJ6DL
                   )}
                 >
                   <React.Fragment>
@@ -266,7 +265,7 @@ function PlasmicAPropos__RenderFunc(props: {
                       }
                     </span>
                   </React.Fragment>
-                </h4>
+                </div>
               </div>
             </section>
             <section
@@ -296,16 +295,15 @@ function PlasmicAPropos__RenderFunc(props: {
                           }
                           style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                         >
-                          {"Rencontrez notre super \u00e9quipe"}
+                          {"D\u00e9couvrez notre \u00e9quipe"}
                         </span>
                       </React.Fragment>
                     </h2>
-                    <h4
+                    <div
                       className={classNames(
                         projectcss.all,
-                        projectcss.h4,
                         projectcss.__wab_text,
-                        sty.h4__hjF2L
+                        sty.text__hjF2L
                       )}
                     >
                       <React.Fragment>
@@ -316,11 +314,11 @@ function PlasmicAPropos__RenderFunc(props: {
                           style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                         >
                           {
-                            "Des profils tr\u00e8s compl\u00e9mentaires et des valeurs identiques pour servir au mieux nos clients."
+                            "Des profils compl\u00e9mentaires et des valeurs identiques pour servir au mieux nos clients."
                           }
                         </span>
                       </React.Fragment>
-                    </h4>
+                    </div>
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox___5FYf7)}
@@ -536,6 +534,50 @@ function PlasmicAPropos__RenderFunc(props: {
                             src: "/plasmic/site_actuel_natalia_auto/images/image4.png",
                             fullWidth: 200,
                             fullHeight: 200,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </PlasmicLink__>
+                    </Equipe>
+                    <Equipe
+                      className={classNames(
+                        "__wab_instance",
+                        sty.equipe___5DNdD
+                      )}
+                      expert={"Entrepreneur"}
+                      nom={"Pierre Turquand"}
+                      poste={"Co-fondateur, investisseur"}
+                    >
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__kwKx2
+                        )}
+                        component={Link}
+                        href={
+                          "https://www.linkedin.com/in/baptiste-parmantier/"
+                        }
+                        platform={"nextjs"}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__nInoP)}
+                          displayHeight={
+                            hasVariant(globalVariants, "mobile", "mobileOnly")
+                              ? "80px"
+                              : "100%"
+                          }
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"none"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20251021A161843Png.png",
+                            fullWidth: 140,
+                            fullHeight: 140,
                             aspectRatio: undefined
                           }}
                         />
@@ -890,7 +932,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. "
+                                    ": Mise en place du POC Natalia chez notre premier client en conditions r\u00e9elles."
                                   }
                                 </span>
                               </React.Fragment>
@@ -1020,7 +1062,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. 40% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -1043,7 +1085,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " \u00e0 coup s\u00fbr ! C'est \u00e9norme, surtout quand on sait le potentiel de CA et de marge qu'il y a derri\u00e8re pour un distributeur."
+                                    " ! C'est \u00e9norme, surtout quand on sait le potentiel de CA et de marge qu'il y a derri\u00e8re pour un distributeur."
                                   }
                                 </span>
                               </React.Fragment>
@@ -1203,29 +1245,6 @@ function PlasmicAPropos__RenderFunc(props: {
                         {
                           " : c'est l\u2019essor fulgurant des intelligences artificielles g\u00e9n\u00e9ratives en France et dans le monde. Cela fait bient\u00f4t 2 ans que ChatGPT 3.5 est sorti, ce n'est plus une mode mais une transformation qui est entrain d'op\u00e9rer dans le monde entier. Fran\u00e7ois-Guillaume expert dans le domaine, est alors propuls\u00e9 sur le devant de la sc\u00e8ne. Sollicit\u00e9 de toutes parts, il encha\u00eene les conf\u00e9rences et formations sur l\u2019IA, un sujet qui le passionne depuis son master au Griffith College en Irlande, o\u00f9 il avait appliqu\u00e9 son apprentissage du traitement automatique du langage (TAL) \u00e0 l'analyse temps-r\u00e9el des sentiments des messages sociaux gr\u00e2ce \u00e0 du Machine Learning (ML) dans sa premi\u00e8re startup Bringr."
                         }
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#FFB000", fontWeight: 700 }}
-                      >
-                        {
-                          "Nous sentons l'effervescence du march\u00e9, nous voulons en faire parti, nous n'avons pas v\u00e9cu l'arriv\u00e9e d'internet et nous ne voulons pas vivre avec des regrets, il \u00e9tait de temps de lancer le projet !"
-                        }
-                      </span>
-                      <React.Fragment>{""}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {" "}
                       </span>
                       <React.Fragment>{"\n"}</React.Fragment>
                       <span
@@ -1493,7 +1512,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    ": Le POC est au point, il ne reste plus qu'\u00e0 le tester en conditions r\u00e9elles. "
+                                    ": Mise en place du POC Natalia chez notre premier client en conditions r\u00e9elles."
                                   }
                                 </span>
                               </React.Fragment>
@@ -1616,7 +1635,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. C'est l\u00e0 que nous avons identifi\u00e9 les plus grandes douleurs. Au minimum 30% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
+                                    " : Premiers projets pilotes sur le march\u00e9 de l'automobile. 40% des appels en concession ne sont pas trait\u00e9s, tous ces appels ne sont pas du business mais sur le volume d'appels,"
                                   }
                                 </span>
                                 <React.Fragment>{""}</React.Fragment>
@@ -1639,7 +1658,7 @@ function PlasmicAPropos__RenderFunc(props: {
                                   style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                                 >
                                   {
-                                    " \u00e0 coup s\u00fbr ! C'est \u00e9norme, surtout quand on sait le potentiel de CA et de marge qu'il y a derri\u00e8re pour un distributeur."
+                                    " ! C'est \u00e9norme, surtout quand on sait le potentiel de CA et de marge qu'il y a derri\u00e8re pour un distributeur."
                                   }
                                 </span>
                               </React.Fragment>

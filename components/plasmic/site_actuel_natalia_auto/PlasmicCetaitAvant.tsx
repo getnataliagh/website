@@ -59,7 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -67,9 +66,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectcss
 import sty from "./PlasmicCetaitAvant.module.css"; // plasmic-import: fEr4e8g2uhL6/css
-
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
 
 createPlasmicElementProxy;
 
@@ -86,9 +82,6 @@ export type PlasmicCetaitAvant__OverridesType = {
   caCetaitAvant?: Flex__<"section">;
   freeBox?: Flex__<"div">;
   h2?: Flex__<"h2">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
-  buttonPrimary?: Flex__<typeof ButtonPrimary>;
-  text?: Flex__<"div">;
 };
 
 export interface DefaultCetaitAvantProps {
@@ -169,65 +162,21 @@ function PlasmicCetaitAvant__RenderFunc(props: {
           <React.Fragment>
             <span
               className={"plasmic_default__all plasmic_default__span"}
-              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+              style={{ color: "var(--token-jgohepLVeKvh)" }}
             >
-              {"Mais \u00e7a c'\u00e9tait avant Natalia..."}
+              {"Mais \u00e7a c'\u00e9tait avant Natalia !"}
             </span>
           </React.Fragment>
         </h2>
-        <PlasmicLink__
-          data-plasmic-name={"link"}
-          data-plasmic-override={overrides.link}
-          className={classNames(projectcss.all, projectcss.a, sty.link)}
-          component={Link}
-          href={`/calculateur`}
-          platform={"nextjs"}
-        >
-          <ButtonPrimary
-            data-plasmic-name={"buttonPrimary"}
-            data-plasmic-override={overrides.buttonPrimary}
-            className={classNames("__wab_instance", sty.buttonPrimary)}
-            label={
-              <div
-                data-plasmic-name={"text"}
-                data-plasmic-override={overrides.text}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text
-                )}
-              >
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "#FFFFFF" }}
-                  >
-                    {"Calculateur ROI"}
-                  </span>
-                </React.Fragment>
-              </div>
-            }
-          />
-        </PlasmicLink__>
       </div>
     </section>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  caCetaitAvant: [
-    "caCetaitAvant",
-    "freeBox",
-    "h2",
-    "link",
-    "buttonPrimary",
-    "text"
-  ],
-  freeBox: ["freeBox", "h2", "link", "buttonPrimary", "text"],
-  h2: ["h2"],
-  link: ["link", "buttonPrimary", "text"],
-  buttonPrimary: ["buttonPrimary", "text"],
-  text: ["text"]
+  caCetaitAvant: ["caCetaitAvant", "freeBox", "h2"],
+  freeBox: ["freeBox", "h2"],
+  h2: ["h2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -236,9 +185,6 @@ type NodeDefaultElementType = {
   caCetaitAvant: "section";
   freeBox: "div";
   h2: "h2";
-  link: "a";
-  buttonPrimary: typeof ButtonPrimary;
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -305,9 +251,6 @@ export const PlasmicCetaitAvant = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     h2: makeNodeComponent("h2"),
-    link: makeNodeComponent("link"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicCetaitAvant
     internalVariantProps: PlasmicCetaitAvant__VariantProps,

@@ -131,7 +131,7 @@
     min-height: 0;
   }
 }
-.h1 {
+.h1__zlzKe {
   position: relative;
   width: 100%;
   height: auto;
@@ -142,7 +142,7 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h1 {
+  .h1__zlzKe {
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -325,6 +325,10 @@
 .cetaitAvant:global(.__wab_instance) {
   position: relative;
 }
+.reponseInstantanee:global(.__wab_instance) {
+  position: relative;
+  margin-top: 0px;
+}
 .section__z8CXc {
   position: relative;
   align-content: flex-start;
@@ -430,7 +434,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.h4__aCl1T {
+.h4 {
   text-align: center;
   height: auto;
   padding-top: 17px;
@@ -848,10 +852,6 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
-}
-.reponseInstantanee:global(.__wab_instance) {
-  position: relative;
-  margin-top: 0px;
 }
 .avantages {
   position: relative;
@@ -1718,7 +1718,6 @@
   text-overflow: clip;
 }
 .outilsMetiers {
-  display: grid;
   align-content: flex-start;
   justify-items: center;
   width: 100%;
@@ -1726,6 +1725,7 @@
   grid-row-gap: 30px;
   position: relative;
   min-width: 0;
+  display: none;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -2052,12 +2052,12 @@
   }
 }
 .section__qhtrV {
+  display: grid;
   position: relative;
   align-content: flex-start;
   justify-items: center;
   width: 100%;
   min-width: 0;
-  display: none;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -2256,6 +2256,7 @@
   }
 }
 .freeBox__rZeu1 {
+  display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -2265,7 +2266,6 @@
   margin-bottom: 0px;
   margin-top: 0px;
   min-width: 0;
-  display: none;
   padding: 34px 64px 22px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
@@ -2306,25 +2306,13 @@
     top: auto;
   }
 }
-.h2__zVh3X {
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
-  font-weight: 800;
-  font-style: normal;
-  color: #000000d9;
-  text-align: left;
-  text-transform: none;
-  line-height: 1;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-}
-@media (min-width: 0px) and (max-width: 930px) {
-  .h2__zVh3X {
-    text-align: center;
-  }
+.h1__ctBUp {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 28px;
+  text-align: center;
+  min-width: 0;
 }
 .text__lkVsv {
   font-size: 20px;
@@ -2850,11 +2838,11 @@
     font-size: var(--token-zGJggj0WBmcV);
   }
 }
-.h4__weszW {
+.text__weszW {
   text-align: center;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h4__weszW {
+  .text__weszW {
     text-align: center;
     font-size: var(--token-h44X3KXzj2JM);
     line-height: 20px;

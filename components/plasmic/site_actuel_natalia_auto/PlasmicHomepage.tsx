@@ -154,7 +154,6 @@ export type PlasmicHomepage__OverridesType = {
   servicePublic2?: Flex__<"div">;
   old2?: Flex__<"div">;
   titre2?: Flex__<"div">;
-  h3?: Flex__<"h3">;
   foreground3?: Flex__<"div">;
   raisons?: Flex__<"section">;
   avantages?: Flex__<"section">;
@@ -728,7 +727,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                       fontWeight: 700
                                     }}
                                   >
-                                    {"+500 applications"}
+                                    {"vos outils m\u00e9tiers"}
                                   </span>
                                 </React.Fragment>
                               </li>
@@ -876,18 +875,17 @@ function PlasmicHomepage__RenderFunc(props: {
                     </React.Fragment>
                   )}
                 </h2>
-                <h4
+                <div
                   className={classNames(
                     projectcss.all,
-                    projectcss.h4,
                     projectcss.__wab_text,
-                    sty.h4__fnN4I
+                    sty.text__fnN4I
                   )}
                 >
                   {
-                    "Natalia est une solution d\u2019intelligence artificielle qui g\u00e8re vos appels et vos emails, all\u00e8ge votre charge administrative et am\u00e9liore votre r\u00e9activit\u00e9."
+                    "Natalia est une solution d\u2019intelligence artificielle qui g\u00e8re vos appels entrants, all\u00e8ge votre charge administrative et am\u00e9liore votre r\u00e9activit\u00e9."
                   }
-                </h4>
+                </div>
               </div>
               <div
                 data-plasmic-name={"details"}
@@ -965,7 +963,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         fullHeight: 800,
                         aspectRatio: undefined
                       }}
-                      nom={"S\u00e9curis\u00e9 & RGPD"}
+                      nom={"S\u00e9curis\u00e9e & RGPD"}
                     >
                       <SecureSvgrepoComSvgIcon
                         className={classNames(projectcss.all, sty.svg__sfdvD)}
@@ -1045,18 +1043,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       </span>
                     </React.Fragment>
                   </h2>
-                  <h4
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.h4,
                       projectcss.__wab_text,
-                      sty.h4__qoav
+                      sty.text__qoav
                     )}
                   >
                     {
                       "Natalia accompagne les ind\u00e9pendants et les entreprises, tous secteurs et toutes tailles confondus, pour qu\u2019ils ne soient plus jamais seuls face \u00e0 leur gestion administrative."
                     }
-                  </h4>
+                  </div>
                 </div>
                 <div
                   data-plasmic-name={"secteurs"}
@@ -1139,7 +1136,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? `/hotline-informatique`
-                          : `/contact`
+                          : `/hotline-informatique`
                       }
                       platform={"nextjs"}
                     >
@@ -1168,7 +1165,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.callCenter
                       )}
                       component={Link}
-                      href={`/contact`}
+                      href={`/centre-d-appel`}
                       platform={"nextjs"}
                     >
                       <SecteurActif
@@ -1247,6 +1244,92 @@ function PlasmicHomepage__RenderFunc(props: {
                       </SecteurActif>
                     </PlasmicLink__>
                   </section>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___8QhpY
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__msK5T
+                          )}
+                        >
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li___0XTcz
+                            )}
+                          >
+                            <React.Fragment>
+                              <React.Fragment>
+                                {
+                                  "Votre secteur d'activit\u00e9 n'est pas cit\u00e9 ? "
+                                }
+                              </React.Fragment>
+                              {
+                                <PlasmicLink__
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.a,
+                                    projectcss.__wab_text,
+                                    projectcss.plasmic_default__inline,
+                                    sty.link__a0OqK
+                                  )}
+                                  component={Link}
+                                  href={"https://getnatalia.com/contact"}
+                                  platform={"nextjs"}
+                                >
+                                  {"R\u00e9servez un rendez-vous"}
+                                </PlasmicLink__>
+                              }
+                              <React.Fragment>
+                                {" avec nous pour \u00e9tudier votre projet. "}
+                              </React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-ruEH_kPMz8sH)" }}
+                              >
+                                {'"'}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{
+                                  fontStyle: "italic",
+                                  color: "var(--token-ruEH_kPMz8sH)"
+                                }}
+                              >
+                                {"Anything is possible"}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-ruEH_kPMz8sH)" }}
+                              >
+                                {'"'}
+                              </span>
+                            </React.Fragment>
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
                 </div>
                 <div
                   data-plasmic-name={"modernShine2"}
@@ -1415,38 +1498,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2___6Ga4
+                      sty.h2__xruNq
                     )}
                   >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          data-plasmic-name={"h3"}
-                          data-plasmic-override={overrides.h3}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                            >
-                              {
-                                "Adapt\u00e9e \u00e0 votre secteur d'activit\u00e9"
-                              }
-                            </span>
-                          </React.Fragment>
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
+                    {"Adapt\u00e9e \u00e0 votre secteur d'activit\u00e9"}
                   </h2>
                   <h4
                     className={classNames(
@@ -3057,9 +3112,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         "__wab_instance",
                         sty.mepNew__jrwpe
                       )}
-                      desc={
-                        "D\u00e9finition du besoin et du ROI attendu du projet "
-                      }
+                      desc={"D\u00e9finition du besoin et du ROI attendu"}
                       nbr={{
                         src: "/plasmic/site_actuel_natalia_auto/images/oneSvgrepoComSvg.svg",
                         fullWidth: 800,
@@ -3309,7 +3362,6 @@ const PlasmicDescendants = {
     "servicePublic2",
     "old2",
     "titre2",
-    "h3",
     "foreground3",
     "raisons",
     "avantages",
@@ -3362,7 +3414,6 @@ const PlasmicDescendants = {
     "servicePublic2",
     "old2",
     "titre2",
-    "h3",
     "foreground3",
     "raisons",
     "avantages",
@@ -3421,7 +3472,6 @@ const PlasmicDescendants = {
     "servicePublic2",
     "old2",
     "titre2",
-    "h3",
     "foreground3"
   ],
   titre: ["titre"],
@@ -3465,9 +3515,8 @@ const PlasmicDescendants = {
   callCenter2: ["callCenter2"],
   banqueAssurance2: ["banqueAssurance2"],
   servicePublic2: ["servicePublic2"],
-  old2: ["old2", "titre2", "h3", "foreground3"],
-  titre2: ["titre2", "h3"],
-  h3: ["h3"],
+  old2: ["old2", "titre2", "foreground3"],
+  titre2: ["titre2"],
   foreground3: ["foreground3"],
   raisons: ["raisons"],
   avantages: [
@@ -3543,7 +3592,6 @@ type NodeDefaultElementType = {
   servicePublic2: "div";
   old2: "div";
   titre2: "div";
-  h3: "h3";
   foreground3: "div";
   raisons: "section";
   avantages: "section";
@@ -3658,7 +3706,6 @@ export const PlasmicHomepage = Object.assign(
     servicePublic2: makeNodeComponent("servicePublic2"),
     old2: makeNodeComponent("old2"),
     titre2: makeNodeComponent("titre2"),
-    h3: makeNodeComponent("h3"),
     foreground3: makeNodeComponent("foreground3"),
     raisons: makeNodeComponent("raisons"),
     avantages: makeNodeComponent("avantages"),

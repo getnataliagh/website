@@ -94,7 +94,7 @@ export type PlasmicAvantage__OverridesType = {
   cadre?: Flex__<"div">;
   icon?: Flex__<"div">;
   texte?: Flex__<"div">;
-  h5?: Flex__<"h5">;
+  h4?: Flex__<"h4">;
   h6?: Flex__<"h6">;
   svg?: Flex__<"svg">;
 };
@@ -212,14 +212,14 @@ function PlasmicAvantage__RenderFunc(props: {
         data-plasmic-override={overrides.texte}
         className={classNames(projectcss.all, sty.texte)}
       >
-        <h5
-          data-plasmic-name={"h5"}
-          data-plasmic-override={overrides.h5}
+        <h4
+          data-plasmic-name={"h4"}
+          data-plasmic-override={overrides.h4}
           className={classNames(
             projectcss.all,
-            projectcss.h5,
+            projectcss.h4,
             projectcss.__wab_text,
-            sty.h5
+            sty.h4
           )}
         >
           {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -255,7 +255,7 @@ function PlasmicAvantage__RenderFunc(props: {
               })()}
             </React.Fragment>
           )}
-        </h5>
+        </h4>
         <h6
           data-plasmic-name={"h6"}
           data-plasmic-override={overrides.h6}
@@ -298,10 +298,10 @@ function PlasmicAvantage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  cadre: ["cadre", "icon", "texte", "h5", "h6", "svg"],
+  cadre: ["cadre", "icon", "texte", "h4", "h6", "svg"],
   icon: ["icon"],
-  texte: ["texte", "h5", "h6"],
-  h5: ["h5"],
+  texte: ["texte", "h4", "h6"],
+  h4: ["h4"],
   h6: ["h6"],
   svg: ["svg"]
 } as const;
@@ -312,7 +312,7 @@ type NodeDefaultElementType = {
   cadre: "div";
   icon: "div";
   texte: "div";
-  h5: "h5";
+  h4: "h4";
   h6: "h6";
   svg: "svg";
 };
@@ -381,7 +381,7 @@ export const PlasmicAvantage = Object.assign(
     // Helper components rendering sub-elements
     icon: makeNodeComponent("icon"),
     texte: makeNodeComponent("texte"),
-    h5: makeNodeComponent("h5"),
+    h4: makeNodeComponent("h4"),
     h6: makeNodeComponent("h6"),
     svg: makeNodeComponent("svg"),
 

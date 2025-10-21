@@ -89,7 +89,7 @@
   height: 80px;
   color: var(--token-jsoxkY4uzex7);
 }
-.h5 {
+.h4 {
   position: relative;
   width: auto;
   height: auto;
@@ -99,7 +99,7 @@
   text-align: left;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h5 {
+  .h4 {
     font-size: var(--token-dpUme9f3kxzo);
     text-align: center;
     line-height: 20px;

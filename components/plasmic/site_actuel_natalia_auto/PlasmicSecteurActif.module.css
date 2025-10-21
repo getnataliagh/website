@@ -97,6 +97,7 @@
   white-space: pre-wrap;
   line-height: 20px;
   text-align: left;
+  color: var(--token-_LX8zWYksvaJ);
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h5 {

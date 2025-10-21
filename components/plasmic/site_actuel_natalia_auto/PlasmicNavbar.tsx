@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Logo from "../../Logo"; // plasmic-import: Oz4K6O9ubKeI/component
+import Linknavbar from "../../Linknavbar"; // plasmic-import: WE9ZsjIciENK/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import MenuBurger from "../../MenuBurger"; // plasmic-import: 0xX5T15PyzuS/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
@@ -91,9 +92,9 @@ export type PlasmicNavbar__OverridesType = {
   logo?: Flex__<typeof Logo>;
   linksContainer?: Flex__<"div">;
   freeBox?: Flex__<"div">;
-  solutions3?: Flex__<"div">;
   actionContainer?: Flex__<"div">;
   buttonPrimary?: Flex__<typeof ButtonPrimary>;
+  text?: Flex__<"div">;
   menuBurger?: Flex__<typeof MenuBurger>;
   actionBurger?: Flex__<"div">;
   svg?: Flex__<"svg">;
@@ -184,23 +185,16 @@ function PlasmicNavbar__RenderFunc(props: {
         data-plasmic-override={overrides.logoContainer}
         className={classNames(projectcss.all, sty.logoContainer)}
       >
-        <PlasmicLink__
-          className={classNames(projectcss.all, projectcss.a, sty.link___2HQh4)}
-          component={Link}
-          href={`/`}
-          platform={"nextjs"}
-        >
-          <Logo
-            data-plasmic-name={"logo"}
-            data-plasmic-override={overrides.logo}
-            className={classNames("__wab_instance", sty.logo)}
-            smallLogo={
-              hasVariant(globalVariants, "mobile", "mobileOnly")
-                ? undefined
-                : undefined
-            }
-          />
-        </PlasmicLink__>
+        <Logo
+          data-plasmic-name={"logo"}
+          data-plasmic-override={overrides.logo}
+          className={classNames("__wab_instance", sty.logo)}
+          smallLogo={
+            hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? undefined
+              : undefined
+          }
+        />
       </div>
       <div
         data-plasmic-name={"linksContainer"}
@@ -223,22 +217,9 @@ function PlasmicNavbar__RenderFunc(props: {
             platform={"nextjs"}
             target={undefined}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nUjR5
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                >
-                  {"Produit"}
-                </span>
-              </React.Fragment>
-            </div>
+            <Linknavbar
+              className={classNames("__wab_instance", sty.linknavbar__afPhi)}
+            />
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(
@@ -251,24 +232,10 @@ function PlasmicNavbar__RenderFunc(props: {
             platform={"nextjs"}
             target={undefined}
           >
-            <div
-              data-plasmic-name={"solutions3"}
-              data-plasmic-override={overrides.solutions3}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.solutions3
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                >
-                  {"Solutions"}
-                </span>
-              </React.Fragment>
-            </div>
+            <Linknavbar
+              className={classNames("__wab_instance", sty.linknavbar__niBeR)}
+              nom={"Solutions"}
+            />
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(
@@ -280,22 +247,10 @@ function PlasmicNavbar__RenderFunc(props: {
             href={"/#miseenplace"}
             platform={"nextjs"}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__hzD5B
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                >
-                  {"Comment \u00e7a marche ?"}
-                </span>
-              </React.Fragment>
-            </div>
+            <Linknavbar
+              className={classNames("__wab_instance", sty.linknavbar___6JgKj)}
+              nom={"Comment \u00e7a marche ?"}
+            />
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(
@@ -307,22 +262,10 @@ function PlasmicNavbar__RenderFunc(props: {
             href={`/a-propos`}
             platform={"nextjs"}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__ucjd
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                >
-                  {"\u00c0 propos"}
-                </span>
-              </React.Fragment>
-            </div>
+            <Linknavbar
+              className={classNames("__wab_instance", sty.linknavbar__ahcrr)}
+              nom={"\u00c0 propos"}
+            />
           </PlasmicLink__>
         </div>
       </div>
@@ -343,10 +286,12 @@ function PlasmicNavbar__RenderFunc(props: {
             className={classNames("__wab_instance", sty.buttonPrimary)}
             label={
               <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text___2XPg
+                  sty.text
                 )}
               >
                 <React.Fragment>
@@ -459,20 +404,20 @@ const PlasmicDescendants = {
     "logo",
     "linksContainer",
     "freeBox",
-    "solutions3",
     "actionContainer",
     "buttonPrimary",
+    "text",
     "menuBurger",
     "actionBurger",
     "svg"
   ],
   logoContainer: ["logoContainer", "logo"],
   logo: ["logo"],
-  linksContainer: ["linksContainer", "freeBox", "solutions3"],
-  freeBox: ["freeBox", "solutions3"],
-  solutions3: ["solutions3"],
-  actionContainer: ["actionContainer", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"],
+  linksContainer: ["linksContainer", "freeBox"],
+  freeBox: ["freeBox"],
+  actionContainer: ["actionContainer", "buttonPrimary", "text"],
+  buttonPrimary: ["buttonPrimary", "text"],
+  text: ["text"],
   menuBurger: ["menuBurger"],
   actionBurger: ["actionBurger", "svg"],
   svg: ["svg"]
@@ -486,9 +431,9 @@ type NodeDefaultElementType = {
   logo: typeof Logo;
   linksContainer: "div";
   freeBox: "div";
-  solutions3: "div";
   actionContainer: "div";
   buttonPrimary: typeof ButtonPrimary;
+  text: "div";
   menuBurger: typeof MenuBurger;
   actionBurger: "div";
   svg: "svg";
@@ -560,9 +505,9 @@ export const PlasmicNavbar = Object.assign(
     logo: makeNodeComponent("logo"),
     linksContainer: makeNodeComponent("linksContainer"),
     freeBox: makeNodeComponent("freeBox"),
-    solutions3: makeNodeComponent("solutions3"),
     actionContainer: makeNodeComponent("actionContainer"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
+    text: makeNodeComponent("text"),
     menuBurger: makeNodeComponent("menuBurger"),
     actionBurger: makeNodeComponent("actionBurger"),
     svg: makeNodeComponent("svg"),

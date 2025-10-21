@@ -86,7 +86,6 @@ export const PlasmicReponseInstantanee__ArgProps = new Array<ArgPropType>();
 export type PlasmicReponseInstantanee__OverridesType = {
   avantages?: Flex__<"section">;
   productSection?: Flex__<typeof Section>;
-  h4?: Flex__<"h4">;
   avantages2?: Flex__<"div">;
   foreground4?: Flex__<"div">;
   columns?: Flex__<"div">;
@@ -211,14 +210,11 @@ function PlasmicReponseInstantanee__RenderFunc(props: {
                 </span>
               </React.Fragment>
             </h2>
-            <h4
-              data-plasmic-name={"h4"}
-              data-plasmic-override={overrides.h4}
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.h4,
                 projectcss.__wab_text,
-                sty.h4
+                sty.text__x42Wf
               )}
             >
               <React.Fragment>
@@ -231,7 +227,7 @@ function PlasmicReponseInstantanee__RenderFunc(props: {
                   }
                 </span>
               </React.Fragment>
-            </h4>
+            </div>
           </div>
         </Section>
       </div>
@@ -1024,13 +1020,11 @@ const PlasmicDescendants = {
   avantages: [
     "avantages",
     "productSection",
-    "h4",
     "avantages2",
     "foreground4",
     "columns"
   ],
-  productSection: ["productSection", "h4"],
-  h4: ["h4"],
+  productSection: ["productSection"],
   avantages2: ["avantages2", "foreground4", "columns"],
   foreground4: ["foreground4", "columns"],
   columns: ["columns"]
@@ -1041,7 +1035,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   avantages: "section";
   productSection: typeof Section;
-  h4: "h4";
   avantages2: "div";
   foreground4: "div";
   columns: "div";
@@ -1110,7 +1103,6 @@ export const PlasmicReponseInstantanee = Object.assign(
   {
     // Helper components rendering sub-elements
     productSection: makeNodeComponent("productSection"),
-    h4: makeNodeComponent("h4"),
     avantages2: makeNodeComponent("avantages2"),
     foreground4: makeNodeComponent("foreground4"),
     columns: makeNodeComponent("columns"),

@@ -3,7 +3,7 @@
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  background: var(--token-rxMWCxIuxqRu);
+  background: var(--token-_LX8zWYksvaJ);
   grid-row-gap: 50px;
   position: relative;
   grid-column-start: 1 !important;
@@ -43,22 +43,4 @@
     text-align: center;
     font-size: var(--token-zGJggj0WBmcV);
   }
-}
-.link {
-  display: flex;
-}
-.buttonPrimary:global(.__wab_instance):global(.__wab_instance) {
-  max-width: 100%;
-}
-.svg__fvKcm {
-  position: relative;
-  height: 1em;
-}
-.text {
-  white-space: pre;
-  color: #eeeeee;
-}
-.svg__w2TCw {
-  position: relative;
-  height: 1em;
 }

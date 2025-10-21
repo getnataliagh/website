@@ -1,0 +1,10 @@
+.root {
+  white-space: pre;
+  color: var(--token-_LX8zWYksvaJ);
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.root:hover {
+  color: var(--token-ruEH_kPMz8sH);
+}

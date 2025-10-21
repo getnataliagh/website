@@ -92,7 +92,7 @@ export const PlasmicCasDusageNew__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicCasDusageNew__OverridesType = {
   root?: Flex__<"div">;
-  h5?: Flex__<"h5">;
+  h4?: Flex__<"h4">;
   h6?: Flex__<"h6">;
 };
 
@@ -185,14 +185,14 @@ function PlasmicCasDusageNew__RenderFunc(props: {
             value: args.children
           })}
         </div>
-        <h5
-          data-plasmic-name={"h5"}
-          data-plasmic-override={overrides.h5}
+        <h4
+          data-plasmic-name={"h4"}
+          data-plasmic-override={overrides.h4}
           className={classNames(
             projectcss.all,
-            projectcss.h5,
+            projectcss.h4,
             projectcss.__wab_text,
-            sty.h5
+            sty.h4
           )}
         >
           <React.Fragment>
@@ -210,7 +210,7 @@ function PlasmicCasDusageNew__RenderFunc(props: {
               }
             })()}
           </React.Fragment>
-        </h5>
+        </h4>
       </div>
       <h6
         data-plasmic-name={"h6"}
@@ -261,8 +261,8 @@ function PlasmicCasDusageNew__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h5", "h6"],
-  h5: ["h5"],
+  root: ["root", "h4", "h6"],
+  h4: ["h4"],
   h6: ["h6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -270,7 +270,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h5: "h5";
+  h4: "h4";
   h6: "h6";
 };
 
@@ -336,7 +336,7 @@ export const PlasmicCasDusageNew = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h5: makeNodeComponent("h5"),
+    h4: makeNodeComponent("h4"),
     h6: makeNodeComponent("h6"),
 
     // Metadata about props expected for PlasmicCasDusageNew

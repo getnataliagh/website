@@ -125,6 +125,11 @@
   max-width: 100%;
   width: auto;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .buttonSecondary__xHh0I:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 .link {
   white-space: pre;
   color: var(--token-ruEH_kPMz8sH);
@@ -137,6 +142,7 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .buttonSecondary__oEvlu:global(.__wab_instance) {
+    flex-shrink: 0;
     display: none;
   }
 }

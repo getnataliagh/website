@@ -91,7 +91,7 @@
     min-width: 0;
   }
 }
-.h5 {
+.h4 {
   line-height: 28px;
   font-style: normal;
   text-align: center;
@@ -101,9 +101,10 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  color: var(--token-_LX8zWYksvaJ);
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h5 {
+  .h4 {
     font-size: var(--token-dpUme9f3kxzo);
     text-align: center;
     line-height: 20px;

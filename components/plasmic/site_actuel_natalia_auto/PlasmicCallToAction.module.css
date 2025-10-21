@@ -19,6 +19,18 @@
 .callToAction > * {
   grid-column: 4;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .callToAction {
+    padding-top: 19px;
+    padding-bottom: 63px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .callToAction > * {
+    grid-column: 4;
+  }
+}
 .freeBox {
   display: flex;
   flex-direction: column;
@@ -31,18 +43,16 @@
   grid-column-start: 3 !important;
   grid-column-end: -3 !important;
 }
-.h3 {
+.h2 {
   width: 100%;
   height: auto;
   max-width: none;
-  text-align: center;
-  color: #030712;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h3 {
+  .h2 {
     max-width: 80%;
-    font-size: var(--token-h44X3KXzj2JM);
+    font-size: var(--token-zGJggj0WBmcV);
   }
 }
 .link {
@@ -58,6 +68,7 @@
 .text {
   white-space: pre;
   color: #eeeeee;
+  height: auto;
 }
 .svg__kjEp5 {
   position: relative;

@@ -12,7 +12,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
     "@ant-design/pro-components": "^2.6.4",
-    "@plasmicapp/cli": "^0.1.347",
+    "@plasmicapp/cli": "^0.1.348",
     "@plasmicapp/react-web": "^0.2.404",
     "@plasmicpkgs/antd5": "^0.0.267",
     "@plasmicpkgs/lottie-react": "^0.0.219",

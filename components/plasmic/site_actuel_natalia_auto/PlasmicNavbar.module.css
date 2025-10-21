@@ -52,18 +52,6 @@
     column-gap: 0px;
   }
 }
-.link___2HQh4 {
-  align-self: center;
-  display: flex;
-}
-@media (min-width: 0px) and (max-width: 930px) {
-  .link___2HQh4 {
-    align-self: center;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-  }
-}
 .logo:global(.__wab_instance) {
   width: 230px;
   height: 32px;
@@ -117,37 +105,17 @@
   display: flex;
   font-size: 1rem;
 }
-.text__nUjR5 {
-  white-space: pre;
-  color: var(--token-_LX8zWYksvaJ);
-  font-size: 20px;
-}
 .link__hcoir {
   display: flex;
   font-size: 1rem;
-}
-.solutions3 {
-  white-space: pre;
-  color: var(--token-_LX8zWYksvaJ);
-  font-size: 20px;
 }
 .link__mByEv {
   display: flex;
   font-size: 1rem;
 }
-.text__hzD5B {
-  white-space: pre;
-  color: var(--token-_LX8zWYksvaJ);
-  font-size: 20px;
-}
 .link__ofwkK {
   display: flex;
   font-size: 1rem;
-}
-.text__ucjd {
-  white-space: pre;
-  color: var(--token-_LX8zWYksvaJ);
-  font-size: 20px;
 }
 .actionContainer {
   display: flex;
@@ -174,9 +142,14 @@
   position: relative;
   height: 1em;
 }
-.text___2XPg {
+.text {
   white-space: pre;
   color: #eeeeee;
+  transition-property: all;
+  transition-duration: 1s;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
 }
 .svg__geiH8 {
   position: relative;

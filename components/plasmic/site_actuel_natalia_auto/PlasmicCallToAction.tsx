@@ -85,7 +85,7 @@ export const PlasmicCallToAction__ArgProps = new Array<ArgPropType>();
 export type PlasmicCallToAction__OverridesType = {
   callToAction?: Flex__<"section">;
   freeBox?: Flex__<"div">;
-  h3?: Flex__<"h3">;
+  h2?: Flex__<"h2">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   buttonPrimary?: Flex__<typeof ButtonPrimary>;
   text?: Flex__<"div">;
@@ -158,14 +158,14 @@ function PlasmicCallToAction__RenderFunc(props: {
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox)}
       >
-        <h3
-          data-plasmic-name={"h3"}
-          data-plasmic-override={overrides.h3}
+        <h2
+          data-plasmic-name={"h2"}
+          data-plasmic-override={overrides.h2}
           className={classNames(
             projectcss.all,
-            projectcss.h3,
+            projectcss.h2,
             projectcss.__wab_text,
-            sty.h3
+            sty.h2
           )}
         >
           {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -174,9 +174,7 @@ function PlasmicCallToAction__RenderFunc(props: {
                 className={"plasmic_default__all plasmic_default__span"}
                 style={{ color: "#1E3A8A", fontWeight: 700 }}
               >
-                {
-                  "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants"
-                }
+                {"On vous accompagne"}
               </span>
             </React.Fragment>
           ) : (
@@ -186,12 +184,12 @@ function PlasmicCallToAction__RenderFunc(props: {
                 style={{ color: "#1E3A8A", fontWeight: 700 }}
               >
                 {
-                  "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants."
+                  "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous"
                 }
               </span>
             </React.Fragment>
           )}
-        </h3>
+        </h2>
         <PlasmicLink__
           data-plasmic-name={"link"}
           data-plasmic-override={overrides.link}
@@ -219,7 +217,7 @@ function PlasmicCallToAction__RenderFunc(props: {
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ color: "#FFFFFF" }}
                   >
-                    {"R\u00e9server une d\u00e9mo"}
+                    {"R\u00e9server un appel"}
                   </span>
                 </React.Fragment>
               </div>
@@ -235,13 +233,13 @@ const PlasmicDescendants = {
   callToAction: [
     "callToAction",
     "freeBox",
-    "h3",
+    "h2",
     "link",
     "buttonPrimary",
     "text"
   ],
-  freeBox: ["freeBox", "h3", "link", "buttonPrimary", "text"],
-  h3: ["h3"],
+  freeBox: ["freeBox", "h2", "link", "buttonPrimary", "text"],
+  h2: ["h2"],
   link: ["link", "buttonPrimary", "text"],
   buttonPrimary: ["buttonPrimary", "text"],
   text: ["text"]
@@ -252,7 +250,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   callToAction: "section";
   freeBox: "div";
-  h3: "h3";
+  h2: "h2";
   link: "a";
   buttonPrimary: typeof ButtonPrimary;
   text: "div";
@@ -321,7 +319,7 @@ export const PlasmicCallToAction = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    h3: makeNodeComponent("h3"),
+    h2: makeNodeComponent("h2"),
     link: makeNodeComponent("link"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     text: makeNodeComponent("text"),
