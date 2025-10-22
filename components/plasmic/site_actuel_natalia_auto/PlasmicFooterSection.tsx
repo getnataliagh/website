@@ -328,6 +328,26 @@ function PlasmicFooterSection__RenderFunc(props: {
               {"Politique de confidentialit\u00e9"}
             </div>
           </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link___0L5HV
+            )}
+            component={Link}
+            href={`/mentions-légales`}
+            platform={"nextjs"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__uWxMm
+              )}
+            >
+              {"Mentions l\u00e9gales"}
+            </div>
+          </PlasmicLink__>
         </div>
       </div>
       <div className={classNames(projectcss.all, sty.freeBox__ygOnJ)}>

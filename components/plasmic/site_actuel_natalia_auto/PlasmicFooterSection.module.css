@@ -269,6 +269,21 @@
   white-space: pre;
   color: #1e3a8a;
 }
+.link___0L5HV {
+  align-self: flex-start;
+  display: flex;
+  font-size: 12px;
+  margin: 0px;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .link___0L5HV {
+    align-self: center;
+  }
+}
+.text__uWxMm {
+  white-space: pre;
+  color: #1e3a8a;
+}
 .freeBox__ygOnJ {
   display: flex;
   flex-direction: column;
