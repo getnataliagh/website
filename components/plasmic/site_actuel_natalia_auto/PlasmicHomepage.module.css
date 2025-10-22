@@ -1369,7 +1369,6 @@
   }
 }
 .avantages2 {
-  display: grid;
   position: relative;
   align-content: center;
   justify-items: center;
@@ -1379,6 +1378,7 @@
   background: none;
   grid-row-gap: 40px;
   min-width: 0;
+  display: none;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
