@@ -387,12 +387,12 @@
   font-style: normal;
   color: var(--token-_LX8zWYksvaJ);
   text-transform: none;
-  line-height: 43px;
   letter-spacing: normal;
   white-space: pre-wrap;
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  line-height: 60px;
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
@@ -760,7 +760,6 @@
 .h2___3DvPe {
   animation: none;
   height: auto;
-  font-size: var(--token-zGJggj0WBmcV);
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h2___3DvPe {
@@ -1561,6 +1560,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-size: 40px;
   min-width: 0;
 }
 .solution__pUGcp:global(.__wab_instance) {
@@ -1576,8 +1576,14 @@
   animation: none;
   object-fit: cover;
   width: 200px;
-  height: 200px;
+  height: 150px;
   color: #ffb000;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .svg___5QtwZ {
+    height: 100px;
+    width: 150px;
+  }
 }
 .solution__hlqzt:global(.__wab_instance) {
   animation: none;
@@ -1594,8 +1600,13 @@
   animation: none;
   object-fit: cover;
   width: 200px;
-  height: 200px;
+  height: 150px;
   color: #ffb000;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .svg__hxrHm {
+    height: 100px;
+  }
 }
 .solution__uNahn:global(.__wab_instance) {
   animation: none;
@@ -1610,8 +1621,13 @@
   animation: none;
   object-fit: cover;
   width: 200px;
-  height: 200px;
+  height: 150px;
   color: #ffb000;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .svg__ser8H {
+    height: 100px;
+  }
 }
 .solution__r5Dfu:global(.__wab_instance) {
   animation: none;
@@ -1628,6 +1644,11 @@
   width: 200px;
   height: 200px;
   color: #ffb000;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .svg__prJrB {
+    height: 150px;
+  }
 }
 .avantages {
   animation: none;
@@ -1719,7 +1740,7 @@
   padding-top: 0px;
   padding-bottom: 0px;
   margin-right: 0px;
-  font-size: 48px;
+  font-size: 40px;
   align-self: auto;
   line-height: 60px;
   min-width: 0;
@@ -1775,7 +1796,7 @@
   z-index: 1;
   position: relative;
   font-family: "Inter", sans-serif;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 800;
   font-style: normal;
   color: var(--token-_LX8zWYksvaJ);
@@ -2947,10 +2968,10 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: 552px;
   flex-shrink: 0;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 40px 0px 0px;
 }
 .img__qv8I8 {
   object-fit: cover;
@@ -3317,6 +3338,7 @@
 }
 .h2__aavV7 {
   padding-right: 0px;
+  font-size: 38px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h2__aavV7 {

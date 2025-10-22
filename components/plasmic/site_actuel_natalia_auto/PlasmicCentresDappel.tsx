@@ -1605,7 +1605,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                     displayHeight={
                       hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "150px"
-                        : "350px"
+                        : "200px"
                     }
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -1614,7 +1614,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "auto"
-                        : "491px"
+                        : "298px"
                     }
                     loading={"lazy"}
                     src={{
@@ -1663,7 +1663,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                     displayHeight={
                       hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "150px"
-                        : "100%"
+                        : "77.52%"
                     }
                     displayMaxHeight={"none"}
                     displayMaxWidth={

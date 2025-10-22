@@ -2025,20 +2025,6 @@
           "path": "/automobile"
         },
         {
-          "id": "Glg8ZSm17wNi",
-          "name": "HotlineInformatique",
-          "type": "managed",
-          "projectId": "2utUyfwAdNYhisb36rBizH",
-          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotlineInformatique.tsx",
-          "importSpec": {
-            "modulePath": "../pages/hotline-informatique.tsx"
-          },
-          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotlineInformatique.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/hotline-informatique"
-        },
-        {
           "id": "5E18q3sUtJqU",
           "name": "Label",
           "type": "managed",

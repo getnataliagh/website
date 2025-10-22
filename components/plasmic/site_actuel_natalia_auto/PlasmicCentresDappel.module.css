@@ -1289,13 +1289,13 @@
   animation: none;
   object-fit: cover;
   width: 150px;
-  height: 150px;
+  height: 100px;
   color: #ffb000;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__nNbst {
     width: 150px;
-    height: 150px;
+    height: 100px;
   }
 }
 .solution__qg2An:global(.__wab_instance) {
@@ -1307,13 +1307,13 @@
   animation: none;
   object-fit: cover;
   width: 150px;
-  height: 150px;
+  height: 100px;
   color: #ffb000;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__yb2Pf {
     width: 150px;
-    height: 150px;
+    height: 100px;
   }
 }
 .solution__sVuZi:global(.__wab_instance) {
@@ -1323,7 +1323,7 @@
   animation: none;
   object-fit: cover;
   width: 150px;
-  height: 150px;
+  height: 100px;
   color: #ffb000;
 }
 .solution__jwFl0:global(.__wab_instance) {
@@ -1333,7 +1333,7 @@
   animation: none;
   object-fit: cover;
   width: 150px;
-  height: 150px;
+  height: 100px;
   color: #ffb000;
 }
 .columns___4XoI {
@@ -1801,7 +1801,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 400px;
   flex-shrink: 0;
   padding: 0px;
   margin: 0px;
@@ -1838,14 +1838,14 @@
   margin: 0px;
 }
 .img__kyl3T {
-  object-fit: cover;
+  object-fit: contain;
   max-width: 100%;
-  height: 350px;
-  width: 491px;
+  height: 200px;
+  width: 298px;
   flex-shrink: 0;
 }
 .img__kyl3T > picture > img {
-  object-fit: cover;
+  object-fit: contain;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .img__kyl3T {
@@ -1904,8 +1904,9 @@
   object-fit: cover;
   max-width: 100%;
   width: 107.22%;
-  height: 100%;
+  height: 77.52%;
   margin-right: 10px;
+  margin-top: 0px;
 }
 .img__xfHm > picture > img {
   object-fit: cover;
@@ -2080,13 +2081,13 @@
   }
 }
 .casUsage {
-  display: grid;
   align-content: flex-start;
   justify-items: center;
   width: 100%;
   position: relative;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
+  display: none;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(

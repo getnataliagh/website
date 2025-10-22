@@ -1133,11 +1133,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.hotline
                       )}
                       component={Link}
-                      href={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? `/hotline-informatique`
-                          : `/hotline-informatique`
-                      }
+                      href={`/helpdesk`}
                       platform={"nextjs"}
                     >
                       <SecteurActif
@@ -1395,7 +1391,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.hotline2
                     )}
                     component={Link}
-                    href={`/hotline-informatique`}
                     platform={"nextjs"}
                   >
                     <CardWithBackground1

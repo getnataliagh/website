@@ -82,7 +82,7 @@ import sty from "./PlasmicHelpdesk.module.css"; // plasmic-import: eJ9zeqD04EDi/
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
 import SpeedSvgrepoComSvgIcon from "./icons/PlasmicIcon__SpeedSvgrepoComSvg"; // plasmic-import: lZKFRVNWxH1j/icon
-import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 2Xaj6978lnhC/icon
+import CustomCodingSvgrepoComSvgIcon from "./icons/PlasmicIcon__CustomCodingSvgrepoComSvg"; // plasmic-import: 1E61VmC_aLGw/icon
 import SadDizzySvgrepoComSvgIcon from "./icons/PlasmicIcon__SadDizzySvgrepoComSvg"; // plasmic-import: afHH174oeGWf/icon
 import DelaySvgrepoComSvgIcon from "./icons/PlasmicIcon__DelaySvgrepoComSvg"; // plasmic-import: O4W-2UqGZ8Hj/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
@@ -93,6 +93,7 @@ import MessageSquareListSvgrepoComSvgIcon from "./icons/PlasmicIcon__MessageSqua
 import SecureSvgrepoComSvgIcon from "./icons/PlasmicIcon__SecureSvgrepoComSvg"; // plasmic-import: zmpxtwo18XQt/icon
 import CalendarLinesPenSvgrepoComSvgIcon from "./icons/PlasmicIcon__CalendarLinesPenSvgrepoComSvg"; // plasmic-import: kNemrl--N6SP/icon
 import MoneyCheckDollarPenSvgrepoComSvgIcon from "./icons/PlasmicIcon__MoneyCheckDollarPenSvgrepoComSvg"; // plasmic-import: SJKU4Ll6kih5/icon
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 2Xaj6978lnhC/icon
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: uJO-DE32SArw/icon
 
 createPlasmicElementProxy;
@@ -437,9 +438,7 @@ function PlasmicHelpdesk__RenderFunc(props: {
                             }
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
-                            {
-                              "L'IA est un enjeu majeur pour les helpdesk dans les mois et ann\u00e9es \u00e0 venir. "
-                            }
+                            {"L'IA est un enjeu majeur pour les helpdesk"}
                           </span>
                           <React.Fragment>{"\n"}</React.Fragment>
                           <span
@@ -733,7 +732,7 @@ function PlasmicHelpdesk__RenderFunc(props: {
                       className={"plasmic_default__all plasmic_default__span"}
                       style={{ color: "#1E3A8A" }}
                     >
-                      {"Vos probl\u00e8mes"}
+                      {"Le constat chez vous..."}
                     </span>
                   </React.Fragment>
                 </h2>
@@ -763,7 +762,7 @@ function PlasmicHelpdesk__RenderFunc(props: {
                     }
                     nom={'Demandes "simples"'}
                   >
-                    <Icon10Icon
+                    <CustomCodingSvgrepoComSvgIcon
                       className={classNames(projectcss.all, sty.svg__sdOnz)}
                       role={"img"}
                     />

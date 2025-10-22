@@ -164,7 +164,7 @@ function PlasmicCetaitAvant__RenderFunc(props: {
               className={"plasmic_default__all plasmic_default__span"}
               style={{ color: "var(--token-jgohepLVeKvh)" }}
             >
-              {"Mais \u00e7a c'\u00e9tait avant Natalia !"}
+              {"Mais \u00e7a c'\u00e9tait avant Natalia"}
             </span>
           </React.Fragment>
         </h2>
