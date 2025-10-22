@@ -1243,15 +1243,8 @@ function PlasmicAPropos__RenderFunc(props: {
                         style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                       >
                         {
-                          " : c'est l\u2019essor fulgurant des intelligences artificielles g\u00e9n\u00e9ratives en France et dans le monde. Cela fait bient\u00f4t 2 ans que ChatGPT 3.5 est sorti, ce n'est plus une mode mais une transformation qui est entrain d'op\u00e9rer dans le monde entier. Fran\u00e7ois-Guillaume expert dans le domaine, est alors propuls\u00e9 sur le devant de la sc\u00e8ne. Sollicit\u00e9 de toutes parts, il encha\u00eene les conf\u00e9rences et formations sur l\u2019IA, un sujet qui le passionne depuis son master au Griffith College en Irlande, o\u00f9 il avait appliqu\u00e9 son apprentissage du traitement automatique du langage (TAL) \u00e0 l'analyse temps-r\u00e9el des sentiments des messages sociaux gr\u00e2ce \u00e0 du Machine Learning (ML) dans sa premi\u00e8re startup Bringr."
+                          " : c'est l\u2019essor fulgurant des intelligences artificielles g\u00e9n\u00e9ratives en France et dans le monde. Ce n'est plus une mode mais une transformation qui est entrain d'op\u00e9rer dans le monde entier. Fran\u00e7ois-Guillaume expert dans le domaine, est alors propuls\u00e9 sur le devant de la sc\u00e8ne. Sollicit\u00e9 de toutes parts, il encha\u00eene les conf\u00e9rences et formations sur l\u2019IA, un sujet qui le passionne depuis son master au Griffith College en Irlande en 2012, o\u00f9 il avait appliqu\u00e9 son apprentissage du traitement automatique du langage (TAL) \u00e0 l'analyse temps-r\u00e9el des sentiments des messages sociaux gr\u00e2ce \u00e0 du Machine Learning (ML) dans sa premi\u00e8re startup Bringr."
                         }
-                      </span>
-                      <React.Fragment>{"\n"}</React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                      >
-                        {""}
                       </span>
                       <React.Fragment>{"\n"}</React.Fragment>
                       <span

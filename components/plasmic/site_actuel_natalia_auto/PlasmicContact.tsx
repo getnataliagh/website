@@ -278,9 +278,7 @@ function PlasmicContact__RenderFunc(props: {
                         sty.h4___4RCiG
                       )}
                     >
-                      {
-                        "Sinon appelez-nous au 06 89 15 62 17,\u00a0\n\u00a0Vous tomberez sur un membre de l'\u00e9quipe ou Natalia."
-                      }
+                      {""}
                     </h4>
                   </div>
                   <Iframe
