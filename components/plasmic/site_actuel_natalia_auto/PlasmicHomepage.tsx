@@ -156,16 +156,16 @@ export type PlasmicHomepage__OverridesType = {
   titre2?: Flex__<"div">;
   foreground3?: Flex__<"div">;
   raisons?: Flex__<"section">;
-  avantages?: Flex__<"section">;
-  sliderCarousel2?: Flex__<typeof SliderWrapper>;
-  avntage1?: Flex__<"div">;
-  avntage2?: Flex__<"div">;
-  avntage3?: Flex__<"div">;
-  avntage4?: Flex__<"div">;
-  avntage5?: Flex__<"div">;
-  avntage6?: Flex__<"div">;
-  old?: Flex__<"div">;
-  modernShine?: Flex__<"div">;
+  avantages2?: Flex__<"section">;
+  sliderCarousel3?: Flex__<typeof SliderWrapper>;
+  avntage7?: Flex__<"div">;
+  avntage8?: Flex__<"div">;
+  avntage9?: Flex__<"div">;
+  avntage10?: Flex__<"div">;
+  avntage11?: Flex__<"div">;
+  avntage12?: Flex__<"div">;
+  old3?: Flex__<"div">;
+  modernShine3?: Flex__<"div">;
   miseenplace?: Flex__<"section">;
   cadre2?: Flex__<"div">;
   callToAction?: Flex__<"section">;
@@ -220,12 +220,12 @@ function PlasmicHomepage__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "sliderCarousel2.currentSlide",
+        path: "sliderCarousel3.currentSlide",
         type: "private",
         variableType: "number",
         initFunc: ({ $props, $state, $queries, $ctx }) => 0,
 
-        refName: "sliderCarousel2",
+        refName: "sliderCarousel3",
         onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
@@ -1734,9 +1734,9 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </section>
             <section
-              data-plasmic-name={"avantages"}
-              data-plasmic-override={overrides.avantages}
-              className={classNames(projectcss.all, sty.avantages, ``)}
+              data-plasmic-name={"avantages2"}
+              data-plasmic-override={overrides.avantages2}
+              className={classNames(projectcss.all, sty.avantages2, ``)}
               id={"avantages"}
             >
               <h2
@@ -1744,7 +1744,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   projectcss.all,
                   projectcss.h2,
                   projectcss.__wab_text,
-                  sty.h2__jIjsn
+                  sty.h2__iowp7
                 )}
               >
                 <React.Fragment>
@@ -1756,13 +1756,13 @@ function PlasmicHomepage__RenderFunc(props: {
                   </span>
                 </React.Fragment>
               </h2>
-              <div className={classNames(projectcss.all, sty.freeBox__ijLfx)}>
+              <div className={classNames(projectcss.all, sty.freeBox__oLc9R)}>
                 <h2
                   className={classNames(
                     projectcss.all,
                     projectcss.h2,
                     projectcss.__wab_text,
-                    sty.h2___2Zqf4
+                    sty.h2__virEq
                   )}
                 >
                   <React.Fragment>
@@ -1783,24 +1783,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       generateStateOnChangePropForCodeComponents(
                         $state,
                         "currentSlide",
-                        ["sliderCarousel2", "currentSlide"],
+                        ["sliderCarousel3", "currentSlide"],
                         SliderWrapper_Helpers
                       ).apply(null, eventArgs);
                     },
                     centerMode: false,
                     className: classNames(
                       "__wab_instance",
-                      sty.sliderCarousel2
+                      sty.sliderCarousel3
                     ),
                     cssEase: "linear",
                     initialSlide: generateStateValueProp($state, [
-                      "sliderCarousel2",
+                      "sliderCarousel3",
                       "currentSlide"
                     ]),
                     ref: ref => {
-                      $refs["sliderCarousel2"] = ref;
+                      $refs["sliderCarousel3"] = ref;
                     },
-                    sliderScopeClassName: sty["sliderCarousel2__slider"],
+                    sliderScopeClassName: sty["sliderCarousel3__slider"],
                     slidesPerRow: 3,
                     slidesToScroll: 6,
                     speed: 10000,
@@ -1814,7 +1814,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     [
                       {
                         name: "currentSlide",
-                        plasmicStateName: "sliderCarousel2.currentSlide"
+                        plasmicStateName: "sliderCarousel3.currentSlide"
                       }
                     ],
                     [],
@@ -1824,19 +1824,19 @@ function PlasmicHomepage__RenderFunc(props: {
 
                   return (
                     <SliderWrapper
-                      data-plasmic-name={"sliderCarousel2"}
-                      data-plasmic-override={overrides.sliderCarousel2}
+                      data-plasmic-name={"sliderCarousel3"}
+                      data-plasmic-override={overrides.sliderCarousel3}
                       {...child$Props}
                     >
                       <div
-                        data-plasmic-name={"avntage1"}
-                        data-plasmic-override={overrides.avntage1}
-                        className={classNames(projectcss.all, sty.avntage1)}
+                        data-plasmic-name={"avntage7"}
+                        data-plasmic-override={overrides.avntage7}
+                        className={classNames(projectcss.all, sty.avntage7)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__fvysv
+                            sty.avantage__aq4RF
                           )}
                           descr={
                             "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
@@ -1845,7 +1845,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img__e20Ky)}
+                            className={classNames(sty.img__kZvTg)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -1863,19 +1863,19 @@ function PlasmicHomepage__RenderFunc(props: {
                         </Avantage>
                       </div>
                       <div
-                        data-plasmic-name={"avntage2"}
-                        data-plasmic-override={overrides.avntage2}
-                        className={classNames(projectcss.all, sty.avntage2)}
+                        data-plasmic-name={"avntage8"}
+                        data-plasmic-override={overrides.avntage8}
+                        className={classNames(projectcss.all, sty.avntage8)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__vbKnt
+                            sty.avantage__lEfX5
                           )}
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img__cb5Zl)}
+                            className={classNames(sty.img__mKal)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -1893,14 +1893,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         </Avantage>
                       </div>
                       <div
-                        data-plasmic-name={"avntage3"}
-                        data-plasmic-override={overrides.avntage3}
-                        className={classNames(projectcss.all, sty.avntage3)}
+                        data-plasmic-name={"avntage9"}
+                        data-plasmic-override={overrides.avntage9}
+                        className={classNames(projectcss.all, sty.avntage9)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__mnq6X
+                            sty.avantage__n0NCe
                           )}
                           descr={
                             "Le co\u00fbt est variable \u00e0 la minute d'appel, vous ne payez que ce que vous consommez."
@@ -1910,7 +1910,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img__hkSp0)}
+                            className={classNames(sty.img__i6APs)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -1928,14 +1928,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         </Avantage>
                       </div>
                       <div
-                        data-plasmic-name={"avntage4"}
-                        data-plasmic-override={overrides.avntage4}
-                        className={classNames(projectcss.all, sty.avntage4)}
+                        data-plasmic-name={"avntage10"}
+                        data-plasmic-override={overrides.avntage10}
+                        className={classNames(projectcss.all, sty.avntage10)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__veYs2
+                            sty.avantage___1MEJi
                           )}
                           descr={
                             "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
@@ -1944,7 +1944,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img___7Ne1H)}
+                            className={classNames(sty.img__yrrpi)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -1962,14 +1962,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         </Avantage>
                       </div>
                       <div
-                        data-plasmic-name={"avntage5"}
-                        data-plasmic-override={overrides.avntage5}
-                        className={classNames(projectcss.all, sty.avntage5)}
+                        data-plasmic-name={"avntage11"}
+                        data-plasmic-override={overrides.avntage11}
+                        className={classNames(projectcss.all, sty.avntage11)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__px4Ne
+                            sty.avantage__qnc4M
                           )}
                           descr={
                             "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
@@ -1978,7 +1978,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img__fBiru)}
+                            className={classNames(sty.img__fqU1X)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -1996,14 +1996,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         </Avantage>
                       </div>
                       <div
-                        data-plasmic-name={"avntage6"}
-                        data-plasmic-override={overrides.avntage6}
-                        className={classNames(projectcss.all, sty.avntage6)}
+                        data-plasmic-name={"avntage12"}
+                        data-plasmic-override={overrides.avntage12}
+                        className={classNames(projectcss.all, sty.avntage12)}
                       >
                         <Avantage
                           className={classNames(
                             "__wab_instance",
-                            sty.avantage__wWr14
+                            sty.avantage__ulFi
                           )}
                           descr={
                             "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
@@ -2012,7 +2012,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         >
                           <PlasmicImg__
                             alt={""}
-                            className={classNames(sty.img__vSfpb)}
+                            className={classNames(sty.img__jotfw)}
                             displayHeight={"80px"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"none"}
@@ -2032,13 +2032,16 @@ function PlasmicHomepage__RenderFunc(props: {
                     </SliderWrapper>
                   );
                 })()}
-                <div className={classNames(projectcss.all, sty.freeBox__se6W8)}>
+                <div className={classNames(projectcss.all, sty.freeBox__gbtNm)}>
                   <Avantage
-                    className={classNames("__wab_instance", sty.avantage__mTs7)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.avantage__ziMjJ
+                    )}
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__nj7Uz)}
+                      className={classNames(sty.img__ubTDu)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2059,10 +2062,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </Avantage>
                   <Avantage
-                    className={classNames(
-                      "__wab_instance",
-                      sty.avantage__kIc1A
-                    )}
+                    className={classNames("__wab_instance", sty.avantage__xJiF)}
                     descr={
                       "Le co\u00fbt est variable \u00e0 la minute d'appel, vous ne payez que ce que vous consommez."
                     }
@@ -2071,7 +2071,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__wo0Td)}
+                      className={classNames(sty.img___2Qx2B)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2092,7 +2092,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </Avantage>
                   <Avantage
-                    className={classNames("__wab_instance", sty.avantage__mLg8)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.avantage__wGjJk
+                    )}
                     descr={
                       "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
                     }
@@ -2100,7 +2103,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__yWsEa)}
+                      className={classNames(sty.img__kec2Q)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2123,7 +2126,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <Avantage
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__flI29
+                      sty.avantage___6J6Kr
                     )}
                     descr={
                       "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
@@ -2132,7 +2135,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__oYpZm)}
+                      className={classNames(sty.img__j4Ash)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2153,7 +2156,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </Avantage>
                   <Avantage
-                    className={classNames("__wab_instance", sty.avantage__akqI)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.avantage__sMa1H
+                    )}
                     descr={
                       "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
                     }
@@ -2161,7 +2167,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__vbQp)}
+                      className={classNames(sty.img__zRiXp)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2184,7 +2190,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <Avantage
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__gvMqd
+                      sty.avantage__vNZc1
                     )}
                     descr={
                       "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
@@ -2193,7 +2199,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__ifWrN)}
+                      className={classNames(sty.img__p4G8G)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -2216,26 +2222,26 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <div
-                data-plasmic-name={"old"}
-                data-plasmic-override={overrides.old}
-                className={classNames(projectcss.all, sty.old)}
+                data-plasmic-name={"old3"}
+                data-plasmic-override={overrides.old3}
+                className={classNames(projectcss.all, sty.old3)}
               >
-                <div className={classNames(projectcss.all, sty.columns__hYbbR)}>
+                <div className={classNames(projectcss.all, sty.columns__yfSk)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__bjmY4)}
+                    className={classNames(projectcss.all, sty.column__xjuLf)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox___9Mc9)}
+                      className={classNames(projectcss.all, sty.freeBox__u6Rep)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__zekJq
+                          sty.freeBox__hHkhU
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__tL34B)}
+                          className={classNames(sty.img__u7NEt)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -2255,13 +2261,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__rf8E
+                            sty.freeBox___3Vuxg
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__uvpwy
+                              sty.svg__pLl7L
                             )}
                             role={"img"}
                           />
@@ -2270,14 +2276,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__aDRx
+                          sty.freeBox__kzQgF
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__gbaSp
+                            sty.text__gn8SK
                           )}
                         >
                           {hasVariant(
@@ -2315,7 +2321,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__qX8Aj
+                            sty.text__e4Ztw
                           )}
                         >
                           <React.Fragment>
@@ -2335,20 +2341,23 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__gVmt5)}
+                    className={classNames(projectcss.all, sty.column___6BzVl)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__qNGtv)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___51V2Z
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__apOaE
+                          sty.freeBox__rKrYz
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__h0YPe)}
+                          className={classNames(sty.img__yxxLc)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -2368,13 +2377,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__z9RHd
+                            sty.freeBox__fE4Ok
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__oBkD5
+                              sty.svg___8Qqgx
                             )}
                             role={"img"}
                           />
@@ -2383,14 +2392,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__vmDJj
+                          sty.freeBox___1K3Js
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__cIfqq
+                            sty.text__uOcb7
                           )}
                         >
                           <React.Fragment>
@@ -2408,7 +2417,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__uBxWw
+                            sty.text__vcD31
                           )}
                         >
                           {hasVariant(
@@ -2447,23 +2456,20 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__v0Ha4)}
+                    className={classNames(projectcss.all, sty.column__y7IeJ)}
                   >
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___3Lz49
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__rpUCt)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__mbeC5
+                          sty.freeBox__w6UI
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__btjlw)}
+                          className={classNames(sty.img___0YFeE)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={
@@ -2487,13 +2493,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__hSlsS
+                            sty.freeBox__c7Gyq
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__tRVmM
+                              sty.svg__hi4JL
                             )}
                             role={"img"}
                           />
@@ -2502,14 +2508,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__y1NQa
+                          sty.freeBox__laoTa
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__qd0Fe
+                            sty.text__y2FeW
                           )}
                         >
                           <React.Fragment>
@@ -2530,7 +2536,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__y6Ugc
+                            sty.text___1AeHr
                           )}
                         >
                           {hasVariant(
@@ -2569,23 +2575,20 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.column__rmTwc)}
+                    className={classNames(projectcss.all, sty.column__f7E6E)}
                   >
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___9V6Jy
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__diDyz)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__xlGJ
+                          sty.freeBox__gxqE4
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img___2OpHr)}
+                          className={classNames(sty.img__xnbH1)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={
@@ -2609,13 +2612,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__faEgM
+                            sty.freeBox___9ZOi4
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__dOg50
+                              sty.svg__cQatK
                             )}
                             role={"img"}
                           />
@@ -2624,14 +2627,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__o4Aee
+                          sty.freeBox__c4IjX
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text___8Oq32
+                            sty.text__rEqU5
                           )}
                         >
                           {hasVariant(
@@ -2666,7 +2669,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__wvBHe
+                            sty.text__ahb4
                           )}
                         >
                           {hasVariant(
@@ -2704,21 +2707,19 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__kfbCl)}
-                  >
+                  <div className={classNames(projectcss.all, sty.column__ckgz)}>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ckZrg)}
+                      className={classNames(projectcss.all, sty.freeBox__pveVk)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__rLSj
+                          sty.freeBox__ibRro
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__fstHc)}
+                          className={classNames(sty.img__liN)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -2738,13 +2739,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__eYpwS
+                            sty.freeBox___4APf6
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__svPrQ
+                              sty.svg__twNMj
                             )}
                             role={"img"}
                           />
@@ -2753,14 +2754,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__rgGjY
+                          sty.freeBox__ia1Ff
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__rLppz
+                            sty.text__qvTKa
                           )}
                         >
                           {hasVariant(
@@ -2795,7 +2796,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__e8Tb
+                            sty.text___2GrP
                           )}
                         >
                           <React.Fragment>
@@ -2814,21 +2815,22 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__uycmy)}
-                  >
+                  <div className={classNames(projectcss.all, sty.column__ndgy)}>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__qqxKn)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___5RT5V
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__fbRiC
+                          sty.freeBox__eYrk
                         )}
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__aty1K)}
+                          className={classNames(sty.img__oqCmA)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -2848,13 +2850,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox___69GUd
+                            sty.freeBox___0S13W
                           )}
                         >
                           <Icon8Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__gzPbA
+                              sty.svg__jhcRm
                             )}
                             role={"img"}
                           />
@@ -2863,14 +2865,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__oQQm
+                          sty.freeBox__sd56G
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__qH6Wj
+                            sty.text___0PqKx
                           )}
                         >
                           {hasVariant(
@@ -2905,7 +2907,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__zuGrD
+                            sty.text__drd02
                           )}
                         >
                           <React.Fragment>
@@ -2927,9 +2929,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <div
-                data-plasmic-name={"modernShine"}
-                data-plasmic-override={overrides.modernShine}
-                className={classNames(projectcss.all, sty.modernShine)}
+                data-plasmic-name={"modernShine3"}
+                data-plasmic-override={overrides.modernShine3}
+                className={classNames(projectcss.all, sty.modernShine3)}
               >
                 <CardWithBackground2
                   backgroundimage={{
@@ -2940,7 +2942,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__gaCaQ
+                    sty.cardWithBackground2__v0IqX
                   )}
                   description={
                     "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
@@ -2957,7 +2959,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__x6YLn
+                    sty.cardWithBackground2__dcNt1
                   )}
                   description={
                     "Nos serveurs bas\u00e9s en France tournent en continu pour r\u00e9pondre une dispo 100%"
@@ -2974,7 +2976,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__bmj28
+                    sty.cardWithBackground2__f2R1Q
                   )}
                   description={
                     "Le co\u00fbt est variable \u00e0 la minute d'appel, vous ne payez que ce que vous consommez."
@@ -2991,7 +2993,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__zsTaB
+                    sty.cardWithBackground2__ifaHx
                   )}
                   description={
                     "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
@@ -3008,7 +3010,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__wHy8P
+                    sty.cardWithBackground2__oRiW
                   )}
                   description={
                     "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
@@ -3025,7 +3027,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                   className={classNames(
                     "__wab_instance",
-                    sty.cardWithBackground2__r3GJe
+                    sty.cardWithBackground2__yF72N
                   )}
                   description={
                     "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
@@ -3364,16 +3366,16 @@ const PlasmicDescendants = {
     "titre2",
     "foreground3",
     "raisons",
-    "avantages",
-    "sliderCarousel2",
-    "avntage1",
-    "avntage2",
-    "avntage3",
-    "avntage4",
-    "avntage5",
-    "avntage6",
-    "old",
-    "modernShine",
+    "avantages2",
+    "sliderCarousel3",
+    "avntage7",
+    "avntage8",
+    "avntage9",
+    "avntage10",
+    "avntage11",
+    "avntage12",
+    "old3",
+    "modernShine3",
     "miseenplace",
     "cadre2",
     "callToAction",
@@ -3416,16 +3418,16 @@ const PlasmicDescendants = {
     "titre2",
     "foreground3",
     "raisons",
-    "avantages",
-    "sliderCarousel2",
-    "avntage1",
-    "avntage2",
-    "avntage3",
-    "avntage4",
-    "avntage5",
-    "avntage6",
-    "old",
-    "modernShine",
+    "avantages2",
+    "sliderCarousel3",
+    "avntage7",
+    "avntage8",
+    "avntage9",
+    "avntage10",
+    "avntage11",
+    "avntage12",
+    "old3",
+    "modernShine3",
     "miseenplace",
     "cadre2",
     "callToAction",
@@ -3519,35 +3521,35 @@ const PlasmicDescendants = {
   titre2: ["titre2"],
   foreground3: ["foreground3"],
   raisons: ["raisons"],
-  avantages: [
-    "avantages",
-    "sliderCarousel2",
-    "avntage1",
-    "avntage2",
-    "avntage3",
-    "avntage4",
-    "avntage5",
-    "avntage6",
-    "old",
-    "modernShine"
+  avantages2: [
+    "avantages2",
+    "sliderCarousel3",
+    "avntage7",
+    "avntage8",
+    "avntage9",
+    "avntage10",
+    "avntage11",
+    "avntage12",
+    "old3",
+    "modernShine3"
   ],
-  sliderCarousel2: [
-    "sliderCarousel2",
-    "avntage1",
-    "avntage2",
-    "avntage3",
-    "avntage4",
-    "avntage5",
-    "avntage6"
+  sliderCarousel3: [
+    "sliderCarousel3",
+    "avntage7",
+    "avntage8",
+    "avntage9",
+    "avntage10",
+    "avntage11",
+    "avntage12"
   ],
-  avntage1: ["avntage1"],
-  avntage2: ["avntage2"],
-  avntage3: ["avntage3"],
-  avntage4: ["avntage4"],
-  avntage5: ["avntage5"],
-  avntage6: ["avntage6"],
-  old: ["old"],
-  modernShine: ["modernShine"],
+  avntage7: ["avntage7"],
+  avntage8: ["avntage8"],
+  avntage9: ["avntage9"],
+  avntage10: ["avntage10"],
+  avntage11: ["avntage11"],
+  avntage12: ["avntage12"],
+  old3: ["old3"],
+  modernShine3: ["modernShine3"],
   miseenplace: ["miseenplace", "cadre2"],
   cadre2: ["cadre2"],
   callToAction: ["callToAction"],
@@ -3594,16 +3596,16 @@ type NodeDefaultElementType = {
   titre2: "div";
   foreground3: "div";
   raisons: "section";
-  avantages: "section";
-  sliderCarousel2: typeof SliderWrapper;
-  avntage1: "div";
-  avntage2: "div";
-  avntage3: "div";
-  avntage4: "div";
-  avntage5: "div";
-  avntage6: "div";
-  old: "div";
-  modernShine: "div";
+  avantages2: "section";
+  sliderCarousel3: typeof SliderWrapper;
+  avntage7: "div";
+  avntage8: "div";
+  avntage9: "div";
+  avntage10: "div";
+  avntage11: "div";
+  avntage12: "div";
+  old3: "div";
+  modernShine3: "div";
   miseenplace: "section";
   cadre2: "div";
   callToAction: "section";
@@ -3708,16 +3710,16 @@ export const PlasmicHomepage = Object.assign(
     titre2: makeNodeComponent("titre2"),
     foreground3: makeNodeComponent("foreground3"),
     raisons: makeNodeComponent("raisons"),
-    avantages: makeNodeComponent("avantages"),
-    sliderCarousel2: makeNodeComponent("sliderCarousel2"),
-    avntage1: makeNodeComponent("avntage1"),
-    avntage2: makeNodeComponent("avntage2"),
-    avntage3: makeNodeComponent("avntage3"),
-    avntage4: makeNodeComponent("avntage4"),
-    avntage5: makeNodeComponent("avntage5"),
-    avntage6: makeNodeComponent("avntage6"),
-    old: makeNodeComponent("old"),
-    modernShine: makeNodeComponent("modernShine"),
+    avantages2: makeNodeComponent("avantages2"),
+    sliderCarousel3: makeNodeComponent("sliderCarousel3"),
+    avntage7: makeNodeComponent("avntage7"),
+    avntage8: makeNodeComponent("avntage8"),
+    avntage9: makeNodeComponent("avntage9"),
+    avntage10: makeNodeComponent("avntage10"),
+    avntage11: makeNodeComponent("avntage11"),
+    avntage12: makeNodeComponent("avntage12"),
+    old3: makeNodeComponent("old3"),
+    modernShine3: makeNodeComponent("modernShine3"),
     miseenplace: makeNodeComponent("miseenplace"),
     cadre2: makeNodeComponent("cadre2"),
     callToAction: makeNodeComponent("callToAction"),
