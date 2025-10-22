@@ -335,7 +335,7 @@ function PlasmicFooterSection__RenderFunc(props: {
               sty.link___0L5HV
             )}
             component={Link}
-            href={`/mentions-légales`}
+            href={`/mentions-legales`}
             platform={"nextjs"}
           >
             <div

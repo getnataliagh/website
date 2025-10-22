@@ -2475,7 +2475,7 @@
           "projectId": "2utUyfwAdNYhisb36rBizH",
           "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMentionsLegales.tsx",
           "importSpec": {
-            "modulePath": "../pages/mentions-légales.tsx"
+            "modulePath": "../pages/mentions-legales.tsx"
           },
           "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMentionsLegales.module.css",
           "scheme": "blackbox",
