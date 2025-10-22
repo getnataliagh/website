@@ -2467,6 +2467,20 @@
           "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicLinknavbar.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "sBbCTZFfvtaf",
+          "name": "MentionsLegales",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMentionsLegales.tsx",
+          "importSpec": {
+            "modulePath": "../pages/mentions-légales.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicMentionsLegales.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/mentions-légales"
         }
       ],
       "icons": [

@@ -2949,6 +2949,16 @@
           "assetId": "2utUyfwAdNYhisb36rBizH",
           "type": "projectCss",
           "checksum": "a0437b9967302e1f3d609823a66810e7"
+        },
+        {
+          "type": "renderModule",
+          "assetId": "sBbCTZFfvtaf",
+          "checksum": "cce167daf639246f37db3cb4e57e6dd7"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "sBbCTZFfvtaf",
+          "checksum": "cce167daf639246f37db3cb4e57e6dd7"
         }
       ],
       "codegenVersion": "0.0.2"
