@@ -266,22 +266,17 @@
 .ul__qq1Ec {
   display: flex;
   flex-direction: column;
-  color: #ff990080;
-}
-.li__fWkE6 {
-  color: #ff9900;
+  color: var(--token-ruEH_kPMz8sH);
 }
 .ul__sBhFp {
   display: flex;
   flex-direction: column;
-  color: #ff9900;
+  color: var(--token-ruEH_kPMz8sH);
 }
 .ul__ivSg1 {
   display: flex;
   flex-direction: column;
-}
-.li__aCquo {
-  color: #ff9900;
+  color: var(--token-ruEH_kPMz8sH);
 }
 .ul__mH0S {
   display: flex;
