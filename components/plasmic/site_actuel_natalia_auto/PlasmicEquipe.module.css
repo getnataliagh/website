@@ -53,50 +53,26 @@
   justify-content: flex-start;
   row-gap: 0px;
 }
-.h4 {
+.h3 {
   height: auto;
-  color: var(--token-ruEH_kPMz8sH);
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: normal;
-  text-align: center;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: underline;
-  text-overflow: clip;
+  color: var(--token-_LX8zWYksvaJ);
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h4 {
-    font-size: var(--token-_vZcWegs4AvP);
-    text-transform: none;
-    white-space: pre-wrap;
+  .h3 {
+    font-size: var(--token-LGGSwgaNLz8J);
+    line-height: 25px;
   }
 }
-.text__hXpj {
+.h5 {
   height: auto;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: normal;
   text-align: center;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .text__hXpj {
-    font-size: var(--token-SJxn0KH5ERld);
+  .h5 {
+    font-size: var(--token-h44X3KXzj2JM);
   }
 }
-.text__qvvIl {
+.text {
   height: auto;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -110,9 +86,4 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
-}
-@media (min-width: 0px) and (max-width: 930px) {
-  .text__qvvIl {
-    font-size: var(--token-SJxn0KH5ERld);
-  }
 }

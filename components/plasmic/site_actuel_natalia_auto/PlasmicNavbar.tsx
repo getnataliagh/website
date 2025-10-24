@@ -210,21 +210,6 @@ function PlasmicNavbar__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
-              sty.link__s3UmX
-            )}
-            component={Link}
-            href={"#produit"}
-            platform={"nextjs"}
-            target={undefined}
-          >
-            <Linknavbar
-              className={classNames("__wab_instance", sty.linknavbar__afPhi)}
-            />
-          </PlasmicLink__>
-          <PlasmicLink__
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
               sty.link__hcoir
             )}
             component={Link}
@@ -235,6 +220,21 @@ function PlasmicNavbar__RenderFunc(props: {
             <Linknavbar
               className={classNames("__wab_instance", sty.linknavbar__niBeR)}
               nom={"Solutions"}
+            />
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__s3UmX
+            )}
+            component={Link}
+            href={"#raisons"}
+            platform={"nextjs"}
+            target={undefined}
+          >
+            <Linknavbar
+              className={classNames("__wab_instance", sty.linknavbar__afPhi)}
             />
           </PlasmicLink__>
           <PlasmicLink__
@@ -307,92 +307,57 @@ function PlasmicNavbar__RenderFunc(props: {
           />
         </PlasmicLink__>
       </div>
-      {(
-        hasVariant(globalVariants, "mobile", "mobileOnly")
-          ? (() => {
-              try {
-                return $state.isOpen;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
-              }
-            })()
-          : true
-      ) ? (
-        <MenuBurger
-          data-plasmic-name={"menuBurger"}
-          data-plasmic-override={overrides.menuBurger}
-          className={classNames("__wab_instance", sty.menuBurger)}
-          isOpen={$state.isOpen}
+      <MenuBurger
+        data-plasmic-name={"menuBurger"}
+        data-plasmic-override={overrides.menuBurger}
+        className={classNames("__wab_instance", sty.menuBurger)}
+        isOpen={$state.isOpen}
+      />
+
+      <div
+        data-plasmic-name={"actionBurger"}
+        data-plasmic-override={overrides.actionBurger}
+        className={classNames(projectcss.all, sty.actionBurger)}
+      >
+        <HamburgerIcon
+          data-plasmic-name={"svg"}
+          data-plasmic-override={overrides.svg}
+          className={classNames(projectcss.all, sty.svg)}
+          onClick={async event => {
+            const $steps = {};
+
+            $steps["updateIsOpen"] = true
+              ? (() => {
+                  const actionArgs = {
+                    variable: {
+                      objRoot: $state,
+                      variablePath: ["isOpen"]
+                    },
+                    operation: 4
+                  };
+                  return (({ variable, value, startIndex, deleteCount }) => {
+                    if (!variable) {
+                      return;
+                    }
+                    const { objRoot, variablePath } = variable;
+
+                    const oldValue = $stateGet(objRoot, variablePath);
+                    $stateSet(objRoot, variablePath, !oldValue);
+                    return !oldValue;
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateIsOpen"] != null &&
+              typeof $steps["updateIsOpen"] === "object" &&
+              typeof $steps["updateIsOpen"].then === "function"
+            ) {
+              $steps["updateIsOpen"] = await $steps["updateIsOpen"];
+            }
+          }}
+          role={"img"}
         />
-      ) : null}
-      {(
-        hasVariant(globalVariants, "mobile", "mobileOnly")
-          ? (() => {
-              try {
-                return !$state.isOpen;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
-              }
-            })()
-          : true
-      ) ? (
-        <div
-          data-plasmic-name={"actionBurger"}
-          data-plasmic-override={overrides.actionBurger}
-          className={classNames(projectcss.all, sty.actionBurger)}
-        >
-          <HamburgerIcon
-            data-plasmic-name={"svg"}
-            data-plasmic-override={overrides.svg}
-            className={classNames(projectcss.all, sty.svg)}
-            onClick={async event => {
-              const $steps = {};
-
-              $steps["updateIsOpen"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["isOpen"]
-                      },
-                      operation: 4
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
-
-                      const oldValue = $stateGet(objRoot, variablePath);
-                      $stateSet(objRoot, variablePath, !oldValue);
-                      return !oldValue;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateIsOpen"] != null &&
-                typeof $steps["updateIsOpen"] === "object" &&
-                typeof $steps["updateIsOpen"].then === "function"
-              ) {
-                $steps["updateIsOpen"] = await $steps["updateIsOpen"];
-              }
-            }}
-            role={"img"}
-          />
-        </div>
-      ) : null}
+      </div>
     </div>
   ) as React.ReactElement | null;
 }

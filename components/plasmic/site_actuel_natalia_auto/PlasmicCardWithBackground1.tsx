@@ -145,6 +145,8 @@ function PlasmicCardWithBackground1__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -300,19 +302,23 @@ function PlasmicCardWithBackground1__RenderFunc(props: {
             })()}
           </React.Fragment>
         </h5>
-        {(() => {
-          try {
-            return $state.isOpen;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return true;
-            }
-            throw e;
-          }
-        })() ? (
+        {(
+          hasVariant(globalVariants, "mobile", "mobileOnly")
+            ? true
+            : (() => {
+                try {
+                  return $state.isOpen;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+        ) ? (
           <h6
             data-plasmic-name={"h6"}
             data-plasmic-override={overrides.h6}

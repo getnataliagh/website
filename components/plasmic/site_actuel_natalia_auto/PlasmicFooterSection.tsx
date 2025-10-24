@@ -211,7 +211,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             <React.Fragment>
               <span
                 className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#FFB000" }}
+                style={{ color: "var(--token-D5datrW5yy5e)" }}
               >
                 {"Menu"}
               </span>
@@ -286,7 +286,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             <React.Fragment>
               <span
                 className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#FFB000" }}
+                style={{ color: "#252729" }}
               >
                 {"Entreprise"}
               </span>

@@ -90,6 +90,7 @@ export const PlasmicLogo__ArgProps = new Array<ArgPropType>();
 export type PlasmicLogo__OverridesType = {
   root?: Flex__<"a"> & Partial<LinkProps>;
   img?: Flex__<typeof PlasmicImg__>;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultLogoProps {
@@ -194,11 +195,15 @@ function PlasmicLogo__RenderFunc(props: {
           [sty.imgsmallLogo]: hasVariant($state, "smallLogo", "smallLogo")
         })}
         displayHeight={
-          hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "100%"
+          hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "40px"
         }
         displayMaxHeight={"none"}
         displayMaxWidth={
-          hasVariant($state, "smallLogo", "smallLogo") ? "50px" : "156px"
+          hasVariant($state, "smallLogo", "smallLogo")
+            ? "50px"
+            : hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? "30px"
+              : "40px"
         }
         displayMinHeight={"0"}
         displayMinWidth={"0"}
@@ -215,26 +220,42 @@ function PlasmicLogo__RenderFunc(props: {
               }
             : hasVariant(globalVariants, "mobile", "mobileOnly")
               ? {
-                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
-                  fullWidth: 532,
-                  fullHeight: 108,
+                  src: "/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg",
+                  fullWidth: 1024,
+                  fullHeight: 1024,
                   aspectRatio: undefined
                 }
               : {
-                  src: "/plasmic/site_actuel_natalia_auto/images/captureDEcran20250820A161610RemovebgPreviewPng.png",
-                  fullWidth: 532,
-                  fullHeight: 108,
+                  src: "/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg",
+                  fullWidth: 1024,
+                  fullHeight: 1024,
                   aspectRatio: undefined
                 }
         }
       />
+
+      <div
+        data-plasmic-name={"text"}
+        data-plasmic-override={overrides.text}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+      >
+        <React.Fragment>
+          <span
+            className={"plasmic_default__all plasmic_default__span"}
+            style={{ color: "#252729" }}
+          >
+            {"NATALIA"}
+          </span>
+        </React.Fragment>
+      </div>
     </PlasmicLink__>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img"],
-  img: ["img"]
+  root: ["root", "img", "text"],
+  img: ["img"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -242,6 +263,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "a";
   img: typeof PlasmicImg__;
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -307,6 +329,7 @@ export const PlasmicLogo = Object.assign(
   {
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicLogo
     internalVariantProps: PlasmicLogo__VariantProps,

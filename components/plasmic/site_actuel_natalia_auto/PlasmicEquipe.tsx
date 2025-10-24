@@ -92,7 +92,9 @@ export const PlasmicEquipe__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicEquipe__OverridesType = {
   root?: Flex__<"div">;
-  h4?: Flex__<"h4">;
+  h3?: Flex__<"h3">;
+  h5?: Flex__<"h5">;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultEquipeProps {
@@ -190,14 +192,14 @@ function PlasmicEquipe__RenderFunc(props: {
         })}
       </div>
       <div className={classNames(projectcss.all, sty.freeBox__bDeMi)}>
-        <h4
-          data-plasmic-name={"h4"}
-          data-plasmic-override={overrides.h4}
+        <h3
+          data-plasmic-name={"h3"}
+          data-plasmic-override={overrides.h3}
           className={classNames(
             projectcss.all,
-            projectcss.h4,
+            projectcss.h3,
             projectcss.__wab_text,
-            sty.h4
+            sty.h3
           )}
         >
           <React.Fragment>
@@ -215,12 +217,15 @@ function PlasmicEquipe__RenderFunc(props: {
               }
             })()}
           </React.Fragment>
-        </h4>
-        <div
+        </h3>
+        <h5
+          data-plasmic-name={"h5"}
+          data-plasmic-override={overrides.h5}
           className={classNames(
             projectcss.all,
+            projectcss.h5,
             projectcss.__wab_text,
-            sty.text__hXpj
+            sty.h5
           )}
         >
           <React.Fragment>
@@ -238,12 +243,14 @@ function PlasmicEquipe__RenderFunc(props: {
               }
             })()}
           </React.Fragment>
-        </div>
+        </h5>
         <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text__qvvIl
+            sty.text
           )}
         >
           <React.Fragment>
@@ -268,15 +275,19 @@ function PlasmicEquipe__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h4"],
-  h4: ["h4"]
+  root: ["root", "h3", "h5", "text"],
+  h3: ["h3"],
+  h5: ["h5"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h4: "h4";
+  h3: "h3";
+  h5: "h5";
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -341,7 +352,9 @@ export const PlasmicEquipe = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h4: makeNodeComponent("h4"),
+    h3: makeNodeComponent("h3"),
+    h5: makeNodeComponent("h5"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicEquipe
     internalVariantProps: PlasmicEquipe__VariantProps,

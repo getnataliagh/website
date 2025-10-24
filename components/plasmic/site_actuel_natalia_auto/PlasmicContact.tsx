@@ -88,7 +88,6 @@ export type PlasmicContact__OverridesType = {
   wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
   section?: Flex__<"section">;
-  h2?: Flex__<"h2">;
   iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
@@ -231,20 +230,35 @@ function PlasmicContact__RenderFunc(props: {
               className={classNames(projectcss.all, sty.section)}
             >
               <div className={classNames(projectcss.all, sty.freeBox__jbRtt)}>
-                <h2
-                  data-plasmic-name={"h2"}
-                  data-plasmic-override={overrides.h2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2
-                  )}
-                >
-                  {
-                    "Vous avez des questions ? \nNous sommes \u00e0 votre disposition."
-                  }
-                </h2>
+                <div className={classNames(projectcss.all, sty.freeBox__kigNf)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__jeuxs
+                    )}
+                  >
+                    {"Vous avez des questions ? "}
+                  </h2>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__okZng
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "transparent" }}
+                      >
+                        {"Nous sommes \u00e0 votre disposition."}
+                      </span>
+                    </React.Fragment>
+                  </h2>
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__yiAqC)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__h9Pbd)}
@@ -262,7 +276,7 @@ function PlasmicContact__RenderFunc(props: {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "#1E3A8A", fontWeight: 700 }}
+                          style={{ fontWeight: 700 }}
                         >
                           {
                             "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
@@ -378,7 +392,6 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "section",
-    "h2",
     "iframe",
     "pricingSection",
     "columns",
@@ -389,7 +402,6 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "section",
-    "h2",
     "iframe",
     "pricingSection",
     "columns",
@@ -397,8 +409,7 @@ const PlasmicDescendants = {
     "footerSection"
   ],
   navbar: ["navbar"],
-  section: ["section", "h2", "iframe"],
-  h2: ["h2"],
+  section: ["section", "iframe"],
   iframe: ["iframe"],
   pricingSection: ["pricingSection", "columns", "text"],
   columns: ["columns", "text"],
@@ -413,7 +424,6 @@ type NodeDefaultElementType = {
   wrapper: "div";
   navbar: typeof Navbar;
   section: "section";
-  h2: "h2";
   iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
@@ -486,7 +496,6 @@ export const PlasmicContact = Object.assign(
     wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
     section: makeNodeComponent("section"),
-    h2: makeNodeComponent("h2"),
     iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),

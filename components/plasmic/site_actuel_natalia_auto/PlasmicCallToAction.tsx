@@ -134,8 +134,6 @@ function PlasmicCallToAction__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
-
   const styleTokensClassNames = _useStyleTokens();
 
   return (
@@ -168,27 +166,16 @@ function PlasmicCallToAction__RenderFunc(props: {
             sty.h2
           )}
         >
-          {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#1E3A8A", fontWeight: 700 }}
-              >
-                {"On vous accompagne"}
-              </span>
-            </React.Fragment>
-          ) : (
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#1E3A8A", fontWeight: 700 }}
-              >
-                {
-                  "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous"
-                }
-              </span>
-            </React.Fragment>
-          )}
+          <React.Fragment>
+            <span
+              className={"plasmic_default__all plasmic_default__span"}
+              style={{ color: "#1E3A8A", fontWeight: 700 }}
+            >
+              {
+                "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous"
+              }
+            </span>
+          </React.Fragment>
         </h2>
         <PlasmicLink__
           data-plasmic-name={"link"}

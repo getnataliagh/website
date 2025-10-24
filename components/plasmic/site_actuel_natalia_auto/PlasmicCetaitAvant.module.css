@@ -3,7 +3,11 @@
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  background: var(--token-_LX8zWYksvaJ);
+  background: linear-gradient(
+    125deg,
+    var(--token-_LX8zWYksvaJ) 0%,
+    var(--token-ruEH_kPMz8sH) 100%
+  );
   grid-row-gap: 50px;
   position: relative;
   grid-column-start: 1 !important;

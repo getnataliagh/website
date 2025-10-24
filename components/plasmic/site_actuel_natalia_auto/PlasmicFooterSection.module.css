@@ -42,8 +42,8 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .logo {
-    align-items: stretch;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -71,6 +71,7 @@
     left: auto;
     top: auto;
     right: auto;
+    width: auto;
   }
 }
 .h6 {
@@ -134,6 +135,7 @@
   .h4__f0Bzy {
     text-align: center;
     font-size: var(--token-h44X3KXzj2JM);
+    line-height: 27px;
   }
 }
 .link__tGqw {
@@ -155,7 +157,7 @@
 }
 .text___4Uvn4 {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .text___4Uvn4 {
@@ -185,7 +187,7 @@
 }
 .text__bQcoL {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
 }
 .link__j9EzO {
   align-self: flex-start;
@@ -200,7 +202,7 @@
 }
 .text__sFjyl {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
   align-self: auto;
 }
 .entreprise {
@@ -230,6 +232,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-align: left;
+  margin-bottom: 0px;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
@@ -237,6 +240,7 @@
     align-self: center;
     text-align: center;
     font-size: var(--token-h44X3KXzj2JM);
+    line-height: 27px;
   }
 }
 .link__j2VOg {
@@ -252,7 +256,7 @@
 }
 .text__ubTab {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
 }
 .link__lAci {
   align-self: flex-start;
@@ -267,7 +271,7 @@
 }
 .text__tjzjS {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
 }
 .link___0L5HV {
   align-self: flex-start;
@@ -282,7 +286,7 @@
 }
 .text__uWxMm {
   white-space: pre;
-  color: #1e3a8a;
+  color: var(--token-jsoxkY4uzex7);
 }
 .freeBox__ygOnJ {
   display: flex;

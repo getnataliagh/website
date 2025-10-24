@@ -174,33 +174,13 @@ function PlasmicMenuBurger__RenderFunc(props: {
         }}
       >
         <PlasmicLink__
-          className={classNames(projectcss.all, projectcss.a, sty.link__xgCMb)}
-          component={Link}
-          href={"#mission"}
-          platform={"nextjs"}
-          target={undefined}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__dnImd
-            )}
-          >
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-              >
-                {"Produit"}
-              </span>
-            </React.Fragment>
-          </div>
-        </PlasmicLink__>
-        <PlasmicLink__
           className={classNames(projectcss.all, projectcss.a, sty.link__ekyI8)}
           component={Link}
-          href={"/#secteurdactivit\u00e9"}
+          href={
+            hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? "/#solution"
+              : "/#secteurdactivit\u00e9"
+          }
           platform={"nextjs"}
           target={undefined}
         >
@@ -219,6 +199,34 @@ function PlasmicMenuBurger__RenderFunc(props: {
                 style={{ color: "var(--token-okZqvxZ_nx_g)" }}
               >
                 {"Solutions"}
+              </span>
+            </React.Fragment>
+          </div>
+        </PlasmicLink__>
+        <PlasmicLink__
+          className={classNames(projectcss.all, projectcss.a, sty.link__xgCMb)}
+          component={Link}
+          href={
+            hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? "#raisons"
+              : "#mission"
+          }
+          platform={"nextjs"}
+          target={undefined}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__dnImd
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+              >
+                {"Produit"}
               </span>
             </React.Fragment>
           </div>

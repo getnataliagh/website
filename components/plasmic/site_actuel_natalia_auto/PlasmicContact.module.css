@@ -76,7 +76,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-  padding: 50px 0;
+  padding: 100px 0px;
 }
 .section > * {
   grid-column: 4;
@@ -99,7 +99,18 @@
   grid-column-end: -3 !important;
   padding: 0px;
 }
-.h2 {
+.freeBox__kigNf {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 0px;
+}
+.h2__jeuxs {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -108,7 +119,29 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h2 {
+  .h2__jeuxs {
+    font-size: var(--token-zGJggj0WBmcV);
+    line-height: 30px;
+  }
+}
+.h2__okZng {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  line-height: 50px;
+  background: linear-gradient(
+      90deg,
+      var(--token-_LX8zWYksvaJ) 0%,
+      var(--token-ruEH_kPMz8sH) 100%
+    )
+    0% 0% / 100% 100% repeat padding-box /* clip: text **/;
+  min-width: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .h2__okZng {
     font-size: var(--token-zGJggj0WBmcV);
     line-height: 30px;
   }

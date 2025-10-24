@@ -29,19 +29,21 @@
   }
 }
 .root:hover .slotTargetLabel {
-  color: var(--token-RiqiIFUOcJrT);
+  color: #eca200;
 }
 .root:active .slotTargetLabel {
-  color: var(--token-gwII0HPdNfRO);
+  color: #d79501;
 }
 .text__ppH4N {
   white-space: pre;
   text-align: left;
   font-weight: 400;
   font-size: var(--token-y8m-emOk2tJG);
+  color: var(--token-D5datrW5yy5e);
 }
 .svg__wklCq {
   object-fit: cover;
   max-width: 100%;
+  color: var(--token-D5datrW5yy5e);
   height: 1em;
 }

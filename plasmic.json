@@ -2429,20 +2429,6 @@
           "path": "/centre-d-appel"
         },
         {
-          "id": "eJ9zeqD04EDi",
-          "name": "Helpdesk",
-          "type": "managed",
-          "projectId": "2utUyfwAdNYhisb36rBizH",
-          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHelpdesk.tsx",
-          "importSpec": {
-            "modulePath": "../pages/helpdesk.tsx"
-          },
-          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHelpdesk.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/helpdesk"
-        },
-        {
           "id": "BGruYdkhsXAs",
           "name": "Solution",
           "type": "managed",
@@ -2481,6 +2467,33 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/mentions-légales"
+        },
+        {
+          "id": "eJ9zeqD04EDi",
+          "name": "Hotline",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotline.tsx",
+          "importSpec": {
+            "modulePath": "../pages/hotline.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicHotline.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/hotline"
+        },
+        {
+          "id": "EqnbUA59xCW_",
+          "name": "Advent",
+          "type": "managed",
+          "projectId": "2utUyfwAdNYhisb36rBizH",
+          "renderModuleFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAdvent.tsx",
+          "importSpec": {
+            "modulePath": "Advent.tsx"
+          },
+          "cssFilePath": "plasmic/site_actuel_natalia_auto/PlasmicAdvent.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2868,6 +2881,36 @@
           "id": "zsw096bbSK1c",
           "name": "MessageSquareListSvgrepoComSvgIcon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__MessageSquareListSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "pHxaEyYg8EUP",
+          "name": "FlashSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__FlashSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "YadiBhgmW5U6",
+          "name": "StarSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__StarSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "560pCDFRMbfl",
+          "name": "ExchangePersonelSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ExchangePersonelSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "NijWtHeoZhbw",
+          "name": "HourglassEndSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__HourglassEndSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "QnRQhDpwpqwS",
+          "name": "ShapesSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__ShapesSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "6bWOBRx7cC6W",
+          "name": "TurnOffSvgrepoComSvg2Icon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TurnOffSvgrepoComSvg2.tsx"
         }
       ],
       "images": [
@@ -3805,6 +3848,41 @@
           "id": "S-dqcoECKxBP",
           "name": "Capture d’écran 2025-10-21 à 16.18.43.png",
           "filePath": "../public/plasmic/site_actuel_natalia_auto/images/captureDecran20251021A161843Png.png"
+        },
+        {
+          "id": "aXaeD-qKY-W0",
+          "name": "logo natalia.svg",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg"
+        },
+        {
+          "id": "dFCklTHfGVmd",
+          "name": "automobile.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/automobilePng.png"
+        },
+        {
+          "id": "TA979sUNT2nz",
+          "name": "hotline.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/hotlinePng.png"
+        },
+        {
+          "id": "nPOjejJtYzct",
+          "name": "centre d'appels.png",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/centreDappelsPng.png"
+        },
+        {
+          "id": "Tilrsd3LrRNb",
+          "name": "hotline.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/hotlinePng2.png"
+        },
+        {
+          "id": "Hh-9nsX9PBJo",
+          "name": "centre d'appels.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/centreDappelsPng2.png"
+        },
+        {
+          "id": "FaUMKtUhIuHQ",
+          "name": "automobile.png 2",
+          "filePath": "../public/plasmic/site_actuel_natalia_auto/images/automobilePng2.png"
         }
       ],
       "indirect": false,

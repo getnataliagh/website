@@ -88,6 +88,7 @@ export type PlasmicAPropos__OverridesType = {
   wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
   histoire?: Flex__<"section">;
+  h1?: Flex__<"h1">;
   equipe?: Flex__<"section">;
   titre?: Flex__<"div">;
   chronologie?: Flex__<"section">;
@@ -231,23 +232,25 @@ function PlasmicAPropos__RenderFunc(props: {
               className={classNames(projectcss.all, sty.histoire)}
             >
               <div className={classNames(projectcss.all, sty.freeBox__ia7Dz)}>
-                <h2
+                <h1
+                  data-plasmic-name={"h1"}
+                  data-plasmic-override={overrides.h1}
                   className={classNames(
                     projectcss.all,
-                    projectcss.h2,
+                    projectcss.h1,
                     projectcss.__wab_text,
-                    sty.h2__hWlcM
+                    sty.h1
                   )}
                 >
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      style={{ color: "transparent" }}
                     >
                       {"Notre histoire"}
                     </span>
                   </React.Fragment>
-                </h2>
+                </h1>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -293,7 +296,7 @@ function PlasmicAPropos__RenderFunc(props: {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                          style={{ color: "transparent" }}
                         >
                           {"D\u00e9couvrez notre \u00e9quipe"}
                         </span>
@@ -450,10 +453,6 @@ function PlasmicAPropos__RenderFunc(props: {
                         />
                       </PlasmicLink__>
                     </Equipe>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__y6O1T)}
-                  >
                     <Equipe
                       className={classNames(
                         "__wab_instance",
@@ -598,16 +597,13 @@ function PlasmicAPropos__RenderFunc(props: {
                     projectcss.all,
                     projectcss.h2,
                     projectcss.__wab_text,
-                    sty.h2___5GD4E
+                    sty.h2__tDm7N
                   )}
                 >
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{
-                        color: "var(--token-okZqvxZ_nx_g)",
-                        fontWeight: 700
-                      }}
+                      style={{ color: "transparent" }}
                     >
                       {"Chronologie"}
                     </span>
@@ -1839,6 +1835,7 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "histoire",
+    "h1",
     "equipe",
     "titre",
     "chronologie",
@@ -1846,9 +1843,18 @@ const PlasmicDescendants = {
     "columns",
     "footerSection"
   ],
-  wrapper: ["wrapper", "navbar", "histoire", "equipe", "titre", "chronologie"],
+  wrapper: [
+    "wrapper",
+    "navbar",
+    "histoire",
+    "h1",
+    "equipe",
+    "titre",
+    "chronologie"
+  ],
   navbar: ["navbar"],
-  histoire: ["histoire"],
+  histoire: ["histoire", "h1"],
+  h1: ["h1"],
   equipe: ["equipe", "titre"],
   titre: ["titre"],
   chronologie: ["chronologie"],
@@ -1864,6 +1870,7 @@ type NodeDefaultElementType = {
   wrapper: "div";
   navbar: typeof Navbar;
   histoire: "section";
+  h1: "h1";
   equipe: "section";
   titre: "div";
   chronologie: "section";
@@ -1937,6 +1944,7 @@ export const PlasmicAPropos = Object.assign(
     wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
     histoire: makeNodeComponent("histoire"),
+    h1: makeNodeComponent("h1"),
     equipe: makeNodeComponent("equipe"),
     titre: makeNodeComponent("titre"),
     chronologie: makeNodeComponent("chronologie"),

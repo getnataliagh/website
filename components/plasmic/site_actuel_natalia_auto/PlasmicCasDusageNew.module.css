@@ -28,10 +28,10 @@
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    row-gap: 3px;
+    row-gap: 10px;
     column-gap: 0px;
     min-height: 0;
-    padding: 5px;
+    padding: 15px;
   }
 }
 .root:hover {
@@ -46,13 +46,13 @@
 }
 .freeBox__vkp6J {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   height: auto;
-  column-gap: 20px;
+  row-gap: 20px;
   min-width: 0;
   padding: 0px;
 }
@@ -60,7 +60,9 @@
   .freeBox__vkp6J {
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
     column-gap: 0px;
   }
 }
@@ -71,7 +73,14 @@
   height: auto;
   justify-content: center;
   align-items: center;
-  background: var(--token-4KRNC7sgByoy);
+  background:
+    linear-gradient(var(--token-4KRNC7sgByoy), var(--token-4KRNC7sgByoy)),
+    linear-gradient(
+        125deg,
+        var(--token-_LX8zWYksvaJ) 0%,
+        var(--token-ruEH_kPMz8sH) 100%
+      )
+      0% 0% / 100% 100% repeat;
   column-gap: 20px;
   border-radius: 15px;
   padding: 12px;
@@ -100,7 +109,7 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h4 {
-    font-size: var(--token-dpUme9f3kxzo);
+    font-size: var(--token-h44X3KXzj2JM);
     text-align: center;
     line-height: 20px;
   }
@@ -119,8 +128,8 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h6 {
-    font-size: var(--token-SJxn0KH5ERld);
+    font-size: var(--token-dpUme9f3kxzo);
     white-space: pre-wrap;
-    text-align: center;
+    text-align: left;
   }
 }

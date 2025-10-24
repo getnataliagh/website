@@ -28,20 +28,20 @@
     padding: 15px;
   }
 }
-.link__xgCMb {
-  display: flex;
-  font-size: 1rem;
-}
-.text__dnImd {
-  white-space: pre;
-  color: var(--token-_LX8zWYksvaJ);
-  font-size: 20px;
-}
 .link__ekyI8 {
   display: flex;
   font-size: 1rem;
 }
 .solutions4 {
+  white-space: pre;
+  color: var(--token-_LX8zWYksvaJ);
+  font-size: 20px;
+}
+.link__xgCMb {
+  display: flex;
+  font-size: 1rem;
+}
+.text__dnImd {
   white-space: pre;
   color: var(--token-_LX8zWYksvaJ);
   font-size: 20px;

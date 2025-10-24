@@ -17,6 +17,11 @@
   -webkit-transition-duration: 200ms;
   padding: 0px;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .root {
+    height: 250px;
+  }
+}
 .root:hover {
   transform: scaleX(1.05) scaleY(1.05) scaleZ(1.05);
   transform-style: preserve-3d;
@@ -87,4 +92,9 @@
   max-width: 100%;
   color: var(--token-o5QzyuxQjxLV);
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .h6 {
+    display: block;
+  }
 }

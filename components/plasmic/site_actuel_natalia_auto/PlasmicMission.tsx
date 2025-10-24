@@ -68,7 +68,6 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: 2utUyfwAdNYhis
 import sty from "./PlasmicMission.module.css"; // plasmic-import: OIlbmlb8nUUH/css
 
 import DataIntegrationHubSvgrepoComSvgIcon from "./icons/PlasmicIcon__DataIntegrationHubSvgrepoComSvg"; // plasmic-import: I1aJqjgaIdMH/icon
-import ArrowNextRightIconSvgIcon from "./icons/PlasmicIcon__ArrowNextRightIconSvg"; // plasmic-import: bZ_dNBdE3NvB/icon
 import ArrowDownLeftIconSvgIcon from "./icons/PlasmicIcon__ArrowDownLeftIconSvg"; // plasmic-import: PgNScEcHy5SF/icon
 
 createPlasmicElementProxy;
@@ -96,6 +95,7 @@ export type PlasmicMission__OverridesType = {
   root?: Flex__<"div">;
   freeBox?: Flex__<"div">;
   h5?: Flex__<"h5">;
+  svg?: Flex__<"svg">;
   h6?: Flex__<"h6">;
 };
 
@@ -286,24 +286,6 @@ function PlasmicMission__RenderFunc(props: {
         </h5>
         {(() => {
           try {
-            return !$state.isOpen;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return true;
-            }
-            throw e;
-          }
-        })() ? (
-          <ArrowNextRightIconSvgIcon
-            className={classNames(projectcss.all, sty.svg__sbHzh)}
-            role={"img"}
-          />
-        ) : null}
-        {(() => {
-          try {
             return $state.isOpen;
           } catch (e) {
             if (
@@ -316,59 +298,48 @@ function PlasmicMission__RenderFunc(props: {
           }
         })() ? (
           <ArrowDownLeftIconSvgIcon
-            className={classNames(projectcss.all, sty.svg__kLpIw)}
+            data-plasmic-name={"svg"}
+            data-plasmic-override={overrides.svg}
+            className={classNames(projectcss.all, sty.svg)}
             role={"img"}
           />
         ) : null}
       </div>
-      {(() => {
-        try {
-          return $state.isOpen;
-        } catch (e) {
-          if (
-            e instanceof TypeError ||
-            e?.plasmicType === "PlasmicUndefinedDataError"
-          ) {
-            return true;
-          }
-          throw e;
-        }
-      })() ? (
-        <h6
-          data-plasmic-name={"h6"}
-          data-plasmic-override={overrides.h6}
-          className={classNames(
-            projectcss.all,
-            projectcss.h6,
-            projectcss.__wab_text,
-            sty.h6
-          )}
-        >
-          <React.Fragment>
-            {(() => {
-              try {
-                return $props.descr;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return "Natalia se connecte \u00e0 plus de 500 applications et outils m\u00e9tiers";
-                }
-                throw e;
+      <h6
+        data-plasmic-name={"h6"}
+        data-plasmic-override={overrides.h6}
+        className={classNames(
+          projectcss.all,
+          projectcss.h6,
+          projectcss.__wab_text,
+          sty.h6
+        )}
+      >
+        <React.Fragment>
+          {(() => {
+            try {
+              return $props.descr;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return "Natalia se connecte \u00e0 plus de 500 applications et outils m\u00e9tiers";
               }
-            })()}
-          </React.Fragment>
-        </h6>
-      ) : null}
+              throw e;
+            }
+          })()}
+        </React.Fragment>
+      </h6>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "h5", "h6"],
-  freeBox: ["freeBox", "h5"],
+  root: ["root", "freeBox", "h5", "svg", "h6"],
+  freeBox: ["freeBox", "h5", "svg"],
   h5: ["h5"],
+  svg: ["svg"],
   h6: ["h6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -378,6 +349,7 @@ type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
   h5: "h5";
+  svg: "svg";
   h6: "h6";
 };
 
@@ -445,6 +417,7 @@ export const PlasmicMission = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     h5: makeNodeComponent("h5"),
+    svg: makeNodeComponent("svg"),
     h6: makeNodeComponent("h6"),
 
     // Metadata about props expected for PlasmicMission

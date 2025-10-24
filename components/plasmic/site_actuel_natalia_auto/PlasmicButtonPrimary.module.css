@@ -1,6 +1,10 @@
 .root:global(.__wab_instance) {
   position: relative;
-  background: #ffb000;
+  background: linear-gradient(
+    90deg,
+    var(--token-_LX8zWYksvaJ) 0%,
+    var(--token-ruEH_kPMz8sH) 100%
+  );
   display: flex;
   cursor: pointer;
   box-sizing: border-box;
@@ -9,16 +13,20 @@
   font-size: var(--token-YRLpiKJWMvDT);
   line-height: var(--token-aFhewT50aNqv);
   outline-style: none;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 200ms;
   border-radius: var(--token-B2yHbkVn4nSC);
   border-width: 0px;
 }
 .root[data-hovered]:global(.__wab_instance) {
-  background:
-    linear-gradient(var(--token-RiqiIFUOcJrT), var(--token-RiqiIFUOcJrT)),
-    #ffb000;
+  background: var(--token-ruEH_kPMz8sH);
 }
 .root[data-pressed]:global(.__wab_instance) {
-  background: var(--token-gwII0HPdNfRO);
+  background: var(--token-_LX8zWYksvaJ);
 }
 .softBackground {
   display: block;
@@ -89,6 +97,7 @@
 .text__jdghX {
   white-space: pre;
   color: #eeeeee;
+  font-size: 20px;
 }
 .freeBox__ovre {
   flex-direction: column;

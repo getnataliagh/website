@@ -3041,16 +3041,6 @@
       }
     },
     {
-      "name": "color/background-rose",
-      "type": "color",
-      "value": "#FFE4E6",
-      "category": "color",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "tHc0LLxpdT2U"
-      }
-    },
-    {
       "name": "color/background2",
       "type": "color",
       "value": "#F2F2F7",
@@ -3068,16 +3058,6 @@
       "meta": {
         "projectId": "mwhScQxahW1in9QQ9WEhLw",
         "id": "Ul9vuJeMYcWv"
-      }
-    },
-    {
-      "name": "color/police",
-      "type": "color",
-      "value": "#252729",
-      "category": "color",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "O5FVPUzEQMyt"
       }
     },
     {
@@ -3123,7 +3103,7 @@
     {
       "name": "color/primary",
       "type": "color",
-      "value": "#1E3A8A",
+      "value": "#5C39EE",
       "category": "color",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
@@ -3133,7 +3113,7 @@
     {
       "name": "color/secondary",
       "type": "color",
-      "value": "#FFB000",
+      "value": "#B041F0",
       "category": "color",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
@@ -3141,33 +3121,13 @@
       }
     },
     {
-      "name": "color/secondary30%",
+      "name": "color/secondary20%",
       "type": "color",
-      "value": "#FFB0004D",
+      "value": "#5C39EE33",
       "category": "color",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
         "id": "4KRNC7sgByoy"
-      }
-    },
-    {
-      "name": "color/secondaryhovered",
-      "type": "color",
-      "value": "#ECA200",
-      "category": "color",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "RiqiIFUOcJrT"
-      }
-    },
-    {
-      "name": "color/secondarypressed",
-      "type": "color",
-      "value": "#D79501",
-      "category": "color",
-      "meta": {
-        "projectId": "2utUyfwAdNYhisb36rBizH",
-        "id": "gwII0HPdNfRO"
       }
     },
     {
@@ -3243,7 +3203,7 @@
     {
       "name": "h6mobile",
       "type": "fontsize",
-      "value": "12px",
+      "value": "14px",
       "category": "fontsize",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
@@ -3293,7 +3253,7 @@
     {
       "name": "subtxtmobile",
       "type": "fontsize",
-      "value": "10px",
+      "value": "12px",
       "category": "fontsize",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
@@ -3303,7 +3263,7 @@
     {
       "name": "txtmobile",
       "type": "fontsize",
-      "value": "12px",
+      "value": "16px",
       "category": "fontsize",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",
