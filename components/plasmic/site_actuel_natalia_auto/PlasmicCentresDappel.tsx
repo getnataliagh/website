@@ -282,16 +282,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         sty.h1
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"Natalia r\u00e9pond, "}
-                        </span>
-                      </React.Fragment>
+                      {"Natalia r\u00e9pond, "}
                     </h1>
                     <h2
                       className={classNames(
@@ -320,16 +311,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         sty.h2__zibom
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"vos clients 24/7"}
-                        </span>
-                      </React.Fragment>
+                      {"vos clients 24/7"}
                     </h2>
                   </div>
                   <div

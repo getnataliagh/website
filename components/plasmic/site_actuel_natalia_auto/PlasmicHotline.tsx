@@ -273,16 +273,7 @@ function PlasmicHotline__RenderFunc(props: {
                         sty.h1
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"Natalia r\u00e9pond, "}
-                        </span>
-                      </React.Fragment>
+                      {"Natalia r\u00e9pond, "}
                     </h1>
                     <h2
                       className={classNames(
@@ -311,16 +302,7 @@ function PlasmicHotline__RenderFunc(props: {
                         sty.h2__eyDlk
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"vos tickets 24/7"}
-                        </span>
-                      </React.Fragment>
+                      {"vos tickets 24/7"}
                     </h2>
                   </div>
                   <div
@@ -2623,13 +2605,13 @@ function PlasmicHotline__RenderFunc(props: {
                       projectcss.all,
                       projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2__aavV7
+                      sty.h2__iwPsS
                     )}
                   >
                     <React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                        style={{ fontWeight: 700, color: "transparent" }}
                       >
                         {"Cas d'usage concrets"}
                       </span>

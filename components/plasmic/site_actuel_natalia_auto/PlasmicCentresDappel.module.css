@@ -955,7 +955,7 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .svg___6OLn1 {
     animation: none;
-    height: 40px;
+    height: 30px;
   }
 }
 .avantage__oZppc:global(.__wab_instance) {
@@ -977,8 +977,9 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__dNceQ {
     animation: none;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
+    max-width: none;
   }
 }
 .avantage__o1AIo:global(.__wab_instance) {
@@ -1001,7 +1002,7 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__oZw27 {
     animation: none;
-    height: 40px;
+    height: 30px;
   }
 }
 .avantage__awAUx:global(.__wab_instance) {
@@ -1023,7 +1024,7 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__sJmWx {
     animation: none;
-    height: 40px;
+    height: 30px;
   }
 }
 .chiffre2 {
@@ -1161,7 +1162,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 .solutions > * {
   grid-column: 4;
@@ -1308,6 +1309,9 @@
   .svg__v8YBb {
     animation: none;
     height: 30px;
+    width: 30px;
+    max-width: none;
+    flex-shrink: 0;
   }
 }
 .raison__kisfl:global(.__wab_instance) {

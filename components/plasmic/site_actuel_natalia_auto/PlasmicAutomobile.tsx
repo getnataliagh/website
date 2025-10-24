@@ -265,16 +265,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                         sty.h1
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"Ne perdez "}
-                        </span>
-                      </React.Fragment>
+                      {"Ne perdez "}
                     </h1>
                     <h2
                       className={classNames(
@@ -316,16 +307,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                         sty.h2__u5Jw
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#1E3A8A" }}
-                        >
-                          {"en concessions"}
-                        </span>
-                      </React.Fragment>
+                      {"en concessions"}
                     </h2>
                   </div>
                   <div
@@ -1149,7 +1131,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img__hfwTg)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}
@@ -1177,7 +1159,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img___5AeDq)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}
@@ -1210,7 +1192,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img___1L0Pk)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}
@@ -1242,7 +1224,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img__pzRyY)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}
@@ -1274,7 +1256,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img__hlaMe)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}
@@ -1306,7 +1288,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                       className={classNames(sty.img___72JXc)}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "50px"
+                          ? "30px"
                           : "40px"
                       }
                       displayMaxHeight={"none"}

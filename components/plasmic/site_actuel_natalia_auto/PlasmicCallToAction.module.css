@@ -45,6 +45,7 @@
 @media (min-width: 0px) and (max-width: 930px) {
   .freeBox {
     height: auto;
+    margin: 50px 0px;
   }
 }
 .h2 {
