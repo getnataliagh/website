@@ -335,368 +335,152 @@ function PlasmicAutomobile__RenderFunc(props: {
                       sty.text__acyXk
                     )}
                   >
-                    {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"Natalia"}
+                      </span>
                       <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{
-                            color: "var(--token-okZqvxZ_nx_g)",
-                            fontWeight: 700
-                          }}
-                        >
-                          {"Natalia"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                        >
-                          {
-                            "\u00a0r\u00e9pond, qualifie et prend rendez-vous \u00e0 votre place "
-                          }
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{
-                            color: "var(--token-okZqvxZ_nx_g)",
-                            fontWeight: 700
-                          }}
-                        >
-                          {"24h/7j"}
-                        </span>
-                        <React.Fragment>{"\n"}</React.Fragment>
                         {
-                          <ul
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.ul,
-                              sty.ul__mH0S
-                            )}
-                          >
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li___3EhTc
-                              )}
-                            >
-                              {hasVariant(
-                                globalVariants,
-                                "mobile",
-                                "mobileOnly"
-                              ) ? (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)"
-                                    }}
-                                  >
-                                    {"Int\u00e9gration \u00e0 votre "}
-                                  </span>
-                                  <React.Fragment>{""}</React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {"DMS"}
-                                  </span>
-                                </React.Fragment>
-                              ) : (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {""}
-                                  </span>
-                                </React.Fragment>
-                              )}
-                            </li>
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__uf7G9
-                              )}
-                            >
-                              {hasVariant(
-                                globalVariants,
-                                "mobile",
-                                "mobileOnly"
-                              ) ? (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)"
-                                    }}
-                                  >
-                                    {"Prise des appels "}
-                                  </span>
-                                  <React.Fragment>{""}</React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {"en d\u00e9bord"}
-                                  </span>
-                                </React.Fragment>
-                              ) : (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {""}
-                                  </span>
-                                </React.Fragment>
-                              )}
-                            </li>
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__dEp64
-                              )}
-                            >
-                              {hasVariant(
-                                globalVariants,
-                                "mobile",
-                                "mobileOnly"
-                              ) ? (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)"
-                                    }}
-                                  >
-                                    {"Suivi des appels et "}
-                                  </span>
-                                  <React.Fragment>{""}</React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {"KPI"}
-                                  </span>
-                                </React.Fragment>
-                              ) : (
-                                <React.Fragment>
-                                  <span
-                                    className={
-                                      "plasmic_default__all plasmic_default__span"
-                                    }
-                                    style={{
-                                      color: "var(--token-okZqvxZ_nx_g)",
-                                      fontWeight: 700
-                                    }}
-                                  >
-                                    {""}
-                                  </span>
-                                </React.Fragment>
-                              )}
-                            </li>
-                          </ul>
+                          " r\u00e9pond, qualifie et prend rendez-vous \u00e0 votre place "
                         }
-                        <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
-                    ) : (
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700 }}
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"24h/7j"}
+                      </span>
+                      <React.Fragment>{"\n"}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__qq1Ec
+                          )}
                         >
-                          {"Natalia"}
-                        </span>
-                        <React.Fragment>
-                          {
-                            " r\u00e9pond, qualifie et prend rendez-vous \u00e0 votre place "
-                          }
-                        </React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700 }}
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__fWkE6
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-jsoxkY4uzex7)" }}
+                              >
+                                {"Int\u00e9gration compl\u00e8te \u00e0 votre "}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{
+                                  fontWeight: 700,
+                                  color: "var(--token-jsoxkY4uzex7)"
+                                }}
+                              >
+                                {"DMS"}
+                              </span>
+                            </React.Fragment>
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__sBhFp
+                          )}
                         >
-                          {"24h/7j"}
-                        </span>
-                        <React.Fragment>{"\n"}</React.Fragment>
-                        {
-                          <ul
+                          <li
                             className={classNames(
                               projectcss.all,
-                              projectcss.ul,
-                              sty.ul__qq1Ec
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__cQShO
                             )}
                           >
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__fWkE6
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-jsoxkY4uzex7)" }}
-                                >
-                                  {
-                                    "Int\u00e9gration compl\u00e8te \u00e0 votre "
-                                  }
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{
-                                    fontWeight: 700,
-                                    color: "var(--token-jsoxkY4uzex7)"
-                                  }}
-                                >
-                                  {"DMS"}
-                                </span>
-                              </React.Fragment>
-                            </li>
-                          </ul>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <ul
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-jsoxkY4uzex7)" }}
+                              >
+                                {"Prise des appels "}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{
+                                  fontWeight: 700,
+                                  color: "var(--token-jsoxkY4uzex7)"
+                                }}
+                              >
+                                {"en d\u00e9bord"}
+                              </span>
+                            </React.Fragment>
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__ivSg1
+                          )}
+                        >
+                          <li
                             className={classNames(
                               projectcss.all,
-                              projectcss.ul,
-                              sty.ul__sBhFp
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__aCquo
                             )}
                           >
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__cQShO
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-jsoxkY4uzex7)" }}
-                                >
-                                  {"Prise des appels "}
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{
-                                    fontWeight: 700,
-                                    color: "var(--token-jsoxkY4uzex7)"
-                                  }}
-                                >
-                                  {"en d\u00e9bord"}
-                                </span>
-                              </React.Fragment>
-                            </li>
-                          </ul>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <ul
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.ul,
-                              sty.ul__ivSg1
-                            )}
-                          >
-                            <li
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.li,
-                                projectcss.__wab_text,
-                                sty.li__aCquo
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-jsoxkY4uzex7)" }}
-                                >
-                                  {"Suivi des appels et "}
-                                </span>
-                                <React.Fragment>{""}</React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{
-                                    fontWeight: 700,
-                                    color: "var(--token-jsoxkY4uzex7)"
-                                  }}
-                                >
-                                  {"KPI"}
-                                </span>
-                              </React.Fragment>
-                            </li>
-                          </ul>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    )}
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "var(--token-jsoxkY4uzex7)" }}
+                              >
+                                {"Suivi des appels et "}
+                              </span>
+                              <React.Fragment>{""}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{
+                                  fontWeight: 700,
+                                  color: "var(--token-jsoxkY4uzex7)"
+                                }}
+                              >
+                                {"KPI"}
+                              </span>
+                            </React.Fragment>
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
                   </div>
                   <PlasmicLink__
                     data-plasmic-name={"link"}

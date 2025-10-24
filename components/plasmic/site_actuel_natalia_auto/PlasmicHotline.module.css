@@ -195,6 +195,7 @@
     padding-top: 0px;
     text-align: center;
     font-size: var(--token-J3mA70N-wqsu);
+    line-height: 40px;
     min-width: 0;
   }
 }
@@ -237,6 +238,7 @@
     padding-top: 0px;
     font-size: var(--token-J3mA70N-wqsu);
     line-height: 40px;
+    font-weight: 700;
     min-width: 0;
   }
 }
@@ -271,6 +273,7 @@
     padding-top: 0px;
     font-size: var(--token-J3mA70N-wqsu);
     line-height: 40px;
+    font-weight: 700;
     min-width: 0;
   }
 }
