@@ -2538,27 +2538,14 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h2__c9VxK
                 )}
               >
-                {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#1E3A8A", fontWeight: 700 }}
-                    >
-                      {
-                        "Il est temps de r\u00e9pondre \u00e0 100% des appels entrants"
-                      }
-                    </span>
-                  </React.Fragment>
-                ) : (
-                  <React.Fragment>
-                    <span
-                      className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "#1E3A8A", fontWeight: 700 }}
-                    >
-                      {"Je veux automatiser une partie de mes appels entrants"}
-                    </span>
-                  </React.Fragment>
-                )}
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"Je veux automatiser une partie de mes appels entrants"}
+                  </span>
+                </React.Fragment>
               </h2>
               <PlasmicLink__
                 className={classNames(

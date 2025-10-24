@@ -2092,7 +2092,7 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .callToAction:global(.__wab_instance) {
-    height: 175px;
+    height: auto;
   }
 }
 .youTube:global(.__wab_instance) {
