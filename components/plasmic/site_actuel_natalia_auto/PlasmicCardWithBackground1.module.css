@@ -77,6 +77,11 @@
   min-width: 0;
   padding: 30px;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .freeBox__ae4V {
+    padding: 20px;
+  }
+}
 .h5 {
   width: 100%;
   height: auto;
@@ -84,6 +89,11 @@
   text-align: left;
   color: var(--token-o5QzyuxQjxLV);
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 930px) {
+  .h5 {
+    font-size: var(--token-h44X3KXzj2JM);
+  }
 }
 .h6 {
   position: relative;
@@ -95,6 +105,7 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .h6 {
+    font-size: var(--token-dpUme9f3kxzo);
     display: block;
   }
 }

@@ -102,8 +102,6 @@ export const PlasmicButtonPrimary__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicButtonPrimary__OverridesType = {
   root?: Flex__<typeof BaseButton>;
-  softBackground?: Flex__<"div">;
-  border?: Flex__<"div">;
   interactionEffect?: Flex__<"div">;
 };
 
@@ -202,20 +200,6 @@ function PlasmicButtonPrimary__RenderFunc(props: {
       resetsForm={args.resetsForm}
       submitsForm={args.submitsForm}
     >
-      {false ? (
-        <div
-          data-plasmic-name={"softBackground"}
-          data-plasmic-override={overrides.softBackground}
-          className={classNames(projectcss.all, sty.softBackground)}
-        />
-      ) : null}
-      {false ? (
-        <div
-          data-plasmic-name={"border"}
-          data-plasmic-override={overrides.border}
-          className={classNames(projectcss.all, sty.border)}
-        />
-      ) : null}
       <div
         data-plasmic-name={"interactionEffect"}
         data-plasmic-override={overrides.interactionEffect}
@@ -277,9 +261,7 @@ function PlasmicButtonPrimary__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "softBackground", "border", "interactionEffect"],
-  softBackground: ["softBackground"],
-  border: ["border"],
+  root: ["root", "interactionEffect"],
   interactionEffect: ["interactionEffect"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -287,8 +269,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: typeof BaseButton;
-  softBackground: "div";
-  border: "div";
   interactionEffect: "div";
 };
 
@@ -354,8 +334,6 @@ export const PlasmicButtonPrimary = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    softBackground: makeNodeComponent("softBackground"),
-    border: makeNodeComponent("border"),
     interactionEffect: makeNodeComponent("interactionEffect"),
 
     // Metadata about props expected for PlasmicButtonPrimary

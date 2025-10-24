@@ -349,7 +349,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "mobile", "mobileOnly")
-                        ? "Natalia r\u00e9volutionne votre helpdesk avec l'IA. R\u00e9ponses instantan\u00e9es, tickets cat\u00e9goris\u00e9s automatiquement, et satisfaction \nclient au rendez-vous 24/7."
+                        ? "Natalia r\u00e9volutionne votre helpdesk avec l'IA. R\u00e9ponses instantan\u00e9es, tickets cat\u00e9goris\u00e9s automatiquement, et satisfaction client au rendez-vous 24/7."
                         : "Natalia r\u00e9volutionne votre helpdesk avec l'IA. R\u00e9ponses\ninstantan\u00e9es, tickets cat\u00e9goris\u00e9s automatiquement, \net satisfaction client au rendez-vous 24/7."}
                     </h4>
                     <div

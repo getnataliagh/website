@@ -13,12 +13,6 @@
   font-size: var(--token-YRLpiKJWMvDT);
   line-height: var(--token-aFhewT50aNqv);
   outline-style: none;
-  transition-property: all;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  -webkit-transition-duration: 200ms;
   border-radius: var(--token-B2yHbkVn4nSC);
   border-width: 0px;
 }
@@ -28,26 +22,6 @@
 .root[data-pressed]:global(.__wab_instance) {
   background: var(--token-_LX8zWYksvaJ);
 }
-.softBackground {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background: #dbeafe;
-  border-radius: var(--token-B2yHbkVn4nSC);
-}
-.border {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  border-radius: var(--token-B2yHbkVn4nSC);
-  border: 0px solid #93c5fd;
-}
 .interactionEffect {
   display: block;
   position: absolute;
@@ -55,6 +29,12 @@
   right: 0px;
   left: 0px;
   bottom: 0px;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 250ms;
   border-radius: var(--token-B2yHbkVn4nSC);
 }
 .freeBox__e5Yf0 {

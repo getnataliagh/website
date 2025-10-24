@@ -17,13 +17,12 @@
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
-    width: 400px;
     align-content: center;
     row-gap: 5px;
     align-items: flex-end;
     background: var(--token-o5QzyuxQjxLV);
     height: auto;
-    max-width: 24rem;
+    max-width: 250px;
     column-gap: 0px;
     padding: 15px;
   }

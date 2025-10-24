@@ -284,16 +284,29 @@ function PlasmicAutomobile__RenderFunc(props: {
                         sty.h2___2GPKe
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#FFFFFF00" }}
-                        >
-                          {"plus un seul lead "}
-                        </span>
-                      </React.Fragment>
+                      {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFFFFF00" }}
+                          >
+                            {"plus un seul lead"}
+                          </span>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFFFFF00" }}
+                          >
+                            {"plus un seul lead "}
+                          </span>
+                        </React.Fragment>
+                      )}
                     </h2>
                     <h2
                       className={classNames(

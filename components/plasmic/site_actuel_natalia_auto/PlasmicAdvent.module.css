@@ -24,3 +24,8 @@
   max-width: 100%;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 930px) {
+  .text {
+    font-size: var(--token-dpUme9f3kxzo);
+  }
+}
