@@ -93,7 +93,7 @@
   background: #ffffff;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
-  padding: 160px 0px 100px;
+  padding: 200px 0px 100px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .presentation {
