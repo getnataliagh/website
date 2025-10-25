@@ -9,7 +9,13 @@
   justify-content: flex-start;
   row-gap: 20px;
   justify-self: flex-start;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
   min-height: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 250ms;
   border-radius: 20px;
   padding: 30px;
   border: 1px solid var(--token-pyhDq7s0RTkz);
@@ -24,6 +30,14 @@
     min-width: 0;
     padding: 15px;
   }
+}
+.cadre:hover {
+  transform: scaleX(1.05) scaleY(1.05) scaleZ(1.05);
+  box-shadow: 0px 12px 28px 0px var(--token-_PnNvvQms_S8);
+  transform-style: preserve-3d;
+}
+.cadre:hover * {
+  transform-style: preserve-3d;
 }
 .icon {
   display: flex;
@@ -73,6 +87,7 @@
 .img__cn613 {
   object-fit: cover;
   max-width: 100%;
+  height: 50px;
 }
 .img__cn613 > picture > img {
   object-fit: cover;
@@ -90,8 +105,8 @@
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .texte {
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     align-self: flex-start;
     width: 100%;
     min-width: 0;

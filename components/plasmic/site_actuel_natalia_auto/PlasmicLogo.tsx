@@ -70,16 +70,16 @@ import sty from "./PlasmicLogo.module.css"; // plasmic-import: Oz4K6O9ubKeI/css
 createPlasmicElementProxy;
 
 export type PlasmicLogo__VariantMembers = {
-  _50Opaque: "_50Opaque";
+  white: "white";
   smallLogo: "smallLogo";
 };
 export type PlasmicLogo__VariantsArgs = {
-  _50Opaque?: SingleBooleanChoiceArg<"_50Opaque">;
+  white?: SingleBooleanChoiceArg<"white">;
   smallLogo?: SingleBooleanChoiceArg<"smallLogo">;
 };
 type VariantPropType = keyof PlasmicLogo__VariantsArgs;
 export const PlasmicLogo__VariantProps = new Array<VariantPropType>(
-  "_50Opaque",
+  "white",
   "smallLogo"
 );
 
@@ -89,12 +89,11 @@ export const PlasmicLogo__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicLogo__OverridesType = {
   root?: Flex__<"a"> & Partial<LinkProps>;
-  img?: Flex__<typeof PlasmicImg__>;
   text?: Flex__<"div">;
 };
 
 export interface DefaultLogoProps {
-  _50Opaque?: SingleBooleanChoiceArg<"_50Opaque">;
+  white?: SingleBooleanChoiceArg<"white">;
   smallLogo?: SingleBooleanChoiceArg<"smallLogo">;
   className?: string;
 }
@@ -143,10 +142,10 @@ function PlasmicLogo__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "_50Opaque",
+        path: "white",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props._50Opaque
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.white
       },
       {
         path: "smallLogo",
@@ -180,30 +179,28 @@ function PlasmicLogo__RenderFunc(props: {
         projectcss.plasmic_mixins,
         styleTokensClassNames,
         sty.root,
-        { [sty.root_50Opaque]: hasVariant($state, "_50Opaque", "_50Opaque") }
+        { [sty.rootwhite]: hasVariant($state, "white", "white") }
       )}
       component={Link}
       href={`/`}
       platform={"nextjs"}
     >
       <PlasmicImg__
-        data-plasmic-name={"img"}
-        data-plasmic-override={overrides.img}
         alt={""}
-        className={classNames(sty.img, {
-          [sty.img_50Opaque]: hasVariant($state, "_50Opaque", "_50Opaque"),
-          [sty.imgsmallLogo]: hasVariant($state, "smallLogo", "smallLogo")
+        className={classNames(sty.img__aqPsM, {
+          [sty.imgsmallLogo__aqPsMzCvBq]: hasVariant(
+            $state,
+            "smallLogo",
+            "smallLogo"
+          ),
+          [sty.imgwhite__aqPsMVXuk]: hasVariant($state, "white", "white")
         })}
         displayHeight={
           hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "40px"
         }
         displayMaxHeight={"none"}
         displayMaxWidth={
-          hasVariant($state, "smallLogo", "smallLogo")
-            ? "50px"
-            : hasVariant(globalVariants, "mobile", "mobileOnly")
-              ? "30px"
-              : "40px"
+          hasVariant(globalVariants, "mobile", "mobileOnly") ? "30px" : "40px"
         }
         displayMinHeight={"0"}
         displayMinWidth={"0"}
@@ -213,9 +210,9 @@ function PlasmicLogo__RenderFunc(props: {
         src={
           hasVariant($state, "smallLogo", "smallLogo")
             ? {
-                src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A165622Png.png",
-                fullWidth: 142,
-                fullHeight: 148,
+                src: "/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg",
+                fullWidth: 1024,
+                fullHeight: 1024,
                 aspectRatio: undefined
               }
             : hasVariant(globalVariants, "mobile", "mobileOnly")
@@ -234,27 +231,84 @@ function PlasmicLogo__RenderFunc(props: {
         }
       />
 
+      {(hasVariant($state, "smallLogo", "smallLogo") ? true : false) ? (
+        <PlasmicImg__
+          alt={""}
+          className={classNames(sty.img__pds2F, {
+            [sty.imgsmallLogo__pds2FzCvBq]: hasVariant(
+              $state,
+              "smallLogo",
+              "smallLogo"
+            ),
+            [sty.imgwhite__pds2FVXuk]: hasVariant($state, "white", "white")
+          })}
+          displayHeight={
+            hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "40px"
+          }
+          displayMaxHeight={"none"}
+          displayMaxWidth={
+            hasVariant($state, "smallLogo", "smallLogo")
+              ? "50px"
+              : hasVariant(globalVariants, "mobile", "mobileOnly")
+                ? "30px"
+                : "40px"
+          }
+          displayMinHeight={"0"}
+          displayMinWidth={"0"}
+          displayWidth={
+            hasVariant(globalVariants, "mobile", "mobileOnly") ? "auto" : "100%"
+          }
+          src={
+            hasVariant($state, "smallLogo", "smallLogo")
+              ? {
+                  src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20250818A165622Png.png",
+                  fullWidth: 142,
+                  fullHeight: 148,
+                  aspectRatio: undefined
+                }
+              : hasVariant(globalVariants, "mobile", "mobileOnly")
+                ? {
+                    src: "/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg",
+                    fullWidth: 1024,
+                    fullHeight: 1024,
+                    aspectRatio: undefined
+                  }
+                : {
+                    src: "/plasmic/site_actuel_natalia_auto/images/logoNataliaSvg.svg",
+                    fullWidth: 1024,
+                    fullHeight: 1024,
+                    aspectRatio: undefined
+                  }
+          }
+        />
+      ) : null}
       <div
         data-plasmic-name={"text"}
         data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text, {
+          [sty.textsmallLogo]: hasVariant($state, "smallLogo", "smallLogo"),
+          [sty.textwhite]: hasVariant($state, "white", "white")
+        })}
       >
-        <React.Fragment>
-          <span
-            className={"plasmic_default__all plasmic_default__span"}
-            style={{ color: "#252729" }}
-          >
-            {"NATALIA"}
-          </span>
-        </React.Fragment>
+        {hasVariant($state, "white", "white") ? (
+          "NATALIA"
+        ) : (
+          <React.Fragment>
+            <span
+              className={"plasmic_default__all plasmic_default__span"}
+              style={{ color: "#252729" }}
+            >
+              {"NATALIA"}
+            </span>
+          </React.Fragment>
+        )}
       </div>
     </PlasmicLink__>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img", "text"],
-  img: ["img"],
+  root: ["root", "text"],
   text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -262,7 +316,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "a";
-  img: typeof PlasmicImg__;
   text: "div";
 };
 
@@ -328,7 +381,6 @@ export const PlasmicLogo = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    img: makeNodeComponent("img"),
     text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicLogo

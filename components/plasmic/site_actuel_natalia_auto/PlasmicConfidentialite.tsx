@@ -247,7 +247,7 @@ function PlasmicConfidentialite__RenderFunc(props: {
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      style={{ color: "transparent" }}
                     >
                       {"Politique de confidentialit\u00e9"}
                     </span>

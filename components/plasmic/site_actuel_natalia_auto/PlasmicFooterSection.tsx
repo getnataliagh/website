@@ -82,7 +82,6 @@ export const PlasmicFooterSection__ArgProps = new Array<ArgPropType>();
 export type PlasmicFooterSection__OverridesType = {
   root?: Flex__<"div">;
   logo?: Flex__<"div">;
-  h6?: Flex__<"h6">;
   img?: Flex__<typeof PlasmicImg__>;
   menu?: Flex__<"div">;
   entreprise?: Flex__<"div">;
@@ -154,16 +153,16 @@ function PlasmicFooterSection__RenderFunc(props: {
           data-plasmic-override={overrides.logo}
           className={classNames(projectcss.all, sty.logo)}
         >
-          <Logo className={classNames("__wab_instance", sty.logo__tbr6A)} />
+          <Logo
+            className={classNames("__wab_instance", sty.logo__tbr6A)}
+            white={true}
+          />
 
-          <h6
-            data-plasmic-name={"h6"}
-            data-plasmic-override={overrides.h6}
+          <div
             className={classNames(
               projectcss.all,
-              projectcss.h6,
               projectcss.__wab_text,
-              sty.h6
+              sty.text__qfTeP
             )}
           >
             <React.Fragment>
@@ -174,7 +173,7 @@ function PlasmicFooterSection__RenderFunc(props: {
                 {"Membre de la French Tech Vend\u00e9e"}
               </span>
             </React.Fragment>
-          </h6>
+          </div>
           <PlasmicImg__
             data-plasmic-name={"img"}
             data-plasmic-override={overrides.img}
@@ -182,17 +181,14 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(sty.img)}
             displayHeight={"auto"}
             displayMaxHeight={"none"}
-            displayMaxWidth={"100%"}
+            displayMaxWidth={"none"}
             displayMinHeight={"0"}
             displayMinWidth={"0"}
             displayWidth={"100px"}
             loading={"lazy"}
-            src={{
-              src: "/plasmic/site_actuel_natalia_auto/images/logoFtVendeeCouleurPng.png",
-              fullWidth: 884,
-              fullHeight: 1093,
-              aspectRatio: undefined
-            }}
+            src={
+              "https://acceleration-international.teamfrance.fr/app/uploads/sites/10/2022/07/fichier-blanc.png"
+            }
           />
         </div>
         <div
@@ -208,19 +204,12 @@ function PlasmicFooterSection__RenderFunc(props: {
               sty.h4__f0Bzy
             )}
           >
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "var(--token-D5datrW5yy5e)" }}
-              >
-                {"Menu"}
-              </span>
-            </React.Fragment>
+            {"Menu"}
           </h4>
           <PlasmicLink__
             className={classNames(projectcss.all, projectcss.a, sty.link__tGqw)}
             component={Link}
-            href={"/#avantages"}
+            href={`/automobile`}
             platform={"nextjs"}
           >
             <div
@@ -230,13 +219,53 @@ function PlasmicFooterSection__RenderFunc(props: {
                 sty.text___4Uvn4
               )}
             >
-              {"Avantages"}
+              {"Automobile"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__hNjmc
+            )}
+            component={Link}
+            href={`/centre-d-appel`}
+            platform={"nextjs"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__b4I9Q
+              )}
+            >
+              {"Centres d'appels"}
+            </div>
+          </PlasmicLink__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link___6G0Hy
+            )}
+            component={Link}
+            href={`/hotline`}
+            platform={"nextjs"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__qlFbv
+              )}
+            >
+              {"Hotline informatique"}
             </div>
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(projectcss.all, projectcss.a, sty.link__kMnH)}
             component={Link}
-            href={`/`}
+            href={`/calculateur`}
             platform={"nextjs"}
           >
             <div
@@ -246,7 +275,7 @@ function PlasmicFooterSection__RenderFunc(props: {
                 sty.text__bQcoL
               )}
             >
-              {"Comment \u00e7a marche ?"}
+              {"Calculateur"}
             </div>
           </PlasmicLink__>
           <PlasmicLink__
@@ -283,14 +312,7 @@ function PlasmicFooterSection__RenderFunc(props: {
               sty.h4__ddLmx
             )}
           >
-            <React.Fragment>
-              <span
-                className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#252729" }}
-              >
-                {"Entreprise"}
-              </span>
-            </React.Fragment>
+            {"Entreprise"}
           </h4>
           <PlasmicLink__
             className={classNames(
@@ -366,9 +388,8 @@ function PlasmicFooterSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "h6", "img", "menu", "entreprise"],
-  logo: ["logo", "h6", "img"],
-  h6: ["h6"],
+  root: ["root", "logo", "img", "menu", "entreprise"],
+  logo: ["logo", "img"],
   img: ["img"],
   menu: ["menu"],
   entreprise: ["entreprise"]
@@ -379,7 +400,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   logo: "div";
-  h6: "h6";
   img: typeof PlasmicImg__;
   menu: "div";
   entreprise: "div";
@@ -448,7 +468,6 @@ export const PlasmicFooterSection = Object.assign(
   {
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
-    h6: makeNodeComponent("h6"),
     img: makeNodeComponent("img"),
     menu: makeNodeComponent("menu"),
     entreprise: makeNodeComponent("entreprise"),

@@ -18,6 +18,9 @@
 }
 .root[data-hovered]:global(.__wab_instance) {
   background: var(--token-ruEH_kPMz8sH);
+  transform: none;
+  box-shadow: none;
+  pointer-events: auto;
 }
 .root[data-pressed]:global(.__wab_instance) {
   background: var(--token-_LX8zWYksvaJ);
@@ -43,14 +46,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  column-gap: var(--token-B2yHbkVn4nSC);
+  column-gap: 0px;
   min-width: 0;
   min-height: 0;
-  padding: 10px;
+  padding: 13px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .freeBox__e5Yf0 {
-    padding: 5px;
+    padding: 10px;
   }
 }
 .freeBox__weLwk {
@@ -76,7 +79,7 @@
 }
 .text__jdghX {
   white-space: pre;
-  color: #eeeeee;
+  color: var(--token-o5QzyuxQjxLV);
   font-size: 20px;
 }
 .freeBox__ovre {

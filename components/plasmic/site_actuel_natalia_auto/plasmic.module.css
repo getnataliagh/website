@@ -144,7 +144,8 @@
   --mixin-1GBcDzznu_OG_user-select: text;
   --mixin-1GBcDzznu_OG_text-decoration-line: none;
   --mixin-1GBcDzznu_OG_text-overflow: clip;
-  --mixin-uaZpfULcOgUd_color: var(--token-ruEH_kPMz8sH);
+  --mixin-uaZpfULcOgUd_color: var(--token-o5QzyuxQjxLV);
+  --mixin-uaZpfULcOgUd_text-decoration-line: none;
   --mixin-uaZpfULcOgUd_white-space: pre-wrap;
   --mixin-mS8IQmvCte9N_font-family: "Montserrat", sans-serif;
   --mixin-mS8IQmvCte9N_color: var(--token-D5datrW5yy5e);
@@ -257,6 +258,8 @@
   --mixin-678NdrVQtyTs_text-align: center;
   --mixin-678NdrVQtyTs_white-space: pre-wrap;
   --mixin-I8qPGBhh_Vjp_white-space: pre-wrap;
+  --mixin--8BKX8KnWx_z_color: var(--token-ruEH_kPMz8sH);
+  --mixin--8BKX8KnWx_z_white-space: pre-wrap;
 }
 
 @media (min-width: 0px) and (max-width: 930px) {
@@ -628,6 +631,7 @@ a:where(.root_reset.a),
 :where(.root_reset_tags) a,
 a:where(.root_reset_tags) {
   color: var(--mixin-uaZpfULcOgUd_color);
+  text-decoration-line: var(--mixin-uaZpfULcOgUd_text-decoration-line);
 }
 
 :where(.root_reset) h1:where(.h1),
@@ -813,4 +817,12 @@ h2:where(.root_reset.h2):hover,
 :where(.root_reset .__wab_expr_html_text) h2:hover,
 :where(.root_reset_tags) h2:hover,
 h2:where(.root_reset_tags):hover {
+}
+
+:where(.root_reset) a:where(.a):hover,
+a:where(.root_reset.a):hover,
+:where(.root_reset .__wab_expr_html_text) a:hover,
+:where(.root_reset_tags) a:hover,
+a:where(.root_reset_tags):hover {
+  color: var(--mixin--8BKX8KnWx_z_color);
 }

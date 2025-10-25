@@ -27,8 +27,10 @@
   height: auto;
   max-width: 2048px;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   min-width: 0;
-  padding: 0px 32px;
+  padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .wrapper {
@@ -107,10 +109,11 @@
   height: auto;
   justify-content: flex-start;
   align-items: center;
+  row-gap: 20px;
   min-width: 0;
   padding: 0px;
 }
-.h2__jeuxs {
+.h1 {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -119,12 +122,12 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h2__jeuxs {
+  .h1 {
     font-size: var(--token-zGJggj0WBmcV);
     line-height: 30px;
   }
 }
-.h2__okZng {
+.h2 {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -141,20 +144,20 @@
   -webkit-background-clip: text;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h2__okZng {
+  .h2 {
     font-size: var(--token-zGJggj0WBmcV);
     line-height: 30px;
   }
 }
 .freeBox__yiAqC {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: auto;
-  column-gap: 20px;
+  row-gap: 20px;
   min-width: 0;
   padding: 0px;
 }
@@ -165,49 +168,25 @@
     column-gap: 0px;
   }
 }
-.freeBox__h9Pbd {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  justify-content: flex-start;
-  align-items: center;
-  row-gap: 20px;
-  min-width: 0;
-  padding: 0px;
-  margin: 0px;
-}
-.h4__iMgll {
+.text__iMgll {
   width: auto;
   height: auto;
-  text-align: center;
+  font-weight: 400;
   padding: 0px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .h4__iMgll {
+  .text__iMgll {
     font-size: var(--token-h44X3KXzj2JM);
-  }
-}
-.h4___4RCiG {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 930px) {
-  .h4___4RCiG {
-    font-size: var(--token-h44X3KXzj2JM);
+    text-align: center;
   }
 }
 .iframe:global(.__wab_instance) {
   width: 100%;
   height: 800px;
-  max-width: 100%;
   object-fit: cover;
+  max-width: 100%;
   min-width: 0;
+  flex-shrink: 0;
   border-width: 0px;
 }
 .pricingSection:global(.__wab_instance) {
@@ -318,7 +297,7 @@
   min-width: 0;
   padding: 8px;
 }
-.text {
+.text___2DoNh {
   position: absolute;
   width: auto;
   height: auto;
@@ -336,7 +315,7 @@
   padding: 8px 20px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
-  .text {
+  .text___2DoNh {
     top: 85px;
     font-size: 14px;
   }

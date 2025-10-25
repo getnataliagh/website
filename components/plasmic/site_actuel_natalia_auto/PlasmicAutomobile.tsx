@@ -67,7 +67,6 @@ import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import Avantage from "../../Avantage"; // plasmic-import: MXIUXB0YnmeL/component
 import CasDusageNew from "../../CasDusageNew"; // plasmic-import: mUYvgEuGkieL/component
 import CasDusageOld from "../../CasDusageOld"; // plasmic-import: x2T3E4Kio9_Z/component
-import CallToAction from "../../CallToAction"; // plasmic-import: 1u9NEqdr08SU/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -81,6 +80,11 @@ import sty from "./PlasmicAutomobile.module.css"; // plasmic-import: 3SaqGLR5zIc
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
+import PhoneCallSvgrepoComSvgIcon from "./icons/PlasmicIcon__PhoneCallSvgrepoComSvg"; // plasmic-import: cBc-EceF0Bgg/icon
+import PhoneMissedSvgrepoComSvgIcon from "./icons/PlasmicIcon__PhoneMissedSvgrepoComSvg"; // plasmic-import: RVJLb89UV2Dy/icon
+import CustomerClassLineSvgrepoComSvgIcon from "./icons/PlasmicIcon__CustomerClassLineSvgrepoComSvg"; // plasmic-import: yViREKfcL3Sa/icon
+import BasketSvgrepoComSvgIcon from "./icons/PlasmicIcon__BasketSvgrepoComSvg"; // plasmic-import: Z667x3E9eWpC/icon
+import EuroSvgrepoComSvgIcon from "./icons/PlasmicIcon__EuroSvgrepoComSvg"; // plasmic-import: Sjww4j6BJ3XF/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
 import CalendarLinesPenSvgrepoComSvgIcon from "./icons/PlasmicIcon__CalendarLinesPenSvgrepoComSvg"; // plasmic-import: kNemrl--N6SP/icon
 import MoneyCheckDollarPenSvgrepoComSvgIcon from "./icons/PlasmicIcon__MoneyCheckDollarPenSvgrepoComSvg"; // plasmic-import: SJKU4Ll6kih5/icon
@@ -106,12 +110,11 @@ export type PlasmicAutomobile__OverridesType = {
   navbar?: Flex__<typeof Navbar>;
   hero?: Flex__<"section">;
   h1?: Flex__<"h1">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
-  buttonPrimary?: Flex__<typeof ButtonPrimary>;
   section?: Flex__<"section">;
   headerHeroSection?: Flex__<"div">;
   douleur?: Flex__<"section">;
-  perte?: Flex__<"div">;
+  titre2?: Flex__<"div">;
+  sousTitre?: Flex__<"div">;
   chiffres?: Flex__<"div">;
   h3?: Flex__<"h3">;
   cetaitAvant?: Flex__<typeof CetaitAvant>;
@@ -128,7 +131,7 @@ export type PlasmicAutomobile__OverridesType = {
   casUsage?: Flex__<"section">;
   titre?: Flex__<"div">;
   casOld?: Flex__<"div">;
-  callToAction?: Flex__<typeof CallToAction>;
+  callToAction?: Flex__<"section">;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
@@ -465,23 +468,19 @@ function PlasmicAutomobile__RenderFunc(props: {
                     </React.Fragment>
                   </div>
                   <PlasmicLink__
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link
+                      sty.link__nwfGs
                     )}
                     component={Link}
                     href={`/contact`}
                     platform={"nextjs"}
                   >
                     <ButtonPrimary
-                      data-plasmic-name={"buttonPrimary"}
-                      data-plasmic-override={overrides.buttonPrimary}
                       className={classNames(
                         "__wab_instance",
-                        sty.buttonPrimary
+                        sty.buttonPrimary__s3SFg
                       )}
                       label={
                         <div
@@ -510,6 +509,36 @@ function PlasmicAutomobile__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__etbtF)}
+                    displayHeight={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "300px"
+                        : "auto"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"none"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "0px"
+                        : "0"
+                    }
+                    displayWidth={
+                      hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "100%"
+                        : "100%"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/site_actuel_natalia_auto/images/automobilePng2.png",
+                      fullWidth: 836,
+                      fullHeight: 600,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__rftG)}
                     displayHeight={
                       hasVariant(globalVariants, "mobile", "mobileOnly")
                         ? "300px"
@@ -577,13 +606,27 @@ function PlasmicAutomobile__RenderFunc(props: {
               data-plasmic-override={overrides.douleur}
               className={classNames(projectcss.all, sty.douleur)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox___186)}>
+              <div
+                data-plasmic-name={"titre2"}
+                data-plasmic-override={overrides.titre2}
+                className={classNames(projectcss.all, sty.titre2)}
+              >
                 <h2
                   className={classNames(
                     projectcss.all,
                     projectcss.h2,
                     projectcss.__wab_text,
                     sty.h2__iohOf
+                  )}
+                >
+                  {"30% de vos prospects partent \u00e0 la concurrence."}
+                </h2>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2___7TGka
                   )}
                 >
                   {"30% des appels"}
@@ -607,15 +650,92 @@ function PlasmicAutomobile__RenderFunc(props: {
                 </h2>
               </div>
               <div
-                data-plasmic-name={"perte"}
-                data-plasmic-override={overrides.perte}
-                className={classNames(projectcss.all, sty.perte)}
+                data-plasmic-name={"sousTitre"}
+                data-plasmic-override={overrides.sousTitre}
+                className={classNames(projectcss.all, sty.sousTitre)}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
                     sty.text__lVRms
+                  )}
+                >
+                  {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {
+                          "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. \u00a0"
+                        }
+                      </span>
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "Le co\u00fbt des appels manqu\u00e9s est massif : prospection g\u00e2ch\u00e9e, "
+                        }
+                      </span>
+                      <React.Fragment>{"\n"}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "perte de chiffre d'affaires et d\u00e9gradation de l'exp\u00e9rience client. "
+                        }
+                      </span>
+                    </React.Fragment>
+                  )}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___4JsFa
+                  )}
+                >
+                  {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{
+                          fontWeight: 700,
+                          color: "var(--token-okZqvxZ_nx_g)"
+                        }}
+                      >
+                        {
+                          "Pendant que vos \u00e9quipes sont occup\u00e9es, vos prospects partent \u00e0 la concurrence. \u00a0"
+                        }
+                      </span>
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      >
+                        {
+                          "Il est temps de mettre fin \u00e0 cette h\u00e9morragie."
+                        }
+                      </span>
+                    </React.Fragment>
+                  )}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cnJXm
                   )}
                 >
                   {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
@@ -712,7 +832,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                             }
                             style={{ color: "var(--token-okZqvxZ_nx_g)" }}
                           >
-                            {"Une perte de business directe"}
+                            {"L'Impact chiffr\u00e9 de vos appels manqu\u00e9s"}
                           </span>
                         </React.Fragment>
                       </h3>
@@ -721,12 +841,129 @@ function PlasmicAutomobile__RenderFunc(props: {
                   </React.Fragment>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__rJhAn)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__uwF6D)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__tOfmL)}
+                    >
+                      <PhoneCallSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg___5UP9)}
+                        role={"img"}
+                      />
+                    </div>
+                    <h5
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h5,
+                        projectcss.__wab_text,
+                        sty.h5__gVk7N
+                      )}
+                    >
+                      {"1000 appels re\u00e7us"}
+                    </h5>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sip0E)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___7K0Gv
+                      )}
+                    >
+                      <PhoneMissedSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__j9NNq)}
+                        role={"img"}
+                      />
+                    </div>
+                    <h5
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h5,
+                        projectcss.__wab_text,
+                        sty.h5__ge5RA
+                      )}
+                    >
+                      {"300 appels manqu\u00e9s"}
+                    </h5>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jVf4L)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__dSHbe)}
+                    >
+                      <CustomerClassLineSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__yTrOw)}
+                        role={"img"}
+                      />
+                    </div>
+                    <h5
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h5,
+                        projectcss.__wab_text,
+                        sty.h5__mx437
+                      )}
+                    >
+                      {"21 prospects perdues"}
+                    </h5>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sr5Y)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__eEg47)}
+                    >
+                      <BasketSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__hjSes)}
+                        role={"img"}
+                      />
+                    </div>
+                    <h5
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h5,
+                        projectcss.__wab_text,
+                        sty.h5__opLjg
+                      )}
+                    >
+                      {"4 ventes perdues"}
+                    </h5>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__faX5J)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__ukWf)}
+                    >
+                      <EuroSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__ycFpX)}
+                        role={"img"}
+                      />
+                    </div>
+                    <h5
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h5,
+                        projectcss.__wab_text,
+                        sty.h5__kMzTf
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mobile", "mobileOnly")
+                        ? "8000\u20ac perdus"
+                        : "8000\u20ac perdus"}
+                    </h5>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__kWwdG)}>
                   <Perte
-                    className={classNames("__wab_instance", sty.perte__cUoC)}
+                    className={classNames("__wab_instance", sty.perte__thmWw)}
                   />
 
                   <Perte
-                    className={classNames("__wab_instance", sty.perte___9GEpY)}
+                    className={classNames("__wab_instance", sty.perte__g6Mnk)}
                     description={"non trait\u00e9s"}
                     pastille={{
                       src: "/plasmic/site_actuel_natalia_auto/images/blueCircleSvgrepoComSvg.svg",
@@ -738,7 +975,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                   />
 
                   <Perte
-                    className={classNames("__wab_instance", sty.perte___5DFo)}
+                    className={classNames("__wab_instance", sty.perte__yxddU)}
                     description={"abandonn\u00e9s (7%)"}
                     pastille={{
                       src: "/plasmic/site_actuel_natalia_auto/images/yellowCircleSvgrepoComSvg.svg",
@@ -750,7 +987,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                   />
 
                   <Perte
-                    className={classNames("__wab_instance", sty.perte__xEE1)}
+                    className={classNames("__wab_instance", sty.perte__aj6Lh)}
                     description={"perdues (19%)"}
                     pastille={{
                       src: "/plasmic/site_actuel_natalia_auto/images/orangeCircleSvgrepoComSvg.svg",
@@ -762,7 +999,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                   />
 
                   <Perte
-                    className={classNames("__wab_instance", sty.perte__lw6Dc)}
+                    className={classNames("__wab_instance", sty.perte__vOa9)}
                     description={"nets perdus / mois"}
                     pastille={{
                       src: "/plasmic/site_actuel_natalia_auto/images/redCircleSvgrepoComSvg.svg",
@@ -1065,7 +1302,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                           sty.h2__zaiaq
                         )}
                       >
-                        {"R\u00e9ponse Instantan\u00e9e "}
+                        {"R\u00e9ponse instantan\u00e9e "}
                       </h2>
                       <h2
                         className={classNames(
@@ -1082,7 +1319,7 @@ function PlasmicAutomobile__RenderFunc(props: {
                             }
                             style={{ color: "#FFFFFF00" }}
                           >
-                            {"Qualification Intelligente"}
+                            {"Qualification intelligente"}
                           </span>
                         </React.Fragment>
                       </h2>
@@ -2589,12 +2826,68 @@ function PlasmicAutomobile__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <CallToAction
+            <section
               data-plasmic-name={"callToAction"}
               data-plasmic-override={overrides.callToAction}
-              className={classNames("__wab_instance", sty.callToAction)}
-            />
-
+              className={classNames(projectcss.all, sty.callToAction)}
+            >
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__pv1Jl
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {
+                      "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous."
+                    }
+                  </span>
+                </React.Fragment>
+              </h2>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link___00Htj
+                )}
+                component={Link}
+                href={`/contact`}
+                platform={"nextjs"}
+              >
+                <ButtonPrimary
+                  className={classNames(
+                    "__wab_instance",
+                    sty.buttonPrimary__y2Ril
+                  )}
+                  label={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bN70M
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#FFFFFF" }}
+                        >
+                          {"R\u00e9server une d\u00e9mo"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  }
+                />
+              </PlasmicLink__>
+            </section>
             <YouTube
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
@@ -2680,12 +2973,11 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "section",
     "headerHeroSection",
     "douleur",
-    "perte",
+    "titre2",
+    "sousTitre",
     "chiffres",
     "h3",
     "cetaitAvant",
@@ -2712,12 +3004,11 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "section",
     "headerHeroSection",
     "douleur",
-    "perte",
+    "titre2",
+    "sousTitre",
     "chiffres",
     "h3",
     "cetaitAvant",
@@ -2740,14 +3031,13 @@ const PlasmicDescendants = {
     "footerSection"
   ],
   navbar: ["navbar"],
-  hero: ["hero", "h1", "link", "buttonPrimary"],
+  hero: ["hero", "h1"],
   h1: ["h1"],
-  link: ["link", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"],
   section: ["section", "headerHeroSection"],
   headerHeroSection: ["headerHeroSection"],
-  douleur: ["douleur", "perte", "chiffres", "h3"],
-  perte: ["perte"],
+  douleur: ["douleur", "titre2", "sousTitre", "chiffres", "h3"],
+  titre2: ["titre2"],
+  sousTitre: ["sousTitre"],
   chiffres: ["chiffres", "h3"],
   h3: ["h3"],
   cetaitAvant: ["cetaitAvant"],
@@ -2785,12 +3075,11 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   hero: "section";
   h1: "h1";
-  link: "a";
-  buttonPrimary: typeof ButtonPrimary;
   section: "section";
   headerHeroSection: "div";
   douleur: "section";
-  perte: "div";
+  titre2: "div";
+  sousTitre: "div";
   chiffres: "div";
   h3: "h3";
   cetaitAvant: typeof CetaitAvant;
@@ -2807,7 +3096,7 @@ type NodeDefaultElementType = {
   casUsage: "section";
   titre: "div";
   casOld: "div";
-  callToAction: typeof CallToAction;
+  callToAction: "section";
   youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
@@ -2879,12 +3168,11 @@ export const PlasmicAutomobile = Object.assign(
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
     h1: makeNodeComponent("h1"),
-    link: makeNodeComponent("link"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     section: makeNodeComponent("section"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     douleur: makeNodeComponent("douleur"),
-    perte: makeNodeComponent("perte"),
+    titre2: makeNodeComponent("titre2"),
+    sousTitre: makeNodeComponent("sousTitre"),
     chiffres: makeNodeComponent("chiffres"),
     h3: makeNodeComponent("h3"),
     cetaitAvant: makeNodeComponent("cetaitAvant"),

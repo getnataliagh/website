@@ -88,10 +88,11 @@ export type PlasmicContact__OverridesType = {
   wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
   section?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  h2?: Flex__<"h2">;
   iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
-  text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -231,22 +232,26 @@ function PlasmicContact__RenderFunc(props: {
             >
               <div className={classNames(projectcss.all, sty.freeBox__jbRtt)}>
                 <div className={classNames(projectcss.all, sty.freeBox__kigNf)}>
-                  <h2
+                  <h1
+                    data-plasmic-name={"h1"}
+                    data-plasmic-override={overrides.h1}
                     className={classNames(
                       projectcss.all,
-                      projectcss.h2,
+                      projectcss.h1,
                       projectcss.__wab_text,
-                      sty.h2__jeuxs
+                      sty.h1
                     )}
                   >
                     {"Vous avez des questions ? "}
-                  </h2>
+                  </h1>
                   <h2
+                    data-plasmic-name={"h2"}
+                    data-plasmic-override={overrides.h2}
                     className={classNames(
                       projectcss.all,
                       projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h2__okZng
+                      sty.h2
                     )}
                   >
                     <React.Fragment>
@@ -261,39 +266,22 @@ function PlasmicContact__RenderFunc(props: {
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__yiAqC)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__h9Pbd)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__iMgll
+                    )}
                   >
-                    <h4
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h4,
-                        projectcss.__wab_text,
-                        sty.h4__iMgll
-                      )}
-                    >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ fontWeight: 700 }}
-                        >
-                          {
-                            "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
-                          }
-                        </span>
-                      </React.Fragment>
-                    </h4>
-                    <h4
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h4,
-                        projectcss.__wab_text,
-                        sty.h4___4RCiG
-                      )}
-                    >
-                      {""}
-                    </h4>
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {
+                          "Merci de renseigner les informations dans ce formulaire pour \u00eatre recontact\u00e9."
+                        }
+                      </span>
+                    </React.Fragment>
                   </div>
                   <Iframe
                     data-plasmic-name={"iframe"}
@@ -346,12 +334,10 @@ function PlasmicContact__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.freeBox__kqOj)}
                     >
                       <div
-                        data-plasmic-name={"text"}
-                        data-plasmic-override={overrides.text}
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text
+                          sty.text___2DoNh
                         )}
                       >
                         {hasVariant(globalVariants, "mobile", "mobileOnly")
@@ -392,28 +378,31 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "section",
+    "h1",
+    "h2",
     "iframe",
     "pricingSection",
     "columns",
-    "text",
     "footerSection"
   ],
   wrapper: [
     "wrapper",
     "navbar",
     "section",
+    "h1",
+    "h2",
     "iframe",
     "pricingSection",
     "columns",
-    "text",
     "footerSection"
   ],
   navbar: ["navbar"],
-  section: ["section", "iframe"],
+  section: ["section", "h1", "h2", "iframe"],
+  h1: ["h1"],
+  h2: ["h2"],
   iframe: ["iframe"],
-  pricingSection: ["pricingSection", "columns", "text"],
-  columns: ["columns", "text"],
-  text: ["text"],
+  pricingSection: ["pricingSection", "columns"],
+  columns: ["columns"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -424,10 +413,11 @@ type NodeDefaultElementType = {
   wrapper: "div";
   navbar: typeof Navbar;
   section: "section";
+  h1: "h1";
+  h2: "h2";
   iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
-  text: "div";
   footerSection: typeof FooterSection;
 };
 
@@ -496,10 +486,11 @@ export const PlasmicContact = Object.assign(
     wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
     section: makeNodeComponent("section"),
+    h1: makeNodeComponent("h1"),
+    h2: makeNodeComponent("h2"),
     iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
-    text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicContact

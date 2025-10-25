@@ -68,7 +68,6 @@ import Raison from "../../Raison"; // plasmic-import: vAcwOvnOFNI4/component
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import CasDusageNew from "../../CasDusageNew"; // plasmic-import: mUYvgEuGkieL/component
 import CasDusageOld from "../../CasDusageOld"; // plasmic-import: x2T3E4Kio9_Z/component
-import CallToAction from "../../CallToAction"; // plasmic-import: 1u9NEqdr08SU/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
 import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
@@ -115,8 +114,6 @@ export type PlasmicHotline__OverridesType = {
   navbar?: Flex__<typeof Navbar>;
   hero?: Flex__<"section">;
   h1?: Flex__<"h1">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
-  buttonPrimary?: Flex__<typeof ButtonPrimary>;
   douleur?: Flex__<"section">;
   foreground3?: Flex__<"div">;
   cetaitAvant?: Flex__<typeof CetaitAvant>;
@@ -136,7 +133,7 @@ export type PlasmicHotline__OverridesType = {
   casUsage?: Flex__<"section">;
   titre?: Flex__<"div">;
   casOld?: Flex__<"div">;
-  callToAction?: Flex__<typeof CallToAction>;
+  callToAction?: Flex__<"section">;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
@@ -344,22 +341,18 @@ function PlasmicHotline__RenderFunc(props: {
                     )}
                   </div>
                   <PlasmicLink__
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link
+                      sty.link__iBlX0
                     )}
                     component={Link}
                     platform={"nextjs"}
                   >
                     <ButtonPrimary
-                      data-plasmic-name={"buttonPrimary"}
-                      data-plasmic-override={overrides.buttonPrimary}
                       className={classNames(
                         "__wab_instance",
-                        sty.buttonPrimary
+                        sty.buttonPrimary__qyr
                       )}
                       label={
                         <div
@@ -2793,12 +2786,68 @@ function PlasmicHotline__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <CallToAction
+            <section
               data-plasmic-name={"callToAction"}
               data-plasmic-override={overrides.callToAction}
-              className={classNames("__wab_instance", sty.callToAction)}
-            />
-
+              className={classNames(projectcss.all, sty.callToAction)}
+            >
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__kdMtr
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {
+                      "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous."
+                    }
+                  </span>
+                </React.Fragment>
+              </h2>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__ptnEw
+                )}
+                component={Link}
+                href={`/contact`}
+                platform={"nextjs"}
+              >
+                <ButtonPrimary
+                  className={classNames(
+                    "__wab_instance",
+                    sty.buttonPrimary__tmo0V
+                  )}
+                  label={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__cPl9
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#FFFFFF" }}
+                        >
+                          {"R\u00e9server une d\u00e9mo"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  }
+                />
+              </PlasmicLink__>
+            </section>
             <YouTube
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
@@ -2882,8 +2931,6 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "douleur",
     "foreground3",
     "cetaitAvant",
@@ -2913,8 +2960,6 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "douleur",
     "foreground3",
     "cetaitAvant",
@@ -2940,10 +2985,8 @@ const PlasmicDescendants = {
     "footerSection"
   ],
   navbar: ["navbar"],
-  hero: ["hero", "h1", "link", "buttonPrimary"],
+  hero: ["hero", "h1"],
   h1: ["h1"],
-  link: ["link", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"],
   douleur: ["douleur", "foreground3"],
   foreground3: ["foreground3"],
   cetaitAvant: ["cetaitAvant"],
@@ -2986,8 +3029,6 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   hero: "section";
   h1: "h1";
-  link: "a";
-  buttonPrimary: typeof ButtonPrimary;
   douleur: "section";
   foreground3: "div";
   cetaitAvant: typeof CetaitAvant;
@@ -3007,7 +3048,7 @@ type NodeDefaultElementType = {
   casUsage: "section";
   titre: "div";
   casOld: "div";
-  callToAction: typeof CallToAction;
+  callToAction: "section";
   youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
@@ -3079,8 +3120,6 @@ export const PlasmicHotline = Object.assign(
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
     h1: makeNodeComponent("h1"),
-    link: makeNodeComponent("link"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     douleur: makeNodeComponent("douleur"),
     foreground3: makeNodeComponent("foreground3"),
     cetaitAvant: makeNodeComponent("cetaitAvant"),

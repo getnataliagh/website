@@ -246,7 +246,7 @@ function PlasmicCgu__RenderFunc(props: {
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      style={{ color: "transparent" }}
                     >
                       {"Conditions G\u00e9n\u00e9rales d'Utilisation"}
                     </span>

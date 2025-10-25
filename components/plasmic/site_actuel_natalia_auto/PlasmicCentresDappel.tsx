@@ -67,7 +67,6 @@ import Raison from "../../Raison"; // plasmic-import: vAcwOvnOFNI4/component
 import Solution from "../../Solution"; // plasmic-import: BGruYdkhsXAs/component
 import CasDusageNew from "../../CasDusageNew"; // plasmic-import: mUYvgEuGkieL/component
 import CasDusageOld from "../../CasDusageOld"; // plasmic-import: x2T3E4Kio9_Z/component
-import CallToAction from "../../CallToAction"; // plasmic-import: 1u9NEqdr08SU/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
@@ -120,8 +119,6 @@ export type PlasmicCentresDappel__OverridesType = {
   navbar?: Flex__<typeof Navbar>;
   hero?: Flex__<"section">;
   h1?: Flex__<"h1">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
-  buttonPrimary?: Flex__<typeof ButtonPrimary>;
   chiffre?: Flex__<"section">;
   chiffres?: Flex__<"div">;
   douleur2?: Flex__<"section">;
@@ -140,7 +137,7 @@ export type PlasmicCentresDappel__OverridesType = {
   casUsage?: Flex__<"section">;
   titre?: Flex__<"div">;
   casOld?: Flex__<"div">;
-  callToAction?: Flex__<typeof CallToAction>;
+  callToAction?: Flex__<"section">;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
   footerSection?: Flex__<typeof FooterSection>;
@@ -356,23 +353,19 @@ function PlasmicCentresDappel__RenderFunc(props: {
                     )}
                   </div>
                   <PlasmicLink__
-                    data-plasmic-name={"link"}
-                    data-plasmic-override={overrides.link}
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.link
+                      sty.link___8SgCr
                     )}
                     component={Link}
                     href={`/contact`}
                     platform={"nextjs"}
                   >
                     <ButtonPrimary
-                      data-plasmic-name={"buttonPrimary"}
-                      data-plasmic-override={overrides.buttonPrimary}
                       className={classNames(
                         "__wab_instance",
-                        sty.buttonPrimary
+                        sty.buttonPrimary__zrKVi
                       )}
                       label={
                         <div
@@ -1653,12 +1646,68 @@ function PlasmicCentresDappel__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <CallToAction
+            <section
               data-plasmic-name={"callToAction"}
               data-plasmic-override={overrides.callToAction}
-              className={classNames("__wab_instance", sty.callToAction)}
-            />
-
+              className={classNames(projectcss.all, sty.callToAction)}
+            >
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__rwlTk
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {
+                      "Nous d\u00e9finissons ensemble le cadre du pilote lors d'un premier rendez-vous."
+                    }
+                  </span>
+                </React.Fragment>
+              </h2>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__sgbkd
+                )}
+                component={Link}
+                href={`/contact`}
+                platform={"nextjs"}
+              >
+                <ButtonPrimary
+                  className={classNames(
+                    "__wab_instance",
+                    sty.buttonPrimary__xB5Ma
+                  )}
+                  label={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4HszD
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#FFFFFF" }}
+                        >
+                          {"R\u00e9server une d\u00e9mo"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  }
+                />
+              </PlasmicLink__>
+            </section>
             <YouTube
               data-plasmic-name={"youTube"}
               data-plasmic-override={overrides.youTube}
@@ -1744,8 +1793,6 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "chiffre",
     "chiffres",
     "douleur2",
@@ -1774,8 +1821,6 @@ const PlasmicDescendants = {
     "navbar",
     "hero",
     "h1",
-    "link",
-    "buttonPrimary",
     "chiffre",
     "chiffres",
     "douleur2",
@@ -1800,10 +1845,8 @@ const PlasmicDescendants = {
     "footerSection"
   ],
   navbar: ["navbar"],
-  hero: ["hero", "h1", "link", "buttonPrimary"],
+  hero: ["hero", "h1"],
   h1: ["h1"],
-  link: ["link", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"],
   chiffre: ["chiffre", "chiffres"],
   chiffres: ["chiffres"],
   douleur2: ["douleur2", "foreground3"],
@@ -1842,8 +1885,6 @@ type NodeDefaultElementType = {
   navbar: typeof Navbar;
   hero: "section";
   h1: "h1";
-  link: "a";
-  buttonPrimary: typeof ButtonPrimary;
   chiffre: "section";
   chiffres: "div";
   douleur2: "section";
@@ -1862,7 +1903,7 @@ type NodeDefaultElementType = {
   casUsage: "section";
   titre: "div";
   casOld: "div";
-  callToAction: typeof CallToAction;
+  callToAction: "section";
   youTube: typeof YouTube;
   pricingSection: typeof Section;
   footerSection: typeof FooterSection;
@@ -1934,8 +1975,6 @@ export const PlasmicCentresDappel = Object.assign(
     navbar: makeNodeComponent("navbar"),
     hero: makeNodeComponent("hero"),
     h1: makeNodeComponent("h1"),
-    link: makeNodeComponent("link"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     chiffre: makeNodeComponent("chiffre"),
     chiffres: makeNodeComponent("chiffres"),
     douleur2: makeNodeComponent("douleur2"),

@@ -8,7 +8,9 @@
   column-gap: 16px;
   height: auto;
   justify-self: flex-start;
-  background: #ffffff4d;
+  background:
+    linear-gradient(var(--token-o5QzyuxQjxLV), var(--token-o5QzyuxQjxLV)),
+    #ffffff4d;
   filter: none;
   backdrop-filter: blur(9px);
   min-width: 0;

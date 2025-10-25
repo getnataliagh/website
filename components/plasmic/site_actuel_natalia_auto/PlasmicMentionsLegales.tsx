@@ -247,7 +247,7 @@ function PlasmicMentionsLegales__RenderFunc(props: {
                   <React.Fragment>
                     <span
                       className={"plasmic_default__all plasmic_default__span"}
-                      style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                      style={{ color: "transparent" }}
                     >
                       {"Mentions l\u00e9gales"}
                     </span>

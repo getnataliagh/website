@@ -90,7 +90,7 @@ export type PlasmicCalculateur__OverridesType = {
   wrapper?: Flex__<"div">;
   navbar?: Flex__<typeof Navbar>;
   section?: Flex__<"section">;
-  header?: Flex__<"header">;
+  titre?: Flex__<"header">;
   h1?: Flex__<"h1">;
   nePasToucher?: Flex__<"div">;
   textbox?: Flex__<"input">;
@@ -99,10 +99,8 @@ export type PlasmicCalculateur__OverridesType = {
   textbox4?: Flex__<"input">;
   textbox5?: Flex__<"input">;
   codeCalculateur?: Flex__<typeof Embed>;
-  p?: Flex__<"p">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   buttonPrimary?: Flex__<typeof ButtonPrimary>;
-  text?: Flex__<"div">;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -283,26 +281,29 @@ function PlasmicCalculateur__RenderFunc(props: {
                 }}
               >
                 <header
-                  data-plasmic-name={"header"}
-                  data-plasmic-override={overrides.header}
-                  className={classNames(projectcss.all, sty.header)}
+                  data-plasmic-name={"titre"}
+                  data-plasmic-override={overrides.titre}
+                  className={classNames(projectcss.all, sty.titre)}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__nvmrh)}
+                  <h1
+                    data-plasmic-name={"h1"}
+                    data-plasmic-override={overrides.h1}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1
+                    )}
                   >
-                    <h1
-                      data-plasmic-name={"h1"}
-                      data-plasmic-override={overrides.h1}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1
-                      )}
-                    >
-                      {"Calculateur de manque \u00e0 gagner"}
-                    </h1>
-                  </div>
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "transparent" }}
+                      >
+                        {"Calculateur de manque \u00e0 gagner"}
+                      </span>
+                    </React.Fragment>
+                  </h1>
                 </header>
                 <div className={classNames(projectcss.all, sty.freeBox__sMkZh)}>
                   <div
@@ -1082,20 +1083,17 @@ function PlasmicCalculateur__RenderFunc(props: {
                     >
                       {"\u00c9vitez ces pertes avec Natalia"}
                     </h2>
-                    <p
-                      data-plasmic-name={"p"}
-                      data-plasmic-override={overrides.p}
+                    <div
                       className={classNames(
                         projectcss.all,
-                        projectcss.p,
                         projectcss.__wab_text,
-                        sty.p
+                        sty.text__d4XCh
                       )}
                     >
                       {
-                        "Ne laissez plus aucun appel sans r\u00e9ponse. Natalia r\u00e9pond instantan\u00e9ment 24/7 \u00e0 tous vos clients."
+                        "Ne laissez plus aucun appel sans r\u00e9ponse. \nNatalia r\u00e9pond instantan\u00e9ment 24/7 \u00e0 tous vos clients."
                       }
-                    </p>
+                    </div>
                     <PlasmicLink__
                       data-plasmic-name={"link"}
                       data-plasmic-override={overrides.link}
@@ -1117,12 +1115,10 @@ function PlasmicCalculateur__RenderFunc(props: {
                         )}
                         label={
                           <div
-                            data-plasmic-name={"text"}
-                            data-plasmic-override={overrides.text}
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text
+                              sty.text__zTIqY
                             )}
                           >
                             <React.Fragment>
@@ -1161,7 +1157,7 @@ const PlasmicDescendants = {
     "wrapper",
     "navbar",
     "section",
-    "header",
+    "titre",
     "h1",
     "nePasToucher",
     "textbox",
@@ -1170,17 +1166,15 @@ const PlasmicDescendants = {
     "textbox4",
     "textbox5",
     "codeCalculateur",
-    "p",
     "link",
     "buttonPrimary",
-    "text",
     "footerSection"
   ],
   wrapper: [
     "wrapper",
     "navbar",
     "section",
-    "header",
+    "titre",
     "h1",
     "nePasToucher",
     "textbox",
@@ -1189,16 +1183,14 @@ const PlasmicDescendants = {
     "textbox4",
     "textbox5",
     "codeCalculateur",
-    "p",
     "link",
     "buttonPrimary",
-    "text",
     "footerSection"
   ],
   navbar: ["navbar"],
   section: [
     "section",
-    "header",
+    "titre",
     "h1",
     "nePasToucher",
     "textbox",
@@ -1207,12 +1199,10 @@ const PlasmicDescendants = {
     "textbox4",
     "textbox5",
     "codeCalculateur",
-    "p",
     "link",
-    "buttonPrimary",
-    "text"
+    "buttonPrimary"
   ],
-  header: ["header", "h1"],
+  titre: ["titre", "h1"],
   h1: ["h1"],
   nePasToucher: [
     "nePasToucher",
@@ -1229,10 +1219,8 @@ const PlasmicDescendants = {
   textbox4: ["textbox4"],
   textbox5: ["textbox5"],
   codeCalculateur: ["codeCalculateur"],
-  p: ["p"],
-  link: ["link", "buttonPrimary", "text"],
-  buttonPrimary: ["buttonPrimary", "text"],
-  text: ["text"],
+  link: ["link", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1243,7 +1231,7 @@ type NodeDefaultElementType = {
   wrapper: "div";
   navbar: typeof Navbar;
   section: "section";
-  header: "header";
+  titre: "header";
   h1: "h1";
   nePasToucher: "div";
   textbox: "input";
@@ -1252,10 +1240,8 @@ type NodeDefaultElementType = {
   textbox4: "input";
   textbox5: "input";
   codeCalculateur: typeof Embed;
-  p: "p";
   link: "a";
   buttonPrimary: typeof ButtonPrimary;
-  text: "div";
   footerSection: typeof FooterSection;
 };
 
@@ -1324,7 +1310,7 @@ export const PlasmicCalculateur = Object.assign(
     wrapper: makeNodeComponent("wrapper"),
     navbar: makeNodeComponent("navbar"),
     section: makeNodeComponent("section"),
-    header: makeNodeComponent("header"),
+    titre: makeNodeComponent("titre"),
     h1: makeNodeComponent("h1"),
     nePasToucher: makeNodeComponent("nePasToucher"),
     textbox: makeNodeComponent("textbox"),
@@ -1333,10 +1319,8 @@ export const PlasmicCalculateur = Object.assign(
     textbox4: makeNodeComponent("textbox4"),
     textbox5: makeNodeComponent("textbox5"),
     codeCalculateur: makeNodeComponent("codeCalculateur"),
-    p: makeNodeComponent("p"),
     link: makeNodeComponent("link"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
-    text: makeNodeComponent("text"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicCalculateur

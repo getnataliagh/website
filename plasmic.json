@@ -2911,6 +2911,41 @@
           "id": "6bWOBRx7cC6W",
           "name": "TurnOffSvgrepoComSvg2Icon",
           "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__TurnOffSvgrepoComSvg2.tsx"
+        },
+        {
+          "id": "i-IIZFr4gG0_",
+          "name": "CallSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CallSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "yViREKfcL3Sa",
+          "name": "CustomerClassLineSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__CustomerClassLineSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "TKRNc6UdAt2m",
+          "name": "BasketSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BasketSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "Sjww4j6BJ3XF",
+          "name": "EuroSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__EuroSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "Z667x3E9eWpC",
+          "name": "BasketSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__BasketSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "RVJLb89UV2Dy",
+          "name": "PhoneMissedSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__PhoneMissedSvgrepoComSvg.tsx"
+        },
+        {
+          "id": "cBc-EceF0Bgg",
+          "name": "PhoneCallSvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/site_actuel_natalia_auto/icons/PlasmicIcon__PhoneCallSvgrepoComSvg.tsx"
         }
       ],
       "images": [

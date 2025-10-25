@@ -125,10 +125,14 @@ export type PlasmicHomepage__OverridesType = {
   headerHero?: Flex__<"section">;
   navbar?: Flex__<typeof Navbar>;
   presentation?: Flex__<"div">;
+  intro?: Flex__<"div">;
+  texte?: Flex__<"div">;
+  titre2?: Flex__<"div">;
   h1?: Flex__<"h1">;
   h4?: Flex__<"h4">;
   advent?: Flex__<"div">;
   bouton?: Flex__<"div">;
+  animation?: Flex__<"div">;
   message?: Flex__<typeof Message>;
   produit?: Flex__<"section">;
   titre3?: Flex__<"div">;
@@ -287,15 +291,20 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.presentation}
                 className={classNames(projectcss.all, sty.presentation)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__b9Miz)}>
+                <div
+                  data-plasmic-name={"intro"}
+                  data-plasmic-override={overrides.intro}
+                  className={classNames(projectcss.all, sty.intro)}
+                >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__kmp0I)}
+                    data-plasmic-name={"texte"}
+                    data-plasmic-override={overrides.texte}
+                    className={classNames(projectcss.all, sty.texte)}
                   >
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___7T440
-                      )}
+                      data-plasmic-name={"titre2"}
+                      data-plasmic-override={overrides.titre2}
+                      className={classNames(projectcss.all, sty.titre2)}
                     >
                       <h1
                         data-plasmic-name={"h1"}
@@ -362,8 +371,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           "__wab_instance",
                           sty.advent__ivegC
                         )}
-                      />
-
+                      >
+                        <FlashSvgrepoComSvgIcon
+                          className={classNames(projectcss.all, sty.svg__a00KI)}
+                          role={"img"}
+                        />
+                      </Advent>
                       <Advent
                         className={classNames(
                           "__wab_instance",
@@ -433,11 +446,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       </PlasmicLink__>
                     </div>
                   </div>
-                  <Message
-                    data-plasmic-name={"message"}
-                    data-plasmic-override={overrides.message}
-                    className={classNames("__wab_instance", sty.message)}
-                  />
+                  <div
+                    data-plasmic-name={"animation"}
+                    data-plasmic-override={overrides.animation}
+                    className={classNames(projectcss.all, sty.animation)}
+                  >
+                    <Message
+                      data-plasmic-name={"message"}
+                      data-plasmic-override={overrides.message}
+                      className={classNames("__wab_instance", sty.message)}
+                    />
+                  </div>
                 </div>
               </div>
             </section>
@@ -2676,10 +2695,14 @@ const PlasmicDescendants = {
     "headerHero",
     "navbar",
     "presentation",
+    "intro",
+    "texte",
+    "titre2",
     "h1",
     "h4",
     "advent",
     "bouton",
+    "animation",
     "message",
     "produit",
     "titre3",
@@ -2721,10 +2744,14 @@ const PlasmicDescendants = {
     "headerHero",
     "navbar",
     "presentation",
+    "intro",
+    "texte",
+    "titre2",
     "h1",
     "h4",
     "advent",
     "bouton",
+    "animation",
     "message",
     "produit",
     "titre3",
@@ -2765,18 +2792,47 @@ const PlasmicDescendants = {
     "headerHero",
     "navbar",
     "presentation",
+    "intro",
+    "texte",
+    "titre2",
     "h1",
     "h4",
     "advent",
     "bouton",
+    "animation",
     "message"
   ],
   navbar: ["navbar"],
-  presentation: ["presentation", "h1", "h4", "advent", "bouton", "message"],
+  presentation: [
+    "presentation",
+    "intro",
+    "texte",
+    "titre2",
+    "h1",
+    "h4",
+    "advent",
+    "bouton",
+    "animation",
+    "message"
+  ],
+  intro: [
+    "intro",
+    "texte",
+    "titre2",
+    "h1",
+    "h4",
+    "advent",
+    "bouton",
+    "animation",
+    "message"
+  ],
+  texte: ["texte", "titre2", "h1", "h4", "advent", "bouton"],
+  titre2: ["titre2", "h1"],
   h1: ["h1"],
   h4: ["h4"],
   advent: ["advent"],
   bouton: ["bouton"],
+  animation: ["animation", "message"],
   message: ["message"],
   produit: ["produit", "titre3", "details", "photo", "assistante", "detail"],
   titre3: ["titre3"],
@@ -2875,10 +2931,14 @@ type NodeDefaultElementType = {
   headerHero: "section";
   navbar: typeof Navbar;
   presentation: "div";
+  intro: "div";
+  texte: "div";
+  titre2: "div";
   h1: "h1";
   h4: "h4";
   advent: "div";
   bouton: "div";
+  animation: "div";
   message: typeof Message;
   produit: "section";
   titre3: "div";
@@ -2982,10 +3042,14 @@ export const PlasmicHomepage = Object.assign(
     headerHero: makeNodeComponent("headerHero"),
     navbar: makeNodeComponent("navbar"),
     presentation: makeNodeComponent("presentation"),
+    intro: makeNodeComponent("intro"),
+    texte: makeNodeComponent("texte"),
+    titre2: makeNodeComponent("titre2"),
     h1: makeNodeComponent("h1"),
     h4: makeNodeComponent("h4"),
     advent: makeNodeComponent("advent"),
     bouton: makeNodeComponent("bouton"),
+    animation: makeNodeComponent("animation"),
     message: makeNodeComponent("message"),
     produit: makeNodeComponent("produit"),
     titre3: makeNodeComponent("titre3"),

@@ -186,7 +186,7 @@ function PlasmicAvantage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__cn613)}
-                displayHeight={"auto"}
+                displayHeight={"50px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
