@@ -1215,6 +1215,15 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>{'"'}</React.Fragment>
                     </React.Fragment>
                   </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__gK3Xg
+                    )}
+                  >
+                    {"R\u00e9servez"}
+                  </div>
                 </div>
               </div>
             </section>

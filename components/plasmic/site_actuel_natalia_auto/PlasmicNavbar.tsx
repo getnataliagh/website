@@ -63,6 +63,7 @@ import Logo from "../../Logo"; // plasmic-import: Oz4K6O9ubKeI/component
 import Linknavbar from "../../Linknavbar"; // plasmic-import: WE9ZsjIciENK/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import MenuBurger from "../../MenuBurger"; // plasmic-import: 0xX5T15PyzuS/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -98,6 +99,7 @@ export type PlasmicNavbar__OverridesType = {
   menuBurger?: Flex__<typeof MenuBurger>;
   actionBurger?: Flex__<"div">;
   svg?: Flex__<"svg">;
+  embedHtml?: Flex__<typeof Embed>;
 };
 
 export interface DefaultNavbarProps {
@@ -358,6 +360,12 @@ function PlasmicNavbar__RenderFunc(props: {
           role={"img"}
         />
       </div>
+      <Embed
+        data-plasmic-name={"embedHtml"}
+        data-plasmic-override={overrides.embedHtml}
+        className={classNames("__wab_instance", sty.embedHtml)}
+        code={"<div>Paste your embed code via the right sidebar</div>"}
+      />
     </div>
   ) as React.ReactElement | null;
 }
@@ -374,7 +382,8 @@ const PlasmicDescendants = {
     "text",
     "menuBurger",
     "actionBurger",
-    "svg"
+    "svg",
+    "embedHtml"
   ],
   logoContainer: ["logoContainer", "logo"],
   logo: ["logo"],
@@ -385,7 +394,8 @@ const PlasmicDescendants = {
   text: ["text"],
   menuBurger: ["menuBurger"],
   actionBurger: ["actionBurger", "svg"],
-  svg: ["svg"]
+  svg: ["svg"],
+  embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -402,6 +412,7 @@ type NodeDefaultElementType = {
   menuBurger: typeof MenuBurger;
   actionBurger: "div";
   svg: "svg";
+  embedHtml: typeof Embed;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -476,6 +487,7 @@ export const PlasmicNavbar = Object.assign(
     menuBurger: makeNodeComponent("menuBurger"),
     actionBurger: makeNodeComponent("actionBurger"),
     svg: makeNodeComponent("svg"),
+    embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
