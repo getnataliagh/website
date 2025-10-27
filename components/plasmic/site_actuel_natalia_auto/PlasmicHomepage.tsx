@@ -371,6 +371,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "__wab_instance",
                           sty.advent__ivegC
                         )}
+                        texte={"R\u00e9ponse en <10s"}
                       >
                         <FlashSvgrepoComSvgIcon
                           className={classNames(projectcss.all, sty.svg__a00KI)}
@@ -1214,15 +1215,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       </span>
                       <React.Fragment>{'"'}</React.Fragment>
                     </React.Fragment>
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__gK3Xg
-                    )}
-                  >
-                    {"R\u00e9servez"}
                   </div>
                 </div>
               </div>
