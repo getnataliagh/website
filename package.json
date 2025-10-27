@@ -17,6 +17,7 @@
     "@plasmicpkgs/antd5": "^0.0.267",
     "@plasmicpkgs/lottie-react": "^0.0.219",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.251",
+    "@plasmicpkgs/plasmic-embed-css": "^0.1.213",
     "@plasmicpkgs/plasmic-rich-components": "^1.0.221",
     "@plasmicpkgs/plasmic-tabs": "^0.0.68",
     "@plasmicpkgs/react-aria": "^0.0.108",

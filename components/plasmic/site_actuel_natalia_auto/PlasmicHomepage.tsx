@@ -1412,8 +1412,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__ubTDu)}
+                      alt={"icon"}
+                      className={classNames(
+                        sty.img__ubTDu,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -1443,7 +1446,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img___2Qx2B)}
+                      className={classNames(
+                        sty.img___2Qx2B,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -1475,7 +1481,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__kec2Q)}
+                      className={classNames(
+                        sty.img__kec2Q,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -1507,7 +1516,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__j4Ash)}
+                      className={classNames(
+                        sty.img__j4Ash,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -1539,7 +1551,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__zRiXp)}
+                      className={classNames(
+                        sty.img__zRiXp,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"
@@ -1571,7 +1586,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     <PlasmicImg__
                       alt={""}
-                      className={classNames(sty.img__p4G8G)}
+                      className={classNames(
+                        sty.img__p4G8G,
+                        "icon-png-to-white"
+                      )}
                       displayHeight={
                         hasVariant(globalVariants, "mobile", "mobileOnly")
                           ? "30px"

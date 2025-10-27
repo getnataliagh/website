@@ -1544,6 +1544,8 @@
   object-fit: cover;
   width: auto;
   height: 50px;
+  transform: translateX(0px) translateY(0px) translateZ(0px) translateX(0px)
+    translateY(0px) translateZ(0px);
 }
 .img__ubTDu > picture > img {
   object-fit: cover;
