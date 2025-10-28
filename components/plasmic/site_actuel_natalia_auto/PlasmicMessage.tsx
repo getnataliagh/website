@@ -149,7 +149,7 @@ function PlasmicMessage__RenderFunc(props: {
         data-plasmic-override={overrides.lottieAsync}
         animationUrl={(() => {
           try {
-            return "https://lottie.host/115e4975-bc80-4eaf-b362-328152e7024e/qKUViRXTPe.json";
+            return "https://lottie.host/66e56ab1-085f-446e-afd6-7c51f726b556/1rBOgWtpjM.json";
           } catch (e) {
             if (
               e instanceof TypeError ||
