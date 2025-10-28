@@ -371,7 +371,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "__wab_instance",
                           sty.advent__ivegC
                         )}
-                        texte={"R\u00e9ponse en <10s"}
+                        texte={"R\u00e9ponse en <1s"}
                       >
                         <FlashSvgrepoComSvgIcon
                           className={classNames(projectcss.all, sty.svg__a00KI)}

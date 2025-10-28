@@ -165,6 +165,11 @@ function PlasmicCardWithBackground1__RenderFunc(props: {
     $refs
   });
 
+  const [isRootHover, triggerRootHoverProps] = useTrigger("useHover", {});
+  const triggers = {
+    hover_root: isRootHover
+  };
+
   const styleTokensClassNames = _useStyleTokens();
 
   return (
@@ -245,6 +250,7 @@ function PlasmicCardWithBackground1__RenderFunc(props: {
           $steps["updateIsOpen"] = await $steps["updateIsOpen"];
         }
       }}
+      data-plasmic-trigger-props={[triggerRootHoverProps]}
     >
       <PlasmicImg__
         data-plasmic-name={"img"}
@@ -303,21 +309,11 @@ function PlasmicCardWithBackground1__RenderFunc(props: {
           </React.Fragment>
         </h5>
         {(
-          hasVariant(globalVariants, "mobile", "mobileOnly")
+          triggers.hover_root
             ? true
-            : (() => {
-                try {
-                  return $state.isOpen;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return true;
-                  }
-                  throw e;
-                }
-              })()
+            : hasVariant(globalVariants, "mobile", "mobileOnly")
+              ? true
+              : false
         ) ? (
           <h6
             data-plasmic-name={"h6"}

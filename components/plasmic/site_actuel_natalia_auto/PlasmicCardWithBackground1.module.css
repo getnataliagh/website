@@ -109,3 +109,6 @@
     display: block;
   }
 }
+.root:hover .h6 {
+  display: block;
+}
