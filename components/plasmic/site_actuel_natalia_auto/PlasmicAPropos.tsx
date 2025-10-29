@@ -63,7 +63,7 @@ import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import Equipe from "../../Equipe"; // plasmic-import: O7m8_939gpC-/component
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -94,7 +94,7 @@ export type PlasmicAPropos__OverridesType = {
   chronologie?: Flex__<"section">;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultAProposProps {}
@@ -1818,10 +1818,10 @@ function PlasmicAPropos__RenderFunc(props: {
               </div>
             </div>
           </Section>
-          <FooterSection
-            data-plasmic-name={"footerSection"}
-            data-plasmic-override={overrides.footerSection}
-            className={classNames("__wab_instance", sty.footerSection)}
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
           />
         </div>
       </div>
@@ -1841,7 +1841,7 @@ const PlasmicDescendants = {
     "chronologie",
     "pricingSection",
     "columns",
-    "footerSection"
+    "footer"
   ],
   wrapper: [
     "wrapper",
@@ -1860,7 +1860,7 @@ const PlasmicDescendants = {
   chronologie: ["chronologie"],
   pricingSection: ["pricingSection", "columns"],
   columns: ["columns"],
-  footerSection: ["footerSection"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1876,7 +1876,7 @@ type NodeDefaultElementType = {
   chronologie: "section";
   pricingSection: typeof Section;
   columns: "div";
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1950,7 +1950,7 @@ export const PlasmicAPropos = Object.assign(
     chronologie: makeNodeComponent("chronologie"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicAPropos
     internalVariantProps: PlasmicAPropos__VariantProps,

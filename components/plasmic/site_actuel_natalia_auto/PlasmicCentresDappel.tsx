@@ -61,16 +61,12 @@ import {
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
-import Avantage from "../../Avantage"; // plasmic-import: MXIUXB0YnmeL/component
+import Probleme from "../../Probleme"; // plasmic-import: MXIUXB0YnmeL/component
 import CetaitAvant from "../../CetaitAvant"; // plasmic-import: fEr4e8g2uhL6/component
-import Raison from "../../Raison"; // plasmic-import: vAcwOvnOFNI4/component
-import Solution from "../../Solution"; // plasmic-import: BGruYdkhsXAs/component
-import CasDusageNew from "../../CasDusageNew"; // plasmic-import: mUYvgEuGkieL/component
-import CasDusageOld from "../../CasDusageOld"; // plasmic-import: x2T3E4Kio9_Z/component
-import YouTube from "@plasmicpkgs/react-youtube";
-import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
-import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Solution from "../../Solution"; // plasmic-import: vAcwOvnOFNI4/component
+import CasDusage from "../../CasDusage"; // plasmic-import: mUYvgEuGkieL/component
+import Avantages from "../../Avantages"; // plasmic-import: x2T3E4Kio9_Z/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -81,7 +77,6 @@ import sty from "./PlasmicCentresDappel.module.css"; // plasmic-import: ma5qxHUh
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: ViTHihoGnbR-/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: BAVaBjl9jJEK/icon
-import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
 import ExchangePersonelSvgrepoComSvg2Icon from "./icons/PlasmicIcon__ExchangePersonelSvgrepoComSvg2"; // plasmic-import: 560pCDFRMbfl/icon
 import HourglassActiveSvgrepoComSvg2Icon from "./icons/PlasmicIcon__HourglassActiveSvgrepoComSvg2"; // plasmic-import: 2GUMrOklntnw/icon
 import ShapesSvgrepoComSvg2Icon from "./icons/PlasmicIcon__ShapesSvgrepoComSvg2"; // plasmic-import: QnRQhDpwpqwS/icon
@@ -103,15 +98,9 @@ export type PlasmicCentresDappel__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCentresDappel__VariantsArgs;
 export const PlasmicCentresDappel__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCentresDappel__ArgsType = {
-  children?: React.ReactNode;
-  slot?: React.ReactNode;
-};
+export type PlasmicCentresDappel__ArgsType = {};
 type ArgPropType = keyof PlasmicCentresDappel__ArgsType;
-export const PlasmicCentresDappel__ArgProps = new Array<ArgPropType>(
-  "children",
-  "slot"
-);
+export const PlasmicCentresDappel__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicCentresDappel__OverridesType = {
   body?: Flex__<"div">;
@@ -120,11 +109,8 @@ export type PlasmicCentresDappel__OverridesType = {
   hero?: Flex__<"section">;
   h1?: Flex__<"h1">;
   chiffre?: Flex__<"section">;
-  chiffres?: Flex__<"div">;
   douleur2?: Flex__<"section">;
-  foreground3?: Flex__<"div">;
   chiffre2?: Flex__<"section">;
-  chiffres2?: Flex__<"div">;
   section?: Flex__<"section">;
   headerHeroSection?: Flex__<"div">;
   cetaitAvant?: Flex__<typeof CetaitAvant>;
@@ -134,13 +120,12 @@ export type PlasmicCentresDappel__OverridesType = {
   cdKglobal?: Flex__<"div">;
   dcSnet?: Flex__<"div">;
   bee2Link?: Flex__<"div">;
+  columns?: Flex__<"div">;
   casUsage?: Flex__<"section">;
   titre?: Flex__<"div">;
   casOld?: Flex__<"div">;
   callToAction?: Flex__<"section">;
-  youTube?: Flex__<typeof YouTube>;
-  pricingSection?: Flex__<typeof Section>;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultCentresDappelProps {}
@@ -420,58 +405,34 @@ function PlasmicCentresDappel__RenderFunc(props: {
               data-plasmic-override={overrides.chiffre}
               className={classNames(projectcss.all, sty.chiffre)}
             >
-              <div
-                data-plasmic-name={"chiffres"}
-                data-plasmic-override={overrides.chiffres}
-                className={classNames(projectcss.all, sty.chiffres)}
+              <h3
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3__s73Up
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__jSmK5
-                  )}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                  >
                     {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__s73Up
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "L'IA est un enjeu majeur pour les centres d'appels dans les mois et ann\u00e9es \u00e0 venir. "
-                            }
-                          </span>
-                          <React.Fragment>{"\n"}</React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-okZqvxZ_nx_g)" }}
-                          >
-                            {
-                              "Pour rester comp\u00e9titif, vous devez proposez des solutions adapt\u00e9es \u00e0 vos clients. "
-                            }
-                          </span>
-                        </React.Fragment>
-                      </h3>
+                      "L'IA est un enjeu majeur pour les centres d'appels dans les mois et ann\u00e9es \u00e0 venir. "
                     }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </div>
-              </div>
+                  </span>
+                  <React.Fragment>{"\n"}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "var(--token-okZqvxZ_nx_g)" }}
+                  >
+                    {
+                      "Pour rester comp\u00e9titif, vous devez proposez des solutions adapt\u00e9es \u00e0 vos clients. "
+                    }
+                  </span>
+                </React.Fragment>
+              </h3>
             </section>
             <section
               data-plasmic-name={"douleur2"}
@@ -489,321 +450,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                 >
                   {"Vos probl\u00e8mes..."}
                 </h2>
-                <div
-                  data-plasmic-name={"foreground3"}
-                  data-plasmic-override={overrides.foreground3}
-                  className={classNames(projectcss.all, sty.foreground3)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.columns__bt4XT)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__hlGx6)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__gT4VH
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ejTJh
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__e5CyC)}
-                            displayHeight={"56px"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"none"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"56px"}
-                            src={
-                              "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/twitter/281/red-apple_1f34e.png"
-                            }
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__odvf9
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__n3EAd
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__einA4
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__mahmt
-                            )}
-                          >
-                            {"Turnover important"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__hhlP
-                            )}
-                          >
-                            {
-                              "C'est un m\u00e9tier \u00e9prouvant pour vos \u00e9quipes, vous avez du turnover et devez sans cesse recruter et reformer \u00e0 nouveau."
-                            }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__wYMrD)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__aGdM
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__iiruq
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__inbOx)}
-                            displayHeight={"56px"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"none"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"56px"}
-                            src={
-                              "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/twitter/281/banana_1f34c.png"
-                            }
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__tolDz
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___0A3Cc
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__lgB4C
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__nFcT9
-                            )}
-                          >
-                            {"Temps d'attente"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__kUpu
-                            )}
-                          >
-                            {
-                              "Malgr\u00e9 un plan de charge millim\u00e9tr\u00e9, vous ne pouvez pas faire face aux impr\u00e9vus et scaler votre capacit\u00e9 d'appels au dernier moment..."
-                            }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__xkBl2)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___62Rs4
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ot8V
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__hDnSr)}
-                            displayHeight={"56px"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"none"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"56px"}
-                            src={
-                              "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/twitter/281/cherries_1f352.png"
-                            }
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__ggwsZ
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__gebYr
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ctPfm
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__o9Ozl
-                            )}
-                          >
-                            {hasVariant(globalVariants, "mobile", "mobileOnly")
-                              ? "H\u00e9t\u00e9rog\u00e8ne"
-                              : "H\u00e9t\u00e9rog\u00e9n\u00e9it\u00e9"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rRsuu
-                            )}
-                          >
-                            {
-                              "Votre qualit\u00e9 de r\u00e9ponse n'est pas toujours optimale, vous avez d\u00fb mal \u00e0 standardiser malgr\u00e9 les process en place."
-                            }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__fjj5R)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__cza4H
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__nGlCa
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__jFyp)}
-                            displayHeight={"56px"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"none"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"56px"}
-                            src={
-                              "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/twitter/281/doughnut_1f369.png"
-                            }
-                          />
-                        </div>
-                        {false ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__rxJIv
-                            )}
-                          >
-                            <Icon8Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___2FIrK
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__sfX4Q
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___236Ft
-                            )}
-                          >
-                            {hasVariant(globalVariants, "mobile", "mobileOnly")
-                              ? "Disponibilit\u00e9"
-                              : "Disponibilit\u00e9s"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__pBXlK
-                            )}
-                          >
-                            {
-                              "Entre les pics d'appels, les heures ferm\u00e9es, les week-ends, les vacances, il est difficile d'\u00eatre toujours disponible pour vos clients"
-                            }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__kzIWq)}>
-                  <Avantage
+                  <Probleme
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__ng8Sl
+                      sty.probleme__ng8Sl
                     )}
                     descr={
                       "C'est un m\u00e9tier \u00e9prouvant pour vos \u00e9quipes, vous avez du turnover et devez sans cesse recruter et reformer \u00e0 nouveau."
@@ -814,11 +465,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg___6OLn1)}
                       role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Probleme>
+                  <Probleme
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__oZppc
+                      sty.probleme__oZppc
                     )}
                     descr={
                       "Malgr\u00e9 un plan de charge millim\u00e9tr\u00e9, vous ne pouvez pas faire face aux impr\u00e9vus et scaler votre capacit\u00e9 d'appels au dernier moment..."
@@ -829,11 +480,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__dNceQ)}
                       role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Probleme>
+                  <Probleme
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__o1AIo
+                      sty.probleme__o1AIo
                     )}
                     descr={
                       "Votre qualit\u00e9 de r\u00e9ponse n'est pas toujours optimale, vous avez d\u00fb mal \u00e0 standardiser malgr\u00e9 les process en place."
@@ -844,11 +495,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__oZw27)}
                       role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Probleme>
+                  <Probleme
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__awAUx
+                      sty.probleme__awAUx
                     )}
                     descr={
                       "Entre les pics d'appels, les heures ferm\u00e9es, les week-ends, les vacances, il est difficile d'\u00eatre toujours disponible pour vos clients"
@@ -859,7 +510,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__sJmWx)}
                       role={"img"}
                     />
-                  </Avantage>
+                  </Probleme>
                 </div>
               </div>
             </section>
@@ -868,59 +519,18 @@ function PlasmicCentresDappel__RenderFunc(props: {
               data-plasmic-override={overrides.chiffre2}
               className={classNames(projectcss.all, sty.chiffre2)}
             >
-              <div
-                data-plasmic-name={"chiffres2"}
-                data-plasmic-override={overrides.chiffres2}
-                className={classNames(projectcss.all, sty.chiffres2)}
+              <h3
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3__mV5Pq
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ssXuQ
-                  )}
-                >
-                  {hasVariant(globalVariants, "mobile", "mobileOnly") ? (
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__mV5Pq
-                          )}
-                        >
-                          {hasVariant(globalVariants, "mobile", "mobileOnly")
-                            ? "Malgr\u00e9 vos efforts, votre organisation a ses limites et vos co\u00fbts fixes plombent la rentabilit\u00e9..."
-                            : "Malgr\u00e9 vos efforts, votre organisation a ses limites et \nvos co\u00fbts fixes plombent la rentabilit\u00e9..."}
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__mV5Pq
-                          )}
-                        >
-                          {hasVariant(globalVariants, "mobile", "mobileOnly")
-                            ? "Malgr\u00e9 vos efforts, votre organisation a ses limites et vos co\u00fbts fixes plombent la rentabilit\u00e9..."
-                            : "Malgr\u00e9 vos efforts, votre organisation a ses limites et \nvos co\u00fbts fixes plombent la rentabilit\u00e9..."}
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  )}
-                </div>
-              </div>
+                {hasVariant(globalVariants, "mobile", "mobileOnly")
+                  ? "Malgr\u00e9 vos efforts, votre organisation a ses limites et vos co\u00fbts fixes plombent la rentabilit\u00e9..."
+                  : "Malgr\u00e9 vos efforts, votre organisation a ses limites et \nvos co\u00fbts fixes plombent la rentabilit\u00e9..."}
+              </h3>
             </section>
             <section
               data-plasmic-name={"section"}
@@ -963,10 +573,13 @@ function PlasmicCentresDappel__RenderFunc(props: {
                   </React.Fragment>
                 </h2>
                 <div className={classNames(projectcss.all, sty.freeBox__vj9AS)}>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__t8O4Z)}
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__t8O4Z
+                    )}
                     descr={
-                      "Apportez de la disponiblit\u00e9 et donc de la flexibilit\u00e9 \u00e0 votre organisation. 24h24, 7j/7 pour g\u00e9rer les appels, les astreintes, les vacances, jours f\u00e9ri\u00e9s, etc."
+                      "Apportez de la disponiblit\u00e9 et donc de la flexibilit\u00e9 \u00e0 votre organisation. 24h/24, 7j/7 pour g\u00e9rer les appels, les astreintes, les vacances, jours f\u00e9ri\u00e9s, etc..."
                     }
                     img={{
                       src: "/plasmic/site_actuel_natalia_auto/images/missedCallSvgrepoComSvg.svg",
@@ -984,9 +597,12 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__wFjQe)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__wFjQe
+                    )}
                     descr={
                       "Notre accompagnement s'adapte \u00e0 vos besoins, ce n'est pas un outil standard sur \u00e9tag\u00e8re qui ne correspond pas \u00e0 votre cahier des charges."
                     }
@@ -1006,11 +622,14 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__kisfl)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__kisfl
+                    )}
                     descr={
-                      "Nous pouvons mettre une capacit\u00e9 de 100 appels en parall\u00e8le ou plus selon vos besoins, de quoi g\u00e9rer les impr\u00e9vus et les pics d'appels. Augmentez votre capacit\u00e9 d'appels sans exploser vos co\u00fbts."
+                      "Nous pouvons mettre une capacit\u00e9 de 100 appels en parall\u00e8le, ou plus, selon vos besoins, de quoi g\u00e9rer les impr\u00e9vus et les pics d'appels. Augmentez votre capacit\u00e9 d'appels sans exploser vos co\u00fbts."
                     }
                     img={{
                       src: "/plasmic/site_actuel_natalia_auto/images/hourglassActiveSvgrepoComSvg.svg",
@@ -1028,9 +647,12 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__fpZhX)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__fpZhX
+                    )}
                     descr={
                       "Connect\u00e9e \u00e0 vos outils m\u00e9tiers, Natalia remonte les flux au bon endroit au bon moment pour vous faire gagner du temps de saisi r\u00e9p\u00e9titif et chronophage."
                     }
@@ -1050,111 +672,6 @@ function PlasmicCentresDappel__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__qw3Kk)}>
-                  <Solution
-                    className={classNames("__wab_instance", sty.solution__reLx)}
-                    image={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20251016A105758Png.png",
-                      fullWidth: 732,
-                      fullHeight: 490,
-                      aspectRatio: undefined
-                    }}
-                    titre={"Disponible."}
-                  >
-                    <DelaySvgrepoComSvgIcon
-                      className={classNames(projectcss.all, sty.svg__nNbst)}
-                      role={"img"}
-                    />
-                  </Solution>
-                  <Solution
-                    className={classNames(
-                      "__wab_instance",
-                      sty.solution__qg2An
-                    )}
-                    description={
-                      "Notre accompagnement s'adapte \u00e0 vos besoins, ce n'est pas un outil standard sur \u00e9tag\u00e8re qui ne correspond pas \u00e0 votre cahier des charges."
-                    }
-                    image={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20251016A105805Png.png",
-                      fullWidth: 732,
-                      fullHeight: 490,
-                      aspectRatio: undefined
-                    }}
-                    revers={
-                      hasVariant(globalVariants, "mobile", "mobileOnly")
-                        ? undefined
-                        : true
-                    }
-                    titre={"Personnalis\u00e9e."}
-                  >
-                    <Icon18Icon
-                      className={classNames(projectcss.all, sty.svg__yb2Pf)}
-                      role={"img"}
-                    />
-                  </Solution>
-                  <Solution
-                    className={classNames(
-                      "__wab_instance",
-                      sty.solution__sVuZi
-                    )}
-                    description={
-                      "Nous pouvons mettre une capacit\u00e9 de 100 appels en parall\u00e8le ou plus selon vos besoins, de quoi g\u00e9rer les impr\u00e9vus et les pics d'appels. Augmentez votre capacit\u00e9 d'appels sans exploser vos co\u00fbts."
-                    }
-                    image={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/captureDecran20251016A105758Png.png",
-                      fullWidth: 732,
-                      fullHeight: 490,
-                      aspectRatio: undefined
-                    }}
-                    titre={"Scalable."}
-                  >
-                    {renderPlasmicSlot({
-                      defaultContents: (
-                        <Rocket02SvgrepoComSvgIcon
-                          className={classNames(projectcss.all, sty.svg__cdRBu)}
-                          role={"img"}
-                        />
-                      ),
-
-                      value: args.children
-                    })}
-                  </Solution>
-                  <Solution
-                    className={classNames(
-                      "__wab_instance",
-                      sty.solution__jwFl0
-                    )}
-                    description={
-                      "Connect\u00e9e \u00e0 vos outils m\u00e9tiers, Natalia remonte les flux au bon endroit au bon moment pour vous faire gagner du temps de saisi r\u00e9p\u00e9titif et chronophage."
-                    }
-                    image={{
-                      src: "/plasmic/site_actuel_natalia_auto/images/chatGptImage16Oct2025163115Png.png",
-                      fullWidth: 1024,
-                      fullHeight: 1024,
-                      aspectRatio: undefined
-                    }}
-                    revers={
-                      hasVariant(globalVariants, "mobile", "mobileOnly")
-                        ? undefined
-                        : true
-                    }
-                    titre={"Int\u00e9gr\u00e9e."}
-                  >
-                    {renderPlasmicSlot({
-                      defaultContents: (
-                        <ConnectionSvgrepoCom1SvgIcon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___8P7RP
-                          )}
-                          role={"img"}
-                        />
-                      ),
-
-                      value: args.slot
-                    })}
                   </Solution>
                 </div>
               </div>
@@ -1329,7 +846,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                   />
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.columns__jLpjh)}>
+              <div
+                data-plasmic-name={"columns"}
+                data-plasmic-override={overrides.columns}
+                className={classNames(projectcss.all, sty.columns)}
+              >
                 <div className={classNames(projectcss.all, sty.column__klnWd)}>
                   <PlasmicImg__
                     alt={""}
@@ -1523,10 +1044,10 @@ function PlasmicCentresDappel__RenderFunc(props: {
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__j9Pf8)}>
-                  <CasDusageNew
+                  <CasDusage
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageNew__wkl4H
+                      sty.casDusage__wkl4H
                     )}
                     description={
                       "Connect\u00e9e \u00e0 votre calendrier m\u00e9tier, type Service Box ou MecaPlanning, Natalia propose des cr\u00e9neaux, valide avec le client et renseigne les informations directement sur le logiciel."
@@ -1537,11 +1058,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__dzXfp)}
                       role={"img"}
                     />
-                  </CasDusageNew>
-                  <CasDusageNew
+                  </CasDusage>
+                  <CasDusage
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageNew__yfFVg
+                      sty.casDusage__yfFVg
                     )}
                     description={
                       "Natalia est disponible 24h/24, 7j/7, elle prend donc en charge 100% des demandes entrants y compris les leads. Durant l'\u00e9change, elle qualifie le besoin et renvoie les informations au service concern\u00e9."
@@ -1552,11 +1073,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__kgcVl)}
                       role={"img"}
                     />
-                  </CasDusageNew>
-                  <CasDusageNew
+                  </CasDusage>
+                  <CasDusage
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageNew__fwJla
+                      sty.casDusage__fwJla
                     )}
                     description={
                       "20% des appels en concession sont des appels \u00e0 transf\u00e9rer, cela prend du temps, casse la productivit\u00e9 de vos \u00e9quipes et n'apporte pas de r\u00e9elle valeur ajout\u00e9e."
@@ -1567,11 +1088,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg___03DoX)}
                       role={"img"}
                     />
-                  </CasDusageNew>
-                  <CasDusageNew
+                  </CasDusage>
+                  <CasDusage
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageNew__pozq4
+                      sty.casDusage__pozq4
                     )}
                     description={
                       "R\u00e9ponse aux demandes r\u00e9currentes \u00e0 partir de votre base de connaissance. Natalia s'enrichit des \u00e9changes dans le temps pour \u00eatre de plus en plus pertinente."
@@ -1582,24 +1103,24 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__eTnr6)}
                       role={"img"}
                     />
-                  </CasDusageNew>
+                  </CasDusage>
                 </div>
                 <div
                   data-plasmic-name={"casOld"}
                   data-plasmic-override={overrides.casOld}
                   className={classNames(projectcss.all, sty.casOld)}
                 >
-                  <CasDusageOld
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageOld__glry
+                      sty.avantages__glry
                     )}
                   />
 
-                  <CasDusageOld
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageOld__ql18V
+                      sty.avantages__ql18V
                     )}
                     description={
                       "Natalia est disponible 24h/24, 7j/7, elle prend donc en charge 100% des demandes entrants y compris les leads. Durant l'\u00e9change, elle qualifie le besoin et renvoie les informations au service concern\u00e9."
@@ -1611,11 +1132,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__dutvm)}
                       role={"img"}
                     />
-                  </CasDusageOld>
-                  <CasDusageOld
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageOld___2U7Jh
+                      sty.avantages___2U7Jh
                     )}
                     description={
                       "20% des appels en concession sont des appels \u00e0 transf\u00e9rer, cela prend du temps, casse la productivit\u00e9 de vos \u00e9quipes et n'apporte pas de r\u00e9elle valeur ajout\u00e9e."
@@ -1626,11 +1147,11 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__qc7Ux)}
                       role={"img"}
                     />
-                  </CasDusageOld>
-                  <CasDusageOld
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.casDusageOld___4UbrH
+                      sty.avantages___4UbrH
                     )}
                     description={
                       "R\u00e9ponse aux demandes r\u00e9currentes \u00e0 partir de votre base de connaissance. Natalia s'enrichit des \u00e9changes dans le temps pour \u00eatre de plus en plus pertinente."
@@ -1642,7 +1163,7 @@ function PlasmicCentresDappel__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.svg__c4F3N)}
                       role={"img"}
                     />
-                  </CasDusageOld>
+                  </Avantages>
                 </div>
               </div>
             </section>
@@ -1708,76 +1229,10 @@ function PlasmicCentresDappel__RenderFunc(props: {
                 />
               </PlasmicLink__>
             </section>
-            <YouTube
-              data-plasmic-name={"youTube"}
-              data-plasmic-override={overrides.youTube}
-              className={classNames("__wab_instance", sty.youTube)}
-              videoId={"R6MeLqRQzYw"}
-            />
-
-            <Section
-              data-plasmic-name={"pricingSection"}
-              data-plasmic-override={overrides.pricingSection}
-              className={classNames("__wab_instance", sty.pricingSection)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__gBf2B)}>
-                <div className={classNames(projectcss.all, sty.columns__xhY1V)}>
-                  <div
-                    className={classNames(projectcss.all, sty.column___0LPiW)}
-                  >
-                    <PriceCard
-                      borders={["flatLeft"]}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard___6PjkS
-                      )}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__dxs3J)}
-                  >
-                    <PriceCard
-                      borders={["flatCenter"]}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__t0Vmk
-                      )}
-                    />
-
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__kUxea)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__eLl1I
-                        )}
-                      >
-                        {hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "We Recommended"
-                          : "We Recommended"}
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__czlKy)}
-                  >
-                    <PriceCard
-                      borders={["flatRight"]}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.priceCard__qyHzn
-                      )}
-                    />
-                  </div>
-                </div>
-              </div>
-            </Section>
-            <FooterSection
-              data-plasmic-name={"footerSection"}
-              data-plasmic-override={overrides.footerSection}
-              className={classNames("__wab_instance", sty.footerSection)}
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
             />
           </section>
         </div>
@@ -1794,11 +1249,8 @@ const PlasmicDescendants = {
     "hero",
     "h1",
     "chiffre",
-    "chiffres",
     "douleur2",
-    "foreground3",
     "chiffre2",
-    "chiffres2",
     "section",
     "headerHeroSection",
     "cetaitAvant",
@@ -1808,13 +1260,12 @@ const PlasmicDescendants = {
     "cdKglobal",
     "dcSnet",
     "bee2Link",
+    "columns",
     "casUsage",
     "titre",
     "casOld",
     "callToAction",
-    "youTube",
-    "pricingSection",
-    "footerSection"
+    "footer"
   ],
   wrapper: [
     "wrapper",
@@ -1822,11 +1273,8 @@ const PlasmicDescendants = {
     "hero",
     "h1",
     "chiffre",
-    "chiffres",
     "douleur2",
-    "foreground3",
     "chiffre2",
-    "chiffres2",
     "section",
     "headerHeroSection",
     "cetaitAvant",
@@ -1836,23 +1284,19 @@ const PlasmicDescendants = {
     "cdKglobal",
     "dcSnet",
     "bee2Link",
+    "columns",
     "casUsage",
     "titre",
     "casOld",
     "callToAction",
-    "youTube",
-    "pricingSection",
-    "footerSection"
+    "footer"
   ],
   navbar: ["navbar"],
   hero: ["hero", "h1"],
   h1: ["h1"],
-  chiffre: ["chiffre", "chiffres"],
-  chiffres: ["chiffres"],
-  douleur2: ["douleur2", "foreground3"],
-  foreground3: ["foreground3"],
-  chiffre2: ["chiffre2", "chiffres2"],
-  chiffres2: ["chiffres2"],
+  chiffre: ["chiffre"],
+  douleur2: ["douleur2"],
+  chiffre2: ["chiffre2"],
   section: ["section", "headerHeroSection"],
   headerHeroSection: ["headerHeroSection"],
   cetaitAvant: ["cetaitAvant"],
@@ -1862,19 +1306,19 @@ const PlasmicDescendants = {
     "nextlane",
     "cdKglobal",
     "dcSnet",
-    "bee2Link"
+    "bee2Link",
+    "columns"
   ],
   nextlane: ["nextlane"],
   cdKglobal: ["cdKglobal"],
   dcSnet: ["dcSnet"],
   bee2Link: ["bee2Link"],
+  columns: ["columns"],
   casUsage: ["casUsage", "titre", "casOld"],
   titre: ["titre"],
   casOld: ["casOld"],
   callToAction: ["callToAction"],
-  youTube: ["youTube"],
-  pricingSection: ["pricingSection"],
-  footerSection: ["footerSection"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1886,11 +1330,8 @@ type NodeDefaultElementType = {
   hero: "section";
   h1: "h1";
   chiffre: "section";
-  chiffres: "div";
   douleur2: "section";
-  foreground3: "div";
   chiffre2: "section";
-  chiffres2: "div";
   section: "section";
   headerHeroSection: "div";
   cetaitAvant: typeof CetaitAvant;
@@ -1900,13 +1341,12 @@ type NodeDefaultElementType = {
   cdKglobal: "div";
   dcSnet: "div";
   bee2Link: "div";
+  columns: "div";
   casUsage: "section";
   titre: "div";
   casOld: "div";
   callToAction: "section";
-  youTube: typeof YouTube;
-  pricingSection: typeof Section;
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1976,11 +1416,8 @@ export const PlasmicCentresDappel = Object.assign(
     hero: makeNodeComponent("hero"),
     h1: makeNodeComponent("h1"),
     chiffre: makeNodeComponent("chiffre"),
-    chiffres: makeNodeComponent("chiffres"),
     douleur2: makeNodeComponent("douleur2"),
-    foreground3: makeNodeComponent("foreground3"),
     chiffre2: makeNodeComponent("chiffre2"),
-    chiffres2: makeNodeComponent("chiffres2"),
     section: makeNodeComponent("section"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     cetaitAvant: makeNodeComponent("cetaitAvant"),
@@ -1990,13 +1427,12 @@ export const PlasmicCentresDappel = Object.assign(
     cdKglobal: makeNodeComponent("cdKglobal"),
     dcSnet: makeNodeComponent("dcSnet"),
     bee2Link: makeNodeComponent("bee2Link"),
+    columns: makeNodeComponent("columns"),
     casUsage: makeNodeComponent("casUsage"),
     titre: makeNodeComponent("titre"),
     casOld: makeNodeComponent("casOld"),
     callToAction: makeNodeComponent("callToAction"),
-    youTube: makeNodeComponent("youTube"),
-    pricingSection: makeNodeComponent("pricingSection"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicCentresDappel
     internalVariantProps: PlasmicCentresDappel__VariantProps,

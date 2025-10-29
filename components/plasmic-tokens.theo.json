@@ -3123,7 +3123,7 @@
     {
       "name": "color/secondary20%",
       "type": "color",
-      "value": "#5E3AEF",
+      "value": "#5E3AEF33",
       "category": "color",
       "meta": {
         "projectId": "2utUyfwAdNYhisb36rBizH",

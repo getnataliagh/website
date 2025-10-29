@@ -79,6 +79,7 @@
   font-size: var(--token-J3mA70N-wqsu);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  text-decoration-line: none;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {

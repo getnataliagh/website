@@ -2,9 +2,10 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicCombobox,
-  DefaultComboboxProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicCombobox";
+  PlasmicProbleme,
+  DefaultProblemeProps
+} from "./plasmic/site_actuel_natalia_auto/PlasmicProbleme";
+import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
@@ -13,31 +14,32 @@ import {
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface ComboboxProps extends Omit<DefaultComboboxProps, "hideProps1"|"hideProp2"> {
+// interface ProblemeProps extends Omit<DefaultProblemeProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultComboboxProps altogether and have
+// You can also stop extending from DefaultProblemeProps altogether and have
 // total control over the props for your component.
-export interface ComboboxProps extends DefaultComboboxProps {}
+export interface ProblemeProps extends DefaultProblemeProps {}
 
-function Combobox(props: ComboboxProps) {
-  // Use PlasmicCombobox to render this component as it was
+function Probleme_(props: ProblemeProps, ref: HTMLElementRefOf<"div">) {
+  // Use PlasmicProbleme to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicCombobox are:
+  // Props you can pass into PlasmicProbleme are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all ComboboxProps here, but feel free
+  // By default, we are just piping all ProblemeProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicCombobox {...props} />;
+  return <PlasmicProbleme cadre={{ ref }} {...props} />;
 }
 
-export default Combobox;
+const Probleme = React.forwardRef(Probleme_);
+export default Probleme;

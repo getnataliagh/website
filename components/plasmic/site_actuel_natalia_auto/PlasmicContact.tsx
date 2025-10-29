@@ -63,7 +63,7 @@ import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -93,7 +93,7 @@ export type PlasmicContact__OverridesType = {
   iframe?: Flex__<typeof Iframe>;
   pricingSection?: Flex__<typeof Section>;
   columns?: Flex__<"div">;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultContactProps {}
@@ -360,10 +360,10 @@ function PlasmicContact__RenderFunc(props: {
                 </div>
               </div>
             </Section>
-            <FooterSection
-              data-plasmic-name={"footerSection"}
-              data-plasmic-override={overrides.footerSection}
-              className={classNames("__wab_instance", sty.footerSection)}
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
             />
           </div>
         </div>
@@ -383,7 +383,7 @@ const PlasmicDescendants = {
     "iframe",
     "pricingSection",
     "columns",
-    "footerSection"
+    "footer"
   ],
   wrapper: [
     "wrapper",
@@ -394,7 +394,7 @@ const PlasmicDescendants = {
     "iframe",
     "pricingSection",
     "columns",
-    "footerSection"
+    "footer"
   ],
   navbar: ["navbar"],
   section: ["section", "h1", "h2", "iframe"],
@@ -403,7 +403,7 @@ const PlasmicDescendants = {
   iframe: ["iframe"],
   pricingSection: ["pricingSection", "columns"],
   columns: ["columns"],
-  footerSection: ["footerSection"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -418,7 +418,7 @@ type NodeDefaultElementType = {
   iframe: typeof Iframe;
   pricingSection: typeof Section;
   columns: "div";
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -491,7 +491,7 @@ export const PlasmicContact = Object.assign(
     iframe: makeNodeComponent("iframe"),
     pricingSection: makeNodeComponent("pricingSection"),
     columns: makeNodeComponent("columns"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicContact
     internalVariantProps: PlasmicContact__VariantProps,

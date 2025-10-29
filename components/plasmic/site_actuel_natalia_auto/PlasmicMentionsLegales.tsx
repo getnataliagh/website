@@ -60,7 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -88,7 +88,7 @@ export type PlasmicMentionsLegales__OverridesType = {
   politiqueDeConfidentialite?: Flex__<"section">;
   politique?: Flex__<"div">;
   h1?: Flex__<"h1">;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultMentionsLegalesProps {}
@@ -276,10 +276,10 @@ function PlasmicMentionsLegales__RenderFunc(props: {
               </div>
             </section>
           </section>
-          <FooterSection
-            data-plasmic-name={"footerSection"}
-            data-plasmic-override={overrides.footerSection}
-            className={classNames("__wab_instance", sty.footerSection)}
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
           />
         </div>
       </div>
@@ -295,7 +295,7 @@ const PlasmicDescendants = {
     "politiqueDeConfidentialite",
     "politique",
     "h1",
-    "footerSection"
+    "footer"
   ],
   wrapper: [
     "wrapper",
@@ -308,7 +308,7 @@ const PlasmicDescendants = {
   politiqueDeConfidentialite: ["politiqueDeConfidentialite", "politique", "h1"],
   politique: ["politique", "h1"],
   h1: ["h1"],
-  footerSection: ["footerSection"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -320,7 +320,7 @@ type NodeDefaultElementType = {
   politiqueDeConfidentialite: "section";
   politique: "div";
   h1: "h1";
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -390,7 +390,7 @@ export const PlasmicMentionsLegales = Object.assign(
     politiqueDeConfidentialite: makeNodeComponent("politiqueDeConfidentialite"),
     politique: makeNodeComponent("politique"),
     h1: makeNodeComponent("h1"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicMentionsLegales
     internalVariantProps: PlasmicMentionsLegales__VariantProps,

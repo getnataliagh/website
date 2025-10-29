@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicPriceSection,
-  DefaultPriceSectionProps
-} from "./plasmic/site_actuel_natalia_auto/PlasmicPriceSection";
+  PlasmicSecteur,
+  DefaultSecteurProps
+} from "./plasmic/site_actuel_natalia_auto/PlasmicSecteur";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,32 +14,32 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface PriceSectionProps extends Omit<DefaultPriceSectionProps, "hideProps1"|"hideProp2"> {
+// interface SecteurProps extends Omit<DefaultSecteurProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultPriceSectionProps altogether and have
+// You can also stop extending from DefaultSecteurProps altogether and have
 // total control over the props for your component.
-export interface PriceSectionProps extends DefaultPriceSectionProps {}
+export interface SecteurProps extends DefaultSecteurProps {}
 
-function PriceSection_(props: PriceSectionProps, ref: HTMLElementRefOf<"div">) {
-  // Use PlasmicPriceSection to render this component as it was
+function Secteur_(props: SecteurProps, ref: HTMLElementRefOf<"div">) {
+  // Use PlasmicSecteur to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicPriceSection are:
+  // Props you can pass into PlasmicSecteur are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all PriceSectionProps here, but feel free
+  // By default, we are just piping all SecteurProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicPriceSection root={{ ref }} {...props} />;
+  return <PlasmicSecteur root={{ ref }} {...props} />;
 }
 
-const PriceSection = React.forwardRef(PriceSection_);
-export default PriceSection;
+const Secteur = React.forwardRef(Secteur_);
+export default Secteur;

@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicFooter,
   DefaultFooterProps
-} from "./plasmic/natalia_v_2/PlasmicFooter";
+} from "./plasmic/site_actuel_natalia_auto/PlasmicFooter";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -38,7 +38,7 @@ function Footer_(props: FooterProps, ref: HTMLElementRefOf<"div">) {
   // By default, we are just piping all FooterProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicFooter footer2={{ ref }} {...props} />;
+  return <PlasmicFooter root={{ ref }} {...props} />;
 }
 
 const Footer = React.forwardRef(Footer_);

@@ -62,7 +62,7 @@ import {
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 2utUyfwAdNYhisb36rBizH/styleTokensProvider
 
@@ -101,7 +101,7 @@ export type PlasmicCalculateur__OverridesType = {
   codeCalculateur?: Flex__<typeof Embed>;
   link?: Flex__<"a"> & Partial<LinkProps>;
   buttonPrimary?: Flex__<typeof ButtonPrimary>;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultCalculateurProps {}
@@ -1139,10 +1139,10 @@ function PlasmicCalculateur__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <FooterSection
-              data-plasmic-name={"footerSection"}
-              data-plasmic-override={overrides.footerSection}
-              className={classNames("__wab_instance", sty.footerSection)}
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
             />
           </div>
         </div>
@@ -1168,7 +1168,7 @@ const PlasmicDescendants = {
     "codeCalculateur",
     "link",
     "buttonPrimary",
-    "footerSection"
+    "footer"
   ],
   wrapper: [
     "wrapper",
@@ -1185,7 +1185,7 @@ const PlasmicDescendants = {
     "codeCalculateur",
     "link",
     "buttonPrimary",
-    "footerSection"
+    "footer"
   ],
   navbar: ["navbar"],
   section: [
@@ -1221,7 +1221,7 @@ const PlasmicDescendants = {
   codeCalculateur: ["codeCalculateur"],
   link: ["link", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"],
-  footerSection: ["footerSection"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1242,7 +1242,7 @@ type NodeDefaultElementType = {
   codeCalculateur: typeof Embed;
   link: "a";
   buttonPrimary: typeof ButtonPrimary;
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1321,7 +1321,7 @@ export const PlasmicCalculateur = Object.assign(
     codeCalculateur: makeNodeComponent("codeCalculateur"),
     link: makeNodeComponent("link"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicCalculateur
     internalVariantProps: PlasmicCalculateur__VariantProps,

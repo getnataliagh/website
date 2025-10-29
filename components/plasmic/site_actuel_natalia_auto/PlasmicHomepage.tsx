@@ -64,15 +64,15 @@ import Advent from "../../Advent"; // plasmic-import: EqnbUA59xCW_/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
 import Message from "../../Message"; // plasmic-import: NCOSS590FLhe/component
 import Mission from "../../Mission"; // plasmic-import: OIlbmlb8nUUH/component
-import SecteurActif from "../../SecteurActif"; // plasmic-import: kTw__3f9B1cS/component
+import Secteur from "../../Secteur"; // plasmic-import: kTw__3f9B1cS/component
 import ButtonSecondary from "../../ButtonSecondary"; // plasmic-import: eYvZTWRdqjAO/component
 import CardWithBackground1 from "../../CardWithBackground1"; // plasmic-import: yR1fd8Hy_LSj/component
-import Raison from "../../Raison"; // plasmic-import: vAcwOvnOFNI4/component
-import Avantage from "../../Avantage"; // plasmic-import: MXIUXB0YnmeL/component
+import Solution from "../../Solution"; // plasmic-import: vAcwOvnOFNI4/component
+import Avantages from "../../Avantages"; // plasmic-import: x2T3E4Kio9_Z/component
 import CardWithBackground2 from "../../CardWithBackground2"; // plasmic-import: EY8i6R8YUDfL/component
 import MepOld from "../../MepOld"; // plasmic-import: 981_nMwE_BCU/component
 import MepNew from "../../MepNew"; // plasmic-import: JtOPDUnSJGAf/component
-import FooterSection from "../../FooterSection"; // plasmic-import: Mvxx80XtzO5S/component
+import Footer from "../../Footer"; // plasmic-import: Mvxx80XtzO5S/component
 import YouTube from "@plasmicpkgs/react-youtube";
 import Section from "../../Section"; // plasmic-import: 7WxeGP9tABGT/component
 import PriceCard from "../../PriceCard"; // plasmic-import: VgtGYFzvbs7V/component
@@ -102,6 +102,12 @@ import MissedCallSvgrepoComSvg2Icon from "./icons/PlasmicIcon__MissedCallSvgrepo
 import BusinessCashManagementSvgrepoComSvg2Icon from "./icons/PlasmicIcon__BusinessCashManagementSvgrepoComSvg2"; // plasmic-import: jgsmqnyutwm3/icon
 import HourglassActiveSvgrepoComSvg2Icon from "./icons/PlasmicIcon__HourglassActiveSvgrepoComSvg2"; // plasmic-import: 2GUMrOklntnw/icon
 import BusinessGrowthManagementSvgrepoComSvg2Icon from "./icons/PlasmicIcon__BusinessGrowthManagementSvgrepoComSvg2"; // plasmic-import: _Y7SJL0z_ZUq/icon
+import _24HoursServiceSvgrepoComSvgIcon from "./icons/PlasmicIcon___24HoursServiceSvgrepoComSvg"; // plasmic-import: KM3gVgbRqQS2/icon
+import MoneyBagSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__MoneyBagSvgrepoCom1Svg"; // plasmic-import: hfFCovfnmNad/icon
+import Chart2SvgrepoCom1SvgIcon from "./icons/PlasmicIcon__Chart2SvgrepoCom1Svg"; // plasmic-import: ToCDIWw2O9LW/icon
+import Settings04SvgrepoComSvgIcon from "./icons/PlasmicIcon__Settings04SvgrepoComSvg"; // plasmic-import: CNnuabgbYsn7/icon
+import ConnectLinkCategorySvgrepoComSvgIcon from "./icons/PlasmicIcon__ConnectLinkCategorySvgrepoComSvg"; // plasmic-import: -YOGZcKXH7Cg/icon
+import ServiceSvgrepoComSvgIcon from "./icons/PlasmicIcon__ServiceSvgrepoComSvg"; // plasmic-import: W36VHtVZwOJk/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: MqGXQVDYbZi_/icon
 import OneSvgrepoComSvg2Icon from "./icons/PlasmicIcon__OneSvgrepoComSvg2"; // plasmic-import: QoxImbzDqG21/icon
 import TwoSvgrepoComSvgIcon from "./icons/PlasmicIcon__TwoSvgrepoComSvg"; // plasmic-import: aUt0Jdr5cHNl/icon
@@ -165,7 +171,7 @@ export type PlasmicHomepage__OverridesType = {
   miseenplace?: Flex__<"section">;
   cadre2?: Flex__<"div">;
   callToAction?: Flex__<"section">;
-  footerSection?: Flex__<typeof FooterSection>;
+  footer?: Flex__<typeof Footer>;
   youTube?: Flex__<typeof YouTube>;
   pricingSection?: Flex__<typeof Section>;
 };
@@ -734,10 +740,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       }
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__fxaU
+                          sty.secteur__fxaU
                         )}
                         description={
                           "Prise de RDV atelier, renseignements v\u00e9hicules, suivi SAV, qualification de leads, transfert d'appel..."
@@ -789,7 +795,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(projectcss.all, sty.svg__skiVs)}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"industriePme"}
@@ -803,10 +809,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/contact`}
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__zmPbg
+                          sty.secteur__zmPbg
                         )}
                         description={
                           "Commandes, devis, suivi des livraisons, relation client B2B, gestion des factures et suivi des paiements.."
@@ -817,7 +823,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(projectcss.all, sty.svg__nn8Xj)}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"hotline"}
@@ -831,10 +837,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/hotline`}
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__vic9T
+                          sty.secteur__vic9T
                         )}
                         description={
                           "Support technique L1, qualification incidents, planification interventions, gestion des tickets sur les outils m\u00e9tiers."
@@ -886,7 +892,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(projectcss.all, sty.svg__yo3EF)}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"callCenter"}
@@ -900,10 +906,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/centre-d-appel`}
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__uUuTs
+                          sty.secteur__uUuTs
                         )}
                         description={
                           "Assure 100% de prise en charge des appels sous 15 secondes gr\u00e2ce \u00e0 une disponibilit\u00e9 24h/24 et la parall\u00e9lisation des appels."
@@ -945,7 +951,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(projectcss.all, sty.svg__ib2G)}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"banqueAssurance"}
@@ -959,10 +965,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/contact`}
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__op927
+                          sty.secteur__op927
                         )}
                         description={
                           "Gestion des demandes clients, suivi de dossiers, assistance en continu, d\u00e9claration de sinistres, suivi de contrats, assistance en cas d\u2019urgence."
@@ -973,7 +979,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(projectcss.all, sty.svg__n44Wk)}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                     <PlasmicLink__
                       data-plasmic-name={"servicePublic"}
@@ -987,10 +993,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       href={`/contact`}
                       platform={"nextjs"}
                     >
-                      <SecteurActif
+                      <Secteur
                         className={classNames(
                           "__wab_instance",
-                          sty.secteurActif__epRsf
+                          sty.secteur__epRsf
                         )}
                         description={
                           "Accueil et orientation des usagers vers le bon service. Gestion des demandes administratives (rendez-vous, informations, suivi de dossiers)."
@@ -1004,7 +1010,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           role={"img"}
                         />
-                      </SecteurActif>
+                      </Secteur>
                     </PlasmicLink__>
                   </section>
                   <div
@@ -1192,28 +1198,32 @@ function PlasmicHomepage__RenderFunc(props: {
                           href={`/contact`}
                           platform={"nextjs"}
                         >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ textDecorationLine: "underline" }}
-                            >
-                              {"R\u00e9servez un rendez-vous"}
-                            </span>
-                          </React.Fragment>
+                          {"R\u00e9servez un rendez-vous"}
                         </PlasmicLink__>
                       }
                       <React.Fragment>
-                        {' avec nous pour \u00e9tudier votre projet. \n"'}
+                        {" avec nous pour \u00e9tudier votre projet. \n"}
                       </React.Fragment>
                       <span
                         className={"plasmic_default__all plasmic_default__span"}
-                        style={{ fontStyle: "italic" }}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {'"'}
+                      </span>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontStyle: "italic", fontWeight: 700 }}
                       >
                         {"Anything is possible"}
                       </span>
-                      <React.Fragment>{'"'}</React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 700 }}
+                      >
+                        {'"'}
+                      </span>
                     </React.Fragment>
                   </div>
                 </div>
@@ -1263,8 +1273,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   </h2>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__aRsDk)}>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison___22QXc)}
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution___22QXc
+                    )}
                     img={{
                       src: "/plasmic/site_actuel_natalia_auto/images/missedCallSvgrepoComSvg.svg",
                       fullWidth: 800,
@@ -1280,9 +1293,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__ezDk3)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__ezDk3
+                    )}
                     descr={
                       "Vos co\u00fbts fixes explosent, vous faites plus avec plus. Il est temps de faire plus avec moins."
                     }
@@ -1302,9 +1318,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__eacfc)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__eacfc
+                    )}
                     descr={
                       "Vos \u00e9quipes passent du temps au t\u00e9l\u00e9phone sur des t\u00e2ches sans valeur ajout\u00e9e. D\u00e9l\u00e9guez \u00e0 l'IA et placez les dans leur zone d'expertise."
                     }
@@ -1324,9 +1343,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
-                  <Raison
-                    className={classNames("__wab_instance", sty.raison__pg37A)}
+                  </Solution>
+                  <Solution
+                    className={classNames(
+                      "__wab_instance",
+                      sty.solution__pg37A
+                    )}
                     descr={
                       "Si votre entreprise est en forte croissance, votre service client ne va pas suivre et vous allez perdre en qualit\u00e9 et en r\u00e9activit\u00e9."
                     }
@@ -1346,7 +1368,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         role={"img"}
                       />
                     </div>
-                  </Raison>
+                  </Solution>
                 </div>
               </div>
             </section>
@@ -1405,210 +1427,96 @@ function PlasmicHomepage__RenderFunc(props: {
                   }
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__gbtNm)}>
-                  <Avantage
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__ziMjJ
+                      sty.avantages__q3E6
                     )}
+                    description={
+                      "Nos serveurs bas\u00e9s en France tournent en continu pour r\u00e9pondre une dispo 100%"
+                    }
+                    titre={"Disponibilit\u00e9 24h/24"}
                   >
-                    <PlasmicImg__
-                      alt={"icon"}
-                      className={classNames(
-                        sty.img__ubTDu,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/_247Png.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <_24HoursServiceSvgrepoComSvgIcon
+                      className={classNames(projectcss.all, sty.svg__rHzZg)}
+                      role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
-                    className={classNames("__wab_instance", sty.avantage__xJiF)}
-                    descr={
+                  </Avantages>
+                  <Avantages
+                    className={classNames(
+                      "__wab_instance",
+                      sty.avantages__lghfa
+                    )}
+                    description={
                       "Le co\u00fbt est variable \u00e0 la minute d'appel, vous ne payez que ce que vous consommez."
                     }
-                    img={undefined}
-                    nom={"Rentabilit\u00e9"}
+                    titre={"Rentabilit\u00e9"}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(
-                        sty.img___2Qx2B,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/sacDargentPng.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <MoneyBagSvgrepoCom1SvgIcon
+                      className={classNames(projectcss.all, sty.svg__quohF)}
+                      role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__wGjJk
+                      sty.avantages___4Wu5S
                     )}
-                    descr={
+                    description={
                       "Suivez les KPI pertinents, nb appels, leads, rdv pris, sujets trait\u00e9s, etc..."
                     }
-                    nom={"Tableau de bord"}
+                    titre={"Tableau de bord"}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(
-                        sty.img__kec2Q,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/analyseEtReportingPng.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <Chart2SvgrepoCom1SvgIcon
+                      className={classNames(projectcss.all, sty.svg__s36Ud)}
+                      role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage___6J6Kr
+                      sty.avantages__rdrpt
                     )}
-                    descr={
+                    description={
                       "Nous adaptons Natalia selon vos habitudes pour r\u00e9pondre au mieux \u00e0 vos besoins"
                     }
-                    nom={"Personnalisation"}
+                    titre={"Personnalisation"}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(
-                        sty.img__j4Ash,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/customerReviewPng.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <Settings04SvgrepoComSvgIcon
+                      className={classNames(projectcss.all, sty.svg__vQatF)}
+                      role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__sMa1H
+                      sty.avantages__xzPis
                     )}
-                    descr={
+                    description={
                       "Votre Natalia se connecte aux outils m\u00e9tiers pertinent pour vous et vos processus."
                     }
-                    nom={"Int\u00e9grations"}
+                    titre={"Int\u00e9grations"}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(
-                        sty.img__zRiXp,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/laTechnologiePng.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <ConnectLinkCategorySvgrepoComSvgIcon
+                      className={classNames(projectcss.all, sty.svg__s3Jy)}
+                      role={"img"}
                     />
-                  </Avantage>
-                  <Avantage
+                  </Avantages>
+                  <Avantages
                     className={classNames(
                       "__wab_instance",
-                      sty.avantage__vNZc1
+                      sty.avantages__n2A3I
                     )}
-                    descr={
+                    description={
                       "Votre satisfaction est notre priorit\u00e9, nous r\u00e9pondons \u00e0 vos demandes sous 24h."
                     }
-                    nom={"Support client 24h/7j"}
+                    titre={"Support client 24h/7j"}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(
-                        sty.img__p4G8G,
-                        "icon-png-to-white"
-                      )}
-                      displayHeight={
-                        hasVariant(globalVariants, "mobile", "mobileOnly")
-                          ? "30px"
-                          : "50px"
-                      }
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"none"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/site_actuel_natalia_auto/images/serviceClientPng.png",
-                        fullWidth: 512,
-                        fullHeight: 512,
-                        aspectRatio: undefined
-                      }}
+                    <ServiceSvgrepoComSvgIcon
+                      className={classNames(projectcss.all, sty.svg__isOy9)}
+                      role={"img"}
                     />
-                  </Avantage>
+                  </Avantages>
                 </div>
               </div>
               <div
@@ -2623,10 +2531,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               </PlasmicLink__>
             </section>
-            <FooterSection
-              data-plasmic-name={"footerSection"}
-              data-plasmic-override={overrides.footerSection}
-              className={classNames("__wab_instance", sty.footerSection)}
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
             />
 
             <YouTube
@@ -2754,7 +2662,7 @@ const PlasmicDescendants = {
     "miseenplace",
     "cadre2",
     "callToAction",
-    "footerSection",
+    "footer",
     "youTube",
     "pricingSection"
   ],
@@ -2803,7 +2711,7 @@ const PlasmicDescendants = {
     "miseenplace",
     "cadre2",
     "callToAction",
-    "footerSection",
+    "footer",
     "youTube",
     "pricingSection"
   ],
@@ -2937,7 +2845,7 @@ const PlasmicDescendants = {
   miseenplace: ["miseenplace", "cadre2"],
   cadre2: ["cadre2"],
   callToAction: ["callToAction"],
-  footerSection: ["footerSection"],
+  footer: ["footer"],
   youTube: ["youTube"],
   pricingSection: ["pricingSection"]
 } as const;
@@ -2990,7 +2898,7 @@ type NodeDefaultElementType = {
   miseenplace: "section";
   cadre2: "div";
   callToAction: "section";
-  footerSection: typeof FooterSection;
+  footer: typeof Footer;
   youTube: typeof YouTube;
   pricingSection: typeof Section;
 };
@@ -3101,7 +3009,7 @@ export const PlasmicHomepage = Object.assign(
     miseenplace: makeNodeComponent("miseenplace"),
     cadre2: makeNodeComponent("cadre2"),
     callToAction: makeNodeComponent("callToAction"),
-    footerSection: makeNodeComponent("footerSection"),
+    footer: makeNodeComponent("footer"),
     youTube: makeNodeComponent("youTube"),
     pricingSection: makeNodeComponent("pricingSection"),
 

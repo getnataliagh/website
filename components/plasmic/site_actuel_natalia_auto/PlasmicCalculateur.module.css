@@ -736,6 +736,6 @@
   position: relative;
   height: 1em;
 }
-.footerSection:global(.__wab_instance) {
+.footer:global(.__wab_instance) {
   position: relative;
 }

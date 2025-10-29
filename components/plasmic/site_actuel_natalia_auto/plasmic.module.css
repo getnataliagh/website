@@ -109,7 +109,7 @@
   --plasmic-token-h-5-mobile: var(--token-dpUme9f3kxzo);
   --token-SJxn0KH5ERld: 12px;
   --plasmic-token-subtxtmobile: var(--token-SJxn0KH5ERld);
-  --token-4KRNC7sgByoy: #5e3aef;
+  --token-4KRNC7sgByoy: #5e3aef33;
   --plasmic-token-color-secondary-20: var(--token-4KRNC7sgByoy);
 }
 
@@ -144,7 +144,7 @@
   --mixin-1GBcDzznu_OG_user-select: text;
   --mixin-1GBcDzznu_OG_text-decoration-line: none;
   --mixin-1GBcDzznu_OG_text-overflow: clip;
-  --mixin-uaZpfULcOgUd_color: var(--token-o5QzyuxQjxLV);
+  --mixin-uaZpfULcOgUd_color: var(--token-_LX8zWYksvaJ);
   --mixin-uaZpfULcOgUd_text-decoration-line: none;
   --mixin-uaZpfULcOgUd_white-space: pre-wrap;
   --mixin-mS8IQmvCte9N_font-family: "Montserrat", sans-serif;
@@ -259,6 +259,7 @@
   --mixin-678NdrVQtyTs_white-space: pre-wrap;
   --mixin-I8qPGBhh_Vjp_white-space: pre-wrap;
   --mixin--8BKX8KnWx_z_color: var(--token-ruEH_kPMz8sH);
+  --mixin--8BKX8KnWx_z_text-decoration-line: none;
   --mixin--8BKX8KnWx_z_white-space: pre-wrap;
 }
 
@@ -825,4 +826,5 @@ a:where(.root_reset.a):hover,
 :where(.root_reset_tags) a:hover,
 a:where(.root_reset_tags):hover {
   color: var(--mixin--8BKX8KnWx_z_color);
+  text-decoration-line: var(--mixin--8BKX8KnWx_z_text-decoration-line);
 }
