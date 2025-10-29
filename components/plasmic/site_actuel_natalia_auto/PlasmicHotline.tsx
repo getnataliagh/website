@@ -84,7 +84,7 @@ import SpeedSvgrepoComSvgIcon from "./icons/PlasmicIcon__SpeedSvgrepoComSvg"; //
 import CustomCodingSvgrepoComSvgIcon from "./icons/PlasmicIcon__CustomCodingSvgrepoComSvg"; // plasmic-import: 1E61VmC_aLGw/icon
 import SadDizzySvgrepoComSvgIcon from "./icons/PlasmicIcon__SadDizzySvgrepoComSvg"; // plasmic-import: afHH174oeGWf/icon
 import DelaySvgrepoComSvgIcon from "./icons/PlasmicIcon__DelaySvgrepoComSvg"; // plasmic-import: O4W-2UqGZ8Hj/icon
-import Icon18Icon from "./icons/PlasmicIcon__Icon18"; // plasmic-import: EM09k3C8nJ6k/icon
+import Settings04SvgrepoComSvgIcon from "./icons/PlasmicIcon__Settings04SvgrepoComSvg"; // plasmic-import: CNnuabgbYsn7/icon
 import Rocket02SvgrepoComSvgIcon from "./icons/PlasmicIcon__Rocket02SvgrepoComSvg"; // plasmic-import: 3tAt5428l_Lv/icon
 import ConnectionSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__ConnectionSvgrepoCom1Svg"; // plasmic-import: bvtyxBHeKgBl/icon
 import MessageSquareListSvgrepoComSvgIcon from "./icons/PlasmicIcon__MessageSquareListSvgrepoComSvg"; // plasmic-import: zsw096bbSK1c/icon
@@ -631,7 +631,7 @@ function PlasmicHotline__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__kWtM3)}
                   >
-                    <Icon18Icon
+                    <Settings04SvgrepoComSvgIcon
                       className={classNames(projectcss.all, sty.svg__lHaOr)}
                       role={"img"}
                     />
