@@ -849,14 +849,17 @@
 .svg__lHaOr {
   animation: none;
   object-fit: cover;
-  max-width: 100%;
   height: 50px;
   color: var(--token-o5QzyuxQjxLV);
+  width: 50px;
+  flex-shrink: 0;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .svg__lHaOr {
     animation: none;
     height: 30px;
+    width: 30px;
+    flex-shrink: 0;
   }
 }
 .solution___1ERwR:global(.__wab_instance) {
