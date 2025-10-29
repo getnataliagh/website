@@ -358,8 +358,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {hasVariant(globalVariants, "mobile", "mobileOnly")
-                        ? "Natalia r\u00e9volutionne votre helpdesk avec l'IA. R\u00e9ponses instantan\u00e9es, tickets cat\u00e9goris\u00e9s automatiquement, et satisfaction client au rendez-vous 24/7."
-                        : "Natalia r\u00e9volutionne votre helpdesk avec l'IA. R\u00e9ponses\ninstantan\u00e9es, tickets cat\u00e9goris\u00e9s automatiquement, \net satisfaction client au rendez-vous 24/7."}
+                        ? "Natalia r\u00e9volutionne votre gestion des appels entrants, disponible 24h/24 - 7j/7 pour vos clients, augmentez votre taux de service."
+                        : "Natalia r\u00e9volutionne votre gestion des appels entrants.\nDisponible 24h/24 - 7j/7 pour vos clients, augmentez\nvotre taux de service et satisfaction client."}
                     </h4>
                     <div
                       data-plasmic-name={"advent"}
@@ -704,7 +704,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Natalia accompagne les ind\u00e9pendants et les entreprises, tous secteurs et toutes tailles confondus,\npour qu\u2019ils ne soient plus jamais seuls face \u00e0 leur gestion administrative."
+                      "Natalia accompagne les entreprises, tous secteurs et toutes tailles confondus,\npour g\u00e9rer leurs appels entrants et gagner en productivit\u00e9."
                     }
                   </div>
                 </div>
