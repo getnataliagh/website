@@ -59,10 +59,10 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import DesignKitNavigationHeader from "../../DesignKitNavigationHeader"; // plasmic-import: 5aB1KAcakJPx/component
 import Navbar from "../../Navbar"; // plasmic-import: F0Go0DR6--TF/component
 import Advent from "../../Advent"; // plasmic-import: EqnbUA59xCW_/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: TU5A2-p6WFJJ/component
-import Message from "../../Message"; // plasmic-import: NCOSS590FLhe/component
 import Mission from "../../Mission"; // plasmic-import: OIlbmlb8nUUH/component
 import Secteur from "../../Secteur"; // plasmic-import: kTw__3f9B1cS/component
 import ButtonSecondary from "../../ButtonSecondary"; // plasmic-import: eYvZTWRdqjAO/component
@@ -128,6 +128,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   body?: Flex__<"div">;
   wrapper?: Flex__<"section">;
+  nav?: Flex__<typeof DesignKitNavigationHeader>;
   headerHero?: Flex__<"section">;
   navbar?: Flex__<typeof Navbar>;
   presentation?: Flex__<"div">;
@@ -138,8 +139,6 @@ export type PlasmicHomepage__OverridesType = {
   h4?: Flex__<"h4">;
   advent?: Flex__<"div">;
   bouton?: Flex__<"div">;
-  animation?: Flex__<"div">;
-  message?: Flex__<typeof Message>;
   produit?: Flex__<"section">;
   titre3?: Flex__<"div">;
   details?: Flex__<"div">;
@@ -219,6 +218,24 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const globalVariants = _useGlobalVariants();
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "nav.showNav",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+
   const styleTokensClassNames = _useStyleTokens();
 
   return (
@@ -281,6 +298,27 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.wrapper}
             className={classNames(projectcss.all, sty.wrapper)}
           >
+            <DesignKitNavigationHeader
+              data-plasmic-name={"nav"}
+              data-plasmic-override={overrides.nav}
+              className={classNames("__wab_instance", sty.nav)}
+              onShowNavChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, ["nav", "showNav"]).apply(
+                  null,
+                  eventArgs
+                );
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              showNav={generateStateValueProp($state, ["nav", "showNav"])}
+            />
+
             <section
               data-plasmic-name={"headerHero"}
               data-plasmic-override={overrides.headerHero}
@@ -291,182 +329,170 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.navbar}
                 className={classNames("__wab_instance", sty.navbar)}
               />
-
+            </section>
+            <div
+              data-plasmic-name={"presentation"}
+              data-plasmic-override={overrides.presentation}
+              className={classNames(projectcss.all, sty.presentation)}
+            >
               <div
-                data-plasmic-name={"presentation"}
-                data-plasmic-override={overrides.presentation}
-                className={classNames(projectcss.all, sty.presentation)}
+                data-plasmic-name={"intro"}
+                data-plasmic-override={overrides.intro}
+                className={classNames(projectcss.all, sty.intro)}
               >
                 <div
-                  data-plasmic-name={"intro"}
-                  data-plasmic-override={overrides.intro}
-                  className={classNames(projectcss.all, sty.intro)}
+                  data-plasmic-name={"texte"}
+                  data-plasmic-override={overrides.texte}
+                  className={classNames(projectcss.all, sty.texte)}
                 >
                   <div
-                    data-plasmic-name={"texte"}
-                    data-plasmic-override={overrides.texte}
-                    className={classNames(projectcss.all, sty.texte)}
+                    data-plasmic-name={"titre2"}
+                    data-plasmic-override={overrides.titre2}
+                    className={classNames(projectcss.all, sty.titre2)}
                   >
-                    <div
-                      data-plasmic-name={"titre2"}
-                      data-plasmic-override={overrides.titre2}
-                      className={classNames(projectcss.all, sty.titre2)}
-                    >
-                      <h1
-                        data-plasmic-name={"h1"}
-                        data-plasmic-override={overrides.h1}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-O5FVPUzEQMyt)" }}
-                          >
-                            {"D\u00e9l\u00e9guez vos "}
-                          </span>
-                        </React.Fragment>
-                      </h1>
-                      <h2
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h2,
-                          projectcss.__wab_text,
-                          sty.h2__jvT5U
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#FFFFFF00" }}
-                          >
-                            {"appels entrants \u00e0 l'IA"}
-                          </span>
-                        </React.Fragment>
-                      </h2>
-                    </div>
-                    <h4
-                      data-plasmic-name={"h4"}
-                      data-plasmic-override={overrides.h4}
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
                       className={classNames(
                         projectcss.all,
-                        projectcss.h4,
+                        projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h4
+                        sty.h1
                       )}
                     >
-                      {hasVariant(globalVariants, "mobile", "mobileOnly")
-                        ? "Natalia r\u00e9volutionne votre gestion des appels entrants, disponible 24h/24 - 7j/7 pour vos clients, augmentez votre taux de service."
-                        : "Natalia r\u00e9volutionne votre gestion des appels entrants.\nDisponible 24h/24 - 7j/7 pour vos clients, augmentez\nvotre taux de service et satisfaction client."}
-                    </h4>
-                    <div
-                      data-plasmic-name={"advent"}
-                      data-plasmic-override={overrides.advent}
-                      className={classNames(projectcss.all, sty.advent)}
-                    >
-                      <Advent
-                        className={classNames(
-                          "__wab_instance",
-                          sty.advent__ivegC
-                        )}
-                        texte={"R\u00e9ponse en <1s"}
-                      >
-                        <FlashSvgrepoComSvgIcon
-                          className={classNames(projectcss.all, sty.svg__a00KI)}
-                          role={"img"}
-                        />
-                      </Advent>
-                      <Advent
-                        className={classNames(
-                          "__wab_instance",
-                          sty.advent__s6Dl6
-                        )}
-                        texte={"Donn\u00e9es s\u00e9curis\u00e9es"}
-                      >
-                        <SecureSvgrepoComSvgIcon
-                          className={classNames(projectcss.all, sty.svg__ofuH1)}
-                          role={"img"}
-                        />
-                      </Advent>
-                      <Advent
-                        className={classNames(
-                          "__wab_instance",
-                          sty.advent__teyQx
-                        )}
-                        texte={"+500 int\u00e9grations"}
-                      >
-                        <StarSvgrepoComSvgIcon
-                          className={classNames(projectcss.all, sty.svg__oYTgx)}
-                          role={"img"}
-                        />
-                      </Advent>
-                    </div>
-                    <div
-                      data-plasmic-name={"bouton"}
-                      data-plasmic-override={overrides.bouton}
-                      className={classNames(projectcss.all, sty.bouton)}
-                    >
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__vwlhd
-                        )}
-                        component={Link}
-                        href={`/contact`}
-                        platform={"nextjs"}
-                      >
-                        <ButtonPrimary
-                          className={classNames(
-                            "__wab_instance",
-                            sty.buttonPrimary__pypsl
-                          )}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___3Z3JP
-                              )}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "#FFFFFF" }}
-                                >
-                                  {"R\u00e9server une d\u00e9mo"}
-                                </span>
-                              </React.Fragment>
-                            </div>
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
                           }
-                        />
-                      </PlasmicLink__>
-                    </div>
+                          style={{ color: "var(--token-O5FVPUzEQMyt)" }}
+                        >
+                          {"D\u00e9l\u00e9guez vos "}
+                        </span>
+                      </React.Fragment>
+                    </h1>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__jvT5U
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#FFFFFF00" }}
+                        >
+                          {"appels entrants \u00e0 l'IA"}
+                        </span>
+                      </React.Fragment>
+                    </h2>
+                  </div>
+                  <h4
+                    data-plasmic-name={"h4"}
+                    data-plasmic-override={overrides.h4}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h4,
+                      projectcss.__wab_text,
+                      sty.h4
+                    )}
+                  >
+                    {hasVariant(globalVariants, "mobile", "mobileOnly")
+                      ? "Natalia r\u00e9volutionne votre gestion des appels entrants, disponible 24h/24 - 7j/7 pour vos clients, augmentez votre taux de service."
+                      : "Natalia r\u00e9volutionne votre gestion des appels entrants.\nDisponible 24h/24 - 7j/7 pour vos clients, augmentez\nvotre taux de service et satisfaction client."}
+                  </h4>
+                  <div
+                    data-plasmic-name={"advent"}
+                    data-plasmic-override={overrides.advent}
+                    className={classNames(projectcss.all, sty.advent)}
+                  >
+                    <Advent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.advent__ivegC
+                      )}
+                      texte={"R\u00e9ponse en <1s"}
+                    >
+                      <FlashSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__a00KI)}
+                        role={"img"}
+                      />
+                    </Advent>
+                    <Advent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.advent__s6Dl6
+                      )}
+                      texte={"Donn\u00e9es s\u00e9curis\u00e9es"}
+                    >
+                      <SecureSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__ofuH1)}
+                        role={"img"}
+                      />
+                    </Advent>
+                    <Advent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.advent__teyQx
+                      )}
+                      texte={"+500 int\u00e9grations"}
+                    >
+                      <StarSvgrepoComSvgIcon
+                        className={classNames(projectcss.all, sty.svg__oYTgx)}
+                        role={"img"}
+                      />
+                    </Advent>
                   </div>
                   <div
-                    data-plasmic-name={"animation"}
-                    data-plasmic-override={overrides.animation}
-                    className={classNames(projectcss.all, sty.animation)}
+                    data-plasmic-name={"bouton"}
+                    data-plasmic-override={overrides.bouton}
+                    className={classNames(projectcss.all, sty.bouton)}
                   >
-                    <Message
-                      data-plasmic-name={"message"}
-                      data-plasmic-override={overrides.message}
-                      className={classNames("__wab_instance", sty.message)}
-                    />
+                    <PlasmicLink__
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__vwlhd
+                      )}
+                      component={Link}
+                      href={`/contact`}
+                      platform={"nextjs"}
+                    >
+                      <ButtonPrimary
+                        className={classNames(
+                          "__wab_instance",
+                          sty.buttonPrimary__pypsl
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___3Z3JP
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#FFFFFF" }}
+                              >
+                                {"R\u00e9server une d\u00e9mo"}
+                              </span>
+                            </React.Fragment>
+                          </div>
+                        }
+                      />
+                    </PlasmicLink__>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
             <section
               data-plasmic-name={"produit"}
               data-plasmic-override={overrides.produit}
@@ -2619,6 +2645,7 @@ const PlasmicDescendants = {
   body: [
     "body",
     "wrapper",
+    "nav",
     "headerHero",
     "navbar",
     "presentation",
@@ -2629,8 +2656,6 @@ const PlasmicDescendants = {
     "h4",
     "advent",
     "bouton",
-    "animation",
-    "message",
     "produit",
     "titre3",
     "details",
@@ -2668,6 +2693,7 @@ const PlasmicDescendants = {
   ],
   wrapper: [
     "wrapper",
+    "nav",
     "headerHero",
     "navbar",
     "presentation",
@@ -2678,8 +2704,6 @@ const PlasmicDescendants = {
     "h4",
     "advent",
     "bouton",
-    "animation",
-    "message",
     "produit",
     "titre3",
     "details",
@@ -2715,20 +2739,8 @@ const PlasmicDescendants = {
     "youTube",
     "pricingSection"
   ],
-  headerHero: [
-    "headerHero",
-    "navbar",
-    "presentation",
-    "intro",
-    "texte",
-    "titre2",
-    "h1",
-    "h4",
-    "advent",
-    "bouton",
-    "animation",
-    "message"
-  ],
+  nav: ["nav"],
+  headerHero: ["headerHero", "navbar"],
   navbar: ["navbar"],
   presentation: [
     "presentation",
@@ -2738,29 +2750,15 @@ const PlasmicDescendants = {
     "h1",
     "h4",
     "advent",
-    "bouton",
-    "animation",
-    "message"
+    "bouton"
   ],
-  intro: [
-    "intro",
-    "texte",
-    "titre2",
-    "h1",
-    "h4",
-    "advent",
-    "bouton",
-    "animation",
-    "message"
-  ],
+  intro: ["intro", "texte", "titre2", "h1", "h4", "advent", "bouton"],
   texte: ["texte", "titre2", "h1", "h4", "advent", "bouton"],
   titre2: ["titre2", "h1"],
   h1: ["h1"],
   h4: ["h4"],
   advent: ["advent"],
   bouton: ["bouton"],
-  animation: ["animation", "message"],
-  message: ["message"],
   produit: ["produit", "titre3", "details", "photo", "assistante", "detail"],
   titre3: ["titre3"],
   details: ["details", "photo", "assistante", "detail"],
@@ -2855,6 +2853,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   body: "div";
   wrapper: "section";
+  nav: typeof DesignKitNavigationHeader;
   headerHero: "section";
   navbar: typeof Navbar;
   presentation: "div";
@@ -2865,8 +2864,6 @@ type NodeDefaultElementType = {
   h4: "h4";
   advent: "div";
   bouton: "div";
-  animation: "div";
-  message: typeof Message;
   produit: "section";
   titre3: "div";
   details: "div";
@@ -2966,6 +2963,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     wrapper: makeNodeComponent("wrapper"),
+    nav: makeNodeComponent("nav"),
     headerHero: makeNodeComponent("headerHero"),
     navbar: makeNodeComponent("navbar"),
     presentation: makeNodeComponent("presentation"),
@@ -2976,8 +2974,6 @@ export const PlasmicHomepage = Object.assign(
     h4: makeNodeComponent("h4"),
     advent: makeNodeComponent("advent"),
     bouton: makeNodeComponent("bouton"),
-    animation: makeNodeComponent("animation"),
-    message: makeNodeComponent("message"),
     produit: makeNodeComponent("produit"),
     titre3: makeNodeComponent("titre3"),
     details: makeNodeComponent("details"),

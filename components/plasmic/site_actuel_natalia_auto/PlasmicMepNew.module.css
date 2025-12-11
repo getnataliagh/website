@@ -29,7 +29,7 @@
   }
 }
 .root:hover {
-  transform: scaleX(1.05) scaleY(1.05) scaleZ(1);
+  transform: scale3d(1.05, 1.05, 1);
 }
 .slotTargetChildren {
   text-align: left;

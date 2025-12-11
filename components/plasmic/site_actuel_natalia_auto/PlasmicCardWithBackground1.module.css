@@ -23,7 +23,7 @@
   }
 }
 .root:hover {
-  transform: scaleX(1.05) scaleY(1.05) scaleZ(1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
   transform-style: preserve-3d;
 }
 .root:hover * {

@@ -462,6 +462,7 @@
 .freeBox__dvzSw {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   padding: 0;
   margin: 0 0 10px;
 }
@@ -514,6 +515,7 @@
 .freeBox___0EAu7 {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   padding: 0;
   margin: 0 0 10px;
 }
@@ -566,6 +568,7 @@
 .freeBox__pzVfv {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   padding: 0;
   margin: 0 0 10px;
 }
@@ -624,6 +627,7 @@
 .freeBox__nl8KP {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   padding: 0;
   margin: 0 0 10px;
 }
