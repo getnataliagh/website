@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Disable auto-detected Next.js plugin from previous site configuration
+  NEXT_PLUGIN_FORCE_RUN = "false"
+
+# Explicitly set framework to static (not Next.js)
+[dev]
+  framework = "#static"
