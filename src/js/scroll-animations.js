@@ -54,11 +54,11 @@
     }
 
     // Observer configuration
-    // threshold: 0.1 - trigger when 10% of element is visible
-    // rootMargin: -50px bottom - trigger slightly before element enters viewport
+    // threshold: 0.05 - trigger when 5% of element is visible (more sensitive)
+    // rootMargin: positive top value allows pre-loading, small negative bottom for subtle delay
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.05,
+      rootMargin: '50px 0px -20px 0px'
     };
 
     // Create the observer

@@ -1131,7 +1131,11 @@
   }
 
   [data-animate],
-  [data-stagger] > * {
+  [data-stagger] > *,
+  .animate-on-scroll,
+  .animate-on-scroll--left,
+  .animate-on-scroll--right,
+  .animate-on-scroll--scale {
     opacity: 1 !important;
     transform: none !important;
   }
