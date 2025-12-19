@@ -1,12 +1,13 @@
 /**
  * Natalia Website - Main JavaScript
  * Advanced Motion Design System
+ *
+ * NOTE: scroll-animations.js is loaded separately and provides window.ScrollAnimations API
  */
 
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize all modules
   initScrollProgress();
-  initScrollAnimations();
   initParallax();
   initCounters();
   initMobileMenu();
@@ -30,81 +31,6 @@ function initScrollProgress() {
     const progress = window.scrollY / windowHeight;
     progressBar.style.transform = `scaleX(${progress})`;
   }, { passive: true });
-}
-
-/* ============================================
-   SCROLL ANIMATIONS (Intersection Observer)
-   ============================================ */
-function initScrollAnimations() {
-  // Elements with data-animate attribute
-  const animatedElements = document.querySelectorAll('[data-animate]');
-
-  // Elements with data-stagger attribute (parent containers)
-  const staggerContainers = document.querySelectorAll('[data-stagger]');
-
-  // New stagger types
-  const staggerLeftContainers = document.querySelectorAll('[data-stagger-left]');
-  const staggerScaleContainers = document.querySelectorAll('[data-stagger-scale]');
-
-  // Progress bars
-  const progressBars = document.querySelectorAll('.progress-bar');
-
-  // Hook0-style animate-on-scroll classes (including directional variants)
-  const legacyAnimated = document.querySelectorAll('.animate-on-scroll');
-  const animateLeft = document.querySelectorAll('.animate-on-scroll--left');
-  const animateRight = document.querySelectorAll('.animate-on-scroll--right');
-  const animateScale = document.querySelectorAll('.animate-on-scroll--scale');
-
-  const allElements = [
-    ...animatedElements,
-    ...staggerContainers,
-    ...staggerLeftContainers,
-    ...staggerScaleContainers,
-    ...progressBars,
-    ...legacyAnimated,
-    ...animateLeft,
-    ...animateRight,
-    ...animateScale
-  ];
-
-  if (allElements.length === 0) return;
-
-  // Hook0-style observer settings
-  // threshold: 0.1 - trigger when 10% visible
-  // rootMargin: -50px bottom - trigger slightly before element enters view
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        // Add visible class with a small delay for smoother effect
-        requestAnimationFrame(function() {
-          entry.target.classList.add('is-visible');
-
-          // Legacy support
-          if (entry.target.classList.contains('animate-on-scroll')) {
-            entry.target.classList.add('visible');
-          }
-        });
-
-        // Unobserve after animation (one-time animation)
-        if (!entry.target.hasAttribute('data-animate-repeat')) {
-          observer.unobserve(entry.target);
-        }
-      } else if (entry.target.hasAttribute('data-animate-repeat')) {
-        // For repeating animations, remove class when out of view
-        entry.target.classList.remove('is-visible');
-      }
-    });
-  }, observerOptions);
-
-  // Observe all elements
-  allElements.forEach(function(el) {
-    observer.observe(el);
-  });
 }
 
 /* ============================================
@@ -202,9 +128,19 @@ function animateCounter(element) {
 }
 
 /* ============================================
-   MOBILE MENU TOGGLE (with slide + fade animation)
+   MOBILE MENU TOGGLE (Enhanced with focus management and scroll lock)
+   NOTE: Uses enhanced mobile-menu.js module if available
    ============================================ */
 function initMobileMenu() {
+  // Use the enhanced mobile menu module if available
+  if (typeof window.MobileMenu !== 'undefined' && typeof window.MobileMenu.init === 'function') {
+    window.MobileMenu.init();
+    return;
+  }
+
+  // Fallback to basic implementation if module not loaded
+  console.warn('Enhanced mobile menu module not loaded, using basic implementation');
+
   const menuToggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');
 
@@ -599,7 +535,6 @@ function revealOnScroll(selector, options = {}) {
    ============================================ */
 window.NataliaApp = {
   initScrollProgress: initScrollProgress,
-  initScrollAnimations: initScrollAnimations,
   initParallax: initParallax,
   initCounters: initCounters,
   initMobileMenu: initMobileMenu,
