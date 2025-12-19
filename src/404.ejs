@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Page non trouvee | <%= locals.site.name %></title>
+  <meta name="description" content="La page que vous recherchez n'existe pas ou a ete deplacee.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow flex items-center justify-center">
+  <section class="section bg-white">
+    <div class="container-content text-center">
+      <div class="animate-on-scroll">
+        <span class="text-9xl font-bold text-gradient mb-4 block">404</span>
+        <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
+          Page non trouvee
+        </h1>
+        <p class="text-police-grey text-lg mb-8 max-w-lg mx-auto">
+          La page que vous recherchez n'existe pas ou a ete deplacee.
+          Retournez a l'accueil pour continuer votre navigation.
+        </p>
+        <a href="./" class="btn-primary inline-flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Retour a l'accueil
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>
