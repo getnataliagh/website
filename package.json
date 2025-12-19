@@ -5,7 +5,7 @@
   "description": "Natalia - Assistante Vocale IA pour entreprises",
   "homepage": "https://getnatalia.com/",
   "scripts": {
-    "serve": "npx nodemon -w ./data.js -w . -i dist/ -i src/ --ext .js,.json,.ejs --exec 'npm run build:dev && npx serve dist'",
+    "serve": "npx nodemon -w ./data.js -w . -i dist/  --ext .js,.json,.ejs --exec 'npm run build:dev && npx serve dist'",
     "build:dev": "parcel build src/*.ejs --no-cache",
     "build": "parcel build src/*.ejs --public-url=/",
     "clean": "rm -rf dist .parcel-cache"
