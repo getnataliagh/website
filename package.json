@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "npx nodemon -w ./data.js -w . -i dist/ -i src/ --ext .js,.json,.ejs --exec 'npm run build:dev && npx serve dist'",
     "build:dev": "parcel build src/*.ejs --no-cache",
-    "build": "parcel build src/*.ejs --public-url=https://getnatalia.com",
+    "build": "parcel build src/*.ejs --public-url=/",
     "clean": "rm -rf dist .parcel-cache"
   },
   "devDependencies": {
