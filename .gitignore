@@ -4,10 +4,8 @@ node_modules/
 # Build output
 dist/
 
-# Debug
+# Debug logs
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Environment
 .env
@@ -27,7 +25,6 @@ Thumbs.db
 # Misc
 *.pem
 coverage/
-pnpm-lock.yaml
 CLAUDE.md
 
 # Parcel cache
