@@ -1,0 +1,141 @@
+const locals = {};
+
+// Site metadata
+locals.site = {
+  currentYear: new Date().getFullYear(),
+  name: 'Natalia',
+  title: 'Natalia - Assistante Vocale IA',
+  description: "Solution d'assistante vocale IA pour entreprises. Automatisez vos appels entrants avec une intelligence artificielle conversationnelle.",
+  url: 'https://getnatalia.com',
+  language: 'fr',
+  locale: 'fr_FR',
+  author: 'Natalia',
+  email: 'contact@getnatalia.com',
+};
+
+// Social links
+locals.social = {
+  twitter: {
+    name: 'Twitter',
+    href: '',
+    logo: `<svg role="img" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
+  },
+  linkedin: {
+    name: 'LinkedIn',
+    href: '',
+    logo: `<svg role="img" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+  },
+};
+
+// Navigation
+locals.navigation = {
+  main: [
+    { label: 'Accueil', url: '/' },
+    {
+      label: 'Solutions',
+      url: '#solutions',
+      children: [
+        { label: 'Assistante Vocale IA', url: '/assistante-vocale-ia' },
+        { label: 'Automatisation Mail', url: '/assistant-mail-automatisation-ia' },
+        { label: 'Calculateur', url: '/calculateur' },
+      ],
+    },
+    {
+      label: 'Secteurs',
+      url: '#secteurs',
+      children: [
+        { label: 'Automobile', url: '/automobile' },
+        { label: "Centre d'appel", url: '/centre-d-appel' },
+        { label: 'Helpdesk', url: '/helpdesk' },
+        { label: 'Hotline', url: '/hotline' },
+      ],
+    },
+    { label: 'Partenaires', url: '/partenaires' },
+    { label: 'Presse', url: '/presse' },
+    { label: 'A propos', url: '/a-propos' },
+    { label: 'Contact', url: '/contact' },
+  ],
+  footer: [
+    { label: 'Mentions Legales', url: '/mentions-legales' },
+    { label: 'Politique de confidentialite', url: '/politique-confidentialite' },
+    { label: 'CGU', url: '/conditions-generales-utilisation' },
+  ],
+};
+
+// CTA buttons
+locals.cta = {
+  primary: {
+    label: 'Demander une demo',
+    url: '/contact',
+  },
+  secondary: {
+    label: 'En savoir plus',
+    url: '/a-propos',
+  },
+};
+
+// Features for homepage
+locals.features = [
+  {
+    primary: true,
+    title: 'Disponibilite 24/7',
+    description: 'Natalia repond a vos appels 24h/24, 7j/7, sans interruption ni fatigue.',
+    icon: 'clock',
+  },
+  {
+    primary: true,
+    title: 'Integration Simple',
+    description: 'Notre API REST et nos connecteurs permettent une integration rapide avec vos outils existants.',
+    icon: 'plug',
+  },
+  {
+    primary: true,
+    title: 'IA Conversationnelle',
+    description: 'Natalia comprend le langage naturel et repond de maniere fluide et personnalisee.',
+    icon: 'brain',
+  },
+  {
+    primary: true,
+    title: 'Multilingue',
+    description: 'Natalia parle francais, anglais, espagnol et plus encore.',
+    icon: 'globe',
+  },
+  {
+    primary: true,
+    title: 'Analyse en Temps Reel',
+    description: 'Tableaux de bord et rapports detailles sur vos appels.',
+    icon: 'chart',
+  },
+  {
+    primary: true,
+    title: 'Securite Enterprise',
+    description: 'Hebergement en Europe, conformite RGPD, chiffrement bout-en-bout.',
+    icon: 'shield',
+  },
+];
+
+// Testimonials
+locals.testimonials = [
+  {
+    quote: "Natalia a transforme notre service client. Nous ne ratons plus aucun appel.",
+    author: 'Marie Dupont',
+    role: 'Directrice Service Client',
+    company: 'AutoPlus',
+  },
+  {
+    quote: "L'integration a ete simple et les resultats immediats. ROI positif en 3 mois.",
+    author: 'Jean Martin',
+    role: 'CEO',
+    company: 'TechStart',
+  },
+];
+
+// Stats
+locals.stats = [
+  { value: '24/7', label: 'Disponibilite' },
+  { value: '60%', label: 'Appels traites automatiquement' },
+  { value: '3min', label: 'Temps de reponse moyen' },
+  { value: '95%', label: 'Satisfaction client' },
+];
+
+module.exports = locals;
