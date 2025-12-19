@@ -1,0 +1,139 @@
+<footer class="bg-police text-white">
+  <div class="max-w-content mx-auto px-4 md:px-6 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+      <!-- Logo, Description & Contact -->
+      <div class="lg:col-span-2">
+        <a href="./" class="inline-block mb-4">
+          <img
+            src="./assets/images/logoNataliaSvg.svg"
+            alt="<%= locals.site.name %>"
+            class="h-10 w-auto brightness-0 invert"
+          >
+        </a>
+        <p class="text-white/80 text-sm leading-relaxed max-w-sm mb-6">
+          <%= locals.site.description %>
+        </p>
+        <!-- Contact Info -->
+        <div class="space-y-2 mb-6">
+          <a href="mailto:<%= locals.site.email %>" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <%= locals.site.email %>
+          </a>
+        </div>
+        <!-- Social Links -->
+        <% if (locals.social.linkedin.href || locals.social.twitter.href) { %>
+        <div class="flex items-center gap-4">
+          <% if (locals.social.linkedin.href) { %>
+          <a href="<%= locals.social.linkedin.href %>" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors" aria-label="LinkedIn">
+            <%- locals.social.linkedin.logo %>
+          </a>
+          <% } %>
+          <% if (locals.social.twitter.href) { %>
+          <a href="<%= locals.social.twitter.href %>" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors" aria-label="Twitter">
+            <%- locals.social.twitter.logo %>
+          </a>
+          <% } %>
+        </div>
+        <% } %>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="./assistante-vocale-ia" class="text-white/80 hover:text-white transition-colors text-sm">
+              Assistante Vocale IA
+            </a>
+          </li>
+          <li>
+            <a href="./assistant-mail-automatisation-ia" class="text-white/80 hover:text-white transition-colors text-sm">
+              Automatisation Mail
+            </a>
+          </li>
+          <li>
+            <a href="./calculateur" class="text-white/80 hover:text-white transition-colors text-sm">
+              Calculateur ROI
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Secteurs -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Secteurs</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="./automobile" class="text-white/80 hover:text-white transition-colors text-sm">
+              Automobile
+            </a>
+          </li>
+          <li>
+            <a href="./centre-d-appel" class="text-white/80 hover:text-white transition-colors text-sm">
+              Centre d'appel
+            </a>
+          </li>
+          <li>
+            <a href="./helpdesk" class="text-white/80 hover:text-white transition-colors text-sm">
+              Helpdesk
+            </a>
+          </li>
+          <li>
+            <a href="./hotline" class="text-white/80 hover:text-white transition-colors text-sm">
+              Hotline
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Entreprise -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Entreprise</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="./a-propos" class="text-white/80 hover:text-white transition-colors text-sm">
+              A propos
+            </a>
+          </li>
+          <li>
+            <a href="./partenaires" class="text-white/80 hover:text-white transition-colors text-sm">
+              Partenaires
+            </a>
+          </li>
+          <li>
+            <a href="./presse" class="text-white/80 hover:text-white transition-colors text-sm">
+              Presse
+            </a>
+          </li>
+          <li>
+            <a href="./contact" class="text-white/80 hover:text-white transition-colors text-sm">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-white/20">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/60 text-sm">
+          &copy; <%= locals.site.currentYear %> <%= locals.site.name %>. Tous droits reserves.
+        </p>
+        <nav class="flex flex-wrap justify-center gap-4 md:gap-6">
+          <% locals.navigation.footer.forEach(function(item) { %>
+            <a href=".<%= item.url %>" class="text-white/60 hover:text-white transition-colors text-sm">
+              <%= item.label %>
+            </a>
+          <% }); %>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>

@@ -1,0 +1,121 @@
+<!-- Header with glassmorphism effect -->
+<header id="main-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-muted-border transition-all duration-300">
+  <nav class="max-w-navbar mx-auto px-4 md:px-6">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="./" class="flex items-center group">
+        <img
+          src="./assets/images/logoNataliaSvg.svg"
+          alt="<%= locals.site.name %>"
+          class="h-8 md:h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+        >
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center space-x-8">
+        <% locals.navigation.main.forEach(function(item) { %>
+          <% if (item.children) { %>
+            <div class="relative group">
+              <button
+                class="nav-link flex items-center space-x-1 py-2"
+                aria-expanded="false"
+              >
+                <span><%= item.label %></span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-card border border-muted-border">
+                <div class="py-2">
+                  <% item.children.forEach(function(child) { %>
+                    <a
+                      href=".<%= child.url %>"
+                      class="block px-4 py-2 text-sm text-police-grey hover:bg-background-2 hover:text-primary transition-colors"
+                    >
+                      <%= child.label %>
+                    </a>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
+          <% } else { %>
+            <a href=".<%= item.url %>" class="nav-link py-2">
+              <%= item.label %>
+            </a>
+          <% } %>
+        <% }); %>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:flex items-center">
+        <a href=".<%= locals.cta.primary.url %>" class="btn btn-primary">
+          <%= locals.cta.primary.label %>
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="lg:hidden p-2 rounded-md text-police hover:bg-background-2 transition-colors"
+        data-menu-toggle
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6 menu-icon-open transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 menu-icon-close hidden transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden mobile-menu menu-hidden" data-menu>
+      <div class="py-4 border-t border-muted-border">
+        <% locals.navigation.main.forEach(function(item) { %>
+          <% if (item.children) { %>
+            <div class="py-2 mobile-menu-item">
+              <button
+                class="flex items-center justify-between w-full px-4 py-2 text-police-grey font-medium"
+                data-dropdown-toggle
+              >
+                <span><%= item.label %></span>
+                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="hidden pl-4" data-dropdown>
+                <% item.children.forEach(function(child) { %>
+                  <a
+                    href=".<%= child.url %>"
+                    class="block px-4 py-2 text-sm text-police-grey hover:text-primary transition-colors"
+                  >
+                    <%= child.label %>
+                  </a>
+                <% }); %>
+              </div>
+            </div>
+          <% } else { %>
+            <a
+              href=".<%= item.url %>"
+              class="mobile-menu-item block px-4 py-2 text-police-grey font-medium hover:text-primary transition-colors"
+            >
+              <%= item.label %>
+            </a>
+          <% } %>
+        <% }); %>
+
+        <!-- Mobile CTA -->
+        <div class="mt-4 px-4 mobile-menu-item">
+          <a href=".<%= locals.cta.primary.url %>" class="btn btn-primary w-full text-center">
+            <%= locals.cta.primary.label %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

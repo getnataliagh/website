@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Contact - Natalia, Assistante Vocale IA | <%= locals.site.name %></title>
+  <meta name="description" content="Contactez l'equipe Natalia pour une demonstration ou pour toute question sur nos solutions d'assistante vocale IA.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+
+<!-- Hero Section -->
+<section class="section bg-gradient-to-br from-white to-primary/5 relative overflow-hidden">
+  <!-- Decorative gradient orbs -->
+  <div class="gradient-orb gradient-orb-1"></div>
+  <div class="gradient-orb gradient-orb-2"></div>
+
+  <div class="container-content relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
+      <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
+        <span class="text-gradient">Contactez</span>-nous
+      </h1>
+      <p class="hero-subtitle text-lg text-police-grey">
+        Vous souhaitez une demonstration ? Vous avez une question ? Notre equipe est a votre ecoute.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="card animate-on-scroll--left">
+        <h2 class="text-h3 font-bold text-police-titre mb-6">
+          Demander une demo
+        </h2>
+        <form action="https://formspree.io/f/contact" method="POST" class="space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="firstName" class="form-label form-label-required">Prenom</label>
+              <input type="text" id="firstName" name="firstName" required class="form-input" placeholder="Votre prenom">
+            </div>
+            <div>
+              <label for="lastName" class="form-label form-label-required">Nom</label>
+              <input type="text" id="lastName" name="lastName" required class="form-input" placeholder="Votre nom">
+            </div>
+          </div>
+          <div>
+            <label for="email" class="form-label form-label-required">Email professionnel</label>
+            <input type="email" id="email" name="email" required class="form-input" placeholder="vous@entreprise.com">
+          </div>
+          <div>
+            <label for="company" class="form-label form-label-required">Entreprise</label>
+            <input type="text" id="company" name="company" required class="form-input" placeholder="Nom de votre entreprise">
+          </div>
+          <div>
+            <label for="phone" class="form-label">Telephone</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+33 6 00 00 00 00">
+          </div>
+          <div>
+            <label for="sector" class="form-label">Secteur d'activite</label>
+            <select id="sector" name="sector" class="form-input form-select">
+              <option value="">Selectionnez votre secteur...</option>
+              <option value="automobile">Automobile / Concessions</option>
+              <option value="centre-appel">Centre d'appels</option>
+              <option value="helpdesk">Helpdesk / Support IT</option>
+              <option value="hotline">Hotline / Service client</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="form-label">Votre message</label>
+            <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Decrivez votre projet ou vos besoins..."></textarea>
+          </div>
+          <div class="pt-2">
+            <button type="submit" class="btn-primary w-full">
+              Envoyer ma demande
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-6 animate-on-scroll">
+        <!-- Email Card -->
+        <div class="card bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/10">
+          <h3 class="text-lg font-semibold text-police-titre mb-4">Nous ecrire</h3>
+          <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline flex items-center gap-2 text-lg font-medium">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <%= locals.site.email %>
+          </a>
+        </div>
+
+        <!-- Why Choose Card -->
+        <div class="card">
+          <h3 class="text-lg font-semibold text-police-titre mb-4">Pourquoi choisir Natalia ?</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-police-grey">
+              <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Disponible 24/7, sans interruption</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey">
+              <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Voix naturelle et comprehension IA avancee</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey">
+              <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Integration avec vos outils metiers</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey">
+              <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Deploiement rapide et accompagnement personnalise</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey">
+              <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Hebergement securise en France (RGPD)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Demo CTA Card -->
+        <div class="card bg-gradient-to-br from-primary to-secondary text-white border-0 shadow-xl">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Pret pour une demo ?</h3>
+              <p class="text-white/90 leading-relaxed">
+                Nous vous proposons une demonstration personnalisee de 30 minutes pour decouvrir Natalia en action sur vos cas d'usage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>

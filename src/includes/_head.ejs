@@ -1,0 +1,98 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="theme-color" content="#5C39EE">
+
+<!-- Preconnect to Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="./style.scss">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+
+<!-- Scroll Animation Script (Hook0-style) -->
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  // Intersection Observer for scroll-triggered animations (Hook0-style)
+  var observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all animated elements (class-based and data-attribute based)
+  document.querySelectorAll('.animate-on-scroll, .animate-on-scroll--left, .animate-on-scroll--right, .animate-on-scroll--scale, [data-stagger], [data-stagger-scale], [data-stagger-left]').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Card glow effect (Hook0-style mouse tracking)
+  document.querySelectorAll('.card--glow').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', x + 'px');
+      card.style.setProperty('--mouse-y', y + 'px');
+    });
+  });
+
+  // Header scroll effect
+  var header = document.getElementById('main-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }, { passive: true });
+  }
+
+  // Mobile menu toggle
+  var menuToggle = document.querySelector('[data-menu-toggle]');
+  var menu = document.querySelector('[data-menu]');
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', function() {
+      var isOpen = menu.classList.contains('menu-visible');
+      if (isOpen) {
+        menu.classList.remove('menu-visible');
+        menu.classList.add('menu-hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.classList.remove('menu-hidden');
+        menu.classList.add('menu-visible');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
+  // Dropdown toggles
+  document.querySelectorAll('[data-dropdown-toggle]').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var dropdown = toggle.nextElementSibling;
+      var icon = toggle.querySelector('svg');
+      if (dropdown && dropdown.hasAttribute('data-dropdown')) {
+        dropdown.classList.toggle('hidden');
+        if (icon) icon.classList.toggle('rotate-180');
+      }
+    });
+  });
+});
+</script>

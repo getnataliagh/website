@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Calculateur ROI - Natalia, Assistante Vocale IA</title>
+  <meta name="description" content="Calculez les economies realisables avec Natalia, l'assistante vocale IA. Estimez votre retour sur investissement.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+  <!-- Hero Section -->
+  <section class="section bg-gradient-to-br from-white to-primary/5 relative overflow-hidden">
+    <!-- Decorative gradient orbs -->
+    <div class="gradient-orb gradient-orb-1"></div>
+    <div class="gradient-orb gradient-orb-2"></div>
+
+    <div class="container-content relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
+          Calculez vos <span class="text-gradient">economies</span> avec Natalia
+        </h1>
+        <p class="hero-subtitle text-lg text-police-grey">
+          Estimez le retour sur investissement que Natalia peut vous apporter en fonction de votre volume d'appels.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="section bg-gradient-to-br from-white to-primary/5 pt-0">
+    <div class="container-content">
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <div class="bg-white rounded-card p-6 shadow-xl border border-primary/10">
+          <h2 class="text-h3 font-bold text-police-titre mb-8 text-center">
+            Simulateur de <span class="text-gradient">ROI</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Input Section -->
+            <div class="space-y-8">
+              <!-- Calls Slider -->
+              <div class="slider-group">
+                <label for="calls" class="form-label">
+                  Nombre d'appels entrants par mois
+                </label>
+                <input type="range" id="calls" min="100" max="10000" value="1000" step="100" class="form-range">
+                <div class="flex justify-between text-sm mt-2">
+                  <span class="text-police-grey">100</span>
+                  <span id="calls-value" class="font-bold text-primary text-lg">1 000</span>
+                  <span class="text-police-grey">10 000</span>
+                </div>
+              </div>
+
+              <!-- Missed Slider -->
+              <div class="slider-group">
+                <label for="missed" class="form-label">
+                  Taux d'appels manques actuel (%)
+                </label>
+                <input type="range" id="missed" min="10" max="60" value="30" step="5" class="form-range">
+                <div class="flex justify-between text-sm mt-2">
+                  <span class="text-police-grey">10%</span>
+                  <span id="missed-value" class="font-bold text-primary text-lg">30%</span>
+                  <span class="text-police-grey">60%</span>
+                </div>
+              </div>
+
+              <!-- Cost Slider -->
+              <div class="slider-group">
+                <label for="cost" class="form-label">
+                  Cout horaire moyen d'un agent (euros)
+                </label>
+                <input type="range" id="cost" min="15" max="50" value="25" step="1" class="form-range">
+                <div class="flex justify-between text-sm mt-2">
+                  <span class="text-police-grey">15 euros</span>
+                  <span id="cost-value" class="font-bold text-primary text-lg">25 euros</span>
+                  <span class="text-police-grey">50 euros</span>
+                </div>
+              </div>
+
+              <!-- Duration Slider -->
+              <div class="slider-group">
+                <label for="duration" class="form-label">
+                  Duree moyenne d'un appel (minutes)
+                </label>
+                <input type="range" id="duration" min="2" max="15" value="5" step="1" class="form-range">
+                <div class="flex justify-between text-sm mt-2">
+                  <span class="text-police-grey">2 min</span>
+                  <span id="duration-value" class="font-bold text-primary text-lg">5 min</span>
+                  <span class="text-police-grey">15 min</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-6 border border-primary/10">
+              <h3 class="text-lg font-bold text-police-titre mb-6">Resultats estimes</h3>
+
+              <div class="space-y-4">
+                <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
+                  <div class="text-sm text-police-grey mb-1">Appels recuperes par mois</div>
+                  <div id="recovered" class="text-2xl font-bold text-primary">300</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
+                  <div class="text-sm text-police-grey mb-1">Heures economisees par mois</div>
+                  <div id="hours" class="text-2xl font-bold text-secondary">25 h</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
+                  <div class="text-sm text-police-grey mb-1">Economies mensuelles estimees</div>
+                  <div id="savings" class="text-3xl font-bold text-gradient">625 euros</div>
+                </div>
+
+                <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-5 shadow-lg">
+                  <div class="text-sm opacity-90 mb-1">Economies annuelles</div>
+                  <div id="annual" class="text-3xl font-bold">7 500 euros</div>
+                </div>
+              </div>
+
+              <p class="text-xs text-police-grey mt-4 leading-relaxed">
+                * Estimation basee sur une prise en charge de 100% des appels par Natalia et une resolution de 60% des demandes sans intervention humaine.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10 text-center">
+            <a href="./contact" class="btn-primary">
+              Demander une etude personnalisee
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-background-2">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
+        Au-dela des <span class="text-gradient">economies</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <div class="card bg-white text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-success/10 text-success">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-police-titre mb-3">Satisfaction client</h3>
+          <p class="text-police-grey">
+            Plus d'attente, plus d'appels manques. Vos clients sont pris en charge immediatement.
+          </p>
+        </div>
+        <div class="card bg-white text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-police-titre mb-3">Productivite</h3>
+          <p class="text-police-grey">
+            Vos equipes se concentrent sur les taches a forte valeur ajoutee.
+          </p>
+        </div>
+        <div class="card bg-white text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-secondary/10 text-secondary">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-police-titre mb-3">Donnees</h3>
+          <p class="text-police-grey">
+            Collecte automatique de donnees pour mieux comprendre vos clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-animated text-white relative overflow-hidden">
+    <!-- Floating decorative circles -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="container-content text-center relative z-10">
+      <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
+        Pret a passer a l'action ?
+      </h2>
+      <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-on-scroll">
+        Demandez une etude personnalisee gratuite pour votre entreprise.
+      </p>
+      <div class="animate-on-scroll">
+        <a href="./contact" class="btn btn-white inline-flex items-center gap-2">
+          Demander une etude
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const callsInput = document.getElementById('calls');
+  const missedInput = document.getElementById('missed');
+  const costInput = document.getElementById('cost');
+  const durationInput = document.getElementById('duration');
+
+  const callsValue = document.getElementById('calls-value');
+  const missedValue = document.getElementById('missed-value');
+  const costValue = document.getElementById('cost-value');
+  const durationValue = document.getElementById('duration-value');
+
+  const recoveredEl = document.getElementById('recovered');
+  const hoursEl = document.getElementById('hours');
+  const savingsEl = document.getElementById('savings');
+  const annualEl = document.getElementById('annual');
+
+  function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function calculate() {
+    const calls = parseInt(callsInput.value);
+    const missed = parseInt(missedInput.value) / 100;
+    const cost = parseInt(costInput.value);
+    const duration = parseInt(durationInput.value);
+
+    // Update displayed values
+    callsValue.textContent = formatNumber(calls);
+    missedValue.textContent = missedInput.value + '%';
+    costValue.textContent = cost + ' euros';
+    durationValue.textContent = duration + ' min';
+
+    // Calculate results
+    const recovered = Math.round(calls * missed);
+    const hours = Math.round((recovered * duration) / 60);
+    const savings = Math.round(hours * cost * 0.6); // 60% resolution rate
+    const annual = savings * 12;
+
+    // Update results with animation
+    animateValue(recoveredEl, recovered, '');
+    animateValue(hoursEl, hours, ' h');
+    animateValue(savingsEl, savings, ' euros');
+    animateValue(annualEl, annual, ' euros');
+  }
+
+  function animateValue(element, value, suffix) {
+    element.textContent = formatNumber(value) + suffix;
+    element.style.transform = 'scale(1.05)';
+    setTimeout(() => {
+      element.style.transform = 'scale(1)';
+    }, 150);
+  }
+
+  // Add event listeners
+  [callsInput, missedInput, costInput, durationInput].forEach(input => {
+    input.addEventListener('input', calculate);
+    // Add transition for smooth value changes
+    input.style.transition = 'all 0.2s ease';
+  });
+
+  // Style the result elements for smooth animation
+  [recoveredEl, hoursEl, savingsEl, annualEl].forEach(el => {
+    el.style.transition = 'transform 0.15s ease';
+  });
+
+  // Initial calculation
+  calculate();
+});
+</script>
+
+</body>
+</html>

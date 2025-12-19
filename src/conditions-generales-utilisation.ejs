@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Conditions Generales d'Utilisation | <%= locals.site.name %></title>
+  <meta name="description" content="Conditions generales d'utilisation des services Natalia">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+  <section class="section bg-white">
+    <div class="container-content">
+      <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-8 animate-on-scroll">
+        Conditions Generales <span class="text-gradient">d'Utilisation</span>
+      </h1>
+
+      <div class="prose prose-lg max-w-none text-police-grey animate-on-scroll">
+        <p class="text-lg mb-6">
+          Les presentes conditions generales d'utilisation regissent l'acces et l'utilisation des services proposes par Natalia.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 1 - Objet</h2>
+        <p>
+          Les presentes CGU ont pour objet de definir les conditions d'acces et d'utilisation des services Natalia, accessibles via le site getnatalia.com.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 2 - Description des services</h2>
+        <p>
+          Natalia propose une solution d'assistante vocale basee sur l'intelligence artificielle permettant d'automatiser la gestion des appels telephoniques entrants pour les entreprises.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 3 - Acces aux services</h2>
+        <p>
+          L'acces aux services Natalia est reserve aux professionnels ayant souscrit un abonnement. L'utilisateur s'engage a fournir des informations exactes lors de son inscription.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 4 - Obligations de l'utilisateur</h2>
+        <p>L'utilisateur s'engage a :</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Utiliser les services conformement a leur destination</li>
+          <li>Ne pas porter atteinte aux droits de tiers</li>
+          <li>Respecter la legislation en vigueur</li>
+          <li>Maintenir la confidentialite de ses identifiants</li>
+        </ul>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 5 - Propriete intellectuelle</h2>
+        <p>
+          L'ensemble des elements composant le service Natalia (logiciels, algorithmes, interfaces, etc.) sont proteges par le droit de la propriete intellectuelle et restent la propriete exclusive de Natalia SAS.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 6 - Responsabilite</h2>
+        <p>
+          Natalia s'engage a mettre en oeuvre tous les moyens necessaires pour assurer la continuite et la qualite de ses services. Toutefois, Natalia ne saurait etre tenue responsable des dommages indirects resultant de l'utilisation de ses services.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 7 - Modification des CGU</h2>
+        <p>
+          Natalia se reserve le droit de modifier les presentes CGU a tout moment. Les utilisateurs seront informes de toute modification par email ou via le site.
+        </p>
+
+        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 8 - Contact</h2>
+        <p>
+          Pour toute question relative aux presentes CGU : <%= locals.site.email %>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>

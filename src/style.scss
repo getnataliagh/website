@@ -1,0 +1,960 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ============================================
+// FONT IMPORTS
+// ============================================
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+// ============================================
+// CSS CUSTOM PROPERTIES
+// ============================================
+:root {
+  // Transition tokens (Hook0-style)
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  // Shadow tokens
+  --shadow-glow-primary: 0 0 40px rgba(92, 57, 238, 0.3);
+  --shadow-glow-secondary: 0 0 40px rgba(176, 65, 240, 0.3);
+}
+
+// ============================================
+// BASE LAYER
+// ============================================
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-police bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold text-police-titre;
+  }
+
+  h1 { @apply text-h1-mobile md:text-h1; }
+  h2 { @apply text-h2-mobile md:text-h2; }
+  h3 { @apply text-h3-mobile md:text-h3; }
+  h4 { @apply text-h4-mobile md:text-h4; }
+
+  a {
+    transition: color var(--transition-base);
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+}
+
+// ============================================
+// COMPONENT LAYER
+// ============================================
+@layer components {
+  // --------------------------------------------
+  // CONTAINERS
+  // --------------------------------------------
+  .container-content {
+    @apply max-w-content mx-auto px-4 md:px-6;
+  }
+
+  // --------------------------------------------
+  // BUTTONS (Hook0-style: 0.3s ease-out-expo)
+  // --------------------------------------------
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3.5 rounded-button font-semibold relative overflow-hidden text-base;
+    transition: all var(--transition-base);
+  }
+
+  // Primary button - subtle lift + glow on hover
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-gradient-to-r from-primary via-primary to-secondary text-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    box-shadow: 0 4px 15px rgba(92, 57, 238, 0.3);
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(92, 57, 238, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 10px rgba(92, 57, 238, 0.4);
+    }
+  }
+
+  // Icon inside button moves right on hover
+  .btn-primary, .btn-secondary, .btn-outline, .btn-white {
+    svg {
+      transition: transform var(--transition-base);
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+  }
+
+  // Secondary button
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-white text-primary border-2 border-primary/30;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2;
+    box-shadow: 0 2px 10px rgba(92, 57, 238, 0.1);
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-2px);
+      @apply border-primary;
+      box-shadow: 0 0 30px rgba(92, 57, 238, 0.2);
+    }
+  }
+
+  // Outline button - NO translate, just color change
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-transparent text-white border-2 border-white/80;
+    @apply focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary;
+    transition: all var(--transition-base);
+
+    &:hover {
+      @apply bg-white/10;
+      border-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  // Ghost button
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3.5 rounded-button font-semibold text-base;
+    @apply bg-transparent text-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30;
+    transition: all var(--transition-base);
+
+    &:hover {
+      @apply bg-primary/5 text-primary;
+    }
+  }
+
+  // White button
+  .btn-white {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-white text-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-white/50;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  // --------------------------------------------
+  // CARDS (Hook0-style: -4px lift)
+  // --------------------------------------------
+  .card {
+    @apply bg-white rounded-card p-6 shadow-card;
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-4px);
+      @apply shadow-card-hover;
+      border-color: rgba(92, 57, 238, 0.1);
+    }
+  }
+
+  .card-bordered {
+    @apply border border-muted-border;
+  }
+
+  // --------------------------------------------
+  // SECTIONS
+  // --------------------------------------------
+  .section {
+    @apply py-section-mobile md:py-section;
+  }
+
+  .section-alt {
+    @apply bg-background-2;
+  }
+
+  // --------------------------------------------
+  // NAVIGATION
+  // --------------------------------------------
+  .nav-link {
+    @apply text-police-grey hover:text-primary relative;
+    transition: color var(--transition-base);
+
+    &::after {
+      content: '';
+      @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary;
+      transition: width var(--transition-base);
+    }
+
+    &:hover::after {
+      @apply w-full;
+    }
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  // Desktop dropdown animation
+  .nav-dropdown {
+    @apply opacity-0 invisible;
+    transform: translateY(-8px);
+    transform-origin: top center;
+    transition: opacity var(--transition-base),
+                transform var(--transition-base),
+                visibility var(--transition-base);
+  }
+
+  .group:hover .nav-dropdown {
+    @apply opacity-100 visible;
+    transform: translateY(0);
+  }
+
+  // --------------------------------------------
+  // FORM ELEMENTS
+  // --------------------------------------------
+  .form-input, .input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply placeholder:text-police-grey/50;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    transition: all var(--transition-base);
+
+    &:hover {
+      @apply border-primary/40;
+    }
+  }
+
+  .form-select, select.form-input, select.input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    @apply cursor-pointer appearance-none;
+    transition: all var(--transition-base);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%235C39EE' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  .form-textarea, textarea.form-input, textarea.input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply placeholder:text-police-grey/50;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    @apply resize-y min-h-[120px];
+    transition: all var(--transition-base);
+  }
+
+  .input-error, .form-input-error {
+    @apply border-destructive focus:ring-destructive/10 focus:border-destructive;
+  }
+
+  .form-label, .label {
+    @apply block text-sm font-semibold text-police-titre mb-2;
+  }
+
+  .form-label-required::after {
+    content: ' *';
+    @apply text-primary;
+  }
+
+  // Range slider
+  .form-range, input[type="range"] {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+    @apply bg-gradient-to-r from-primary/20 to-primary/10;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      @apply w-5 h-5 rounded-full cursor-pointer;
+      @apply bg-gradient-to-br from-primary to-secondary;
+      box-shadow: 0 2px 8px rgba(92, 57, 238, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: -6px;
+
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 0 4px 12px rgba(92, 57, 238, 0.5);
+      }
+    }
+
+    &::-moz-range-thumb {
+      @apply w-5 h-5 rounded-full cursor-pointer border-0;
+      @apply bg-gradient-to-br from-primary to-secondary;
+      box-shadow: 0 2px 8px rgba(92, 57, 238, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 0 4px 12px rgba(92, 57, 238, 0.5);
+      }
+    }
+
+    &::-webkit-slider-runnable-track {
+      @apply w-full h-2 rounded-full;
+      @apply bg-gradient-to-r from-primary/30 to-primary/10;
+    }
+
+    &::-moz-range-track {
+      @apply w-full h-2 rounded-full;
+      @apply bg-gradient-to-r from-primary/30 to-primary/10;
+    }
+
+    &:focus-visible {
+      @apply outline-none;
+
+      &::-webkit-slider-thumb {
+        @apply ring-4 ring-primary/30;
+      }
+    }
+  }
+
+  // Checkbox & Radio
+  input[type="checkbox"], input[type="radio"] {
+    @apply w-5 h-5 rounded cursor-pointer;
+    @apply border-2 border-primary/30 bg-white;
+    @apply checked:bg-primary checked:border-primary;
+    @apply focus:ring-2 focus:ring-primary/30 focus:ring-offset-2;
+    transition: all var(--transition-base);
+  }
+
+  input[type="radio"] {
+    @apply rounded-full;
+  }
+
+  // --------------------------------------------
+  // MEDIA CONTAINERS
+  // --------------------------------------------
+  .youtube-container {
+    @apply w-full rounded-lg overflow-hidden shadow-card;
+  }
+
+  .lottie-container {
+    @apply w-full h-auto;
+  }
+
+  // --------------------------------------------
+  // GRID LAYOUTS
+  // --------------------------------------------
+  .grid-features {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .grid-partners {
+    @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6;
+  }
+}
+
+// ============================================
+// UTILITY LAYER
+// ============================================
+@layer utilities {
+  // Text gradient
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  // Animated gradient background
+  .bg-gradient-animated {
+    background: linear-gradient(-45deg, #5C39EE, #B041F0, #7c3aed, #5C39EE);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  // Aspect ratios
+  .aspect-video { aspect-ratio: 16 / 9; }
+  .aspect-square { aspect-ratio: 1 / 1; }
+}
+
+// ============================================
+// KEYFRAME ANIMATIONS
+// ============================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(92, 57, 238, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(92, 57, 238, 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes morphBlob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75% { border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes growWidth {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+// ============================================
+// SCROLL-TRIGGERED ANIMATIONS (Hook0-style)
+// CSS Transitions | Duration: 0.6s | Easing: cubic-bezier(0.16, 1, 0.3, 1)
+// ============================================
+
+// Base scroll animation - fade up from below
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Variant: slide in from left
+.animate-on-scroll--left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Variant: slide in from right
+.animate-on-scroll--right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Variant: scale up
+.animate-on-scroll--scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Stagger children animation (Hook0-style) - supports both class and data-attribute
+.stagger-children > *,
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-children.is-visible > *,
+[data-stagger].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@for $i from 1 through 12 {
+  .stagger-children > *:nth-child(#{$i}),
+  [data-stagger] > *:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 0.1}s;
+  }
+}
+
+// Stagger scale variant - supports both class and data-attribute
+.stagger-children--scale > *,
+[data-stagger-scale] > * {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-children--scale.is-visible > *,
+[data-stagger-scale].is-visible > * {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@for $i from 1 through 12 {
+  .stagger-children--scale > *:nth-child(#{$i}),
+  [data-stagger-scale] > *:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 0.1}s;
+  }
+}
+
+// Stagger left variant (data-attribute only)
+[data-stagger-left] > * {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-stagger-left].is-visible > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@for $i from 1 through 12 {
+  [data-stagger-left] > *:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 0.1}s;
+  }
+}
+
+// ============================================
+// CARD GLOW EFFECT (Hook0-style mouse tracking)
+// ============================================
+.card--glow {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(92, 57, 238, 0.1),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+// ============================================
+// CONTINUOUS ANIMATIONS
+// ============================================
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out infinite 1s; }
+.animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse 3s ease-in-out infinite; }
+.animate-bounce-slow { animation: bounce 2s ease-in-out infinite; }
+.animate-morph { animation: morphBlob 8s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+// ============================================
+// HERO SECTION ANIMATIONS
+// ============================================
+.hero-title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.hero-image {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: heroFadeInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ============================================
+// DECORATIVE ELEMENTS
+// ============================================
+.gradient-orb {
+  @apply absolute rounded-full opacity-30 blur-3xl pointer-events-none;
+  background: linear-gradient(135deg, #5C39EE 0%, #B041F0 100%);
+}
+
+.gradient-orb-1 {
+  @apply w-96 h-96 -top-48 -right-48;
+  animation: float 10s ease-in-out infinite;
+}
+
+.gradient-orb-2 {
+  @apply w-72 h-72 -bottom-36 -left-36;
+  animation: float 12s ease-in-out infinite reverse;
+}
+
+// Glow effect
+.glow {
+  box-shadow: 0 0 40px rgba(92, 57, 238, 0.3);
+}
+
+.glow-hover {
+  transition: box-shadow var(--transition-base);
+
+  &:hover {
+    box-shadow: 0 0 60px rgba(92, 57, 238, 0.4);
+  }
+}
+
+
+// ============================================
+// MOBILE MENU
+// ============================================
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.menu-hidden {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+
+  &.menu-visible {
+    max-height: 600px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.mobile-menu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .mobile-menu.menu-visible & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@for $i from 1 through 8 {
+  .mobile-menu-item:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 0.05 + 0.05}s;
+  }
+}
+
+// ============================================
+// SWIPER CUSTOMIZATION
+// ============================================
+.swiper {
+  @apply w-full;
+}
+
+.swiper-slide {
+  @apply h-auto;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-muted;
+  transition: all var(--transition-base);
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary w-6 rounded-full;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply text-primary;
+  transition: transform var(--transition-base);
+}
+
+.swiper-button-next:hover { @apply translate-x-1; }
+.swiper-button-prev:hover { @apply -translate-x-1; }
+
+// ============================================
+// MARQUEE
+// ============================================
+.marquee-container {
+  @apply overflow-hidden relative;
+
+  &::before, &::after {
+    content: '';
+    @apply absolute top-0 bottom-0 w-24 z-10 pointer-events-none;
+  }
+
+  &::before {
+    @apply left-0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+  }
+
+  &::after {
+    @apply right-0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+  }
+
+  &.bg-alt {
+    &::before {
+      background: linear-gradient(to right, #f8f7fc 0%, transparent 100%);
+    }
+    &::after {
+      background: linear-gradient(to left, #f8f7fc 0%, transparent 100%);
+    }
+  }
+}
+
+.marquee-track {
+  @apply flex items-center;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-item {
+  @apply flex-shrink-0 px-8;
+
+  img {
+    @apply h-12 object-contain opacity-60;
+    transition: all var(--transition-base);
+  }
+
+  &:hover img {
+    @apply opacity-100 scale-110;
+  }
+}
+
+// ============================================
+// PROGRESS BAR
+// ============================================
+.progress-bar {
+  @apply h-0.5 bg-gradient-to-r from-primary via-secondary to-primary;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-visible {
+    transform: scaleX(1);
+  }
+}
+
+// ============================================
+// ICON ANIMATIONS
+// ============================================
+.icon-animated {
+  transition: all var(--transition-base);
+}
+
+.group:hover .icon-animated {
+  @apply scale-110;
+  animation: bounce 0.6s ease-in-out;
+}
+
+// ============================================
+// LINK ANIMATIONS
+// ============================================
+.link-underline {
+  @apply relative inline-block;
+
+  &::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 origin-right;
+    transition: transform var(--transition-base);
+  }
+
+  &:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
+
+// ============================================
+// COUNTER ANIMATION
+// ============================================
+.counter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-slow),
+              transform var(--transition-slow);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// LOADING STATES
+// ============================================
+.skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-text {
+  @apply h-4 bg-gray-200 rounded animate-pulse;
+}
+
+
+// ============================================
+// HEADER SCROLL STATE
+// ============================================
+.header-scrolled {
+  @apply bg-white/90 backdrop-blur-xl shadow-lg;
+}
+
+// ============================================
+// RESPONSIVE MOTION PREFERENCES
+// ============================================
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-on-scroll,
+  .animate-on-scroll--left,
+  .animate-on-scroll--right,
+  .animate-on-scroll--scale,
+  .stagger-children > *,
+  .stagger-children--scale > *,
+  [data-stagger] > *,
+  [data-stagger-scale] > *,
+  [data-stagger-left] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

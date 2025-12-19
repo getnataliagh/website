@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Mentions Legales | <%= locals.site.name %></title>
+  <meta name="description" content="Mentions legales du site Natalia - Assistante vocale IA">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+
+<section class="section bg-white">
+  <div class="container-content">
+    <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-8 animate-on-scroll">
+      Mentions <span class="text-gradient">Legales</span>
+    </h1>
+
+    <div class="prose prose-lg max-w-none text-police-grey animate-on-scroll">
+      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Editeur du site</h2>
+      <p>
+        Le site getnatalia.com est edite par Natalia SAS.<br>
+        Siege social : [Adresse]<br>
+        Capital social : [Montant] euros<br>
+        RCS : [Numero]<br>
+        SIRET : [Numero]<br>
+        TVA intracommunautaire : [Numero]
+      </p>
+
+      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Directeur de la publication</h2>
+      <p>
+        [Nom du directeur de publication]<br>
+        Contact : <%= locals.site.email %>
+      </p>
+
+      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Hebergement</h2>
+      <p>
+        Le site est heberge par Netlify, Inc.<br>
+        2325 3rd Street, Suite 215<br>
+        San Francisco, California 94107<br>
+        United States
+      </p>
+
+      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Propriete intellectuelle</h2>
+      <p>
+        L'ensemble des elements figurant sur le site (textes, logos, images, elements graphiques, sons, logiciels, etc.) sont proteges par les dispositions du Code de la Propriete Intellectuelle. Toute reproduction, representation, modification, publication ou adaptation de tout ou partie des elements du site est interdite sauf autorisation ecrite prealable.
+      </p>
+
+      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Donnees personnelles</h2>
+      <p>
+        Conformement a la loi Informatique et Libertes du 6 janvier 1978 modifiee et au Reglement General sur la Protection des Donnees (RGPD), vous disposez d'un droit d'acces, de rectification, de suppression et d'opposition aux donnees personnelles vous concernant.
+      </p>
+      <p>
+        Pour exercer ces droits, vous pouvez nous contacter a : <%= locals.site.email %>
+      </p>
+      <p>
+        Pour plus d'informations, consultez notre <a href="./politique-confidentialite" class="text-primary hover:underline">politique de confidentialite</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>
