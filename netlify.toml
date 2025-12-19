@@ -10,3 +10,9 @@
 # Explicitly set framework to static (not Next.js)
 [dev]
   framework = "#static"
+
+# Add redirect for 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
