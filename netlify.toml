@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "echo 'Node version:' && node -v && echo 'npm version:' && npm -v && echo 'Installing dependencies...' && npm ci && echo 'Building...' && npm run build"
   publish = "dist"
 
 [build.environment]
