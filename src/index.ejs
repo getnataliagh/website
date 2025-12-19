@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Natalia, l'assistante IA qui automatise vos appels | <%= locals.site.name %></title>
-  <meta name="description" content="Decouvrez Natalia, une intelligence artificielle concue pour alleger la charge du standard telephonique et repondre aux appels 24h/24 !">
+  <title>Natalia - Suite IA pour la Relation Client | Voice, WhatsApp, Transcript</title>
+  <meta name="description" content="Natalia transforme votre relation client avec 3 solutions IA: Voice (assistant 24/7), WhatsApp (98% d'ouverture), Transcript (intelligence commerciale). Demandez une demo.">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -11,90 +11,91 @@
 
 <main class="flex-grow">
 
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden min-h-[90vh] flex items-center">
-  <!-- Decorative gradient orbs -->
-  <div class="gradient-orb gradient-orb-1"></div>
-  <div class="gradient-orb gradient-orb-2"></div>
+<!-- Hero Section - Suite IA -->
+<section class="relative bg-[#030014] overflow-hidden min-h-[95vh] flex items-center">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-r from-primary/40 to-transparent rounded-full blur-[150px] animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-l from-secondary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-purple-500/5 to-transparent rounded-full"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+  </div>
 
-  <div class="container-content py-16 md:py-24 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-6">
-          Natalia <span class="text-gradient">revolutionne</span> votre gestion des appels entrants
-        </h1>
-        <p class="hero-subtitle text-lg text-police-grey mb-8 leading-relaxed">
-          Disponible 24h/24 - 7j/7 pour vos clients. Natalia prend vos appels, qualifie les demandes et vos leads pendant que vos equipes se concentrent sur l'essentiel.
-        </p>
-        <div class="hero-cta flex flex-col sm:flex-row gap-4">
-          <a href="./contact" class="btn btn-primary">
-            Demander une demo
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </a>
-          <a href="./calculateur" class="btn btn-secondary">
-            Calculer mes economies
-          </a>
-        </div>
+  <!-- Floating particles -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-[10%] w-2 h-2 bg-primary/60 rounded-full animate-float-particle"></div>
+    <div class="absolute top-40 right-[15%] w-1.5 h-1.5 bg-secondary/50 rounded-full animate-float-particle" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-32 left-[20%] w-1 h-1 bg-cyan-400/40 rounded-full animate-float-particle" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/3 right-[25%] w-2.5 h-2.5 bg-emerald-400/30 rounded-full animate-float-particle" style="animation-delay: 0.5s;"></div>
+  </div>
+
+  <div class="container-content py-20 md:py-28 relative z-10">
+    <div class="text-center max-w-5xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-on-scroll">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        <span class="text-white/80 font-medium text-sm tracking-wide">La suite IA complete pour la relation client</span>
       </div>
-      <div class="hero-image relative">
-        <!-- Main visual container with glow effects -->
-        <div class="relative">
-          <!-- Animated glow rings -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-80 h-80 rounded-full border border-primary/20 animate-pulse-glow"></div>
+
+      <!-- Main headline -->
+      <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <span class="block">3 solutions IA.</span>
+        <span class="block bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Un ecosysteme unifie.</span>
+      </h1>
+
+      <p class="hero-subtitle text-lg md:text-xl text-white/60 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Natalia Voice, WhatsApp et Transcript travaillent ensemble pour automatiser, centraliser et optimiser chaque interaction client. Resultats mesurables des le premier mois.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="./contact" class="btn btn-primary text-lg">
+          Demander une demo
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+        <a href="#solutions" class="btn btn-outline text-lg">
+          Decouvrir les solutions
+        </a>
+      </div>
+
+      <!-- 3 Product Pills -->
+      <div class="flex flex-wrap justify-center gap-4 md:gap-6" data-stagger>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-primary/20 to-primary/5 border border-primary/30 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
           </div>
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-96 h-96 rounded-full border border-secondary/10 animate-pulse-glow" style="animation-delay: 0.5s;"></div>
+          <div class="text-left">
+            <div class="text-white font-semibold">Voice</div>
+            <div class="text-white/50 text-xs">Assistant vocal 24/7</div>
           </div>
+        </div>
 
-          <!-- Central glass panel with AI visualization -->
-          <div class="relative glass-panel rounded-3xl p-8 mx-auto max-w-md animate-float-slow shadow-2xl">
-            <!-- Waveform visualization -->
-            <div class="flex items-center justify-center gap-1 mb-6 h-16">
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 20px; animation-delay: 0s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 40px; animation-delay: 0.1s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 60px; animation-delay: 0.2s;"></div>
-              <div class="w-1 bg-secondary rounded-full animate-pulse" style="height: 35px; animation-delay: 0.3s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 50px; animation-delay: 0.4s;"></div>
-              <div class="w-1 bg-secondary rounded-full animate-pulse" style="height: 25px; animation-delay: 0.5s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 45px; animation-delay: 0.6s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 30px; animation-delay: 0.7s;"></div>
-              <div class="w-1 bg-secondary rounded-full animate-pulse" style="height: 55px; animation-delay: 0.8s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 40px; animation-delay: 0.9s;"></div>
-              <div class="w-1 bg-primary rounded-full animate-pulse" style="height: 20px; animation-delay: 1s;"></div>
-            </div>
-
-            <!-- Status indicator -->
-            <div class="flex items-center justify-center gap-3 text-police-titre">
-              <div class="w-3 h-3 bg-success rounded-full animate-pulse-glow"></div>
-              <span class="text-sm font-medium">Natalia ecoute...</span>
-            </div>
-
-            <!-- Floating badges -->
-            <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg px-3 py-2 animate-float" style="animation-delay: 0.5s;">
-              <div class="flex items-center gap-2 text-xs font-medium text-police-titre">
-                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                24/7 actif
-              </div>
-            </div>
-
-            <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-3 py-2 animate-float" style="animation-delay: 1s;">
-              <div class="flex items-center gap-2 text-xs font-medium text-police-titre">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-                Reponse &lt;3s
-              </div>
-            </div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+            </svg>
           </div>
+          <div class="text-left">
+            <div class="text-white font-semibold">WhatsApp</div>
+            <div class="text-white/50 text-xs">98% de taux d'ouverture</div>
+          </div>
+        </div>
 
-          <!-- Decorative blurred orbs -->
-          <div class="absolute -top-8 -right-8 w-32 h-32 bg-primary/20 rounded-full blur-2xl animate-pulse-glow"></div>
-          <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-secondary/20 rounded-full blur-2xl animate-pulse-glow" style="animation-delay: 1.5s;"></div>
+        <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-500/5 border border-amber-500/30 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="text-white font-semibold">Transcript</div>
+            <div class="text-white/50 text-xs">Intelligence commerciale</div>
+          </div>
         </div>
       </div>
     </div>
@@ -102,246 +103,14 @@
 
   <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
-    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
 </section>
 
-<!-- Sectors Section - Premium Bento Grid -->
-<section class="py-24 md:py-32 bg-[#030014] relative overflow-hidden" id="secteurs">
-  <!-- Animated background -->
-  <div class="absolute inset-0">
-    <!-- Gradient mesh -->
-    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
-    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/5 to-transparent rounded-full"></div>
-    <!-- Grid overlay -->
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-    <!-- Noise texture -->
-    <div class="absolute inset-0 opacity-[0.015]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
-  </div>
-
-  <!-- Floating particles -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-[10%] w-2 h-2 bg-primary/60 rounded-full animate-float-particle"></div>
-    <div class="absolute top-40 right-[15%] w-1.5 h-1.5 bg-secondary/50 rounded-full animate-float-particle" style="animation-delay: 1s;"></div>
-    <div class="absolute bottom-32 left-[20%] w-1 h-1 bg-primary/40 rounded-full animate-float-particle" style="animation-delay: 2s;"></div>
-    <div class="absolute top-1/3 right-[25%] w-2.5 h-2.5 bg-purple-500/30 rounded-full animate-float-particle" style="animation-delay: 0.5s;"></div>
-    <div class="absolute bottom-1/4 right-[10%] w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-float-particle" style="animation-delay: 1.5s;"></div>
-  </div>
-
-  <div class="container-content relative z-10">
-    <!-- Section header -->
-    <div class="text-center mb-16 animate-on-scroll">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-        <span class="text-primary font-medium text-sm tracking-wide">Solutions par secteur</span>
-      </div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Natalia s'adapte a<br class="hidden md:block">
-        <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">votre secteur</span>
-      </h2>
-      <p class="text-white/50 text-lg max-w-2xl mx-auto">
-        Une IA personnalisee pour chaque industrie, integree a vos outils existants.
-      </p>
-    </div>
-
-    <!-- Premium Bento Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5" data-stagger>
-
-      <!-- AUTOMOBILE - Hero card (spans 6 cols) -->
-      <a href="./automobile" class="bento-card bento-card-hero group lg:col-span-6 lg:row-span-2 min-h-[380px] md:min-h-[420px]" data-animate="fade-up">
-        <!-- Gradient border effect -->
-        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/50 via-purple-500/30 to-secondary/50 p-[1px]">
-          <div class="absolute inset-[1px] rounded-3xl bg-[#0a0a1f]"></div>
-        </div>
-        <!-- Animated gradient orb -->
-        <div class="absolute -top-20 -right-20 w-60 h-60 bg-gradient-to-br from-primary/40 to-purple-600/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-        <!-- Content -->
-        <div class="relative z-10 h-full flex flex-col justify-between p-8">
-          <div>
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 mb-6">
-              <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-              <span class="text-primary text-xs font-semibold uppercase tracking-wider">Populaire</span>
-            </div>
-            <!-- Animated icon -->
-            <div class="w-16 h-16 mb-6 relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity blur-xl"></div>
-              <div class="relative w-full h-full bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl border border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-colors">
-                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path class="bento-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 17h8M8 17v4h8v-4M8 17H4a1 1 0 01-1-1v-4a1 1 0 011-1h3m10 5h3a1 1 0 001-1v-4a1 1 0 00-1-1h-3m-6-4V3m0 0L9 6m3-3l3 3"></path>
-                </svg>
-              </div>
-            </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
-              Automobile
-            </h3>
-            <p class="text-white/60 text-base leading-relaxed max-w-sm">
-              L'assistant IA dedie a votre concession. Prise en charge et qualification immediate de chaque prospect, 24h/24.
-            </p>
-          </div>
-          <!-- CTA -->
-          <div class="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
-            <div class="flex items-center gap-4">
-              <div class="flex -space-x-2">
-                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-[#0a0a1f]"></div>
-                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-[#0a0a1f]"></div>
-                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-[#0a0a1f]"></div>
-              </div>
-              <span class="text-white/40 text-sm">+50 concessions</span>
-            </div>
-            <div class="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all duration-300">
-              Decouvrir
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- CENTRE D'APPEL -->
-      <a href="./centre-d-appel" class="bento-card group lg:col-span-3 min-h-[200px]" data-animate="fade-up" style="--delay: 0.1s;">
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10 h-full flex flex-col justify-between p-6">
-          <div class="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 rounded-xl border border-cyan-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
-            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-              Centre d'appel
-            </h3>
-            <p class="text-white/50 text-sm">
-              Connectee a tous vos outils metiers existants.
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <!-- HELPDESK -->
-      <a href="./helpdesk" class="bento-card group lg:col-span-3 min-h-[200px]" data-animate="fade-up" style="--delay: 0.2s;">
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10 h-full flex flex-col justify-between p-6">
-          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 rounded-xl border border-emerald-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-emerald-500/40 transition-all duration-300">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
-              Helpdesk IT
-            </h3>
-            <p class="text-white/50 text-sm">
-              Support niveau 1 automatise via votre base de connaissance.
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <!-- HOTLINE 24/7 - Wide card -->
-      <a href="./hotline" class="bento-card bento-card-wide group lg:col-span-6 min-h-[180px]" data-animate="fade-up" style="--delay: 0.3s;">
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/20 via-fuchsia-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <!-- Animated rings -->
-        <div class="absolute right-8 top-1/2 -translate-y-1/2 opacity-20 group-hover:opacity-40 transition-opacity">
-          <div class="w-24 h-24 rounded-full border border-purple-500/50 animate-ping-slow"></div>
-          <div class="absolute inset-2 rounded-full border border-purple-400/50 animate-ping-slow" style="animation-delay: 0.5s;"></div>
-          <div class="absolute inset-4 rounded-full border border-purple-300/50 animate-ping-slow" style="animation-delay: 1s;"></div>
-        </div>
-        <div class="relative z-10 h-full flex items-center gap-6 p-6">
-          <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-fuchsia-600/20 rounded-xl border border-purple-500/30 flex items-center justify-center group-hover:scale-110 group-hover:border-purple-500/50 transition-all duration-300">
-            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-                Hotline 24/7
-              </h3>
-              <span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium">Live</span>
-            </div>
-            <p class="text-white/50 text-sm">
-              Support telephonique intelligent disponible jour et nuit avec IA conversationnelle avancee.
-            </p>
-          </div>
-          <svg class="w-6 h-6 text-white/30 group-hover:text-purple-400 group-hover:translate-x-2 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </div>
-      </a>
-
-      <!-- VOIX IA - With animated waveform -->
-      <a href="./assistante-vocale-ia" class="bento-card group lg:col-span-3 min-h-[200px]" data-animate="fade-up" style="--delay: 0.4s;">
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-rose-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10 h-full flex flex-col justify-between p-6">
-          <div>
-            <div class="w-12 h-12 bg-gradient-to-br from-rose-500/20 to-pink-600/10 rounded-xl border border-rose-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-rose-500/40 transition-all duration-300 mb-4">
-              <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">
-              Voix IA
-            </h3>
-            <p class="text-white/50 text-sm mb-4">
-              Une voix naturelle et fluide.
-            </p>
-          </div>
-          <!-- Mini waveform -->
-          <div class="flex items-end gap-1 h-8">
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 40%; animation-delay: 0s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 70%; animation-delay: 0.1s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 50%; animation-delay: 0.2s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 90%; animation-delay: 0.3s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 60%; animation-delay: 0.4s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 80%; animation-delay: 0.5s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 45%; animation-delay: 0.6s;"></div>
-            <div class="w-1 bg-rose-500/60 rounded-full animate-wave" style="height: 65%; animation-delay: 0.7s;"></div>
-          </div>
-        </div>
-      </a>
-
-      <!-- MAILS IA -->
-      <a href="./assistant-mail-automatisation-ia" class="bento-card group lg:col-span-3 min-h-[200px]" data-animate="fade-up" style="--delay: 0.5s;">
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative z-10 h-full flex flex-col justify-between p-6">
-          <div class="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-orange-600/10 rounded-xl border border-amber-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-amber-500/40 transition-all duration-300">
-            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
-              Mails IA
-            </h3>
-            <p class="text-white/50 text-sm">
-              Automatisez le traitement de vos emails entrants.
-            </p>
-            <!-- Stats -->
-            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/10">
-              <div>
-                <div class="text-amber-400 font-bold">98%</div>
-                <div class="text-white/30 text-xs">Precision</div>
-              </div>
-              <div>
-                <div class="text-amber-400 font-bold">&lt;2s</div>
-                <div class="text-white/30 text-xs">Reponse</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- Stats Section -->
-<section class="section bg-white">
+<!-- Stats Section - Credibility -->
+<section class="py-16 bg-white border-b border-gray-100">
   <div class="container-content">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8" data-stagger-scale>
       <div class="text-center">
@@ -351,16 +120,16 @@
         <p class="text-police-grey text-sm">Disponibilite</p>
       </div>
       <div class="text-center">
-        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
-          <span data-counter="100" data-counter-suffix="%">0</span>
+        <div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
+          <span data-counter="98" data-counter-suffix="%">0</span>
         </div>
-        <p class="text-police-grey text-sm">Appels traites</p>
+        <p class="text-police-grey text-sm">Taux d'ouverture WhatsApp</p>
       </div>
       <div class="text-center">
-        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
-          <span data-counter="50" data-counter-suffix="%">0</span>
+        <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2">
+          <span data-counter="100" data-counter-suffix="%">0</span>
         </div>
-        <p class="text-police-grey text-sm">Reduction des couts</p>
+        <p class="text-police-grey text-sm">Conversations capturees</p>
       </div>
       <div class="text-center">
         <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -372,50 +141,335 @@
   </div>
 </section>
 
-<!-- Advantages Section -->
-<section class="section bg-background-2">
-  <div class="container-content">
-    <div class="text-center mb-12 animate-on-scroll">
-      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Avantages</p>
-      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        Evitez ces pertes avec <span class="text-gradient">Natalia</span>
+<!-- Solutions Bento Grid Section -->
+<section class="py-24 md:py-32 bg-[#030014] relative overflow-hidden" id="solutions">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+  </div>
+
+  <!-- Floating particles -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-[10%] w-2 h-2 bg-primary/60 rounded-full animate-float-particle"></div>
+    <div class="absolute top-40 right-[15%] w-1.5 h-1.5 bg-emerald-400/50 rounded-full animate-float-particle" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-32 left-[20%] w-1 h-1 bg-amber-400/40 rounded-full animate-float-particle" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container-content relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-primary font-medium text-sm tracking-wide">Nos solutions</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        Une suite complete pour<br class="hidden md:block">
+        <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">chaque interaction</span>
       </h2>
-      <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        Ne laissez plus aucun appel sans reponse. Natalia repond instantanement 24/7 a tous vos clients.
+      <p class="text-white/50 text-lg max-w-2xl mx-auto">
+        Voice, WhatsApp et Transcript s'integrent parfaitement pour creer un ecosysteme de relation client intelligent.
       </p>
     </div>
+
+    <!-- Premium Bento Grid - 3 Products -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5" data-stagger>
+
+      <!-- NATALIA VOICE - Hero card (spans 8 cols) -->
+      <div class="bento-card bento-card-hero group lg:col-span-8 min-h-[480px]" data-animate="fade-up">
+        <!-- Gradient border effect -->
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/50 via-purple-500/30 to-secondary/50 p-[1px]">
+          <div class="absolute inset-[1px] rounded-3xl bg-[#0a0a1f]"></div>
+        </div>
+        <!-- Animated gradient orb -->
+        <div class="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-primary/40 to-purple-600/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full flex flex-col justify-between p-8 md:p-10">
+          <div>
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 mb-6">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+              <span class="text-primary text-xs font-semibold uppercase tracking-wider">Solution phare</span>
+            </div>
+
+            <!-- Icon -->
+            <div class="w-16 h-16 mb-6 relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity blur-xl"></div>
+              <div class="relative w-full h-full bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-2xl border border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-colors">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+              Natalia Voice
+            </h3>
+            <p class="text-white/60 text-lg leading-relaxed max-w-xl mb-8">
+              L'assistant vocal IA disponible 24h/24, 7j/7. Decrochage instantane, qualification des demandes et integration complete a vos outils metiers.
+            </p>
+
+            <!-- 3 Integration Levels -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="text-primary font-bold text-sm mb-2">Niveau 1</div>
+                <div class="text-white/80 text-sm">Prise d'appels + Routage intelligent</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="text-primary font-bold text-sm mb-2">Niveau 2</div>
+                <div class="text-white/80 text-sm">Messages + Qualification leads</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="text-primary font-bold text-sm mb-2">Niveau 3</div>
+                <div class="text-white/80 text-sm">Integration ERP/CRM complete</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
+            <div class="flex items-center gap-4">
+              <div class="flex -space-x-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-[#0a0a1f]"></div>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-[#0a0a1f]"></div>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-[#0a0a1f]"></div>
+              </div>
+              <span class="text-white/40 text-sm">+100 entreprises</span>
+            </div>
+            <a href="./assistante-vocale-ia" class="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all duration-300">
+              En savoir plus
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Waveform decoration -->
+        <div class="absolute bottom-8 right-8 opacity-20 group-hover:opacity-40 transition-opacity">
+          <div class="flex items-end gap-1 h-16">
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 40%;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 70%; animation-delay: 0.1s;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 50%; animation-delay: 0.2s;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 90%; animation-delay: 0.3s;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 60%; animation-delay: 0.4s;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 80%; animation-delay: 0.5s;"></div>
+            <div class="w-1 bg-primary rounded-full animate-wave" style="height: 45%; animation-delay: 0.6s;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NATALIA WHATSAPP - Side card (spans 4 cols) -->
+      <div class="bento-card group lg:col-span-4 min-h-[480px]" data-animate="fade-up" style="--delay: 0.1s;">
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-emerald-600/10 p-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="absolute inset-[1px] rounded-2xl bg-[#0a0a1f]"></div>
+        </div>
+
+        <div class="relative z-10 h-full flex flex-col justify-between p-8">
+          <div>
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-6">
+              <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+              <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Engagement</span>
+            </div>
+
+            <!-- Icon -->
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 rounded-xl border border-emerald-500/20 flex items-center justify-center group-hover:scale-110 group-hover:border-emerald-500/40 transition-all duration-300 mb-6">
+              <svg class="w-7 h-7 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+              Natalia WhatsApp
+            </h3>
+            <p class="text-white/60 text-base leading-relaxed mb-6">
+              Continuez la conversation apres l'appel. 98% de taux d'ouverture vs 20% pour les emails.
+            </p>
+
+            <!-- Features list -->
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-white/70 text-sm">Centralise tous les echanges</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-white/70 text-sm">Alimente la base de connaissances</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-white/70 text-sm">Flux BI et recommandations</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stat highlight -->
+          <div class="mt-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+            <div class="flex items-center justify-between">
+              <span class="text-white/60 text-sm">Taux d'ouverture</span>
+              <span class="text-emerald-400 font-bold text-2xl">98%</span>
+            </div>
+            <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" style="width: 98%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NATALIA TRANSCRIPT - Full width card -->
+      <div class="bento-card bento-card-wide group lg:col-span-12 min-h-[280px]" data-animate="fade-up" style="--delay: 0.2s;">
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <!-- Animated rings -->
+        <div class="absolute right-12 top-1/2 -translate-y-1/2 opacity-10 group-hover:opacity-30 transition-opacity hidden md:block">
+          <div class="w-32 h-32 rounded-full border border-amber-500/50 animate-ping-slow"></div>
+          <div class="absolute inset-4 rounded-full border border-amber-400/50 animate-ping-slow" style="animation-delay: 0.5s;"></div>
+          <div class="absolute inset-8 rounded-full border border-amber-300/50 animate-ping-slow" style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="relative z-10 h-full p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full">
+            <!-- Left content -->
+            <div>
+              <!-- Badge -->
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6">
+                <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></span>
+                <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Intelligence</span>
+              </div>
+
+              <div class="flex items-start gap-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-xl border border-amber-500/30 flex items-center justify-center group-hover:scale-110 group-hover:border-amber-500/50 transition-all duration-300 flex-shrink-0">
+                  <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                    Natalia Transcript
+                  </h3>
+                  <p class="text-white/60 text-base leading-relaxed">
+                    Capturez 100% des conversations audio de vos equipes commerciales et ADV. Transformez chaque appel en intelligence actionnable.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right content - KPIs -->
+            <div class="grid grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center group-hover:border-amber-500/30 transition-colors">
+                <svg class="w-8 h-8 text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                <div class="text-white font-semibold text-sm">KPIs Commerciaux</div>
+                <div class="text-white/50 text-xs mt-1">Pour directeurs</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center group-hover:border-amber-500/30 transition-colors">
+                <svg class="w-8 h-8 text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="text-white font-semibold text-sm">Satisfaction Client</div>
+                <div class="text-white/50 text-xs mt-1">Insights temps reel</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center group-hover:border-amber-500/30 transition-colors">
+                <svg class="w-8 h-8 text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <div class="text-white font-semibold text-sm">Formation</div>
+                <div class="text-white/50 text-xs mt-1">Recommandations</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Value Proposition Section -->
+<section class="section bg-white">
+  <div class="container-content">
+    <div class="text-center mb-16 animate-on-scroll">
+      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Pourquoi Natalia</p>
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
+        L'ecosysteme qui <span class="text-gradient">transforme</span> votre relation client
+      </h2>
+      <p class="text-lg text-police-grey max-w-2xl mx-auto">
+        Nos 3 solutions travaillent ensemble pour creer un cycle vertueux d'amelioration continue.
+      </p>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger>
-      <div class="text-center">
-        <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-success/10 text-success animate-float" style="animation-delay: 0s;">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      <!-- Voice -->
+      <div class="card card-bordered p-8 card-glow text-center">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Disponible 24/7</h3>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Capture</h3>
         <p class="text-police-grey">
-          Natalia est disponible 24h/24, 7j/7, elle prend en charge 100% des demandes entrantes.
+          Voice repond 24/7 et capture chaque demande. Aucun appel manque, chaque lead qualifie.
         </p>
-      </div>
-      <div class="text-center">
-        <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-primary/10 text-primary animate-float" style="animation-delay: 0.5s;">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <div class="mt-6 flex items-center justify-center gap-2 text-primary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Qualification des leads</h3>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="card card-bordered p-8 card-glow text-center">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-500">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Engage</h3>
         <p class="text-police-grey">
-          Durant l'echange, elle qualifie le besoin et renvoie les informations au service concerne.
+          WhatsApp continue la conversation avec 98% d'ouverture. Chaque echange enrichit votre connaissance client.
         </p>
-      </div>
-      <div class="text-center">
-        <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-secondary/10 text-secondary animate-float" style="animation-delay: 1s;">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        <div class="mt-6 flex items-center justify-center gap-2 text-emerald-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Integration outils metiers</h3>
+      </div>
+
+      <!-- Transcript -->
+      <div class="card card-bordered p-8 card-glow text-center">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Optimise</h3>
         <p class="text-police-grey">
-          Natalia se connecte aux outils metiers pertinents pour vous et vos processus.
+          Transcript analyse chaque conversation pour extraire des insights, KPIs et recommandations de formation.
+        </p>
+        <div class="mt-6 flex items-center justify-center gap-2 text-amber-500">
+          <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cycle explanation -->
+    <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-primary/5 via-emerald-500/5 to-amber-500/5 border border-primary/10 animate-on-scroll">
+      <div class="text-center">
+        <p class="text-lg text-police-grey">
+          <span class="font-semibold text-police-titre">Le cycle vertueux:</span> Transcript analyse les conversations de Voice et WhatsApp, identifie les points d'amelioration, et les recommandations alimentent la formation de vos equipes ET l'entrainement de l'IA.
         </p>
       </div>
     </div>
@@ -423,12 +477,12 @@
 </section>
 
 <!-- How it works Section -->
-<section class="section bg-white">
+<section class="section bg-background-2">
   <div class="container-content">
     <div class="text-center mb-12 animate-on-scroll">
       <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Mise en place</p>
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        Comment ca <span class="text-gradient">marche</span> ?
+        Deploiement en <span class="text-gradient">3 etapes</span>
       </h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" data-stagger-scale>
@@ -441,9 +495,9 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">1</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Personnalisation</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3">Audit & Configuration</h3>
             <p class="text-police-grey text-sm">
-              Nous adaptons Natalia selon vos habitudes pour repondre au mieux a vos besoins.
+              Analyse de vos besoins, configuration personnalisee et integration a vos outils existants.
             </p>
           </div>
         </div>
@@ -452,9 +506,9 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">2</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Integration</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3">Formation & Tests</h3>
             <p class="text-police-grey text-sm">
-              Votre Natalia se connecte aux outils metiers pertinents pour vous et vos processus.
+              Entrainement de l'IA sur votre contexte metier et phase de tests avec vos equipes.
             </p>
           </div>
         </div>
@@ -463,13 +517,70 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">3</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Deploiement</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3">Go Live & Suivi</h3>
             <p class="text-police-grey text-sm">
-              Natalia commence a prendre vos appels et a qualifier vos leads immediatement.
+              Mise en production progressive et suivi des performances avec optimisation continue.
             </p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sectors / Use Cases Section -->
+<section class="section bg-white">
+  <div class="container-content">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Secteurs</p>
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
+        Adapte a <span class="text-gradient">votre industrie</span>
+      </h2>
+      <p class="text-lg text-police-grey max-w-2xl mx-auto">
+        Natalia se personnalise pour repondre aux specificites de votre secteur.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-stagger>
+      <a href="./automobile" class="card card-bordered p-6 text-center card-glow group">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8M8 17v4h8v-4M8 17H4a1 1 0 01-1-1v-4a1 1 0 011-1h3m10 5h3a1 1 0 001-1v-4a1 1 0 00-1-1h-3m-6-4V3m0 0L9 6m3-3l3 3"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-police-titre group-hover:text-primary transition-colors">Automobile</h3>
+        <p class="text-police-grey text-sm mt-2">Concessions & SAV</p>
+      </a>
+
+      <a href="./centre-d-appel" class="card card-bordered p-6 text-center card-glow group">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-police-titre group-hover:text-cyan-500 transition-colors">Centre d'appel</h3>
+        <p class="text-police-grey text-sm mt-2">BPO & Support</p>
+      </a>
+
+      <a href="./helpdesk" class="card card-bordered p-6 text-center card-glow group">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-police-titre group-hover:text-emerald-500 transition-colors">Helpdesk IT</h3>
+        <p class="text-police-grey text-sm mt-2">Support technique</p>
+      </a>
+
+      <a href="./hotline" class="card card-bordered p-6 text-center card-glow group">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-purple-500/10 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-police-titre group-hover:text-purple-500 transition-colors">Hotline 24/7</h3>
+        <p class="text-police-grey text-sm mt-2">Service continu</p>
+      </a>
     </div>
   </div>
 </section>
@@ -479,10 +590,10 @@
   <div class="container-content">
     <div class="text-center mb-12 animate-on-scroll">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        Compatible avec <span class="text-gradient">tous vos outils</span>
+        S'integre a <span class="text-gradient">tous vos outils</span>
       </h2>
       <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        Connectee a votre calendrier metier, type Service Box ou MecaPlanning, Natalia propose des creneaux, valide avec le client et renseigne les informations directement.
+        CRM, ERP, outils de ticketing, calendriers metiers... Natalia se connecte a votre ecosysteme existant.
       </p>
     </div>
     <!-- Partners Marquee -->
@@ -526,18 +637,6 @@
         <div class="marquee-item">
           <img src="./assets/images/ciscoLogoBlue2016SvgPng.png" alt="Cisco">
         </div>
-        <div class="marquee-item">
-          <img src="./assets/images/logoGlpiPng.png" alt="GLPI">
-        </div>
-        <div class="marquee-item">
-          <img src="./assets/images/jiraSoftwareLogoWinePng.png" alt="Jira">
-        </div>
-        <div class="marquee-item">
-          <img src="./assets/images/_3CxLogoWinePng.png" alt="3CX">
-        </div>
-        <div class="marquee-item">
-          <img src="./assets/images/ciscoLogoBlue2016SvgPng.png" alt="Cisco">
-        </div>
       </div>
     </div>
   </div>
@@ -553,8 +652,11 @@
     <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
       Pret a transformer votre relation client ?
     </h2>
-    <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-on-scroll">
-      Demandez une demonstration gratuite et decouvrez comment Natalia peut vous aider.
+    <p class="text-lg text-white/90 mb-4 max-w-2xl mx-auto animate-on-scroll">
+      Decouvrez comment Voice, WhatsApp et Transcript peuvent revolutionner votre experience client.
+    </p>
+    <p class="text-white/70 mb-8 animate-on-scroll">
+      Demo personnalisee - ROI visible des le premier mois
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
       <a href="./contact" class="btn btn-white">
@@ -564,7 +666,7 @@
         </svg>
       </a>
       <a href="./calculateur" class="btn btn-outline">
-        Calculer mes economies
+        Calculer mon ROI
       </a>
     </div>
   </div>
