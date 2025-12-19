@@ -1028,9 +1028,10 @@
    SCROLL PROGRESS INDICATOR
    ============================================ */
 .scroll-progress {
-  @apply fixed top-0 left-0 h-1 bg-gradient-to-r from-primary to-secondary z-50;
+  @apply fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary z-50;
   transform-origin: left;
   transform: scaleX(0);
+  pointer-events: none;
 }
 
 /* ============================================
