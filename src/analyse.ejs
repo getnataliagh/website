@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Natalia Analyse - Transformez vos conversations en insights</title>
+  <meta name="description" content="Outil d'analyse conversationnelle qui transcrit vos appels, calcule les KPIs critiques et fournit les insights pour l'amelioration continue.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+  <!-- Hero Section -->
+  <section class="section bg-gradient-to-br from-white to-amber-50 relative overflow-hidden">
+    <div class="gradient-orb gradient-orb-1" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);"></div>
+    <div class="gradient-orb gradient-orb-2" style="background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);"></div>
+    <div class="container-content relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6">
+            <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+            <span class="text-amber-600 font-medium text-sm tracking-wide">Analyse Vocale</span>
+          </div>
+          <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
+            Transformez vos conversations
+            <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">en tableau de bord strategique</span>
+          </h1>
+          <p class="hero-subtitle text-lg text-police-grey font-semibold mb-8">
+            Outil d'analyse conversationnelle base sur le Speech-to-Text qui se connecte a vos enregistrements, transcrit les echanges, calcule les KPIs critiques, le scoring et fournit les insights necessaires a l'amelioration continue.
+          </p>
+          <div class="hero-cta flex flex-wrap gap-4">
+            <a href="./contact" class="btn bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 inline-flex items-center gap-2">
+              Reserver une demo
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+            <a href="./calculateur" class="btn btn-outline border-amber-500 text-amber-600 hover:bg-amber-50 inline-flex items-center gap-2">
+              Voir un exemple
+            </a>
+          </div>
+        </div>
+        <div class="hero-image flex justify-center">
+          <!-- Animated SVG Analyse Illustration -->
+          <div class="relative w-full max-w-md">
+            <!-- Background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-600/10 rounded-3xl blur-3xl"></div>
+
+            <!-- Main SVG Animation -->
+            <div class="relative bg-gradient-to-br from-amber-500/5 to-orange-600/5 rounded-3xl p-8 border border-amber-500/20">
+              <!-- Dashboard visualization -->
+              <div class="flex flex-col items-center">
+                <!-- Waveform to text animation -->
+                <div class="w-full mb-6">
+                  <div class="flex items-center justify-center gap-2 mb-3">
+                    <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                    <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                  </div>
+                  <!-- Mini waveform -->
+                  <div class="flex items-end justify-center gap-0.5 h-8">
+                    <div class="w-1 bg-amber-400/60 rounded-full animate-wave" style="height: 40%; animation-duration: 0.6s;"></div>
+                    <div class="w-1 bg-amber-500/70 rounded-full animate-wave" style="height: 70%; animation-duration: 0.6s; animation-delay: 0.1s;"></div>
+                    <div class="w-1 bg-amber-600/80 rounded-full animate-wave" style="height: 50%; animation-duration: 0.6s; animation-delay: 0.2s;"></div>
+                    <div class="w-1 bg-amber-500 rounded-full animate-wave" style="height: 90%; animation-duration: 0.6s; animation-delay: 0.3s;"></div>
+                    <div class="w-1 bg-amber-500 rounded-full animate-wave" style="height: 60%; animation-duration: 0.6s; animation-delay: 0.4s;"></div>
+                    <div class="w-1 bg-amber-600/80 rounded-full animate-wave" style="height: 80%; animation-duration: 0.6s; animation-delay: 0.5s;"></div>
+                    <div class="w-1 bg-amber-500/70 rounded-full animate-wave" style="height: 45%; animation-duration: 0.6s; animation-delay: 0.6s;"></div>
+                    <div class="w-1 bg-amber-400/60 rounded-full animate-wave" style="height: 55%; animation-duration: 0.6s; animation-delay: 0.7s;"></div>
+                  </div>
+                </div>
+
+                <!-- Dashboard mockup -->
+                <div class="w-full bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+                  <!-- KPI bars animated -->
+                  <div class="flex items-end justify-between gap-2 h-24 mb-4">
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-gradient-to-t from-amber-500 to-amber-400 rounded-t animate-pulse" style="height: 70%; animation-duration: 2s;"></div>
+                      <span class="text-xs text-gray-500 mt-1">Lun</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-gradient-to-t from-amber-500 to-amber-400 rounded-t animate-pulse" style="height: 85%; animation-duration: 2s; animation-delay: 0.2s;"></div>
+                      <span class="text-xs text-gray-500 mt-1">Mar</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-gradient-to-t from-amber-500 to-amber-400 rounded-t animate-pulse" style="height: 60%; animation-duration: 2s; animation-delay: 0.4s;"></div>
+                      <span class="text-xs text-gray-500 mt-1">Mer</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-gradient-to-t from-amber-500 to-amber-400 rounded-t animate-pulse" style="height: 90%; animation-duration: 2s; animation-delay: 0.6s;"></div>
+                      <span class="text-xs text-gray-500 mt-1">Jeu</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-gradient-to-t from-orange-500 to-orange-400 rounded-t animate-pulse" style="height: 75%; animation-duration: 2s; animation-delay: 0.8s;"></div>
+                      <span class="text-xs text-gray-500 mt-1">Ven</span>
+                    </div>
+                  </div>
+                  <!-- Mini stats -->
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="bg-amber-50 rounded-lg p-2 text-center">
+                      <div class="text-amber-600 font-bold text-sm">95%</div>
+                      <div class="text-gray-500 text-xs">Qualite</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-2 text-center">
+                      <div class="text-green-600 font-bold text-sm">+12%</div>
+                      <div class="text-gray-500 text-xs">Satisfaction</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-2 text-center">
+                      <div class="text-blue-600 font-bold text-sm">847</div>
+                      <div class="text-gray-500 text-xs">Appels</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating insight bubbles -->
+              <div class="absolute -top-4 -right-4 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 animate-float" style="animation-delay: 0s;">
+                <span class="text-xs font-medium text-amber-600">Sentiment +</span>
+              </div>
+              <div class="absolute -bottom-4 -left-4 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 animate-float" style="animation-delay: 1s;">
+                <span class="text-xs font-medium text-green-600">Conformite OK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiators Section -->
+  <section class="section bg-white">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
+        Ce qui fait la <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">difference</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white animate-float" style="animation-delay: 0s;">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Transcription Precise</h3>
+          <p class="text-police-grey">
+            Notre technologie STT convertit vos appels en texte avec une precision exceptionnelle, meme avec les accents et le vocabulaire metier.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white animate-float" style="animation-delay: 0.5s;">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Analyse Intelligente</h3>
+          <p class="text-police-grey">
+            L'IA analyse le sentiment, detecte les mots-cles, evalue la conformite et identifie les opportunites d'amelioration.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white animate-float" style="animation-delay: 1s;">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Insights Actionnables</h3>
+          <p class="text-police-grey">
+            Transformez vos donnees vocales en decisions eclairees avec des tableaux de bord clairs et des recommandations concretes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnalites Cles Section -->
+  <section class="section bg-amber-50/50">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
+        Fonctionnalites <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">cles</span>
+      </h2>
+      <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
+        Tout ce dont vous avez besoin pour analyser et ameliorer la qualite de vos echanges
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-scale>
+        <!-- Transcription Integrale -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Transcription Integrale (STT)</h3>
+          <p class="text-police-grey text-sm">
+            Conversion precise de 100% de vos appels en texte exploitable, avec identification des locuteurs et horodatage.
+          </p>
+        </div>
+        <!-- Analyse et Scoring -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Analyse et Scoring</h3>
+          <p class="text-police-grey text-sm">
+            Sentiment analysis, scoring de conformite, detection de mots-cles et evaluation automatique de la qualite de l'echange.
+          </p>
+        </div>
+        <!-- Dashboard de Pilotage -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Dashboard de Pilotage</h3>
+          <p class="text-police-grey text-sm">
+            Tableaux de bord dynamiques avec KPIs pour le management et les equipes qualite. Visualisez les tendances en temps reel.
+          </p>
+        </div>
+        <!-- Coaching des Operateurs -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Coaching des Operateurs</h3>
+          <p class="text-police-grey text-sm">
+            Identifiez les meilleures pratiques et les points d'amelioration. Accompagnez vos equipes avec des feedbacks objectifs.
+          </p>
+        </div>
+        <!-- Detection Mots-Cles -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Detection Mots-Cles</h3>
+          <p class="text-police-grey text-sm">
+            Detectez automatiquement les mentions de produits, concurrents, irritants clients et opportunites commerciales.
+          </p>
+        </div>
+        <!-- Audit 100% -->
+        <div class="card bg-white p-6">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Audit 100% des Appels</h3>
+          <p class="text-police-grey text-sm">
+            Fini l'echantillonnage. Analysez l'integralite de vos conversations pour une conformite et un controle qualite complets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment ca marche Section -->
+  <section class="section bg-white">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
+        Comment ca <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">marche</span> ?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-stagger-scale>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl font-bold shadow-lg">
+            1
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Connexion</h3>
+          <p class="text-police-grey text-sm">
+            Connectez Natalia Analyse a vos enregistrements d'appels existants via API ou import de fichiers.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl font-bold shadow-lg">
+            2
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Transcription</h3>
+          <p class="text-police-grey text-sm">
+            Notre STT transcrit automatiquement chaque appel avec une precision exceptionnelle.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl font-bold shadow-lg">
+            3
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Analyse</h3>
+          <p class="text-police-grey text-sm">
+            L'IA analyse le contenu, calcule les scores et detecte les insights cles.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl font-bold shadow-lg">
+            4
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Action</h3>
+          <p class="text-police-grey text-sm">
+            Consultez vos dashboards et prenez des decisions basees sur des donnees concretes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefices Section -->
+  <section class="section bg-amber-50/50">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
+        Les <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">benefices</span> pour votre entreprise
+      </h2>
+      <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
+        Transformez vos conversations en avantage concurrentiel
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <!-- Decisions eclairees -->
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500/10 to-orange-600/10">
+            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Decisions eclairees</h3>
+          <p class="text-police-grey">
+            Basez vos decisions strategiques sur des donnees vocales concretes, pas sur des intuitions ou des echantillons limites.
+          </p>
+        </div>
+        <!-- Qualite de service -->
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500/10 to-emerald-600/10">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Amelioration rapide</h3>
+          <p class="text-police-grey">
+            Identifiez rapidement les axes d'amelioration et mesurez l'impact de vos actions sur la qualite de service.
+          </p>
+        </div>
+        <!-- Conformite -->
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-500/10 to-indigo-600/10">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-police-titre mb-3">Reduction du risque</h3>
+          <p class="text-police-grey">
+            Auditez 100% de vos appels pour assurer la conformite reglementaire et reduire les risques legaux.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cibles Section -->
+  <section class="section bg-white">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
+        Pour <span class="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">qui</span> ?
+      </h2>
+      <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
+        Natalia Analyse s'adresse aux professionnels de la qualite et de la performance
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <!-- Directeur Qualite -->
+        <div class="bg-gradient-to-br from-amber-500/5 to-orange-600/5 rounded-2xl p-8 border border-amber-500/10">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-police-titre">Directeur Qualite</h3>
+          </div>
+          <p class="text-police-grey">
+            Passez de l'echantillonnage a l'audit exhaustif. Identifiez les non-conformites et suivez l'evolution de vos indicateurs qualite en temps reel.
+          </p>
+        </div>
+        <!-- Directeur Experience Client -->
+        <div class="bg-gradient-to-br from-orange-500/5 to-amber-500/5 rounded-2xl p-8 border border-orange-500/10">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-police-titre">Directeur CX</h3>
+          </div>
+          <p class="text-police-grey">
+            Comprenez ce que ressentent vraiment vos clients. Detectez les irritants, mesurez la satisfaction et optimisez chaque point de contact.
+          </p>
+        </div>
+        <!-- Directeur Commercial -->
+        <div class="bg-gradient-to-br from-amber-500/5 to-orange-600/5 rounded-2xl p-8 border border-amber-500/10">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-police-titre">Directeur Commercial</h3>
+          </div>
+          <p class="text-police-grey">
+            Coachez vos equipes avec des donnees objectives. Identifiez les meilleures pratiques et formez vos commerciaux sur des exemples concrets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-amber-500 to-orange-600 text-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+    <div class="container-content text-center relative z-10">
+      <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
+        Pret a transformer vos conversations en insights ?
+      </h2>
+      <p class="text-xl mb-8 text-white/90 animate-on-scroll">
+        Decouvrez Natalia Analyse lors d'une demonstration personnalisee.
+      </p>
+      <div class="animate-on-scroll">
+        <a href="./contact" class="btn bg-white text-amber-600 hover:bg-gray-100 inline-flex items-center gap-2">
+          Reserver une demo
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>

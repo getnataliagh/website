@@ -35,9 +35,9 @@ locals.navigation = {
       label: 'Solutions',
       url: '#solutions',
       children: [
-        { label: 'Assistante Vocale IA', url: '/assistante-vocale-ia' },
-        { label: 'Automatisation Mail', url: '/assistant-mail-automatisation-ia' },
-        { label: 'Calculateur', url: '/calculateur' },
+        { label: 'Natalia Voice', url: '/assistante-vocale-ia' },
+        { label: 'Natalia Analyse', url: '/analyse' },
+        { label: 'Natalia WhatsApp', url: '/whatsapp' },
       ],
     },
     {
