@@ -432,7 +432,9 @@
   }
 }
 
-@keyframes pulse {
+/* NOTE: Tailwind defines its own @keyframes pulse for animate-pulse class
+   We use natalia-pulse to avoid conflicts */
+@keyframes natalia-pulse {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
@@ -831,9 +833,7 @@
   animation: pulseSoft 2s ease-in-out infinite;
 }
 
-.animate-pulse-slow {
-  animation: pulse 3s ease-in-out infinite;
-}
+/* NOTE: .animate-pulse-slow is defined later (line ~1530) for Hero particles */
 
 /* Hook0-style subtle pulse */
 @keyframes pulse-subtle {
@@ -1117,29 +1117,6 @@
 
 .skeleton-text {
   @apply h-4 bg-gray-200 rounded animate-pulse;
-}
-
-/* ============================================
-   RESPONSIVE MOTION PREFERENCES
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  [data-animate],
-  [data-stagger] > *,
-  .animate-on-scroll,
-  .animate-on-scroll--left,
-  .animate-on-scroll--right,
-  .animate-on-scroll--scale {
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
 /* ============================================

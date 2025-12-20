@@ -443,7 +443,9 @@
   50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-@keyframes pulse {
+// NOTE: Tailwind defines its own @keyframes pulse for animate-pulse class
+// We use natalia-pulse to avoid conflicts
+@keyframes natalia-pulse {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
@@ -647,7 +649,7 @@
 .animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
 .animate-float-delayed { animation: float 6s ease-in-out infinite 1s; }
 .animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }
-.animate-pulse-slow { animation: pulse 3s ease-in-out infinite; }
+.animate-pulse-slow { animation: natalia-pulse 3s ease-in-out infinite; }
 .animate-bounce-slow { animation: bounce 2s ease-in-out infinite; }
 .animate-morph { animation: morphBlob 8s ease-in-out infinite; }
 .animate-shimmer {
@@ -933,30 +935,6 @@
 // ============================================
 .header-scrolled {
   @apply bg-white/90 backdrop-blur-xl shadow-lg;
-}
-
-// ============================================
-// RESPONSIVE MOTION PREFERENCES
-// ============================================
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  .animate-on-scroll,
-  .animate-on-scroll--left,
-  .animate-on-scroll--right,
-  .animate-on-scroll--scale,
-  .stagger-children > *,
-  .stagger-children--scale > *,
-  [data-stagger] > *,
-  [data-stagger-scale] > *,
-  [data-stagger-left] > * {
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
 // ============================================
