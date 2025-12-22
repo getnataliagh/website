@@ -9,63 +9,334 @@
 <%- include('./includes/_header.ejs') %>
 
 <main class="flex-grow">
-  <section class="section bg-white">
+
+  <!-- Hero Section - Dark with Gradient -->
+  <section class="relative bg-[#030014] overflow-hidden py-20 md:py-28">
+    <!-- Animated background -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
+      <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+    </div>
+
+    <div class="container-content relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-on-scroll">
+          <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          <span class="text-primary font-medium text-sm tracking-wide">Conditions légales</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Conditions Générales <br class="hidden md:block">
+          <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">d'Utilisation</span>
+        </h1>
+
+        <p class="hero-subtitle text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Les présentes conditions générales régissent l'accès et l'utilisation des services Natalia.
+        </p>
+
+        <!-- Legal icon decoration -->
+        <div class="hero-cta flex justify-center gap-6 text-white/40 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            <span>Document juridique</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span>Mis à jour régulièrement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
+      <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Articles Section - Bento Grid Style -->
+  <section class="py-16 md:py-24 bg-background-2">
     <div class="container-content">
-      <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-8 animate-on-scroll">
-        Conditions Générales <span class="text-gradient">d'Utilisation</span>
-      </h1>
 
-      <div class="prose prose-lg max-w-none text-police-grey animate-on-scroll">
-        <p class="text-lg mb-6">
-          Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation des services proposés par Natalia.
+      <!-- Introduction Card -->
+      <div class="max-w-4xl mx-auto mb-16 animate-on-scroll">
+        <div class="bento-card bg-white p-8 md:p-10 rounded-2xl">
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-primary/10 flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-police-titre mb-4">Préambule</h2>
+              <p class="text-police-grey leading-relaxed">
+                Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation des services proposés par Natalia, accessibles via le site getnatalia.com. En utilisant nos services, vous acceptez ces conditions dans leur intégralité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16" data-stagger>
+
+        <!-- Article 1 - Objet -->
+        <div class="bento-card bg-white p-8 rounded-2xl" data-animate="fade-up">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30 flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="mb-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+                <span class="text-blue-500 text-xs font-semibold">Article 1</span>
+              </div>
+              <h3 class="text-xl font-bold text-police-titre mb-3">Objet</h3>
+            </div>
+          </div>
+          <p class="text-police-grey leading-relaxed">
+            Les présentes CGU ont pour objet de définir les conditions d'accès et d'utilisation des services Natalia, accessibles via le site getnatalia.com.
+          </p>
+        </div>
+
+        <!-- Article 2 - Description des services -->
+        <div class="bento-card bg-white p-8 rounded-2xl" data-animate="fade-up" style="--delay: 0.1s;">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-primary/20 to-purple-600/20 border border-primary/30 flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="mb-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                <span class="text-primary text-xs font-semibold">Article 2</span>
+              </div>
+              <h3 class="text-xl font-bold text-police-titre mb-3">Description des services</h3>
+            </div>
+          </div>
+          <p class="text-police-grey leading-relaxed">
+            Natalia propose une solution d'assistante vocale basée sur l'intelligence artificielle permettant d'automatiser la gestion des appels téléphoniques entrants pour les entreprises.
+          </p>
+        </div>
+
+        <!-- Article 3 - Accès aux services -->
+        <div class="bento-card bg-white p-8 rounded-2xl" data-animate="fade-up" style="--delay: 0.2s;">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 border border-emerald-500/30 flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="mb-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                <span class="text-emerald-500 text-xs font-semibold">Article 3</span>
+              </div>
+              <h3 class="text-xl font-bold text-police-titre mb-3">Accès aux services</h3>
+            </div>
+          </div>
+          <p class="text-police-grey leading-relaxed">
+            L'accès aux services Natalia est réservé aux professionnels ayant souscrit un abonnement. L'utilisateur s'engage à fournir des informations exactes lors de son inscription.
+          </p>
+        </div>
+
+        <!-- Article 4 - Obligations de l'utilisateur -->
+        <div class="bento-card bg-white p-8 rounded-2xl" data-animate="fade-up" style="--delay: 0.3s;">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/20 border border-amber-500/30 flex items-center justify-center">
+              <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="mb-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20">
+                <span class="text-amber-500 text-xs font-semibold">Article 4</span>
+              </div>
+              <h3 class="text-xl font-bold text-police-titre mb-3">Obligations de l'utilisateur</h3>
+            </div>
+          </div>
+          <p class="text-police-grey mb-4">L'utilisateur s'engage à :</p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-3 text-police-grey text-sm">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Utiliser les services conformément à leur destination</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey text-sm">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Ne pas porter atteinte aux droits de tiers</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey text-sm">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Respecter la législation en vigueur</span>
+            </li>
+            <li class="flex items-start gap-3 text-police-grey text-sm">
+              <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Maintenir la confidentialité de ses identifiants</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Full Width Articles -->
+      <div class="space-y-6" data-stagger>
+
+        <!-- Article 5 - Propriété intellectuelle -->
+        <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
+          <div class="flex items-start gap-6">
+            <div class="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
+                <span class="text-purple-500 text-xs font-semibold">Article 5</span>
+              </div>
+              <h3 class="text-2xl font-bold text-police-titre mb-4">Propriété intellectuelle</h3>
+              <p class="text-police-grey leading-relaxed">
+                L'ensemble des éléments composant le service Natalia (logiciels, algorithmes, interfaces, bases de données, marques, logos, etc.) sont protégés par le droit de la propriété intellectuelle et restent la propriété exclusive de Natalia SAS. Toute reproduction, représentation, modification ou exploitation non autorisée est strictement interdite.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 6 - Responsabilité -->
+        <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
+          <div class="flex items-start gap-6">
+            <div class="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/20 border border-red-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20">
+                <span class="text-red-500 text-xs font-semibold">Article 6</span>
+              </div>
+              <h3 class="text-2xl font-bold text-police-titre mb-4">Responsabilité</h3>
+              <p class="text-police-grey leading-relaxed mb-4">
+                Natalia s'engage à mettre en œuvre tous les moyens nécessaires pour assurer la continuité et la qualité de ses services. Toutefois, Natalia ne saurait être tenue responsable :
+              </p>
+              <ul class="space-y-2 text-police-grey">
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 mt-1">•</span>
+                  <span>Des dommages indirects résultant de l'utilisation de ses services</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 mt-1">•</span>
+                  <span>Des interruptions de service dues à des cas de force majeure</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 mt-1">•</span>
+                  <span>De l'utilisation frauduleuse ou non conforme de ses services</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 7 - Modification des CGU -->
+        <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
+          <div class="flex items-start gap-6">
+            <div class="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border border-cyan-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+                <span class="text-cyan-500 text-xs font-semibold">Article 7</span>
+              </div>
+              <h3 class="text-2xl font-bold text-police-titre mb-4">Modification des CGU</h3>
+              <p class="text-police-grey leading-relaxed">
+                Natalia se réserve le droit de modifier les présentes CGU à tout moment afin de les adapter aux évolutions de ses services ou à la législation. Les utilisateurs seront informés de toute modification significative par email ou via une notification sur le site. La poursuite de l'utilisation des services après modification vaut acceptation des nouvelles conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 8 - Contact -->
+        <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
+          <div class="flex items-start gap-6">
+            <div class="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
+              <svg class="w-7 h-7 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                <span class="text-indigo-500 text-xs font-semibold">Article 8</span>
+              </div>
+              <h3 class="text-2xl font-bold text-police-titre mb-4">Contact</h3>
+              <p class="text-police-grey leading-relaxed">
+                Pour toute question relative aux présentes CGU, vous pouvez nous contacter à l'adresse : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-gradient-animated text-white relative overflow-hidden">
+    <!-- Decorative shapes -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="container-content relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6 animate-on-scroll">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-white/90 font-medium text-sm">Une question ?</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white animate-on-scroll">
+          Besoin de précisions sur nos CGU ?
+        </h2>
+
+        <p class="text-lg text-white/80 mb-8 animate-on-scroll">
+          Notre équipe est à votre disposition pour répondre à toutes vos questions juridiques et contractuelles.
         </p>
 
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 1 - Objet</h2>
-        <p>
-          Les présentes CGU ont pour objet de définir les conditions d'accès et d'utilisation des services Natalia, accessibles via le site getnatalia.com.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 2 - Description des services</h2>
-        <p>
-          Natalia propose une solution d'assistante vocale basée sur l'intelligence artificielle permettant d'automatiser la gestion des appels téléphoniques entrants pour les entreprises.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 3 - Accès aux services</h2>
-        <p>
-          L'accès aux services Natalia est réservé aux professionnels ayant souscrit un abonnement. L'utilisateur s'engage à fournir des informations exactes lors de son inscription.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 4 - Obligations de l'utilisateur</h2>
-        <p>L'utilisateur s'engage à :</p>
-        <ul class="list-disc list-inside space-y-2 mb-4">
-          <li>Utiliser les services conformément à leur destination</li>
-          <li>Ne pas porter atteinte aux droits de tiers</li>
-          <li>Respecter la législation en vigueur</li>
-          <li>Maintenir la confidentialité de ses identifiants</li>
-        </ul>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 5 - Propriété intellectuelle</h2>
-        <p>
-          L'ensemble des éléments composant le service Natalia (logiciels, algorithmes, interfaces, etc.) sont protégés par le droit de la propriété intellectuelle et restent la propriété exclusive de Natalia SAS.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 6 - Responsabilité</h2>
-        <p>
-          Natalia s'engage à mettre en œuvre tous les moyens nécessaires pour assurer la continuité et la qualité de ses services. Toutefois, Natalia ne saurait être tenue responsable des dommages indirects résultant de l'utilisation de ses services.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 7 - Modification des CGU</h2>
-        <p>
-          Natalia se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de toute modification par email ou via le site.
-        </p>
-
-        <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Article 8 - Contact</h2>
-        <p>
-          Pour toute question relative aux présentes CGU : <%= locals.site.email %>
-        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+          <a href="./contact" class="btn btn-white">
+            Nous contacter
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a href="./mentions-legales" class="btn btn-outline">
+            Mentions légales
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
 </main>
 
 <%- include('./includes/_footer.ejs') %>

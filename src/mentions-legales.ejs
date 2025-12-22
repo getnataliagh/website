@@ -11,52 +11,218 @@
 
 <main class="flex-grow">
 
-<section class="section bg-white">
-  <div class="container-content">
-    <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-8 animate-on-scroll">
-      Mentions <span class="text-gradient">Légales</span>
-    </h1>
+<!-- Hero Section -->
+<section class="relative bg-[#030014] overflow-hidden py-20 md:py-28">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+  </div>
 
-    <div class="prose prose-lg max-w-none text-police-grey animate-on-scroll">
-      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Éditeur du site</h2>
-      <p>
-        Le site getnatalia.com est édité par Natalia SAS.<br>
-        Forme juridique : SAS, société par actions simplifiée<br>
-        Siège social : 3 rue Jean Jaurès - 85000 La Roche sur Yon<br>
-        SIREN : 990 566 499<br>
-        SIRET (siège) : 990 566 499 00010<br>
-        TVA intracommunautaire : FR40990566499
-      </p>
+  <div class="container-content relative z-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-on-scroll">
+        <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+        </svg>
+        <span class="text-primary font-medium text-sm tracking-wide">Informations légales</span>
+      </div>
 
-      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Directeur de la publication</h2>
-      <p>
-        Natalia SAS<br>
-        Contact : <%= locals.site.email %>
-      </p>
+      <!-- Title -->
+      <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        Mentions <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Légales</span>
+      </h1>
 
-      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Hébergement</h2>
-      <p>
-        Le site est hébergé par Netlify, Inc.<br>
-        2325 3rd Street, Suite 215<br>
-        San Francisco, California 94107<br>
-        United States
+      <p class="hero-subtitle text-lg text-white/60 max-w-2xl mx-auto">
+        Informations légales et réglementaires concernant le site Natalia
       </p>
+    </div>
+  </div>
+</section>
 
-      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Propriété intellectuelle</h2>
-      <p>
-        L'ensemble des éléments figurant sur le site (textes, logos, images, éléments graphiques, sons, logiciels, etc.) sont protégés par les dispositions du Code de la Propriété Intellectuelle. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sauf autorisation écrite préalable.
-      </p>
+<!-- Content Section -->
+<section class="py-16 md:py-24 bg-background-2">
+  <div class="container-content max-w-5xl">
 
-      <h2 class="text-h3 font-semibold text-police-titre mt-8 mb-4">Données personnelles</h2>
-      <p>
-        Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.
-      </p>
-      <p>
-        Pour exercer ces droits, vous pouvez nous contacter à : <%= locals.site.email %>
-      </p>
-      <p>
-        Pour plus d'informations, consultez notre <a href="./politique-confidentialite" class="text-primary hover:underline">politique de confidentialité</a>.
-      </p>
+    <!-- Grid of legal cards -->
+    <div class="grid grid-cols-1 gap-6 mb-8" data-stagger>
+
+      <!-- Éditeur du site -->
+      <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-primary/20 to-purple-600/20 border border-primary/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-police-titre mb-4">Éditeur du site</h2>
+            <div class="space-y-2 text-police-grey">
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>Le site <strong class="text-police-titre">getnatalia.com</strong> est édité par <strong class="text-police-titre">Natalia SAS</strong></span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>Forme juridique : SAS, société par actions simplifiée</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>Siège social : 3 rue Jean Jaurès - 85000 La Roche sur Yon</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>SIREN : <strong class="text-police-titre font-mono">990 566 499</strong></span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>SIRET (siège) : <strong class="text-police-titre font-mono">990 566 499 00010</strong></span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-primary mt-1">•</span>
+                <span>TVA intracommunautaire : <strong class="text-police-titre font-mono">FR40990566499</strong></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Directeur de la publication -->
+      <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.1s;">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 border border-emerald-500/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-police-titre mb-4">Directeur de la publication</h2>
+            <div class="space-y-2 text-police-grey">
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">•</span>
+                <span><strong class="text-police-titre">Natalia SAS</strong></span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">•</span>
+                <span>Contact : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hébergement -->
+      <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.2s;">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 border border-amber-500/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-police-titre mb-4">Hébergement</h2>
+            <div class="space-y-2 text-police-grey">
+              <p class="flex items-start gap-2">
+                <span class="text-amber-500 mt-1">•</span>
+                <span>Le site est hébergé par <strong class="text-police-titre">Netlify, Inc.</strong></span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-amber-500 mt-1">•</span>
+                <span>2325 3rd Street, Suite 215</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-amber-500 mt-1">•</span>
+                <span>San Francisco, California 94107</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-amber-500 mt-1">•</span>
+                <span>United States</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propriété intellectuelle -->
+      <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.3s;">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-police-titre mb-4">Propriété intellectuelle</h2>
+            <p class="text-police-grey leading-relaxed">
+              L'ensemble des éléments figurant sur le site (textes, logos, images, éléments graphiques, sons, logiciels, etc.) sont protégés par les dispositions du Code de la Propriété Intellectuelle. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sauf autorisation écrite préalable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Données personnelles -->
+      <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.4s;">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border border-cyan-500/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-2xl font-bold text-police-titre mb-4">Données personnelles</h2>
+            <div class="space-y-4 text-police-grey leading-relaxed">
+              <p>
+                Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.
+              </p>
+              <p>
+                Pour exercer ces droits, vous pouvez nous contacter à : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a>
+              </p>
+              <div class="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
+                <p class="flex items-center gap-2 text-primary font-medium">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  Plus d'informations
+                </p>
+                <p class="mt-2 text-sm">
+                  Pour plus d'informations, consultez notre <a href="./politique-confidentialite" class="text-primary hover:underline font-semibold">politique de confidentialité</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 md:py-20 bg-gradient-animated text-white relative overflow-hidden">
+  <!-- Decorative shapes -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+
+  <div class="container-content text-center relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white animate-on-scroll">
+      Des questions ?
+    </h2>
+    <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-on-scroll">
+      Notre équipe est à votre disposition pour répondre à toutes vos questions.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+      <a href="./contact" class="btn btn-white">
+        Nous contacter
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+      <a href="./politique-confidentialite" class="btn btn-outline">
+        Politique de confidentialité
+      </a>
     </div>
   </div>
 </section>
