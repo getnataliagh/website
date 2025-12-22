@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <title>Contact - Natalia, Assistante Vocale IA | <%= locals.site.name %></title>
-  <meta name="description" content="Contactez l'equipe Natalia pour une demonstration ou pour toute question sur nos solutions d'assistante vocale IA.">
+  <meta name="description" content="Contactez l'équipe Natalia pour une démonstration ou pour toute question sur nos solutions d'assistante vocale IA.">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -23,7 +23,7 @@
         <span class="text-gradient">Contactez</span>-nous
       </h1>
       <p class="hero-subtitle text-lg text-police-grey">
-        Vous souhaitez une demonstration ? Vous avez une question ? Notre equipe est a votre ecoute.
+        Vous souhaitez une démonstration ? Vous avez une question ? Notre équipe est à votre écoute.
       </p>
     </div>
 
@@ -31,13 +31,13 @@
       <!-- Contact Form -->
       <div class="card animate-on-scroll--left">
         <h2 class="text-h3 font-bold text-police-titre mb-6">
-          Demander une demo
+          Demander une démo
         </h2>
         <form action="https://formspree.io/f/contact" method="POST" class="space-y-5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label for="firstName" class="form-label form-label-required">Prenom</label>
-              <input type="text" id="firstName" name="firstName" required class="form-input" placeholder="Votre prenom">
+              <label for="firstName" class="form-label form-label-required">Prénom</label>
+              <input type="text" id="firstName" name="firstName" required class="form-input" placeholder="Votre prénom">
             </div>
             <div>
               <label for="lastName" class="form-label form-label-required">Nom</label>
@@ -53,13 +53,13 @@
             <input type="text" id="company" name="company" required class="form-input" placeholder="Nom de votre entreprise">
           </div>
           <div>
-            <label for="phone" class="form-label">Telephone</label>
+            <label for="phone" class="form-label">Téléphone</label>
             <input type="tel" id="phone" name="phone" class="form-input" placeholder="+33 6 00 00 00 00">
           </div>
           <div>
-            <label for="sector" class="form-label">Secteur d'activite</label>
+            <label for="sector" class="form-label">Secteur d'activité</label>
             <select id="sector" name="sector" class="form-input form-select">
-              <option value="">Selectionnez votre secteur...</option>
+              <option value="">Sélectionnez votre secteur...</option>
               <option value="automobile">Automobile / Concessions</option>
               <option value="centre-appel">Centre d'appels</option>
               <option value="helpdesk">Helpdesk / Support IT</option>
@@ -69,7 +69,7 @@
           </div>
           <div>
             <label for="message" class="form-label">Votre message</label>
-            <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Decrivez votre projet ou vos besoins..."></textarea>
+            <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Décrivez votre projet ou vos besoins..."></textarea>
           </div>
           <div class="pt-2">
             <button type="submit" class="btn-primary w-full">
@@ -86,7 +86,7 @@
       <div class="space-y-6 animate-on-scroll">
         <!-- Email Card -->
         <div class="card bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/10">
-          <h3 class="text-lg font-semibold text-police-titre mb-4">Nous ecrire</h3>
+          <h3 class="text-lg font-semibold text-police-titre mb-4">Nous écrire</h3>
           <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline flex items-center gap-2 text-lg font-medium">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -109,25 +109,25 @@
               <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span>Voix naturelle et comprehension IA avancee</span>
+              <span>Voix naturelle et compréhension IA avancée</span>
             </li>
             <li class="flex items-start gap-3 text-police-grey">
               <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span>Integration avec vos outils metiers</span>
+              <span>Intégration avec vos outils métiers</span>
             </li>
             <li class="flex items-start gap-3 text-police-grey">
               <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span>Deploiement rapide et accompagnement personnalise</span>
+              <span>Déploiement rapide et accompagnement personnalisé</span>
             </li>
             <li class="flex items-start gap-3 text-police-grey">
               <svg class="w-5 h-5 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span>Hebergement securise en France (RGPD)</span>
+              <span>Hébergement sécurisé en France (RGPD)</span>
             </li>
           </ul>
         </div>
@@ -141,9 +141,9 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold mb-2">Pret pour une demo ?</h3>
+              <h3 class="text-xl font-bold mb-2">Prêt pour une démo ?</h3>
               <p class="text-white/90 leading-relaxed">
-                Nous vous proposons une demonstration personnalisee de 30 minutes pour decouvrir Natalia en action sur vos cas d'usage.
+                Nous vous proposons une démonstration personnalisée de 30 minutes pour découvrir Natalia en action sur vos cas d'usage.
               </p>
             </div>
           </div>

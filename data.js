@@ -62,13 +62,13 @@ locals.navigation = {
         {
           label: 'Automobile',
           url: '/automobile',
-          description: 'Concessions et services apres-vente',
+          description: 'Concessions et services après-vente',
           icon: 'car',
         },
         {
           label: "Centre d'appel",
           url: '/centre-d-appel',
-          description: 'BPO et support client externalise',
+          description: 'BPO et support client externalisé',
           icon: 'headset',
         },
         {
@@ -87,12 +87,12 @@ locals.navigation = {
     },
     { label: 'Partenaires', url: '/partenaires' },
     { label: 'Presse', url: '/presse' },
-    { label: 'A propos', url: '/a-propos' },
+    { label: 'À propos', url: '/a-propos' },
     { label: 'Contact', url: '/contact' },
   ],
   footer: [
-    { label: 'Mentions Legales', url: '/mentions-legales' },
-    { label: 'Politique de confidentialite', url: '/politique-confidentialite' },
+    { label: 'Mentions légales', url: '/mentions-legales' },
+    { label: 'Politique de confidentialité', url: '/politique-confidentialite' },
     { label: 'CGU', url: '/conditions-generales-utilisation' },
   ],
 };
@@ -100,7 +100,7 @@ locals.navigation = {
 // CTA buttons
 locals.cta = {
   primary: {
-    label: 'Demander une demo',
+    label: 'Demander une démo',
     url: '/contact',
   },
   secondary: {
@@ -113,38 +113,38 @@ locals.cta = {
 locals.features = [
   {
     primary: true,
-    title: 'Disponibilite 24/7',
-    description: 'Natalia repond a vos appels 24h/24, 7j/7, sans interruption ni fatigue.',
+    title: 'Disponibilité 24/7',
+    description: 'Natalia répond à vos appels 24h/24, 7j/7, sans interruption ni fatigue.',
     icon: 'clock',
   },
   {
     primary: true,
-    title: 'Integration Simple',
-    description: 'Notre API REST et nos connecteurs permettent une integration rapide avec vos outils existants.',
+    title: 'Intégration simple',
+    description: 'Notre API REST et nos connecteurs permettent une intégration rapide avec vos outils existants.',
     icon: 'plug',
   },
   {
     primary: true,
     title: 'IA Conversationnelle',
-    description: 'Natalia comprend le langage naturel et repond de maniere fluide et personnalisee.',
+    description: 'Natalia comprend le langage naturel et répond de manière fluide et personnalisée.',
     icon: 'brain',
   },
   {
     primary: true,
     title: 'Multilingue',
-    description: 'Natalia parle francais, anglais, espagnol et plus encore.',
+    description: 'Natalia parle français, anglais, espagnol et plus encore.',
     icon: 'globe',
   },
   {
     primary: true,
-    title: 'Analyse en Temps Reel',
-    description: 'Tableaux de bord et rapports detailles sur vos appels.',
+    title: 'Analyse en temps réel',
+    description: 'Tableaux de bord et rapports détaillés sur vos appels.',
     icon: 'chart',
   },
   {
     primary: true,
-    title: 'Securite Enterprise',
-    description: 'Hebergement en Europe, conformite RGPD, chiffrement bout-en-bout.',
+    title: 'Sécurité Enterprise',
+    description: 'Hébergement en Europe, conformité RGPD, chiffrement bout-en-bout.',
     icon: 'shield',
   },
 ];
@@ -152,13 +152,13 @@ locals.features = [
 // Testimonials
 locals.testimonials = [
   {
-    quote: "Natalia a transforme notre service client. Nous ne ratons plus aucun appel.",
+    quote: "Natalia a transformé notre service client. Nous ne ratons plus aucun appel.",
     author: 'Marie Dupont',
     role: 'Directrice Service Client',
     company: 'AutoPlus',
   },
   {
-    quote: "L'integration a ete simple et les resultats immediats. ROI positif en 3 mois.",
+    quote: "L'intégration a été simple et les résultats immédiats. ROI positif en 3 mois.",
     author: 'Jean Martin',
     role: 'CEO',
     company: 'TechStart',
@@ -167,9 +167,9 @@ locals.testimonials = [
 
 // Stats
 locals.stats = [
-  { value: '24/7', label: 'Disponibilite' },
-  { value: '60%', label: 'Appels traites automatiquement' },
-  { value: '3min', label: 'Temps de reponse moyen' },
+  { value: '24/7', label: 'Disponibilité' },
+  { value: '60%', label: 'Appels traités automatiquement' },
+  { value: '3min', label: 'Temps de réponse moyen' },
   { value: '95%', label: 'Satisfaction client' },
 ];
 
