@@ -29,7 +29,9 @@
                 </svg>
               </button>
               <!-- Dropdown Panel - Clerk Style -->
-              <div class="nav-dropdown-panel absolute top-full left-0 mt-2 opacity-0 invisible translate-y-1 transition-all duration-150 ease-out" data-dropdown-panel>
+              <div class="nav-dropdown-panel absolute top-full left-0 pt-2 opacity-0 invisible translate-y-1 transition-all duration-150 ease-out" data-dropdown-panel>
+                <!-- Invisible bridge to maintain hover when moving from button to dropdown -->
+                <div class="absolute -top-2 left-0 right-0 h-2"></div>
                 <div class="nav-dropdown-content rounded-xl bg-gray-50 p-1 min-w-[280px] shadow-dropdown border border-gray-200/50">
                   <% item.children.forEach(function(child) { %>
                     <a
