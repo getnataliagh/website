@@ -4,6 +4,75 @@
   <title>Page non trouvée | <%= locals.site.name %></title>
   <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée.">
   <%- include('./includes/_head.ejs') %>
+  <style>
+    /* Animation SVG 404 */
+    @keyframes radar-pulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(2.5); opacity: 0; }
+    }
+    @keyframes radar-rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes doc-glitch {
+      0%, 100% { transform: translate(0, 0); opacity: 1; }
+      10% { transform: translate(-2px, 1px); }
+      20% { transform: translate(2px, -1px); }
+      30% { transform: translate(-1px, 2px); opacity: 0.8; }
+      40% { transform: translate(1px, -2px); }
+      50% { transform: translate(-2px, -1px); opacity: 1; }
+      60% { transform: translate(2px, 2px); }
+      70% { transform: translate(-1px, -2px); opacity: 0.9; }
+      80% { transform: translate(1px, 1px); }
+      90% { transform: translate(-2px, 2px); opacity: 1; }
+    }
+    @keyframes pixel-fade {
+      0%, 45% { opacity: 1; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.5; transform: translate(var(--px, 0), var(--py, 0)) scale(0.8); }
+      55%, 100% { opacity: 1; transform: translate(0, 0) scale(1); }
+    }
+    @keyframes float-particle {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+      25% { transform: translate(10px, -15px) rotate(90deg); opacity: 0.8; }
+      50% { transform: translate(-5px, -25px) rotate(180deg); opacity: 0.3; }
+      75% { transform: translate(-15px, -10px) rotate(270deg); opacity: 0.7; }
+    }
+    @keyframes question-bounce {
+      0%, 100% { transform: translateY(0) rotate(-15deg); }
+      50% { transform: translateY(-8px) rotate(-15deg); }
+    }
+    .radar-circle {
+      animation: radar-pulse 3s ease-out infinite;
+      transform-origin: center;
+    }
+    .radar-circle:nth-child(2) { animation-delay: 0.75s; }
+    .radar-circle:nth-child(3) { animation-delay: 1.5s; }
+    .radar-circle:nth-child(4) { animation-delay: 2.25s; }
+    .radar-sweep {
+      animation: radar-rotate 4s linear infinite;
+      transform-origin: center;
+    }
+    .doc-icon {
+      animation: doc-glitch 4s ease-in-out infinite;
+    }
+    .pixel {
+      animation: pixel-fade 4s ease-in-out infinite;
+    }
+    .pixel:nth-child(odd) { --px: 5px; --py: -8px; animation-delay: 0.1s; }
+    .pixel:nth-child(even) { --px: -6px; --py: 5px; animation-delay: 0.3s; }
+    .particle {
+      animation: float-particle 6s ease-in-out infinite;
+    }
+    .particle:nth-child(1) { animation-delay: 0s; }
+    .particle:nth-child(2) { animation-delay: 1s; }
+    .particle:nth-child(3) { animation-delay: 2s; }
+    .particle:nth-child(4) { animation-delay: 3s; }
+    .particle:nth-child(5) { animation-delay: 4s; }
+    .particle:nth-child(6) { animation-delay: 5s; }
+    .question-mark {
+      animation: question-bounce 2s ease-in-out infinite;
+    }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col">
 <%- include('./includes/_header.ejs') %>
@@ -12,7 +81,99 @@
   <section class="section bg-white">
     <div class="container-content text-center">
       <div class="animate-on-scroll">
-        <span class="text-9xl font-bold text-gradient mb-4 block">404</span>
+        <!-- Animation SVG originale -->
+        <div class="mb-8 flex justify-center">
+          <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-56 h-56 md:w-72 md:h-72">
+            <defs>
+              <linearGradient id="gradient-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#5C39EE"/>
+                <stop offset="100%" style="stop-color:#B041F0"/>
+              </linearGradient>
+              <linearGradient id="gradient-soft" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#5C39EE;stop-opacity:0.2"/>
+                <stop offset="100%" style="stop-color:#B041F0;stop-opacity:0.1"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Cercles radar pulsants -->
+            <g opacity="0.6">
+              <circle class="radar-circle" cx="140" cy="140" r="40" stroke="url(#gradient-primary)" stroke-width="1" fill="none"/>
+              <circle class="radar-circle" cx="140" cy="140" r="40" stroke="url(#gradient-primary)" stroke-width="1" fill="none"/>
+              <circle class="radar-circle" cx="140" cy="140" r="40" stroke="url(#gradient-primary)" stroke-width="1" fill="none"/>
+              <circle class="radar-circle" cx="140" cy="140" r="40" stroke="url(#gradient-primary)" stroke-width="1" fill="none"/>
+            </g>
+
+            <!-- Cercles statiques de fond -->
+            <circle cx="140" cy="140" r="100" stroke="url(#gradient-primary)" stroke-width="0.5" fill="none" opacity="0.2"/>
+            <circle cx="140" cy="140" r="70" stroke="url(#gradient-primary)" stroke-width="0.5" fill="none" opacity="0.3"/>
+
+            <!-- Balayage radar -->
+            <g class="radar-sweep">
+              <path d="M140 140 L140 40 A100 100 0 0 1 215 85 Z" fill="url(#gradient-soft)"/>
+            </g>
+
+            <!-- Particules flottantes -->
+            <g class="particle" opacity="0.6">
+              <rect x="60" y="80" width="6" height="6" rx="1" fill="#5C39EE" transform="rotate(45 63 83)"/>
+            </g>
+            <g class="particle" opacity="0.5">
+              <rect x="200" y="70" width="4" height="4" rx="1" fill="#B041F0" transform="rotate(30 202 72)"/>
+            </g>
+            <g class="particle" opacity="0.7">
+              <rect x="220" y="160" width="5" height="5" rx="1" fill="#5C39EE" transform="rotate(60 222.5 162.5)"/>
+            </g>
+            <g class="particle" opacity="0.4">
+              <rect x="50" y="180" width="4" height="4" rx="1" fill="#B041F0" transform="rotate(15 52 182)"/>
+            </g>
+            <g class="particle" opacity="0.6">
+              <rect x="80" y="220" width="5" height="5" rx="1" fill="#5C39EE" transform="rotate(75 82.5 222.5)"/>
+            </g>
+            <g class="particle" opacity="0.5">
+              <rect x="190" y="210" width="4" height="4" rx="1" fill="#B041F0" transform="rotate(45 192 212)"/>
+            </g>
+
+            <!-- Document central avec effet glitch -->
+            <g class="doc-icon" filter="url(#glow)">
+              <!-- Corps du document -->
+              <rect x="110" y="105" width="60" height="75" rx="4" fill="white" stroke="url(#gradient-primary)" stroke-width="2"/>
+
+              <!-- Coin plié -->
+              <path d="M155 105 L170 105 L170 120 L155 120 Z" fill="#F3F4F6"/>
+              <path d="M155 105 L155 120 L170 120" stroke="url(#gradient-primary)" stroke-width="2" fill="none"/>
+
+              <!-- Lignes de texte avec effet pixel -->
+              <g class="pixel">
+                <rect x="120" y="130" width="35" height="4" rx="1" fill="#5C39EE" opacity="0.6"/>
+              </g>
+              <g class="pixel">
+                <rect x="120" y="140" width="40" height="4" rx="1" fill="#B041F0" opacity="0.5"/>
+              </g>
+              <g class="pixel">
+                <rect x="120" y="150" width="28" height="4" rx="1" fill="#5C39EE" opacity="0.4"/>
+              </g>
+              <g class="pixel">
+                <rect x="120" y="160" width="32" height="4" rx="1" fill="#B041F0" opacity="0.3"/>
+              </g>
+            </g>
+
+            <!-- Point d'interrogation animé -->
+            <g class="question-mark" filter="url(#glow)">
+              <circle cx="175" cy="95" r="18" fill="url(#gradient-primary)"/>
+              <text x="175" y="102" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Inter, sans-serif">?</text>
+            </g>
+
+            <!-- Texte 404 intégré subtilement -->
+            <text x="140" y="255" text-anchor="middle" fill="url(#gradient-primary)" font-size="24" font-weight="700" font-family="Montserrat, sans-serif" opacity="0.3">404</text>
+          </svg>
+        </div>
+
         <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
           Page non trouvée
         </h1>
