@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>A propos - Natalia, Assistante Vocale IA | <%= locals.site.name %></title>
+  <meta name="description" content="Découvrez l'équipe derrière Natalia, l'assistante vocale IA qui révolutionne la gestion des appels téléphoniques.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+
+<!-- Hero Section -->
+<section class="py-24 md:py-32 bg-[#030014] relative overflow-hidden">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+  </div>
+
+  <div class="container-content relative z-10">
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-on-scroll">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-primary font-medium text-sm tracking-wide">Notre histoire</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-on-scroll">
+        À propos de <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Natalia</span>
+      </h1>
+      <p class="text-xl text-white/60 max-w-2xl mx-auto animate-on-scroll">
+        Nous révolutionnons la gestion des appels téléphoniques grâce à l'intelligence artificielle.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="section bg-white">
+  <div class="container-content">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="animate-on-scroll">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+          <span class="text-primary text-xs font-semibold uppercase tracking-wider">Notre mission</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-police-titre mb-6">
+          Chaque appel <span class="text-gradient">compte</span>
+        </h2>
+        <p class="text-lg text-police-grey mb-4">
+          Chez Natalia, nous croyons que <strong>chaque appel compte</strong>. Un appel manqué, c'est un client frustré, une opportunité perdue, une relation qui se dégrade.
+        </p>
+        <p class="text-police-grey mb-4">
+          Notre mission est de permettre à chaque entreprise de répondre à 100% de ses appels, 24h/24, 7j/7, avec la même qualité et la même empathie qu'un collaborateur humain.
+        </p>
+        <p class="text-police-grey">
+          Nous ne remplaçons pas vos équipes, nous les assistons. Nous les libérons des tâches répétitives pour qu'elles se concentrent sur ce qui a vraiment de la valeur.
+        </p>
+      </div>
+      <div class="animate-on-scroll--scale">
+        <div class="bg-gradient-to-br from-[#030014] to-primary/20 rounded-3xl p-10 text-center relative overflow-hidden">
+          <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.05)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+          <div class="relative z-10">
+            <div class="text-7xl md:text-8xl font-bold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent mb-4">
+              40%
+            </div>
+            <p class="text-white/70 text-lg">
+              des appels en entreprise ne sont pas traités.<br>
+              <span class="text-primary font-semibold">Nous voulons changer ça.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section bg-gray-50">
+  <div class="container-content">
+    <div class="text-center mb-16 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-primary font-medium text-sm tracking-wide">Notre parcours</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-police-titre">
+        L'histoire de <span class="text-gradient">Natalia</span>
+      </h2>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Timeline line -->
+      <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-purple-500 to-secondary"></div>
+
+      <!-- Timeline items -->
+      <div class="space-y-12">
+        <!-- November 2024 -->
+        <div class="relative flex items-start md:items-center" data-stagger>
+          <div class="flex-1 md:text-right md:pr-12 order-2 md:order-1 pl-16 md:pl-0">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 animate-on-scroll">
+              <div class="text-primary font-bold text-lg mb-2">Novembre 2024</div>
+              <h3 class="text-xl font-bold text-police-titre mb-2">La genèse du projet</h3>
+              <p class="text-police-grey">
+                En échangeant avec des entrepreneurs locaux lors d'un <a href="https://www.saas.camp/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors underline">SaaS Camp</a> en Vendée, deux problématiques sont ressorties : la difficulté de recruter et l'inefficacité du standard téléphonique.
+              </p>
+            </div>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg z-10"></div>
+          <div class="flex-1 md:pl-12 order-1 md:order-2 hidden md:block"></div>
+        </div>
+
+        <!-- March 2025 -->
+        <div class="relative flex items-start md:items-center" data-stagger>
+          <div class="flex-1 md:pr-12 order-2 hidden md:block"></div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+          <div class="flex-1 md:pl-12 order-1 md:order-2 pl-16 md:pl-12">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 animate-on-scroll">
+              <div class="text-purple-500 font-bold text-lg mb-2">Mars 2025</div>
+              <h3 class="text-xl font-bold text-police-titre mb-2">Premier POC déployé</h3>
+              <p class="text-police-grey">
+                Le projet est lancé, d'abord en sous-marin sur la partie technique. Le premier POC est déployé chez un client en conditions réelles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- June 2025 -->
+        <div class="relative flex items-start md:items-center" data-stagger>
+          <div class="flex-1 md:text-right md:pr-12 order-2 md:order-1 pl-16 md:pl-0">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 animate-on-scroll">
+              <div class="text-emerald-500 font-bold text-lg mb-2">Juin 2025</div>
+              <h3 class="text-xl font-bold text-police-titre mb-2">Lancement automobile</h3>
+              <p class="text-police-grey">
+                Premiers pilotes dans le secteur automobile. On découvre que 40% des appels en concession ne sont pas traités.
+              </p>
+            </div>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+          <div class="flex-1 md:pl-12 order-1 md:order-2 hidden md:block"></div>
+        </div>
+
+        <!-- September 2025 -->
+        <div class="relative flex items-start md:items-center" data-stagger>
+          <div class="flex-1 md:pr-12 order-2 hidden md:block"></div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-lg z-10"></div>
+          <div class="flex-1 md:pl-12 order-1 md:order-2 pl-16 md:pl-12">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 animate-on-scroll">
+              <div class="text-secondary font-bold text-lg mb-2">Septembre 2025</div>
+              <h3 class="text-xl font-bold text-police-titre mb-2">Expansion helpdesk IT</h3>
+              <p class="text-police-grey">
+                Élargissement vers le support helpdesk informatique. Baptiste rejoint l'équipe technique pour accélérer le développement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="section bg-white">
+  <div class="container-content">
+    <div class="text-center mb-16 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-primary font-medium text-sm tracking-wide">Notre équipe</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-police-titre mb-4">
+        Des profils <span class="text-gradient">complémentaires</span>
+      </h2>
+      <p class="text-police-grey max-w-2xl mx-auto">
+        Unis par des valeurs communes et la volonté de servir nos clients.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger-scale>
+      <!-- Nicolas Dubreuil -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/image.png" alt="Nicolas Dubreuil" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+            <span class="text-primary text-xs font-semibold">CEO</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">Nicolas Dubreuil</h3>
+          <p class="text-primary font-medium text-sm mb-3">Co-fondateur</p>
+          <p class="text-police-grey text-sm mb-4">Pilote le développement commercial et la stratégie de croissance de Natalia.</p>
+          <a href="https://linkedin.com/in/nicolas-dubreuil-essca/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-police-grey hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="text-sm">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Jérémy David -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/image2.png" alt="Jeremy David" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+            <span class="text-emerald-600 text-xs font-semibold">COO</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">Jeremy David</h3>
+          <p class="text-emerald-600 font-medium text-sm mb-3">Co-fondateur</p>
+          <p class="text-police-grey text-sm mb-4">Expert en méthodologie Lean et optimisation des processus opérationnels.</p>
+          <a href="https://linkedin.com/in/jeremy-david-279564157/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-police-grey hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="text-sm">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Louis Marsais -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/louisAvif.avif" alt="Louis Marsais" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20">
+            <span class="text-purple-600 text-xs font-semibold">CTO</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">Louis Marsais</h3>
+          <p class="text-purple-600 font-medium text-sm mb-3">Co-fondateur</p>
+          <p class="text-police-grey text-sm mb-4">Responsable produit et technologie. Architecte des solutions Natalia.</p>
+          <a href="https://linkedin.com/in/louis-marsais/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-police-grey hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="text-sm">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- François-Guillaume Ribreau -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/image3.png" alt="Francois-Guillaume Ribreau" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20">
+            <span class="text-amber-600 text-xs font-semibold">AI Expert</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">François-Guillaume Ribreau</h3>
+          <p class="text-amber-600 font-medium text-sm mb-3">Co-fondateur</p>
+          <p class="text-police-grey text-sm mb-4">Serial entrepreneur et expert en intelligence artificielle. Garant de l'excellence technologique.</p>
+          <a href="https://linkedin.com/in/francoisguillaumeribreau/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-police-grey hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="text-sm">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Baptiste Parmantier -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/image4.png" alt="Baptiste Parmantier" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+            <span class="text-blue-600 text-xs font-semibold">Lead Dev</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">Baptiste Parmantier</h3>
+          <p class="text-blue-600 font-medium text-sm mb-3">Lead Software Engineer</p>
+          <p class="text-police-grey text-sm mb-4">Développeur passionné et autodidacte. Pilote le développement des solutions Natalia.</p>
+          <a href="https://linkedin.com/in/baptiste-parmantier/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-police-grey hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="text-sm">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pierre Turquand -->
+      <div class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+        <div class="relative mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-primary/30 transition-colors">
+            <img src="./assets/images/captureDecran20251021A161843Png.png" alt="Pierre Turquand" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gray-500/10 border border-gray-500/20">
+            <span class="text-gray-600 text-xs font-semibold">Investor</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-police-titre mb-1">Pierre Turquand</h3>
+          <p class="text-gray-600 font-medium text-sm mb-3">Co-fondateur & Investisseur</p>
+          <p class="text-police-grey text-sm mb-4">Entrepreneur expérimenté. Soutient le développement stratégique de Natalia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="section bg-gray-50">
+  <div class="container-content">
+    <div class="text-center mb-16 animate-on-scroll">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+        <span class="text-primary font-medium text-sm tracking-wide">Nos valeurs</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-police-titre">
+        Ce qui nous <span class="text-gradient">anime</span>
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+      <div class="card text-center bg-white">
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 text-primary">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Innovation</h3>
+        <p class="text-police-grey">
+          Nous repoussons les limites de l'IA vocale pour offrir des expériences toujours plus naturelles et efficaces.
+        </p>
+      </div>
+      <div class="card text-center bg-white">
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 text-emerald-600">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Humain</h3>
+        <p class="text-police-grey">
+          L'IA au service de l'humain, jamais l'inverse. Nous augmentons vos équipes, nous ne les remplaçons pas.
+        </p>
+      </div>
+      <div class="card text-center bg-white">
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 text-amber-600">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-police-titre mb-3">Confiance</h3>
+        <p class="text-police-grey">
+          Sécurité, confidentialité, transparence. Vos données sont protégées et hébergées en France.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technology Section -->
+<section class="section bg-white">
+  <div class="container-content">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1 animate-on-scroll">
+        <div class="bg-gradient-to-br from-[#030014] to-primary/20 rounded-3xl p-8 relative overflow-hidden">
+          <div class="absolute inset-0 bg-[linear-gradient(rgba(92,57,238,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(92,57,238,0.05)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-bold text-white mb-6">Notre stack technologique</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                  </svg>
+                </div>
+                <span>Large Language Models (LLM) de dernière génération</span>
+              </li>
+              <li class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                  </svg>
+                </div>
+                <span>Synthèse vocale ultra-réaliste</span>
+              </li>
+              <li class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <span>API téléphonique temps réel</span>
+              </li>
+              <li class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                  </svg>
+                </div>
+                <span>Infrastructure cloud scalable</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 animate-on-scroll">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+          <span class="text-primary text-xs font-semibold uppercase tracking-wider">Technologie</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-police-titre mb-6">
+          Une technologie <span class="text-gradient">de pointe</span>
+        </h2>
+        <p class="text-lg text-police-grey mb-4">
+          Natalia s'appuie sur les dernières avancées en matière d'intelligence artificielle et de traitement du langage naturel.
+        </p>
+        <p class="text-police-grey mb-4">
+          Notre équipe R&D travaille en permanence à l'amélioration de nos modèles pour offrir des conversations toujours plus naturelles et pertinentes.
+        </p>
+        <p class="text-police-grey">
+          Nous collaborons avec les meilleurs laboratoires de recherche en IA pour rester à la pointe de l'innovation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 md:py-32 bg-[#030014] relative overflow-hidden">
+  <!-- Animated background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container-content text-center relative z-10">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-on-scroll">
+      Envie d'en savoir plus ?
+    </h2>
+    <p class="text-xl text-white/60 mb-10 max-w-2xl mx-auto animate-on-scroll">
+      Rencontrez notre équipe et découvrez comment Natalia peut transformer votre relation client.
+    </p>
+    <div class="animate-on-scroll">
+      <a href="./contact" class="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">
+        Nous contacter
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>

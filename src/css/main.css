@@ -1,0 +1,2029 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-police bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold text-police-titre;
+  }
+
+  h1 {
+    @apply text-h1-mobile md:text-h1;
+  }
+
+  h2 {
+    @apply text-h2-mobile md:text-h2;
+  }
+
+  h3 {
+    @apply text-h3-mobile md:text-h3;
+  }
+
+  h4 {
+    @apply text-h4-mobile md:text-h4;
+  }
+
+  a {
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
+@layer components {
+  /* Container */
+  .container-content {
+    @apply max-w-content mx-auto px-4 md:px-6;
+  }
+
+  /* Buttons - Base styles (Hook0-style: 0.3s ease-out-expo) */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3.5 rounded-button font-semibold relative overflow-hidden text-base;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Primary button - subtle lift + glow on hover (Hook0-style) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-gradient-to-r from-primary via-primary to-secondary text-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+    box-shadow: 0 4px 15px rgba(92, 57, 238, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(92, 57, 238, 0.4);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(92, 57, 238, 0.4);
+  }
+
+  /* Icon inside button moves right on hover (Hook0-style) */
+  .btn-primary svg,
+  .btn-secondary svg,
+  .btn-outline svg,
+  .btn-white svg {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-primary:hover svg,
+  .btn-secondary:hover svg,
+  .btn-outline:hover svg,
+  .btn-white:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Secondary button - subtle lift on hover (Hook0-style) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-white text-primary border-2 border-primary/30;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2;
+    box-shadow: 0 2px 10px rgba(92, 57, 238, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    @apply border-primary;
+    box-shadow: 0 0 30px rgba(92, 57, 238, 0.2);
+  }
+
+  /* Outline button - NO translate, just color change (Hook0 ghost-style) */
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-transparent text-white border-2 border-white/80;
+    @apply focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-outline:hover {
+    @apply bg-white/10;
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  /* Ghost button - NO translate, just bg change (Hook0-style) */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3.5 rounded-button font-semibold text-base;
+    @apply bg-transparent text-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-ghost:hover {
+    @apply bg-primary/5;
+    @apply text-primary;
+  }
+
+  /* White button - subtle lift + glow (Hook0-style) */
+  .btn-white {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-button font-semibold relative overflow-hidden text-base;
+    @apply bg-white text-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-white/50;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Cards - subtle lift on hover (Hook0-style: -4px) */
+  .card {
+    @apply bg-white rounded-card p-6 shadow-card;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    @apply shadow-card-hover;
+    border-color: rgba(92, 57, 238, 0.1);
+  }
+
+  .card-bordered {
+    @apply border border-muted-border;
+  }
+
+  /* Sections */
+  .section {
+    @apply py-section-mobile md:py-section;
+  }
+
+  .section-alt {
+    @apply bg-background-2;
+  }
+
+  /* Navigation (Hook0-style: 0.3s ease-out-expo) */
+  .nav-link {
+    @apply text-police-grey hover:text-primary relative;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  /* Form elements - Modern light theme (Hook0-style timing) */
+  .form-input,
+  .input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply placeholder:text-police-grey/50;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .form-input:hover,
+  .input:hover {
+    @apply border-primary/40;
+  }
+
+  .form-select,
+  select.form-input,
+  select.input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    @apply cursor-pointer appearance-none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%235C39EE' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  .form-textarea,
+  textarea.form-input,
+  textarea.input {
+    @apply w-full px-4 py-3.5 rounded-lg text-police-titre text-base;
+    @apply bg-white border-2 border-primary/20;
+    @apply placeholder:text-police-grey/50;
+    @apply focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10;
+    @apply resize-y min-h-[120px];
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .input-error,
+  .form-input-error {
+    @apply border-destructive focus:ring-destructive/10 focus:border-destructive;
+  }
+
+  .form-label,
+  .label {
+    @apply block text-sm font-semibold text-police-titre mb-2;
+  }
+
+  .form-label-required::after {
+    content: ' *';
+    @apply text-primary;
+  }
+
+  /* Range slider - Custom purple styling with properly centered thumb */
+  .form-range,
+  input[type="range"] {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+    @apply bg-gradient-to-r from-primary/20 to-primary/10;
+    /* Ensure proper height for thumb centering */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    @apply w-5 h-5 rounded-full cursor-pointer;
+    @apply bg-gradient-to-br from-primary to-secondary;
+    box-shadow: 0 2px 8px rgba(92, 57, 238, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Center thumb vertically on the track */
+    margin-top: -6px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(92, 57, 238, 0.5);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full cursor-pointer border-0;
+    @apply bg-gradient-to-br from-primary to-secondary;
+    box-shadow: 0 2px 8px rgba(92, 57, 238, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Firefox handles centering automatically */
+  }
+
+  input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(92, 57, 238, 0.5);
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    @apply w-full h-2 rounded-full;
+    @apply bg-gradient-to-r from-primary/30 to-primary/10;
+  }
+
+  input[type="range"]::-moz-range-track {
+    @apply w-full h-2 rounded-full;
+    @apply bg-gradient-to-r from-primary/30 to-primary/10;
+  }
+
+  /* Focus visible for accessibility */
+  input[type="range"]:focus-visible {
+    @apply outline-none;
+  }
+
+  input[type="range"]:focus-visible::-webkit-slider-thumb {
+    @apply ring-4 ring-primary/30;
+  }
+
+  /* Checkbox & Radio - Custom styling */
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply w-5 h-5 rounded cursor-pointer;
+    @apply border-2 border-primary/30 bg-white;
+    @apply checked:bg-primary checked:border-primary;
+    @apply focus:ring-2 focus:ring-primary/30 focus:ring-offset-2;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  input[type="radio"] {
+    @apply rounded-full;
+  }
+
+  /* YouTube container */
+  .youtube-container {
+    @apply w-full rounded-lg overflow-hidden shadow-card;
+  }
+
+  /* Lottie container */
+  .lottie-container {
+    @apply w-full h-auto;
+  }
+
+  /* Grid layouts */
+  .grid-features {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .grid-partners {
+    @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6;
+  }
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES
+   ============================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+/* NOTE: Tailwind defines its own @keyframes pulse for animate-pulse class
+   We use natalia-pulse to avoid conflicts */
+@keyframes natalia-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(92, 57, 238, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(92, 57, 238, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes morphBlob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%;
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Button glow animation */
+@keyframes btnGlow {
+  0%, 100% {
+    box-shadow:
+      0 4px 15px rgba(92, 57, 238, 0.4),
+      0 0 5px rgba(92, 57, 238, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 4px 20px rgba(92, 57, 238, 0.6),
+      0 0 30px rgba(92, 57, 238, 0.3);
+  }
+}
+
+/* Menu slide animations */
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+@keyframes menuSlideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+}
+
+/* Dropdown slide animations */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Horizontal bar grow animation */
+@keyframes growWidth {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ============================================
+   NOTE: Scroll animations now use CSS Transitions (Hook0-style)
+   The keyframes below are kept only for special effects
+   ============================================ */
+
+/* ============================================
+   SCROLL ANIMATION SYSTEM (Hook0-style)
+   CSS Transitions | Duration: 0.6s | Easing: cubic-bezier(0.16, 1, 0.3, 1)
+   ============================================ */
+
+/* Base animation state - hidden before scroll trigger */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Visible state - triggered by IntersectionObserver */
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade animations - different initial positions */
+[data-animate="fade"] {
+  opacity: 0;
+  transform: none;
+}
+[data-animate="fade"].is-visible {
+  opacity: 1;
+}
+
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+[data-animate="fade-up"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate="fade-down"] {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+[data-animate="fade-down"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate="fade-left"] {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+[data-animate="fade-left"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animate="fade-right"] {
+  opacity: 0;
+  transform: translateX(30px);
+}
+[data-animate="fade-right"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale animations */
+[data-animate="scale"] {
+  opacity: 0;
+  transform: scale(0.95);
+}
+[data-animate="scale"].is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-animate="scale-up"] {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+}
+[data-animate="scale-up"].is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Zoom animations */
+[data-animate="zoom-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+}
+[data-animate="zoom-in"].is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rotate animations */
+[data-animate="rotate-in"] {
+  opacity: 0;
+  transform: rotate(-5deg) translateY(20px);
+}
+[data-animate="rotate-in"].is-visible {
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+}
+
+/* Clip animations - keep keyframes for these complex effects */
+[data-animate="clip-up"] {
+  clip-path: inset(100% 0 0 0);
+  opacity: 0;
+}
+[data-animate="clip-up"].is-visible {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate="clip-left"] {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+[data-animate="clip-left"].is-visible {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Blur animations */
+[data-animate="blur-in"] {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+}
+[data-animate="blur-in"].is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animation delays - using transition-delay for Hook0-style approach */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+[data-delay="600"] { transition-delay: 0.6s; }
+[data-delay="700"] { transition-delay: 0.7s; }
+[data-delay="800"] { transition-delay: 0.8s; }
+[data-delay="900"] { transition-delay: 0.9s; }
+[data-delay="1000"] { transition-delay: 1s; }
+
+/* Animation durations */
+[data-duration="fast"] {
+  transition-duration: 0.4s !important;
+}
+[data-duration="slow"] {
+  transition-duration: 0.8s !important;
+}
+[data-duration="slower"] {
+  transition-duration: 1s !important;
+}
+
+/* Text gradient */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+/* Animated gradient background */
+.bg-gradient-animated {
+  background: linear-gradient(-45deg, #5C39EE, #B041F0, #7c3aed, #5C39EE);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Aspect ratios */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* ============================================
+   CONTINUOUS ANIMATIONS (no scroll trigger)
+   ============================================ */
+
+/* Floating animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Pulse animations */
+.animate-pulse-soft {
+  animation: pulseSoft 2s ease-in-out infinite;
+}
+
+/* NOTE: .animate-pulse-slow is defined later (line ~1530) for Hero particles */
+
+/* Hook0-style subtle pulse */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Bounce animation */
+.animate-bounce-slow {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Morphing blob */
+.animate-morph {
+  animation: morphBlob 8s ease-in-out infinite;
+}
+
+/* Shimmer effect */
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Spin animation */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+/* ============================================
+   HERO SECTION ANIMATIONS (Hook0-style)
+   CSS Transitions | Duration: 0.6s | Easing: ease-out-expo
+   ============================================ */
+.hero-title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.hero-image {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: heroFadeInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+
+/* Gradient orbs */
+.gradient-orb {
+  @apply absolute rounded-full opacity-30 blur-3xl pointer-events-none;
+  background: linear-gradient(135deg, #5C39EE 0%, #B041F0 100%);
+}
+
+.gradient-orb-1 {
+  @apply w-96 h-96 -top-48 -right-48;
+  animation: float 10s ease-in-out infinite;
+}
+
+.gradient-orb-2 {
+  @apply w-72 h-72 -bottom-36 -left-36;
+  animation: float 12s ease-in-out infinite reverse;
+}
+
+/* Animated border */
+.border-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-animated::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5C39EE, #B041F0, #5C39EE);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Glow effect (Hook0-style) */
+.glow {
+  box-shadow: 0 0 40px rgba(92, 57, 238, 0.3);
+}
+
+.glow-hover {
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 60px rgba(92, 57, 238, 0.4);
+}
+
+/* ============================================
+   COUNTER ANIMATION (Hook0-style)
+   ============================================ */
+.counter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.counter.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   STAGGER ANIMATION FOR CHILDREN (Hook0-style)
+   CSS Transitions with 0.1s incremental delays
+   ============================================ */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-stagger].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-stagger] > *:nth-child(1) { transition-delay: 0s; }
+[data-stagger] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-stagger] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-stagger] > *:nth-child(4) { transition-delay: 0.3s; }
+[data-stagger] > *:nth-child(5) { transition-delay: 0.4s; }
+[data-stagger] > *:nth-child(6) { transition-delay: 0.5s; }
+[data-stagger] > *:nth-child(7) { transition-delay: 0.6s; }
+[data-stagger] > *:nth-child(8) { transition-delay: 0.7s; }
+[data-stagger] > *:nth-child(9) { transition-delay: 0.8s; }
+[data-stagger] > *:nth-child(10) { transition-delay: 0.9s; }
+
+/* ============================================
+   PARALLAX EFFECT
+   ============================================ */
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR
+   ============================================ */
+.scroll-progress {
+  @apply fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary z-50;
+  transform-origin: left;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* ============================================
+   SWIPER CUSTOMIZATION
+   ============================================ */
+.swiper {
+  @apply w-full;
+}
+
+.swiper-slide {
+  @apply h-auto;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-muted;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary w-6 rounded-full;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-primary;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swiper-button-next:hover {
+  @apply translate-x-1;
+}
+
+.swiper-button-prev:hover {
+  @apply -translate-x-1;
+}
+
+/* ============================================
+   ICON ANIMATIONS
+   ============================================ */
+.icon-animated {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .icon-animated {
+  @apply scale-110;
+  animation: bounce 0.6s ease-in-out;
+}
+
+/* ============================================
+   LINK ANIMATIONS
+   ============================================ */
+.link-underline {
+  @apply relative inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 origin-right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  @apply scale-x-100 origin-left;
+}
+
+/* ============================================
+   FORM ANIMATIONS
+   ============================================ */
+.input-animated {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.input-animated:focus {
+  @apply -translate-y-0.5 shadow-lg;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-text {
+  @apply h-4 bg-gray-200 rounded animate-pulse;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+/* ============================================
+   MOBILE MENU ANIMATIONS (Hook0-style)
+   CSS Transitions for smooth open/close
+   ============================================ */
+/* Initial state: hidden */
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hidden state with animation */
+.mobile-menu.menu-hidden {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+/* Visible state */
+.mobile-menu.menu-visible {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Menu items - stagger with transitions */
+.mobile-menu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Menu items visible when menu is open */
+.mobile-menu.menu-visible .mobile-menu-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-item:nth-child(1) { transition-delay: 0.05s; }
+.mobile-menu-item:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu-item:nth-child(3) { transition-delay: 0.15s; }
+.mobile-menu-item:nth-child(4) { transition-delay: 0.2s; }
+.mobile-menu-item:nth-child(5) { transition-delay: 0.25s; }
+.mobile-menu-item:nth-child(6) { transition-delay: 0.3s; }
+.mobile-menu-item:nth-child(7) { transition-delay: 0.35s; }
+.mobile-menu-item:nth-child(8) { transition-delay: 0.4s; }
+
+/* Desktop dropdown animation (Hook0-style) */
+.nav-dropdown {
+  @apply opacity-0 invisible;
+  transform: translateY(-8px);
+  transform-origin: top center;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s;
+}
+
+.group:hover .nav-dropdown {
+  @apply opacity-100 visible;
+  transform: translateY(0);
+}
+
+/* ============================================
+   CLERK-STYLE NAVIGATION DROPDOWNS
+   ============================================ */
+
+/* Custom shadow for dropdown panels (Clerk-style) */
+.shadow-dropdown {
+  box-shadow:
+    0 0 0 1px rgba(25, 28, 33, 0.06),
+    0 16px 36px -6px rgba(25, 28, 33, 0.2),
+    0 8px 16px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown container - hover trigger */
+.nav-dropdown-container {
+  position: relative;
+}
+
+/* Dropdown panel - hidden by default */
+.nav-dropdown-panel {
+  pointer-events: none;
+}
+
+/* Show dropdown on hover - Clerk-style smooth animation */
+.nav-dropdown-container:hover .nav-dropdown-panel,
+.nav-dropdown-container:focus-within .nav-dropdown-panel {
+  @apply opacity-100 visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Rotate chevron on hover */
+.nav-dropdown-container:hover .nav-chevron,
+.nav-dropdown-container:focus-within .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown item hover effect */
+.nav-dropdown-item:hover {
+  @apply bg-white;
+}
+
+/* Icon shadow enhancement on item hover */
+.nav-dropdown-item:hover .nav-dropdown-icon {
+  box-shadow: 0 4px 12px rgba(92, 57, 238, 0.15);
+}
+
+/* Line clamp for descriptions */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   MARQUEE / INFINITE SCROLL
+   ============================================ */
+.marquee-container {
+  @apply overflow-hidden relative;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  @apply absolute top-0 bottom-0 w-24 z-10 pointer-events-none;
+}
+
+.marquee-container::before {
+  @apply left-0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.marquee-container::after {
+  @apply right-0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.marquee-container.bg-alt::before {
+  background: linear-gradient(to right, #f8f7fc 0%, transparent 100%);
+}
+
+.marquee-container.bg-alt::after {
+  background: linear-gradient(to left, #f8f7fc 0%, transparent 100%);
+}
+
+.marquee-track {
+  @apply flex items-center;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  @apply flex-shrink-0 px-8;
+}
+
+.marquee-item img {
+  @apply h-12 object-contain opacity-60;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee-item:hover img {
+  @apply opacity-100 scale-110;
+}
+
+/* ============================================
+   HORIZONTAL PROGRESS BAR ANIMATION
+   ============================================ */
+.progress-bar {
+  @apply h-0.5 bg-gradient-to-r from-primary via-secondary to-primary;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-bar.is-visible {
+  transform: scaleX(1);
+}
+
+/* ============================================
+   STAGGER FROM LEFT (Hook0-style)
+   ============================================ */
+[data-stagger-left] > * {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-stagger-left].is-visible > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-stagger-left] > *:nth-child(1) { transition-delay: 0s; }
+[data-stagger-left] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-stagger-left] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-stagger-left] > *:nth-child(4) { transition-delay: 0.3s; }
+
+/* ============================================
+   STAGGER SCALE-UP (Hook0-style)
+   ============================================ */
+[data-stagger-scale] > * {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-stagger-scale].is-visible > * {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+[data-stagger-scale] > *:nth-child(1) { transition-delay: 0s; }
+[data-stagger-scale] > *:nth-child(2) { transition-delay: 0.1s; }
+[data-stagger-scale] > *:nth-child(3) { transition-delay: 0.2s; }
+[data-stagger-scale] > *:nth-child(4) { transition-delay: 0.3s; }
+[data-stagger-scale] > *:nth-child(5) { transition-delay: 0.4s; }
+[data-stagger-scale] > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* ============================================
+   HOOK0-STYLE SCROLL ANIMATIONS
+   Exactly matching Hook0.com animation system
+   ============================================ */
+
+/* Base animate-on-scroll - fadeInUp (Hook0 default) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible,
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hook0-style: animate from left */
+.animate-on-scroll--left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll--left.is-visible,
+.animate-on-scroll--left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hook0-style: animate from right */
+.animate-on-scroll--right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll--right.is-visible,
+.animate-on-scroll--right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hook0-style: animate with scale */
+.animate-on-scroll--scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll--scale.is-visible,
+.animate-on-scroll--scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   CARD GLOW EFFECTS WITH MOUSE TRACKING
+   ============================================ */
+/* Base card glow - tracks mouse position using CSS variables */
+.card-glow {
+  @apply relative overflow-hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.card-glow::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 pointer-events-none;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(92, 57, 238, 0.15),
+    transparent 40%
+  );
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* Blue variant */
+.card-glow-blue {
+  @apply relative overflow-hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.card-glow-blue::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 pointer-events-none;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(37, 99, 235, 0.15),
+    transparent 40%
+  );
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glow-blue:hover::before {
+  opacity: 1;
+}
+
+/* Purple variant */
+.card-glow-purple {
+  @apply relative overflow-hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.card-glow-purple::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 pointer-events-none;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(176, 65, 240, 0.15),
+    transparent 40%
+  );
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glow-purple:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   PREMIUM BENTO GRID CARDS
+   ============================================ */
+
+/* Base bento card */
+.bento-card {
+  @apply relative rounded-2xl overflow-hidden cursor-pointer;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* Hero card variant */
+.bento-card-hero {
+  @apply rounded-3xl;
+  background: linear-gradient(135deg, rgba(92,57,238,0.05) 0%, rgba(255,255,255,0.02) 50%, rgba(176,65,240,0.03) 100%);
+  border: 1px solid rgba(92,57,238,0.15);
+}
+
+.bento-card-hero:hover {
+  border-color: rgba(92,57,238,0.3);
+  box-shadow: 0 25px 50px -20px rgba(92,57,238,0.3), 0 0 0 1px rgba(92,57,238,0.2);
+}
+
+/* Wide card variant */
+.bento-card-wide {
+  background: linear-gradient(135deg, rgba(147,51,234,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(147,51,234,0.15);
+}
+
+.bento-card-wide:hover {
+  border-color: rgba(147,51,234,0.3);
+}
+
+/* Bento icon path animation */
+.bento-icon-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: bento-icon-draw 1.5s ease forwards;
+}
+
+@keyframes bento-icon-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Slow pulse animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Floating particle animation */
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-20px) translateX(-15px);
+    opacity: 0.6;
+  }
+}
+
+.animate-float-particle {
+  animation: float-particle 10s ease-in-out infinite;
+}
+
+/* Slow ping for rings */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Wave animation for audio bars */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave {
+  animation: wave 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 70%);
+}
+
+/* ============================================
+   HEADER SCROLL STATE
+   ============================================ */
+#main-header {
+  @apply transition-all duration-300;
+  transition-property: padding, background-color, box-shadow;
+}
+
+#main-header.header-scrolled {
+  @apply py-3 bg-white/95 backdrop-blur-md;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+#main-header.header-scrolled .logo {
+  @apply scale-90;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   ADDITIONAL KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Pulse glow - subtle pulsing glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(92, 57, 238, 0.4), 0 0 40px rgba(92, 57, 238, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(92, 57, 238, 0.6), 0 0 60px rgba(92, 57, 238, 0.3);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Pulse dot - pulsing dot animation */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Slide in animations */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ============================================
+   ANIMATION DELAY UTILITIES
+   ============================================ */
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-700 { animation-delay: 0.7s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+.animation-delay-900 { animation-delay: 0.9s; }
+.animation-delay-1000 { animation-delay: 1s; }
+
+/* ============================================
+   VISUAL HELPER CLASSES
+   ============================================ */
+
+/* Glassmorphism effect */
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.glass-panel-dark {
+  @apply bg-black/40 backdrop-blur-lg border border-white/10;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Text glow effect */
+.text-glow {
+  text-shadow: 0 0 20px rgba(92, 57, 238, 0.5),
+               0 0 40px rgba(92, 57, 238, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(37, 99, 235, 0.5),
+               0 0 40px rgba(37, 99, 235, 0.3);
+}
+
+/* Hardware/device glow */
+.hardware-glow {
+  box-shadow: 0 0 60px rgba(92, 57, 238, 0.4),
+              0 0 100px rgba(92, 57, 238, 0.2),
+              inset 0 0 20px rgba(92, 57, 238, 0.1);
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(92, 57, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 57, 238, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.grid-pattern-large {
+  background-image:
+    linear-gradient(rgba(92, 57, 238, 0.03) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(92, 57, 238, 0.03) 2px, transparent 2px);
+  background-size: 80px 80px;
+}
+
+/* Radial highlight effect */
+.radial-highlight {
+  @apply relative;
+}
+
+.radial-highlight::before {
+  content: '';
+  @apply absolute inset-0 pointer-events-none;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(92, 57, 238, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.radial-highlight-bottom::before {
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(92, 57, 238, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+/* ============================================
+   TRANSITION & HOVER HELPERS
+   ============================================ */
+
+/* Smooth all transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-smooth-slow {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Lift on hover with shadow */
+.hover-lift {
+  @apply transition-all duration-300;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Glow on hover */
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 40px rgba(92, 57, 238, 0.4);
+}
+
+.hover-glow-blue:hover {
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
+}
+
+.hover-glow-purple:hover {
+  box-shadow: 0 0 40px rgba(176, 65, 240, 0.4);
+}
+
+/* Scale on hover */
+.hover-scale {
+  @apply transition-transform duration-300;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-scale-lg:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   SCROLL-TRIGGERED ANIMATION VARIANTS
+   ============================================ */
+
+/* Fade left variant */
+.animate-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-fade-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade right variant */
+.animate-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-fade-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale variant */
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   UTILITIES - RESPONSIVE CONTAINERS
+   ============================================ */
+.container-narrow {
+  @apply max-w-4xl mx-auto px-4 md:px-6;
+}
+
+.container-wide {
+  @apply max-w-7xl mx-auto px-4 md:px-6;
+}
+
+/* ============================================
+   UTILITIES - ASPECT RATIO HELPERS
+   ============================================ */
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-21-9 {
+  aspect-ratio: 21 / 9;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* ============================================
+   UTILITIES - Z-INDEX LAYERS
+   ============================================ */
+.z-header { z-index: 1000; }
+.z-dropdown { z-index: 900; }
+.z-modal { z-index: 1100; }
+.z-tooltip { z-index: 1200; }
+.z-notification { z-index: 1300; }
+
+/* ============================================
+   UTILITIES - OVERFLOW HELPERS
+   ============================================ */
+.overflow-y-overlay {
+  overflow-y: overlay;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* ============================================
+   UTILITIES - TEXT TRUNCATION
+   ============================================ */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   UTILITIES - BACKDROP FILTERS
+   ============================================ */
+.backdrop-blur-xs {
+  backdrop-filter: blur(2px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-DEFAULT {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+/* ============================================
+   UTILITIES - FOCUS STATES
+   ============================================ */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.focus-ring-inset {
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+  }
+
+  .print-break-after {
+    page-break-after: always;
+  }
+}

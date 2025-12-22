@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Hotline - Natalia, l'assistante IA pour votre hotline</title>
+  <meta name="description" content="Natalia répond, qualifie et crée vos tickets 24/7. Une voix naturelle et une intégration fluide à votre outil de ticketing.">
+  <%- include('./includes/_head.ejs') %>
+</head>
+<body class="min-h-screen flex flex-col">
+<%- include('./includes/_header.ejs') %>
+
+<main class="flex-grow">
+  <!-- Hero Section -->
+  <section class="section bg-gradient-to-br from-white to-primary/5 relative overflow-hidden">
+    <!-- Decorative gradient orbs -->
+    <div class="gradient-orb gradient-orb-1"></div>
+    <div class="gradient-orb gradient-orb-2"></div>
+
+    <div class="container-content relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
+            Natalia répond,
+            <span class="text-gradient">qualifie et crée</span>
+            vos tickets 24/7
+          </h1>
+          <p class="hero-subtitle text-lg text-police-grey font-semibold mb-8">
+            Une voix naturelle, une compréhension instantanée et une intégration fluide à votre outil de ticketing
+          </p>
+          <div class="hero-cta">
+            <a href="./contact" class="btn btn-primary inline-flex items-center gap-2">
+              Réserver une démo
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image flex justify-center">
+          <div class="relative animate-float-slow">
+            <img src="./assets/images/hotlinePng2.png" alt="Hotline IA" class="w-full max-w-lg rounded-xl shadow-lg glow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="section bg-primary/5">
+    <div class="container-content text-center">
+      <p class="text-xl md:text-2xl text-police-grey max-w-4xl mx-auto animate-on-scroll">
+        Votre hotline est souvent saturée ? Les temps d'attente explosent pendant les pics d'appels ?
+        <strong>Natalia absorbe la charge et maintient la qualité de service.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Problemes Section -->
+  <section class="section bg-white">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
+        Les <span class="text-gradient">défis</span> de votre hotline
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+        <div class="card border-l-4 border-l-red-500">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-red-100 text-red-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Pics d'appels</h3>
+          <p class="text-police-grey text-sm">
+            Impossible de dimensionner vos équipes pour les pics. Trop de personnel en temps normal, pas assez en cas de crise.
+          </p>
+        </div>
+        <div class="card border-l-4 border-l-orange-500">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Temps d'attente</h3>
+          <p class="text-police-grey text-sm">
+            Les temps d'attente élevés dégradent l'expérience client et augmentent le taux d'abandon.
+          </p>
+        </div>
+        <div class="card border-l-4 border-l-yellow-500">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Complexité technique</h3>
+          <p class="text-police-grey text-sm">
+            Les demandes techniques nécessitent souvent plusieurs échanges pour être comprises et qualifiées.
+          </p>
+        </div>
+        <div class="card border-l-4 border-l-purple-500">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-purple-100 text-purple-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Formation continue</h3>
+          <p class="text-police-grey text-sm">
+            Les produits évoluent, la documentation change. Former en continu vos équipes est un défi permanent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="section bg-gray-50">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
+        Nos <span class="text-gradient">solutions</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-scale>
+        <div class="card text-center hover:shadow-lg transition-shadow bg-white">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Disponible 24/7</h3>
+          <p class="text-police-grey text-sm">
+            Natalia répond à toute heure, absorbant les pics sans délai d'attente.
+          </p>
+        </div>
+        <div class="card text-center hover:shadow-lg transition-shadow bg-white">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-secondary/10 text-secondary">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Paramétrable</h3>
+          <p class="text-police-grey text-sm">
+            Adaptez les scénarios aux spécificités de vos produits et services.
+          </p>
+        </div>
+        <div class="card text-center hover:shadow-lg transition-shadow bg-white">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Scalable</h3>
+          <p class="text-police-grey text-sm">
+            Passez de 10 à 1000 appels simultanés sans impact sur la qualité.
+          </p>
+        </div>
+        <div class="card text-center hover:shadow-lg transition-shadow bg-white">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Intégrée</h3>
+          <p class="text-police-grey text-sm">
+            Connectée à vos outils de ticketing et CRM pour un suivi complet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compatible Section -->
+  <section class="section bg-white">
+    <div class="container-content">
+      <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
+        Compatible avec <span class="text-gradient">vos outils</span>
+      </h2>
+      <p class="text-xl text-center text-police-grey mb-12 animate-on-scroll">
+        Intégration native avec les principales solutions du marché
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 animate-on-scroll">
+        <img src="./assets/images/logoGlpiPng.png" alt="GLPI" class="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition-opacity">
+        <img src="./assets/images/zendeskLogoPng.png" alt="Zendesk" class="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition-opacity">
+        <img src="./assets/images/serviceNowLogoPng.png" alt="ServiceNow" class="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition-opacity">
+      </div>
+    </div>
+  </section>
+
+  <!-- Cas d'usage Section -->
+  <section class="section bg-gray-50">
+    <div class="container-content">
+      <div class="text-center mb-12">
+        <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4 animate-on-scroll">
+          Cas d'usage <span class="text-gradient">concrets</span>
+        </h2>
+        <p class="text-lg text-police-grey max-w-3xl mx-auto animate-on-scroll">
+          Natalia gère les demandes récurrentes pour que vos experts se concentrent sur les cas complexes.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-scale>
+        <div class="card bg-white">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-primary text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">FAQ dynamique</h3>
+          <p class="text-police-grey text-sm">
+            Réponses aux questions fréquentes basées sur votre base de connaissances.
+          </p>
+        </div>
+        <div class="card bg-white">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-secondary text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Diagnostic guidé</h3>
+          <p class="text-police-grey text-sm">
+            Natalia pose les bonnes questions pour identifier le problème.
+          </p>
+        </div>
+        <div class="card bg-white">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-green-500 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Suivi de ticket</h3>
+          <p class="text-police-grey text-sm">
+            L'utilisateur peut connaître l'état de sa demande à tout moment.
+          </p>
+        </div>
+        <div class="card bg-white">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-orange-500 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-police-titre mb-2">Escalade intelligente</h3>
+          <p class="text-police-grey text-sm">
+            Transfert vers un expert humain quand la situation le nécessite.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-animated text-white relative overflow-hidden">
+    <!-- Floating decorative circles -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="container-content text-center relative z-10">
+      <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 animate-on-scroll">
+        Prêt à optimiser votre hotline ?
+      </h2>
+      <p class="text-xl mb-8 opacity-90 animate-on-scroll">
+        Découvrez comment Natalia peut réduire vos temps d'attente de 70%.
+      </p>
+      <div class="animate-on-scroll">
+        <a href="./contact" class="btn btn-white inline-flex items-center gap-2">
+          Reserver une demo
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('./includes/_footer.ejs') %>
+
+</body>
+</html>
