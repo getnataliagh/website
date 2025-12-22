@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary brand colors (from Plasmic tokens)
+        // Primary brand colors
         'primary': '#5C39EE',
         'secondary': '#B041F0',
 
