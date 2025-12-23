@@ -2,12 +2,8 @@
   <!-- Background -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#5C39EE;stop-opacity:0.1">
-        <animate attributeName="stop-color" values="#5C39EE;#B041F0;#5C39EE" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#B041F0;stop-opacity:0.1">
-        <animate attributeName="stop-color" values="#B041F0;#5C39EE;#B041F0" dur="6s" repeatCount="indefinite"/>
-      </stop>
+      <stop offset="0%" style="stop-color:#5C39EE;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#B041F0;stop-opacity:0.1"/>
     </linearGradient>
 
     <!-- Arrow Marker -->
@@ -35,82 +31,46 @@
   <!-- Build Flow -->
   <!-- Step 1: Source Files -->
   <g id="step1">
-    <rect x="50" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#5C39EE" stroke-width="2" filter="url(#glow)">
-      <animate attributeName="stroke" values="#5C39EE;#B041F0;#5C39EE" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="50" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#5C39EE" stroke-width="2" filter="url(#glow)"/>
     <text x="120" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Source Files</text>
     <text x="120" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">*.ejs templates</text>
     <text x="120" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">TailwindCSS</text>
-
-    <!-- Pulsing dot -->
-    <circle cx="120" cy="70" r="4" fill="#16A34A">
-      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
   </g>
 
   <!-- Arrow 1 -->
-  <path d="M 190 120 L 250 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
-    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" repeatCount="indefinite"/>
-  </path>
+  <path d="M 190 120 L 250 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
   <text x="220" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Parcel</text>
 
   <!-- Step 2: Build Process -->
   <g id="step2">
-    <rect x="250" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#B041F0" stroke-width="2" filter="url(#glow)">
-      <animate attributeName="stroke" values="#B041F0;#5C39EE;#B041F0" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="250" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#B041F0" stroke-width="2" filter="url(#glow)"/>
     <text x="320" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Build</text>
     <text x="320" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">EJS → HTML</text>
     <text x="320" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">PostCSS + Autoprefixer</text>
-
-    <!-- Processing animation -->
-    <rect x="260" y="100" width="0" height="4" fill="#5C39EE" rx="2">
-      <animate attributeName="width" values="0;120;0" dur="2s" repeatCount="indefinite"/>
-    </rect>
   </g>
 
   <!-- Arrow 2 -->
-  <path d="M 390 120 L 450 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
-    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" begin="1s" repeatCount="indefinite"/>
-  </path>
+  <path d="M 390 120 L 450 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
   <text x="420" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Bundle</text>
 
   <!-- Step 3: Dist Output -->
   <g id="step3">
-    <rect x="450" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2" filter="url(#glow)">
-      <animate attributeName="stroke" values="#16A34A;#22C55E;#16A34A" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="450" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2" filter="url(#glow)"/>
     <text x="520" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Dist Folder</text>
     <text x="520" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Static HTML</text>
     <text x="520" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Optimized Assets</text>
-
-    <!-- Checkmark -->
-    <path d="M 505 100 L 512 107 L 535 84" stroke="#16A34A" stroke-width="2" fill="none" stroke-linecap="round">
-      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="1s" begin="2s" repeatCount="indefinite"/>
-    </path>
   </g>
 
   <!-- Arrow 3 -->
-  <path d="M 590 120 L 650 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
-    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" begin="2s" repeatCount="indefinite"/>
-  </path>
+  <path d="M 590 120 L 650 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
   <text x="620" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Deploy</text>
 
   <!-- Step 4: Netlify -->
   <g id="step4">
-    <rect x="650" y="80" width="100" height="80" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" filter="url(#glow)">
-      <animate attributeName="stroke" values="#2563EB;#3B82F6;#2563EB" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="650" y="80" width="100" height="80" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" filter="url(#glow)"/>
     <text x="700" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Netlify</text>
     <text x="700" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">CDN</text>
     <text x="700" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">HTTPS</text>
-
-    <!-- Globe icon animation -->
-    <circle cx="700" cy="95" r="8" stroke="#2563EB" stroke-width="1.5" fill="none">
-      <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
   </g>
 
   <!-- Bottom Info -->
