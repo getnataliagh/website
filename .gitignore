@@ -32,3 +32,6 @@ CLAUDE.md
 
 # Playwright screenshots
 .playwright-mcp/
+
+
+.claude/tsc-cache
