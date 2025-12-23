@@ -8,10 +8,9 @@
 
 [![Node Version](https://img.shields.io/badge/node-22.13.1-brightgreen)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-Private-red)]()
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/getnatalia/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf402192-50ba-40b1-94f2-5fd00c21de98/deploy-status)](https://app.netlify.com/projects/genuine-biscuit-6e490c/deploys)
 
-[Live Site](https://getnatalia.com) • [Report Bug](https://github.com/getnataliagh/website/issues) • [Request Feature](https://github.com/getnataliagh/website/issues)
-
+[Live Site](https://getnatalia.com)
 </div>
 
 ---
