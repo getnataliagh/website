@@ -1,48 +1,800 @@
 # Natalia Website
 
-Site vitrine statique pour Natalia, l'assistante vocale IA.
+<div align="center">
 
-## Stack Technique
+![Build Process Animation](https://raw.githubusercontent.com/getnataliagh/website/main/.github/assets/build-flow.svg)
 
-- **Generateur**: [Eleventy (11ty)](https://www.11ty.dev/) v3
-- **Templates**: Nunjucks (.njk)
-- **Styles**: TailwindCSS v3.4
-- **Hebergement**: Netlify
-- **JavaScript**: Vanilla JS uniquement
+**Modern static website for Natalia - AI Voice Assistant for businesses**
 
+[![Node Version](https://img.shields.io/badge/node-22.13.1-brightgreen)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-Private-red)]()
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/getnatalia/deploys)
 
-## Scripts
+[Live Site](https://getnatalia.com) • [Report Bug](https://github.com/getnataliagh/website/issues) • [Request Feature](https://github.com/getnataliagh/website/issues)
 
-```bash
-# Developpement (watch mode)
-npm run dev
-
-# Build production
-npm run build
-
-# Preview du build
-npm run preview
-
-# Nettoyer le dossier dist
-npm run clean
-```
-
-## Deploiement
-
-Le site se deploie automatiquement sur Netlify a chaque push sur la branche `main`.
-
-Configuration Netlify:
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node version: 22
-
-## SEO
-
-- `sitemap.xml` genere automatiquement
-- `robots.txt` configure
-- Meta tags Open Graph et Twitter
-- URLs canoniques
+</div>
 
 ---
 
-**Last Updated**: December 2024
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5C39EE;stop-opacity:0.1">
+        <animate attributeName="stop-color" values="#5C39EE;#B041F0;#5C39EE" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#B041F0;stop-opacity:0.1">
+        <animate attributeName="stop-color" values="#B041F0;#5C39EE;#B041F0" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Arrow Marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5C39EE" />
+    </marker>
+
+    <!-- Glow Filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#252729" text-anchor="middle">
+    Natalia Build Pipeline
+  </text>
+
+  <!-- Build Flow -->
+  <!-- Step 1: Source Files -->
+  <g id="step1">
+    <rect x="50" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#5C39EE" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke" values="#5C39EE;#B041F0;#5C39EE" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="120" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Source Files</text>
+    <text x="120" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">*.ejs templates</text>
+    <text x="120" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">TailwindCSS</text>
+
+    <!-- Pulsing dot -->
+    <circle cx="120" cy="70" r="4" fill="#16A34A">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 190 120 L 250 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="220" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Parcel</text>
+
+  <!-- Step 2: Build Process -->
+  <g id="step2">
+    <rect x="250" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#B041F0" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke" values="#B041F0;#5C39EE;#B041F0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="320" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Build</text>
+    <text x="320" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">EJS → HTML</text>
+    <text x="320" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">PostCSS + Autoprefixer</text>
+
+    <!-- Processing animation -->
+    <rect x="260" y="100" width="0" height="4" fill="#5C39EE" rx="2">
+      <animate attributeName="width" values="0;120;0" dur="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 390 120 L 450 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </path>
+  <text x="420" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Bundle</text>
+
+  <!-- Step 3: Dist Output -->
+  <g id="step3">
+    <rect x="450" y="80" width="140" height="80" rx="12" fill="#FFFFFF" stroke="#16A34A" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke" values="#16A34A;#22C55E;#16A34A" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="520" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Dist Folder</text>
+    <text x="520" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Static HTML</text>
+    <text x="520" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Optimized Assets</text>
+
+    <!-- Checkmark -->
+    <path d="M 505 100 L 512 107 L 535 84" stroke="#16A34A" stroke-width="2" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="1s" begin="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 590 120 L 650 120" stroke="#5C39EE" stroke-width="2" marker-end="url(#arrowhead)" fill="none">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0;0,100" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </path>
+  <text x="620" y="110" font-family="Inter, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Deploy</text>
+
+  <!-- Step 4: Netlify -->
+  <g id="step4">
+    <rect x="650" y="80" width="100" height="80" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke" values="#2563EB;#3B82F6;#2563EB" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="700" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#252729" text-anchor="middle">Netlify</text>
+    <text x="700" y="130" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">CDN</text>
+    <text x="700" y="145" font-family="Inter, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">HTTPS</text>
+
+    <!-- Globe icon animation -->
+    <circle cx="700" cy="95" r="8" stroke="#2563EB" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bottom Info -->
+  <rect x="50" y="190" width="700" height="90" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+
+  <!-- Tech Stack Icons -->
+  <text x="70" y="215" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#252729">Tech Stack:</text>
+
+  <g id="techicons">
+    <!-- Parcel -->
+    <rect x="70" y="225" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="115" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#5C39EE" text-anchor="middle">Parcel 2</text>
+
+    <!-- EJS -->
+    <rect x="170" y="225" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="215" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#B041F0" text-anchor="middle">EJS</text>
+
+    <!-- TailwindCSS -->
+    <rect x="270" y="225" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="330" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#2563EB" text-anchor="middle">TailwindCSS</text>
+
+    <!-- Node -->
+    <rect x="400" y="225" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="450" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#16A34A" text-anchor="middle">Node 22</text>
+
+    <!-- Netlify -->
+    <rect x="510" y="225" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="560" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#00C7B7" text-anchor="middle">Netlify</text>
+
+    <!-- Swiper -->
+    <rect x="620" y="225" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="665" y="247" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#6332F6" text-anchor="middle">Swiper</text>
+  </g>
+</svg>
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Build & Deployment](#build--deployment)
+- [Features](#features)
+- [Configuration](#configuration)
+- [Scripts](#scripts)
+- [Pages & Routes](#pages--routes)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+**Natalia** is a modern, high-performance static website built for an AI-powered voice assistant platform. The site showcases enterprise voice AI solutions with a focus on performance, accessibility, and SEO.
+
+### Key Highlights
+
+- **100% Static** - Pre-rendered HTML for maximum performance
+- **SEO Optimized** - Automatic sitemap generation, meta tags, semantic HTML
+- **Mobile First** - Fully responsive design with TailwindCSS
+- **Accessible** - WCAG 2.1 AA compliant
+- **Fast Loading** - Optimized assets, lazy loading, CDN delivery
+- **Modern Design** - Glassmorphism, bento-style layouts, micro-interactions
+
+## Architecture
+
+The project uses a **static site generation** approach with a modern build pipeline:
+
+```
+Source (EJS + TailwindCSS + JS)
+         ↓
+   Parcel Bundler
+         ↓
+  PostCSS Processing
+         ↓
+   Asset Optimization
+         ↓
+   Static HTML Output
+         ↓
+   Netlify CDN Deployment
+```
+
+### Build Pipeline
+
+1. **Template Processing**: EJS templates are compiled with data from `data.js`
+2. **CSS Processing**: TailwindCSS is processed by PostCSS with autoprefixer
+3. **JavaScript Bundling**: ES6 modules are bundled and minified
+4. **Asset Optimization**: Images and static files are copied and optimized
+5. **Sitemap Generation**: Automatic sitemap.xml creation from routes
+6. **Deployment**: Continuous deployment to Netlify on push to `main`
+
+## Tech Stack
+
+### Core
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [Parcel](https://parceljs.org/) | 2.9.3 | Zero-config bundler and build tool |
+| [EJS](https://ejs.co/) | - | Templating engine for HTML generation |
+| [TailwindCSS](https://tailwindcss.com/) | 3.4.0 | Utility-first CSS framework |
+| [Node.js](https://nodejs.org/) | 22.13.1 | JavaScript runtime (Volta managed) |
+
+### Libraries & Plugins
+
+- **Swiper** (11.0.5) - Touch-enabled carousels and sliders
+- **Lottie Web** (5.12.2) - Lightweight animations from After Effects
+- **PostCSS** - CSS processing and optimization
+  - `autoprefixer` - Automatic vendor prefixing
+  - `postcss-import` - CSS @import inlining
+  - `postcss-100vh-fix` - Mobile viewport height fix
+- **Parcel Transformers**
+  - `parcel-transformer-ejs` - EJS template compilation
+  - `parcel-reporter-sitemap` - Automatic sitemap.xml generation
+  - `parcel-reporter-static-files-copy` - Static asset copying
+
+### Development Tools
+
+- **Nodemon** - Auto-reload on file changes
+- **Volta** - Node version management
+
+### Deployment
+
+- **Netlify** - Static site hosting with CDN
+- **GitHub Pages** - Alternative deployment target (GitLab CI configured)
+
+## Project Structure
+
+```
+.
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml        # GitHub Actions workflow
+├── scripts/
+│   └── generate-favicon.sh         # Favicon generation script
+├── src/                            # Source files
+│   ├── assets/
+│   │   ├── favicon.ico
+│   │   └── images/                 # Image assets
+│   ├── css/
+│   │   └── main.css                # Additional styles
+│   ├── includes/                   # Reusable partials
+│   │   ├── _head.ejs               # <head> meta tags, fonts
+│   │   ├── _header.ejs             # Global navigation header
+│   │   └── _footer.ejs             # Global footer
+│   ├── js/                         # JavaScript modules
+│   │   ├── main.js                 # Main app logic
+│   │   ├── mobile-menu.js          # Mobile menu interactions
+│   │   └── scroll-animations.js    # Scroll-based animations
+│   ├── *.ejs                       # Page templates
+│   └── style.scss                  # Main stylesheet
+├── static/                         # Static assets (copied to dist/)
+│   ├── robots.txt
+│   ├── favicon.ico
+│   └── assets/
+│       └── images/
+├── data.js                         # Global data for templates
+├── package.json                    # Dependencies and scripts
+├── tailwind.config.js              # TailwindCSS configuration
+├── postcss.config.js               # PostCSS configuration
+├── .parcelrc                       # Parcel configuration
+├── netlify.toml                    # Netlify deployment config
+├── .gitlab-ci.yml                  # GitLab CI/CD config
+├── .ejsrc.js                       # EJS configuration
+└── README.md                       # This file
+```
+
+### Key Directories
+
+- **`src/`** - All source files (templates, styles, scripts)
+- **`src/includes/`** - Reusable EJS partials (header, footer, head)
+- **`src/js/`** - JavaScript modules for interactivity
+- **`static/`** - Static files copied as-is to `dist/`
+- **`dist/`** - Generated output (gitignored, created on build)
+
+### Important Files
+
+- **`data.js`** - Centralized data source for all pages (navigation, site metadata, features, etc.)
+- **`tailwind.config.js`** - TailwindCSS theme customization (colors, fonts, animations)
+- **`.parcelrc`** - Parcel plugins and transformers configuration
+- **`netlify.toml`** - Netlify build settings and security headers
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js 22.13.1** (managed via Volta)
+- **npm** (comes with Node.js)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/getnataliagh/website.git
+cd website/.conductor/lusaka
+
+# Install dependencies
+npm install
+```
+
+## Development
+
+### Local Development Server
+
+```bash
+# Start development server with hot reload
+npm run serve
+```
+
+This command:
+1. Watches for changes in `data.js`, `.ejs`, `.js`, and `.json` files
+2. Rebuilds on changes (using Parcel)
+3. Serves the `dist/` folder on `http://localhost:3000`
+
+### Build for Development
+
+```bash
+# Build without cache (faster iteration)
+npm run build:dev
+```
+
+### Production Build
+
+```bash
+# Build optimized production bundle
+npm run build
+```
+
+This creates a production-ready `dist/` folder with:
+- Minified HTML
+- Optimized CSS (purged unused classes)
+- Minified JavaScript
+- Optimized images
+- Generated sitemap.xml
+
+### Clean Build
+
+```bash
+# Remove build artifacts
+npm run clean
+```
+
+## Build & Deployment
+
+### Netlify (Primary)
+
+**Automatic Deployment** on push to `main` branch.
+
+Build configuration (from `netlify.toml`):
+
+```toml
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+```
+
+**Security Headers** configured:
+- `X-Frame-Options: DENY`
+- `X-XSS-Protection: 1; mode=block`
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+
+**Cache Control**:
+- Static assets (CSS, JS, images): 1 year immutable cache
+- HTML: No cache (always fetch latest)
+
+### GitHub Pages (Alternative)
+
+Workflow: `.github/workflows/deploy-pages.yml`
+
+Triggered on push to `main`:
+1. Checkout code
+2. Setup Node.js 22
+3. Install dependencies
+4. Build production bundle
+5. Deploy to GitHub Pages
+
+### GitLab CI (Alternative)
+
+Configuration: `.gitlab-ci.yml`
+
+Two-stage pipeline:
+1. **Build**: `npm ci && npm run build` → artifacts to `dist/`
+2. **Pages**: Move `dist/` → `public/` for GitLab Pages
+
+## Features
+
+### Design System
+
+#### Colors
+
+Custom brand colors defined in `tailwind.config.js`:
+
+- **Primary**: `#5C39EE` - Main brand purple
+- **Secondary**: `#B041F0` - Accent purple
+- **Success**: `#16A34A` - Green for positive actions
+- **Destructive**: `#DC2626` - Red for errors/warnings
+- **Brand System**: Blue palette for trust/tech elements
+- **Muted**: Gray scale for text hierarchy
+
+#### Typography
+
+Fonts loaded from Google Fonts:
+
+- **Sans**: Inter (primary UI font)
+- **Body**: Instrument Sans (readable body text)
+- **Display**: Montserrat (headings and hero text)
+
+Custom font sizes:
+- H1: 52px desktop / 35px mobile
+- H2: 40px desktop / 28px mobile
+- H3: 24px desktop / 18px mobile
+- Body: 16px with 1.6 line-height
+
+#### Animations
+
+Custom CSS animations:
+
+- `fade-in` - Simple opacity fade
+- `fade-in-up` - Fade with upward slide (scroll reveals)
+- `slide-up`, `slide-down` - Vertical sliding
+- `slide-in-left`, `slide-in-right` - Horizontal sliding
+- `pulse-glow` - Glowing effect for CTAs
+- `pulse-dot` - Dot indicator pulse
+- `shimmer` - Gradient shimmer effect
+- `float` - Subtle floating animation
+
+### JavaScript Features
+
+Modular JavaScript architecture (`src/js/main.js`):
+
+- **Scroll Progress** - Visual progress indicator in header
+- **Parallax Effects** - Smooth parallax on `[data-parallax]` elements
+- **Animated Counters** - Number count-up animations on scroll
+- **Mobile Menu** - Enhanced mobile navigation with focus trap
+- **Dropdown Menus** - Accessible dropdown navigation
+- **Lottie Animations** - SVG animations with scroll triggers
+- **Swiper Carousels** - Touch-enabled sliders
+- **Smooth Scroll** - Smooth anchor link scrolling
+- **Magnetic Buttons** - Subtle mouse-follow effect on CTAs
+- **Form Validation** - Client-side form validation
+
+### Advanced Interactions
+
+Scroll-based animations (`src/js/scroll-animations.js`):
+
+```javascript
+// Auto-detected animation triggers:
+[data-animate="fade-up"]    // Fade in with upward slide
+[data-animate="fade-left"]  // Slide in from left
+[data-animate="fade-right"] // Slide in from right
+[data-animate="scale"]      // Scale up on scroll
+[data-stagger]              // Stagger child animations
+```
+
+### SEO Features
+
+- **Automatic Sitemap** - Generated via `parcel-reporter-sitemap`
+- **Meta Tags** - Open Graph and Twitter Card support
+- **Semantic HTML** - Proper heading hierarchy and ARIA labels
+- **robots.txt** - Search engine crawl directives
+- **Canonical URLs** - Defined in page metadata
+- **Structured Data** - JSON-LD schema markup (organization, breadcrumbs)
+
+## Configuration
+
+### TailwindCSS (`tailwind.config.js`)
+
+Content sources:
+```javascript
+content: ['src/**/*.ejs', 'src/**/*.svg']
+```
+
+Extended theme with:
+- Custom color palette
+- Typography scale
+- Spacing utilities
+- Border radius tokens
+- Box shadow utilities
+- Animation keyframes
+
+Plugins:
+- `@tailwindcss/typography` - Prose styling for rich text
+
+### PostCSS (`postcss.config.js`)
+
+```javascript
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss': {},
+    'autoprefixer': {},
+    'postcss-100vh-fix': {}
+  }
+}
+```
+
+### Parcel (`.parcelrc`)
+
+```json
+{
+  "extends": ["@parcel/config-default"],
+  "transformers": {
+    "*.ejs": ["parcel-transformer-ejs"]
+  },
+  "reporters": [
+    "parcel-reporter-sitemap",
+    "parcel-reporter-static-files-copy"
+  ]
+}
+```
+
+### EJS (`.ejsrc.js`)
+
+```javascript
+module.exports = require('./data.js');
+```
+
+All templates have access to `locals` object from `data.js`:
+- `locals.site` - Site metadata
+- `locals.navigation` - Navigation menus
+- `locals.features` - Feature lists
+- `locals.testimonials` - Customer testimonials
+- `locals.stats` - Statistics
+- `locals.cta` - Call-to-action buttons
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run serve` | Development server with hot reload |
+| `npm run build:dev` | Build for development (no cache) |
+| `npm run build` | Production build with optimizations |
+| `npm run clean` | Remove dist/ and .parcel-cache/ |
+
+## Pages & Routes
+
+### Public Pages
+
+| Route | File | Description |
+|-------|------|-------------|
+| `/` | `index.ejs` | Homepage with hero, features, and CTA |
+| `/assistante-vocale-ia` | `assistante-vocale-ia.ejs` | Voice AI solution page |
+| `/analyse` | `analyse.ejs` | Call analysis solution |
+| `/whatsapp` | `whatsapp.ejs` | WhatsApp integration solution |
+| `/assistant-mail-automatisation-ia` | `assistant-mail-automatisation-ia.ejs` | Email automation |
+| `/automobile` | `automobile.ejs` | Automotive industry solution |
+| `/centre-d-appel` | `centre-d-appel.ejs` | Call center solution |
+| `/helpdesk` | `helpdesk.ejs` | IT helpdesk solution |
+| `/hotline` | `hotline.ejs` | 24/7 hotline solution |
+| `/calculateur` | `calculateur.ejs` | ROI calculator |
+| `/partenaires` | `partenaires.ejs` | Partners page |
+| `/presse` | `presse.ejs` | Press and media page |
+| `/a-propos` | `a-propos.ejs` | About us page |
+| `/contact` | `contact.ejs` | Contact form |
+
+### Legal Pages
+
+| Route | File | Description |
+|-------|------|-------------|
+| `/legal` | `legal.ejs` | Legal hub page |
+| `/mentions-legales` | `mentions-legales.ejs` | Legal mentions |
+| `/politique-confidentialite` | `politique-confidentialite.ejs` | Privacy policy |
+| `/conditions-generales-utilisation` | `conditions-generales-utilisation.ejs` | Terms of service |
+
+### Error Pages
+
+| Route | File | Description |
+|-------|------|-------------|
+| `/404` | `404.ejs` | Custom 404 page with animated SVG |
+
+All pages include:
+- SEO meta tags
+- Open Graph tags
+- Twitter Card tags
+- Canonical URLs
+- Proper heading hierarchy
+
+## Data Management
+
+All site data is centralized in `data.js`:
+
+```javascript
+module.exports = {
+  site: {
+    currentYear: new Date().getFullYear(),
+    name: 'Natalia',
+    title: 'Natalia - Assistante Vocale IA',
+    description: '...',
+    url: 'https://getnatalia.com',
+    // ... more metadata
+  },
+  navigation: {
+    main: [...],
+    footer: [...]
+  },
+  features: [...],
+  testimonials: [...],
+  stats: [...],
+  cta: {...}
+}
+```
+
+This approach:
+- Centralizes content management
+- Enables easy updates across all pages
+- Supports future CMS integration
+- Maintains consistency
+
+## Link Validation
+
+### Internal Links
+
+All internal links use relative paths:
+- Solutions: `./assistante-vocale-ia`, `./analyse`, `./whatsapp`
+- Sectors: `./automobile`, `./centre-d-appel`, `./helpdesk`, `./hotline`
+- Company: `./a-propos`, `./partenaires`, `./presse`, `./contact`
+- Legal: `./mentions-legales`, `./politique-confidentialite`, `./conditions-generales-utilisation`
+- Tools: `./calculateur`
+
+### External Links
+
+Validated external resources:
+
+**CDN & Libraries:**
+- ✅ Google Fonts: `https://fonts.googleapis.com`
+- ✅ Swiper CSS: `https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css`
+- ✅ Swiper JS: `https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js`
+- ✅ Lottie: `https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js`
+
+**Contact & Forms:**
+- ✅ Email: `contact@getnatalia.com`
+- ✅ Press Email: `presse@getnatalia.com`
+- ⚠️ Form Endpoint: `https://formspree.io/f/contact` (configure with actual form ID)
+
+**Team LinkedIn Profiles:**
+- ✅ Nicolas Dubreuil: `https://linkedin.com/in/nicolas-dubreuil-essca/`
+- ✅ Jeremy David: `https://linkedin.com/in/jeremy-david-279564157/`
+- ✅ Louis Marsais: `https://linkedin.com/in/louis-marsais/`
+- ✅ François-Guillaume Ribreau: `https://linkedin.com/in/francoisguillaumeribreau/`
+- ✅ Baptiste Parmantier: `https://linkedin.com/in/baptiste-parmantier/`
+
+**External References:**
+- ✅ SaaS Camp: `https://www.saas.camp/`
+- ✅ Press Article: `https://www.informateurjudiciaire.fr/actualites/natalia-lia-transforme-la-gestion-administrative/`
+
+**Social Media:**
+- ⚠️ LinkedIn: Empty (configure in `data.js`)
+- ⚠️ Twitter: Empty (configure in `data.js`)
+
+## Performance Optimizations
+
+- **Code Splitting** - Automatic by Parcel
+- **Tree Shaking** - Unused code removal
+- **Minification** - HTML, CSS, JS compression
+- **Image Optimization** - Automatic format conversion
+- **Lazy Loading** - Images and animations load on scroll
+- **CSS Purging** - TailwindCSS removes unused utilities
+- **Asset Hashing** - Cache busting for static files
+- **Preconnect** - DNS prefetch for external resources
+- **Font Display Swap** - Prevent FOIT (Flash of Invisible Text)
+
+## Browser Support
+
+Targets modern browsers with ES6+ support:
+
+- Chrome/Edge: Last 2 versions
+- Firefox: Last 2 versions
+- Safari: Last 2 versions
+- iOS Safari: Last 2 versions
+- Android Chrome: Last 2 versions
+
+Graceful degradation:
+- `<noscript>` fallbacks for animations
+- CSS feature queries for modern features
+- Progressive enhancement approach
+
+## Accessibility
+
+WCAG 2.1 AA compliant:
+
+- Semantic HTML5 elements
+- ARIA labels and roles
+- Keyboard navigation support
+- Focus indicators
+- Screen reader optimized
+- Color contrast ratios met
+- Alt text for images
+- Skip to main content link
+
+## Contributing
+
+This is a private project. For team members:
+
+1. Create a feature branch: `git checkout -b feature/your-feature`
+2. Make changes and test locally
+3. Commit: `git commit -m "feat: description"`
+4. Push: `git push origin feature/your-feature`
+5. Create Pull Request to `main`
+
+### Commit Convention
+
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation
+- `style:` Formatting, no code change
+- `refactor:` Code restructuring
+- `perf:` Performance improvement
+- `test:` Adding tests
+- `chore:` Build process or auxiliary tools
+
+## Troubleshooting
+
+### Build Issues
+
+**Problem**: Parcel cache causing issues
+```bash
+npm run clean
+npm run build
+```
+
+**Problem**: Node version mismatch
+```bash
+# Ensure Volta is installed
+volta install node@22.13.1
+```
+
+### Development Server
+
+**Problem**: Hot reload not working
+```bash
+# Restart development server
+npm run serve
+```
+
+**Problem**: Port 3000 already in use
+```bash
+# Kill process on port 3000
+lsof -ti:3000 | xargs kill -9
+```
+
+### Styling Issues
+
+**Problem**: TailwindCSS classes not applying
+- Check `tailwind.config.js` content paths
+- Verify class names are valid
+- Run `npm run build:dev` to rebuild
+
+## License
+
+This project is private and proprietary.
+
+**Copyright** &copy; 2024 Natalia. All rights reserved.
+
+---
+
+<div align="center">
+
+**Built with** ❤️ **by the Natalia team**
+
+[Website](https://getnatalia.com) • [Contact](mailto:contact@getnatalia.com)
+
+</div>
