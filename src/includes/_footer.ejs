@@ -189,3 +189,237 @@
 <script src="./js/scroll-animations.js"></script>
 <script src="./js/mobile-menu.js"></script>
 <script src="./js/main.js"></script>
+
+<!-- Matomo Analytics -->
+<script>
+(function() {
+  'use strict';
+
+  // Safe Matomo wrapper - resistant to adblockers
+  var _paq = window._paq = window._paq || [];
+  var matomoLoaded = false;
+  var matomoBlocked = false;
+
+  // Safe tracking function - never throws errors
+  function track(args) {
+    if (matomoBlocked) return;
+    try {
+      _paq.push(args);
+    } catch (e) {
+      // Silently ignore - Matomo blocked or failed
+    }
+  }
+
+  // Detect page type for custom dimension
+  function getPageType() {
+    var path = location.pathname;
+    if (path === '/' || path.includes('index')) return 'homepage';
+    if (path.includes('assistante-vocale-ia') || path.includes('whatsapp') || path.includes('analyse') || path.includes('assistant-mail')) return 'solution';
+    if (path.includes('automobile') || path.includes('centre-d-appel') || path.includes('helpdesk') || path.includes('hotline')) return 'sector';
+    if (path.includes('contact')) return 'conversion';
+    if (path.includes('calculateur')) return 'tool';
+    if (path.includes('mentions-legales') || path.includes('politique') || path.includes('conditions')) return 'legal';
+    return 'other';
+  }
+
+  // Configure download extensions
+  track(['setDownloadExtensions', 'pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar']);
+
+  // Enable accurate link tracking
+  track(['enableLinkTracking']);
+  track(['setLinkTrackingTimer', 500]);
+
+  // Enable heartbeat timer (15 seconds)
+  track(['enableHeartBeatTimer', 15]);
+
+  // Set custom dimension: Page Type (dimension ID 1)
+  track(['setCustomDimension', 1, getPageType()]);
+
+  // Set document title explicitly
+  track(['setDocumentTitle', document.title]);
+
+  // Track page view
+  track(['trackPageView']);
+
+  // Track visible content impressions
+  track(['trackVisibleContentImpressions']);
+
+  // Matomo configuration
+  (function() {
+    var u = "//managed-natalia-matomo-prod.apps.france-nuage.fr/";
+    track(['setTrackerUrl', u + 'matomo.php']);
+    track(['setSiteId', '1']);
+
+    var d = document;
+    var g = d.createElement('script');
+    var s = d.getElementsByTagName('script')[0];
+    g.async = true;
+    g.src = u + 'matomo.js';
+
+    // Detect if Matomo is blocked
+    g.onload = function() {
+      matomoLoaded = true;
+    };
+    g.onerror = function() {
+      matomoBlocked = true;
+      console.info('Analytics blocked - site continues normally');
+    };
+
+    if (s && s.parentNode) {
+      s.parentNode.insertBefore(g, s);
+    }
+  })();
+
+  // Wait for DOM ready
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // ============================================
+    // CTA Event Tracking
+    // ============================================
+
+    // Track "Demander une démo" clicks
+    document.querySelectorAll('a[href*="contact"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        track(['trackEvent', 'CTA', 'click', 'Demander une démo', window.location.pathname]);
+      });
+    });
+
+    // Track "Calculer mon ROI" clicks
+    document.querySelectorAll('a[href*="calculateur"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        track(['trackEvent', 'CTA', 'click', 'Calculer ROI', window.location.pathname]);
+      });
+    });
+
+    // Track solution page clicks
+    document.querySelectorAll('a[href*="assistante-vocale-ia"], a[href*="whatsapp"], a[href*="analyse"], a[href*="assistant-mail"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var solution = this.href.split('/').pop().replace('.html', '');
+        track(['trackEvent', 'Navigation', 'solution_click', solution]);
+      });
+    });
+
+    // Track sector page clicks
+    document.querySelectorAll('a[href*="automobile"], a[href*="centre-d-appel"], a[href*="helpdesk"], a[href*="hotline"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var sector = this.href.split('/').pop().replace('.html', '');
+        track(['trackEvent', 'Navigation', 'sector_click', sector]);
+      });
+    });
+
+    // ============================================
+    // Form Submission Tracking
+    // ============================================
+
+    document.querySelectorAll('form[action*="formspree"], form[method="POST"]').forEach(function(form) {
+      form.addEventListener('submit', function() {
+        var formName = form.querySelector('h2') ? form.querySelector('h2').textContent.trim() : 'Contact Form';
+        track(['trackEvent', 'Form', 'submit', formName]);
+        track(['trackGoal', 1]); // Goal ID 1: Demo Request
+      });
+    });
+
+    // ============================================
+    // Enhanced Outlink Tracking
+    // ============================================
+
+    document.querySelectorAll('a[target="_blank"], a[href^="mailto:"], a[href^="tel:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var href = this.href || '';
+        var type = 'external';
+
+        if (href.includes('linkedin')) type = 'social_linkedin';
+        else if (href.includes('twitter') || href.includes('x.com')) type = 'social_twitter';
+        else if (href.startsWith('mailto:')) type = 'email';
+        else if (href.startsWith('tel:')) type = 'phone';
+
+        track(['trackEvent', 'Outbound', type, href]);
+      });
+    });
+
+    // ============================================
+    // Scroll Depth Tracking
+    // ============================================
+
+    (function() {
+      var depths = [25, 50, 75, 100];
+      var tracked = {};
+      var ticking = false;
+
+      function checkScrollDepth() {
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+
+        var scrollPercent = Math.round((window.scrollY / docHeight) * 100);
+
+        depths.forEach(function(depth) {
+          if (scrollPercent >= depth && !tracked[depth]) {
+            tracked[depth] = true;
+            track(['trackEvent', 'Engagement', 'scroll_depth', depth + '%', depth]);
+          }
+        });
+
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          requestAnimationFrame(checkScrollDepth);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // ============================================
+    // Calculator ROI Tracking (if on calculator page)
+    // ============================================
+
+    (function() {
+      var callsInput = document.getElementById('calls');
+      var missedInput = document.getElementById('missed');
+      var costInput = document.getElementById('cost');
+      var durationInput = document.getElementById('duration');
+
+      if (!callsInput || !missedInput || !costInput || !durationInput) return;
+
+      var calculatorStarted = false;
+      var trackTimeout;
+
+      function trackCalculatorStart() {
+        if (!calculatorStarted) {
+          calculatorStarted = true;
+          track(['trackEvent', 'Calculator', 'start', 'ROI Calculator']);
+        }
+      }
+
+      function trackCalculatorComplete() {
+        clearTimeout(trackTimeout);
+        trackTimeout = setTimeout(function() {
+          var annualEl = document.getElementById('annual');
+          if (annualEl) {
+            var annualValue = parseInt(annualEl.textContent.replace(/\D/g, ''), 10) || 0;
+            track(['trackEvent', 'Calculator', 'complete', 'Annual Savings', annualValue]);
+            track(['trackGoal', 2]); // Goal ID 2: Calculator Completed
+          }
+        }, 2000);
+      }
+
+      [callsInput, missedInput, costInput, durationInput].forEach(function(input) {
+        input.addEventListener('input', function() {
+          trackCalculatorStart();
+        });
+        input.addEventListener('change', function() {
+          track(['trackEvent', 'Calculator', 'adjust', this.id, parseInt(this.value, 10)]);
+          trackCalculatorComplete();
+        });
+      });
+    })();
+
+  });
+
+  // Expose safe track function globally for custom tracking
+  window.matomoTrack = track;
+
+})();
+</script>
+<!-- End Matomo Analytics -->
