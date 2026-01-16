@@ -7,7 +7,7 @@ const fr = {
   // Language metadata
   lang: 'fr',
   locale: 'fr_FR',
-  langName: 'Francais',
+  langName: 'Français',
   langNameEnglish: 'French',
   prefix: '/fr',
 
@@ -73,14 +73,14 @@ const fr = {
             label: 'Automobile',
             url: './automobile',
             slug: 'automobile',
-            description: 'Concessions et services apres-vente',
+            description: 'Concessions et services après-vente',
             icon: 'car',
           },
           {
             label: "Centre d'appel",
             url: './centre-d-appel',
             slug: 'centre-d-appel',
-            description: 'BPO et support client externalise',
+            description: 'BPO et support client externalisé',
             icon: 'headset',
           },
           {
@@ -101,12 +101,12 @@ const fr = {
       },
       { label: 'Partenaires', url: './partenaires', slug: 'partenaires' },
       { label: 'Presse', url: './presse', slug: 'presse' },
-      { label: 'A propos', url: './a-propos', slug: 'a-propos' },
+      { label: 'À propos', url: './a-propos', slug: 'a-propos' },
       { label: 'Contact', url: './contact', slug: 'contact' },
     ],
     footer: [
-      { label: 'Mentions legales', url: './mentions-legales', slug: 'mentions-legales' },
-      { label: 'Politique de confidentialite', url: './politique-confidentialite', slug: 'politique-confidentialite' },
+      { label: 'Mentions légales', url: './mentions-legales', slug: 'mentions-legales' },
+      { label: 'Politique de confidentialité', url: './politique-confidentialite', slug: 'politique-confidentialite' },
       { label: 'CGU', url: './conditions-generales-utilisation', slug: 'conditions-generales-utilisation' },
     ],
   },
@@ -114,7 +114,7 @@ const fr = {
   // CTA buttons
   cta: {
     primary: {
-      label: 'Demander une demo',
+      label: 'Demander une démo',
       url: './contact',
     },
     secondary: {
@@ -131,29 +131,29 @@ const fr = {
   ui: {
     learnMore: 'En savoir plus',
     contactUs: 'Nous contacter',
-    bookDemo: 'Reserver une demo',
+    bookDemo: 'Réserver une démo',
     calculateRoi: 'Calculer mon ROI',
-    discoverSolutions: 'Decouvrir les solutions',
+    discoverSolutions: 'Découvrir les solutions',
     sendRequest: 'Envoyer ma demande',
     sending: 'Envoi en cours...',
-    formSuccess: 'Merci ! Votre demande a bien ete envoyee. Nous vous recontacterons tres bientot.',
-    formError: "Une erreur est survenue lors de l'envoi. Veuillez reessayer ou nous contacter par email.",
+    formSuccess: 'Merci ! Votre demande a bien été envoyée. Nous vous recontacterons très bientôt.',
+    formError: "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter par email.",
     required: 'requis',
-    firstName: 'Prenom',
+    firstName: 'Prénom',
     lastName: 'Nom',
     email: 'Email professionnel',
     company: 'Entreprise',
-    phone: 'Telephone',
-    sector: "Secteur d'activite",
+    phone: 'Téléphone',
+    sector: "Secteur d'activité",
     message: 'Votre message',
-    selectSector: 'Selectionnez votre secteur...',
+    selectSector: 'Sélectionnez votre secteur...',
     available247: 'Disponible 24/7',
-    response: 'Reponse',
-    allRightsReserved: 'Tous droits reserves.',
-    hostedInFrance: 'Heberge en France',
-    backToHome: "Retour a l'accueil",
-    pageNotFound: 'Page non trouvee',
-    pageNotFoundDescription: "La page que vous recherchez n'existe pas ou a ete deplacee. Retournez a l'accueil pour continuer votre navigation.",
+    response: 'Réponse',
+    allRightsReserved: 'Tous droits réservés.',
+    hostedInFrance: 'Hébergé en France',
+    backToHome: "Retour à l'accueil",
+    pageNotFound: 'Page non trouvée',
+    pageNotFoundDescription: "La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer votre navigation.",
   },
 
   // Footer sections
@@ -175,7 +175,7 @@ const fr = {
       { label: 'Hotline', url: './hotline', icon: 'clock' },
     ],
     companyLinks: [
-      { label: 'A propos', url: './a-propos', icon: 'info' },
+      { label: 'À propos', url: './a-propos', icon: 'info' },
       { label: 'Partenaires', url: './partenaires', icon: 'partners' },
       { label: 'Presse', url: './presse', icon: 'press' },
       { label: 'Contact', url: './contact', icon: 'email' },
@@ -206,38 +206,38 @@ const fr = {
   features: [
     {
       primary: true,
-      title: 'Disponibilite 24/7',
-      description: 'Natalia repond a vos appels 24h/24, 7j/7, sans interruption ni fatigue.',
+      title: 'Disponibilité 24/7',
+      description: 'Natalia répond à vos appels 24h/24, 7j/7, sans interruption ni fatigue.',
       icon: 'clock',
     },
     {
       primary: true,
-      title: 'Integration simple',
-      description: 'Notre API REST et nos connecteurs permettent une integration rapide avec vos outils existants.',
+      title: 'Intégration simple',
+      description: 'Notre API REST et nos connecteurs permettent une intégration rapide avec vos outils existants.',
       icon: 'plug',
     },
     {
       primary: true,
       title: 'IA Conversationnelle',
-      description: 'Natalia comprend le langage naturel et repond de maniere fluide et personnalisee.',
+      description: 'Natalia comprend le langage naturel et répond de manière fluide et personnalisée.',
       icon: 'brain',
     },
     {
       primary: true,
       title: 'Multilingue',
-      description: 'Natalia parle francais, anglais, espagnol et plus encore.',
+      description: 'Natalia parle français, anglais, espagnol et plus encore.',
       icon: 'globe',
     },
     {
       primary: true,
-      title: 'Analyse en temps reel',
-      description: 'Tableaux de bord et rapports detailles sur vos appels.',
+      title: 'Analyse en temps réel',
+      description: 'Tableaux de bord et rapports détaillés sur vos appels.',
       icon: 'chart',
     },
     {
       primary: true,
-      title: 'Securite Enterprise',
-      description: 'Hebergement en Europe, conformite RGPD, chiffrement bout-en-bout.',
+      title: 'Sécurité Enterprise',
+      description: 'Hébergement en Europe, conformité RGPD, chiffrement bout-en-bout.',
       icon: 'shield',
     },
   ],
@@ -245,13 +245,13 @@ const fr = {
   // Testimonials
   testimonials: [
     {
-      quote: 'Natalia a transforme notre service client. Nous ne ratons plus aucun appel.',
+      quote: 'Natalia a transformé notre service client. Nous ne ratons plus aucun appel.',
       author: 'Marie Dupont',
       role: 'Directrice Service Client',
       company: 'AutoPlus',
     },
     {
-      quote: "L'integration a ete simple et les resultats immediats. ROI positif en 3 mois.",
+      quote: "L'intégration a été simple et les résultats immédiats. ROI positif en 3 mois.",
       author: 'Jean Martin',
       role: 'CEO',
       company: 'TechStart',
@@ -260,9 +260,9 @@ const fr = {
 
   // Stats
   stats: [
-    { value: '24/7', label: 'Disponibilite' },
-    { value: '60%', label: 'Appels traites automatiquement' },
-    { value: '3min', label: 'Temps de reponse moyen' },
+    { value: '24/7', label: 'Disponibilité' },
+    { value: '60%', label: 'Appels traités automatiquement' },
+    { value: '3min', label: 'Temps de réponse moyen' },
     { value: '95%', label: 'Satisfaction client' },
   ],
 
@@ -270,19 +270,19 @@ const fr = {
   pages: {
     index: {
       title: 'Natalia - Suite IA pour la Relation Client | Voice, WhatsApp, Transcript',
-      description: "Natalia transforme votre relation client avec 3 solutions IA: Voice (assistant 24/7), WhatsApp (98% d'ouverture), Transcript (intelligence commerciale). Demandez une demo.",
+      description: "Natalia transforme votre relation client avec 3 solutions IA: Voice (assistant 24/7), WhatsApp (98% d'ouverture), Transcript (intelligence commerciale). Demandez une démo.",
     },
     'assistante-vocale-ia': {
       title: 'Assistante Vocale IA - Natalia automatise vos appels',
-      description: "Decouvrez Natalia, l'assistante vocale IA qui repond a vos appels 24/7 avec une voix naturelle et une comprehension instantanee.",
+      description: "Découvrez Natalia, l'assistante vocale IA qui répond à vos appels 24/7 avec une voix naturelle et une compréhension instantanée.",
     },
     analyse: {
       title: 'Natalia Analyse - Transcription et intelligence commerciale',
-      description: 'Transcription automatique et analyse IA de toutes vos conversations. Extrayez des insights, ameliorez vos KPIs et formez vos equipes.',
+      description: 'Transcription automatique et analyse IA de toutes vos conversations. Extrayez des insights, améliorez vos KPIs et formez vos équipes.',
     },
     whatsapp: {
       title: 'Natalia WhatsApp - Engagement client 98% de taux d\'ouverture',
-      description: 'Solution WhatsApp Business pour entreprises. 98% de taux d\'ouverture, centralisation des echanges et intelligence commerciale.',
+      description: 'Solution WhatsApp Business pour entreprises. 98% de taux d\'ouverture, centralisation des échanges et intelligence commerciale.',
     },
     automobile: {
       title: 'Natalia pour l\'Automobile - Concessions et SAV',
@@ -290,71 +290,71 @@ const fr = {
     },
     'centre-d-appel': {
       title: 'Natalia pour Centres d\'Appels - BPO et Support',
-      description: 'Solution IA pour centres d\'appels et BPO. Desengorgez vos lignes, reduisez les couts et ameliorez la satisfaction client.',
+      description: 'Solution IA pour centres d\'appels et BPO. Désengorgez vos lignes, réduisez les coûts et améliorez la satisfaction client.',
     },
     helpdesk: {
       title: 'Natalia pour Helpdesk IT - Support Technique',
-      description: 'Solution IA pour helpdesk et support IT. Resolution automatique niveau 1, ouverture de tickets et routage intelligent.',
+      description: 'Solution IA pour helpdesk et support IT. Résolution automatique niveau 1, ouverture de tickets et routage intelligent.',
     },
     hotline: {
       title: 'Natalia Hotline - Service Client 24/7',
-      description: 'Solution hotline IA disponible 24h/24. Repondez a 100% de vos appels avec une qualite constante.',
+      description: 'Solution hotline IA disponible 24h/24. Répondez à 100% de vos appels avec une qualité constante.',
     },
     calculateur: {
-      title: 'Calculateur ROI - Estimez vos economies avec Natalia',
-      description: 'Calculez le retour sur investissement de Natalia pour votre entreprise. Simulation gratuite et personnalisee.',
+      title: 'Calculateur ROI - Estimez vos économies avec Natalia',
+      description: 'Calculez le retour sur investissement de Natalia pour votre entreprise. Simulation gratuite et personnalisée.',
     },
     'a-propos': {
-      title: 'A propos de Natalia - Notre equipe et notre mission',
-      description: "Decouvrez l'equipe derriere Natalia, l'assistante vocale IA qui revolutionne la gestion des appels telephoniques.",
+      title: 'À propos de Natalia - Notre équipe et notre mission',
+      description: "Découvrez l'équipe derrière Natalia, l'assistante vocale IA qui révolutionne la gestion des appels téléphoniques.",
     },
     partenaires: {
-      title: 'Partenaires Natalia - Rejoignez notre ecosysteme',
-      description: 'Devenez partenaire Natalia et proposez des solutions IA innovantes a vos clients.',
+      title: 'Partenaires Natalia - Rejoignez notre écosystème',
+      description: 'Devenez partenaire Natalia et proposez des solutions IA innovantes à vos clients.',
     },
     presse: {
-      title: 'Presse - Natalia dans les medias',
-      description: 'Retrouvez les dernieres actualites et communiques de presse de Natalia.',
+      title: 'Presse - Natalia dans les médias',
+      description: 'Retrouvez les dernières actualités et communiqués de presse de Natalia.',
     },
     contact: {
-      title: 'Contact - Demandez une demo de Natalia',
-      description: "Contactez l'equipe Natalia pour une demonstration ou pour toute question sur nos solutions d'assistante vocale IA.",
+      title: 'Contact - Demandez une démo de Natalia',
+      description: "Contactez l'équipe Natalia pour une démonstration ou pour toute question sur nos solutions d'assistante vocale IA.",
     },
     'mentions-legales': {
-      title: 'Mentions legales - Natalia',
-      description: 'Mentions legales du site Natalia.',
+      title: 'Mentions légales - Natalia',
+      description: 'Mentions légales du site Natalia.',
     },
     'politique-confidentialite': {
-      title: 'Politique de confidentialite - Natalia',
-      description: 'Politique de confidentialite et protection des donnees personnelles de Natalia.',
+      title: 'Politique de confidentialité - Natalia',
+      description: 'Politique de confidentialité et protection des données personnelles de Natalia.',
     },
     'conditions-generales-utilisation': {
-      title: 'Conditions generales d\'utilisation - Natalia',
+      title: 'Conditions générales d\'utilisation - Natalia',
       description: 'CGU du site et des services Natalia.',
     },
     '404': {
-      title: 'Page non trouvee - Natalia',
+      title: 'Page non trouvée - Natalia',
       description: 'La page que vous recherchez n\'existe pas.',
     },
     'legal': {
-      title: 'Informations legales - Natalia',
-      description: 'Informations legales et reglementaires de Natalia.',
+      title: 'Informations légales - Natalia',
+      description: 'Informations légales et réglementaires de Natalia.',
     },
     'assistant-mail-automatisation-ia': {
       title: 'Assistant Mail & Automatisation IA - Natalia',
-      description: 'Automatisez vos emails et workflows avec l\'IA. Natalia traite vos demandes par email avec la meme intelligence que par telephone.',
+      description: 'Automatisez vos emails et workflows avec l\'IA. Natalia traite vos demandes par email avec la même intelligence que par téléphone.',
     },
   },
 
   // Homepage specific content
   homepage: {
     hero: {
-      badge: 'La suite IA complete pour la relation client',
+      badge: 'La suite IA complète pour la relation client',
       title1: '3 solutions IA.',
-      title2: 'Un ecosysteme unifie.',
-      subtitle: 'Natalia Voice, WhatsApp et Analyse travaillent ensemble pour automatiser, centraliser et optimiser chaque interaction client. Resultats mesurables des le premier mois.',
-      ctaPrimary: 'Demander une demo',
-      ctaSecondary: 'Decouvrir les solutions',
+      title2: 'Un écosystème unifié.',
+      subtitle: 'Natalia Voice, WhatsApp et Analyse travaillent ensemble pour automatiser, centraliser et optimiser chaque interaction client. Résultats mesurables dès le premier mois.',
+      ctaPrimary: 'Demander une démo',
+      ctaSecondary: 'Découvrir les solutions',
     },
     products: {
       voice: {
@@ -373,10 +373,10 @@ const fr = {
     voiceCard: {
       badge: 'Solution phare',
       title: 'Natalia Voice',
-      description: "L'assistant vocal IA disponible 24h/24, 7j/7. Decrochage instantane, qualification des demandes et integration complete a vos outils metiers.",
+      description: "L'assistant vocal IA disponible 24h/24, 7j/7. Décrochage instantané, qualification des demandes et intégration complète à vos outils métiers.",
       level1: {
         title: 'Niveau 1',
-        description: "Prise d'appels + Routage intelligent",
+        description: 'Prise d\'appels + Routage intelligent',
       },
       level2: {
         title: 'Niveau 2',
@@ -384,7 +384,7 @@ const fr = {
       },
       level3: {
         title: 'Niveau 3',
-        description: 'Integration ERP/CRM complete',
+        description: 'Intégration ERP/CRM complète',
       },
       companies: '+100 entreprises',
       cta: 'En savoir plus',
@@ -392,9 +392,9 @@ const fr = {
     whatsappCard: {
       badge: 'Engagement',
       title: 'Natalia WhatsApp',
-      description: "Continuez la conversation apres l'appel. 98% de taux d'ouverture vs 20% pour les emails.",
+      description: "Continuez la conversation après l'appel. 98% de taux d'ouverture vs 20% pour les emails.",
       features: [
-        'Centralise tous les echanges',
+        'Centralise tous les échanges',
         'Alimente la base de connaissances',
         'Flux BI et recommandations',
       ],
@@ -403,54 +403,54 @@ const fr = {
     analyticsCard: {
       badge: 'Intelligence',
       title: 'Natalia Analyse',
-      description: '100% des conversations capturees et analysees.',
+      description: '100% des conversations capturées et analysées.',
       kpis: 'KPIs',
       csat: 'CSAT',
       training: 'Training',
     },
     stats: {
-      availability: 'Disponibilite',
+      availability: 'Disponibilité',
       whatsappRate: "Taux d'ouverture WhatsApp",
-      conversationsCaptured: 'Conversations capturees',
-      responseTime: 'Temps de reponse',
+      conversationsCaptured: 'Conversations capturées',
+      responseTime: 'Temps de réponse',
     },
     solutions: {
       badge: 'Nos solutions',
-      title: 'Une suite complete pour',
+      title: 'Une suite complète pour',
       titleHighlight: 'chaque interaction',
-      subtitle: 'Voice, WhatsApp et Analyse s\'integrent parfaitement pour creer un ecosysteme de relation client intelligent.',
+      subtitle: 'Voice, WhatsApp et Analyse s\'intègrent parfaitement pour créer un écosystème de relation client intelligent.',
     },
     valueProposition: {
       badge: 'Pourquoi Natalia',
-      title: "L'ecosysteme qui",
+      title: "L'écosystème qui",
       titleHighlight: 'transforme',
       titleEnd: 'votre relation client',
-      subtitle: 'Nos 3 solutions travaillent ensemble pour creer un cycle vertueux d\'amelioration continue.',
+      subtitle: 'Nos 3 solutions travaillent ensemble pour créer un cycle vertueux d\'amélioration continue.',
       capture: {
         title: 'Capture',
-        description: 'Voice repond 24/7 et capture chaque demande. Aucun appel manque, chaque lead qualifie.',
+        description: 'Voice répond 24/7 et capture chaque demande. Aucun appel manqué, chaque lead qualifié.',
       },
       engage: {
         title: 'Engage',
-        description: "WhatsApp continue la conversation avec 98% d'ouverture. Chaque echange enrichit votre connaissance client.",
+        description: "WhatsApp continue la conversation avec 98% d'ouverture. Chaque échange enrichit votre connaissance client.",
       },
       optimize: {
         title: 'Optimise',
         description: 'Analyse transcrit et analyse chaque conversation pour extraire des insights, KPIs et recommandations de formation.',
       },
-      cycle: 'Le cycle vertueux : Analyse transcrit les conversations de Voice et WhatsApp, identifie les points d\'amelioration, et les recommandations alimentent la formation de vos equipes.',
+      cycle: 'Le cycle vertueux : Analyse transcrit les conversations de Voice et WhatsApp, identifie les points d\'amélioration, et les recommandations alimentent la formation de vos équipes.',
     },
     deployment: {
       badge: 'Mise en place',
-      title: 'Deploiement en',
-      titleHighlight: '3 etapes',
+      title: 'Déploiement en',
+      titleHighlight: '3 étapes',
       step1: {
         title: 'Audit & Configuration',
-        description: 'Analyse de vos besoins, configuration personnalisee et integration a vos outils existants.',
+        description: 'Analyse de vos besoins, configuration personnalisée et intégration à vos outils existants.',
       },
       step2: {
         title: 'Formation & Tests',
-        description: "Entrainement de l'IA sur votre contexte metier et phase de tests avec vos equipes.",
+        description: "Entraînement de l'IA sur votre contexte métier et phase de tests avec vos équipes.",
       },
       step3: {
         title: 'Go Live & Suivi',
@@ -459,38 +459,38 @@ const fr = {
     },
     sectors: {
       badge: 'Secteurs',
-      title: 'Adapte a',
+      title: 'Adapté à',
       titleHighlight: 'votre industrie',
-      subtitle: 'Natalia se personnalise pour repondre aux specificites de votre secteur.',
+      subtitle: 'Natalia se personnalise pour répondre aux spécificités de votre secteur.',
     },
     integration: {
-      title: 'S\'integre a',
+      title: 'S\'intègre à',
       titleHighlight: 'tous vos outils',
-      subtitle: 'CRM, ERP, outils de ticketing, calendriers metiers... Natalia se connecte a votre ecosysteme existant.',
+      subtitle: 'CRM, ERP, outils de ticketing, calendriers métiers... Natalia se connecte à votre écosystème existant.',
     },
     cta: {
-      title: 'Pret a transformer votre relation client ?',
-      subtitle: 'Decouvrez comment Voice, WhatsApp et Analyse peuvent revolutionner votre experience client.',
-      note: 'Demo personnalisee - ROI visible des le premier mois',
+      title: 'Prêt à transformer votre relation client ?',
+      subtitle: 'Découvrez comment Voice, WhatsApp et Analyse peuvent révolutionner votre expérience client.',
+      note: 'Démo personnalisée - ROI visible dès le premier mois',
     },
   },
 
   // Contact page specific content
   contact: {
     title: 'Contactez-nous',
-    subtitle: 'Vous souhaitez une demonstration ? Vous avez une question ? Notre equipe est a votre ecoute.',
-    formTitle: 'Demander une demo',
-    writeUs: 'Nous ecrire',
+    subtitle: 'Vous souhaitez une démonstration ? Vous avez une question ? Notre équipe est à votre écoute.',
+    formTitle: 'Demander une démo',
+    writeUs: 'Nous écrire',
     whyChoose: 'Pourquoi choisir Natalia ?',
     whyItems: [
       'Disponible 24/7, sans interruption',
-      'Voix naturelle et comprehension IA avancee',
-      'Integration avec vos outils metiers',
-      'Deploiement rapide et accompagnement personnalise',
-      'Hebergement securise en France (RGPD)',
+      'Voix naturelle et compréhension IA avancée',
+      'Intégration avec vos outils métiers',
+      'Déploiement rapide et accompagnement personnalisé',
+      'Hébergement sécurisé en France (RGPD)',
     ],
-    demoReady: 'Pret pour une demo ?',
-    demoDescription: 'Nous vous proposons une demonstration personnalisee de 30 minutes pour decouvrir Natalia en action sur vos cas d\'usage.',
+    demoReady: 'Prêt pour une démo ?',
+    demoDescription: 'Nous vous proposons une démonstration personnalisée de 30 minutes pour découvrir Natalia en action sur vos cas d\'usage.',
     sectors: [
       { value: 'automobile', label: 'Automobile / Concessions' },
       { value: 'centre-appel', label: 'Centre d\'appels' },
@@ -504,19 +504,19 @@ const fr = {
   about: {
     hero: {
       badge: 'Notre histoire',
-      title: 'A propos de',
-      subtitle: 'Nous revolutionnons la gestion des appels telephoniques grace a l\'intelligence artificielle.',
+      title: 'À propos de',
+      subtitle: 'Nous révolutionnons la gestion des appels téléphoniques grâce à l\'intelligence artificielle.',
     },
     mission: {
       badge: 'Notre mission',
       title: 'Chaque appel',
       titleHighlight: 'compte',
-      paragraph1: 'Chez Natalia, nous croyons que <strong>chaque appel compte</strong>. Un appel manque, c\'est un client frustre, une opportunite perdue, une relation qui se degrade.',
-      paragraph2: 'Notre mission est de permettre a chaque entreprise de repondre a 100% de ses appels, 24h/24, 7j/7, avec la meme qualite et la meme empathie qu\'un collaborateur humain.',
-      paragraph3: 'Nous ne remplacons pas vos equipes, nous les assistons. Nous les liberons des taches repetitives pour qu\'elles se concentrent sur ce qui a vraiment de la valeur.',
+      paragraph1: 'Chez Natalia, nous croyons que <strong>chaque appel compte</strong>. Un appel manqué, c\'est un client frustré, une opportunité perdue, une relation qui se dégrade.',
+      paragraph2: 'Notre mission est de permettre à chaque entreprise de répondre à 100% de ses appels, 24h/24, 7j/7, avec la même qualité et la même empathie qu\'un collaborateur humain.',
+      paragraph3: 'Nous ne remplaçons pas vos équipes, nous les assistons. Nous les libérons des tâches répétitives pour qu\'elles se concentrent sur ce qui a vraiment de la valeur.',
       stat: '40%',
-      statText: 'des appels en entreprise ne sont pas traites.',
-      statHighlight: 'Nous voulons changer ca.',
+      statText: 'des appels en entreprise ne sont pas traités.',
+      statHighlight: 'Nous voulons changer ça.',
     },
     timeline: {
       badge: 'Notre parcours',
@@ -524,37 +524,37 @@ const fr = {
       events: [
         {
           date: 'Novembre 2024',
-          title: 'La genese du projet',
-          description: 'En echangeant avec des entrepreneurs locaux lors d\'un SaaS Camp en Vendee, deux problematiques sont ressorties : la difficulte de recruter et l\'inefficacite du standard telephonique.',
+          title: 'La genèse du projet',
+          description: 'En échangeant avec des entrepreneurs locaux lors d\'un SaaS Camp en Vendée, deux problématiques sont ressorties : la difficulté de recruter et l\'inefficacité du standard téléphonique.',
         },
         {
           date: 'Mars 2025',
-          title: 'Premier POC deploye',
-          description: 'Le projet est lance, d\'abord en sous-marin sur la partie technique. Le premier POC est deploye chez un client en conditions reelles.',
+          title: 'Premier POC déployé',
+          description: 'Le projet est lancé, d\'abord en sous-marin sur la partie technique. Le premier POC est déployé chez un client en conditions réelles.',
         },
         {
           date: 'Juin 2025',
           title: 'Lancement automobile',
-          description: 'Premiers pilotes dans le secteur automobile. On decouvre que 40% des appels en concession ne sont pas traites.',
+          description: 'Premiers pilotes dans le secteur automobile. On découvre que 40% des appels en concession ne sont pas traités.',
         },
         {
           date: 'Septembre 2025',
           title: 'Expansion helpdesk IT',
-          description: 'Elargissement vers le support helpdesk informatique. Baptiste rejoint l\'equipe technique pour accelerer le developpement.',
+          description: 'Élargissement vers le support helpdesk informatique. Baptiste rejoint l\'équipe technique pour accélérer le développement.',
         },
       ],
     },
     team: {
-      badge: 'Notre equipe',
+      badge: 'Notre équipe',
       title: 'Des profils',
-      titleHighlight: 'complementaires',
-      subtitle: 'Unis par des valeurs communes et la volonte de servir nos clients.',
+      titleHighlight: 'complémentaires',
+      subtitle: 'Unis par des valeurs communes et la volonté de servir nos clients.',
       members: [
         {
           name: 'Nicolas Dubreuil',
           role: 'CEO',
           title: 'Co-fondateur',
-          description: 'Pilote le developpement commercial et la strategie de croissance de Natalia.',
+          description: 'Pilote le développement commercial et la stratégie de croissance de Natalia.',
           linkedin: 'https://linkedin.com/in/nicolas-dubreuil-essca/',
           image: 'image.png',
           roleBg: 'bg-primary/10 border-primary/20',
@@ -565,7 +565,7 @@ const fr = {
           name: 'Jeremy David',
           role: 'COO',
           title: 'Co-fondateur',
-          description: 'Expert en methodologie Lean et optimisation des processus operationnels.',
+          description: 'Expert en méthodologie Lean et optimisation des processus opérationnels.',
           linkedin: 'https://linkedin.com/in/jeremy-david-279564157/',
           image: 'image2.png',
           roleBg: 'bg-emerald-500/10 border-emerald-500/20',
@@ -598,7 +598,7 @@ const fr = {
           name: 'Baptiste Parmantier',
           role: 'Lead Dev',
           title: 'Lead Software Engineer',
-          description: 'Developpeur passionne et autodidacte. Pilote le developpement des solutions Natalia.',
+          description: 'Développeur passionné et autodidacte. Pilote le développement des solutions Natalia.',
           linkedin: 'https://linkedin.com/in/baptiste-parmantier/',
           image: 'image4.png',
           roleBg: 'bg-blue-500/10 border-blue-500/20',
@@ -609,7 +609,7 @@ const fr = {
           name: 'Malo Blanchard',
           role: 'Lead CX',
           title: 'Lead Customer Experience',
-          description: 'Au croisement entre l\'expertise relation client et son passe de lead developpeur, Malo resout les problemes techniques des clients et repond au plus pres de leurs besoins.',
+          description: 'Au croisement entre l\'expertise relation client et son passé de lead développeur, Malo résout les problèmes techniques des clients et répond au plus près de leurs besoins.',
           linkedin: '',
           image: 'maloBlanchard.jpg',
           roleBg: 'bg-cyan-500/10 border-cyan-500/20',
@@ -620,7 +620,7 @@ const fr = {
           name: 'Pierre Turquand',
           role: 'Investor',
           title: 'Co-fondateur & Investisseur',
-          description: 'Entrepreneur experimente. Soutient le developpement strategique de Natalia.',
+          description: 'Entrepreneur expérimenté. Soutient le développement stratégique de Natalia.',
           linkedin: '',
           image: 'captureDecran20251021A161843Png.png',
           roleBg: 'bg-gray-500/10 border-gray-500/20',
@@ -636,15 +636,15 @@ const fr = {
       items: [
         {
           title: 'Innovation',
-          description: 'Nous repoussons les limites de l\'IA vocale pour offrir des experiences toujours plus naturelles et efficaces.',
+          description: 'Nous repoussons les limites de l\'IA vocale pour offrir des expériences toujours plus naturelles et efficaces.',
         },
         {
           title: 'Humain',
-          description: 'L\'IA au service de l\'humain, jamais l\'inverse. Nous augmentons vos equipes, nous ne les remplacons pas.',
+          description: 'L\'IA au service de l\'humain, jamais l\'inverse. Nous augmentons vos équipes, nous ne les remplaçons pas.',
         },
         {
           title: 'Confiance',
-          description: 'Securite, confidentialite, transparence. Vos donnees sont protegees et hebergees en France.',
+          description: 'Sécurité, confidentialité, transparence. Vos données sont protégées et hébergées en France.',
         },
       ],
     },
@@ -652,20 +652,20 @@ const fr = {
       badge: 'Technologie',
       title: 'Une technologie',
       titleHighlight: 'de pointe',
-      paragraph1: 'Natalia s\'appuie sur les dernieres avancees en matiere d\'intelligence artificielle et de traitement du langage naturel.',
-      paragraph2: 'Notre equipe R&D travaille en permanence a l\'amelioration de nos modeles pour offrir des conversations toujours plus naturelles et pertinentes.',
-      paragraph3: 'Nous collaborons avec les meilleurs laboratoires de recherche en IA pour rester a la pointe de l\'innovation.',
+      paragraph1: 'Natalia s\'appuie sur les dernières avancées en matière d\'intelligence artificielle et de traitement du langage naturel.',
+      paragraph2: 'Notre équipe R&D travaille en permanence à l\'amélioration de nos modèles pour offrir des conversations toujours plus naturelles et pertinentes.',
+      paragraph3: 'Nous collaborons avec les meilleurs laboratoires de recherche en IA pour rester à la pointe de l\'innovation.',
       stackTitle: 'Notre stack technologique',
       stack: [
-        'Large Language Models (LLM) de derniere generation',
-        'Synthese vocale ultra-realiste',
-        'API telephonique temps reel',
+        'Large Language Models (LLM) de dernière génération',
+        'Synthèse vocale ultra-réaliste',
+        'API téléphonique temps réel',
         'Infrastructure cloud scalable',
       ],
     },
     cta: {
       title: 'Envie d\'en savoir plus ?',
-      subtitle: 'Rencontrez notre equipe et decouvrez comment Natalia peut transformer votre relation client.',
+      subtitle: 'Rencontrez notre équipe et découvrez comment Natalia peut transformer votre relation client.',
       button: 'Nous contacter',
     },
   },
@@ -674,14 +674,14 @@ const fr = {
   voiceAssistant: {
     hero: {
       badge: 'Voicebot',
-      title: 'Automatisez l\'accueil telephonique',
+      title: 'Automatisez l\'accueil téléphonique',
       titleHighlight: 'et la gestion des demandes',
       titleEnd: 'de premier niveau, 24/7',
-      subtitle: 'Solution d\'IA conversationnelle vocale qui gere les appels entrants, qualifie les demandes et resout les problemes simples ou ouvre des tickets, garantissant une disponibilite et une reactivite maximale.',
-      ctaDemo: 'Reserver une demo',
+      subtitle: 'Solution d\'IA conversationnelle vocale qui gère les appels entrants, qualifie les demandes et résout les problèmes simples ou ouvre des tickets, garantissant une disponibilité et une réactivité maximale.',
+      ctaDemo: 'Réserver une démo',
       ctaRoi: 'Calculer mon ROI',
       available: 'Disponible',
-      response: 'Reponse',
+      response: 'Réponse',
     },
     differentiators: {
       title: 'Ce qui fait la',
@@ -692,137 +692,137 @@ const fr = {
           description: 'Pas de voix robotique. Natalia parle avec une voix naturelle et fluide qui met vos clients en confiance.',
         },
         {
-          title: 'Comprehension IA',
-          description: 'Natalia comprend le langage naturel, les accents, les hesitations. Elle s\'adapte a chaque interlocuteur.',
+          title: 'Compréhension IA',
+          description: 'Natalia comprend le langage naturel, les accents, les hésitations. Elle s\'adapte à chaque interlocuteur.',
         },
         {
           title: 'Disponible 24/7',
-          description: 'Pas de pause dejeuner, pas de vacances, pas de week-end. Natalia repond a chaque appel, a chaque instant.',
+          description: 'Pas de pause déjeuner, pas de vacances, pas de week-end. Natalia répond à chaque appel, à chaque instant.',
         },
       ],
     },
     features: {
-      title: 'Fonctionnalites',
-      titleHighlight: 'cles',
-      subtitle: 'Des capacites metier concretes pour automatiser votre accueil telephonique',
+      title: 'Fonctionnalités',
+      titleHighlight: 'clés',
+      subtitle: 'Des capacités métier concrètes pour automatiser votre accueil téléphonique',
       items: [
         {
           title: 'Qualification d\'Appel',
-          description: 'Identification automatique du motif et de l\'urgence en langage naturel. Natalia comprend le besoin du client des les premieres secondes.',
+          description: 'Identification automatique du motif et de l\'urgence en langage naturel. Natalia comprend le besoin du client dès les premières secondes.',
         },
         {
           title: 'Routage Intelligent',
-          description: 'Transfert automatique vers le bon service ou conseiller apres qualification. Plus de temps perdu en redirections multiples.',
+          description: 'Transfert automatique vers le bon service ou conseiller après qualification. Plus de temps perdu en redirections multiples.',
         },
         {
-          title: 'Resolution Niveau 1',
-          description: 'Reponse automatique aux FAQ, verification de statut, reinitialisation de mot de passe et autres actions simples. Liberez vos agents pour les cas complexes.',
+          title: 'Résolution Niveau 1',
+          description: 'Réponse automatique aux FAQ, vérification de statut, réinitialisation de mot de passe et autres actions simples. Libérez vos agents pour les cas complexes.',
         },
         {
           title: 'Ouverture Automatique de Ticket',
-          description: 'Creation immediate dans votre CRM ou outil de ticketing. Toutes les informations recueillies sont transmises pour un suivi optimal.',
+          description: 'Création immédiate dans votre CRM ou outil de ticketing. Toutes les informations recueillies sont transmises pour un suivi optimal.',
         },
       ],
     },
     capabilities: {
-      title: 'Capacites',
+      title: 'Capacités',
       titleHighlight: 'techniques',
-      subtitle: 'Une technologie de pointe pour une experience client exceptionnelle',
-      comingSoon: 'Bientot',
+      subtitle: 'Une technologie de pointe pour une expérience client exceptionnelle',
+      comingSoon: 'Bientôt',
       items: [
         {
           title: 'Multilingue',
-          description: 'Francais, anglais, espagnol, allemand... Natalia s\'adapte a la langue de votre interlocuteur.',
+          description: 'Français, anglais, espagnol, allemand... Natalia s\'adapte à la langue de votre interlocuteur.',
         },
         {
           title: 'API & Webhooks',
-          description: 'Integrez Natalia a vos systemes existants via notre API REST et nos webhooks en temps reel.',
+          description: 'Intégrez Natalia à vos systèmes existants via notre API REST et nos webhooks en temps réel.',
           comingSoon: true,
         },
         {
           title: 'Analytics',
-          description: 'Dashboard temps reel pour suivre les performances : taux de resolution, duree moyenne, satisfaction.',
+          description: 'Dashboard temps réel pour suivre les performances : taux de résolution, durée moyenne, satisfaction.',
         },
         {
           title: 'Transfert intelligent',
-          description: 'Natalia detecte quand un humain doit prendre le relais et transfere l\'appel avec tout le contexte.',
+          description: 'Natalia détecte quand un humain doit prendre le relais et transfère l\'appel avec tout le contexte.',
         },
         {
-          title: 'Securite',
-          description: 'Donnees chiffrees, hebergement en France, conformite RGPD. Vos conversations sont protegees.',
+          title: 'Sécurité',
+          description: 'Données chiffrées, hébergement en France, conformité RGPD. Vos conversations sont protégées.',
         },
         {
           title: 'Auto-apprentissage',
-          description: 'Natalia s\'ameliore continuellement en apprenant de chaque conversation.',
+          description: 'Natalia s\'améliore continuellement en apprenant de chaque conversation.',
           comingSoon: true,
         },
       ],
     },
     howItWorks: {
-      title: 'Comment ca',
+      title: 'Comment ça',
       titleHighlight: 'marche',
       steps: [
         {
           title: 'Configuration',
-          description: 'Nous parametrons Natalia selon vos besoins, votre vocabulaire metier et vos scenarios.',
+          description: 'Nous paramétrons Natalia selon vos besoins, votre vocabulaire métier et vos scénarios.',
         },
         {
-          title: 'Integration',
-          description: 'Natalia se connecte a votre telephonie et a vos outils metiers (CRM, ERP, ticketing...).',
+          title: 'Intégration',
+          description: 'Natalia se connecte à votre téléphonie et à vos outils métiers (CRM, ERP, ticketing...).',
         },
         {
           title: 'Pilote',
-          description: 'Nous lancons un pilote sur un perimetre defini pour valider les performances.',
+          description: 'Nous lançons un pilote sur un périmètre défini pour valider les performances.',
         },
         {
-          title: 'Deploiement',
-          description: 'Une fois valide, nous deployons Natalia sur l\'ensemble de vos lignes.',
+          title: 'Déploiement',
+          description: 'Une fois validé, nous déployons Natalia sur l\'ensemble de vos lignes.',
         },
       ],
     },
     benefits: {
       title: 'Les',
-      titleHighlight: 'benefices',
+      titleHighlight: 'bénéfices',
       titleEnd: 'pour votre entreprise',
-      subtitle: 'Un impact mesurable sur vos operations et votre experience client',
+      subtitle: 'Un impact mesurable sur vos opérations et votre expérience client',
       items: [
         {
-          title: 'Desengorgement des centres d\'appels',
-          description: 'Reduisez les files d\'attente en traitant automatiquement 60% des appels entrants. Vos agents se concentrent sur les demandes a forte valeur ajoutee.',
+          title: 'Désengorgement des centres d\'appels',
+          description: 'Réduisez les files d\'attente en traitant automatiquement 60% des appels entrants. Vos agents se concentrent sur les demandes à forte valeur ajoutée.',
         },
         {
-          title: 'Reduction des couts support N1',
-          description: 'Diminuez vos couts de support de premier niveau jusqu\'a 40%. Natalia traite les demandes simples a une fraction du cout humain.',
+          title: 'Réduction des coûts support N1',
+          description: 'Diminuez vos coûts de support de premier niveau jusqu\'à 40%. Natalia traite les demandes simples à une fraction du coût humain.',
         },
         {
-          title: 'Experience client amelioree',
-          description: 'Reponse instantanee, zero temps d\'attente. Vos clients obtiennent une reponse immediate, 24h/24 et 7j/7.',
+          title: 'Expérience client améliorée',
+          description: 'Réponse instantanée, zéro temps d\'attente. Vos clients obtiennent une réponse immédiate, 24h/24 et 7j/7.',
         },
       ],
     },
     targets: {
       title: 'Pour',
       titleHighlight: 'qui',
-      subtitle: 'Natalia Voice s\'adresse aux decideurs qui veulent transformer leur service client',
+      subtitle: 'Natalia Voice s\'adresse aux décideurs qui veulent transformer leur service client',
       items: [
         {
-          title: 'Directeur Operations',
-          description: 'Optimisez vos flux d\'appels, reduisez les pics de charge et ameliorez vos KPIs operationnels avec une solution qui s\'adapte a votre volumetrie.',
+          title: 'Directeur Opérations',
+          description: 'Optimisez vos flux d\'appels, réduisez les pics de charge et améliorez vos KPIs opérationnels avec une solution qui s\'adapte à votre volumétrie.',
         },
         {
           title: 'Responsable Service Client',
-          description: 'Offrez une experience client exceptionnelle avec une disponibilite 24/7, tout en liberant vos equipes pour les interactions a forte valeur ajoutee.',
+          description: 'Offrez une expérience client exceptionnelle avec une disponibilité 24/7, tout en libérant vos équipes pour les interactions à forte valeur ajoutée.',
         },
         {
           title: 'DSI',
-          description: 'Deploiement rapide via API REST, integration avec votre stack existant (CRM, ERP, ticketing) et conformite RGPD assuree.',
+          description: 'Déploiement rapide via API REST, intégration avec votre stack existant (CRM, ERP, ticketing) et conformité RGPD assurée.',
         },
       ],
     },
     cta: {
-      title: 'Pret a decouvrir Natalia ?',
-      subtitle: 'Planifiez une demonstration personnalisee avec notre equipe.',
-      button: 'Reserver une demo',
+      title: 'Prêt à découvrir Natalia ?',
+      subtitle: 'Planifiez une démonstration personnalisée avec notre équipe.',
+      button: 'Réserver une démo',
     },
   },
 
@@ -833,7 +833,7 @@ const fr = {
       title: 'Transformez vos conversations',
       titleHighlight: 'en tableau de bord strategique',
       subtitle: 'Outil d\'analyse conversationnelle base sur le Speech-to-Text qui se connecte a vos enregistrements, transcrit les echanges, calcule les KPIs critiques, le scoring et fournit les insights necessaires a l\'amelioration continue.',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       ctaExample: 'Voir un exemple',
       dashboard: {
         quality: 'Qualite',
@@ -863,8 +863,8 @@ const fr = {
       ],
     },
     features: {
-      title: 'Fonctionnalites',
-      titleHighlight: 'cles',
+      title: 'Fonctionnalités',
+      titleHighlight: 'clés',
       subtitle: 'Tout ce dont vous avez besoin pour analyser et ameliorer la qualite de vos echanges',
       items: [
         {
@@ -894,7 +894,7 @@ const fr = {
       ],
     },
     howItWorks: {
-      title: 'Comment ca',
+      title: 'Comment ça',
       titleHighlight: 'marche',
       steps: [
         {
@@ -917,7 +917,7 @@ const fr = {
     },
     benefits: {
       title: 'Les',
-      titleHighlight: 'benefices',
+      titleHighlight: 'bénéfices',
       titleEnd: 'pour votre entreprise',
       subtitle: 'Transformez vos conversations en avantage concurrentiel',
       items: [
@@ -957,7 +957,7 @@ const fr = {
     cta: {
       title: 'Pret a transformer vos conversations en insights ?',
       subtitle: 'Decouvrez Natalia Analyse lors d\'une demonstration personnalisee.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -968,7 +968,7 @@ const fr = {
       title: 'Ne perdez plus de prospect "chaud" :',
       titleHighlight: 'relancez instantanement sur WhatsApp',
       subtitle: 'Solution qui s\'active lorsqu\'un appel est manque ou recu en dehors des heures d\'ouverture, envoie un message WhatsApp et poursuit la discussion en mode IA pour qualifier le besoin et convertir le prospect.',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       ctaRoi: 'Calculer mon ROI',
       auto: 'Auto',
       leadQualified: 'Lead qualifie',
@@ -1004,8 +1004,8 @@ const fr = {
       ],
     },
     features: {
-      title: 'Fonctionnalites',
-      titleHighlight: 'cles',
+      title: 'Fonctionnalités',
+      titleHighlight: 'clés',
       subtitle: 'Transformez chaque appel manque en opportunite de conversion',
       items: [
         {
@@ -1035,7 +1035,7 @@ const fr = {
       ],
     },
     howItWorks: {
-      title: 'Comment ca',
+      title: 'Comment ça',
       titleHighlight: 'marche',
       steps: [
         {
@@ -1058,7 +1058,7 @@ const fr = {
     },
     benefits: {
       title: 'Les',
-      titleHighlight: 'benefices',
+      titleHighlight: 'bénéfices',
       titleEnd: 'pour votre entreprise',
       subtitle: 'Ne perdez plus jamais une opportunite commerciale',
       items: [
@@ -1098,7 +1098,7 @@ const fr = {
     cta: {
       title: 'Pret a ne plus perdre de prospects ?',
       subtitle: 'Decouvrez Natalia WhatsApp lors d\'une demonstration personnalisee.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -1109,7 +1109,7 @@ const fr = {
       titleHighlight: 'transfere et assiste',
       title2: 'vos clients 24/7',
       subtitle: 'Une voix naturelle, une comprehension instantanee et une integration fluide a vos outils metiers automobiles',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       heroImageAlt: 'Concession automobile assistee par IA',
     },
     quote1: {
@@ -1195,7 +1195,7 @@ const fr = {
     },
     cta: {
       title: 'Nous definissons ensemble le cadre du pilote lors d\'un premier rendez-vous.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -1206,7 +1206,7 @@ const fr = {
       titleHighlight: 'transfere et assiste',
       title2: 'vos clients 24/7',
       subtitle: 'Une voix naturelle, une comprehension instantanee et une integration fluide a votre centre d\'appels',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       heroImageAlt: 'Centre d\'appels assiste par IA',
     },
     quote1: {
@@ -1291,7 +1291,7 @@ const fr = {
     },
     cta: {
       title: 'Nous definissons ensemble le cadre du pilote lors d\'un premier rendez-vous.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -1302,7 +1302,7 @@ const fr = {
       titleHighlight: 'qualifie et cree',
       title2: 'vos tickets 24/7',
       subtitle: 'Une voix naturelle, une comprehension instantanee et une integration fluide a votre outil de ticketing',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       heroImageAlt: 'Helpdesk assiste par IA',
     },
     quote1: {
@@ -1381,7 +1381,7 @@ const fr = {
     cta: {
       title: 'Pret a transformer votre helpdesk ?',
       subtitle: 'Decouvrez comment Natalia peut reduire votre charge de tickets de niveau 1 de 40%.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -1596,7 +1596,7 @@ const fr = {
       titleHighlight: 'qualifie et cree',
       title2: 'vos tickets 24/7',
       subtitle: 'Une voix naturelle, une comprehension instantanee et une integration fluide a votre outil de ticketing',
-      ctaDemo: 'Reserver une demo',
+      ctaDemo: 'Réserver une démo',
       heroImageAlt: 'Hotline assistee par IA',
     },
     quote1: {
@@ -1679,7 +1679,7 @@ const fr = {
     cta: {
       title: 'Pret a optimiser votre hotline ?',
       subtitle: 'Decouvrez comment Natalia peut reduire vos temps d\'attente de 70%.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
@@ -1762,7 +1762,7 @@ const fr = {
     cta: {
       title: 'Automatisez vos emails des aujourd\'hui',
       subtitle: 'Reduisez de 60% le temps de traitement de vos emails avec Natalia.',
-      button: 'Reserver une demo',
+      button: 'Réserver une démo',
     },
   },
 
