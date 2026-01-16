@@ -27,6 +27,7 @@
     "tailwindcss": "^3.4.0"
   },
   "dependencies": {
+    "@parcel/config-default": "^2.16.3",
     "lottie-web": "^5.12.2",
     "swiper": "^11.0.5"
   },
