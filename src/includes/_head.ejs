@@ -23,6 +23,25 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="../static/assets/favicon.png">
 
+<!-- Hreflang tags for i18n (if alternates available) -->
+<% if (locals.alternates && locals.alternates.length > 0) { %>
+<% locals.alternates.forEach(function(alt) { %><link rel="alternate" hreflang="<%= alt.hreflang %>" href="//getnatalia.com<%= alt.url %>">
+<% }); %><link rel="alternate" hreflang="x-default" href="//getnatalia.com<%= (locals.alternates.find(function(a) { return a.lang === 'fr'; }) || {}).url || '/fr/' %>">
+<% } %>
+
+<!-- Canonical URL -->
+<% if (locals.currentUrl) { %>
+<link rel="canonical" href="<%= (locals.site.baseUrl || 'https://getnatalia.com') + locals.currentUrl %>">
+<% } %>
+
+<!-- Open Graph locale -->
+<meta property="og:locale" content="<%= locals.locale || 'fr_FR' %>">
+<% if (locals.alternates) { %>
+<% locals.alternates.filter(function(a) { return a.lang !== locals.lang; }).forEach(function(alt) { %>
+<meta property="og:locale:alternate" content="<%= alt.hreflang.replace('-', '_') %>">
+<% }); %>
+<% } %>
+
 <!-- Fallback for browsers without JavaScript - make animated elements visible -->
 <noscript>
   <style>

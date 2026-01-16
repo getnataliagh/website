@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Informations Légales | <%= locals.site.name %></title>
-  <meta name="description" content="Informations légales et réglementaires de Natalia">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -12,51 +12,26 @@
   <section class="section bg-white">
     <div class="container-content">
       <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-8 animate-on-scroll">
-        Informations <span class="text-gradient">Légales</span>
+        <%= locals.legalIndex.title %> <span class="text-gradient"><%= locals.legalIndex.titleHighlight %></span>
       </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
-        <a href="./mentions-legales" class="card group hover:border-primary/50 border border-transparent">
+        <% var cardIcons = ['M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z', 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4']; %>
+        <% locals.legalIndex.cards.forEach(function(card, index) { %>
+        <a href="<%= card.link %>" class="card group hover:border-primary/50 border border-transparent">
           <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= cardIcons[index] %>"></path>
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-police-titre mb-2 group-hover:text-primary transition-colors">
-            Mentions Légales
+            <%= card.title %>
           </h3>
           <p class="text-police-grey text-sm">
-            Informations sur l'éditeur du site, l'hébergement et la propriété intellectuelle.
+            <%= card.description %>
           </p>
         </a>
-
-        <a href="./politique-confidentialite" class="card group hover:border-primary/50 border border-transparent">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2 group-hover:text-primary transition-colors">
-            Politique de Confidentialité
-          </h3>
-          <p class="text-police-grey text-sm">
-            Comment nous collectons, utilisons et protégeons vos données personnelles.
-          </p>
-        </a>
-
-        <a href="./conditions-generales-utilisation" class="card group hover:border-primary/50 border border-transparent">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2 group-hover:text-primary transition-colors">
-            Conditions Générales d'Utilisation
-          </h3>
-          <p class="text-police-grey text-sm">
-            Les conditions régissant l'utilisation de nos services.
-          </p>
-        </a>
+        <% }); %>
       </div>
     </div>
   </section>

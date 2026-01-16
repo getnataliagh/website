@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Mentions Légales | <%= locals.site.name %></title>
-  <meta name="description" content="Mentions légales du site Natalia - Assistante vocale IA">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -13,7 +13,6 @@
 
 <!-- Hero Section -->
 <section class="relative bg-[#030014] overflow-hidden py-20 md:py-28">
-  <!-- Animated background -->
   <div class="absolute inset-0">
     <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
     <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
@@ -22,21 +21,19 @@
 
   <div class="container-content relative z-10">
     <div class="text-center max-w-3xl mx-auto">
-      <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-on-scroll">
         <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
         </svg>
-        <span class="text-primary font-medium text-sm tracking-wide">Informations légales</span>
+        <span class="text-primary font-medium text-sm tracking-wide"><%= locals.legalNotice.badge %></span>
       </div>
 
-      <!-- Title -->
       <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Mentions <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Légales</span>
+        <%= locals.legalNotice.title %> <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"><%= locals.legalNotice.titleHighlight %></span>
       </h1>
 
       <p class="hero-subtitle text-lg text-white/60 max-w-2xl mx-auto">
-        Informations légales et réglementaires concernant le site Natalia
+        <%= locals.legalNotice.subtitle %>
       </p>
     </div>
   </div>
@@ -46,10 +43,9 @@
 <section class="py-16 md:py-24 bg-background-2">
   <div class="container-content max-w-5xl">
 
-    <!-- Grid of legal cards -->
     <div class="grid grid-cols-1 gap-6 mb-8" data-stagger>
 
-      <!-- Éditeur du site -->
+      <!-- Editeur du site -->
       <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-primary/20 to-purple-600/20 border border-primary/30 flex items-center justify-center">
@@ -58,32 +54,14 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-2xl font-bold text-police-titre mb-4">Éditeur du site</h2>
+            <h2 class="text-2xl font-bold text-police-titre mb-4"><%= locals.legalNotice.sections.editor.title %></h2>
             <div class="space-y-2 text-police-grey">
+              <% locals.legalNotice.sections.editor.items.forEach(function(item) { %>
               <p class="flex items-start gap-2">
                 <span class="text-primary mt-1">•</span>
-                <span>Le site <strong class="text-police-titre">getnatalia.com</strong> est édité par <strong class="text-police-titre">Natalia SAS</strong></span>
+                <span><%= item %></span>
               </p>
-              <p class="flex items-start gap-2">
-                <span class="text-primary mt-1">•</span>
-                <span>Forme juridique : SAS, société par actions simplifiée</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-primary mt-1">•</span>
-                <span>Siège social : 3 rue Jean Jaurès - 85000 La Roche sur Yon</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-primary mt-1">•</span>
-                <span>SIREN : <strong class="text-police-titre font-mono">990 566 499</strong></span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-primary mt-1">•</span>
-                <span>SIRET (siège) : <strong class="text-police-titre font-mono">990 566 499 00010</strong></span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-primary mt-1">•</span>
-                <span>TVA intracommunautaire : <strong class="text-police-titre font-mono">FR40990566499</strong></span>
-              </p>
+              <% }); %>
             </div>
           </div>
         </div>
@@ -98,22 +76,22 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-2xl font-bold text-police-titre mb-4">Directeur de la publication</h2>
+            <h2 class="text-2xl font-bold text-police-titre mb-4"><%= locals.legalNotice.sections.director.title %></h2>
             <div class="space-y-2 text-police-grey">
               <p class="flex items-start gap-2">
                 <span class="text-emerald-500 mt-1">•</span>
-                <span><strong class="text-police-titre">Natalia SAS</strong></span>
+                <span><strong class="text-police-titre"><%= locals.legalNotice.sections.director.company %></strong></span>
               </p>
               <p class="flex items-start gap-2">
                 <span class="text-emerald-500 mt-1">•</span>
-                <span>Contact : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a></span>
+                <span><%= locals.legalNotice.sections.director.contactLabel %> : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a></span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Hébergement -->
+      <!-- Hebergement -->
       <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.2s;">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 border border-amber-500/30 flex items-center justify-center">
@@ -122,30 +100,20 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-2xl font-bold text-police-titre mb-4">Hébergement</h2>
+            <h2 class="text-2xl font-bold text-police-titre mb-4"><%= locals.legalNotice.sections.hosting.title %></h2>
             <div class="space-y-2 text-police-grey">
+              <% locals.legalNotice.sections.hosting.items.forEach(function(item) { %>
               <p class="flex items-start gap-2">
                 <span class="text-amber-500 mt-1">•</span>
-                <span>Le site est hébergé par <strong class="text-police-titre">Netlify, Inc.</strong></span>
+                <span><%= item %></span>
               </p>
-              <p class="flex items-start gap-2">
-                <span class="text-amber-500 mt-1">•</span>
-                <span>2325 3rd Street, Suite 215</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-amber-500 mt-1">•</span>
-                <span>San Francisco, California 94107</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-amber-500 mt-1">•</span>
-                <span>United States</span>
-              </p>
+              <% }); %>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Propriété intellectuelle -->
+      <!-- Propriete intellectuelle -->
       <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.3s;">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 flex items-center justify-center">
@@ -154,15 +122,15 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-2xl font-bold text-police-titre mb-4">Propriété intellectuelle</h2>
+            <h2 class="text-2xl font-bold text-police-titre mb-4"><%= locals.legalNotice.sections.intellectualProperty.title %></h2>
             <p class="text-police-grey leading-relaxed">
-              L'ensemble des éléments figurant sur le site (textes, logos, images, éléments graphiques, sons, logiciels, etc.) sont protégés par les dispositions du Code de la Propriété Intellectuelle. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sauf autorisation écrite préalable.
+              <%= locals.legalNotice.sections.intellectualProperty.text %>
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Données personnelles -->
+      <!-- Donnees personnelles -->
       <div class="bento-card bg-white p-8 md:p-10 rounded-2xl" data-animate="fade-up" style="--delay: 0.4s;">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border border-cyan-500/30 flex items-center justify-center">
@@ -171,23 +139,19 @@
             </svg>
           </div>
           <div class="flex-grow">
-            <h2 class="text-2xl font-bold text-police-titre mb-4">Données personnelles</h2>
+            <h2 class="text-2xl font-bold text-police-titre mb-4"><%= locals.legalNotice.sections.personalData.title %></h2>
             <div class="space-y-4 text-police-grey leading-relaxed">
-              <p>
-                Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.
-              </p>
-              <p>
-                Pour exercer ces droits, vous pouvez nous contacter à : <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a>
-              </p>
+              <p><%= locals.legalNotice.sections.personalData.text1 %></p>
+              <p><%= locals.legalNotice.sections.personalData.text2 %> <a href="mailto:<%= locals.site.email %>" class="text-primary hover:underline font-medium"><%= locals.site.email %></a></p>
               <div class="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
                 <p class="flex items-center gap-2 text-primary font-medium">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
-                  Plus d'informations
+                  <%= locals.legalNotice.sections.personalData.moreInfo %>
                 </p>
                 <p class="mt-2 text-sm">
-                  Pour plus d'informations, consultez notre <a href="./politique-confidentialite" class="text-primary hover:underline font-semibold">politique de confidentialité</a>.
+                  <%= locals.legalNotice.sections.personalData.moreInfoText %> <a href="<%= locals.legalNotice.cta.privacyButtonUrl %>" class="text-primary hover:underline font-semibold"><%= locals.legalNotice.sections.personalData.privacyLink %></a>.
                 </p>
               </div>
             </div>
@@ -202,26 +166,25 @@
 
 <!-- CTA Section -->
 <section class="py-16 md:py-20 bg-gradient-animated text-white relative overflow-hidden">
-  <!-- Decorative shapes -->
   <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
   <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
 
   <div class="container-content text-center relative z-10">
     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white animate-on-scroll">
-      Des questions ?
+      <%= locals.legalNotice.cta.title %>
     </h2>
     <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-on-scroll">
-      Notre équipe est à votre disposition pour répondre à toutes vos questions.
+      <%= locals.legalNotice.cta.subtitle %>
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
       <a href="./contact" class="btn btn-white">
-        Nous contacter
+        <%= locals.legalNotice.cta.contactButton %>
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
-      <a href="./politique-confidentialite" class="btn btn-outline">
-        Politique de confidentialité
+      <a href="<%= locals.legalNotice.cta.privacyButtonUrl %>" class="btn btn-outline">
+        <%= locals.legalNotice.cta.privacyButton %>
       </a>
     </div>
   </div>

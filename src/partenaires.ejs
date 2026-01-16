@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Partenaires - Natalia, Assistante Vocale IA</title>
-  <meta name="description" content="Découvrez nos partenaires technologiques et revendeurs. Rejoignez l'écosystème Natalia.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -18,10 +18,10 @@
     <div class="container-content relative z-10">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-          Nos <span class="text-gradient">partenaires</span>
+          <%= locals.partnersPage.hero.title %> <span class="text-gradient"><%= locals.partnersPage.hero.titleHighlight %></span>
         </h1>
         <p class="hero-subtitle text-xl text-police-grey">
-          Un écosystème de partenaires technologiques et commerciaux pour vous offrir les meilleures solutions.
+          <%= locals.partnersPage.hero.subtitle %>
         </p>
       </div>
     </div>
@@ -31,7 +31,7 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Partenaires <span class="text-gradient">technologiques</span>
+        <%= locals.partnersPage.techPartners.title %> <span class="text-gradient"><%= locals.partnersPage.techPartners.titleHighlight %></span>
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8" data-stagger-scale>
         <div class="card flex items-center justify-center p-8 hover:shadow-lg transition-shadow">
@@ -54,7 +54,7 @@
   <section class="section bg-gray-50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Partenaires secteur <span class="text-gradient">automobile</span>
+        <%= locals.partnersPage.autoPartners.title %> <span class="text-gradient"><%= locals.partnersPage.autoPartners.titleHighlight %></span>
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6" data-stagger-scale>
         <div class="card flex items-center justify-center p-6 bg-white hover:shadow-lg transition-shadow">
@@ -76,62 +76,40 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div class="animate-on-scroll">
           <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-6">
-            Devenez <span class="text-gradient">partenaire</span>
+            <%= locals.partnersPage.becomePartner.title %> <span class="text-gradient"><%= locals.partnersPage.becomePartner.titleHighlight %></span>
           </h2>
           <p class="text-lg text-police-grey mb-4">
-            Vous êtes un éditeur de logiciel, un intégrateur téléphonique ou un revendeur ?
+            <%= locals.partnersPage.becomePartner.intro %>
           </p>
           <p class="text-police-grey mb-6">
-            Rejoignez notre programme partenaires et proposez Natalia à vos clients. Bénéficiez de notre accompagnement technique et commercial.
+            <%= locals.partnersPage.becomePartner.description %>
           </p>
           <ul class="space-y-3 mb-8">
+            <% locals.partnersPage.becomePartner.benefits.forEach(function(benefit) { %>
             <li class="flex items-center gap-3 text-police-grey">
               <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              Formation technique complète
+              <%= benefit %>
             </li>
-            <li class="flex items-center gap-3 text-police-grey">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              Support commercial et marketing
-            </li>
-            <li class="flex items-center gap-3 text-police-grey">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              Commission attractive sur les ventes
-            </li>
-            <li class="flex items-center gap-3 text-police-grey">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              Accès prioritaire aux nouvelles fonctionnalités
-            </li>
+            <% }); %>
           </ul>
           <a href="./contact" class="btn btn-primary inline-flex items-center gap-2" data-track-content data-content-name="CTA Become Partner" data-content-piece="Partners Benefits">
-            Devenir partenaire
+            <%= locals.partnersPage.becomePartner.button %>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
         </div>
         <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 animate-on-scroll--scale">
-          <h3 class="text-xl font-bold text-police-titre mb-6">Types de partenariats</h3>
+          <h3 class="text-xl font-bold text-police-titre mb-6"><%= locals.partnersPage.becomePartner.typesTitle %></h3>
           <div class="space-y-4">
+            <% locals.partnersPage.becomePartner.types.forEach(function(type) { %>
             <div class="bg-white rounded-lg p-4">
-              <h4 class="font-semibold text-police-titre mb-1">Intégrateurs téléphonie</h4>
-              <p class="text-sm text-police-grey">Connectez Natalia à vos solutions de téléphonie d'entreprise.</p>
+              <h4 class="font-semibold text-police-titre mb-1"><%= type.title %></h4>
+              <p class="text-sm text-police-grey"><%= type.description %></p>
             </div>
-            <div class="bg-white rounded-lg p-4">
-              <h4 class="font-semibold text-police-titre mb-1">Éditeurs de logiciels</h4>
-              <p class="text-sm text-police-grey">Intégrez l'IA vocale Natalia dans vos applications.</p>
-            </div>
-            <div class="bg-white rounded-lg p-4">
-              <h4 class="font-semibold text-police-titre mb-1">Revendeurs</h4>
-              <p class="text-sm text-police-grey">Commercialisez Natalia auprès de vos clients.</p>
-            </div>
+            <% }); %>
           </div>
         </div>
       </div>
@@ -146,14 +124,14 @@
 
     <div class="container-content text-center relative z-10">
       <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 animate-on-scroll">
-        Intéressé par un partenariat ?
+        <%= locals.partnersPage.cta.title %>
       </h2>
       <p class="text-xl mb-8 opacity-90 animate-on-scroll">
-        Contactez notre équipe partenariats pour discuter des opportunités.
+        <%= locals.partnersPage.cta.subtitle %>
       </p>
       <div class="animate-on-scroll">
         <a href="./contact" class="btn btn-white inline-flex items-center gap-2" data-track-content data-content-name="CTA Contact" data-content-piece="Partners Footer CTA">
-          Nous contacter
+          <%= locals.partnersPage.cta.button %>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>

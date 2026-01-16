@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Page non trouvée | <%= locals.site.name %></title>
-  <meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
   <style>
     /* Animation SVG 404 */
@@ -175,17 +175,16 @@
         </div>
 
         <h1 class="text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-          Page non trouvée
+          <%= locals.ui.pageNotFound %>
         </h1>
         <p class="text-police-grey text-lg mb-8 max-w-lg mx-auto">
-          La page que vous recherchez n'existe pas ou a été déplacée.
-          Retournez à l'accueil pour continuer votre navigation.
+          <%= locals.ui.pageNotFoundDescription %>
         </p>
-        <a href="./" class="btn-primary inline-flex items-center gap-2" data-track-content data-content-name="CTA Home" data-content-piece="404 Page">
+        <a href="<%= locals.prefix %>/" class="btn-primary inline-flex items-center gap-2" data-track-content data-content-name="CTA Home" data-content-piece="404 Page">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
-          Retour à l'accueil
+          <%= locals.ui.backToHome %>
         </a>
       </div>
     </div>

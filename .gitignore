@@ -30,6 +30,12 @@ CLAUDE.md
 # Parcel cache
 .parcel-cache/
 
+# Build temp directory
+temp/
+
+# Rust build artifacts
+scripts/build-i18n/target/
+
 # Playwright screenshots
 .playwright-mcp/
 

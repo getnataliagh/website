@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Politique de Confidentialité | <%= locals.site.name %></title>
-  <meta name="description" content="Politique de confidentialité et protection des données personnelles de Natalia">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -10,9 +10,8 @@
 
 <main class="flex-grow">
 
-<!-- Hero Section - Dark Premium -->
+<!-- Hero Section -->
 <section class="relative bg-[#030014] overflow-hidden py-24 md:py-32">
-  <!-- Animated background -->
   <div class="absolute inset-0">
     <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary/30 to-transparent rounded-full blur-[120px] animate-pulse-slow"></div>
     <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-secondary/20 to-transparent rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
@@ -21,25 +20,23 @@
 
   <div class="container-content relative z-10">
     <div class="max-w-4xl mx-auto text-center">
-      <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-on-scroll">
         <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
         </svg>
-        <span class="text-primary font-medium text-sm tracking-wide">Protection de vos données</span>
+        <span class="text-primary font-medium text-sm tracking-wide"><%= locals.privacyPolicy.badge %></span>
       </div>
 
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-on-scroll">
-        Politique de <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Confidentialité</span>
+        <%= locals.privacyPolicy.title %> <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"><%= locals.privacyPolicy.titleHighlight %></span>
       </h1>
 
       <p class="text-lg md:text-xl text-white/60 max-w-2xl mx-auto animate-on-scroll">
-        Nous prenons la protection de vos données personnelles très au sérieux. Découvrez comment nous collectons, utilisons et protégeons vos informations.
+        <%= locals.privacyPolicy.subtitle %>
       </p>
     </div>
   </div>
 
-  <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
     <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -52,7 +49,7 @@
   <div class="container-content">
     <div class="max-w-3xl mx-auto text-center animate-on-scroll">
       <p class="text-lg text-police-grey leading-relaxed">
-        La présente politique de confidentialité a pour but de vous informer de manière claire et transparente sur la manière dont nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD.
+        <%= locals.privacyPolicy.intro %>
       </p>
     </div>
   </div>
@@ -63,10 +60,9 @@
   <div class="container-content">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" data-stagger>
 
-      <!-- Collecte des données -->
+      <!-- Collecte des donnees -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 group" data-animate="fade-up">
         <div class="relative z-10 p-8 h-full">
-          <!-- Icon -->
           <div class="w-14 h-14 mb-6 relative">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity blur-xl"></div>
             <div class="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-2xl border border-blue-500/30 flex items-center justify-center group-hover:border-blue-500/60 transition-colors">
@@ -77,52 +73,29 @@
           </div>
 
           <h3 class="text-2xl font-bold text-police-titre mb-4 group-hover:text-blue-500 transition-colors">
-            Collecte des données
+            <%= locals.privacyPolicy.dataCollection.title %>
           </h3>
 
           <p class="text-police-grey mb-6 leading-relaxed">
-            Nous collectons les données personnelles que vous nous fournissez directement lors de votre utilisation de nos services :
+            <%= locals.privacyPolicy.dataCollection.description %>
           </p>
 
           <ul class="space-y-3">
+            <% locals.privacyPolicy.dataCollection.items.forEach(function(item) { %>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-police-grey">Nom et prénom</span>
+              <span class="text-police-grey"><%= item %></span>
             </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Adresse email</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Numéro de téléphone</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Nom de l'entreprise</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Données de connexion et d'utilisation</span>
-            </li>
+            <% }); %>
           </ul>
         </div>
       </div>
 
-      <!-- Utilisation des données -->
+      <!-- Utilisation des donnees -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 group" data-animate="fade-up" style="--delay: 0.1s;">
         <div class="relative z-10 p-8 h-full">
-          <!-- Icon -->
           <div class="w-14 h-14 mb-6 relative">
             <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity blur-xl"></div>
             <div class="relative w-full h-full bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 rounded-2xl border border-emerald-500/30 flex items-center justify-center group-hover:border-emerald-500/60 transition-colors">
@@ -133,38 +106,22 @@
           </div>
 
           <h3 class="text-2xl font-bold text-police-titre mb-4 group-hover:text-emerald-500 transition-colors">
-            Utilisation des données
+            <%= locals.privacyPolicy.dataUsage.title %>
           </h3>
 
           <p class="text-police-grey mb-6 leading-relaxed">
-            Vos données personnelles sont utilisées exclusivement pour :
+            <%= locals.privacyPolicy.dataUsage.description %>
           </p>
 
           <ul class="space-y-3">
+            <% locals.privacyPolicy.dataUsage.items.forEach(function(item) { %>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-police-grey">Fournir et améliorer nos services</span>
+              <span class="text-police-grey"><%= item %></span>
             </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Répondre à vos demandes et questions</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Vous envoyer des informations relatives à nos services</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-police-grey">Analyser l'utilisation de notre site pour l'améliorer</span>
-            </li>
+            <% }); %>
           </ul>
         </div>
       </div>
@@ -173,7 +130,7 @@
   </div>
 </section>
 
-<!-- Protection Section - Full width dark -->
+<!-- Protection Section -->
 <section class="relative bg-[#030014] overflow-hidden py-24">
   <div class="absolute inset-0">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/20 to-secondary/10 rounded-full blur-[150px] animate-pulse-slow"></div>
@@ -185,11 +142,11 @@
         <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
         </svg>
-        <span class="text-primary font-medium text-sm tracking-wide">Sécurité maximale</span>
+        <span class="text-primary font-medium text-sm tracking-wide"><%= locals.privacyPolicy.protection.badge %></span>
       </div>
 
       <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
-        Protection de <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">vos données</span>
+        <%= locals.privacyPolicy.protection.title %> <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><%= locals.privacyPolicy.protection.titleHighlight %></span>
       </h2>
     </div>
 
@@ -198,45 +155,26 @@
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p class="text-white/80 text-lg leading-relaxed mb-6">
-              Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès, modification, divulgation ou destruction non autorisée.
+              <%= locals.privacyPolicy.protection.description %>
             </p>
 
             <div class="space-y-4">
+              <% var protectionIcons = ['M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z', 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', 'M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z']; %>
+              <% var protectionColors = ['primary', 'emerald-400', 'amber-400']; %>
+              <% var protectionBgs = ['bg-primary/20', 'bg-emerald-500/20', 'bg-amber-500/20']; %>
+              <% locals.privacyPolicy.protection.features.forEach(function(feature, index) { %>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                <div class="w-10 h-10 rounded-lg <%= protectionBgs[index] %> flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-<%= protectionColors[index] %>" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= protectionIcons[index] %>"></path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="text-white font-semibold mb-1">Chiffrement des données</h4>
-                  <p class="text-white/60 text-sm">Toutes vos données sont chiffrées en transit et au repos</p>
+                  <h4 class="text-white font-semibold mb-1"><%= feature.title %></h4>
+                  <p class="text-white/60 text-sm"><%= feature.description %></p>
                 </div>
               </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-white font-semibold mb-1">Conformité RGPD</h4>
-                  <p class="text-white/60 text-sm">Respect strict du règlement européen sur la protection des données</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-white font-semibold mb-1">Accès contrôlé</h4>
-                  <p class="text-white/60 text-sm">Authentification forte et gestion des droits d'accès</p>
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
 
@@ -253,110 +191,45 @@
   </div>
 </section>
 
-<!-- Vos droits RGPD - Grid Cards -->
+<!-- Vos droits RGPD -->
 <section class="py-24 bg-white">
   <div class="container-content">
     <div class="text-center mb-16 animate-on-scroll">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
         <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-        <span class="text-primary font-medium text-sm tracking-wide">RGPD</span>
+        <span class="text-primary font-medium text-sm tracking-wide"><%= locals.privacyPolicy.rights.badge %></span>
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-police-titre mb-4">
-        Vos <span class="text-gradient">droits</span>
+        <%= locals.privacyPolicy.rights.title %> <span class="text-gradient"><%= locals.privacyPolicy.rights.titleHighlight %></span>
       </h2>
       <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        Conformément au RGPD, vous disposez de droits étendus sur vos données personnelles
+        <%= locals.privacyPolicy.rights.description %>
       </p>
     </div>
 
+    <% var rightsIcons = ['M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z', 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', 'M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16', 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z', 'M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4', 'M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636']; %>
+    <% var rightsBgs = ['bg-blue-500/10', 'bg-emerald-500/10', 'bg-red-500/10', 'bg-amber-500/10', 'bg-purple-500/10', 'bg-primary/10']; %>
+    <% var rightsColors = ['text-blue-500', 'text-emerald-500', 'text-red-500', 'text-amber-500', 'text-purple-500', 'text-primary']; %>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger>
-
-      <!-- Droit d'accès -->
+      <% locals.privacyPolicy.rights.items.forEach(function(item, index) { %>
       <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 group-hover:scale-110 transition-transform">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl <%= rightsBgs[index] %> <%= rightsColors[index] %> group-hover:scale-110 transition-transform">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= rightsIcons[index] %>"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-blue-500 transition-colors">Droit d'accès</h3>
+        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:<%= rightsColors[index] %> transition-colors"><%= item.title %></h3>
         <p class="text-police-grey text-sm">
-          Consultez l'intégralité de vos données personnelles que nous détenons
+          <%= item.description %>
         </p>
       </div>
-
-      <!-- Droit de rectification -->
-      <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-500 group-hover:scale-110 transition-transform">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-emerald-500 transition-colors">Droit de rectification</h3>
-        <p class="text-police-grey text-sm">
-          Modifiez ou corrigez vos informations personnelles à tout moment
-        </p>
-      </div>
-
-      <!-- Droit à l'effacement -->
-      <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-red-500/10 text-red-500 group-hover:scale-110 transition-transform">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-red-500 transition-colors">Droit à l'effacement</h3>
-        <p class="text-police-grey text-sm">
-          Demandez la suppression définitive de vos données personnelles
-        </p>
-      </div>
-
-      <!-- Droit à la limitation -->
-      <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500 group-hover:scale-110 transition-transform">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-amber-500 transition-colors">Droit à la limitation</h3>
-        <p class="text-police-grey text-sm">
-          Limitez le traitement de vos données dans certaines conditions
-        </p>
-      </div>
-
-      <!-- Droit à la portabilité -->
-      <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-purple-500/10 text-purple-500 group-hover:scale-110 transition-transform">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-purple-500 transition-colors">Droit à la portabilité</h3>
-        <p class="text-police-grey text-sm">
-          Récupérez vos données dans un format structuré et réutilisable
-        </p>
-      </div>
-
-      <!-- Droit d'opposition -->
-      <div class="card card-bordered p-8 card-glow text-center group">
-        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3 group-hover:text-primary transition-colors">Droit d'opposition</h3>
-        <p class="text-police-grey text-sm">
-          Opposez-vous au traitement de vos données pour des raisons légitimes
-        </p>
-      </div>
-
+      <% }); %>
     </div>
   </div>
 </section>
 
-<!-- Contact Section - CTA -->
+<!-- Contact Section -->
 <section class="section bg-gradient-animated text-white relative overflow-hidden">
-  <!-- Decorative shapes -->
   <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
   <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
 
@@ -365,30 +238,30 @@
       <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
       </svg>
-      <span class="text-white font-medium">Contact</span>
+      <span class="text-white font-medium"><%= locals.privacyPolicy.cta.badge %></span>
     </div>
 
     <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
-      Des questions sur vos données ?
+      <%= locals.privacyPolicy.cta.title %>
     </h2>
 
     <p class="text-lg text-white/90 mb-4 max-w-2xl mx-auto animate-on-scroll">
-      Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits RGPD, notre équipe est à votre disposition.
+      <%= locals.privacyPolicy.cta.subtitle %>
     </p>
 
     <p class="text-white/70 mb-8 animate-on-scroll">
-      Contactez-nous à : <a href="mailto:<%= locals.site.email %>" class="text-white font-semibold underline hover:no-underline"><%= locals.site.email %></a>
+      <%= locals.privacyPolicy.cta.contactLabel %> <a href="mailto:<%= locals.site.email %>" class="text-white font-semibold underline hover:no-underline"><%= locals.site.email %></a>
     </p>
 
     <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
       <a href="./contact" class="btn btn-white">
-        Nous contacter
+        <%= locals.privacyPolicy.cta.contactButton %>
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
       <a href="./" class="btn btn-outline">
-        Retour à l'accueil
+        <%= locals.privacyPolicy.cta.homeButton %>
       </a>
     </div>
   </div>
