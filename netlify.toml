@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && npm install && npm run build:i18n:compile && npm run build"
   publish = "dist"
 
 [build.environment]
@@ -42,8 +42,139 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# 404 fallback
+# ============================================
+# i18n Language Detection and Redirects
+# ============================================
+
+# Language detection on root - French speakers go to /fr/
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  conditions = {Language = ["fr"]}
+
+# Default: English speakers and others go to /en/
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+
+# ============================================
+# Redirects for old French URLs (without /fr/ prefix)
+# ============================================
+[[redirects]]
+  from = "/contact"
+  to = "/fr/contact"
+  status = 301
+
+[[redirects]]
+  from = "/assistante-vocale-ia"
+  to = "/fr/assistante-vocale-ia"
+  status = 301
+
+[[redirects]]
+  from = "/analyse"
+  to = "/fr/analyse"
+  status = 301
+
+[[redirects]]
+  from = "/whatsapp"
+  to = "/fr/whatsapp"
+  status = 301
+
+[[redirects]]
+  from = "/automobile"
+  to = "/fr/automobile"
+  status = 301
+
+[[redirects]]
+  from = "/centre-d-appel"
+  to = "/fr/centre-d-appel"
+  status = 301
+
+[[redirects]]
+  from = "/helpdesk"
+  to = "/fr/helpdesk"
+  status = 301
+
+[[redirects]]
+  from = "/hotline"
+  to = "/fr/hotline"
+  status = 301
+
+[[redirects]]
+  from = "/calculateur"
+  to = "/fr/calculateur"
+  status = 301
+
+[[redirects]]
+  from = "/a-propos"
+  to = "/fr/a-propos"
+  status = 301
+
+[[redirects]]
+  from = "/partenaires"
+  to = "/fr/partenaires"
+  status = 301
+
+[[redirects]]
+  from = "/presse"
+  to = "/fr/presse"
+  status = 301
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/fr/mentions-legales"
+  status = 301
+
+[[redirects]]
+  from = "/politique-confidentialite"
+  to = "/fr/politique-confidentialite"
+  status = 301
+
+[[redirects]]
+  from = "/conditions-generales-utilisation"
+  to = "/fr/conditions-generales-utilisation"
+  status = 301
+
+[[redirects]]
+  from = "/assistant-mail-automatisation-ia"
+  to = "/fr/assistant-mail-automatisation-ia"
+  status = 301
+
+[[redirects]]
+  from = "/legal"
+  to = "/fr/legal"
+  status = 301
+
+# ============================================
+# Clean URLs for both locales
+# ============================================
+[[redirects]]
+  from = "/fr/*"
+  to = "/fr/:splat.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/:splat.html"
+  status = 200
+
+# ============================================
+# 404 handling per language
+# ============================================
+[[redirects]]
+  from = "/fr/*"
+  to = "/fr/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+
+# Default 404 fallback
 [[redirects]]
   from = "/*"
-  to = "/404.html"
+  to = "/fr/404.html"
   status = 404

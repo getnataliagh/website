@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Calculateur ROI - Natalia, Assistante Vocale IA</title>
-  <meta name="description" content="Calculez les économies réalisables avec Natalia, l'assistante vocale IA. Estimez votre retour sur investissement.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -18,10 +18,10 @@
     <div class="container-content relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-12">
         <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-          Calculez vos <span class="text-gradient">économies</span> avec Natalia
+          <%= locals.calculatorPage.hero.title %> <span class="text-gradient"><%= locals.calculatorPage.hero.titleHighlight %></span> <%= locals.calculatorPage.hero.titleEnd %>
         </h1>
         <p class="hero-subtitle text-lg text-police-grey">
-          Estimez le retour sur investissement que Natalia peut vous apporter en fonction de votre volume d'appels.
+          <%= locals.calculatorPage.hero.subtitle %>
         </p>
       </div>
     </div>
@@ -33,8 +33,16 @@
       <div class="max-w-4xl mx-auto animate-on-scroll">
         <div class="bg-white rounded-card p-6 shadow-xl border border-primary/10">
           <h2 class="text-h3 font-bold text-police-titre mb-8 text-center">
-            Simulateur de <span class="text-gradient">ROI</span>
+            <%= locals.calculatorPage.calculator.title %> <span class="text-gradient"><%= locals.calculatorPage.calculator.titleHighlight %></span>
           </h2>
+
+          <!-- Hidden element for passing locale data to JS -->
+          <div id="locale-data" class="hidden"
+            data-unit-currency="<%= locals.calculatorPage.units.euros %>"
+            data-unit-hours="<%= locals.calculatorPage.units.hours %>"
+            data-unit-min="<%= locals.calculatorPage.units.min %>"
+            data-unit-percent="<%= locals.calculatorPage.units.percent %>">
+          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Input Section -->
@@ -42,91 +50,91 @@
               <!-- Calls Slider -->
               <div class="slider-group">
                 <label for="calls" class="form-label">
-                  Nombre d'appels entrants par mois
+                  <%= locals.calculatorPage.calculator.sliders.calls.label %>
                 </label>
                 <input type="range" id="calls" min="100" max="10000" value="1000" step="100" class="form-range">
                 <div class="flex justify-between text-sm mt-2">
-                  <span class="text-police-grey">100</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.calls.min %></span>
                   <span id="calls-value" class="font-bold text-primary text-lg">1 000</span>
-                  <span class="text-police-grey">10 000</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.calls.max %></span>
                 </div>
               </div>
 
               <!-- Missed Slider -->
               <div class="slider-group">
                 <label for="missed" class="form-label">
-                  Taux d'appels manqués actuel (%)
+                  <%= locals.calculatorPage.calculator.sliders.missed.label %>
                 </label>
                 <input type="range" id="missed" min="10" max="60" value="30" step="5" class="form-range">
                 <div class="flex justify-between text-sm mt-2">
-                  <span class="text-police-grey">10%</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.missed.min %></span>
                   <span id="missed-value" class="font-bold text-primary text-lg">30%</span>
-                  <span class="text-police-grey">60%</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.missed.max %></span>
                 </div>
               </div>
 
               <!-- Cost Slider -->
               <div class="slider-group">
                 <label for="cost" class="form-label">
-                  Coût horaire moyen d'un agent (euros)
+                  <%= locals.calculatorPage.calculator.sliders.cost.label %>
                 </label>
                 <input type="range" id="cost" min="15" max="50" value="25" step="1" class="form-range">
                 <div class="flex justify-between text-sm mt-2">
-                  <span class="text-police-grey">15 euros</span>
-                  <span id="cost-value" class="font-bold text-primary text-lg">25 euros</span>
-                  <span class="text-police-grey">50 euros</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.cost.min %></span>
+                  <span id="cost-value" class="font-bold text-primary text-lg">25 <%= locals.calculatorPage.units.euros %></span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.cost.max %></span>
                 </div>
               </div>
 
               <!-- Duration Slider -->
               <div class="slider-group">
                 <label for="duration" class="form-label">
-                  Durée moyenne d'un appel (minutes)
+                  <%= locals.calculatorPage.calculator.sliders.duration.label %>
                 </label>
                 <input type="range" id="duration" min="2" max="15" value="5" step="1" class="form-range">
                 <div class="flex justify-between text-sm mt-2">
-                  <span class="text-police-grey">2 min</span>
-                  <span id="duration-value" class="font-bold text-primary text-lg">5 min</span>
-                  <span class="text-police-grey">15 min</span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.duration.min %></span>
+                  <span id="duration-value" class="font-bold text-primary text-lg">5 <%= locals.calculatorPage.units.min %></span>
+                  <span class="text-police-grey"><%= locals.calculatorPage.calculator.sliders.duration.max %></span>
                 </div>
               </div>
             </div>
 
             <!-- Results Section -->
             <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-6 border border-primary/10">
-              <h3 class="text-lg font-bold text-police-titre mb-6">Résultats estimés</h3>
+              <h3 class="text-lg font-bold text-police-titre mb-6"><%= locals.calculatorPage.calculator.results.title %></h3>
 
               <div class="space-y-4">
                 <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
-                  <div class="text-sm text-police-grey mb-1">Appels récupérés par mois</div>
+                  <div class="text-sm text-police-grey mb-1"><%= locals.calculatorPage.calculator.results.recovered %></div>
                   <div id="recovered" class="text-2xl font-bold text-primary">300</div>
                 </div>
 
                 <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
-                  <div class="text-sm text-police-grey mb-1">Heures économisées par mois</div>
-                  <div id="hours" class="text-2xl font-bold text-secondary">25 h</div>
+                  <div class="text-sm text-police-grey mb-1"><%= locals.calculatorPage.calculator.results.hours %></div>
+                  <div id="hours" class="text-2xl font-bold text-secondary">25 <%= locals.calculatorPage.units.hours %></div>
                 </div>
 
                 <div class="bg-white rounded-xl p-4 shadow-sm border border-primary/5">
-                  <div class="text-sm text-police-grey mb-1">Économies mensuelles estimées</div>
-                  <div id="savings" class="text-3xl font-bold text-gradient">625 euros</div>
+                  <div class="text-sm text-police-grey mb-1"><%= locals.calculatorPage.calculator.results.monthlySavings %></div>
+                  <div id="savings" class="text-3xl font-bold text-gradient">625 <%= locals.calculatorPage.units.euros %></div>
                 </div>
 
                 <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-xl p-5 shadow-lg">
-                  <div class="text-sm opacity-90 mb-1">Économies annuelles</div>
-                  <div id="annual" class="text-3xl font-bold">7 500 euros</div>
+                  <div class="text-sm opacity-90 mb-1"><%= locals.calculatorPage.calculator.results.annualSavings %></div>
+                  <div id="annual" class="text-3xl font-bold">7 500 <%= locals.calculatorPage.units.euros %></div>
                 </div>
               </div>
 
               <p class="text-xs text-police-grey mt-4 leading-relaxed">
-                * Estimation basée sur une prise en charge de 100% des appels par Natalia et une résolution de 60% des demandes sans intervention humaine.
+                <%= locals.calculatorPage.calculator.note %>
               </p>
             </div>
           </div>
 
           <div class="mt-10 text-center">
             <a href="./contact" class="btn-primary" data-track-content data-content-name="Request Custom Study" data-content-piece="ROI Calculator">
-              Demander une étude personnalisée
+              <%= locals.calculatorPage.calculator.button %>
               <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -137,46 +145,29 @@
     </div>
   </section>
 
+  <% var benefitIcons = ['M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z', 'M13 10V3L4 14h7v7l9-11h-7z', 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z']; %>
+  <% var benefitColors = ['bg-success/10 text-success', 'bg-primary/10 text-primary', 'bg-secondary/10 text-secondary']; %>
+
   <!-- Benefits Section -->
   <section class="section bg-background-2">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Au-delà des <span class="text-gradient">économies</span>
+        <%= locals.calculatorPage.benefits.title %> <span class="text-gradient"><%= locals.calculatorPage.benefits.titleHighlight %></span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <% locals.calculatorPage.benefits.items.forEach(function(item, index) { %>
         <div class="card bg-white text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-success/10 text-success">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full <%= benefitColors[index] %>">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= benefitIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-police-titre mb-3">Satisfaction client</h3>
+          <h3 class="text-xl font-semibold text-police-titre mb-3"><%= item.title %></h3>
           <p class="text-police-grey">
-            Plus d'attente, plus d'appels manqués. Vos clients sont pris en charge immédiatement.
+            <%= item.description %>
           </p>
         </div>
-        <div class="card bg-white text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-police-titre mb-3">Productivité</h3>
-          <p class="text-police-grey">
-            Vos équipes se concentrent sur les tâches à forte valeur ajoutée.
-          </p>
-        </div>
-        <div class="card bg-white text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-secondary/10 text-secondary">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-police-titre mb-3">Données</h3>
-          <p class="text-police-grey">
-            Collecte automatique de données pour mieux comprendre vos clients.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -189,14 +180,14 @@
 
     <div class="container-content text-center relative z-10">
       <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
-        Prêt à passer à l'action ?
+        <%= locals.calculatorPage.cta.title %>
       </h2>
       <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-on-scroll">
-        Demandez une étude personnalisée gratuite pour votre entreprise.
+        <%= locals.calculatorPage.cta.subtitle %>
       </p>
       <div class="animate-on-scroll">
         <a href="./contact" class="btn btn-white inline-flex items-center gap-2" data-track-content data-content-name="Request Study CTA" data-content-piece="Footer CTA Section">
-          Demander une étude
+          <%= locals.calculatorPage.cta.button %>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
@@ -210,6 +201,12 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const localeData = document.getElementById('locale-data');
+  const unitCurrency = localeData.dataset.unitCurrency;
+  const unitHours = localeData.dataset.unitHours;
+  const unitMin = localeData.dataset.unitMin;
+  const unitPercent = localeData.dataset.unitPercent;
+
   const callsInput = document.getElementById('calls');
   const missedInput = document.getElementById('missed');
   const costInput = document.getElementById('cost');
@@ -237,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update displayed values
     callsValue.textContent = formatNumber(calls);
-    missedValue.textContent = missedInput.value + '%';
-    costValue.textContent = cost + ' euros';
-    durationValue.textContent = duration + ' min';
+    missedValue.textContent = missedInput.value + unitPercent;
+    costValue.textContent = cost + ' ' + unitCurrency;
+    durationValue.textContent = duration + ' ' + unitMin;
 
     // Calculate results
     const recovered = Math.round(calls * missed);
@@ -249,9 +246,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update results with animation
     animateValue(recoveredEl, recovered, '');
-    animateValue(hoursEl, hours, ' h');
-    animateValue(savingsEl, savings, ' euros');
-    animateValue(annualEl, annual, ' euros');
+    animateValue(hoursEl, hours, ' ' + unitHours);
+    animateValue(savingsEl, savings, ' ' + unitCurrency);
+    animateValue(annualEl, annual, ' ' + unitCurrency);
   }
 
   function animateValue(element, value, suffix) {

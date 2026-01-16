@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Presse - Natalia, Assistante Vocale IA</title>
-  <meta name="description" content="Espace presse Natalia. Retrouvez nos communiqués de presse, kit média et contacts presse.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -18,10 +18,10 @@
     <div class="container-content relative z-10">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-          Espace <span class="text-gradient">Presse</span>
+          <%= locals.pressPage.hero.title %> <span class="text-gradient"><%= locals.pressPage.hero.titleHighlight %></span>
         </h1>
         <p class="hero-subtitle text-xl text-police-grey">
-          Retrouvez toutes les informations sur Natalia pour vos articles et reportages.
+          <%= locals.pressPage.hero.subtitle %>
         </p>
       </div>
     </div>
@@ -32,10 +32,10 @@
     <div class="container-content">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12" data-stagger>
           <h2 class="text-h3 font-bold text-police-titre mb-4">
-            Contact Presse
+            <%= locals.pressPage.contact.title %>
           </h2>
           <p class="text-police-grey mb-6">
-            Pour toute demande d'interview, d'information ou de partenariat éditorial, contactez notre équipe communication.
+            <%= locals.pressPage.contact.description %>
           </p>
           <a href="mailto:presse@getnatalia.com" class="text-primary hover:underline flex items-center gap-2 text-lg font-semibold">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,13 +46,13 @@
         </div>
         <div class="card">
           <h2 class="text-h3 font-bold text-police-titre mb-4">
-            À propos de Natalia
+            <%= locals.pressPage.about.title %>
           </h2>
           <p class="text-police-grey mb-4">
-            Natalia est une solution d'assistante vocale basée sur l'intelligence artificielle qui permet aux entreprises de répondre à 100% de leurs appels, 24h/24, 7j/7.
+            <%= locals.pressPage.about.text1 %>
           </p>
           <p class="text-police-grey">
-            Développée en France, Natalia s'intègre aux principaux outils métiers et offre une expérience vocale naturelle et fluide.
+            <%= locals.pressPage.about.text2 %>
           </p>
         </div>
       </div>
@@ -63,33 +63,17 @@
   <section class="section bg-gray-50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Chiffres <span class="text-gradient">clés</span>
+        <%= locals.pressPage.keyFacts.title %> <span class="text-gradient"><%= locals.pressPage.keyFacts.titleHighlight %></span>
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-stagger-scale>
+        <% locals.pressPage.keyFacts.items.forEach(function(fact) { %>
         <div class="card bg-white text-center">
           <div class="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
-            24/7
+            <%= fact.value %>
           </div>
-          <p class="text-police-grey text-sm">Disponibilité</p>
+          <p class="text-police-grey text-sm"><%= fact.label %></p>
         </div>
-        <div class="card bg-white text-center">
-          <div class="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
-            100%
-          </div>
-          <p class="text-police-grey text-sm">Appels traités</p>
-        </div>
-        <div class="card bg-white text-center">
-          <div class="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
-            &lt;1s
-          </div>
-          <p class="text-police-grey text-sm">Temps de réponse</p>
-        </div>
-        <div class="card bg-white text-center">
-          <div class="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
-            FR
-          </div>
-          <p class="text-police-grey text-sm">Hébergement</p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -98,25 +82,27 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Communiqués de <span class="text-gradient">presse</span>
+        <%= locals.pressPage.pressReleases.title %> <span class="text-gradient"><%= locals.pressPage.pressReleases.titleHighlight %></span>
       </h2>
       <div class="space-y-6 max-w-3xl mx-auto" data-stagger>
+        <% locals.pressPage.pressReleases.items.forEach(function(release) { %>
         <div class="card hover:shadow-lg transition-shadow">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <span class="text-sm text-police-grey">Janvier 2025</span>
+              <span class="text-sm text-police-grey"><%= release.date %></span>
               <h3 class="text-lg font-semibold text-police-titre mt-1">
-                Natalia : l'IA transforme la gestion administrative
+                <%= release.title %>
               </h3>
             </div>
-            <a href="https://www.informateurjudiciaire.fr/actualites/natalia-lia-transforme-la-gestion-administrative/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline flex items-center gap-1 flex-shrink-0">
-              Lire
+            <a href="<%= release.url %>" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline flex items-center gap-1 flex-shrink-0">
+              <%= locals.pressPage.pressReleases.readButton %>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
             </a>
           </div>
         </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -126,16 +112,16 @@
     <div class="container-content">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-6 animate-on-scroll">
-          Kit <span class="text-gradient">Média</span>
+          <%= locals.pressPage.mediaKit.title %> <span class="text-gradient"><%= locals.pressPage.mediaKit.titleHighlight %></span>
         </h2>
         <p class="text-lg text-police-grey mb-8 animate-on-scroll">
-          Téléchargez notre kit média contenant les logos, visuels et informations sur Natalia.
+          <%= locals.pressPage.mediaKit.description %>
         </p>
         <a href="#" class="btn btn-primary inline-flex items-center gap-2 animate-on-scroll" data-track-content data-content-name="Download Media Kit" data-content-piece="Press Media Section">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
           </svg>
-          Télécharger le kit média
+          <%= locals.pressPage.mediaKit.button %>
         </a>
       </div>
     </div>
@@ -149,14 +135,14 @@
 
     <div class="container-content text-center relative z-10">
       <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 animate-on-scroll">
-        Besoin d'informations ?
+        <%= locals.pressPage.cta.title %>
       </h2>
       <p class="text-xl mb-8 opacity-90 animate-on-scroll">
-        Notre équipe communication est à votre disposition.
+        <%= locals.pressPage.cta.subtitle %>
       </p>
       <div class="animate-on-scroll">
         <a href="mailto:presse@getnatalia.com" class="btn btn-white inline-flex items-center gap-2" data-track-content data-content-name="Contact Press Email" data-content-piece="Press Footer CTA">
-          Contacter l'équipe presse
+          <%= locals.pressPage.cta.button %>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>

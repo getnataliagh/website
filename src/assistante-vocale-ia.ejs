@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Assistante Vocale IA - Natalia automatise vos appels</title>
-  <meta name="description" content="Découvrez Natalia, l'assistante vocale IA qui répond à vos appels 24/7 avec une voix naturelle et une compréhension instantanée.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -19,25 +19,25 @@
           <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-            <span class="text-primary font-medium text-sm tracking-wide">Voicebot</span>
+            <span class="text-primary font-medium text-sm tracking-wide"><%= locals.voiceAssistant.hero.badge %></span>
           </div>
           <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-            Automatisez l'accueil téléphonique
-            <span class="text-gradient">et la gestion des demandes</span>
-            de premier niveau, 24/7
+            <%= locals.voiceAssistant.hero.title %>
+            <span class="text-gradient"><%= locals.voiceAssistant.hero.titleHighlight %></span>
+            <%= locals.voiceAssistant.hero.titleEnd %>
           </h1>
           <p class="hero-subtitle text-lg text-police-grey font-semibold mb-8">
-            Solution d'IA conversationnelle vocale qui gère les appels entrants, qualifie les demandes et résout les problèmes simples ou ouvre des tickets, garantissant une disponibilité et une réactivité maximale.
+            <%= locals.voiceAssistant.hero.subtitle %>
           </p>
           <div class="hero-cta flex flex-wrap gap-4">
             <a href="./contact" class="btn btn-primary inline-flex items-center gap-2" data-track-content data-content-name="CTA Demo" data-content-piece="Voice AI Hero">
-              Réserver une démo
+              <%= locals.voiceAssistant.hero.ctaDemo %>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <a href="./calculateur" class="btn btn-outline inline-flex items-center gap-2" data-track-content data-content-name="CTA Calculator" data-content-piece="Voice AI Hero">
-              Calculer mon ROI
+            <a href="<%= locals.cta.calculator.url %>" class="btn btn-outline inline-flex items-center gap-2" data-track-content data-content-name="CTA Calculator" data-content-piece="Voice AI Hero">
+              <%= locals.voiceAssistant.hero.ctaRoi %>
             </a>
           </div>
         </div>
@@ -89,11 +89,11 @@
               <div class="mt-6 flex justify-center gap-4">
                 <div class="px-4 py-2 bg-white rounded-full shadow-md border border-gray-100">
                   <span class="text-primary font-bold">24/7</span>
-                  <span class="text-police-grey text-sm ml-1">Disponible</span>
+                  <span class="text-police-grey text-sm ml-1"><%= locals.voiceAssistant.hero.available %></span>
                 </div>
                 <div class="px-4 py-2 bg-white rounded-full shadow-md border border-gray-100">
                   <span class="text-primary font-bold">3s</span>
-                  <span class="text-police-grey text-sm ml-1">Réponse</span>
+                  <span class="text-police-grey text-sm ml-1"><%= locals.voiceAssistant.hero.response %></span>
                 </div>
               </div>
             </div>
@@ -107,42 +107,25 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Ce qui fait la <span class="text-gradient">différence</span>
+        <%= locals.voiceAssistant.differentiators.title %> <span class="text-gradient"><%= locals.voiceAssistant.differentiators.titleHighlight %></span>
       </h2>
+      <% var diffIcons = ['M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z', 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z']; %>
+      <% var diffGradients = ['from-primary to-secondary', 'from-secondary to-primary', 'from-primary to-secondary']; %>
+      <% var diffDelays = ['0s', '0.5s', '1s']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <% locals.voiceAssistant.differentiators.items.forEach(function(item, index) { %>
         <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white animate-float" style="animation-delay: 0s;">
+          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br <%= diffGradients[index] %> text-white animate-float" style="animation-delay: <%= diffDelays[index] %>;">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= diffIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Voix naturelle</h3>
+          <h3 class="text-xl font-bold text-police-titre mb-3"><%= item.title %></h3>
           <p class="text-police-grey">
-            Pas de voix robotique. Natalia parle avec une voix naturelle et fluide qui met vos clients en confiance.
+            <%= item.description %>
           </p>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-secondary to-primary text-white animate-float" style="animation-delay: 0.5s;">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Compréhension IA</h3>
-          <p class="text-police-grey">
-            Natalia comprend le langage naturel, les accents, les hésitations. Elle s'adapte à chaque interlocuteur.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white animate-float" style="animation-delay: 1s;">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Disponible 24/7</h3>
-          <p class="text-police-grey">
-            Pas de pause déjeuner, pas de vacances, pas de week-end. Natalia répond à chaque appel, à chaque instant.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -151,68 +134,29 @@
   <section class="section bg-gray-50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Fonctionnalités <span class="text-gradient">clés</span>
+        <%= locals.voiceAssistant.features.title %> <span class="text-gradient"><%= locals.voiceAssistant.features.titleHighlight %></span>
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Des capacités métier concrètes pour automatiser votre accueil téléphonique
+        <%= locals.voiceAssistant.features.subtitle %>
       </p>
+      <% var featIcons = ['M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z', 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6', 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4']; %>
+      <% var featGradients = ['from-primary to-purple-600', 'from-secondary to-primary', 'from-green-500 to-emerald-600', 'from-amber-500 to-orange-600']; %>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-stagger-scale>
-        <!-- Qualification d'Appel -->
+        <% locals.voiceAssistant.features.items.forEach(function(item, index) { %>
         <div class="card bg-white p-8 flex gap-6 items-start">
-          <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-purple-600 text-white shadow-lg">
+          <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br <%= featGradients[index] %> text-white shadow-lg">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= featIcons[index] %>"></path>
             </svg>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-police-titre mb-3">Qualification d'Appel</h3>
+            <h3 class="text-xl font-bold text-police-titre mb-3"><%= item.title %></h3>
             <p class="text-police-grey">
-              Identification automatique du motif et de l'urgence en langage naturel. Natalia comprend le besoin du client dès les premières secondes.
+              <%= item.description %>
             </p>
           </div>
         </div>
-        <!-- Routage Intelligent -->
-        <div class="card bg-white p-8 flex gap-6 items-start">
-          <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white shadow-lg">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-police-titre mb-3">Routage Intelligent</h3>
-            <p class="text-police-grey">
-              Transfert automatique vers le bon service ou conseiller après qualification. Plus de temps perdu en redirections multiples.
-            </p>
-          </div>
-        </div>
-        <!-- Resolution Niveau 1 -->
-        <div class="card bg-white p-8 flex gap-6 items-start">
-          <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 text-white shadow-lg">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-police-titre mb-3">Résolution Niveau 1</h3>
-            <p class="text-police-grey">
-              Réponse automatique aux FAQ, vérification de statut, réinitialisation de mot de passe et autres actions simples. Libérez vos agents pour les cas complexes.
-            </p>
-          </div>
-        </div>
-        <!-- Ouverture Automatique de Ticket -->
-        <div class="card bg-white p-8 flex gap-6 items-start">
-          <div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-lg">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-police-titre mb-3">Ouverture Automatique de Ticket</h3>
-            <p class="text-police-grey">
-              Création immédiate dans votre CRM ou outil de ticketing. Toutes les informations recueillies sont transmises pour un suivi optimal.
-            </p>
-          </div>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -221,84 +165,33 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Capacités <span class="text-gradient">techniques</span>
+        <%= locals.voiceAssistant.capabilities.title %> <span class="text-gradient"><%= locals.voiceAssistant.capabilities.titleHighlight %></span>
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Une technologie de pointe pour une expérience client exceptionnelle
+        <%= locals.voiceAssistant.capabilities.subtitle %>
       </p>
+      <% var capIcons = ['M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129', 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15']; %>
+      <% var capBgs = ['bg-gray-50', 'bg-white', 'bg-white', 'bg-white', 'bg-white', 'bg-white']; %>
+      <% var capIconBgs = ['bg-primary/10 text-primary', 'bg-secondary/10 text-secondary', 'bg-green-100 text-green-600', 'bg-blue-100 text-blue-600', 'bg-orange-100 text-orange-600', 'bg-purple-100 text-purple-600']; %>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-scale>
-        <div class="card bg-gray-50">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+        <% locals.voiceAssistant.capabilities.items.forEach(function(item, index) { %>
+        <div class="card <%= capBgs[index] %>">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full <%= capIconBgs[index] %>">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Multilingue</h3>
-          <p class="text-police-grey text-sm">
-            Français, anglais, espagnol, allemand... Natalia s'adapte à la langue de votre interlocuteur.
-          </p>
-        </div>
-        <div class="card bg-white">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-secondary/10 text-secondary">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= capIcons[index] %>"></path>
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-police-titre mb-2 flex items-center gap-2">
-            API & Webhooks
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">Bientôt</span>
+            <%= item.title %>
+            <% if (item.comingSoon) { %>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800"><%= locals.voiceAssistant.capabilities.comingSoon %></span>
+            <% } %>
           </h3>
           <p class="text-police-grey text-sm">
-            Intégrez Natalia à vos systèmes existants via notre API REST et nos webhooks en temps réel.
+            <%= item.description %>
           </p>
         </div>
-        <div class="card bg-white">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Analytics</h3>
-          <p class="text-police-grey text-sm">
-            Dashboard temps réel pour suivre les performances : taux de résolution, durée moyenne, satisfaction.
-          </p>
-        </div>
-        <div class="card bg-white">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Transfert intelligent</h3>
-          <p class="text-police-grey text-sm">
-            Natalia détecte quand un humain doit prendre le relais et transfère l'appel avec tout le contexte.
-          </p>
-        </div>
-        <div class="card bg-white">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-orange-100 text-orange-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Sécurité</h3>
-          <p class="text-police-grey text-sm">
-            Données chiffrées, hébergement en France, conformité RGPD. Vos conversations sont protégées.
-          </p>
-        </div>
-        <div class="card bg-white">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-purple-100 text-purple-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2 flex items-center gap-2">
-            Auto-apprentissage
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">Bientôt</span>
-          </h3>
-          <p class="text-police-grey text-sm">
-            Natalia s'améliore continuellement en apprenant de chaque conversation.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -307,45 +200,20 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Comment ça <span class="text-gradient">marche</span> ?
+        <%= locals.voiceAssistant.howItWorks.title %> <span class="text-gradient"><%= locals.voiceAssistant.howItWorks.titleHighlight %></span> ?
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-stagger-scale>
+        <% locals.voiceAssistant.howItWorks.steps.forEach(function(step, index) { %>
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white text-2xl font-bold shadow-lg">
-            1
+            <%= index + 1 %>
           </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Configuration</h3>
+          <h3 class="text-lg font-semibold text-police-titre mb-2"><%= step.title %></h3>
           <p class="text-police-grey text-sm">
-            Nous paramétrons Natalia selon vos besoins, votre vocabulaire métier et vos scénarios.
+            <%= step.description %>
           </p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white text-2xl font-bold shadow-lg">
-            2
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Intégration</h3>
-          <p class="text-police-grey text-sm">
-            Natalia se connecte à votre téléphonie et à vos outils métiers (CRM, ERP, ticketing...).
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white text-2xl font-bold shadow-lg">
-            3
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Pilote</h3>
-          <p class="text-police-grey text-sm">
-            Nous lançons un pilote sur un périmètre défini pour valider les performances.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white text-2xl font-bold shadow-lg">
-            4
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Déploiement</h3>
-          <p class="text-police-grey text-sm">
-            Une fois validé, nous déployons Natalia sur l'ensemble de vos lignes.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -354,48 +222,28 @@
   <section class="section bg-gray-50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Les <span class="text-gradient">bénéfices</span> pour votre entreprise
+        <%= locals.voiceAssistant.benefits.title %> <span class="text-gradient"><%= locals.voiceAssistant.benefits.titleHighlight %></span> <%= locals.voiceAssistant.benefits.titleEnd %>
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Un impact mesurable sur vos opérations et votre expérience client
+        <%= locals.voiceAssistant.benefits.subtitle %>
       </p>
+      <% var benIcons = ['M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z']; %>
+      <% var benGradients = ['from-primary/10 to-purple-600/10', 'from-green-500/10 to-emerald-600/10', 'from-amber-500/10 to-orange-600/10']; %>
+      <% var benColors = ['text-primary', 'text-green-600', 'text-amber-600']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
-        <!-- Desengorgement -->
+        <% locals.voiceAssistant.benefits.items.forEach(function(item, index) { %>
         <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-purple-600/10">
-            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br <%= benGradients[index] %>">
+            <svg class="w-8 h-8 <%= benColors[index] %>" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= benIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Désengorgement des centres d'appels</h3>
+          <h3 class="text-xl font-bold text-police-titre mb-3"><%= item.title %></h3>
           <p class="text-police-grey">
-            Réduisez les files d'attente en traitant automatiquement 60% des appels entrants. Vos agents se concentrent sur les demandes à forte valeur ajoutée.
+            <%= item.description %>
           </p>
         </div>
-        <!-- Reduction couts -->
-        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500/10 to-emerald-600/10">
-            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Réduction des coûts support N1</h3>
-          <p class="text-police-grey">
-            Diminuez vos coûts de support de premier niveau jusqu'à 40%. Natalia traite les demandes simples à une fraction du coût humain.
-          </p>
-        </div>
-        <!-- Experience client -->
-        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500/10 to-orange-600/10">
-            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Expérience client améliorée</h3>
-          <p class="text-police-grey">
-            Réponse instantanée, zéro temps d'attente. Vos clients obtiennent une réponse immédiate, 24h/24 et 7j/7.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -404,55 +252,34 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Pour <span class="text-gradient">qui</span> ?
+        <%= locals.voiceAssistant.targets.title %> <span class="text-gradient"><%= locals.voiceAssistant.targets.titleHighlight %></span> ?
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Natalia Voice s'adresse aux décideurs qui veulent transformer leur service client
+        <%= locals.voiceAssistant.targets.subtitle %>
       </p>
+      <% var targIcons = ['M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4', 'M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z', 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z']; %>
+      <% var targBgGrad = ['from-primary/5 to-purple-600/5', 'from-secondary/5 to-primary/5', 'from-green-500/5 to-emerald-600/5']; %>
+      <% var targBorder = ['border-primary/10', 'border-secondary/10', 'border-green-500/10']; %>
+      <% var targIconGrad = ['from-primary to-purple-600', 'from-secondary to-primary', 'from-green-500 to-emerald-600']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
-        <!-- Directeur Operations -->
-        <div class="bg-gradient-to-br from-primary/5 to-purple-600/5 rounded-2xl p-8 border border-primary/10">
+        <% locals.voiceAssistant.targets.items.forEach(function(item, index) { %>
+        <div class="bg-gradient-to-br <%= targBgGrad[index] %> rounded-2xl p-8 border <%= targBorder[index] %>">
           <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-purple-600 text-white">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br <%= targIconGrad[index] %> text-white">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-police-titre">Directeur Opérations</h3>
-          </div>
-          <p class="text-police-grey">
-            Optimisez vos flux d'appels, réduisez les pics de charge et améliorez vos KPIs opérationnels avec une solution qui s'adapte à votre volumétrie.
-          </p>
-        </div>
-        <!-- Responsable Service Client -->
-        <div class="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-2xl p-8 border border-secondary/10">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-secondary to-primary text-white">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-police-titre">Responsable Service Client</h3>
-          </div>
-          <p class="text-police-grey">
-            Offrez une expérience client exceptionnelle avec une disponibilité 24/7, tout en libérant vos équipes pour les interactions à forte valeur ajoutée.
-          </p>
-        </div>
-        <!-- DSI -->
-        <div class="bg-gradient-to-br from-green-500/5 to-emerald-600/5 rounded-2xl p-8 border border-green-500/10">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= targIcons[index] %>"></path>
+                <% if (index === 2) { %>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <% } %>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-police-titre">DSI</h3>
+            <h3 class="text-xl font-bold text-police-titre"><%= item.title %></h3>
           </div>
           <p class="text-police-grey">
-            Déploiement rapide via API REST, intégration avec votre stack existant (CRM, ERP, ticketing) et conformité RGPD assurée.
+            <%= item.description %>
           </p>
         </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -463,14 +290,14 @@
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
     <div class="container-content text-center relative z-10">
       <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
-        Prêt à découvrir Natalia ?
+        <%= locals.voiceAssistant.cta.title %>
       </h2>
       <p class="text-xl mb-8 text-white/90 animate-on-scroll">
-        Planifiez une démonstration personnalisée avec notre équipe.
+        <%= locals.voiceAssistant.cta.subtitle %>
       </p>
       <div class="animate-on-scroll">
         <a href="./contact" class="btn btn-white inline-flex items-center gap-2" data-track-content data-content-name="CTA Demo" data-content-piece="Voice AI Footer CTA">
-          Réserver une démo
+          <%= locals.voiceAssistant.cta.button %>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>

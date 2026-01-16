@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Natalia - Suite IA pour la Relation Client | Voice, WhatsApp, Transcript</title>
-  <meta name="description" content="Natalia transforme votre relation client avec 3 solutions IA: Voice (assistant 24/7), WhatsApp (98% d'ouverture), Transcript (intelligence commerciale). Demandez une démo.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -123,29 +123,29 @@
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-on-scroll">
         <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-        <span class="text-white/80 font-medium text-sm tracking-wide">La suite IA complète pour la relation client</span>
+        <span class="text-white/80 font-medium text-sm tracking-wide"><%= locals.homepage.hero.badge %></span>
       </div>
 
       <!-- Main headline -->
       <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        <span class="block">3 solutions IA.</span>
-        <span class="block bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">Un écosystème unifié.</span>
+        <span class="block"><%= locals.homepage.hero.title1 %></span>
+        <span class="block bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"><%= locals.homepage.hero.title2 %></span>
       </h1>
 
       <p class="hero-subtitle text-lg md:text-xl text-white/60 mb-12 max-w-3xl mx-auto leading-relaxed">
-        Natalia Voice, WhatsApp et Analyse travaillent ensemble pour automatiser, centraliser et optimiser chaque interaction client. Résultats mesurables dès le premier mois.
+        <%= locals.homepage.hero.subtitle %>
       </p>
 
       <!-- CTA buttons -->
       <div class="hero-cta flex flex-col sm:flex-row justify-center gap-4 mb-16">
-        <a href="./contact" class="btn btn-primary text-lg" data-track-content data-content-name="CTA Demo" data-content-piece="Hero Section">
-          Demander une démo
+        <a href="<%= locals.cta.primary.url %>" class="btn btn-primary text-lg" data-track-content data-content-name="CTA Demo" data-content-piece="Hero Section">
+          <%= locals.homepage.hero.ctaPrimary %>
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>
         </a>
         <a href="#solutions" class="btn btn-outline text-lg" data-track-content data-content-name="Discover Solutions" data-content-piece="Hero Section">
-          Découvrir les solutions
+          <%= locals.homepage.hero.ctaSecondary %>
         </a>
       </div>
 
@@ -158,8 +158,8 @@
             </svg>
           </div>
           <div class="text-left">
-            <div class="text-white font-semibold">Voice</div>
-            <div class="text-white/50 text-xs">Assistant vocal 24/7</div>
+            <div class="text-white font-semibold"><%= locals.homepage.products.voice.name %></div>
+            <div class="text-white/50 text-xs"><%= locals.homepage.products.voice.tagline %></div>
           </div>
         </div>
 
@@ -170,8 +170,8 @@
             </svg>
           </div>
           <div class="text-left">
-            <div class="text-white font-semibold">WhatsApp</div>
-            <div class="text-white/50 text-xs">98% de taux d'ouverture</div>
+            <div class="text-white font-semibold"><%= locals.homepage.products.whatsapp.name %></div>
+            <div class="text-white/50 text-xs"><%= locals.homepage.products.whatsapp.tagline %></div>
           </div>
         </div>
 
@@ -182,8 +182,8 @@
             </svg>
           </div>
           <div class="text-left">
-            <div class="text-white font-semibold">Analyse</div>
-            <div class="text-white/50 text-xs">Intelligence commerciale</div>
+            <div class="text-white font-semibold"><%= locals.homepage.products.analytics.name %></div>
+            <div class="text-white/50 text-xs"><%= locals.homepage.products.analytics.tagline %></div>
           </div>
         </div>
       </div>
@@ -206,25 +206,25 @@
         <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
           <span data-counter="24" data-counter-suffix="h/24">0</span>
         </div>
-        <p class="text-police-grey text-sm">Disponibilité</p>
+        <p class="text-police-grey text-sm"><%= locals.homepage.stats.availability %></p>
       </div>
       <div class="text-center">
         <div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
           <span data-counter="98" data-counter-suffix="%">0</span>
         </div>
-        <p class="text-police-grey text-sm">Taux d'ouverture WhatsApp</p>
+        <p class="text-police-grey text-sm"><%= locals.homepage.stats.whatsappRate %></p>
       </div>
       <div class="text-center">
         <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2">
           <span data-counter="100" data-counter-suffix="%">0</span>
         </div>
-        <p class="text-police-grey text-sm">Conversations capturées</p>
+        <p class="text-police-grey text-sm"><%= locals.homepage.stats.conversationsCaptured %></p>
       </div>
       <div class="text-center">
         <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
           <span data-counter="3" data-counter-suffix="s">0</span>
         </div>
-        <p class="text-police-grey text-sm">Temps de réponse</p>
+        <p class="text-police-grey text-sm"><%= locals.homepage.stats.responseTime %></p>
       </div>
     </div>
   </div>
@@ -272,14 +272,14 @@
     <div class="text-center mb-16 animate-on-scroll">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
         <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-        <span class="text-primary font-medium text-sm tracking-wide">Nos solutions</span>
+        <span class="text-primary font-medium text-sm tracking-wide"><%= locals.homepage.solutions.badge %></span>
       </div>
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Une suite complète pour<br class="hidden md:block">
-        <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">chaque interaction</span>
+        <%= locals.homepage.solutions.title %><br class="hidden md:block">
+        <span class="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent"><%= locals.homepage.solutions.titleHighlight %></span>
       </h2>
       <p class="text-white/50 text-lg max-w-2xl mx-auto">
-        Voice, WhatsApp et Analyse s'intègrent parfaitement pour créer un écosystème de relation client intelligent.
+        <%= locals.homepage.solutions.subtitle %>
       </p>
     </div>
 
@@ -301,7 +301,7 @@
             <!-- Badge -->
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 mb-6">
               <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-              <span class="text-primary text-xs font-semibold uppercase tracking-wider">Solution phare</span>
+              <span class="text-primary text-xs font-semibold uppercase tracking-wider"><%= locals.homepage.voiceCard.badge %></span>
             </div>
 
             <!-- Icon -->
@@ -315,25 +315,25 @@
             </div>
 
             <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
-              Natalia Voice
+              <%= locals.homepage.voiceCard.title %>
             </h3>
             <p class="text-white/60 text-lg leading-relaxed max-w-xl mb-8">
-              L'assistant vocal IA disponible 24h/24, 7j/7. Décrochage instantané, qualification des demandes et intégration complète à vos outils métiers.
+              <%= locals.homepage.voiceCard.description %>
             </p>
 
             <!-- 3 Integration Levels -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <div class="text-primary font-bold text-sm mb-2">Niveau 1</div>
-                <div class="text-white/80 text-sm">Prise d'appels + Routage intelligent</div>
+                <div class="text-primary font-bold text-sm mb-2"><%= locals.homepage.voiceCard.level1.title %></div>
+                <div class="text-white/80 text-sm"><%= locals.homepage.voiceCard.level1.description %></div>
               </div>
               <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <div class="text-primary font-bold text-sm mb-2">Niveau 2</div>
-                <div class="text-white/80 text-sm">Messages + Qualification leads</div>
+                <div class="text-primary font-bold text-sm mb-2"><%= locals.homepage.voiceCard.level2.title %></div>
+                <div class="text-white/80 text-sm"><%= locals.homepage.voiceCard.level2.description %></div>
               </div>
               <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                <div class="text-primary font-bold text-sm mb-2">Niveau 3</div>
-                <div class="text-white/80 text-sm">Intégration ERP/CRM complète</div>
+                <div class="text-primary font-bold text-sm mb-2"><%= locals.homepage.voiceCard.level3.title %></div>
+                <div class="text-white/80 text-sm"><%= locals.homepage.voiceCard.level3.description %></div>
               </div>
             </div>
           </div>
@@ -346,10 +346,10 @@
                 <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-[#0a0a1f]"></div>
                 <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-[#0a0a1f]"></div>
               </div>
-              <span class="text-white/40 text-sm">+100 entreprises</span>
+              <span class="text-white/40 text-sm"><%= locals.homepage.voiceCard.companies %></span>
             </div>
-            <a href="./assistante-vocale-ia" class="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all duration-300">
-              En savoir plus
+            <a href="<%= locals.navigation.main[1].children[0].url %>" class="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all duration-300">
+              <%= locals.homepage.voiceCard.cta %>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -372,7 +372,7 @@
       </div>
 
       <!-- NATALIA WHATSAPP - Side card (spans 5 cols) -->
-      <a href="./whatsapp" class="bento-card group lg:col-span-5 block" data-animate="fade-up" style="--delay: 0.1s;">
+      <a href="<%= locals.navigation.main[1].children[2].url %>" class="bento-card group lg:col-span-5 block" data-animate="fade-up" style="--delay: 0.1s;">
         <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-emerald-600/10 p-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="absolute inset-[1px] rounded-2xl bg-[#0a0a1f]"></div>
@@ -383,7 +383,7 @@
             <!-- Badge -->
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-6">
               <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
-              <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Engagement</span>
+              <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider"><%= locals.homepage.whatsappCard.badge %></span>
             </div>
 
             <!-- Icon -->
@@ -394,39 +394,29 @@
             </div>
 
             <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
-              Natalia WhatsApp
+              <%= locals.homepage.whatsappCard.title %>
             </h3>
             <p class="text-white/60 text-base leading-relaxed mb-6">
-              Continuez la conversation après l'appel. 98% de taux d'ouverture vs 20% pour les emails.
+              <%= locals.homepage.whatsappCard.description %>
             </p>
 
             <!-- Features list -->
             <ul class="space-y-3">
+              <% locals.homepage.whatsappCard.features.forEach(function(feature) { %>
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-white/70 text-sm">Centralise tous les échanges</span>
+                <span class="text-white/70 text-sm"><%= feature %></span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-white/70 text-sm">Alimente la base de connaissances</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-white/70 text-sm">Flux BI et recommandations</span>
-              </li>
+              <% }); %>
             </ul>
           </div>
 
           <!-- Stat highlight -->
           <div class="mt-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
             <div class="flex items-center justify-between">
-              <span class="text-white/60 text-sm">Taux d'ouverture</span>
+              <span class="text-white/60 text-sm"><%= locals.homepage.whatsappCard.openRate %></span>
               <span class="text-emerald-400 font-bold text-2xl">98%</span>
             </div>
             <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
@@ -437,7 +427,7 @@
       </a>
 
       <!-- NATALIA ANALYSE - Stacked under WhatsApp (5 cols) -->
-      <a href="./analyse" class="bento-card group lg:col-span-5 block" data-animate="fade-up" style="--delay: 0.2s;">
+      <a href="<%= locals.navigation.main[1].children[1].url %>" class="bento-card group lg:col-span-5 block" data-animate="fade-up" style="--delay: 0.2s;">
         <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         <!-- Animated rings -->
@@ -450,7 +440,7 @@
           <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-5">
             <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></span>
-            <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Intelligence</span>
+            <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider"><%= locals.homepage.analyticsCard.badge %></span>
           </div>
 
           <!-- Icon and title -->
@@ -462,10 +452,10 @@
             </div>
             <div>
               <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
-                Natalia Analyse
+                <%= locals.homepage.analyticsCard.title %>
               </h3>
               <p class="text-white/60 text-sm leading-relaxed">
-                100% des conversations capturées et analysées.
+                <%= locals.homepage.analyticsCard.description %>
               </p>
             </div>
           </div>
@@ -476,19 +466,19 @@
               <svg class="w-5 h-5 text-amber-400 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
               </svg>
-              <div class="text-white font-medium text-xs">KPIs</div>
+              <div class="text-white font-medium text-xs"><%= locals.homepage.analyticsCard.kpis %></div>
             </div>
             <div class="p-3 rounded-lg bg-white/5 border border-white/10 text-center group-hover:border-amber-500/30 transition-colors">
               <svg class="w-5 h-5 text-amber-400 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <div class="text-white font-medium text-xs">CSAT</div>
+              <div class="text-white font-medium text-xs"><%= locals.homepage.analyticsCard.csat %></div>
             </div>
             <div class="p-3 rounded-lg bg-white/5 border border-white/10 text-center group-hover:border-amber-500/30 transition-colors">
               <svg class="w-5 h-5 text-amber-400 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
               </svg>
-              <div class="text-white font-medium text-xs">Training</div>
+              <div class="text-white font-medium text-xs"><%= locals.homepage.analyticsCard.training %></div>
             </div>
           </div>
         </div>
@@ -502,12 +492,12 @@
 <section class="section bg-white">
   <div class="container-content">
     <div class="text-center mb-16 animate-on-scroll">
-      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Pourquoi Natalia</p>
+      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2"><%= locals.homepage.valueProposition.badge %></p>
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        L'écosystème qui <span class="text-gradient">transforme</span> votre relation client
+        <%= locals.homepage.valueProposition.title %> <span class="text-gradient"><%= locals.homepage.valueProposition.titleHighlight %></span> <%= locals.homepage.valueProposition.titleEnd %>
       </h2>
       <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        Nos 3 solutions travaillent ensemble pour créer un cycle vertueux d'amélioration continue.
+        <%= locals.homepage.valueProposition.subtitle %>
       </p>
     </div>
 
@@ -519,9 +509,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Capture</h3>
+        <h3 class="text-xl font-semibold text-police-titre mb-3"><%= locals.homepage.valueProposition.capture.title %></h3>
         <p class="text-police-grey">
-          Voice répond 24/7 et capture chaque demande. Aucun appel manqué, chaque lead qualifié.
+          <%= locals.homepage.valueProposition.capture.description %>
         </p>
         <div class="mt-6 flex items-center justify-center gap-2 text-primary">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -537,9 +527,9 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Engage</h3>
+        <h3 class="text-xl font-semibold text-police-titre mb-3"><%= locals.homepage.valueProposition.engage.title %></h3>
         <p class="text-police-grey">
-          WhatsApp continue la conversation avec 98% d'ouverture. Chaque échange enrichit votre connaissance client.
+          <%= locals.homepage.valueProposition.engage.description %>
         </p>
         <div class="mt-6 flex items-center justify-center gap-2 text-emerald-500">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -555,9 +545,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-police-titre mb-3">Optimise</h3>
+        <h3 class="text-xl font-semibold text-police-titre mb-3"><%= locals.homepage.valueProposition.optimize.title %></h3>
         <p class="text-police-grey">
-          Analyse transcrit et analyse chaque conversation pour extraire des insights, KPIs et recommandations de formation.
+          <%= locals.homepage.valueProposition.optimize.description %>
         </p>
         <div class="mt-6 flex items-center justify-center gap-2 text-amber-500">
           <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -571,7 +561,7 @@
     <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-primary/5 via-emerald-500/5 to-amber-500/5 border border-primary/10 animate-on-scroll">
       <div class="text-center">
         <p class="text-lg text-police-grey">
-          <span class="font-semibold text-police-titre">Le cycle vertueux :</span> Analyse transcrit les conversations de Voice et WhatsApp, identifie les points d'amélioration, et les recommandations alimentent la formation de vos équipes.
+          <%= locals.homepage.valueProposition.cycle %>
         </p>
       </div>
     </div>
@@ -582,9 +572,9 @@
 <section class="section bg-background-2">
   <div class="container-content">
     <div class="text-center mb-12 animate-on-scroll">
-      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Mise en place</p>
+      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2"><%= locals.homepage.deployment.badge %></p>
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        Déploiement en <span class="text-gradient">3 étapes</span>
+        <%= locals.homepage.deployment.title %> <span class="text-gradient"><%= locals.homepage.deployment.titleHighlight %></span>
       </h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" data-stagger-scale>
@@ -597,9 +587,9 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">1</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Audit & Configuration</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3"><%= locals.homepage.deployment.step1.title %></h3>
             <p class="text-police-grey text-sm">
-              Analyse de vos besoins, configuration personnalisée et intégration à vos outils existants.
+              <%= locals.homepage.deployment.step1.description %>
             </p>
           </div>
         </div>
@@ -608,9 +598,9 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">2</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Formation & Tests</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3"><%= locals.homepage.deployment.step2.title %></h3>
             <p class="text-police-grey text-sm">
-              Entraînement de l'IA sur votre contexte métier et phase de tests avec vos équipes.
+              <%= locals.homepage.deployment.step2.description %>
             </p>
           </div>
         </div>
@@ -619,9 +609,9 @@
         <div class="relative z-10">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg">3</div>
           <div class="text-center">
-            <h3 class="text-lg font-semibold text-police-titre mb-3">Go Live & Suivi</h3>
+            <h3 class="text-lg font-semibold text-police-titre mb-3"><%= locals.homepage.deployment.step3.title %></h3>
             <p class="text-police-grey text-sm">
-              Mise en production progressive et suivi des performances avec optimisation continue.
+              <%= locals.homepage.deployment.step3.description %>
             </p>
           </div>
         </div>
@@ -634,54 +624,54 @@
 <section class="section bg-white">
   <div class="container-content">
     <div class="text-center mb-12 animate-on-scroll">
-      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Secteurs</p>
+      <p class="text-primary font-semibold text-sm uppercase tracking-wider mb-2"><%= locals.homepage.sectors.badge %></p>
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        Adapté à <span class="text-gradient">votre industrie</span>
+        <%= locals.homepage.sectors.title %> <span class="text-gradient"><%= locals.homepage.sectors.titleHighlight %></span>
       </h2>
       <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        Natalia se personnalise pour répondre aux spécificités de votre secteur.
+        <%= locals.homepage.sectors.subtitle %>
       </p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-stagger>
-      <a href="./automobile" class="card card-bordered p-6 text-center card-glow group">
+      <a href="<%= locals.navigation.main[2].children[0].url %>" class="card card-bordered p-6 text-center card-glow group">
         <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8M8 17v4h8v-4M8 17H4a1 1 0 01-1-1v-4a1 1 0 011-1h3m10 5h3a1 1 0 001-1v-4a1 1 0 00-1-1h-3m-6-4V3m0 0L9 6m3-3l3 3"></path>
           </svg>
         </div>
-        <h3 class="font-semibold text-police-titre group-hover:text-primary transition-colors">Automobile</h3>
-        <p class="text-police-grey text-sm mt-2">Concessions & SAV</p>
+        <h3 class="font-semibold text-police-titre group-hover:text-primary transition-colors"><%= locals.sectors.automobile.name %></h3>
+        <p class="text-police-grey text-sm mt-2"><%= locals.sectors.automobile.description %></p>
       </a>
 
-      <a href="./centre-d-appel" class="card card-bordered p-6 text-center card-glow group">
+      <a href="<%= locals.navigation.main[2].children[1].url %>" class="card card-bordered p-6 text-center card-glow group">
         <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
         </div>
-        <h3 class="font-semibold text-police-titre group-hover:text-cyan-500 transition-colors">Centre d'appel</h3>
-        <p class="text-police-grey text-sm mt-2">BPO & Support</p>
+        <h3 class="font-semibold text-police-titre group-hover:text-cyan-500 transition-colors"><%= locals.sectors.callCenter.name %></h3>
+        <p class="text-police-grey text-sm mt-2"><%= locals.sectors.callCenter.description %></p>
       </a>
 
-      <a href="./helpdesk" class="card card-bordered p-6 text-center card-glow group">
+      <a href="<%= locals.navigation.main[2].children[2].url %>" class="card card-bordered p-6 text-center card-glow group">
         <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
         </div>
-        <h3 class="font-semibold text-police-titre group-hover:text-emerald-500 transition-colors">Helpdesk IT</h3>
-        <p class="text-police-grey text-sm mt-2">Support technique</p>
+        <h3 class="font-semibold text-police-titre group-hover:text-emerald-500 transition-colors"><%= locals.sectors.helpdesk.name %></h3>
+        <p class="text-police-grey text-sm mt-2"><%= locals.sectors.helpdesk.description %></p>
       </a>
 
-      <a href="./hotline" class="card card-bordered p-6 text-center card-glow group">
+      <a href="<%= locals.navigation.main[2].children[3].url %>" class="card card-bordered p-6 text-center card-glow group">
         <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-purple-500/10 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg>
         </div>
-        <h3 class="font-semibold text-police-titre group-hover:text-purple-500 transition-colors">Hotline 24/7</h3>
-        <p class="text-police-grey text-sm mt-2">Service continu</p>
+        <h3 class="font-semibold text-police-titre group-hover:text-purple-500 transition-colors"><%= locals.sectors.hotline.name %></h3>
+        <p class="text-police-grey text-sm mt-2"><%= locals.sectors.hotline.description %></p>
       </a>
     </div>
   </div>
@@ -692,10 +682,10 @@
   <div class="container-content">
     <div class="text-center mb-12 animate-on-scroll">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre mb-4">
-        S'intègre à <span class="text-gradient">tous vos outils</span>
+        <%= locals.homepage.integration.title %> <span class="text-gradient"><%= locals.homepage.integration.titleHighlight %></span>
       </h2>
       <p class="text-lg text-police-grey max-w-2xl mx-auto">
-        CRM, ERP, outils de ticketing, calendriers métiers... Natalia se connecte à votre écosystème existant.
+        <%= locals.homepage.integration.subtitle %>
       </p>
     </div>
     <!-- Partners Marquee -->
@@ -752,23 +742,23 @@
 
   <div class="container-content text-center relative z-10">
     <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
-      Prêt à transformer votre relation client ?
+      <%= locals.homepage.cta.title %>
     </h2>
     <p class="text-lg text-white/90 mb-4 max-w-2xl mx-auto animate-on-scroll">
-      Découvrez comment Voice, WhatsApp et Analyse peuvent révolutionner votre expérience client.
+      <%= locals.homepage.cta.subtitle %>
     </p>
     <p class="text-white/70 mb-8 animate-on-scroll">
-      Démo personnalisée - ROI visible dès le premier mois
+      <%= locals.homepage.cta.note %>
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
-      <a href="./contact" class="btn btn-white" data-track-content data-content-name="CTA Demo" data-content-piece="Footer CTA Section">
-        Demander une démo
+      <a href="<%= locals.cta.primary.url %>" class="btn btn-white" data-track-content data-content-name="CTA Demo" data-content-piece="Footer CTA Section">
+        <%= locals.cta.primary.label %>
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
-      <a href="./calculateur" class="btn btn-outline" data-track-content data-content-name="CTA Calculator" data-content-piece="Footer CTA Section">
-        Calculer mon ROI
+      <a href="<%= locals.cta.calculator.url %>" class="btn btn-outline" data-track-content data-content-name="CTA Calculator" data-content-piece="Footer CTA Section">
+        <%= locals.cta.calculator.label %>
       </a>
     </div>
   </div>

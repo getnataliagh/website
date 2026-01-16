@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= locals.lang %>">
 <head>
-  <title>Natalia WhatsApp - Convertissez vos appels manqués en clients</title>
-  <meta name="description" content="Solution IA qui relance automatiquement vos appels manqués sur WhatsApp pour qualifier et convertir vos prospects 24/7.">
+  <title><%= locals.pageMeta.title %></title>
+  <meta name="description" content="<%= locals.pageMeta.description %>">
   <%- include('./includes/_head.ejs') %>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -19,24 +19,24 @@
           <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            <span class="text-emerald-600 font-medium text-sm tracking-wide">WhatsApp IA</span>
+            <span class="text-emerald-600 font-medium text-sm tracking-wide"><%= locals.whatsapp.hero.badge %></span>
           </div>
           <h1 class="hero-title text-h1-mobile md:text-h1 font-bold text-police-titre mb-4">
-            Ne perdez plus de prospect "chaud" :
-            <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">relancez instantanément sur WhatsApp</span>
+            <%= locals.whatsapp.hero.title %>
+            <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.hero.titleHighlight %></span>
           </h1>
           <p class="hero-subtitle text-lg text-police-grey font-semibold mb-8">
-            Solution qui s'active lorsqu'un appel est manqué ou reçu en dehors des heures d'ouverture, envoie un message WhatsApp et poursuit la discussion en mode IA pour qualifier le besoin et convertir le prospect.
+            <%= locals.whatsapp.hero.subtitle %>
           </p>
           <div class="hero-cta flex flex-wrap gap-4">
             <a href="./contact" class="btn bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700 inline-flex items-center gap-2" data-track-content data-content-name="CTA Demo" data-content-piece="WhatsApp Hero">
-              Réserver une démo
+              <%= locals.whatsapp.hero.ctaDemo %>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <a href="./calculateur" class="btn btn-outline border-emerald-500 text-emerald-600 hover:bg-emerald-50 inline-flex items-center gap-2" data-track-content data-content-name="CTA Calculator" data-content-piece="WhatsApp Hero">
-              Calculer mon ROI
+            <a href="<%= locals.cta.calculator.url %>" class="btn btn-outline border-emerald-500 text-emerald-600 hover:bg-emerald-50 inline-flex items-center gap-2" data-track-content data-content-name="CTA Calculator" data-content-piece="WhatsApp Hero">
+              <%= locals.whatsapp.hero.ctaRoi %>
             </a>
           </div>
         </div>
@@ -69,7 +69,7 @@
                     <svg class="w-8 h-8 text-emerald-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
-                    <span class="text-xs text-emerald-600 font-medium mt-1">Auto</span>
+                    <span class="text-xs text-emerald-600 font-medium mt-1"><%= locals.whatsapp.hero.auto %></span>
                   </div>
 
                   <!-- WhatsApp icon -->
@@ -94,22 +94,22 @@
                   <!-- Incoming bubble -->
                   <div class="flex justify-start">
                     <div class="bg-white rounded-2xl rounded-tl-none px-4 py-2 shadow-sm max-w-[80%] animate-float" style="animation-delay: 0s; animation-duration: 3s;">
-                      <p class="text-sm text-gray-800">Bonjour ! Nous avons vu que vous avez essayé de nous joindre.</p>
-                      <p class="text-xs text-gray-500 mt-1">14:32</p>
+                      <p class="text-sm text-gray-800"><%= locals.whatsapp.hero.chat.incoming %></p>
+                      <p class="text-xs text-gray-500 mt-1"><%= locals.whatsapp.hero.chat.incomingTime %></p>
                     </div>
                   </div>
                   <!-- Response bubble -->
                   <div class="flex justify-end">
                     <div class="bg-emerald-500 rounded-2xl rounded-tr-none px-4 py-2 shadow-sm max-w-[80%] animate-float" style="animation-delay: 0.5s; animation-duration: 3s;">
-                      <p class="text-sm text-white">Oui, je cherche un devis pour...</p>
-                      <p class="text-xs text-emerald-100 mt-1">14:33</p>
+                      <p class="text-sm text-white"><%= locals.whatsapp.hero.chat.response %></p>
+                      <p class="text-xs text-emerald-100 mt-1"><%= locals.whatsapp.hero.chat.responseTime %></p>
                     </div>
                   </div>
                   <!-- IA response -->
                   <div class="flex justify-start">
                     <div class="bg-white rounded-2xl rounded-tl-none px-4 py-2 shadow-sm max-w-[80%] animate-float" style="animation-delay: 1s; animation-duration: 3s;">
-                      <p class="text-sm text-gray-800">Parfait ! Je peux vous aider. Quel est votre budget ?</p>
-                      <p class="text-xs text-gray-500 mt-1">14:33</p>
+                      <p class="text-sm text-gray-800"><%= locals.whatsapp.hero.chat.iaResponse %></p>
+                      <p class="text-xs text-gray-500 mt-1"><%= locals.whatsapp.hero.chat.iaResponseTime %></p>
                     </div>
                   </div>
                 </div>
@@ -119,17 +119,17 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
-                  <span>Lead qualifié</span>
+                  <span><%= locals.whatsapp.hero.leadQualified %></span>
                 </div>
               </div>
             </div>
 
             <!-- Floating stats -->
             <div class="absolute -top-4 -right-4 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 animate-float" style="animation-delay: 0s;">
-              <span class="text-xs font-medium text-emerald-600">98% ouverture</span>
+              <span class="text-xs font-medium text-emerald-600"><%= locals.whatsapp.hero.floatingStats.openRate %></span>
             </div>
             <div class="absolute -bottom-4 -left-4 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 animate-float" style="animation-delay: 1s;">
-              <span class="text-xs font-medium text-green-600">Réponse &lt;30s</span>
+              <span class="text-xs font-medium text-green-600"><%= locals.whatsapp.hero.floatingStats.response %></span>
             </div>
           </div>
         </div>
@@ -141,43 +141,25 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Ce qui fait la <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">différence</span>
+        <%= locals.whatsapp.differentiators.title %> <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.differentiators.titleHighlight %></span>
       </h2>
+      <% var diffIcons = ['M13 10V3L4 14h7v7l9-11h-7z', 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z', 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4']; %>
+      <% var diffGradients = ['from-emerald-500 to-green-600', 'from-green-500 to-emerald-500', 'from-emerald-500 to-green-600']; %>
+      <% var diffDelays = ['0s', '0.5s', '1s']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
+        <% locals.whatsapp.differentiators.items.forEach(function(item, index) { %>
         <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white animate-float" style="animation-delay: 0s;">
+          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br <%= diffGradients[index] %> text-white animate-float" style="animation-delay: <%= diffDelays[index] %>;">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= diffIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Réactivité Instantanée</h3>
+          <h3 class="text-xl font-bold text-police-titre mb-3"><%= item.title %></h3>
           <p class="text-police-grey">
-            Moins de 30 secondes entre l'appel manqué et le premier message WhatsApp. Ne laissez jamais un prospect refroidir.
+            <%= item.description %>
           </p>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-emerald-500 text-white animate-float" style="animation-delay: 0.5s;">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">98% Taux d'Ouverture</h3>
-          <p class="text-police-grey">
-            Contrairement aux emails, les messages WhatsApp sont ouverts quasi-systématiquement. Votre message sera lu.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white animate-float" style="animation-delay: 1s;">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Qualification Automatique</h3>
-          <p class="text-police-grey">
-            L'IA conversationnelle qualifie le prospect (budget, besoins, urgence) avant même que vous n'interveniez.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -186,84 +168,27 @@
   <section class="section bg-emerald-50/50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Fonctionnalités <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">clés</span>
+        <%= locals.whatsapp.features.title %> <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.features.titleHighlight %></span>
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Transformez chaque appel manqué en opportunité de conversion
+        <%= locals.whatsapp.features.subtitle %>
       </p>
+      <% var featIcons = ['M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9', 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01', 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z', 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', 'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4']; %>
+      <% var featGradients = ['from-emerald-500 to-green-600', 'from-green-500 to-emerald-500', 'from-emerald-500 to-green-600', 'from-green-500 to-emerald-500', 'from-emerald-500 to-green-600', 'from-green-500 to-emerald-500']; %>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-scale>
-        <!-- Detection et Trigger -->
+        <% locals.whatsapp.features.items.forEach(function(item, index) { %>
         <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 text-white">
+          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br <%= featGradients[index] %> text-white">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= featIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Détection et Trigger</h3>
+          <h3 class="text-lg font-semibold text-police-titre mb-2"><%= item.title %></h3>
           <p class="text-police-grey text-sm">
-            S'active automatiquement sur appel manqué, hors horaires d'ouverture, ou en cas de débordement. Aucune intervention nécessaire.
+            <%= item.description %>
           </p>
         </div>
-        <!-- Relance Personnalisee -->
-        <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Relance Personnalisée</h3>
-          <p class="text-police-grey text-sm">
-            Message WhatsApp contextuel et personnalisé grâce à l'IA conversationnelle. Chaque prospect reçoit un message adapté.
-          </p>
-        </div>
-        <!-- Qualification Asynchrone -->
-        <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Qualification Asynchrone</h3>
-          <p class="text-police-grey text-sm">
-            L'IA mène la discussion pour obtenir les informations clés : budget, type de projet, urgence, coordonnées.
-          </p>
-        </div>
-        <!-- Collecte de Documents -->
-        <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Collecte de Documents</h3>
-          <p class="text-police-grey text-sm">
-            Le prospect peut envoyer photos, documents ou informations directement via WhatsApp. Tout est centralisé.
-          </p>
-        </div>
-        <!-- Integration CRM -->
-        <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Intégration CRM</h3>
-          <p class="text-police-grey text-sm">
-            Les leads qualifiés sont automatiquement synchronisés dans votre CRM avec toutes les informations collectées.
-          </p>
-        </div>
-        <!-- Scenarios Personnalisables -->
-        <div class="card bg-white p-6">
-          <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Scénarios Personnalisables</h3>
-          <p class="text-police-grey text-sm">
-            Adaptez les scripts de conversation à votre métier : immobilier, automobile, services, e-commerce...
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -272,45 +197,20 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-12 animate-on-scroll">
-        Comment ça <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">marche</span> ?
+        <%= locals.whatsapp.howItWorks.title %> <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.howItWorks.titleHighlight %></span> ?
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-stagger-scale>
+        <% locals.whatsapp.howItWorks.steps.forEach(function(step, index) { %>
         <div class="text-center">
           <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white text-2xl font-bold shadow-lg">
-            1
+            <%= index + 1 %>
           </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Appel Manqué</h3>
+          <h3 class="text-lg font-semibold text-police-titre mb-2"><%= step.title %></h3>
           <p class="text-police-grey text-sm">
-            Un prospect essaie de vous joindre mais vous n'êtes pas disponible (hors horaires, ligne occupée...).
+            <%= step.description %>
           </p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white text-2xl font-bold shadow-lg">
-            2
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Message WhatsApp</h3>
-          <p class="text-police-grey text-sm">
-            En moins de 30 secondes, le prospect reçoit un message WhatsApp personnalisé de Natalia.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white text-2xl font-bold shadow-lg">
-            3
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Qualification IA</h3>
-          <p class="text-police-grey text-sm">
-            L'IA conversationnelle qualifie le besoin : budget, projet, urgence, coordonnées.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white text-2xl font-bold shadow-lg">
-            4
-          </div>
-          <h3 class="text-lg font-semibold text-police-titre mb-2">Lead Qualifié</h3>
-          <p class="text-police-grey text-sm">
-            Vous recevez un lead qualifié dans votre CRM, prêt pour un rappel commercial.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -319,48 +219,28 @@
   <section class="section bg-emerald-50/50">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Les <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">bénéfices</span> pour votre entreprise
+        <%= locals.whatsapp.benefits.title %> <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.benefits.titleHighlight %></span> <%= locals.whatsapp.benefits.titleEnd %>
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Ne perdez plus jamais une opportunité commerciale
+        <%= locals.whatsapp.benefits.subtitle %>
       </p>
+      <% var benefitIcons = ['M13 7h8m0 0v8m0-8l-8 8-4-4-6 6', 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z']; %>
+      <% var benefitIconColors = ['text-emerald-600', 'text-green-600', 'text-emerald-600']; %>
+      <% var benefitBgGradients = ['from-emerald-500/10 to-green-600/10', 'from-green-500/10 to-emerald-600/10', 'from-emerald-500/10 to-green-600/10']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
-        <!-- Conversion maximale -->
+        <% locals.whatsapp.benefits.items.forEach(function(item, index) { %>
         <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/10 to-green-600/10">
-            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br <%= benefitBgGradients[index] %>">
+            <svg class="w-8 h-8 <%= benefitIconColors[index] %>" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= benefitIcons[index] %>"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Conversion Maximale</h3>
+          <h3 class="text-xl font-bold text-police-titre mb-3"><%= item.title %></h3>
           <p class="text-police-grey">
-            Transformez jusqu'à 40% de vos appels manqués en leads qualifiés. Idéal pour l'immobilier, l'automobile et les services d'urgence.
+            <%= item.description %>
           </p>
         </div>
-        <!-- Reactivite 24/7 -->
-        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500/10 to-emerald-600/10">
-            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Réactivité 24/7</h3>
-          <p class="text-police-grey">
-            Soyez présent même quand vous ne l'êtes pas. Week-ends, jours fériés, nuits... Natalia prend le relais sans interruption.
-          </p>
-        </div>
-        <!-- Satisfaction client -->
-        <div class="bg-white rounded-2xl p-8 shadow-card border border-muted-border text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/10 to-green-600/10">
-            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-police-titre mb-3">Satisfaction Client</h3>
-          <p class="text-police-grey">
-            Vos prospects adorent WhatsApp. Canal simple, immédiat et familier. Ils se sentent pris en charge instantanément.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -369,55 +249,31 @@
   <section class="section bg-white">
     <div class="container-content">
       <h2 class="text-h2-mobile md:text-h2 font-bold text-police-titre text-center mb-4 animate-on-scroll">
-        Pour <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">qui</span> ?
+        <%= locals.whatsapp.targets.title %> <span class="bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent"><%= locals.whatsapp.targets.titleHighlight %></span> ?
       </h2>
       <p class="text-center text-police-grey mb-12 max-w-2xl mx-auto animate-on-scroll">
-        Natalia WhatsApp s'adresse aux équipes commerciales qui ne veulent plus perdre de leads
+        <%= locals.whatsapp.targets.subtitle %>
       </p>
+      <% var targetIcons = ['M13 7h8m0 0v8m0-8l-8 8-4-4-6 6', 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z', 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z']; %>
+      <% var targetGradients = ['from-emerald-500 to-green-600', 'from-green-500 to-emerald-500', 'from-emerald-500 to-green-600']; %>
+      <% var targetBgGradients = ['from-emerald-500/5 to-green-600/5', 'from-green-500/5 to-emerald-500/5', 'from-emerald-500/5 to-green-600/5']; %>
+      <% var targetBorderColors = ['border-emerald-500/10', 'border-green-500/10', 'border-emerald-500/10']; %>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-stagger-scale>
-        <!-- Directeur Commercial -->
-        <div class="bg-gradient-to-br from-emerald-500/5 to-green-600/5 rounded-2xl p-8 border border-emerald-500/10">
+        <% locals.whatsapp.targets.items.forEach(function(item, index) { %>
+        <div class="bg-gradient-to-br <%= targetBgGradients[index] %> rounded-2xl p-8 border <%= targetBorderColors[index] %>">
           <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white">
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br <%= targetGradients[index] %> text-white">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<%= targetIcons[index] %>"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-police-titre">Directeur Commercial</h3>
+            <h3 class="text-xl font-bold text-police-titre"><%= item.title %></h3>
           </div>
           <p class="text-police-grey">
-            Maximisez le ROI de vos investissements marketing. Chaque appel manqué est une opportunité récupérée et qualifiée automatiquement.
+            <%= item.description %>
           </p>
         </div>
-        <!-- Responsable Marketing -->
-        <div class="bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-2xl p-8 border border-green-500/10">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-emerald-500 text-white">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-police-titre">Responsable Marketing</h3>
-          </div>
-          <p class="text-police-grey">
-            Améliorez vos taux de conversion et mesurez l'impact de vos campagnes. Chaque lead généré est suivi jusqu'à la qualification.
-          </p>
-        </div>
-        <!-- Chef des Ventes -->
-        <div class="bg-gradient-to-br from-emerald-500/5 to-green-600/5 rounded-2xl p-8 border border-emerald-500/10">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-police-titre">Chef des Ventes</h3>
-          </div>
-          <p class="text-police-grey">
-            Vos commerciaux reçoivent des leads déjà qualifiés et chauds. Plus de temps perdu sur des prospects non qualifiés.
-          </p>
-        </div>
+        <% }); %>
       </div>
     </div>
   </section>
@@ -428,14 +284,14 @@
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
     <div class="container-content text-center relative z-10">
       <h2 class="text-h2-mobile md:text-h2 font-bold mb-6 text-white animate-on-scroll">
-        Prêt à ne plus perdre de prospects ?
+        <%= locals.whatsapp.cta.title %>
       </h2>
       <p class="text-xl mb-8 text-white/90 animate-on-scroll">
-        Découvrez Natalia WhatsApp lors d'une démonstration personnalisée.
+        <%= locals.whatsapp.cta.subtitle %>
       </p>
       <div class="animate-on-scroll">
         <a href="./contact" class="btn bg-white text-emerald-600 hover:bg-gray-100 inline-flex items-center gap-2" data-track-content data-content-name="CTA Demo" data-content-piece="WhatsApp Footer CTA">
-          Réserver une démo
+          <%= locals.whatsapp.cta.button %>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
