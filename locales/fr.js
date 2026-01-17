@@ -172,6 +172,12 @@ const fr = {
     pageNotFound: "Page non trouvée",
     pageNotFoundDescription:
       "La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer votre navigation.",
+    // Cookie consent banner
+    cookieBannerText:
+      "Nous utilisons des cookies pour analyser le trafic de notre site et améliorer votre expérience.",
+    cookieBannerAccept: "Accepter",
+    cookieBannerDeny: "Refuser",
+    cookieBannerLearnMore: "En savoir plus",
   },
 
   // Footer sections
@@ -1761,6 +1767,19 @@ const fr = {
             "Opposez-vous au traitement de vos donnees pour des raisons legitimes",
         },
       ],
+    },
+    cookieConsent: {
+      badge: 'Cookies',
+      title: 'Gerer vos',
+      titleHighlight: 'preferences cookies',
+      description: 'Vous pouvez a tout moment modifier votre choix concernant les cookies d\'analyse.',
+      statusLabel: 'Statut actuel :',
+      statusAccepted: 'Cookies acceptes',
+      statusDenied: 'Cookies refuses',
+      statusPending: 'En attente de votre choix',
+      acceptButton: 'Accepter les cookies',
+      denyButton: 'Refuser les cookies',
+      resetButton: 'Reinitialiser mon choix',
     },
     cta: {
       badge: "Contact",

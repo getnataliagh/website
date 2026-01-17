@@ -116,6 +116,11 @@
                 formStatus.classList.add('bg-green-50', 'text-green-800', 'border', 'border-green-200');
                 formStatus.classList.remove('hidden');
                 form.reset();
+                // Track successful form submission
+                if (window.matomoTrack) {
+                  window.matomoTrack(['trackEvent', 'Form', 'submit_success', 'Contact Form']);
+                  window.matomoTrack(['trackGoal', 1]); // Goal ID 1: Demo Request
+                }
               } else {
                 throw new Error('Network response was not ok');
               }
@@ -125,6 +130,10 @@
               formStatus.textContent = "<%= locals.ui.formError %>";
               formStatus.classList.add('bg-red-50', 'text-red-800', 'border', 'border-red-200');
               formStatus.classList.remove('hidden');
+              // Track form submission error
+              if (window.matomoTrack) {
+                window.matomoTrack(['trackEvent', 'Form', 'submit_error', 'Contact Form']);
+              }
             })
             .finally(function() {
               submitBtn.disabled = false;

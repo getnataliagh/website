@@ -228,6 +228,111 @@
   </div>
 </section>
 
+<!-- Cookie Consent Management Section -->
+<section class="py-16 bg-background-2">
+  <div class="container-content">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 animate-on-scroll">
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            <span class="text-primary font-medium text-sm tracking-wide"><%= locals.privacyPolicy.cookieConsent.badge %></span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-police-titre mb-2">
+            <%= locals.privacyPolicy.cookieConsent.title %> <span class="text-gradient"><%= locals.privacyPolicy.cookieConsent.titleHighlight %></span>
+          </h2>
+          <p class="text-police-grey">
+            <%= locals.privacyPolicy.cookieConsent.description %>
+          </p>
+        </div>
+
+        <!-- Current Status -->
+        <div class="bg-gray-50 rounded-xl p-4 mb-6">
+          <div class="flex items-center justify-between">
+            <span class="text-police-grey font-medium"><%= locals.privacyPolicy.cookieConsent.statusLabel %></span>
+            <span id="consent-status" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-600">
+              <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+              <%= locals.privacyPolicy.cookieConsent.statusPending %>
+            </span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button id="consent-accept" class="flex-1 btn-primary justify-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <%= locals.privacyPolicy.cookieConsent.acceptButton %>
+          </button>
+          <button id="consent-deny" class="flex-1 inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-primary border-2 border-primary bg-white hover:bg-primary/5 rounded-lg transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <%= locals.privacyPolicy.cookieConsent.denyButton %>
+          </button>
+          <button id="consent-reset" class="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-500 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            <%= locals.privacyPolicy.cookieConsent.resetButton %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var statusEl = document.getElementById('consent-status');
+  var acceptBtn = document.getElementById('consent-accept');
+  var denyBtn = document.getElementById('consent-deny');
+  var resetBtn = document.getElementById('consent-reset');
+
+  var statusTexts = {
+    granted: '<%= locals.privacyPolicy.cookieConsent.statusAccepted %>',
+    denied: '<%= locals.privacyPolicy.cookieConsent.statusDenied %>',
+    pending: '<%= locals.privacyPolicy.cookieConsent.statusPending %>'
+  };
+
+  function updateStatus() {
+    var status = window.matomoConsent ? window.matomoConsent.getStatus() : null;
+    var statusKey = status === 'granted' ? 'granted' : (status === 'denied' ? 'denied' : 'pending');
+    var colorClass = status === 'granted' ? 'bg-green-100 text-green-700' : (status === 'denied' ? 'bg-red-100 text-red-700' : 'bg-gray-200 text-gray-600');
+    var dotClass = status === 'granted' ? 'bg-green-500' : (status === 'denied' ? 'bg-red-500' : 'bg-gray-400');
+
+    statusEl.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium ' + colorClass;
+    statusEl.innerHTML = '<span class="w-2 h-2 rounded-full ' + dotClass + '"></span>' + statusTexts[statusKey];
+  }
+
+  updateStatus();
+
+  acceptBtn.addEventListener('click', function() {
+    if (window.matomoConsent) {
+      window.matomoConsent.accept();
+      updateStatus();
+    }
+  });
+
+  denyBtn.addEventListener('click', function() {
+    if (window.matomoConsent) {
+      window.matomoConsent.deny();
+      updateStatus();
+    }
+  });
+
+  resetBtn.addEventListener('click', function() {
+    if (window.matomoConsent) {
+      window.matomoConsent.reset();
+      updateStatus();
+    }
+  });
+});
+</script>
+
 <!-- Contact Section -->
 <section class="section bg-gradient-animated text-white relative overflow-hidden">
   <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>

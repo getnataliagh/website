@@ -168,6 +168,12 @@ const en = {
     pageNotFound: "Page Not Found",
     pageNotFoundDescription:
       "The page you are looking for does not exist or has been moved. Return to the homepage to continue browsing.",
+    // Cookie consent banner
+    cookieBannerText:
+      "We use cookies to analyze our site traffic and improve your experience.",
+    cookieBannerAccept: "Accept",
+    cookieBannerDeny: "Decline",
+    cookieBannerLearnMore: "Learn more",
   },
 
   // Footer sections
@@ -1741,6 +1747,19 @@ const en = {
             "Object to the processing of your data for legitimate reasons",
         },
       ],
+    },
+    cookieConsent: {
+      badge: 'Cookies',
+      title: 'Manage your',
+      titleHighlight: 'cookie preferences',
+      description: 'You can change your analytics cookie choice at any time.',
+      statusLabel: 'Current status:',
+      statusAccepted: 'Cookies accepted',
+      statusDenied: 'Cookies declined',
+      statusPending: 'Awaiting your choice',
+      acceptButton: 'Accept cookies',
+      denyButton: 'Decline cookies',
+      resetButton: 'Reset my choice',
     },
     cta: {
       badge: "Contact",

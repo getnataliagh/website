@@ -159,6 +159,31 @@
   </div>
 </footer>
 
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 transform translate-y-full transition-transform duration-300 ease-out">
+  <div class="bg-[#0f172a]/95 backdrop-blur-sm border-t border-white/10 shadow-2xl">
+    <div class="max-w-content mx-auto px-4 md:px-6 py-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          <span><%= locals.ui.cookieBannerText %></span>
+          <a href="<%= locals.navigation.footer.find(function(item) { return item.slug && (item.slug.includes('confidentialite') || item.slug.includes('privacy')); }).url %>" class="text-primary hover:underline whitespace-nowrap"><%= locals.ui.cookieBannerLearnMore %></a>
+        </div>
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <button id="cookie-deny" class="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            <%= locals.ui.cookieBannerDeny %>
+          </button>
+          <button id="cookie-accept" class="px-5 py-2 text-sm font-medium bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors">
+            <%= locals.ui.cookieBannerAccept %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
@@ -175,28 +200,109 @@
   var _paq = window._paq = window._paq || [];
   var matomoLoaded = false;
   var matomoBlocked = false;
+  var CONSENT_KEY = 'matomo_consent';
 
   // Safe tracking function - never throws errors
+  // IMPORTANT: Uses window._paq to avoid closure bug after piwik.js loads
   function track(args) {
     if (matomoBlocked) return;
     try {
-      _paq.push(args);
+      if (window._paq) window._paq.push(args);
     } catch (e) {
       // Silently ignore - Matomo blocked or failed
     }
   }
 
-  // Detect page type for custom dimension
+  // ============================================
+  // RGPD Consent Management (Matomo Native)
+  // ============================================
+
+  // Check previous consent choice
+  function getStoredConsent() {
+    try {
+      return localStorage.getItem(CONSENT_KEY);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setStoredConsent(value) {
+    try {
+      localStorage.setItem(CONSENT_KEY, value);
+    } catch (e) {
+      // localStorage not available
+    }
+  }
+
+  // Require cookie consent before tracking (RGPD compliance)
+  track(['requireCookieConsent']);
+
+  // Check if user already gave consent
+  var storedConsent = getStoredConsent();
+  if (storedConsent === 'granted') {
+    track(['setCookieConsentGiven']);
+  } else if (storedConsent === 'denied') {
+    track(['forgetCookieConsentGiven']);
+  }
+  // If null, waiting for user decision - no cookies until consent
+
+  // Expose consent API globally for cookie banner integration
+  window.matomoConsent = {
+    // Call when user accepts cookies
+    accept: function() {
+      setStoredConsent('granted');
+      track(['setCookieConsentGiven']);
+    },
+    // Call when user refuses cookies
+    deny: function() {
+      setStoredConsent('denied');
+      track(['forgetCookieConsentGiven']);
+    },
+    // Check current consent status
+    getStatus: function() {
+      return getStoredConsent();
+    },
+    // Reset consent (user wants to change choice)
+    reset: function() {
+      try {
+        localStorage.removeItem(CONSENT_KEY);
+      } catch (e) {}
+      track(['forgetCookieConsentGiven']);
+    }
+  };
+
+  // Detect page type for custom dimension (FR + EN slugs)
   function getPageType() {
     var path = location.pathname;
     if (path === '/' || path.includes('index')) return 'homepage';
-    if (path.includes('assistante-vocale-ia') || path.includes('whatsapp') || path.includes('analyse') || path.includes('assistant-mail')) return 'solution';
-    if (path.includes('automobile') || path.includes('centre-d-appel') || path.includes('helpdesk') || path.includes('hotline')) return 'sector';
+    // Solutions (FR + EN)
+    if (path.includes('assistante-vocale-ia') || path.includes('voice-assistant-ai') ||
+        path.includes('whatsapp') ||
+        path.includes('analyse') || path.includes('analytics') ||
+        path.includes('assistant-mail') || path.includes('email-assistant')) return 'solution';
+    // Sectors (FR + EN)
+    if (path.includes('automobile') || path.includes('automotive') ||
+        path.includes('centre-d-appel') || path.includes('call-center') ||
+        path.includes('helpdesk') || path.includes('hotline')) return 'sector';
     if (path.includes('contact')) return 'conversion';
-    if (path.includes('calculateur')) return 'tool';
-    if (path.includes('mentions-legales') || path.includes('politique') || path.includes('conditions')) return 'legal';
+    // Tools (FR + EN)
+    if (path.includes('calculateur') || path.includes('calculator')) return 'tool';
+    // Legal pages (FR + EN)
+    if (path.includes('mentions-legales') || path.includes('legal-notice') ||
+        path.includes('politique') || path.includes('privacy') ||
+        path.includes('conditions') || path.includes('terms')) return 'legal';
+    // Company pages (FR + EN)
+    if (path.includes('a-propos') || path.includes('about') ||
+        path.includes('partenaires') || path.includes('partners') ||
+        path.includes('presse') || path.includes('press')) return 'company';
     return 'other';
   }
+
+  // RGPD: Anonymize visitor IP (truncate last octet)
+  track(['setIpTracking', false]);
+
+  // RGPD: Respect browser Do Not Track setting
+  track(['setDoNotTrack', true]);
 
   // Configure download extensions
   track(['setDownloadExtensions', 'pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar']);
@@ -210,6 +316,10 @@
 
   // Set custom dimension: Page Type (dimension ID 1)
   track(['setCustomDimension', 1, getPageType()]);
+
+  // Set custom dimension: Language (dimension ID 2)
+  var pageLang = location.pathname.startsWith('/en') ? 'en' : 'fr';
+  track(['setCustomDimension', 2, pageLang]);
 
   // Set document title explicitly
   track(['setDocumentTitle', document.title]);
@@ -250,6 +360,45 @@
   document.addEventListener('DOMContentLoaded', function() {
 
     // ============================================
+    // Cookie Banner Management
+    // ============================================
+
+    (function() {
+      var banner = document.getElementById('cookie-banner');
+      var acceptBtn = document.getElementById('cookie-accept');
+      var denyBtn = document.getElementById('cookie-deny');
+
+      if (!banner || !acceptBtn || !denyBtn) return;
+
+      function showBanner() {
+        banner.classList.remove('translate-y-full');
+        banner.classList.add('translate-y-0');
+      }
+
+      function hideBanner() {
+        banner.classList.remove('translate-y-0');
+        banner.classList.add('translate-y-full');
+      }
+
+      // Show banner only if no consent decision has been made
+      if (!window.matomoConsent.getStatus()) {
+        setTimeout(showBanner, 1000); // Show after 1 second for better UX
+      }
+
+      acceptBtn.addEventListener('click', function() {
+        window.matomoConsent.accept();
+        hideBanner();
+        track(['trackEvent', 'Consent', 'accept', 'Cookie Banner']);
+      });
+
+      denyBtn.addEventListener('click', function() {
+        window.matomoConsent.deny();
+        hideBanner();
+        track(['trackEvent', 'Consent', 'deny', 'Cookie Banner']);
+      });
+    })();
+
+    // ============================================
     // CTA Event Tracking
     // ============================================
 
@@ -260,23 +409,23 @@
       });
     });
 
-    // Track "Calculer mon ROI" clicks
-    document.querySelectorAll('a[href*="calculateur"]').forEach(function(el) {
+    // Track "Calculer mon ROI" / "Calculate ROI" clicks (FR + EN)
+    document.querySelectorAll('a[href*="calculateur"], a[href*="calculator"]').forEach(function(el) {
       el.addEventListener('click', function() {
-        track(['trackEvent', 'CTA', 'click', 'Calculer ROI', window.location.pathname]);
+        track(['trackEvent', 'CTA', 'click', 'Calculate ROI', window.location.pathname]);
       });
     });
 
-    // Track solution page clicks
-    document.querySelectorAll('a[href*="assistante-vocale-ia"], a[href*="whatsapp"], a[href*="analyse"], a[href*="assistant-mail"]').forEach(function(el) {
+    // Track solution page clicks (FR + EN)
+    document.querySelectorAll('a[href*="assistante-vocale-ia"], a[href*="voice-assistant-ai"], a[href*="whatsapp"], a[href*="analyse"], a[href*="analytics"], a[href*="assistant-mail"], a[href*="email-assistant"]').forEach(function(el) {
       el.addEventListener('click', function() {
         var solution = this.href.split('/').pop().replace('.html', '');
         track(['trackEvent', 'Navigation', 'solution_click', solution]);
       });
     });
 
-    // Track sector page clicks
-    document.querySelectorAll('a[href*="automobile"], a[href*="centre-d-appel"], a[href*="helpdesk"], a[href*="hotline"]').forEach(function(el) {
+    // Track sector page clicks (FR + EN)
+    document.querySelectorAll('a[href*="automobile"], a[href*="automotive"], a[href*="centre-d-appel"], a[href*="call-center"], a[href*="helpdesk"], a[href*="hotline"]').forEach(function(el) {
       el.addEventListener('click', function() {
         var sector = this.href.split('/').pop().replace('.html', '');
         track(['trackEvent', 'Navigation', 'sector_click', sector]);
